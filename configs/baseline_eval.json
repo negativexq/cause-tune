@@ -1,0 +1,49 @@
+{
+  "model_id": "Qwen/Qwen3-4B",
+  "prompt_version": "m4-frozen-contract-v1",
+  "contract_fingerprint": "1b00a333c26c4cbd03b3e04d990fad3b4adf0d9a03443c9fd5f183ee7e8ef94d",
+  "max_sequence_length": 1024,
+  "tokenizer": {
+    "model_id": "Qwen/Qwen3-4B",
+    "enable_thinking": false,
+    "add_generation_prompt": true,
+    "skip_special_tokens": true,
+    "padding_side": "left"
+  },
+  "quantization": {
+    "load_in_4bit": true,
+    "quant_type": "nf4",
+    "compute_dtype": "bfloat16",
+    "double_quant": true
+  },
+  "evaluation_contract": {
+    "system_instruction": "You are an intent classification system. Classify the customer request into exactly one of these labels: refund, duplicate_charge, order_missing, wrong_item, cancel_order, payment_failed, account_locked, subscription_cancel, fraud_suspected, human_escalation. Return exactly one JSON object in this form: {\"intent\":\"<label>\"}. Return JSON only, with no explanation and no additional keys.",
+    "generation": {
+      "decoding": "greedy",
+      "do_sample": false,
+      "max_new_tokens": 32,
+      "batch_size": 8
+    },
+    "parsing": {
+      "json_parser": "json.loads",
+      "allow_surrounding_text": false,
+      "repair_malformed_output": false,
+      "allowed_intents": [
+        "refund",
+        "duplicate_charge",
+        "order_missing",
+        "wrong_item",
+        "cancel_order",
+        "payment_failed",
+        "account_locked",
+        "subscription_cancel",
+        "fraud_suspected",
+        "human_escalation"
+      ]
+    },
+    "schema": {
+      "exact_keys": ["intent"],
+      "intent_value_type": "string"
+    }
+  }
+}

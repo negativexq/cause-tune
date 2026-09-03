@@ -108,6 +108,7 @@ def build_preprocessed_example(
     record: Mapping[str, Any],
     tokenizer: Any,
     max_sequence_length: int,
+    system_message: str | None = None,
 ) -> PreprocessedExample:
     """Create labels that train only on the assistant completion.
 
@@ -118,8 +119,14 @@ def build_preprocessed_example(
     if max_sequence_length <= 0:
         raise ValueError("max_sequence_length must be positive")
     validated = validate_record(dict(record))
-    messages = tuple(validated["messages"])
-    prompt_ids = _chat_template_ids(tokenizer, messages[:1], add_generation_prompt=True)
+    base_messages = tuple(validated["messages"])
+    messages = (
+        ({"role": "system", "content": system_message},) + base_messages
+        if system_message is not None
+        else base_messages
+    )
+    user_prompt_start = len(messages) - 1
+    prompt_ids = _chat_template_ids(tokenizer, messages[:user_prompt_start], add_generation_prompt=True)
     full_ids = _chat_template_ids(tokenizer, messages, add_generation_prompt=False)
 
     if len(prompt_ids) >= len(full_ids):
@@ -176,11 +183,12 @@ def preprocess_records(
     records: Sequence[Mapping[str, Any]],
     tokenizer: Any,
     max_sequence_length: int,
+    system_message: str | None = None,
 ) -> list[PreprocessedExample]:
     """Preprocess records and fail on the first unsafe example."""
 
     return [
-        build_preprocessed_example(record, tokenizer, max_sequence_length)
+        build_preprocessed_example(record, tokenizer, max_sequence_length, system_message)
         for record in records
     ]
 

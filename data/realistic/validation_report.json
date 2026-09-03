@@ -1,0 +1,19 @@
+{
+  "duplicate_check": {
+    "cross_split_normalized_duplicates": {},
+    "cross_split_template_family_overlap": {},
+    "exact_duplicate_count": 0,
+    "exact_duplicate_groups": {},
+    "normalized_duplicate_count": 0,
+    "normalized_duplicate_groups": {},
+    "ood_template_family_leakage": {}
+  },
+  "split_sizes": {
+    "hard_test": 250,
+    "id_test": 250,
+    "ood_test": 250,
+    "train": 2000,
+    "validation": 250
+  },
+  "status": "pass"
+}

@@ -1,0 +1,14 @@
+{
+  "dataset_version": "fineforge-m4-realistic-v1",
+  "generator_version": "m4-realistic-local-v1",
+  "generation_seed": 20260904,
+  "output_dir": "data/realistic",
+  "split_counts_per_intent": {
+    "train": 200,
+    "validation": 25,
+    "id_test": 25,
+    "hard_test": 25,
+    "ood_test": 25
+  },
+  "notes": "Synthetic local scenario/surface data for a meaningful future benchmark; not a claim of production representativeness."
+}
