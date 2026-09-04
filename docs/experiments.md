@@ -75,8 +75,21 @@ Experiment 02A evaluation-contract fingerprint: `d2dea87fd26a3a8c78a2a6a1b4b6fc5
 
 ## Baseline
 
-The untouched-base measurement is the next controlled step. Results will be recorded only after the frozen benchmark commit and one complete 144-case run. No training data will be generated in 02A.
+The frozen base was evaluated once after the benchmark commit. The model was untouched Qwen/Qwen3-4B with greedy decoding, `enable_thinking=False`, no adapter, no few-shot examples, no retrieval, and no output repair. No training data was generated in 02A.
+
+Diagnosis exact match is the primary metric:
+
+| Slice | Diagnosis exact match | Resolution exact match | Culprit accuracy | Failure-mode accuracy | Failure-mode macro F1 | Action accuracy | Evidence F1 | Strict JSON |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| ALL (144) | 65.28% (94) | 34.72% (50) | 77.78% (112) | 71.53% (103) | 71.84% | 40.97% (59) | 80.88% | 88.89% (128) |
+| STANDARD (72) | 66.67% (48) | 37.50% (27) | 80.56% (58) | 72.22% (52) | 71.75% | 44.44% (32) | 81.74% | 91.67% (66) |
+| HARD (48) | 64.58% (31) | 35.42% (17) | 75.00% (36) | 75.00% (36) | 74.39% | 41.67% (20) | 80.56% | 89.58% (43) |
+| TRANSFER (24) | 62.50% (15) | 25.00% (6) | 75.00% (18) | 62.50% (15) | 65.00% | 29.17% (7) | 78.83% | 79.17% (19) |
+
+JSON parsing was 100% valid, while strict schema compliance was 128/144. The 16 strict failures were 13 unknown culprit values and 3 invalid evidence references. The first raw generation was retained; a parser correctness fix accepted any evidence ID present in the packet, then re-aggregated the persisted outputs without another model run. The evaluation-contract fingerprint did not change.
+
+The largest mechanically observed failure patterns were 12 recent-change/deploy biases, 17 distractor selections on HARD cases, 18 correct culprit/wrong family cases, 9 correct family/wrong culprit cases, and 44 correct diagnoses with the wrong action. The largest failure-mode confusions were `configuration_regression` → `db_connection_pool_exhaustion` (9), `downstream_dependency_timeout` → `dns_resolution_failure` (5), and `kafka_consumer_lag` → `downstream_dependency_timeout` (4). `cache_stampede`, `configuration_regression`, and `downstream_dependency_timeout` were weakest at 0/12 diagnosis exact; `memory_leak` was strongest at 12/12.
 
 ## Decision
 
-After the baseline, CauseTune will decide whether the measured capability gap is large and trustworthy enough to justify a future training-data/QLoRA phase. The benchmark will not be changed to manufacture a larger gap, and no tuned result is claimed here.
+The base leaves substantial headroom: diagnosis exact match is 65.28% overall and 62.50% on TRANSFER. HARD is 64.58%, only 2.08 percentage points below STANDARD, so the slice does not strongly separate difficulty yet; TRANSFER exposes a larger surface-generalization drop of 4.17 points. The deterministic evaluator is trustworthy enough to support a controlled next phase, with strict-schema limitations reported separately. The benchmark will not be changed to manufacture a larger gap, and no tuned result is claimed here.

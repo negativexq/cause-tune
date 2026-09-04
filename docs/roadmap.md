@@ -22,9 +22,9 @@ M7 must select checkpoints using validation only. ID, HARD, and OOD remain seale
 
 ## Experiment 02 — Production Incident Diagnosis Specialist
 
-### Experiment 02A — Capability-gap baseline — in progress
+### Experiment 02A — Capability-gap baseline — complete
 
-Freeze the incident benchmark and evaluation contract, then measure untouched Qwen3-4B once. The current phase includes no training data, adapter, or QLoRA run.
+The incident benchmark and evaluation contract were frozen, then untouched Qwen3-4B was measured once. The current result is recorded in `results/incident_diagnosis_base.json`; no training data, adapter, or QLoRA run was used.
 
 ### Experiment 02B — Training dataset + QLoRA specialization — blocked
 

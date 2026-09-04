@@ -80,7 +80,7 @@ def evaluate_incidents(
         parsed, category, json_valid = parse_incident_diagnosis(
             raw_outputs[incident_id],
             incident["metadata"]["present_components"],
-            incident["metadata"]["evidence_ids"],
+            packet_evidence_ids(incident["incident_packet"]),
         )
         expected_evidence = set(truth["evidence_ids"])
         predicted_evidence = set(parsed["evidence_ids"]) if parsed else set()

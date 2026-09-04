@@ -82,6 +82,16 @@ No replacement collapse into another single class occurred. `order_missing` rema
 
 The selected topic is Production Incident Diagnosis Specialist. The goal is to determine whether untouched Qwen3-4B has a meaningful deficiency in diagnosing structured production incidents from topology, deployments, metrics, logs, alerts, and dependency health before any fine-tuning is attempted. Experiment 02A freezes a 144-case benchmark and a new strict evaluation contract; it does not yet claim that a specialist model exists.
 
+Initial frozen-base result — diagnosis exact match, the primary metric:
+
+| Slice | Diagnosis exact match | Resolution exact match | Strict JSON |
+| --- | ---: | ---: | ---: |
+| STANDARD | 66.67% (48/72) | 37.50% (27/72) | 91.67% |
+| HARD | 64.58% (31/48) | 35.42% (17/48) | 89.58% |
+| TRANSFER | 62.50% (15/24) | 25.00% (6/24) | 79.17% |
+
+This is a baseline measurement only. No incident-diagnosis specialist has been trained yet.
+
 ## Training configuration
 
 - Qwen/Qwen3-4B; NF4 4-bit base; BF16 compute; double quantization

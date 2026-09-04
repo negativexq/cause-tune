@@ -96,6 +96,20 @@ class IncidentEvaluationTests(unittest.TestCase):
         invalid_mode = valid.replace("memory_leak", "not_a_failure_family")
         self.assertEqual(parse_incident_diagnosis(invalid_mode, components, evidence)[1], "unknown failure mode")
 
+    def test_packet_evidence_is_not_limited_to_canonical_ground_truth_evidence(self) -> None:
+        incident = self.inputs[0]
+        truth = self.truth[incident["incident_id"]]
+        output = json.dumps({
+            "culprit_service": truth["culprit_service"],
+            "failure_mode": truth["failure_mode"],
+            "recommended_action": truth["recommended_action"],
+            "evidence_ids": ["M2", "E2"],
+        })
+        metrics = evaluate_incidents(
+            [incident], self.truth, {incident["incident_id"]: output}
+        )
+        self.assertEqual(metrics["json_compliance"]["count"], 1)
+
     def test_metrics_require_culprit_and_failure_mode_for_primary_match(self) -> None:
         outputs = {}
         for incident in self.inputs:
