@@ -56,6 +56,37 @@ Experiment 02 is now a completed Production Incident Diagnosis specialization.
 02A capability-gap measurement, 02B.1 training foundation, and 02B.2 QLoRA
 specialization are complete.
 
+## Experiment 03 — Causal Telemetry Incident Specialization
+
+### 03A — Frozen contract and ontology — contract frozen
+
+The typed ontology, canonical scenario contract, telemetry and diagnostic output
+schemas, grouped split protocol, provenance fingerprints, and fail-closed audit
+foundation are implemented. No dataset, provider rendering, model evaluation,
+or training evidence exists yet. Experiment 02 is not reused as an Experiment
+03 selection or test set.
+
+### 03B — Deterministic causal scenario engine — complete
+
+The typed deterministic engine now generates authoritative canonical scenarios
+from a bounded declarative archetype catalog, validates causal state and
+evidence, constructs controlled counterfactual pairs, and writes a small
+pre-render reference corpus with grouped split metadata. This milestone has no
+LLM-rendered telemetry, model evaluation, training, or model-performance
+evidence. See `docs/experiment-03/03b-causal-scenario-engine.md`.
+
+### Planned sequence
+
+- 03C — LLM telemetry rendering and dataset generation
+- 03D — Dataset integrity/leakage audit and freeze
+- 03E — Untouched base-model capability-gap screening
+- 03F — QLoRA specialization
+- 03G — Controlled data/training ablations
+- 03H — Sealed final holdout evaluation
+
+Model selection belongs to the capability-gap phase. No model is selected for
+Experiment 03 in 03A.
+
 ## Focused optimization — later
 
 Only after Experiment 02 exists: learning-rate sensitivity, LoRA rank/capacity, target-module efficiency where justified, VRAM/runtime/quality trade-offs, and a fresh untouched final benchmark.

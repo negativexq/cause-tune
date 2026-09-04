@@ -233,6 +233,25 @@ can still produce pathological optimizer windows.
 | `refund` | 99 | 1 |
 | `cancel_order` | 98 | 2 |
 
+## Experiment 03A — Causal Telemetry Incident Specialization
+
+**Status: CONTRACT-FROZEN foundation.** Experiment 03A freezes a typed causal
+scenario, telemetry, output, split, provenance, audit, and evaluation contract
+for a fresh evidence boundary. It contains no generated dataset, provider call,
+model evaluation, training run, or new specialist-model result. See the
+[Experiment 03A contract](docs/experiment-03/03a-frozen-contract.md).
+
+### Experiment 03B — Deterministic causal scenario engine
+
+**Status: COMPLETE foundation milestone.** 03B adds a deterministic,
+declarative engine for authoritative canonical incident scenarios, bounded
+topologies and runtimes, causal variables, semantic evidence, distractors,
+counterfactual pairs, grouped pre-render split manifests, and fail-closed
+audits. Its 52-scenario CPU-safe reference corpus is a fixture for contract
+validation—not training data, a benchmark, or model evidence. See the
+[03B engine record](docs/experiment-03/03b-causal-scenario-engine.md).
+Telemetry rendering and all model work remain future 03C+ milestones.
+
 ## What CauseTune measures
 
 **Quality** — task-specific accuracy/F1, slice behavior, per-family metrics,

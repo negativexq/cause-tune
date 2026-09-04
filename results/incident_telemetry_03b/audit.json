@@ -1,0 +1,77 @@
+{
+  "audit": {
+    "counterfactual_pair_count": 1,
+    "distributions": {
+      "difficulty": {
+        "COUNTERFACTUAL": 2,
+        "HARD": 17,
+        "INCOMPLETE": 4,
+        "STANDARD": 29
+      },
+      "failure_mode_catalog_size": 28,
+      "fault_domain": {
+        "APPLICATION": 8,
+        "CACHE": 4,
+        "DATABASE": 8,
+        "DEPENDENCY": 4,
+        "KUBERNETES_RUNTIME": 4,
+        "MESSAGING": 4,
+        "NETWORK": 4,
+        "RESOURCE": 12,
+        "SCALING": 4
+      },
+      "root_cause_id": {
+        "cache_stampede": 4,
+        "configuration_regression": 4,
+        "container_memory_exhaustion": 6,
+        "cpu_throttling": 6,
+        "db_connection_pool_exhaustion": 4,
+        "db_query_regression": 4,
+        "dns_resolution_failure": 4,
+        "downstream_dependency_timeout": 4,
+        "insufficient_replicas": 4,
+        "kafka_consumer_lag": 4,
+        "readiness_probe_failure": 4,
+        "thread_pool_exhaustion": 4
+      }
+    },
+    "duplicate_canonical_content_count": 0,
+    "duplicate_rendered_count": 0,
+    "errors": [],
+    "outputs": {
+      "status": "not_provided"
+    },
+    "rendered_telemetry_count": 0,
+    "scenario_count": 52,
+    "split": {
+      "counterfactual_pair_count": 1,
+      "manifest_version": "incident-telemetry-split-manifest-v1",
+      "protected_group_count": 51,
+      "scenario_count": 52,
+      "sealed_holdout_consumed": false,
+      "split_counts": {
+        "ABSTENTION_TEST": 4,
+        "COUNTERFACTUAL_TEST": 2,
+        "GENERATOR_OOD": 4,
+        "HARD_TEST": 5,
+        "ID_TEST": 5,
+        "SEALED_HOLDOUT": 4,
+        "TEMPLATE_OOD": 4,
+        "TOPOLOGY_OOD": 4,
+        "TRAIN": 12,
+        "VALIDATION": 8
+      },
+      "status": "pass"
+    },
+    "status": "pass"
+  },
+  "experiment": "03B",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "reference_version": "incident-telemetry-03b-reference-v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "seed": 302,
+  "telemetry_rendering_performed": false,
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

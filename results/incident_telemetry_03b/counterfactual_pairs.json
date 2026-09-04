@@ -1,0 +1,34 @@
+{
+  "experiment": "03B",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "pairs": [
+    {
+      "counterfactual_archetype_id": "cpu_throttling",
+      "counterfactual_scenario_id": "scenario_03b_be8e4a093a0e7ffd74a1",
+      "pair_id": "pair_03b_reference_001",
+      "pair_seed": 10302,
+      "source_archetype_id": "container_memory_exhaustion",
+      "source_scenario_id": "scenario_03b_bec2ef4fb94310a34140",
+      "variables_changed": [
+        "cpu_limit",
+        "demand",
+        "memory_limit",
+        "restart_count",
+        "root_cause_id",
+        "termination_reason",
+        "throttle_ratio",
+        "working_set"
+      ],
+      "variables_held_constant": [
+        "latency_effect"
+      ]
+    }
+  ],
+  "reference_version": "incident-telemetry-03b-reference-v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "seed": 302,
+  "telemetry_rendering_performed": false,
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

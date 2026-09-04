@@ -1,0 +1,54 @@
+{
+  "experiment": "03A",
+  "status": "CONTRACT_FROZEN",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "split_manifest_version": "incident-telemetry-split-manifest-v1",
+  "case_types": [
+    "STANDARD",
+    "HARD",
+    "COUNTERFACTUAL",
+    "INCOMPLETE",
+    "HEALTHY_CONTROL"
+  ],
+  "splits": [
+    "TRAIN",
+    "VALIDATION",
+    "ID_TEST",
+    "HARD_TEST",
+    "TEMPLATE_OOD",
+    "TOPOLOGY_OOD",
+    "GENERATOR_OOD",
+    "COUNTERFACTUAL_TEST",
+    "ABSTENTION_TEST",
+    "SEALED_HOLDOUT"
+  ],
+  "split_policy": {
+    "split_before_rendering": true,
+    "random_example_level_split_allowed": false,
+    "paraphrase_group_must_be_single_split": true,
+    "counterfactual_pair_must_be_single_split": true,
+    "sealed_holdout_consumed_after_evaluation": true
+  },
+  "evaluation_metrics": [
+    "root_cause_exact_accuracy",
+    "affected_component_accuracy",
+    "diagnosis_joint_exact",
+    "evidence_precision",
+    "evidence_recall",
+    "evidence_f1",
+    "remediation_runbook_accuracy",
+    "valid_json_rate",
+    "schema_valid_rate",
+    "abstention_precision",
+    "abstention_recall",
+    "abstention_f1",
+    "false_diagnosis_rate_on_insufficient_evidence"
+  ],
+  "provider_calls_allowed": false,
+  "dataset_generation_allowed": false,
+  "training_allowed": false,
+  "benchmark_evaluation_allowed": false
+}
