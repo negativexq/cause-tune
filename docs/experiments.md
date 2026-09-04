@@ -121,8 +121,85 @@ macro F1, teacher-forced loss, and earlier step. Validation is planned every
 patience 3, `min_delta=0.005`, and a 50-step warm-up floor. The frozen 02A
 benchmark remains sealed until a future selected adapter is evaluated.
 
-### Experiment 02B.2 — QLoRA specialization
+### Experiment 02B.2 — QLoRA specialization — complete
 
-Next, pending review of this foundation. It will be one controlled QLoRA run
-only after the resolved manifest, independent data, and validation policy are
-approved. No adapter or tuned result exists yet.
+The first real semantic run used the resolved 02B.1 manifest exactly once:
+Qwen/Qwen3-4B with NF4, BF16 compute, double quantization, rank-16 LoRA with
+alpha 32, zero dropout, all seven attention/MLP projection targets,
+assistant-only supervision, 768-token context, microbatch 1, accumulation 8,
+learning rate `2e-4`, two epochs, and a 600-step maximum. Training executed 100
+optimizer steps and stopped by the frozen validation policy after three
+post-warm-up evaluations without a meaningful diagnosis improvement. The best
+validation checkpoint was step 100; step 25 was the earliest checkpoint within
+1 percentage point of the best diagnosis score.
+
+Validation progression:
+
+| Step | Diagnosis | Resolution | Macro F1 | Action | Evidence F1 | Loss |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 0 | 58.33% (168/288) | 25.35% | 59.04% | 28.82% | 66.04% | 1.47637 |
+| 25 | 100.00% (288/288) | 97.92% | 100.00% | 97.92% | 100.00% | 0.001167 |
+| 50 | 100.00% (288/288) | 100.00% | 100.00% | 100.00% | 100.00% | 0.0000369 |
+| 75 | 100.00% (288/288) | 100.00% | 100.00% | 100.00% | 100.00% | 0.0000200 |
+| 100 | 100.00% (288/288) | 100.00% | 100.00% | 100.00% | 100.00% | 0.0000144 |
+
+Frozen benchmark comparison:
+
+| Metric | Base | Tuned | Delta |
+| --- | ---: | ---: | ---: |
+| Diagnosis exact | 65.28% (94/144) | 99.31% (143/144) | +34.03 pp |
+| Resolution exact | 34.72% | 99.31% (143/144) | +64.58 pp |
+| Culprit accuracy | 77.78% | 100.00% | +22.22 pp |
+| Failure-mode accuracy | 71.53% | 99.31% | +27.78 pp |
+| Failure-mode macro F1 | 71.84% | 99.30% | +27.47 pp |
+| Action accuracy | 40.97% | 100.00% | +59.03 pp |
+| Evidence F1 | 80.88% | 100.00% | +19.12 pp |
+| Strict JSON | 88.89% | 100.00% | +11.11 pp |
+
+Diagnosis exact improved from 66.67% to 100.00% on STANDARD (+33.33 pp),
+64.58% to 97.92% on HARD (+33.33 pp), and 62.50% to 100.00% on TRANSFER
+(+37.50 pp). TRANSFER is reported as TRANSFER, not true OOD. The previously
+weak frozen families were not oversampled during training.
+
+Diagnosis transitions were 49 base-wrong → tuned-correct, 1 base-wrong →
+tuned-wrong, 94 persistent correct, and 0 persistent wrong. Resolution had 93
+improvements, 1 regression, 50 persistent correct, and 0 persistent wrong.
+Actions had 85 improvements and 59 persistent correct, with no regressions.
+
+Per-family diagnosis exact results were: `db_connection_pool_exhaustion`
+58.33% → 100.00%, `db_query_regression` 75.00% → 100.00%, `memory_leak`
+100.00% → 100.00%, `downstream_dependency_timeout` 33.33% → 91.67%,
+`cache_stampede` 100.00% → 100.00%, `kafka_consumer_lag` 58.33% → 100.00%,
+`thread_pool_exhaustion` 83.33% → 100.00%, `disk_io_saturation` 25.00% →
+100.00%, `dns_resolution_failure` 100.00% → 100.00%,
+`tls_certificate_expiration` 91.67% → 100.00%,
+`rate_limit_misconfiguration` 58.33% → 100.00%, and
+`configuration_regression` 0.00% → 100.00%. The remaining error is one HARD
+`downstream_dependency_timeout` → `dns_resolution_failure` family confusion;
+no new diagnosis confusion pair was introduced.
+
+Mechanically observed failures fell from 12 recent-change/deploy biases to 0,
+17 HARD distractor selections to 1, 18 correct-culprit/wrong-family cases to
+1, 9 correct-family/wrong-culprit cases to 0, and 44 correct-diagnosis/wrong-
+action cases to 0. Base invalid culprit values (13) and invalid evidence
+references (3) fell to 0; strict-schema failures fell from 16 to 0. No LLM
+judge or output repair was used.
+
+Training took 10,263.71 seconds, validation 4,455.54 seconds, and measured
+wall time from preflight artifact creation through prediction persistence was
+10,806.54 seconds. Throughput was 43.83 input tokens/sec and 3.07 supervised
+tokens/sec; peak VRAM was 5.312 GiB allocated and 9.342 GiB reserved. The
+100-step stop avoided 500 of 600 configured updates (83.33%); step 25 was the
+earliest near-best checkpoint for efficiency analysis.
+
+Integrity: all four frozen fingerprints matched; training ran once; selection
+was validation-only; fresh base plus adapter reload passed; exactly one tuned
+benchmark generation produced 144 raw outputs; and recovery scored those
+persisted outputs offline. Initial post-generation analysis failed with
+`KeyError: 'all'` because the synthetic aggregate was incorrectly looked up as
+a real dataset split. The narrow aggregate handling fix and regression test
+changed no inputs, predictions, prompts, or scoring rules.
+
+Conclusion: STRONG SPECIALIZATION. The gain survived STANDARD, HARD, and
+TRANSFER, with one remaining HARD family error and one diagnosis regression
+against the base.

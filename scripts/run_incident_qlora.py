@@ -22,7 +22,7 @@ from causetune.data.preprocess import PreprocessedExample
 from causetune.evaluation import collate_preprocessed
 from causetune.incident_benchmark import read_benchmark
 from causetune.incident_contract import contract_fingerprint
-from causetune.incident_evaluation import evaluate_incidents, failure_patterns
+from causetune.incident_evaluation import evaluate_incidents, failure_patterns, failure_patterns_for_splits
 from causetune.incident_training import (
     CheckpointSelectionPolicy,
     checkpoint_path,
@@ -139,7 +139,7 @@ def _prompt_ids(tokenizer: Any, packet: str, system_instruction: str) -> list[in
     return [int(value) for value in values]
 
 
-def _generate(model: Any, tokenizer: Any, records: list[dict[str, Any]], system_instruction: str, max_new_tokens: int, batch_size: int) -> dict[str, str]:
+def _generate(model: Any, tokenizer: Any, records: list[dict[str, Any]], system_instruction: str, max_new_tokens: int, batch_size: int, progress_label: str | None = None) -> dict[str, str]:
     was_training = bool(model.training)
     old_use_cache = getattr(model.config, "use_cache", None)
     model.eval()
@@ -167,6 +167,9 @@ def _generate(model: Any, tokenizer: Any, records: list[dict[str, Any]], system_
                 synchronize_cuda()
                 for item, sequence in zip(chunk, generated):
                     outputs[item["incident_id"]] = tokenizer.decode(sequence[width:], skip_special_tokens=True)
+                processed = min(start + len(chunk), len(records))
+                if progress_label and (processed == len(records) or processed % 48 == 0):
+                    print(f"{progress_label} examples={processed}/{len(records)}", flush=True)
                 del generated, input_ids, attention, prompts
         return outputs
     finally:
@@ -175,8 +178,8 @@ def _generate(model: Any, tokenizer: Any, records: list[dict[str, Any]], system_
         model.train(was_training)
 
 
-def _eval_records(model: Any, tokenizer: Any, records: list[dict[str, Any]], truths: list[dict[str, Any]], examples: list[PreprocessedExample], system_instruction: str, eval_config: dict[str, Any]) -> tuple[dict[str, Any], dict[str, str]]:
-    raw = _generate(model, tokenizer, records, system_instruction, eval_config["evaluation_contract"]["generation"]["max_new_tokens"], eval_config["evaluation_contract"]["generation"]["batch_size"])
+def _eval_records(model: Any, tokenizer: Any, records: list[dict[str, Any]], truths: list[dict[str, Any]], examples: list[PreprocessedExample], system_instruction: str, eval_config: dict[str, Any], progress_label: str | None = None) -> tuple[dict[str, Any], dict[str, str]]:
+    raw = _generate(model, tokenizer, records, system_instruction, eval_config["evaluation_contract"]["generation"]["max_new_tokens"], eval_config["evaluation_contract"]["generation"]["batch_size"], progress_label=progress_label)
     eval_records = [{"incident_id": item["incident_id"], "slice": item.get("slice", item["metadata"]["difficulty"]), "incident_packet": item["incident_packet"], "metadata": item["metadata"]} for item in records]
     metrics = evaluate_incidents(eval_records, {truth["incident_id"]: truth for truth in truths}, raw)
     return metrics, raw
@@ -184,9 +187,13 @@ def _eval_records(model: Any, tokenizer: Any, records: list[dict[str, Any]], tru
 
 def _validation(model: Any, tokenizer: Any, records: list[dict[str, Any]], truths: list[dict[str, Any]], examples: list[PreprocessedExample], system_instruction: str, eval_config: dict[str, Any], step: int) -> dict[str, Any]:
     was_training = bool(model.training)
+    started = time.perf_counter()
+    print(f"VALIDATION_START step={step}", flush=True)
     try:
-        metrics, _ = _eval_records(model, tokenizer, records, truths, examples, system_instruction, eval_config)
-        return {"step": step, "teacher_forced_loss": float(_teacher_loss(model, tokenizer, examples)["loss"]), "diagnosis_exact_match": metrics["diagnosis_exact_match"]["rate"], "diagnosis_exact_count": metrics["diagnosis_exact_match"]["count"], "resolution_exact_match": metrics["resolution_exact_match"]["rate"], "culprit_accuracy": metrics["culprit_accuracy"]["rate"], "failure_mode_accuracy": metrics["failure_mode_accuracy"]["rate"], "failure_mode_macro_f1": metrics["failure_mode_macro_f1"], "action_accuracy": metrics["recommended_action_accuracy"]["rate"], "evidence_f1": metrics["evidence"]["f1"], "strict_json_compliance": metrics["json_compliance"]["rate"], "valid_json": metrics["json_valid_rate"]}
+        metrics, _ = _eval_records(model, tokenizer, records, truths, examples, system_instruction, eval_config, f"VALIDATION_PROGRESS step={step}")
+        result = {"step": step, "validation_duration_seconds": time.perf_counter() - started, "teacher_forced_loss": float(_teacher_loss(model, tokenizer, examples)["loss"]), "diagnosis_exact_match": metrics["diagnosis_exact_match"]["rate"], "diagnosis_exact_count": metrics["diagnosis_exact_match"]["count"], "resolution_exact_match": metrics["resolution_exact_match"]["rate"], "culprit_accuracy": metrics["culprit_accuracy"]["rate"], "failure_mode_accuracy": metrics["failure_mode_accuracy"]["rate"], "failure_mode_macro_f1": metrics["failure_mode_macro_f1"], "action_accuracy": metrics["recommended_action_accuracy"]["rate"], "evidence_f1": metrics["evidence"]["f1"], "strict_json_compliance": metrics["json_compliance"]["rate"], "valid_json": metrics["json_valid_rate"]}
+        print(f"VALIDATION_END step={step} duration={result['validation_duration_seconds']:.2f}", flush=True)
+        return result
     finally:
         # Generation and teacher-forced loss both enter eval mode. Restore the
         # caller's state before its next gradient-bearing microbatch.
@@ -217,6 +224,7 @@ def _train(model: Any, tokenizer: Any, train_examples: list[PreprocessedExample]
     validation_history: list[dict[str, Any]] = []
     loss_history: list[dict[str, Any]] = []
     step_rows: list[dict[str, Any]] = []
+    print("TRAINING_START", flush=True)
     step_zero = _validation(model, tokenizer, val_records, val_truth, val_examples, system_instruction, eval_config, 0)
     validation_history.append(step_zero); policy.observe(0, step_zero)
     _write_jsonl(output_dir / "validation_progression.jsonl", validation_history)
@@ -225,7 +233,7 @@ def _train(model: Any, tokenizer: Any, train_examples: list[PreprocessedExample]
     model.train()
     device = next(model.parameters()).device
     start_time = time.perf_counter(); synchronize_cuda();
-    processed_input = processed_supervised = optimizer_steps = 0
+    processed_examples = processed_input = processed_supervised = optimizer_steps = 0
     peak = {"allocated_gib": 0.0, "reserved_gib": 0.0}
     stop_reason = "max_optimizer_steps"
     max_steps = (len(train_examples) // config["gradient_accumulation_steps"]) * manifest["max_epochs"]
@@ -242,7 +250,7 @@ def _train(model: Any, tokenizer: Any, train_examples: list[PreprocessedExample]
             loss = result.loss; loss_value = float(loss.detach())
             if not torch.isfinite(loss.detach()):
                 raise FloatingPointError(f"non-finite loss at micro-step {micro_step}")
-            micro_losses.append(loss_value); window_ids.append(current.example_id); window_labels.append(json.loads(current.messages[-1]["content"])["failure_mode"]); input_tokens = int(batch["attention_mask"].sum()); supervised = int((batch["labels"][..., 1:] != -100).sum()); processed_input += input_tokens; processed_supervised += supervised; window_input += input_tokens; window_supervised += supervised
+            micro_losses.append(loss_value); window_ids.append(current.example_id); window_labels.append(json.loads(current.messages[-1]["content"])["failure_mode"]); input_tokens = int(batch["attention_mask"].sum()); supervised = int((batch["labels"][..., 1:] != -100).sum()); processed_examples += len(batch["attention_mask"]); processed_input += input_tokens; processed_supervised += supervised; window_input += input_tokens; window_supervised += supervised
             (loss / config["gradient_accumulation_steps"]).backward()
             if micro_step % config["gradient_accumulation_steps"] == 0:
                 squared = None
@@ -250,7 +258,7 @@ def _train(model: Any, tokenizer: Any, train_examples: list[PreprocessedExample]
                     if parameter.grad is not None:
                         value = (parameter.grad.detach().float() ** 2).sum(); squared = value if squared is None else squared + value
                 grad_norm = float(torch.sqrt(squared).item()) if squared is not None else None
-                optimizer.step(); optimizer.zero_grad(set_to_none=True); optimizer_steps += 1; synchronize_cuda()
+                optimizer.step(); optimizer.zero_grad(set_to_none=True); optimizer_steps += 1; synchronize_cuda(); print(f"OPTIMIZER_STEP {optimizer_steps}", flush=True)
                 duration = time.perf_counter() - step_start; step_loss = sum(micro_losses) / len(micro_losses); mem = json_safe_memory(cuda_memory_snapshot()); peak["allocated_gib"] = max(peak["allocated_gib"], mem["peak_allocated_gib"]); peak["reserved_gib"] = max(peak["reserved_gib"], mem["peak_reserved_gib"])
                 row = {"optimizer_step": optimizer_steps, "epoch": epoch + 1, "epoch_progress": micro_step / len(loader), "loss": step_loss, "learning_rate": float(optimizer.param_groups[0]["lr"]), "example_ids": window_ids, "labels": window_labels, "label_counts": dict(Counter(window_labels)), "microbatch_range": {"start": window_start, "end": micro_step}, "input_tokens": window_input, "supervised_tokens": window_supervised, "step_duration_seconds": duration, "cumulative_duration_seconds": time.perf_counter() - start_time, "gradient_norm": grad_norm, "allocated_vram": mem["allocated_gib"], "reserved_vram": mem["reserved_gib"]}
                 step_rows.append(row); loss_history.append({"optimizer_step": optimizer_steps, "loss": step_loss})
@@ -269,12 +277,14 @@ def _train(model: Any, tokenizer: Any, train_examples: list[PreprocessedExample]
     if best is None or best == 0:
         raise RuntimeError("no post-training checkpoint was selected by validation")
     near = earliest_within_tolerance(validation_history)
-    summary = {"optimizer_steps_executed": optimizer_steps, "max_optimizer_steps": max_steps, "examples_processed": processed_input, "input_tokens_processed": processed_input, "supervised_tokens_processed": processed_supervised, "wall_clock_training_seconds": duration, "input_tokens_per_second": processed_input / duration, "supervised_tokens_per_second": processed_supervised / duration, "peak_vram": peak, "initial_loss": loss_history[0]["loss"], "final_loss": loss_history[-1]["loss"], "min_loss": min(row["loss"] for row in loss_history), "max_loss": max(row["loss"] for row in loss_history), "mean_loss": sum(row["loss"] for row in loss_history) / len(loss_history), "all_losses_finite": all(torch.isfinite(torch.tensor(row["loss"])) for row in loss_history), "actual_stop_step": optimizer_steps, "stop_reason": stop_reason, "best_checkpoint_step": best, "best_validation_metric": policy.best_metrics["diagnosis_exact_match"], "early_stopping_state": policy.state(), "earliest_near_best": near, "optimizer": "AdamW", "scheduler": "none", "weight_decay": 0.0, "gradient_clipping": None, "warmup": 0}
+    validation_duration = sum(float(row.get("validation_duration_seconds", 0.0)) for row in validation_history)
+    summary = {"optimizer_steps_executed": optimizer_steps, "max_optimizer_steps": max_steps, "examples_processed": processed_examples, "input_tokens_processed": processed_input, "supervised_tokens_processed": processed_supervised, "wall_clock_training_seconds": duration, "validation_wall_clock_seconds": validation_duration, "input_tokens_per_second": processed_input / duration, "supervised_tokens_per_second": processed_supervised / duration, "peak_vram": peak, "initial_loss": loss_history[0]["loss"], "final_loss": loss_history[-1]["loss"], "min_loss": min(row["loss"] for row in loss_history), "max_loss": max(row["loss"] for row in loss_history), "mean_loss": sum(row["loss"] for row in loss_history) / len(loss_history), "all_losses_finite": all(torch.isfinite(torch.tensor(row["loss"])) for row in loss_history), "actual_stop_step": optimizer_steps, "stop_reason": stop_reason, "best_checkpoint_step": best, "best_validation_metric": policy.best_metrics["diagnosis_exact_match"], "early_stopping_state": policy.state(), "earliest_near_best": near, "optimizer": "AdamW", "scheduler": "none", "weight_decay": 0.0, "gradient_clipping": None, "warmup": 0}
     _write_json(output_dir / "training_summary.json", summary); _write_json(output_dir / "checkpoint_selection.json", {"policy": policy.state(), "validation_history": validation_history, "earliest_within_tolerance": near})
     return summary
 
 
 def main() -> None:
+    experiment_started = time.perf_counter()
     parser = argparse.ArgumentParser(); parser.add_argument("--output-dir", default="outputs/incident_diagnosis_02b2"); args = parser.parse_args(); output_dir = Path(args.output_dir)
     preflight, eval_config, train, validation, train_truth, val_truth, order = _preflight(output_dir)
     print(json.dumps({"preflight": preflight, "status": "passed; loading QLoRA model"}, indent=2, sort_keys=True), flush=True)
@@ -293,7 +303,7 @@ def main() -> None:
     adapter_meta = json.loads((selected_path / "checkpoint_metadata.json").read_text()); _write_json(output_dir / "selected_adapter_metadata.json", {"selected_path": str(selected_path), "checkpoint_metadata": adapter_meta, "adapter_parameter_count_in_training_model": adapter_parameter_count(model)})
     del model, train_examples, val_examples; gc.collect(); torch.cuda.empty_cache();
     fresh_base = load_quantized_base(_resolved_sft_config(json.loads((Path("data/incident_diagnosis_training") / "resolved_training_manifest.json").read_text()), output_dir)); reloaded = load_adapter(fresh_base, str(selected_path)); reloaded.eval(); reload_ok = adapter_parameter_count(reloaded) > 0
-    _write_json(output_dir / "reload_verification.json", {"status": "pass" if reload_ok else "fail", "base_model": "Qwen/Qwen3-4B", "adapter_path": str(selected_path), "adapter_parameter_count": adapter_parameter_count(reloaded), "checkpoint_step": summary["best_checkpoint_step"], "lora_config": json.loads((selected_path / "adapter_config.json").read_text())})
+    _write_json(output_dir / "reload_verification.json", {"status": "pass" if reload_ok else "fail", "base_model": "Qwen/Qwen3-4B", "adapter_path": str(selected_path), "adapter_parameter_count": adapter_parameter_count(reloaded), "checkpoint_step": summary["best_checkpoint_step"], "train_fingerprint": EXPECTED_TRAIN, "validation_fingerprint": EXPECTED_VALIDATION, "benchmark_fingerprint": EXPECTED_BENCHMARK, "evaluation_fingerprint": EXPECTED_EVALUATION, "selected_validation_metrics": adapter_meta["validation_metrics"], "lora_config": json.loads((selected_path / "adapter_config.json").read_text())})
     benchmark_inputs, benchmark_truth_rows, benchmark_manifest = read_benchmark("data/incident_diagnosis"); assert benchmark_manifest["benchmark_fingerprint"] == EXPECTED_BENCHMARK
     truth_by_id = {truth["incident_id"]: truth for truth in benchmark_truth_rows}; all_inputs = [item for split in ("standard", "hard", "transfer") for item in benchmark_inputs[split]]; all_truth = [truth_by_id[item["incident_id"]] for item in all_inputs]
     raw = _generate(reloaded, tokenizer, all_inputs, system, eval_config["evaluation_contract"]["generation"]["max_new_tokens"], eval_config["evaluation_contract"]["generation"]["batch_size"])
@@ -301,11 +311,26 @@ def main() -> None:
     tuned_splits = {}; all_pre = preprocess_incident_records(all_inputs, all_truth, tokenizer, 768, system)
     for split in ("standard", "hard", "transfer"):
         rows = benchmark_inputs[split]; truths = [truth_by_id[item["incident_id"]] for item in rows]; examples = [example for example in all_pre if example.example_id in {item["incident_id"] for item in rows}]; metrics = evaluate_incidents(rows, {truth["incident_id"]: truth for truth in truths}, {item["incident_id"]: raw[item["incident_id"]] for item in rows}); metrics["teacher_forced_loss"] = _teacher_loss(reloaded, tokenizer, examples)["loss"]; tuned_splits[split] = metrics
-    _write_json(output_dir / "tuned_metrics.json", {"benchmark_fingerprint": EXPECTED_BENCHMARK, "evaluation_fingerprint": EXPECTED_EVALUATION, "prediction_count": len(raw), "splits": tuned_splits, "failure_patterns": {split: failure_patterns(benchmark_inputs[split], tuned_splits[split]) for split in tuned_splits}})
+    tuned_splits["all"] = evaluate_incidents(all_inputs, truth_by_id, raw)
+    _write_json(output_dir / "tuned_metrics.json", {"benchmark_fingerprint": EXPECTED_BENCHMARK, "evaluation_fingerprint": EXPECTED_EVALUATION, "prediction_count": len(raw), "splits": tuned_splits, "failure_patterns": failure_patterns_for_splits(benchmark_inputs, tuned_splits, all_inputs)})
     base = json.loads(Path("results/incident_diagnosis_base.json").read_text()); base_predictions = {row["incident_id"]: row for row in _read_jsonl(Path("outputs/incident_diagnosis_base/predictions.jsonl"))}; transitions = Counter(); transition_rows = []
+    tuned_predictions = {row["incident_id"]: row for row in tuned_splits["all"]["predictions"]}
     for item in all_inputs:
-        bid = base_predictions[item["incident_id"]]; base_correct = bool(bid["diagnosis_exact"]); tuned_row = next(row for split in tuned_splits.values() for row in split["predictions"] if row["incident_id"] == item["incident_id"]); tuned_correct = bool(tuned_row["diagnosis_exact"]); key = ("base_correct" if base_correct else "base_wrong", "tuned_correct" if tuned_correct else "tuned_wrong"); transitions[" -> ".join(key)] += 1; transition_rows.append({"incident_id": item["incident_id"], "base_diagnosis_exact": base_correct, "tuned_diagnosis_exact": tuned_correct})
-    comparison = {"base": base["splits"], "tuned": {split: {key: value for key, value in metrics.items() if key != "predictions"} for split, metrics in tuned_splits.items()}, "transitions": dict(transitions), "transition_rows": transition_rows, "training": summary, "selected_checkpoint": summary["best_checkpoint_step"]}; _write_json(output_dir / "base_vs_tuned.json", comparison); _write_json(output_dir / "site_ready_summary.json", {"experiment": "production_incident_diagnosis_specialization", "base_diagnosis_exact": base["splits"]["all"]["diagnosis_exact_match"]["rate"], "tuned_diagnosis_exact": sum(row["diagnosis_exact"] for metrics in tuned_splits.values() for row in metrics["predictions"]) / 144, "max_optimizer_steps": 600, "actual_stop_step": summary["actual_stop_step"], "best_checkpoint_step": summary["best_checkpoint_step"], "earliest_near_best_step": summary["earliest_near_best"]["earliest_step"], "peak_vram_gib": summary["peak_vram"]["allocated_gib"], "training_seconds": summary["wall_clock_training_seconds"]})
+        bid = base_predictions[item["incident_id"]]; tuned_row = tuned_predictions[item["incident_id"]]
+        row_transitions = {}
+        for metric_name, base_field, tuned_field in (("diagnosis", "diagnosis_exact", "diagnosis_exact"), ("resolution", "resolution_exact", "resolution_exact"), ("action", "action_correct", "action_correct")):
+            base_correct = bool(bid[base_field]); tuned_correct = bool(tuned_row[tuned_field]); key = f"base_{'correct' if base_correct else 'wrong'} -> tuned_{'correct' if tuned_correct else 'wrong'}"; transitions[f"{metric_name}:{key}"] += 1; row_transitions[f"{metric_name}_transition"] = key
+        transition_rows.append({"incident_id": item["incident_id"], "base_diagnosis_exact": bool(bid["diagnosis_exact"]), "tuned_diagnosis_exact": bool(tuned_row["diagnosis_exact"]), **row_transitions})
+    family_comparison = {}
+    for family, base_family in base["splits"]["all"]["per_failure_family"].items():
+        tuned_family = tuned_splits["all"]["per_failure_family"][family]
+        family_comparison[family] = {"base": base_family, "tuned": tuned_family, "delta_pp": {"diagnosis_exact_match": (tuned_family["diagnosis_exact_match"] - base_family["diagnosis_exact_match"]) * 100, "resolution_exact_match": (tuned_family["resolution_exact_match"] - base_family["resolution_exact_match"]) * 100, "culprit_accuracy": (tuned_family["culprit_accuracy"] - base_family["culprit_accuracy"]) * 100, "failure_mode_accuracy": (tuned_family["failure_mode_accuracy"] - base_family["failure_mode_accuracy"]) * 100, "action_accuracy": (tuned_family["action_accuracy"] - base_family["action_accuracy"]) * 100, "json_compliance": (tuned_family["json_compliance"] - base_family["json_compliance"]) * 100}}
+    comparison = {"base": base["splits"], "tuned": {split: {key: value for key, value in metrics.items() if key != "predictions"} for split, metrics in tuned_splits.items()}, "failure_patterns": {"base": failure_patterns(all_inputs, base["splits"]["all"]), "tuned": failure_patterns(all_inputs, tuned_splits["all"])}, "transitions": dict(transitions), "transition_rows": transition_rows, "per_family": family_comparison, "training": summary, "selected_checkpoint": summary["best_checkpoint_step"]}; _write_json(output_dir / "base_vs_tuned.json", comparison)
+    base_all = base["splits"]["all"]; tuned_all = tuned_splits["all"]
+    site_summary = {"experiment": "production_incident_diagnosis_specialization", "model": "Qwen/Qwen3-4B", "base_diagnosis_exact": base_all["diagnosis_exact_match"]["rate"], "tuned_diagnosis_exact": tuned_all["diagnosis_exact_match"]["rate"], "diagnosis_gain_pp": (tuned_all["diagnosis_exact_match"]["rate"] - base_all["diagnosis_exact_match"]["rate"]) * 100, "base_resolution_exact": base_all["resolution_exact_match"]["rate"], "tuned_resolution_exact": tuned_all["resolution_exact_match"]["rate"], "resolution_gain_pp": (tuned_all["resolution_exact_match"]["rate"] - base_all["resolution_exact_match"]["rate"]) * 100, "base_hard": base["splits"]["hard"]["diagnosis_exact_match"]["rate"], "tuned_hard": tuned_splits["hard"]["diagnosis_exact_match"]["rate"], "hard_gain_pp": (tuned_splits["hard"]["diagnosis_exact_match"]["rate"] - base["splits"]["hard"]["diagnosis_exact_match"]["rate"]) * 100, "base_transfer": base["splits"]["transfer"]["diagnosis_exact_match"]["rate"], "tuned_transfer": tuned_splits["transfer"]["diagnosis_exact_match"]["rate"], "transfer_gain_pp": (tuned_splits["transfer"]["diagnosis_exact_match"]["rate"] - base["splits"]["transfer"]["diagnosis_exact_match"]["rate"]) * 100, "base_action_accuracy": base_all["recommended_action_accuracy"]["rate"], "tuned_action_accuracy": tuned_all["recommended_action_accuracy"]["rate"], "action_gain_pp": (tuned_all["recommended_action_accuracy"]["rate"] - base_all["recommended_action_accuracy"]["rate"]) * 100, "max_optimizer_steps": 600, "actual_stop_step": summary["actual_stop_step"], "best_checkpoint_step": summary["best_checkpoint_step"], "earliest_near_best_step": summary["earliest_near_best"]["earliest_step"], "training_seconds": summary["wall_clock_training_seconds"], "validation_seconds": summary["validation_wall_clock_seconds"], "peak_allocated_vram_gib": summary["peak_vram"]["allocated_gib"], "peak_reserved_vram_gib": summary["peak_vram"]["reserved_gib"]}
+    _write_json(output_dir / "site_ready_summary.json", site_summary)
+    final_summary = {"experiment": "02B.2 Production Incident Diagnosis QLoRA Specialization", "fingerprints": {"train": EXPECTED_TRAIN, "validation": EXPECTED_VALIDATION, "benchmark": EXPECTED_BENCHMARK, "evaluation": EXPECTED_EVALUATION}, "training": summary, "reload": json.loads((output_dir / "reload_verification.json").read_text()), "benchmark_evaluations": {"tuned_generation_passes": 1, "tuned_prediction_count": len(raw), "selected_checkpoint": summary["best_checkpoint_step"]}, "total_experiment_seconds": time.perf_counter() - experiment_started}
+    _write_json(output_dir / "final_experiment_summary.json", final_summary)
     print(json.dumps({"status": "complete", "summary": summary, "reload": json.loads((output_dir / "reload_verification.json").read_text()), "output_dir": str(output_dir)}, indent=2, sort_keys=True), flush=True)
 
 

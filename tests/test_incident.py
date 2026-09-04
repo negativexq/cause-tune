@@ -14,7 +14,7 @@ from causetune.incident_benchmark import (
     normalize_incident_text,
     validate_benchmark,
 )
-from causetune.incident_evaluation import evaluate_incidents, parse_incident_diagnosis
+from causetune.incident_evaluation import evaluate_incidents, failure_patterns_for_splits, parse_incident_diagnosis
 from causetune.incident_contract import contract_fingerprint
 from causetune.incident_taxonomy import ACTIONS
 
@@ -125,6 +125,21 @@ class IncidentEvaluationTests(unittest.TestCase):
         self.assertEqual(metrics["resolution_exact_match"]["count"], 2)
         self.assertEqual(metrics["evidence"]["f1"], 1.0)
         self.assertEqual(metrics["failure_mode_macro_f1"], 1.0 / 12.0)
+
+    def test_failure_patterns_support_aggregate_all_without_split_lookup(self) -> None:
+        incident = self.inputs[0]
+        truth = self.truth[incident["incident_id"]]
+        output = json.dumps({
+            "culprit_service": truth["culprit_service"],
+            "failure_mode": truth["failure_mode"],
+            "recommended_action": truth["recommended_action"],
+            "evidence_ids": truth["evidence_ids"],
+        })
+        evaluation = evaluate_incidents([incident], self.truth, {incident["incident_id"]: output})
+        patterns = failure_patterns_for_splits(
+            {"standard": [incident]}, {"all": evaluation}, [incident]
+        )
+        self.assertEqual(patterns["all"]["total_failures"], 0)
 
     def test_contract_is_explicit_and_not_the_experiment_01_contract(self) -> None:
         with open("configs/incident_diagnosis_eval.json", encoding="utf-8") as handle:

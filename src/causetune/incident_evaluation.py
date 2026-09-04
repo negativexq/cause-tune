@@ -212,3 +212,24 @@ def failure_patterns(
             counts["distractor_selection"] += 1
     counts["total_failures"] = sum(not row["diagnosis_exact"] for row in evaluation["predictions"])
     return dict(counts)
+
+
+def failure_patterns_for_splits(
+    split_inputs: Mapping[str, Sequence[Mapping[str, Any]]],
+    evaluations: Mapping[str, Mapping[str, Any]],
+    aggregate_inputs: Sequence[Mapping[str, Any]],
+    aggregate_name: str = "all",
+) -> dict[str, dict[str, int]]:
+    """Compute failure patterns for real slices plus an explicit aggregate.
+
+    The aggregate is a reporting view and is not required to be a key in the
+    persisted benchmark split mapping.
+    """
+
+    return {
+        split: failure_patterns(
+            aggregate_inputs if split == aggregate_name else split_inputs[split],
+            evaluation,
+        )
+        for split, evaluation in evaluations.items()
+    }

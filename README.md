@@ -78,7 +78,7 @@ No replacement collapse into another single class occurred. `order_missing` rema
 
 ## Experiment 02 — Production Incident Diagnosis
 
-**Status:** baseline capability-gap measurement.
+**Status:** Experiment 02B.2 specialization complete.
 
 The selected topic is Production Incident Diagnosis Specialist. The goal is to determine whether untouched Qwen3-4B has a meaningful deficiency in diagnosing structured production incidents from topology, deployments, metrics, logs, alerts, and dependency health before any fine-tuning is attempted. Experiment 02A freezes a 144-case benchmark and a new strict evaluation contract; it does not yet claim that a specialist model exists.
 
@@ -90,7 +90,12 @@ Initial frozen-base result — diagnosis exact match, the primary metric:
 | HARD | 64.58% (31/48) | 35.42% (17/48) | 89.58% |
 | TRANSFER | 62.50% (15/24) | 25.00% (6/24) | 79.17% |
 
-This is a baseline measurement only. No incident-diagnosis specialist has been trained yet.
+The first real semantic QLoRA run stopped at 100 optimizer steps with
+validation-only checkpoint selection. On the frozen 144-case benchmark, tuned
+diagnosis exact match was 99.31% (143/144) versus the untouched-base result of
+65.28% (94/144), a measured gain of +34.03 percentage points. Diagnosis exact
+was 100.00% STANDARD, 97.92% HARD, and 100.00% TRANSFER. The previously weak
+frozen benchmark families were not oversampled during training.
 
 ## Training configuration
 
@@ -135,13 +140,12 @@ Frozen evaluation-contract fingerprint: `1b00a333c26c4cbd03b3e04d990fad3b4adf0d9
 
 The same strict JSON evaluation contract was used for base and tuned models; malformed outputs were not repaired.
 
-## Current work: Experiment 02B.1
+## Completed work: Experiment 02B.2
 
-The Production Incident Diagnosis specialization training foundation is now
-prepared: an independent balanced train/validation dataset, contamination
-checks, Qwen assistant-only formatting, and validation-only checkpoint/early-
-stopping infrastructure. No QLoRA training or tuned evaluation has been run;
-the frozen 02A benchmark remains sealed.
+The Production Incident Diagnosis specialization completed with an independent
+balanced train/validation dataset, assistant-only formatting, validation-only
+checkpointing, and a fresh adapter reload. The tuned frozen result and all
+recovery/integrity artifacts are under `outputs/incident_diagnosis_02b2`.
 
 ## Selecting future experiments
 
@@ -154,16 +158,15 @@ Experiment 02 is now the selected specialization task:
 5. Select one useful gap, then build train/validation/test data.
 6. Prepare independent training data, fine-tune once, and measure exact base → tuned impact.
 
-Candidate domains include SRE incident diagnosis, SOC/security alert triage, telecom/network operations, company-specific query/DSL generation, internal tool/API behavior, and industrial fault diagnosis. These are examples only. Experiment 02 has not started or been selected.
+Candidate domains include SRE incident diagnosis, SOC/security alert triage, telecom/network operations, company-specific query/DSL generation, internal tool/API behavior, and industrial fault diagnosis. These remain future specialization candidates; Experiment 02 is complete.
 
 ## Checkpoint selection and early stopping
 
-The transparent checkpoint-selection and early-stopping foundation is now
-implemented for Experiment 02B.1. It evaluates validation every N optimizer
-steps, persists adapter-only checkpoints, tracks best-validation metadata,
-patience, `min_delta`, earliest checkpoint within a quality tolerance, and
-potential optimizer-step savings. A full training run and checkpoint-selection
-decision have not happened yet.
+The transparent checkpoint-selection and early-stopping foundation was used for
+Experiment 02B.2. It selected step 100 from validation-only metrics, recorded
+step 25 as the earliest near-best checkpoint, and stopped after 100 of 600
+configured updates. The tuned benchmark was generated once after fresh reload;
+post-processing was recovered offline from persisted raw outputs.
 
 Checkpoint selection must use validation only; ID, HARD, and OOD remain sealed until final evaluation. M6 motivates this work but does not prove which checkpoint is optimal.
 

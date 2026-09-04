@@ -26,16 +26,21 @@ M7 must select checkpoints using validation only. ID, HARD, and OOD remain seale
 
 The incident benchmark and evaluation contract were frozen, then untouched Qwen3-4B was measured once. The current result is recorded in `results/incident_diagnosis_base.json`; no training data, adapter, or QLoRA run was used.
 
-### Experiment 02B.1 — Training foundation — current
+### Experiment 02B.1 — Training foundation — complete
 
 The independent, balanced train/validation data, contamination checks,
 assistant-only formatting, validation-only checkpoint policy, early stopping,
-and resolved run manifest are ready. No GPU training or adapter has been run.
+and resolved run manifest were used unchanged by the specialization run.
 
-### Experiment 02B.2 — QLoRA specialization — next
+### Experiment 02B.2 — QLoRA specialization — complete
 
-Blocked pending review of the 02B.1 foundation. It will use one controlled run
-and keep the frozen 02A benchmark sealed until checkpoint selection.
+One controlled QLoRA run completed with Qwen/Qwen3-4B. It stopped at 100 of
+600 configured optimizer steps, selected checkpoint 100 using validation only,
+and achieved 99.31% (143/144) frozen diagnosis exact match versus the 65.28%
+base result. STANDARD/HARD/TRANSFER diagnosis exact was 100.00%/97.92%/100.00%.
+The frozen benchmark was generated once after fresh adapter reload. A narrow
+post-processing aggregate-split bug was recovered offline from the persisted
+144 raw predictions; no model generation was repeated.
 
 The planned process is:
 
@@ -47,8 +52,9 @@ The planned process is:
 6. Construct train/validation/test data.
 7. Fine-tune and measure exact base → tuned impact.
 
-Experiment 02 is now selected as Production Incident Diagnosis Specialist.
-02A capability gap is complete; 02B.1 is current and 02B.2 has not started.
+Experiment 02 is now a completed Production Incident Diagnosis specialization.
+02A capability-gap measurement, 02B.1 training foundation, and 02B.2 QLoRA
+specialization are complete.
 
 ## Focused optimization — later
 
