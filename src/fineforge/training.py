@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+import json
 import time
+from collections.abc import Callable
+from collections import Counter
 from typing import Any, Sequence
 
 import torch
@@ -67,21 +70,58 @@ def count_preprocessed_input_tokens(
     return sum(len(example.input_ids) for example in examples)
 
 
+def _gradient_norm(model: Any) -> float | None:
+    """Measure the current gradient norm without clipping or mutating it."""
+
+    squared_norm = None
+    for parameter in model.parameters():
+        if parameter.grad is None:
+            continue
+        contribution = (parameter.grad.detach().float() ** 2).sum()
+        squared_norm = contribution if squared_norm is None else squared_norm + contribution
+    if squared_norm is None:
+        return None
+    return float(torch.sqrt(squared_norm).item())
+
+
+def _assistant_intent(example: PreprocessedExample) -> str:
+    """Read the already-validated assistant label for step telemetry."""
+
+    parsed = json.loads(example.messages[-1]["content"])
+    return str(parsed["intent"])
+
+
 def train_qlora(
     model: Any,
     tokenizer: Any,
     train_examples: Sequence[PreprocessedExample],
     config: SFTConfig,
+    *,
+    example_order: Sequence[int] | None = None,
+    optimizer_step_callback: Callable[[dict[str, Any], Any], None] | None = None,
 ) -> tuple[dict[str, Any], list[dict[str, float | int]]]:
-    """Run exactly one configured epoch and return optimizer-step telemetry."""
+    """Run exactly one configured epoch and return optimizer-step telemetry.
+
+    With no ``example_order`` or callback this retains the original M5
+    sequential behavior. M6 supplies only a deterministic example order and a
+    read-only telemetry callback.
+    """
 
     if not train_examples:
         raise ValueError("training split is empty")
     if any(example.trainable_assistant_token_count < 1 for example in train_examples):
         raise ValueError("every training example must have a non-ignored assistant label")
 
+    if example_order is None:
+        ordered_examples = list(train_examples)
+    else:
+        order = list(example_order)
+        if sorted(order) != list(range(len(train_examples))):
+            raise ValueError("example_order must be a permutation of training indices")
+        ordered_examples = [train_examples[index] for index in order]
+
     loader = DataLoader(
-        list(train_examples),
+        ordered_examples,
         batch_size=config.micro_batch_size,
         shuffle=False,
         collate_fn=lambda batch: collate_preprocessed(batch, tokenizer.pad_token_id),
@@ -104,12 +144,20 @@ def train_qlora(
     model_input_tokens_processed = 0
     optimizer_steps = 0
     stage = "training setup"
+    window_examples: list[PreprocessedExample] = []
+    window_supervised_tokens = 0
+    window_input_tokens = 0
+    window_first_micro_step = 1
 
     synchronize_cuda()
     start_time = time.perf_counter()
     try:
         for micro_step, batch in enumerate(loader, start=1):
             processed_examples += len(batch["input_ids"])
+            batch_start = (micro_step - 1) * config.micro_batch_size
+            window_examples.extend(
+                ordered_examples[batch_start : batch_start + len(batch["input_ids"])]
+            )
             batch = {key: value.to(device) for key, value in batch.items()}
             stage = f"forward/backward micro-step {micro_step}"
             outputs = model(
@@ -121,12 +169,12 @@ def train_qlora(
             loss_value = float(loss.detach())
             assert_finite(loss_value, f"micro-step {micro_step} loss")
             micro_losses.append(loss_value)
-            supervised_assistant_tokens_processed += count_supervised_tokens_after_shift(
-                batch["labels"]
-            )
-            model_input_tokens_processed += count_model_input_tokens(
-                batch["attention_mask"]
-            )
+            supervised_tokens = count_supervised_tokens_after_shift(batch["labels"])
+            input_tokens = count_model_input_tokens(batch["attention_mask"])
+            supervised_assistant_tokens_processed += supervised_tokens
+            model_input_tokens_processed += input_tokens
+            window_supervised_tokens += supervised_tokens
+            window_input_tokens += input_tokens
             (loss / config.gradient_accumulation_steps).backward()
 
             is_accumulation_boundary = (
@@ -134,6 +182,7 @@ def train_qlora(
                 or micro_step == len(loader)
             )
             if is_accumulation_boundary:
+                gradient_norm = _gradient_norm(model)
                 stage = f"optimizer step {optimizer_steps + 1}"
                 optimizer.step()
                 optimizer.zero_grad(set_to_none=True)
@@ -147,7 +196,39 @@ def train_qlora(
                         "micro_steps": len(micro_losses),
                     }
                 )
+                if optimizer_step_callback is not None:
+                    synchronize_cuda()
+                    optimizer_step_callback(
+                        {
+                            "optimizer_step": optimizer_steps,
+                            "contributing_example_ids": [
+                                example.example_id for example in window_examples
+                            ],
+                            "contributing_labels": [
+                                _assistant_intent(example) for example in window_examples
+                            ],
+                            "label_counts": dict(
+                                Counter(_assistant_intent(example) for example in window_examples)
+                            ),
+                            "microbatch_range": {
+                                "start": window_first_micro_step,
+                                "end": micro_step,
+                            },
+                            "mean_accumulated_loss": step_loss,
+                            "supervised_tokens": window_supervised_tokens,
+                            "input_tokens": window_input_tokens,
+                            "learning_rate": float(optimizer.param_groups[0]["lr"]),
+                            "gradient_norm": gradient_norm,
+                            "vram": json_safe_memory(cuda_memory_snapshot()),
+                        },
+                        model,
+                    )
+                    model.train()
                 micro_losses.clear()
+                window_examples.clear()
+                window_supervised_tokens = 0
+                window_input_tokens = 0
+                window_first_micro_step = micro_step + 1
     except torch.cuda.OutOfMemoryError as exc:
         synchronize_cuda()
         snapshot = json_safe_memory(cuda_memory_snapshot())

@@ -1,0 +1,45 @@
+{
+  "experiment": "realistic_qlora_m6",
+  "model_id": "Qwen/Qwen3-4B",
+  "seed": 42,
+  "dataset_dir": "data/realistic",
+  "evaluation_config": "configs/baseline_eval.json",
+  "evaluation_contract_fingerprint": "1b00a333c26c4cbd03b3e04d990fad3b4adf0d9a03443c9fd5f183ee7e8ef94d",
+  "output_dir": "outputs/realistic_qlora_m6",
+  "training_order": {
+    "shuffle": true,
+    "sampler": "deterministic_python_random_v1",
+    "seed": 42
+  },
+  "training": {
+    "max_sequence_length": 1024,
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 0.0002,
+    "num_epochs": 1,
+    "gradient_checkpointing": true,
+    "gradient_checkpointing_use_reentrant": false
+  },
+  "quantization": {
+    "load_in_4bit": true,
+    "quant_type": "nf4",
+    "compute_dtype": "bfloat16",
+    "double_quant": true
+  },
+  "lora": {
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.0,
+    "bias": "none",
+    "task_type": "CAUSAL_LM",
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  }
+}
