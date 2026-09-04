@@ -3,8 +3,8 @@ from __future__ import annotations
 import copy
 import unittest
 
-from fineforge.data.generate import generate_smoke_records
-from fineforge.data.schema import INTENTS, SchemaValidationError, validate_records
+from causetune.data.generate import generate_smoke_records
+from causetune.data.schema import INTENTS, SchemaValidationError, validate_records
 
 
 class DatasetTests(unittest.TestCase):

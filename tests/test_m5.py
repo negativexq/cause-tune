@@ -9,7 +9,7 @@ from pathlib import Path
 import torch
 from torch import nn
 
-from fineforge.m5 import (
+from causetune.m5 import (
     EXPECTED_COUNTS,
     EXPECTED_EVALUATION_FINGERPRINT,
     adapter_artifact_metadata,
@@ -20,8 +20,8 @@ from fineforge.m5 import (
     prediction_transitions,
     validate_m5_config,
 )
-from fineforge.m5_audit import audit_training_order, deterministic_shuffled_indices
-from fineforge.m6 import validate_m6_config
+from causetune.m5_audit import audit_training_order, deterministic_shuffled_indices
+from causetune.m6 import validate_m6_config
 
 
 class _MockLoraTarget(nn.Module):

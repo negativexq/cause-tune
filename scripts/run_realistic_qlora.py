@@ -17,12 +17,12 @@ from typing import Any
 
 import torch
 
-from fineforge.config import LoraConfig, QuantizationConfig, SFTConfig
-from fineforge.data.preprocess import preprocess_records
-from fineforge.data.validation import read_realistic_splits
-from fineforge.evaluation import aggregate_failures, evaluate_split, teacher_forced_metrics
-from fineforge.evaluation_contract import contract_fingerprint
-from fineforge.m5 import (
+from causetune.config import LoraConfig, QuantizationConfig, SFTConfig
+from causetune.data.preprocess import preprocess_records
+from causetune.data.validation import read_realistic_splits
+from causetune.evaluation import aggregate_failures, evaluate_split, teacher_forced_metrics
+from causetune.evaluation_contract import contract_fingerprint
+from causetune.m5 import (
     EXPECTED_COUNTS,
     EXPECTED_EVALUATION_FINGERPRINT,
     TOP_HARD_PAIRS,
@@ -36,15 +36,15 @@ from fineforge.m5 import (
     sequence_summary,
     validate_m5_config,
 )
-from fineforge.model import (
+from causetune.model import (
     adapter_parameter_count,
     attach_lora,
     load_adapter,
     load_quantized_base,
     load_tokenizer,
 )
-from fineforge.telemetry import cuda_memory_snapshot, json_safe_memory, synchronize_cuda
-from fineforge.training import QLoRATrainingOOMError, train_qlora
+from causetune.telemetry import cuda_memory_snapshot, json_safe_memory, synchronize_cuda
+from causetune.training import QLoRATrainingOOMError, train_qlora
 
 
 EXPECTED_TRAINABLE_PARAMETERS = 33_030_144

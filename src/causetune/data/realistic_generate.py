@@ -20,6 +20,8 @@ from .taxonomy import validate_taxonomy
 
 
 GENERATOR_VERSION = "m4-realistic-local-v1"
+# Immutable historical identifier: changing it would change the verified M4
+# manifest and dataset fingerprint.
 DATASET_VERSION = "fineforge-m4-realistic-v1"
 SPLITS = ("train", "validation", "id_test", "hard_test", "ood_test")
 COUNTS_PER_INTENT = {"train": 200, "validation": 25, "id_test": 25, "hard_test": 25, "ood_test": 25}

@@ -10,11 +10,11 @@ from statistics import mean, median
 
 from transformers import AutoTokenizer
 
-from fineforge.config import load_config
-from fineforge.data.preprocess import IGNORE_INDEX, preprocess_records
-from fineforge.data.schema import read_jsonl
-from fineforge.data.split import load_split_manifest
-from fineforge.training import (
+from causetune.config import load_config
+from causetune.data.preprocess import IGNORE_INDEX, preprocess_records
+from causetune.data.schema import read_jsonl
+from causetune.data.split import load_split_manifest
+from causetune.training import (
     count_preprocessed_input_tokens,
     count_preprocessed_supervised_tokens,
 )

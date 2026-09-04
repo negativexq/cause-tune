@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import unittest
 
-from fineforge.data.generate import generate_smoke_records
-from fineforge.data.preprocess import build_preprocessed_example
-from fineforge.evaluation import collate_preprocessed, parse_structured_intent
+from causetune.data.generate import generate_smoke_records
+from causetune.data.preprocess import build_preprocessed_example
+from causetune.evaluation import collate_preprocessed, parse_structured_intent
 
 from test_preprocess import FakeChatTokenizer
 

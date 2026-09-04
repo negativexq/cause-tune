@@ -6,13 +6,13 @@ from pathlib import Path
 
 import torch
 
-from fineforge.data.generate import generate_smoke_records
-from fineforge.data.preprocess import build_preprocessed_example
-from fineforge.evaluation import (
+from causetune.data.generate import generate_smoke_records
+from causetune.data.preprocess import build_preprocessed_example
+from causetune.evaluation import (
     diagnose_generation_output,
     greedy_intent_metrics,
 )
-from fineforge.evaluation_contract import (
+from causetune.evaluation_contract import (
     PROMPT_VERSION,
     SYSTEM_INSTRUCTION,
     contract_fingerprint,

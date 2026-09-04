@@ -13,20 +13,20 @@ from typing import Any
 
 import torch
 
-from fineforge.config import load_config
-from fineforge.data.preprocess import preprocess_records
-from fineforge.data.schema import read_jsonl
-from fineforge.data.split import load_split_manifest
-from fineforge.evaluation import evaluate_split
-from fineforge.model import (
+from causetune.config import load_config
+from causetune.data.preprocess import preprocess_records
+from causetune.data.schema import read_jsonl
+from causetune.data.split import load_split_manifest
+from causetune.evaluation import evaluate_split
+from causetune.model import (
     adapter_parameter_count,
     attach_lora,
     load_adapter,
     load_quantized_base,
     load_tokenizer,
 )
-from fineforge.telemetry import cuda_memory_snapshot, json_safe_memory, synchronize_cuda
-from fineforge.training import QLoRATrainingOOMError, train_qlora
+from causetune.telemetry import cuda_memory_snapshot, json_safe_memory, synchronize_cuda
+from causetune.training import QLoRATrainingOOMError, train_qlora
 
 
 def seed_everything(seed: int) -> None:

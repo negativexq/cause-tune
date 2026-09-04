@@ -1,4 +1,4 @@
-"""Schema and content validation for FineForge chat records."""
+"""Schema and content validation for CauseTune chat records."""
 
 from __future__ import annotations
 

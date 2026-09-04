@@ -7,7 +7,7 @@ import argparse
 import json
 from pathlib import Path
 
-from fineforge.data.validation import build_manifest, read_realistic_splits, write_validation_report
+from causetune.data.validation import build_manifest, read_realistic_splits, write_validation_report
 
 
 def main() -> None:

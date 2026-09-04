@@ -7,8 +7,8 @@ import argparse
 import json
 from pathlib import Path
 
-from fineforge.data.statistics import dataset_statistics
-from fineforge.data.validation import read_realistic_splits
+from causetune.data.statistics import dataset_statistics
+from causetune.data.validation import read_realistic_splits
 
 
 def main() -> None:
@@ -21,7 +21,7 @@ def main() -> None:
     splits = read_realistic_splits(dataset_dir)
     tokenizer = None
     if not args.no_tokenizer:
-        from fineforge.model import load_tokenizer_for_model
+        from causetune.model import load_tokenizer_for_model
         tokenizer = load_tokenizer_for_model(args.model_id)
     report = dataset_statistics(splits, tokenizer)
     path = dataset_dir / "statistics.json"

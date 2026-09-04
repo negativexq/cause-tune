@@ -7,9 +7,9 @@ import argparse
 
 from transformers import AutoTokenizer
 
-from fineforge.config import load_config
-from fineforge.data.preprocess import decode_trainable_assistant, preprocess_records
-from fineforge.data.schema import read_jsonl
+from causetune.config import load_config
+from causetune.data.preprocess import decode_trainable_assistant, preprocess_records
+from causetune.data.schema import read_jsonl
 
 
 def main() -> None:

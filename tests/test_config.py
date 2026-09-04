@@ -3,7 +3,7 @@ from __future__ import annotations
 import unittest
 from pathlib import Path
 
-from fineforge.config import load_config
+from causetune.config import load_config
 
 
 class ConfigurationTests(unittest.TestCase):

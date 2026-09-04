@@ -3,12 +3,12 @@ from __future__ import annotations
 import copy
 import unittest
 
-from fineforge.data.leakage import cross_split_leakage, duplicate_groups, normalize_text
-from fineforge.data.realistic_generate import generate_realistic_splits
-from fineforge.data.statistics import dataset_statistics
-from fineforge.data.taxonomy import AMBIGUITY_RULES, INTENT_SPEC, validate_taxonomy
-from fineforge.data.validation import validate_realistic_record, validate_realistic_splits
-from fineforge.evaluation import classification_metrics, parse_structured_intent
+from causetune.data.leakage import cross_split_leakage, duplicate_groups, normalize_text
+from causetune.data.realistic_generate import generate_realistic_splits
+from causetune.data.statistics import dataset_statistics
+from causetune.data.taxonomy import AMBIGUITY_RULES, INTENT_SPEC, validate_taxonomy
+from causetune.data.validation import validate_realistic_record, validate_realistic_splits
+from causetune.evaluation import classification_metrics, parse_structured_intent
 
 
 class M4DatasetTests(unittest.TestCase):

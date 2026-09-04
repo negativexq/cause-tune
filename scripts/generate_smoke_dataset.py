@@ -7,10 +7,10 @@ import argparse
 import json
 from pathlib import Path
 
-from fineforge.config import load_config
-from fineforge.data.generate import generate_smoke_records
-from fineforge.data.schema import validate_records, write_jsonl
-from fineforge.data.split import split_ids, split_records
+from causetune.config import load_config
+from causetune.data.generate import generate_smoke_records
+from causetune.data.schema import validate_records, write_jsonl
+from causetune.data.split import split_ids, split_records
 
 
 def main() -> None:

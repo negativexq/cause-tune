@@ -16,9 +16,9 @@ from typing import Any
 
 from transformers import AutoTokenizer
 
-from fineforge.data.preprocess import decode_trainable_assistant, preprocess_records
-from fineforge.evaluation_contract import SYSTEM_INSTRUCTION, contract_fingerprint
-from fineforge.m5_audit import audit_training_order
+from causetune.data.preprocess import decode_trainable_assistant, preprocess_records
+from causetune.evaluation_contract import SYSTEM_INSTRUCTION, contract_fingerprint
+from causetune.m5_audit import audit_training_order
 
 
 def _write_json(path: Path, value: Any) -> None:

@@ -6,7 +6,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from fineforge.m6 import m6_artifact_metadata
+from causetune.m6 import m6_artifact_metadata
 
 
 def main() -> None:

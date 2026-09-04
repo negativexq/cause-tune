@@ -1,4 +1,4 @@
-"""Canonical FineForge M4 intent taxonomy and deterministic ambiguity policy.
+"""Canonical CauseTune M4 intent taxonomy and deterministic ambiguity policy.
 
 This module is the semantic source of truth for realistic dataset generation and
 validation.  The metadata is deliberately plain Python data so it can be

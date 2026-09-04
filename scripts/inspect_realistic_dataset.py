@@ -7,8 +7,8 @@ import argparse
 import json
 from pathlib import Path
 
-from fineforge.data.schema import INTENTS
-from fineforge.data.validation import read_realistic_splits
+from causetune.data.schema import INTENTS
+from causetune.data.validation import read_realistic_splits
 
 
 def main() -> None:

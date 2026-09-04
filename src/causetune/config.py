@@ -1,4 +1,4 @@
-"""Configuration for the FineForge SFT smoke milestone.
+"""Configuration for the CauseTune SFT smoke milestone.
 
 The configuration is deliberately dependency-free so experiment settings can be
 loaded, printed, and tested without loading a model.

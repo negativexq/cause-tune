@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import unittest
 
-from fineforge.data.generate import generate_smoke_records
-from fineforge.data.preprocess import (
+from causetune.data.generate import generate_smoke_records
+from causetune.data.preprocess import (
     IGNORE_INDEX,
     ChatTemplatePrefixError,
     SequenceLengthError,

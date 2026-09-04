@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import unittest
 
-from fineforge.data.generate import generate_smoke_records
-from fineforge.data.schema import validate_records
-from fineforge.data.split import split_ids, split_records
+from causetune.data.generate import generate_smoke_records
+from causetune.data.schema import validate_records
+from causetune.data.split import split_ids, split_records
 
 
 class SplitTests(unittest.TestCase):

@@ -1,4 +1,4 @@
-"""Quantized QLoRA model construction for the FineForge smoke run."""
+"""Quantized QLoRA model construction for the CauseTune smoke run."""
 
 from __future__ import annotations
 

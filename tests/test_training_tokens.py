@@ -4,7 +4,7 @@ import unittest
 
 import torch
 
-from fineforge.training import (
+from causetune.training import (
     count_model_input_tokens,
     count_supervised_tokens_after_shift,
 )

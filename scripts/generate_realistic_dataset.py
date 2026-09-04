@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate and validate the deterministic FineForge M4 realistic dataset."""
+"""Generate and validate the deterministic CauseTune M4 realistic dataset."""
 
 from __future__ import annotations
 
@@ -7,8 +7,8 @@ import argparse
 import json
 from pathlib import Path
 
-from fineforge.data.realistic_generate import DATASET_VERSION, write_realistic_dataset
-from fineforge.data.validation import build_manifest, write_validation_report
+from causetune.data.realistic_generate import DATASET_VERSION, write_realistic_dataset
+from causetune.data.validation import build_manifest, write_validation_report
 
 
 def main() -> None:

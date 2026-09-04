@@ -8,8 +8,8 @@ import json
 from pathlib import Path
 from typing import Any
 
-from fineforge.evaluation import parse_structured_intent
-from fineforge.data.validation import read_realistic_splits
+from causetune.evaluation import parse_structured_intent
+from causetune.data.validation import read_realistic_splits
 
 
 SEMANTIC_CUES = {
@@ -122,7 +122,7 @@ def main() -> None:
             "operation": "json.loads(raw_text)",
             "allow_surrounding_text": False,
             "require_exact_keys": ["intent"],
-            "allowed_labels": "FineForge INTENT_SET",
+            "allowed_labels": "CauseTune INTENT_SET",
             "repair_output": False,
         },
         "schema_validator": {
