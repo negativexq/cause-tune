@@ -1,0 +1,84 @@
+{
+  "argument_policy": "preserve normalized calling text; do not infer labels from arguments",
+  "experiment": "03D",
+  "implementation_version": "cloud-opsbench-03d-training-contract-v1",
+  "live_kubernetes": false,
+  "mode": "offline replay from immutable case-local tool_cache.json and trajectory observations",
+  "observation_policy": "resolve by exact cached output when possible; otherwise retain the immutable golden-trace observation and flag the fallback",
+  "source": {
+    "adapter_version": "cloud-opsbench-adapter-v1",
+    "documented_case_count": 754,
+    "documented_fault_type_count": 57,
+    "documented_system_case_counts": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "expected_layout": "benchmark/<system>/<fault_category>/<case_id>/",
+    "license": "MIT",
+    "license_file_sha256": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+    "official_repository_url": "https://github.com/LLM4Ops/Cloud-OpsBench",
+    "registry_version": "cloud-opsbench-source-v1",
+    "release_identity": "main@03c415e5709297432282fbbfd499f1bca0f8c347",
+    "source_name": "Cloud-OpsBench",
+    "systems": [
+      "boutique",
+      "trainticket"
+    ],
+    "upstream_revision": "03c415e5709297432282fbbfd499f1bca0f8c347"
+  },
+  "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "tools": [
+    {
+      "source_cache_key_rule": "case-local keys beginning with GetResources",
+      "tool_id": "GetResources"
+    },
+    {
+      "source_cache_key_rule": "case-local keys beginning with DescribeResource",
+      "tool_id": "DescribeResource"
+    },
+    {
+      "source_cache_key_rule": "case-local keys beginning with GetAppYAML",
+      "tool_id": "GetAppYAML"
+    },
+    {
+      "source_cache_key_rule": "case-local keys beginning with GetServiceDependencies",
+      "tool_id": "GetServiceDependencies"
+    },
+    {
+      "source_cache_key_rule": "case-local keys beginning with CheckServiceConnectivity",
+      "tool_id": "CheckServiceConnectivity"
+    },
+    {
+      "source_cache_key_rule": "case-local keys beginning with GetAlerts",
+      "tool_id": "GetAlerts"
+    },
+    {
+      "source_cache_key_rule": "case-local keys beginning with GetRecentLogs",
+      "tool_id": "GetRecentLogs"
+    },
+    {
+      "source_cache_key_rule": "case-local keys beginning with GetErrorLogs",
+      "tool_id": "GetErrorLogs"
+    },
+    {
+      "source_cache_key_rule": "case-local keys beginning with ListCodeFiles",
+      "tool_id": "ListCodeFiles"
+    },
+    {
+      "source_cache_key_rule": "case-local keys beginning with GetSourceCode",
+      "tool_id": "GetSourceCode"
+    },
+    {
+      "source_cache_key_rule": "case-local keys beginning with GetClusterConfiguration",
+      "tool_id": "GetClusterConfiguration"
+    },
+    {
+      "source_cache_key_rule": "case-local keys beginning with CheckNodeServiceStatus",
+      "tool_id": "CheckNodeServiceStatus"
+    }
+  ],
+  "unknown_tools": "fail closed",
+  "version": "cloud-opsbench-offline-tool-replay-v1"
+}

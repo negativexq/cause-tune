@@ -1,0 +1,76 @@
+{
+  "budgets": {
+    "16384": {
+      "affected_by_fault_category": {
+        "Application_Code_Defect": 61,
+        "Runtime_Fault": 64,
+        "Service_Routing_Fault": 74
+      },
+      "affected_observations": 199,
+      "affected_source_cases": 81,
+      "affected_trajectories": 142,
+      "budget_chars": 16384,
+      "required_evidence_lost": 0,
+      "required_evidence_retention_rate": 1.0,
+      "required_pattern_matches_raw": 5323,
+      "required_pattern_matches_retained": 5323
+    },
+    "24576": {
+      "affected_by_fault_category": {
+        "Application_Code_Defect": 1,
+        "Runtime_Fault": 64,
+        "Service_Routing_Fault": 35
+      },
+      "affected_observations": 100,
+      "affected_source_cases": 40,
+      "affected_trajectories": 65,
+      "budget_chars": 24576,
+      "required_evidence_lost": 0,
+      "required_evidence_retention_rate": 1.0,
+      "required_pattern_matches_raw": 5323,
+      "required_pattern_matches_retained": 5323
+    },
+    "32768": {
+      "affected_by_fault_category": {
+        "Application_Code_Defect": 1,
+        "Runtime_Fault": 64,
+        "Service_Routing_Fault": 4
+      },
+      "affected_observations": 69,
+      "affected_source_cases": 27,
+      "affected_trajectories": 39,
+      "budget_chars": 32768,
+      "required_evidence_lost": 0,
+      "required_evidence_retention_rate": 1.0,
+      "required_pattern_matches_raw": 5323,
+      "required_pattern_matches_retained": 5323
+    },
+    "8192": {
+      "affected_by_fault_category": {
+        "Admission_Fault": 9,
+        "Application_Code_Defect": 171,
+        "Infrastructure_Fault": 32,
+        "Performance_Fault": 18,
+        "Runtime_Fault": 115,
+        "Service_Routing_Fault": 206
+      },
+      "affected_observations": 551,
+      "affected_source_cases": 197,
+      "affected_trajectories": 348,
+      "budget_chars": 8192,
+      "required_evidence_lost": 0,
+      "required_evidence_retention_rate": 1.0,
+      "required_pattern_matches_raw": 5323,
+      "required_pattern_matches_retained": 5323
+    }
+  },
+  "experiment": "03D.1",
+  "implementation_version": "cloud-opsbench-03d1-integrity-v1",
+  "selection_basis": "integrity/evidence retention and deployability only; no model accuracy",
+  "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "target_blind_packager": true,
+  "version": "cloud-opsbench-03d1-tool-budget-analysis-v1"
+}

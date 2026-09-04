@@ -1,0 +1,22 @@
+{
+  "artifacts": {
+    "cumulative_context.json": "f49618d6c50afbbd4c1730c523385eea57aafcffdfa54796dc1992bccfce17af",
+    "evidence_retention.json": "e84de04ff76f67be23f704310d615535741cfb1944ba0a92cb0657e0ab5e88d6",
+    "fallback_classification.json": "5349c6a7f63cbae6d3bbb57ba7353f2569d9f6ad8629759a6cbc3b94fb190a02",
+    "golden_only_cases.json": "18d8ede775b206accf6a052586fc3ced4ee887161d3ff2fe6b74be2f40b9f8ef",
+    "history_policy_analysis.json": "80d544bd997126437cb3c0d5f5735ccaf4440f97c9345113d3ea20ae5750ef15",
+    "integrity_summary.json": "371bf172c112152a5a06b76612afb570f2bbffb07e5b8b3f85d4f9af3a5f9952",
+    "packaging_omission_audit.json": "1137ce811e7a44a9cf9caa41cbbda3b72fdcac41d10c3e6c473e9e6866511339",
+    "replay_parity.json": "db199e294bf8f2233fad87f8ba7064b1064eb10521f6f1ac2f5ec0e71ca932f1",
+    "representation_manifest.json": "936a902fc491eebda74671e6527263638815b3e0322ff9a695b4a8acef313bc8",
+    "split_integrity.json": "16106b977b92895be4dd2909d0b061e5c4b3cf07241704abff37b102424e9019",
+    "token_budget_projection.json": "0f3978baaadd1cb3969dafe67871301b8b5ae22679bee993a8ffd4088c04897d",
+    "tool_budget_analysis.json": "3fd07bf6a26f4926e0dba210402a7c050d6f120080b22dee8a9ef6953b2b379c"
+  },
+  "experiment": "03D.1",
+  "implementation_version": "cloud-opsbench-03d1-integrity-v1",
+  "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76"
+}

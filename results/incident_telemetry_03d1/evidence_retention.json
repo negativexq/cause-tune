@@ -1,0 +1,99 @@
+{
+  "all_observations": {
+    "required_lost": 0,
+    "required_raw": 5323,
+    "required_retained": 5323,
+    "retention_rate": 1.0
+  },
+  "budget_chars": 32768,
+  "by_dimension": {
+    "source_fault_category": {
+      "Application_Code_Defect": {
+        "omissions": 1,
+        "required_lost": 0,
+        "required_raw": 0,
+        "required_retained": 0
+      },
+      "Runtime_Fault": {
+        "omissions": 64,
+        "required_lost": 0,
+        "required_raw": 0,
+        "required_retained": 0
+      },
+      "Service_Routing_Fault": {
+        "omissions": 4,
+        "required_lost": 0,
+        "required_raw": 0,
+        "required_retained": 0
+      }
+    },
+    "source_fault_type": {
+      "code_memory_leak": {
+        "omissions": 1,
+        "required_lost": 0,
+        "required_raw": 0,
+        "required_retained": 0
+      },
+      "db_readonly_mode": {
+        "omissions": 50,
+        "required_lost": 0,
+        "required_raw": 0,
+        "required_retained": 0
+      },
+      "gateway_misrouted": {
+        "omissions": 4,
+        "required_lost": 0,
+        "required_raw": 0,
+        "required_retained": 0
+      },
+      "mysql_invalid_credentials": {
+        "omissions": 14,
+        "required_lost": 0,
+        "required_raw": 0,
+        "required_retained": 0
+      }
+    },
+    "source_system": {
+      "boutique": {
+        "omissions": 1,
+        "required_lost": 0,
+        "required_raw": 0,
+        "required_retained": 0
+      },
+      "trainticket": {
+        "omissions": 68,
+        "required_lost": 0,
+        "required_raw": 0,
+        "required_retained": 0
+      }
+    },
+    "split": {
+      "TEST": {
+        "omissions": 16,
+        "required_lost": 0,
+        "required_raw": 0,
+        "required_retained": 0
+      },
+      "TRAIN": {
+        "omissions": 45,
+        "required_lost": 0,
+        "required_raw": 0,
+        "required_retained": 0
+      },
+      "VALIDATION": {
+        "omissions": 8,
+        "required_lost": 0,
+        "required_raw": 0,
+        "required_retained": 0
+      }
+    }
+  },
+  "experiment": "03D.1",
+  "implementation_version": "cloud-opsbench-03d1-integrity-v1",
+  "interpretation": "process-label evidence patterns are used only by this offline auditor, never by the target-blind packager",
+  "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "version": "cloud-opsbench-03d1-evidence-retention-v1"
+}

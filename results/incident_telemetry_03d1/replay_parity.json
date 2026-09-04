@@ -1,0 +1,59 @@
+{
+  "by_tool": {
+    "CheckNodeServiceStatus": {
+      "EXACT_REPLAY": 91
+    },
+    "CheckServiceConnectivity": {
+      "EXACT_REPLAY": 155
+    },
+    "DescribeResource": {
+      "EXACT_REPLAY": 1073
+    },
+    "GetAlerts": {
+      "CANONICALLY_EQUIVALENT_REPLAY": 445
+    },
+    "GetAppYAML": {
+      "EXACT_REPLAY": 784
+    },
+    "GetClusterConfiguration": {
+      "CANONICALLY_EQUIVALENT_REPLAY": 188
+    },
+    "GetErrorLogs": {
+      "EXACT_REPLAY": 717
+    },
+    "GetRecentLogs": {
+      "GOLDEN_ONLY_FALLBACK": 160,
+      "SAFE_SOURCE_DERIVED_REPLAY": 18
+    },
+    "GetResources": {
+      "EXACT_REPLAY": 3184
+    },
+    "GetServiceDependencies": {
+      "EXACT_REPLAY": 184
+    },
+    "GetSourceCode": {
+      "SAFE_SOURCE_DERIVED_REPLAY": 196
+    },
+    "ListCodeFiles": {
+      "EXACT_REPLAY": 196
+    }
+  },
+  "counts": {
+    "CANONICALLY_EQUIVALENT_REPLAY": 633,
+    "EXACT_REPLAY": 6384,
+    "GOLDEN_ONLY_FALLBACK": 160,
+    "SAFE_SOURCE_DERIVED_REPLAY": 214,
+    "UNRESOLVED": 0
+  },
+  "experiment": "03D.1",
+  "golden_only_observation_count": 160,
+  "implementation_version": "cloud-opsbench-03d1-integrity-v1",
+  "primary_executable_observation_count": 7231,
+  "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "trajectory_observation_count": 7391,
+  "unresolved_observation_count": 0,
+  "version": "cloud-opsbench-03d1-representation-v1"
+}

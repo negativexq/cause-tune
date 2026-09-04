@@ -1,0 +1,143 @@
+{
+  "experiment": "03D.1",
+  "implementation_version": "cloud-opsbench-03d1-integrity-v1",
+  "method": "deterministic bytes/4 token estimate; not a tokenizer measurement",
+  "note": "estimates only; no model or tokenizer is loaded",
+  "per_assistant_action": {
+    "distribution": {
+      "count": 7391,
+      "max": 117073,
+      "median": 4796,
+      "min": 205,
+      "p75": 9436,
+      "p90": 18045,
+      "p95": 26000,
+      "p99": 51377
+    },
+    "thresholds": {
+      "16384": {
+        "character_budget": 65536,
+        "exceeding_by_bytes": 31,
+        "exceeding_by_characters": 31,
+        "token_estimate": 16384
+      },
+      "32768": {
+        "character_budget": 131072,
+        "exceeding_by_bytes": 0,
+        "exceeding_by_characters": 0,
+        "token_estimate": 32768
+      },
+      "4096": {
+        "character_budget": 16384,
+        "exceeding_by_bytes": 954,
+        "exceeding_by_characters": 953,
+        "token_estimate": 4096
+      },
+      "65536": {
+        "character_budget": 262144,
+        "exceeding_by_bytes": 0,
+        "exceeding_by_characters": 0,
+        "token_estimate": 65536
+      },
+      "8192": {
+        "character_budget": 32768,
+        "exceeding_by_bytes": 203,
+        "exceeding_by_characters": 203,
+        "token_estimate": 8192
+      }
+    }
+  },
+  "per_complete_trajectory": {
+    "distribution": {
+      "count": 1508,
+      "max": 150042,
+      "median": 10524,
+      "min": 2046,
+      "p75": 19785,
+      "p90": 32696,
+      "p95": 56611,
+      "p99": 82341
+    },
+    "thresholds": {
+      "16384": {
+        "character_budget": 65536,
+        "exceeding_by_bytes": 49,
+        "exceeding_by_characters": 49,
+        "token_estimate": 16384
+      },
+      "32768": {
+        "character_budget": 131072,
+        "exceeding_by_bytes": 5,
+        "exceeding_by_characters": 5,
+        "token_estimate": 32768
+      },
+      "4096": {
+        "character_budget": 16384,
+        "exceeding_by_bytes": 543,
+        "exceeding_by_characters": 543,
+        "token_estimate": 4096
+      },
+      "65536": {
+        "character_budget": 262144,
+        "exceeding_by_bytes": 0,
+        "exceeding_by_characters": 0,
+        "token_estimate": 65536
+      },
+      "8192": {
+        "character_budget": 32768,
+        "exceeding_by_bytes": 151,
+        "exceeding_by_characters": 151,
+        "token_estimate": 8192
+      }
+    }
+  },
+  "per_final_diagnosis_action": {
+    "distribution": {
+      "count": 1508,
+      "max": 150042,
+      "median": 10524,
+      "min": 2046,
+      "p75": 19785,
+      "p90": 32696,
+      "p95": 56611,
+      "p99": 82341
+    },
+    "thresholds": {
+      "16384": {
+        "character_budget": 65536,
+        "exceeding_by_bytes": 49,
+        "exceeding_by_characters": 49,
+        "token_estimate": 16384
+      },
+      "32768": {
+        "character_budget": 131072,
+        "exceeding_by_bytes": 5,
+        "exceeding_by_characters": 5,
+        "token_estimate": 32768
+      },
+      "4096": {
+        "character_budget": 16384,
+        "exceeding_by_bytes": 543,
+        "exceeding_by_characters": 543,
+        "token_estimate": 4096
+      },
+      "65536": {
+        "character_budget": 262144,
+        "exceeding_by_bytes": 0,
+        "exceeding_by_characters": 0,
+        "token_estimate": 65536
+      },
+      "8192": {
+        "character_budget": 32768,
+        "exceeding_by_bytes": 151,
+        "exceeding_by_characters": 151,
+        "token_estimate": 8192
+      }
+    }
+  },
+  "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "version": "cloud-opsbench-03d1-token-projection-v1"
+}

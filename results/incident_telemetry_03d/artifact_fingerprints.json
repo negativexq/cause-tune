@@ -1,0 +1,46 @@
+{
+  "artifacts": {
+    "audit_summary.json": "f780bbf882916d764dfb605e876de7685930716aecebefc3af53fdc0a9ae52d3",
+    "contamination_audit.json": "8ab63eed544aef857e04b31a7834f962bb0ca54a8e11624106d02d4c0da05062",
+    "duplicate_groups.json": "1ea7e0e8755f94ca3916ff2036752a7f4fff2c253f616540855b9acc2491b0aa",
+    "freeze_manifest.json": "ec64c33e64dce697a14a847bec8723ea0cd29ecd9e746e04a7bda44bd7e8d2c7",
+    "leakage_policy.json": "cb12b312b2bbd42a24d9c52103d00a58e79548975cc13eac517c6d3249ce68a2",
+    "model_visible_schema.json": "f6895b3db5de5b8314f77898bc4c745b0178547d70be119f7383b192caf87ba2",
+    "packaging_audit.json": "289b3edfc7f5211bf0f932c4f73319419914bf64a2d27685177111f7ec31e67c",
+    "packaging_contract.json": "12c4b9e6fb0ebcb04efc82ed3d0bc1e7faf7b2eb5c806547835991a5cbb6a45b",
+    "source_case_derivation_graph.json": "0916dbabe09386dd5960aab19b597ef24ff815bab2447467328b53576e6421b3",
+    "split_distribution.json": "559a354b7245596347167c338fbaa43270844af03a153c62b3f46666bc4148fa",
+    "split_manifest.json": "1563d705c52f1048abe15baf1d9ef5d91c60270e22b14392f507102b9e45e8b4",
+    "static_view_manifest.json": "9315028ebccde8086f45c9ac50fdaebbcbac9bf1c1f2f5410b2ee1bcf4311fed",
+    "supervision_policy.json": "86f4a5b6426018df29824b84487971150021ab54c498ceb3c914b68052d28391",
+    "target_contract.json": "c6265a46166abc2ba31ced776fd63288a987e830fd46f006766514a8ccbdb97f",
+    "tool_contract.json": "2df512af1774ec78f5c5774d9ac455b31b759580510d8edcf167e00defae5307",
+    "trajectory_normalization.json": "81d9a16be20b93342b3e8e2545a3a6e9364608ae72065a76b84f4613007dfa75"
+  },
+  "experiment": "03D",
+  "implementation_version": "cloud-opsbench-03d-training-contract-v1",
+  "source": {
+    "adapter_version": "cloud-opsbench-adapter-v1",
+    "documented_case_count": 754,
+    "documented_fault_type_count": 57,
+    "documented_system_case_counts": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "expected_layout": "benchmark/<system>/<fault_category>/<case_id>/",
+    "license": "MIT",
+    "license_file_sha256": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+    "official_repository_url": "https://github.com/LLM4Ops/Cloud-OpsBench",
+    "registry_version": "cloud-opsbench-source-v1",
+    "release_identity": "main@03c415e5709297432282fbbfd499f1bca0f8c347",
+    "source_name": "Cloud-OpsBench",
+    "systems": [
+      "boutique",
+      "trainticket"
+    ],
+    "upstream_revision": "03c415e5709297432282fbbfd499f1bca0f8c347"
+  },
+  "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench"
+}

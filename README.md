@@ -271,6 +271,28 @@ calling a provider. The real audit matched 754 cases, 550 Online Boutique,
 trained or evaluated.
 See the [03C adoption and audit record](docs/experiment-03/03c-cloudopsbench-adoption.md).
 
+### Experiment 03D — Training contract and protected split freeze
+
+**Status: COMPLETE — TRAINING CONTRACT AND PROTECTED SPLITS FROZEN.** The
+primary formulation is a bounded hybrid diagnostic interaction: sanitized
+incident context, offline tool replay, bounded observations, and deterministic
+structured targets derived from Cloud-OpsBench metadata. The pinned 754-case
+corpus is split by immutable source case into 510 TRAIN, 123 VALIDATION, and
+121 protected TEST cases; all 57 native fault types are represented in each
+partition. Full raw-snapshot flattening is rejected as the primary input, and
+no model has been selected, loaded, trained, or evaluated in 03D. See the
+[03D training-contract record](docs/experiment-03/03d-training-contract-and-split-freeze.md).
+
+Experiment 03E is the next milestone: untouched base-model capability-gap
+screening using TRAIN/VALIDATION only. The renderer prototype remains
+supporting-only, and RCAEval remains reserved for later external
+generalization.
+
+The 03D.1 integrity gate found 6,384 exact, 633 canonical-equivalent, and 214
+source-derived replay observations; 160 golden-only observations are retained
+for auxiliary analysis only. The protected split is unchanged, and no model
+has been selected or evaluated.
+
 ## What CauseTune measures
 
 **Quality** — task-specific accuracy/F1, slice behavior, per-family metrics,

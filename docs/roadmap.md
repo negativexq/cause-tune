@@ -95,9 +95,26 @@ RCAEval is reserved as a candidate independent cross-dataset benchmark for
 754/754 cases and matched the documented 550/204 system counts and 57 native
 fault types. See `docs/experiment-03/03c-cloudopsbench-adoption.md`.
 
+### 03D — Training contract, evidence packaging, and protected split freeze — complete
+
+The primary formulation is now a bounded hybrid diagnostic interaction rather
+than a flattened raw snapshot. 03D froze the native target contract,
+provider-free tool replay, deterministic packaging policy, duplicate/
+contamination grouping, and a protected 510/123/121 case-level split for the
+pinned 754-case corpus. No model was loaded, selected, trained, or evaluated.
+See `docs/experiment-03/03d-training-contract-and-split-freeze.md`.
+
+#### 03D.1 — Tool-replay parity and cumulative-context integrity gate — pass
+
+The representation gate classified all 1,007 historical fallbacks, retained
+zero unresolved observations, excluded golden-only paths from executable
+primary SFT, and froze representation fingerprint
+`f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf`. The
+source split remains unchanged. See
+`docs/experiment-03/03d1-tool-replay-integrity-gate.md`.
+
 ### Planned sequence
 
-- 03D — Case-level split design, normalization, contamination audit and corpus freeze
 - 03E — Untouched base-model capability-gap screening
 - 03F — QLoRA specialization
 - 03G — Controlled data/training ablations

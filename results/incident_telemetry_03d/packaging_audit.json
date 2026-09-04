@@ -1,0 +1,54 @@
+{
+  "experiment": "03D",
+  "full_raw_snapshot_primary": false,
+  "golden_trace_fallback_steps": 1007,
+  "implementation_version": "cloud-opsbench-03d-training-contract-v1",
+  "observation_count": 7391,
+  "original_chars": {
+    "count": 7391,
+    "max": 104745,
+    "median": 1666,
+    "min": 0,
+    "p90": 5824,
+    "p95": 11108,
+    "p99": 30319
+  },
+  "packaged_chars": {
+    "count": 7391,
+    "max": 32768,
+    "median": 1666,
+    "min": 0,
+    "p90": 5824,
+    "p95": 11108,
+    "p99": 30319
+  },
+  "packaging_omission_steps": 69,
+  "policy": "deterministic bounded interaction packaging; no target-aware selection",
+  "source": {
+    "adapter_version": "cloud-opsbench-adapter-v1",
+    "documented_case_count": 754,
+    "documented_fault_type_count": 57,
+    "documented_system_case_counts": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "expected_layout": "benchmark/<system>/<fault_category>/<case_id>/",
+    "license": "MIT",
+    "license_file_sha256": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+    "official_repository_url": "https://github.com/LLM4Ops/Cloud-OpsBench",
+    "registry_version": "cloud-opsbench-source-v1",
+    "release_identity": "main@03c415e5709297432282fbbfd499f1bca0f8c347",
+    "source_name": "Cloud-OpsBench",
+    "systems": [
+      "boutique",
+      "trainticket"
+    ],
+    "upstream_revision": "03c415e5709297432282fbbfd499f1bca0f8c347"
+  },
+  "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "trajectory_count": 1508,
+  "unresolved_replay_steps": 0,
+  "version": "cloud-opsbench-evidence-packaging-v1"
+}

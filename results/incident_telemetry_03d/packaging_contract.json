@@ -1,0 +1,52 @@
+{
+  "experiment": "03D",
+  "implementation_version": "cloud-opsbench-03d-training-contract-v1",
+  "label_aware_selection": false,
+  "max_observation_chars": 32768,
+  "modalities": {
+    "all_other_core_snapshot_files": [
+      "AVAILABLE",
+      "PACKAGING_FAILED"
+    ],
+    "code": [
+      "MODALITY_NOT_AVAILABLE",
+      "AVAILABLE"
+    ],
+    "metrics": [
+      "MODALITY_NOT_AVAILABLE",
+      "MODALITY_AVAILABLE_BUT_EMPTY",
+      "AVAILABLE"
+    ]
+  },
+  "primary_input": "bounded diagnostic interaction; full raw snapshot rejected",
+  "process_label_aware_selection": false,
+  "required_evidence_policy": "cannot be certified by target labels; over-budget observations require review",
+  "selection": "full output when within bound; otherwise deterministic structure-aware line sampling with omission flag",
+  "source": {
+    "adapter_version": "cloud-opsbench-adapter-v1",
+    "documented_case_count": 754,
+    "documented_fault_type_count": 57,
+    "documented_system_case_counts": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "expected_layout": "benchmark/<system>/<fault_category>/<case_id>/",
+    "license": "MIT",
+    "license_file_sha256": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+    "official_repository_url": "https://github.com/LLM4Ops/Cloud-OpsBench",
+    "registry_version": "cloud-opsbench-source-v1",
+    "release_identity": "main@03c415e5709297432282fbbfd499f1bca0f8c347",
+    "source_name": "Cloud-OpsBench",
+    "systems": [
+      "boutique",
+      "trainticket"
+    ],
+    "upstream_revision": "03c415e5709297432282fbbfd499f1bca0f8c347"
+  },
+  "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "target_aware_selection": false,
+  "truncation": "never silent; original/package sizes and status are recorded",
+  "version": "cloud-opsbench-evidence-packaging-v1"
+}

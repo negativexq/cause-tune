@@ -1,0 +1,35 @@
+{
+  "experiment": "03D.1",
+  "frozen_split_unchanged": true,
+  "full_history_p95_final_context_chars": 56611,
+  "golden_only_observation_count": 160,
+  "implementation_version": "cloud-opsbench-03d1-integrity-v1",
+  "no_model_provider_or_gpu": true,
+  "original_fallback_count": 1007,
+  "packaging_omission_count_at_32768": 69,
+  "primary_sft_unsupported_observations": 0,
+  "primary_trajectory_manifest_count": 1157,
+  "recommendation": "READY_FOR_03E",
+  "replay_parity": {
+    "CANONICALLY_EQUIVALENT_REPLAY": 633,
+    "EXACT_REPLAY": 6384,
+    "GOLDEN_ONLY_FALLBACK": 160,
+    "SAFE_SOURCE_DERIVED_REPLAY": 214,
+    "UNRESOLVED": 0
+  },
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "required_evidence_retention_at_32768": {
+    "required_lost": 0,
+    "required_raw": 5323,
+    "required_retained": 5323,
+    "retention_rate": 1.0
+  },
+  "source_case_count": 754,
+  "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "status": "pass",
+  "trajectory_observation_count": 7391,
+  "unresolved_observation_count": 0
+}

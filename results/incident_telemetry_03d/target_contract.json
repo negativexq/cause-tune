@@ -1,0 +1,47 @@
+{
+  "confidence": "not included",
+  "derivation": "mechanical extraction only; no generated labels",
+  "experiment": "03D",
+  "fields": {
+    "fault_object": {
+      "required": true,
+      "source": "metadata.result.fault_object"
+    },
+    "native_fault_category": {
+      "required": true,
+      "source": "metadata.result.fault_taxonomy"
+    },
+    "native_fault_type": {
+      "required": true,
+      "source": "metadata.result.root_cause"
+    }
+  },
+  "implementation_version": "cloud-opsbench-03d-training-contract-v1",
+  "native_taxonomy_authoritative": true,
+  "reasoning_target": "not included",
+  "source": {
+    "adapter_version": "cloud-opsbench-adapter-v1",
+    "documented_case_count": 754,
+    "documented_fault_type_count": 57,
+    "documented_system_case_counts": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "expected_layout": "benchmark/<system>/<fault_category>/<case_id>/",
+    "license": "MIT",
+    "license_file_sha256": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+    "official_repository_url": "https://github.com/LLM4Ops/Cloud-OpsBench",
+    "registry_version": "cloud-opsbench-source-v1",
+    "release_identity": "main@03c415e5709297432282fbbfd499f1bca0f8c347",
+    "source_name": "Cloud-OpsBench",
+    "systems": [
+      "boutique",
+      "trainticket"
+    ],
+    "upstream_revision": "03c415e5709297432282fbbfd499f1bca0f8c347"
+  },
+  "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "version": "cloud-opsbench-target-v1"
+}

@@ -1,0 +1,193 @@
+{
+  "case_count": 754,
+  "component_fingerprint": "1a852feb605766c4188c583dd24fac346ab177c560aa79cb9ecbc27b1771dd3c",
+  "components": {
+    "leakage_policy": {
+      "metadata.result.*": "SUPERVISION_ONLY",
+      "paths/process-label/golden-trajectory": "PROVENANCE_OR_SUPERVISION_ONLY",
+      "raw_observations": "MODEL_VISIBLE_SAFE_AFTER_PACKAGING",
+      "sanitized_query": "MODEL_VISIBLE_WITH_TRANSFORM",
+      "source_revision_and_fingerprint": "PROVENANCE_ONLY"
+    },
+    "packaging_contract": {
+      "label_aware_selection": false,
+      "max_observation_chars": 32768,
+      "modalities": {
+        "all_other_core_snapshot_files": [
+          "AVAILABLE",
+          "PACKAGING_FAILED"
+        ],
+        "code": [
+          "MODALITY_NOT_AVAILABLE",
+          "AVAILABLE"
+        ],
+        "metrics": [
+          "MODALITY_NOT_AVAILABLE",
+          "MODALITY_AVAILABLE_BUT_EMPTY",
+          "AVAILABLE"
+        ]
+      },
+      "primary_input": "bounded diagnostic interaction; full raw snapshot rejected",
+      "process_label_aware_selection": false,
+      "required_evidence_policy": "cannot be certified by target labels; over-budget observations require review",
+      "selection": "full output when within bound; otherwise deterministic structure-aware line sampling with omission flag",
+      "target_aware_selection": false,
+      "truncation": "never silent; original/package sizes and status are recorded",
+      "version": "cloud-opsbench-evidence-packaging-v1"
+    },
+    "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+    "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+    "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+    "supervision_policy": {
+      "do_not_supervise": [
+        "user initial context",
+        "tool observations",
+        "source metadata",
+        "provenance",
+        "free-form reasoning/scratchpad"
+      ],
+      "reasoning_fields": {
+        "disposition": "DROP",
+        "justification": "golden traces expose tool calls and observations; no unrestricted reasoning is needed for the primary contract"
+      },
+      "supervise": [
+        "assistant tool/action calls",
+        "assistant deterministic structured final diagnosis"
+      ],
+      "tokenizer_masking": "deferred; message-level policy only",
+      "version": "cloud-opsbench-supervision-v1"
+    },
+    "target_contract": {
+      "confidence": "not included",
+      "derivation": "mechanical extraction only; no generated labels",
+      "fields": {
+        "fault_object": {
+          "required": true,
+          "source": "metadata.result.fault_object"
+        },
+        "native_fault_category": {
+          "required": true,
+          "source": "metadata.result.fault_taxonomy"
+        },
+        "native_fault_type": {
+          "required": true,
+          "source": "metadata.result.root_cause"
+        }
+      },
+      "native_taxonomy_authoritative": true,
+      "reasoning_target": "not included",
+      "version": "cloud-opsbench-target-v1"
+    },
+    "tool_contract": {
+      "argument_policy": "preserve normalized calling text; do not infer labels from arguments",
+      "live_kubernetes": false,
+      "mode": "offline replay from immutable case-local tool_cache.json and trajectory observations",
+      "observation_policy": "resolve by exact cached output when possible; otherwise retain the immutable golden-trace observation and flag the fallback",
+      "tools": [
+        {
+          "source_cache_key_rule": "case-local keys beginning with GetResources",
+          "tool_id": "GetResources"
+        },
+        {
+          "source_cache_key_rule": "case-local keys beginning with DescribeResource",
+          "tool_id": "DescribeResource"
+        },
+        {
+          "source_cache_key_rule": "case-local keys beginning with GetAppYAML",
+          "tool_id": "GetAppYAML"
+        },
+        {
+          "source_cache_key_rule": "case-local keys beginning with GetServiceDependencies",
+          "tool_id": "GetServiceDependencies"
+        },
+        {
+          "source_cache_key_rule": "case-local keys beginning with CheckServiceConnectivity",
+          "tool_id": "CheckServiceConnectivity"
+        },
+        {
+          "source_cache_key_rule": "case-local keys beginning with GetAlerts",
+          "tool_id": "GetAlerts"
+        },
+        {
+          "source_cache_key_rule": "case-local keys beginning with GetRecentLogs",
+          "tool_id": "GetRecentLogs"
+        },
+        {
+          "source_cache_key_rule": "case-local keys beginning with GetErrorLogs",
+          "tool_id": "GetErrorLogs"
+        },
+        {
+          "source_cache_key_rule": "case-local keys beginning with ListCodeFiles",
+          "tool_id": "ListCodeFiles"
+        },
+        {
+          "source_cache_key_rule": "case-local keys beginning with GetSourceCode",
+          "tool_id": "GetSourceCode"
+        },
+        {
+          "source_cache_key_rule": "case-local keys beginning with GetClusterConfiguration",
+          "tool_id": "GetClusterConfiguration"
+        },
+        {
+          "source_cache_key_rule": "case-local keys beginning with CheckNodeServiceStatus",
+          "tool_id": "CheckNodeServiceStatus"
+        }
+      ],
+      "unknown_tools": "fail closed",
+      "version": "cloud-opsbench-offline-tool-replay-v1"
+    },
+    "trajectory_normalization": {
+      "reasoning_disposition": "DROP",
+      "version": "cloud-opsbench-trajectory-normalization-v1"
+    }
+  },
+  "experiment": "03D",
+  "external_revision_verified": true,
+  "implementation_version": "cloud-opsbench-03d-training-contract-v1",
+  "license_hash_verified": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+  "model_evaluated": false,
+  "model_loaded": false,
+  "provider_called": false,
+  "source": {
+    "adapter_version": "cloud-opsbench-adapter-v1",
+    "documented_case_count": 754,
+    "documented_fault_type_count": 57,
+    "documented_system_case_counts": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "expected_layout": "benchmark/<system>/<fault_category>/<case_id>/",
+    "license": "MIT",
+    "license_file_sha256": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+    "official_repository_url": "https://github.com/LLM4Ops/Cloud-OpsBench",
+    "registry_version": "cloud-opsbench-source-v1",
+    "release_identity": "main@03c415e5709297432282fbbfd499f1bca0f8c347",
+    "source_name": "Cloud-OpsBench",
+    "systems": [
+      "boutique",
+      "trainticket"
+    ],
+    "upstream_revision": "03c415e5709297432282fbbfd499f1bca0f8c347"
+  },
+  "source_manifest_fingerprint": "5c1644083fd477d43d3eb4a6822baa419e84589ad856ebf550383f9e54391867",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "split_validation": {
+    "case_count": 754,
+    "errors": [],
+    "split_counts": {
+      "TEST": 121,
+      "TRAIN": 510,
+      "VALIDATION": 123
+    },
+    "status": "pass"
+  },
+  "test_policy": {
+    "first_consumption": "final evaluation only",
+    "protected": true,
+    "selection_or_tuning_allowed": false
+  },
+  "training_executed": false,
+  "version": "cloud-opsbench-03d-freeze-v1"
+}
