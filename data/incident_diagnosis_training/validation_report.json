@@ -1,0 +1,71 @@
+{
+  "contamination": {
+    "benchmark_fingerprint": "5e9a6d74ba881af7aa1146a23f4b837e139a4e8e5a77dba7fe40c3bb2c9c0a94",
+    "pairs": {
+      "train_vs_benchmark": {
+        "canonical_structure_overlap": 0,
+        "exact_text_overlap": 0,
+        "incident_id_overlap": 0,
+        "normalized_text_overlap": 0
+      },
+      "train_vs_validation": {
+        "canonical_structure_overlap": 0,
+        "exact_text_overlap": 0,
+        "incident_id_overlap": 0,
+        "normalized_text_overlap": 0
+      },
+      "validation_vs_benchmark": {
+        "canonical_structure_overlap": 0,
+        "exact_text_overlap": 0,
+        "incident_id_overlap": 0,
+        "normalized_text_overlap": 0
+      }
+    },
+    "status": "pass"
+  },
+  "status": "pass",
+  "train": {
+    "count": 2400,
+    "difficulty_counts": {
+      "hard": 720,
+      "standard": 1440,
+      "transfer": 240
+    },
+    "family_counts": {
+      "cache_stampede": 200,
+      "configuration_regression": 200,
+      "db_connection_pool_exhaustion": 200,
+      "db_query_regression": 200,
+      "disk_io_saturation": 200,
+      "dns_resolution_failure": 200,
+      "downstream_dependency_timeout": 200,
+      "kafka_consumer_lag": 200,
+      "memory_leak": 200,
+      "rate_limit_misconfiguration": 200,
+      "thread_pool_exhaustion": 200,
+      "tls_certificate_expiration": 200
+    }
+  },
+  "validation": {
+    "count": 288,
+    "difficulty_counts": {
+      "hard": 96,
+      "standard": 168,
+      "transfer": 24
+    },
+    "family_counts": {
+      "cache_stampede": 24,
+      "configuration_regression": 24,
+      "db_connection_pool_exhaustion": 24,
+      "db_query_regression": 24,
+      "disk_io_saturation": 24,
+      "dns_resolution_failure": 24,
+      "downstream_dependency_timeout": 24,
+      "kafka_consumer_lag": 24,
+      "memory_leak": 24,
+      "rate_limit_misconfiguration": 24,
+      "thread_pool_exhaustion": 24,
+      "tls_certificate_expiration": 24
+    }
+  }
+}

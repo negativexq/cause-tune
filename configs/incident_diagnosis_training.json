@@ -1,0 +1,55 @@
+{
+  "experiment": "02B_production_incident_qlora",
+  "model_id": "Qwen/Qwen3-4B",
+  "dataset_dir": "data/incident_diagnosis_training",
+  "benchmark_dir": "data/incident_diagnosis",
+  "evaluation_config": "configs/incident_diagnosis_eval.json",
+  "generation": {
+    "enable_thinking": false,
+    "max_new_tokens": 96,
+    "do_sample": false
+  },
+  "quantization": {
+    "load_in_4bit": true,
+    "quant_type": "nf4",
+    "compute_dtype": "bfloat16",
+    "double_quant": true
+  },
+  "lora": {
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.0,
+    "bias": "none",
+    "task_type": "CAUSAL_LM",
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+  },
+  "training": {
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "effective_batch_size": 8,
+    "learning_rate": 0.0002,
+    "max_epochs": 2,
+    "assistant_only_supervision": true,
+    "gradient_checkpointing": true,
+    "gradient_checkpointing_use_reentrant": false,
+    "seed": 20260941
+  },
+  "checkpoint_policy": {
+    "primary_metric": "diagnosis_exact_match",
+    "tie_breakers": ["resolution_exact_match", "failure_mode_macro_f1", "teacher_forced_loss", "earlier_optimizer_step"],
+    "validation_only": true,
+    "interval_steps": 25,
+    "earliest_within_tolerance": 0.01
+  },
+  "early_stopping": {
+    "eval_interval_steps": 25,
+    "patience": 3,
+    "min_delta": 0.005,
+    "warmup_floor_steps": 50
+  },
+  "max_sequence_length": null,
+  "seeds": {
+    "train": 20260941,
+    "validation": 20260942
+  }
+}

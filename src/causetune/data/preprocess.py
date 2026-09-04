@@ -116,14 +116,43 @@ def build_preprocessed_example(
     outputs, never by searching for a hard-coded assistant token or string.
     """
 
+    validated = validate_record(dict(record))
+    return build_preprocessed_messages(
+        validated["example_id"],
+        validated["messages"],
+        tokenizer,
+        max_sequence_length,
+        system_message,
+    )
+
+
+def build_preprocessed_messages(
+    example_id: str,
+    base_messages: Sequence[Mapping[str, str]],
+    tokenizer: Any,
+    max_sequence_length: int,
+    system_message: str | None = None,
+) -> PreprocessedExample:
+    """Apply the same assistant-only masking to any validated chat task.
+
+    This is intentionally message-based rather than intent-based so structured
+    diagnosis tasks can reuse the proven boundary detection implementation.
+    """
+
+    if not isinstance(example_id, str) or not example_id.strip():
+        raise PreprocessingError("example_id must be a non-empty string")
     if max_sequence_length <= 0:
         raise ValueError("max_sequence_length must be positive")
-    validated = validate_record(dict(record))
-    base_messages = tuple(validated["messages"])
+    if len(base_messages) != 2:
+        raise PreprocessingError(f"{example_id}: expected user and assistant messages")
+    if [message.get("role") for message in base_messages] != ["user", "assistant"]:
+        raise PreprocessingError(f"{example_id}: messages must be user then assistant")
+    if any(not isinstance(message.get("content"), str) or not message["content"].strip() for message in base_messages):
+        raise PreprocessingError(f"{example_id}: messages must have non-empty content")
     messages = (
-        ({"role": "system", "content": system_message},) + base_messages
+        ({"role": "system", "content": system_message},) + tuple(dict(message) for message in base_messages)
         if system_message is not None
-        else base_messages
+        else tuple(dict(message) for message in base_messages)
     )
     user_prompt_start = len(messages) - 1
     prompt_ids = _chat_template_ids(tokenizer, messages[:user_prompt_start], add_generation_prompt=True)
@@ -131,7 +160,7 @@ def build_preprocessed_example(
 
     if len(prompt_ids) >= len(full_ids):
         raise PreprocessingError(
-            f"{validated['example_id']}: chat template produced no assistant response tokens"
+            f"{example_id}: chat template produced no assistant response tokens"
         )
     if full_ids[: len(prompt_ids)] != prompt_ids:
         mismatch = next(
@@ -145,12 +174,12 @@ def build_preprocessed_example(
             min(len(prompt_ids), len(full_ids)),
         )
         raise ChatTemplatePrefixError(
-            f"{validated['example_id']}: tokenized user prompt is not a prefix of "
+            f"{example_id}: tokenized user prompt is not a prefix of "
             f"the full conversation at token {mismatch}; refusing to guess the boundary"
         )
     if len(full_ids) > max_sequence_length:
         raise SequenceLengthError(
-            f"{validated['example_id']}: full conversation has {len(full_ids)} tokens, "
+            f"{example_id}: full conversation has {len(full_ids)} tokens, "
             f"exceeding max_sequence_length={max_sequence_length}; refusing to "
             "truncate the assistant completion"
         )
@@ -158,16 +187,16 @@ def build_preprocessed_example(
     labels = [IGNORE_INDEX] * len(prompt_ids) + full_ids[len(prompt_ids) :]
     trainable_count = sum(label != IGNORE_INDEX for label in labels)
     if any(label != IGNORE_INDEX for label in labels[: len(prompt_ids)]):
-        raise AssertionError(f"{validated['example_id']}: prompt labels are not fully masked")
+        raise AssertionError(f"{example_id}: prompt labels are not fully masked")
     if trainable_count == 0:
         raise PreprocessingError(
-            f"{validated['example_id']}: truncation left zero trainable assistant tokens"
+            f"{example_id}: truncation left zero trainable assistant tokens"
         )
     if len(full_ids) != len(labels):
-        raise AssertionError(f"{validated['example_id']}: input_ids/labels length mismatch")
+        raise AssertionError(f"{example_id}: input_ids/labels length mismatch")
 
     return PreprocessedExample(
-        example_id=validated["example_id"],
+        example_id=example_id,
         messages=messages,
         input_ids=tuple(full_ids),
         labels=tuple(labels),

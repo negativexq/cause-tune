@@ -93,3 +93,36 @@ The largest mechanically observed failure patterns were 12 recent-change/deploy 
 ## Decision
 
 The base leaves substantial headroom: diagnosis exact match is 65.28% overall and 62.50% on TRANSFER. HARD is 64.58%, only 2.08 percentage points below STANDARD, so the slice does not strongly separate difficulty yet; TRANSFER exposes a larger surface-generalization drop of 4.17 points. The deterministic evaluator is trustworthy enough to support a controlled next phase, with strict-schema limitations reported separately. The benchmark will not be changed to manufacture a larger gap, and no tuned result is claimed here.
+
+## Experiment 02B — Specialization
+
+### Experiment 02B.1 — Training foundation
+
+Status: training foundation complete; GPU training has not started.
+
+The 02A baseline establishes a meaningful capability gap without using its
+per-family weaknesses to shape the training distribution. The independent
+02B.1 dataset contains 2,400 balanced training incidents and 288 balanced
+validation incidents: 200 and 24 per frozen failure family respectively.
+Training and validation use separate deterministic namespaces and new
+topology/surface families. The 144-case 02A benchmark is not copied,
+paraphrased, or used as a training source.
+
+The training foundation uses the same production-incident system instruction,
+Qwen chat formatting, and assistant-only supervision as the frozen task
+contract. Token inspection selected a 768-token context because it is the
+smallest configured practical context covering every generated conversation;
+there are zero truncations and zero decoded-target mismatches.
+
+Checkpoint selection is validation-only: primary metric
+`diagnosis_exact_match`, followed by resolution exact match, failure-mode
+macro F1, teacher-forced loss, and earlier step. Validation is planned every
+25 optimizer steps including step 0. The transparent early-stop policy uses
+patience 3, `min_delta=0.005`, and a 50-step warm-up floor. The frozen 02A
+benchmark remains sealed until a future selected adapter is evaluated.
+
+### Experiment 02B.2 — QLoRA specialization
+
+Next, pending review of this foundation. It will be one controlled QLoRA run
+only after the resolved manifest, independent data, and validation policy are
+approved. No adapter or tuned result exists yet.

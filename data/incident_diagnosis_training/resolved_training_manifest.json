@@ -1,0 +1,69 @@
+{
+  "checkpoint_policy": {
+    "earliest_within_tolerance": 0.01,
+    "interval_steps": 25,
+    "primary_metric": "diagnosis_exact_match",
+    "tie_breakers": [
+      "resolution_exact_match",
+      "failure_mode_macro_f1",
+      "teacher_forced_loss",
+      "earlier_optimizer_step"
+    ],
+    "validation_only": true
+  },
+  "early_stopping": {
+    "eval_interval_steps": 25,
+    "min_delta": 0.005,
+    "patience": 3,
+    "warmup_floor_steps": 50
+  },
+  "experiment": "02B_production_incident_qlora",
+  "frozen_benchmark_fingerprint": "5e9a6d74ba881af7aa1146a23f4b837e139a4e8e5a77dba7fe40c3bb2c9c0a94",
+  "frozen_evaluation_fingerprint": "d2dea87fd26a3a8c78a2a6a1b4b6fc583b27070ed2de7e691b53c17e59231cf8",
+  "lora": {
+    "alpha": 32,
+    "bias": "none",
+    "dropout": 0.0,
+    "rank": 16,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "task_type": "CAUSAL_LM"
+  },
+  "max_epochs": 2,
+  "model_id": "Qwen/Qwen3-4B",
+  "quantization": {
+    "compute_dtype": "bfloat16",
+    "double_quant": true,
+    "load_in_4bit": true,
+    "quant_type": "nf4"
+  },
+  "seeds": {
+    "train": 20260941,
+    "validation": 20260942
+  },
+  "train_fingerprint": "8e660f9380d482b9043a360e4bcbdfe45559f63279882460774c6a6a68756cc0",
+  "training": {
+    "assistant_only_supervision": true,
+    "effective_batch_size": 8,
+    "gradient_accumulation_steps": 8,
+    "gradient_checkpointing": true,
+    "gradient_checkpointing_use_reentrant": false,
+    "learning_rate": 0.0002,
+    "max_epochs": 2,
+    "max_sequence_length": 768,
+    "micro_batch_size": 1,
+    "seed": 20260941
+  },
+  "training_sources": {
+    "train": "data/incident_diagnosis_training/train.jsonl",
+    "validation": "data/incident_diagnosis_training/validation.jsonl"
+  },
+  "validation_fingerprint": "1459fdbe699aa98acbe2c79a9efc3d9b22afb3d77dc53781861eb853aed0cb52"
+}

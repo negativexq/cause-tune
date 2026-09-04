@@ -135,22 +135,35 @@ Frozen evaluation-contract fingerprint: `1b00a333c26c4cbd03b3e04d990fad3b4adf0d9
 
 The same strict JSON evaluation contract was used for base and tuned models; malformed outputs were not repaired.
 
+## Current work: Experiment 02B.1
+
+The Production Incident Diagnosis specialization training foundation is now
+prepared: an independent balanced train/validation dataset, contamination
+checks, Qwen assistant-only formatting, and validation-only checkpoint/early-
+stopping infrastructure. No QLoRA training or tuned evaluation has been run;
+the frozen 02A benchmark remains sealed.
+
 ## Selecting future experiments
 
-The next specialization task has not been selected:
+Experiment 02 is now the selected specialization task:
 
 1. Shortlist objectively measurable specialist domains.
 2. Build small frozen challenge sets.
 3. Evaluate untouched Qwen3-4B and measure the capability gap.
 4. Discard tasks where the base is already too strong.
 5. Select one useful gap, then build train/validation/test data.
-6. Fine-tune and measure exact base → tuned impact.
+6. Prepare independent training data, fine-tune once, and measure exact base → tuned impact.
 
 Candidate domains include SRE incident diagnosis, SOC/security alert triage, telecom/network operations, company-specific query/DSL generation, internal tool/API behavior, and industrial fault diagnosis. These are examples only. Experiment 02 has not started or been selected.
 
-## M7 — Checkpoint Selection & Early Stopping
+## Checkpoint selection and early stopping
 
-M7 is documented as the next laboratory milestone, not implemented here. It should test validation every N optimizer steps, checkpoint persistence, best-validation metadata, patience, `min_delta`, early stopping, earliest checkpoint within a quality tolerance, and optimizer-step/training-time savings.
+The transparent checkpoint-selection and early-stopping foundation is now
+implemented for Experiment 02B.1. It evaluates validation every N optimizer
+steps, persists adapter-only checkpoints, tracks best-validation metadata,
+patience, `min_delta`, earliest checkpoint within a quality tolerance, and
+potential optimizer-step savings. A full training run and checkpoint-selection
+decision have not happened yet.
 
 Checkpoint selection must use validation only; ID, HARD, and OOD remain sealed until final evaluation. M6 motivates this work but does not prove which checkpoint is optimal.
 

@@ -1,0 +1,130 @@
+{
+  "benchmark_fingerprint": "5e9a6d74ba881af7aa1146a23f4b837e139a4e8e5a77dba7fe40c3bb2c9c0a94",
+  "contamination": {
+    "benchmark_fingerprint": "5e9a6d74ba881af7aa1146a23f4b837e139a4e8e5a77dba7fe40c3bb2c9c0a94",
+    "pairs": {
+      "train_vs_benchmark": {
+        "canonical_structure_overlap": 0,
+        "exact_text_overlap": 0,
+        "incident_id_overlap": 0,
+        "normalized_text_overlap": 0
+      },
+      "train_vs_validation": {
+        "canonical_structure_overlap": 0,
+        "exact_text_overlap": 0,
+        "incident_id_overlap": 0,
+        "normalized_text_overlap": 0
+      },
+      "validation_vs_benchmark": {
+        "canonical_structure_overlap": 0,
+        "exact_text_overlap": 0,
+        "incident_id_overlap": 0,
+        "normalized_text_overlap": 0
+      }
+    },
+    "status": "pass"
+  },
+  "counts": {
+    "train": 2400,
+    "validation": 288
+  },
+  "difficulty_counts": {
+    "train": {
+      "hard": 720,
+      "standard": 1440,
+      "transfer": 240
+    },
+    "validation": {
+      "hard": 96,
+      "standard": 168,
+      "transfer": 24
+    }
+  },
+  "evaluation_fingerprint": "d2dea87fd26a3a8c78a2a6a1b4b6fc583b27070ed2de7e691b53c17e59231cf8",
+  "family_counts": {
+    "train": {
+      "cache_stampede": 200,
+      "configuration_regression": 200,
+      "db_connection_pool_exhaustion": 200,
+      "db_query_regression": 200,
+      "disk_io_saturation": 200,
+      "dns_resolution_failure": 200,
+      "downstream_dependency_timeout": 200,
+      "kafka_consumer_lag": 200,
+      "memory_leak": 200,
+      "rate_limit_misconfiguration": 200,
+      "thread_pool_exhaustion": 200,
+      "tls_certificate_expiration": 200
+    },
+    "validation": {
+      "cache_stampede": 24,
+      "configuration_regression": 24,
+      "db_connection_pool_exhaustion": 24,
+      "db_query_regression": 24,
+      "disk_io_saturation": 24,
+      "dns_resolution_failure": 24,
+      "downstream_dependency_timeout": 24,
+      "kafka_consumer_lag": 24,
+      "memory_leak": 24,
+      "rate_limit_misconfiguration": 24,
+      "thread_pool_exhaustion": 24,
+      "tls_certificate_expiration": 24
+    }
+  },
+  "generator_version": "incident-diagnosis-training-local-v1",
+  "seeds": {
+    "train": 20260941,
+    "validation": 20260942
+  },
+  "token_stats": {
+    "train": {
+      "decoded_target_mismatches": [],
+      "examples": 2400,
+      "exceeding_max_sequence_length": 0,
+      "input_length": {
+        "max": 592,
+        "mean": 562.2683333333333,
+        "p50": 562,
+        "p95": 577
+      },
+      "input_tokens_total": 1349444,
+      "max_sequence_length": 768,
+      "selection_rationale": "smallest configured power-of-two/common context covering every generated conversation without semantic truncation",
+      "supervised_length": {
+        "max": 44,
+        "mean": 39.43375,
+        "p50": 39,
+        "p95": 43
+      },
+      "supervised_tokens_total": 94641,
+      "truncated_examples": 0,
+      "zero_supervised_examples": 0
+    },
+    "validation": {
+      "decoded_target_mismatches": [],
+      "examples": 288,
+      "exceeding_max_sequence_length": 0,
+      "input_length": {
+        "max": 583,
+        "mean": 560.3020833333334,
+        "p50": 560,
+        "p95": 573
+      },
+      "input_tokens_total": 161367,
+      "max_sequence_length": 768,
+      "selection_rationale": "smallest configured power-of-two/common context covering every generated conversation without semantic truncation",
+      "supervised_length": {
+        "max": 44,
+        "mean": 39.427083333333336,
+        "p50": 39,
+        "p95": 43
+      },
+      "supervised_tokens_total": 11355,
+      "truncated_examples": 0,
+      "zero_supervised_examples": 0
+    }
+  },
+  "train_fingerprint": "8e660f9380d482b9043a360e4bcbdfe45559f63279882460774c6a6a68756cc0",
+  "validation_fingerprint": "1459fdbe699aa98acbe2c79a9efc3d9b22afb3d77dc53781861eb853aed0cb52",
+  "version": "incident-diagnosis-02b1-v1"
+}

@@ -10,7 +10,7 @@
 - failure analysis
 - causal shuffle experiment
 
-## M7 — Training efficiency — next
+## M7 — Training efficiency — incorporated as laboratory infrastructure
 
 - checkpoint persistence
 - validation-based checkpoint selection
@@ -26,9 +26,16 @@ M7 must select checkpoints using validation only. ID, HARD, and OOD remain seale
 
 The incident benchmark and evaluation contract were frozen, then untouched Qwen3-4B was measured once. The current result is recorded in `results/incident_diagnosis_base.json`; no training data, adapter, or QLoRA run was used.
 
-### Experiment 02B — Training dataset + QLoRA specialization — blocked
+### Experiment 02B.1 — Training foundation — current
 
-Blocked until the 02A baseline and capability-gap review are complete.
+The independent, balanced train/validation data, contamination checks,
+assistant-only formatting, validation-only checkpoint policy, early stopping,
+and resolved run manifest are ready. No GPU training or adapter has been run.
+
+### Experiment 02B.2 — QLoRA specialization — next
+
+Blocked pending review of the 02B.1 foundation. It will use one controlled run
+and keep the frozen 02A benchmark sealed until checkpoint selection.
 
 The planned process is:
 
@@ -40,7 +47,8 @@ The planned process is:
 6. Construct train/validation/test data.
 7. Fine-tune and measure exact base → tuned impact.
 
-Experiment 02 is now selected as Production Incident Diagnosis Specialist. Only 02A is in progress; 02B has not started.
+Experiment 02 is now selected as Production Incident Diagnosis Specialist.
+02A capability gap is complete; 02B.1 is current and 02B.2 has not started.
 
 ## Focused optimization — later
 
