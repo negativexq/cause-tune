@@ -1,0 +1,12 @@
+{
+  "project": "CauseTune",
+  "experiment": "M6",
+  "dataset_fingerprint": "0efaacae27cbfeb1c304c8ee359384239d4526470a32aded8f0eda39908e9d06",
+  "evaluation_contract_fingerprint": "1b00a333c26c4cbd03b3e04d990fad3b4adf0d9a03443c9fd5f183ee7e8ef94d",
+  "training_order": {"shuffle": true, "seed": 42, "single_class_optimizer_windows": 0, "mixed_class_optimizer_windows": 250, "terminal_wrong_item_block": false},
+  "metric": "intent_accuracy",
+  "splits": {"validation": 0.992, "id_test": 0.972, "hard_test": 0.96, "ood_test": 0.92},
+  "macro_f1": {"validation": 0.9919967987194879, "id_test": 0.9758943184475098, "hard_test": 0.9588189121802568, "ood_test": 0.9314616836367151},
+  "valid_json_rate": {"validation": 1.0, "id_test": 0.996, "hard_test": 1.0, "ood_test": 0.988},
+  "training": {"input_tokens": 292899, "supervised_tokens": 16800, "duration_seconds": 1773.73, "supervised_tokens_per_second": 9.4716, "input_tokens_per_second": 165.132, "peak_allocated_gib": 4.427, "peak_reserved_gib": 4.770}
+}

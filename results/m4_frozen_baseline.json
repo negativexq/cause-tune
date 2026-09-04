@@ -1,0 +1,22 @@
+{
+  "project": "CauseTune",
+  "experiment": "M4",
+  "model": "Qwen/Qwen3-4B",
+  "quantization": "NF4, BF16 compute, double quantization",
+  "dataset_fingerprint": "0efaacae27cbfeb1c304c8ee359384239d4526470a32aded8f0eda39908e9d06",
+  "evaluation_contract_fingerprint": "1b00a333c26c4cbd03b3e04d990fad3b4adf0d9a03443c9fd5f183ee7e8ef94d",
+  "metric": "intent_accuracy",
+  "valid_json_rate": 1.0,
+  "splits": {
+    "validation": 0.88,
+    "id_test": 0.836,
+    "hard_test": 0.768,
+    "ood_test": 0.796
+  },
+  "macro_f1": {
+    "validation": 0.8749998191157442,
+    "id_test": 0.8285319270121703,
+    "hard_test": 0.7522207343919584,
+    "ood_test": 0.7864119824710958
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "project": "CauseTune",
+  "experiment": "M5 audit",
+  "source": "outputs/realistic_qlora_v1/training_order_audit.json",
+  "dataset_fingerprint": "0efaacae27cbfeb1c304c8ee359384239d4526470a32aded8f0eda39908e9d06",
+  "finding": "shuffle=False preserved 10 class-contiguous blocks; all 250 accumulation windows were single-class and the terminal block was wrong_item.",
+  "loss": {"initial_optimizer_step": 0.9109236598014832, "final_optimizer_step": 0.000328397922203294},
+  "interpretation": "The observed collapse is consistent with catastrophic recency from sequential class blocks; M6 isolates this with deterministic shuffling."
+}

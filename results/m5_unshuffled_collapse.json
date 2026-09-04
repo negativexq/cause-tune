@@ -1,0 +1,12 @@
+{
+  "project": "CauseTune",
+  "experiment": "M5",
+  "description": "Realistic QLoRA run with class-contiguous order; retained as failure evidence.",
+  "dataset_fingerprint": "0efaacae27cbfeb1c304c8ee359384239d4526470a32aded8f0eda39908e9d06",
+  "evaluation_contract_fingerprint": "1b00a333c26c4cbd03b3e04d990fad3b4adf0d9a03443c9fd5f183ee7e8ef94d",
+  "training_order": {"shuffle": false, "intents": 10, "examples_per_intent": 200, "single_class_optimizer_windows": 250, "optimizer_windows": 250, "final_25_steps_label": "wrong_item"},
+  "metric": "intent_accuracy",
+  "splits": {"validation": 0.268, "id_test": 0.248, "hard_test": 0.236, "ood_test": 0.2},
+  "macro_f1": {"validation": 0.18055234939447418, "id_test": 0.1677871905791877, "hard_test": 0.15774348200818789, "ood_test": 0.1382897102897103},
+  "valid_json_rate": {"validation": 0.996, "id_test": 1.0, "hard_test": 1.0, "ood_test": 0.996}
+}
