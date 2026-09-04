@@ -4,55 +4,201 @@
 
 **Measure the gap. Fine-tune. Explain the gain.**
 
-CauseTune is a hands-on LLM fine-tuning laboratory for measuring specialization gains, training dynamics, and efficiency under constrained hardware.
+CauseTune is a hands-on LLM fine-tuning laboratory for measuring specialization
+gains, training dynamics, generalization, failure behavior, and efficiency under
+constrained hardware.
 
-## What is CauseTune?
-
-CauseTune is a small, readable laboratory for studying whether fine-tuning creates a meaningful, generalizing capability gain. It focuses on measurable specialization, baseline-first experiments, controlled training changes, training dynamics, failure analysis, held-out generalization, quality versus training-cost trade-offs, and constrained-GPU fine-tuning.
-
-CauseTune is intentionally not Kubeflow, MLflow, a distributed training platform, an MLOps control plane, or a serving system. It owns offline model specialization and evidence generation; production promotion, routing, canarying, and rollback belong to ModelOps.
-
-## The experimental loop
+## Experimental loop
 
 ```text
 TASK CANDIDATE
     ↓
 FROZEN CHALLENGE BENCHMARK
     ↓
-UNTOUCHED BASE MODEL
+UNTOUCHED BASE MODEL → MEASURE CAPABILITY GAP
     ↓
-MEASURE CAPABILITY GAP
+FINE-TUNE → VALIDATION → CHECKPOINT SELECTION / EARLY STOPPING
     ↓
-Is the base already good enough?
-    ├── YES → reject the task as an uninteresting fine-tuning experiment
-    └── NO → FINE-TUNE → VALIDATION → CHECKPOINT SELECTION / EARLY STOPPING
-                         → SAME FROZEN EVALUATION → BASE vs TUNED
-                         → QUALITY + EFFICIENCY + FAILURE ANALYSIS
+SAME FROZEN EVALUATION → BASE vs TUNED
+    ↓
+QUALITY + EFFICIENCY + FAILURE ANALYSIS
 ```
 
-Every serious CauseTune experiment should answer:
+Each experiment asks three questions:
 
-- **Capability gap:** How weak was the untouched base model?
-- **Specialization gain:** How much of that gap did fine-tuning close?
-- **Efficiency:** How much training, memory, and adapter capacity were required?
+- What could the untouched model do?
+- What capability did specialization add, and did it generalize?
+- How much training, memory, and adapter capacity did it require?
 
-## Why baseline first?
+## Measured results
 
-Do not fine-tune first and search for a success story afterward. First prove that the frozen base model has a meaningful capability gap. If a base model already scores 95% on a task, there is little specialization impact to demonstrate.
+The compact table below reports **diagnosis exact match** on the frozen
+Experiment 02 benchmark.
 
-Illustrative example only — these values are **not current measured results**:
+| Experiment | Base | Tuned | Gain | HARD | TRANSFER | Stop |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Production Incident Diagnosis | 65.28% | **99.31%** | **+34.03 pp** | 97.92% | 100.00% | 100 / 600 steps |
 
-| Base HARD | Tuned HARD | Gain | Best checkpoint | Updates avoided | Peak VRAM |
-| ---: | ---: | ---: | ---: | ---: | ---: |
-| 42% | 76% | +34 pp | step 80 / 250 | 68% | 4.5 GiB |
+This is a synthetic 144-case held-out benchmark, not real-world production
+accuracy. The benchmark was excluded from training and checkpoint selection;
+an independent validation set selected the adapter checkpoint, followed by a
+fresh base-plus-adapter reload and one tuned benchmark generation.
 
-## Lab Experiment 01 — Controlled QLoRA Specialization
+## Experiment 02 — Production Incident Diagnosis
 
-Experiment 01 used a deliberately narrow customer-support intent-classification task. Its purpose was to validate the laboratory workflow and learn fine-tuning mechanics, not to serve as CauseTune’s final challenge task.
+Experiment 02A first froze the benchmark and measured the untouched
+Qwen/Qwen3-4B capability gap. Experiment 02B then built independent
+train/validation data and executed one controlled QLoRA specialization run.
 
-The synthetic benchmark established hands-on evidence for Qwen3-4B fine-tuning, QLoRA, NF4 loading, BF16 compute, PEFT behavior, assistant-only supervision, deterministic preprocessing, frozen evaluation contracts, ID/HARD/OOD evaluation, optimizer-step telemetry, fresh adapter reload, training-order effects, failure analysis, catastrophic recency, and one-variable experiments.
+### Base capability gap
 
-The verified values below are **accuracy metrics**:
+| Slice | Diagnosis exact match | Resolution exact match | Strict JSON |
+| --- | ---: | ---: | ---: |
+| STANDARD | 66.67% (48/72) | 37.50% (27/72) | 91.67% |
+| HARD | 64.58% (31/48) | 35.42% (17/48) | 89.58% |
+| TRANSFER | 62.50% (15/24) | 25.00% (6/24) | 79.17% |
+
+### Base vs tuned
+
+| Metric | Base | Tuned | Delta |
+| --- | ---: | ---: | ---: |
+| Diagnosis exact | 65.28% (94/144) | **99.31% (143/144)** | **+34.03 pp** |
+| Resolution exact | 34.72% | **99.31% (143/144)** | **+64.58 pp** |
+| Culprit accuracy | 77.78% | **100.00%** | **+22.22 pp** |
+| Failure-mode accuracy | 71.53% | **99.31%** | **+27.78 pp** |
+| Failure-mode macro F1 | 71.84% | **99.30%** | **+27.47 pp** |
+| Action accuracy | 40.97% | **100.00%** | **+59.03 pp** |
+| Evidence F1 | 80.88% | **100.00%** | **+19.12 pp** |
+| Strict JSON | 88.89% | **100.00%** | **+11.11 pp** |
+| Valid JSON | 100.00% | **100.00%** | 0.00 pp |
+
+### Generalization by benchmark slice
+
+| Slice | Base | Tuned | Delta |
+| --- | ---: | ---: | ---: |
+| STANDARD | 66.67% (48/72) | **100.00% (72/72)** | **+33.33 pp** |
+| HARD | 64.58% (31/48) | **97.92% (47/48)** | **+33.33 pp** |
+| TRANSFER | 62.50% (15/24) | **100.00% (24/24)** | **+37.50 pp** |
+
+TRANSFER is a transfer-style held-out slice; it is not claimed to be true OOD.
+
+### Validation progression
+
+| Step | Diagnosis | Resolution | Macro F1 | Action | Evidence F1 | Loss |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 0 | 58.33% | 25.35% | 59.04% | 28.82% | 66.04% | 1.47637 |
+| 25 | **100.00%** | 97.92% | **100.00%** | 97.92% | **100.00%** | 0.001167 |
+| 50 | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 0.0000369 |
+| 75 | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 0.0000200 |
+| 100 | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 0.0000144 |
+
+Diagnosis reached the validation ceiling by step 25. Checkpoint selection
+remained validation-only; resolution and teacher-forced loss continued to
+improve, so the tie-breakers preferred later checkpoints. Early stopping
+terminated the run at step 100 instead of consuming the full 600-step budget.
+Validation performance does not guarantee frozen-benchmark performance.
+
+### Training efficiency
+
+| Measure | Result |
+| --- | ---: |
+| Maximum optimizer-step budget | 600 |
+| Actual stop | **100** |
+| Stop reason | `validation_no_improvement` |
+| Best checkpoint | **step 100** |
+| Earliest near-best checkpoint | **step 25** |
+| Updates avoided | **500 / 600** |
+| Maximum budget avoided | **83.33%** |
+| Near-best potential saving | **575 / 600 (95.83%)** |
+| Peak allocated VRAM | **5.312 GiB** |
+| Trainable parameters | **33,030,144 (~0.814%)** |
+| Logical model parameters | 4,055,498,240 |
+| Training wall time | 10,263.71 s |
+| Validation wall time | 4,455.54 s |
+
+The run used an 8 GB RTX 5070 Laptop GPU. Peak allocated VRAM is the useful
+headline memory measure here; framework reserved-memory accounting is not used
+as a physical-VRAM claim.
+
+### What actually changed?
+
+| Diagnosis transition | Cases |
+| --- | ---: |
+| Base wrong → tuned correct | **49** |
+| Base correct → tuned wrong | 1 |
+| Persistent correct | 94 |
+| Persistent wrong | 0 |
+
+| Failure behavior | Base | Tuned |
+| --- | ---: | ---: |
+| Recent-change / deploy bias | 12 | **0** |
+| HARD distractor selection | 17 | **1** |
+| Correct culprit / wrong family | 18 | **1** |
+| Correct family / wrong culprit | 9 | **0** |
+| Correct diagnosis / wrong action | 44 | **0** |
+| Invalid culprit values | 13 | **0** |
+| Invalid evidence references | 3 | **0** |
+| Strict-schema failures | 16 | **0** |
+
+The aggregate gain corresponds to specific mechanically observed failure modes
+disappearing, not only to a change in one headline score.
+
+### Failure families
+
+| Failure family | Base | Tuned | Delta |
+| --- | ---: | ---: | ---: |
+| db_connection_pool_exhaustion | 58.33% | 100.00% | +41.67 pp |
+| db_query_regression | 75.00% | 100.00% | +25.00 pp |
+| memory_leak | 100.00% | 100.00% | 0.00 pp |
+| downstream_dependency_timeout | 33.33% | 91.67% | +58.33 pp |
+| cache_stampede | 100.00% | 100.00% | 0.00 pp |
+| kafka_consumer_lag | 58.33% | 100.00% | +41.67 pp |
+| thread_pool_exhaustion | 83.33% | 100.00% | +16.67 pp |
+| disk_io_saturation | 25.00% | 100.00% | +75.00 pp |
+| dns_resolution_failure | 100.00% | 100.00% | 0.00 pp |
+| tls_certificate_expiration | 91.67% | 100.00% | +8.33 pp |
+| rate_limit_misconfiguration | 58.33% | 100.00% | +41.67 pp |
+| configuration_regression | 0.00% | 100.00% | +100.00 pp |
+
+The largest gains were `configuration_regression` (0% → 100%),
+`disk_io_saturation` (25% → 100%), and `downstream_dependency_timeout`
+(33.33% → 91.67%). The only remaining diagnosis error was one HARD downstream
+timeout case predicted as DNS resolution failure. There was no family-level
+diagnosis regression. Weak frozen families were not oversampled after observing
+the base benchmark.
+
+### QLoRA configuration
+
+- Model: `Qwen/Qwen3-4B`
+- NF4 4-bit; BF16 compute; double quantization
+- LoRA rank `16`; alpha `32`; dropout `0`
+- Targets: `q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj`
+- Maximum sequence length: `768`
+- Microbatch `1`; gradient accumulation `8`; effective batch `8`
+- Learning rate `2e-4`; maximum epochs `2`; maximum optimizer steps `600`
+- Actual stop: `100`; assistant-only supervision; `enable_thinking=False`
+- Gradient checkpointing; deterministic seeded training order
+
+Logical parameters: `4,055,498,240`
+Trainable parameters: `33,030,144 (~0.814453%)`
+
+### Integrity
+
+- Frozen benchmark and evaluation contract were established before training.
+- Train/validation data were independent from the benchmark.
+- No benchmark-informed oversampling was used.
+- Checkpoint selection used validation only.
+- One semantic training run executed; one fresh base-plus-selected-adapter reload passed.
+- The single tuned benchmark generation completed successfully; a deterministic aggregate-analysis bug was fixed afterward and metrics were recomputed offline from the persisted 144 predictions without regenerating model outputs.
+- No LLM judge, manual output repair, or alternate checkpoint evaluation was used; malformed outputs were scored as produced.
+
+## Experiment 01 — Controlled QLoRA Specialization
+
+Experiment 01 used a deliberately narrow customer-support intent-classification
+task to validate the laboratory workflow and learn fine-tuning mechanics. It is
+separate from the production-incident specialization in Experiment 02.
+
+The verified values below are accuracy metrics:
 
 | Experiment | Validation | ID | HARD | OOD |
 | --- | ---: | ---: | ---: | ---: |
@@ -60,11 +206,24 @@ The verified values below are **accuracy metrics**:
 | M5 QLoRA — unshuffled | 26.8% | 24.8% | 23.6% | 20.0% |
 | M6 QLoRA — deterministic shuffle | 99.2% | 97.2% | 96.0% | 92.0% |
 
-M5 used `shuffle=False` over 10 class-contiguous blocks of 200 examples. With microbatch `1` and gradient accumulation `8`, all 250/250 effective optimizer windows were single-class. The final 25 optimizer updates contained only `wrong_item`, and the model catastrophically recentered on that terminal class.
+M5 used `shuffle=False` over 10 class-contiguous blocks of 200 examples. With
+microbatch `1` and gradient accumulation `8`, all 250/250 effective optimizer
+windows were single-class. The final 25 optimizer updates contained only
+`wrong_item`, and the model catastrophically recentered on that terminal class.
 
-M6 changed exactly one training-affecting variable: the order became a deterministic seeded shuffle with seed `42`. All 250 windows became mixed-class, the terminal block disappeared, and held-out performance recovered. The central lesson is not simply that fine-tuning improved accuracy: train loss alone is insufficient evidence, and a balanced dataset can still produce pathological optimizer windows.
+M6 changed exactly one training-affecting variable: the order became a
+deterministic seeded shuffle with seed `42`. All 250 windows became mixed-class,
+the terminal block disappeared, and held-out performance recovered. The causal
+lesson is that train loss alone is insufficient evidence; a balanced dataset
+can still produce pathological optimizer windows.
 
-### Failure analysis
+### M6 validation progression
+
+| Step | 0 | 25 | 50 | 75 | 100 | 125 | 150 | 175 | 200 | 225 | 250 |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Accuracy | 88.4% | 99.2% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 99.6% | 99.2% |
+
+### Experiment 01 failure analysis
 
 | Expected intent → `wrong_item` | M5 | M6 |
 | --- | ---: | ---: |
@@ -74,109 +233,29 @@ M6 changed exactly one training-affecting variable: the order became a determini
 | `refund` | 99 | 1 |
 | `cancel_order` | 98 | 2 |
 
-No replacement collapse into another single class occurred. `order_missing` remained the weakest M6 class, especially on HARD/OOD examples; this release does not tune against that observation.
-
-## Experiment 02 — Production Incident Diagnosis
-
-**Status:** Experiment 02B.2 specialization complete.
-
-The selected topic is Production Incident Diagnosis Specialist. The goal is to determine whether untouched Qwen3-4B has a meaningful deficiency in diagnosing structured production incidents from topology, deployments, metrics, logs, alerts, and dependency health before any fine-tuning is attempted. Experiment 02A freezes a 144-case benchmark and a new strict evaluation contract; it does not yet claim that a specialist model exists.
-
-Initial frozen-base result — diagnosis exact match, the primary metric:
-
-| Slice | Diagnosis exact match | Resolution exact match | Strict JSON |
-| --- | ---: | ---: | ---: |
-| STANDARD | 66.67% (48/72) | 37.50% (27/72) | 91.67% |
-| HARD | 64.58% (31/48) | 35.42% (17/48) | 89.58% |
-| TRANSFER | 62.50% (15/24) | 25.00% (6/24) | 79.17% |
-
-The first real semantic QLoRA run stopped at 100 optimizer steps with
-validation-only checkpoint selection. On the frozen 144-case benchmark, tuned
-diagnosis exact match was 99.31% (143/144) versus the untouched-base result of
-65.28% (94/144), a measured gain of +34.03 percentage points. Diagnosis exact
-was 100.00% STANDARD, 97.92% HARD, and 100.00% TRANSFER. The previously weak
-frozen benchmark families were not oversampled during training.
-
-## Training configuration
-
-- Qwen/Qwen3-4B; NF4 4-bit base; BF16 compute; double quantization
-- PEFT LoRA: rank `16`, alpha `32`, dropout `0`
-- targets: `q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj`
-- assistant-only supervision; `enable_thinking=False`
-- microbatch `1`; gradient accumulation `8`; effective batch `8`
-- learning rate `2e-4`; 1 epoch; 250 optimizer steps
-
-Logical parameters: `4,055,498,240`<br>
-Trainable parameters: `33,030,144` (`~0.814453%`)
-
-PEFT’s logical parameter API is used for structure checks. Naive `sum(p.numel())` on 4-bit packed weights is a physical packed-parameter count, not the logical dense model count.
-
-## Training dynamics
-
-M6 validation accuracy progression:
-
-| Step | 0 | 25 | 50 | 75 | 100 | 125 | 150 | 175 | 200 | 225 | 250 |
-| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Accuracy | 88.4% | 99.2% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 99.6% | 99.2% |
-
-Did the model really need all 250 optimizer updates? The late validation regression motivates checkpoint selection and early stopping, but Experiment 01 does not answer that question.
-
 ## What CauseTune measures
 
-**Quality** — task-specific accuracy/F1, ID/HARD/OOD behavior, per-class metrics, confusion pairs, and failure transitions.
+**Quality** — task-specific accuracy/F1, slice behavior, per-family metrics,
+confusion pairs, and failure transitions.
 
-**Training** — loss, finite-loss status, optimizer steps, validation progression, gradient norm when available, and checkpoint progression.
+**Training** — loss, finite-loss status, optimizer steps, validation
+progression, gradient norm when available, and checkpoint progression.
 
-**Efficiency** — wall-clock time, input and supervised token throughput, peak VRAM, trainable parameter count, and optimizer steps required.
+**Efficiency** — wall-clock time, token throughput, peak allocated VRAM,
+trainable parameter count, and optimizer steps required.
 
-**Integrity** — dataset/evaluation fingerprints, seed, deterministic preprocessing, explicit one-variable differences, and fresh adapter reload verification.
-
-## Experimental setup and integrity
-
-The benchmark has 3,000 synthetic examples: 2,000 train, 250 validation, 250 ID, 250 HARD, and 250 OOD across 10 intents. ID follows the intended held-out distribution. HARD emphasizes confusable, ambiguous, multi-issue, and noisy cases. OOD holds out surface/template families. This benchmark is not production traffic.
-
-Dataset fingerprint: `0efaacae27cbfeb1c304c8ee359384239d4526470a32aded8f0eda39908e9d06`<br>
-Frozen evaluation-contract fingerprint: `1b00a333c26c4cbd03b3e04d990fad3b4adf0d9a03443c9fd5f183ee7e8ef94d`
-
-The same strict JSON evaluation contract was used for base and tuned models; malformed outputs were not repaired.
-
-## Completed work: Experiment 02B.2
-
-The Production Incident Diagnosis specialization completed with an independent
-balanced train/validation dataset, assistant-only formatting, validation-only
-checkpointing, and a fresh adapter reload. The tuned frozen result and all
-recovery/integrity artifacts are under `outputs/incident_diagnosis_02b2`.
-
-## Selecting future experiments
-
-Experiment 02 is now the selected specialization task:
-
-1. Shortlist objectively measurable specialist domains.
-2. Build small frozen challenge sets.
-3. Evaluate untouched Qwen3-4B and measure the capability gap.
-4. Discard tasks where the base is already too strong.
-5. Select one useful gap, then build train/validation/test data.
-6. Prepare independent training data, fine-tune once, and measure exact base → tuned impact.
-
-Candidate domains include SRE incident diagnosis, SOC/security alert triage, telecom/network operations, company-specific query/DSL generation, internal tool/API behavior, and industrial fault diagnosis. These remain future specialization candidates; Experiment 02 is complete.
-
-## Checkpoint selection and early stopping
-
-The transparent checkpoint-selection and early-stopping foundation was used for
-Experiment 02B.2. It selected step 100 from validation-only metrics, recorded
-step 25 as the earliest near-best checkpoint, and stopped after 100 of 600
-configured updates. The tuned benchmark was generated once after fresh reload;
-post-processing was recovered offline from persisted raw outputs.
-
-Checkpoint selection must use validation only; ID, HARD, and OOD remain sealed until final evaluation. M6 motivates this work but does not prove which checkpoint is optimal.
+**Integrity** — dataset/evaluation fingerprints, deterministic preprocessing,
+validation-only selection, explicit experiment controls, and fresh adapter
+reload verification.
 
 ## Repository layout
 
 ```text
 configs/          experiment and evaluation configuration
+data/             frozen benchmark and training inputs
 docs/             experiment record, methodology, and roadmap
 results/          concise verified public evidence
-scripts/          dataset, audit, training, and evaluation entrypoints
+scripts/          dataset, audit, training, recovery, and evaluation entrypoints
 src/causetune/    reusable package code
 tests/            CPU-safe regression tests
 README.md
@@ -196,12 +275,32 @@ git diff --check
 
 ## Scope boundary
 
-In scope are preprocessing, QLoRA/LoRA, quantization, checkpointing, early stopping, validation, telemetry, VRAM profiling, throughput, diagnostics, experiment comparison, frozen evaluation, and base-vs-tuned measurement.
+CauseTune covers offline specialization and evidence generation: preprocessing,
+LoRA/QLoRA, quantization, validation, checkpointing, early stopping,
+telemetry, VRAM profiling, throughput, diagnostics, frozen evaluation, and
+base-vs-tuned measurement.
 
-Out of scope are Kubernetes, distributed training orchestration, serving infrastructure, production deployment, canarying, routing, online monitoring, model registry services, and API/dashboard work.
+It is not Kubeflow, an MLflow replacement, a serving system, a deployment or
+routing layer, a canarying system, or a production control plane. Production
+promotion and operational control belong elsewhere.
 
-## Limitations and future work
+## Limitations
 
-The benchmark is synthetic, only one base model family and one GPU environment have been studied, and M6 uses one deterministic seed. The observed ID/HARD/OOD sets should not be repeatedly reused for future selection. Future questions include M7, a gap-first Experiment 02, learning-rate and LoRA-capacity studies, fresh untouched benchmarks, more model families, real domain datasets, and larger post-training methods. None are completed here.
+- The benchmark and training corpus are synthetic; 99.31% is benchmark accuracy, not production accuracy.
+- Experiment 02 studies only Qwen3-4B and one controlled semantic training run.
+- TRANSFER is transfer-style evaluation, not true OOD.
+- Synthetic generator structure may make specialization easier than real-world incident diagnosis.
+- Repeatedly tuning against this frozen benchmark would weaken the evidence; stronger claims require new untouched challenge sets.
 
-More detail: [experiment record](docs/experiments.md), [methodology](docs/methodology.md), and [roadmap](docs/roadmap.md).
+## Future work
+
+The next scientific question is whether the measured specialization gain survives
+a new blind benchmark. Useful follow-ups are:
+
+- a fresh blind challenge set with more heterogeneous incident narratives;
+- independent generator/template families and manually authored cases where licensing and privacy permit;
+- another model family;
+- data-efficiency, LoRA-capacity, or learning-rate studies evaluated on new untouched evidence.
+
+More detail: [experiment record](docs/experiments.md),
+[methodology](docs/methodology.md), and [roadmap](docs/roadmap.md).
