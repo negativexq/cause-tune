@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import json
+import importlib.util
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from causetune.incident_benchmark import read_benchmark
 from causetune.incident_contract import contract_fingerprint
@@ -33,6 +35,43 @@ class TinyChatTokenizer:
 
 
 class IncidentTrainingTests(unittest.TestCase):
+    def test_validation_restores_training_mode_without_loading_weights(self) -> None:
+        runner_spec = importlib.util.spec_from_file_location("incident_runner_for_test", Path("scripts/run_incident_qlora.py"))
+        self.assertIsNotNone(runner_spec)
+        runner = importlib.util.module_from_spec(runner_spec)
+        assert runner_spec is not None and runner_spec.loader is not None
+        runner_spec.loader.exec_module(runner)
+
+        class FakeModel:
+            training = True
+
+            def train(self, mode: bool = True):
+                self.training = mode
+                return self
+
+            def eval(self):
+                return self.train(False)
+
+        fake = FakeModel()
+        metrics = {
+            "diagnosis_exact_match": {"rate": 0.5, "count": 1},
+            "resolution_exact_match": {"rate": 0.25},
+            "culprit_accuracy": {"rate": 0.75},
+            "failure_mode_accuracy": {"rate": 0.5},
+            "failure_mode_macro_f1": 0.5,
+            "recommended_action_accuracy": {"rate": 0.25},
+            "evidence": {"f1": 0.5},
+            "json_compliance": {"rate": 1.0},
+            "json_valid_rate": 1.0,
+        }
+        def fake_eval_records(model, *args):
+            model.eval()
+            return metrics, {}
+
+        with patch.object(runner, "_eval_records", side_effect=fake_eval_records), patch.object(runner, "_teacher_loss", return_value={"loss": 1.0}):
+            runner._validation(fake, None, [], [], [], "system", {}, 0)
+        self.assertTrue(fake.training)
+
     def test_exact_balanced_split_sizes_and_difficulty(self) -> None:
         train, train_truth = generate_training_split("train", 200, TRAIN_SEED, "train")
         validation, validation_truth = generate_training_split("validation", 24, VALIDATION_SEED, "validation")
