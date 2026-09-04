@@ -1,33 +1,45 @@
 # Methodology
 
+## Baseline-first specialization
+
+CauseTune starts by measuring an untouched base model on a frozen challenge benchmark. A task is interesting only when the base has a meaningful, measurable capability gap. Fine-tuning is not performed first and justified afterward by a favorable score.
+
+## Capability-gap screening
+
+Future candidate domains should receive small frozen challenge sets before full dataset construction. Tasks where Qwen3-4B is already strong should be rejected as weak specialization experiments. The selected task should make the base → tuned change measurable on the intended metric.
+
+## Train/validation/test isolation
+
+Training uses only train data. Validation supports progression and checkpoint decisions. ID, HARD, and OOD remain sealed until final evaluation and must not become model-selection sets through repeated reuse.
+
 ## Frozen evaluation contracts
 
-An evaluation contract fixes the task instruction, chat-template arguments, thinking mode, generation settings, parser, and schema rules. The same fingerprinted contract is used for the frozen base and tuned adapters. This prevents output-interface changes from being mistaken for semantic improvement.
+The evaluation contract fixes the instruction, chat-template arguments, thinking mode, generation settings, parser, and schema rules. The same fingerprinted contract is used before and after tuning so interface compliance is not confused with semantic improvement.
 
 ## Assistant-only supervision
 
-Training formats each record with the Qwen chat template, but labels only the assistant JSON completion. System and user tokens use the ignore index. This measures learning of the required intent response rather than copying the prompt. Every preprocessed example must retain at least one supervised token.
+Qwen chat formatting is used for training, but loss is applied only to the assistant JSON completion. System and user tokens are ignored. Every example must retain supervised assistant tokens.
 
-## Dataset separation
+## Determinism and controlled changes
 
-Training uses only the train split. Validation is used for deterministic progression checks. ID, HARD, and OOD remain held out until the prescribed final evaluation. Stable example IDs, normalized-content checks, scenario-family tracking, and OOD family exclusion make accidental leakage visible.
+Seeds, preprocessing, dataset fingerprints, exact training order, optimizer-window composition, and resolved configuration are persisted. Causal experiments change one training-affecting variable at a time. M6 changed only M5’s data order: deterministic shuffle with seed 42.
 
-## ID, HARD, and OOD
+## Failed runs and optimizer-step analysis
 
-ID samples follow the intended surface distribution while holding out examples. HARD emphasizes confusable intents, ambiguity rules, multi-issue requests, and noise. OOD holds out wording and surface families while preserving the same ten-label taxonomy. These are controlled benchmark definitions, not claims about real traffic.
+A falling training loss is not sufficient evidence of useful adaptation. CauseTune records validation progression, class composition per optimizer window, confusion matrices, failure transitions, throughput, and VRAM. M5’s failure showed why balanced class counts can still produce pathological sequential optimization.
+
+## Checkpoint selection and early stopping
+
+The final checkpoint is not automatically the best checkpoint. Future selection should use validation-only checkpoints, patience, `min_delta`, and an explicit quality tolerance. ID, HARD, and OOD must remain sealed until the selected checkpoint is evaluated once.
+
+## Quality versus efficiency
+
+An experiment should report both specialization quality and the cost of obtaining it: optimizer steps, wall-clock time, input/supervised token throughput, peak VRAM, and trainable parameter count. Future claims should state how much of the capability gap was closed and how much training was required.
 
 ## Synthetic-data caveats
 
-The benchmark is generated without an external LLM API and is useful for controlled causal experiments. Its language distribution is not production traffic. Repeatedly selecting models or hyperparameters against observed ID/HARD/OOD sets would turn them into development data, so future work should create a fresh untouched benchmark.
+The current benchmark is synthetic and controlled; it is not production traffic. Once ID/HARD/OOD have been observed, they should not be repeatedly reused for hyperparameter or model selection. Future work needs fresh untouched benchmarks and, eventually, real domain data.
 
-## Reproducibility and experiment diffs
+## Scope boundary
 
-Configs, seeds, fingerprints, exact training orders, optimizer-window composition, loss histories, and runtime metadata are persisted. M6 records a minimal diff from M5: deterministic shuffle seed 42, plus experiment output identity. No other training-affecting setting changed.
-
-## PEFT parameter accounting
-
-For PEFT models, structural checks use `model.get_nb_trainable_parameters()` when available. The naive `sum(p.numel())` value is reported separately as packed physical parameter numel because bitsandbytes 4-bit storage does not represent the logical dense parameter count. Treating the packed count as the logical Qwen3-4B total would produce a false preflight failure.
-
-## Failed runs as evidence
-
-M5 is retained because its failure exposed a causal training-order bug. A near-zero training loss is not sufficient evidence of useful adaptation; held-out semantic metrics, class recall, confusion matrices, and failure transitions are required. M6 therefore changed one variable and sealed test evaluation during training.
+CauseTune owns offline model specialization and evidence generation. It is not a serving system, orchestration platform, registry, or production MLOps control plane.
