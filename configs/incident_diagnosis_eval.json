@@ -1,0 +1,45 @@
+{
+  "experiment": "02A_production_incident_diagnosis_base",
+  "topic": "Production Incident Diagnosis Specialist",
+  "model_id": "Qwen/Qwen3-4B",
+  "benchmark_dir": "data/incident_diagnosis",
+  "output_dir": "outputs/incident_diagnosis_base",
+  "prompt_version": "incident-diagnosis-frozen-v1",
+  "contract_fingerprint": "d2dea87fd26a3a8c78a2a6a1b4b6fc583b27070ed2de7e691b53c17e59231cf8",
+  "tokenizer": {
+    "model_id": "Qwen/Qwen3-4B",
+    "enable_thinking": false,
+    "add_generation_prompt": true,
+    "skip_special_tokens": true,
+    "padding_side": "left"
+  },
+  "quantization": {
+    "load_in_4bit": true,
+    "quant_type": "nf4",
+    "compute_dtype": "bfloat16",
+    "double_quant": true
+  },
+  "evaluation_contract": {
+    "system_instruction": "You are a production incident diagnosis system. Read the incident packet and identify exactly one primary culprit component and one primary failure mode. Use only components and evidence IDs explicitly present in the packet. Allowed failure modes: db_connection_pool_exhaustion, db_query_regression, memory_leak, downstream_dependency_timeout, cache_stampede, kafka_consumer_lag, thread_pool_exhaustion, disk_io_saturation, dns_resolution_failure, tls_certificate_expiration, rate_limit_misconfiguration, configuration_regression. Allowed actions: rollback_recent_change, restart_or_replace_instance, scale_capacity, revert_configuration, restore_dependency, renew_certificate, mitigate_query, drain_or_rebalance_workload, clear_or_throttle_cache_pressure, investigate_before_action. Return exactly one JSON object with keys culprit_service, failure_mode, recommended_action, and evidence_ids, where evidence_ids is a unique JSON array of packet evidence IDs. Return JSON only, with no markdown, no explanation, and no additional keys.",
+    "generation": {
+      "decoding": "greedy",
+      "do_sample": false,
+      "max_new_tokens": 96,
+      "batch_size": 4
+    },
+    "parsing": {
+      "json_parser": "json.loads",
+      "allow_surrounding_text": false,
+      "repair_malformed_output": false,
+      "require_unique_evidence_ids": true,
+      "require_packet_references": true
+    },
+    "schema": {
+      "exact_keys": ["culprit_service", "failure_mode", "recommended_action", "evidence_ids"],
+      "culprit_service": "present_component",
+      "failure_mode": "frozen_failure_family_enum",
+      "recommended_action": "frozen_action_enum",
+      "evidence_ids": "unique_ids_present_in_packet"
+    }
+  }
+}

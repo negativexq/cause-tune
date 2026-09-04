@@ -76,6 +76,12 @@ M6 changed exactly one training-affecting variable: the order became a determini
 
 No replacement collapse into another single class occurred. `order_missing` remained the weakest M6 class, especially on HARD/OOD examples; this release does not tune against that observation.
 
+## Experiment 02 — Production Incident Diagnosis
+
+**Status:** baseline capability-gap measurement.
+
+The selected topic is Production Incident Diagnosis Specialist. The goal is to determine whether untouched Qwen3-4B has a meaningful deficiency in diagnosing structured production incidents from topology, deployments, metrics, logs, alerts, and dependency health before any fine-tuning is attempted. Experiment 02A freezes a 144-case benchmark and a new strict evaluation contract; it does not yet claim that a specialist model exists.
+
 ## Training configuration
 
 - Qwen/Qwen3-4B; NF4 4-bit base; BF16 compute; double quantization

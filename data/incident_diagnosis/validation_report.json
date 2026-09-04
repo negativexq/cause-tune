@@ -1,0 +1,31 @@
+{
+  "benchmark_fingerprint": "5e9a6d74ba881af7aa1146a23f4b837e139a4e8e5a77dba7fe40c3bb2c9c0a94",
+  "benchmark_version": "incident-diagnosis-v1",
+  "duplicate_count": 0,
+  "failure_family_counts": {
+    "cache_stampede": 12,
+    "configuration_regression": 12,
+    "db_connection_pool_exhaustion": 12,
+    "db_query_regression": 12,
+    "disk_io_saturation": 12,
+    "dns_resolution_failure": 12,
+    "downstream_dependency_timeout": 12,
+    "kafka_consumer_lag": 12,
+    "memory_leak": 12,
+    "rate_limit_misconfiguration": 12,
+    "thread_pool_exhaustion": 12,
+    "tls_certificate_expiration": 12
+  },
+  "generator_version": "incident-diagnosis-local-v1",
+  "hard_red_herring_count": 48,
+  "hard_red_herring_rate": 1.0,
+  "invalid_reference_count": 0,
+  "literal_label_leakage_count": 0,
+  "normalized_duplicate_count": 0,
+  "split_counts": {
+    "hard": 48,
+    "standard": 72,
+    "transfer": 24
+  },
+  "status": "pass"
+}

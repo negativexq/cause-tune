@@ -20,7 +20,17 @@
 
 M7 must select checkpoints using validation only. ID, HARD, and OOD remain sealed for final evaluation.
 
-## Experiment 02 — Hard specialization
+## Experiment 02 — Production Incident Diagnosis Specialist
+
+### Experiment 02A — Capability-gap baseline — in progress
+
+Freeze the incident benchmark and evaluation contract, then measure untouched Qwen3-4B once. The current phase includes no training data, adapter, or QLoRA run.
+
+### Experiment 02B — Training dataset + QLoRA specialization — blocked
+
+Blocked until the 02A baseline and capability-gap review are complete.
+
+The planned process is:
 
 1. Shortlist candidate specialist domains.
 2. Build small frozen base challenge sets.
@@ -30,7 +40,7 @@ M7 must select checkpoints using validation only. ID, HARD, and OOD remain seale
 6. Construct train/validation/test data.
 7. Fine-tune and measure exact base → tuned impact.
 
-Experiment 02 has not been selected or started.
+Experiment 02 is now selected as Production Incident Diagnosis Specialist. Only 02A is in progress; 02B has not started.
 
 ## Focused optimization — later
 
