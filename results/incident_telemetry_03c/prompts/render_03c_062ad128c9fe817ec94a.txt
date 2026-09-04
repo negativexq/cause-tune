@@ -1,0 +1,111 @@
+You are a telemetry renderer, not an incident diagnostician.
+Return JSON with exactly one key, observations. Render only the declared semantic observations.
+Never give a diagnosis, root-cause label, remediation, answerability, or expected output.
+Never add evidence, change evidence IDs/components/kinds, make missing evidence reappear, or turn distractors into causal evidence.
+Rendering contract family: ecosystem_native_v1; style: runtime-native telemetry terminology.
+Runtime guidance: idiomatic Go HTTP/client terminology.
+Provider input (semantic evidence only):
+{
+  "evidence": [
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "metric_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "memory_limit",
+          "value": 4096
+        },
+        {
+          "name": "working_set",
+          "value": 7559
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "async_worker_api",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "event_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "RUNTIME_EVENT"
+      ],
+      "required_attributes": [
+        {
+          "name": "restart_count",
+          "value": 4
+        },
+        {
+          "name": "termination_reason",
+          "value": "OOMKilled"
+        }
+      ],
+      "semantic_kind": "runtime_event",
+      "source_component": "async_worker_api",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "SUPPORTING",
+      "evidence_id": "alert_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "ALERT"
+      ],
+      "required_attributes": [
+        {
+          "name": "latency_effect",
+          "value": "elevated"
+        }
+      ],
+      "semantic_kind": "alert",
+      "source_component": "async_worker_api",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "DISTRACTOR",
+      "evidence_id": "metric_101",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "distractor_intensity",
+          "value": "mild"
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "async_worker_worker",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "DISTRACTOR",
+      "evidence_id": "change_101",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "DEPLOYMENT_CHANGE"
+      ],
+      "required_attributes": [
+        {
+          "name": "change_scope",
+          "value": "neighbor"
+        }
+      ],
+      "semantic_kind": "change",
+      "source_component": "async_worker_broker",
+      "variation_family": "ecosystem_native_v1"
+    }
+  ],
+  "prompt_template_version": "03c-ecosystem-native-v1",
+  "render_contract": "03c-telemetry-surface-v1",
+  "render_seed": 917,
+  "renderer_family": "ecosystem_native_v1",
+  "runtime_id": "go_http",
+  "runtime_instruction": "Use terminology appropriate to the supplied runtime without naming a diagnosis.",
+  "style": "runtime-native telemetry terminology"
+}

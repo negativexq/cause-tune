@@ -250,7 +250,26 @@ counterfactual pairs, grouped pre-render split manifests, and fail-closed
 audits. Its 52-scenario CPU-safe reference corpus is a fixture for contract
 validation—not training data, a benchmark, or model evidence. See the
 [03B engine record](docs/experiment-03/03b-causal-scenario-engine.md).
-Telemetry rendering and all model work remain future 03C+ milestones.
+Model selection, training, and evaluation remain future 03E+ milestones.
+
+### Renderer Prototype R0 — supporting infrastructure
+
+**Status: IMPLEMENTED / LIVE PROVIDER NOT RUN.** The previous synthetic LLM
+telemetry pilot is retained as provider-neutral, offline-safe augmentation
+infrastructure. It is not scientific model evidence and is not on the current
+Experiment 03 critical path. See the [Renderer Prototype R0 record](docs/experiment-03/03c-llm-telemetry-rendering-pilot.md).
+
+### Experiment 03C — Cloud-OpsBench adoption and corpus audit
+
+**Status: COMPLETE — PINNED REAL CORPUS AUDITED.** Cloud-OpsBench is the
+selected primary empirical
+fault-injection corpus. The pinned, read-only adapter audits its native cases,
+modalities, golden trajectories, target availability, context sizes, leakage
+risks, and candidate split strategies without copying the external dataset or
+calling a provider. The real audit matched 754 cases, 550 Online Boutique,
+204 Train-Ticket, and 57 native fault types. No Experiment 03 model has been
+trained or evaluated.
+See the [03C adoption and audit record](docs/experiment-03/03c-cloudopsbench-adoption.md).
 
 ## What CauseTune measures
 

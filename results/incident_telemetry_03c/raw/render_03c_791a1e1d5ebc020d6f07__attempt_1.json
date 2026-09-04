@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for web_cache_db_api: memory_limit=4096; working_set=7889 (python/django)\", \"timestamp_offset_seconds\": 1444, \"value\": {\"memory_limit\": 4096, \"working_set\": 7889}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"runtime-native signal for web_cache_db_api: restart_count=5; termination_reason=OOMKilled (python/django)\", \"timestamp_offset_seconds\": 549, \"value\": {\"restart_count\": 5, \"termination_reason\": \"OOMKilled\"}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"runtime-native signal for web_cache_db_api: latency_effect=elevated (python/django)\", \"timestamp_offset_seconds\": 3265, \"value\": {\"latency_effect\": \"elevated\"}}]}",
+  "entry_id": "render_03c_791a1e1d5ebc020d6f07",
+  "raw_response_hash": "9e6733804036d14ff8208ad6a2175a35322673b14c864dc30d87a6c5f01d5ddf",
+  "usage": {
+    "input_tokens": 193,
+    "output_tokens": 61,
+    "total_tokens": 254
+  }
+}

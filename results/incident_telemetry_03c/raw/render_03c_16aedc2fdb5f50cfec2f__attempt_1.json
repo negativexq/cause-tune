@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for checkout_checkout_api: memory_limit=4096; working_set=8070\", \"timestamp_offset_seconds\": 1022, \"value\": {\"memory_limit\": 4096, \"working_set\": 8070}}, {\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"ops signal for checkout_checkout_api: restart_count=5; termination_reason=OOMKilled\", \"timestamp_offset_seconds\": 1028, \"value\": {\"restart_count\": 5, \"termination_reason\": \"OOMKilled\"}}, {\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"ops signal for checkout_checkout_api: latency_effect=elevated\", \"timestamp_offset_seconds\": 1504, \"value\": {\"latency_effect\": \"elevated\"}}]}",
+  "entry_id": "render_03c_16aedc2fdb5f50cfec2f",
+  "raw_response_hash": "5ea130c5bc2e1d07f969b390e2d0456873a260cfab5f5efc0f33e87587fa458d",
+  "usage": {
+    "input_tokens": 197,
+    "output_tokens": 58,
+    "total_tokens": 255
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "accepted_render_hash": "9f6b46721afcb3cbb581dc743e2fd60620f9a891426a01d02157e4fe014155f3",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "983be51cb8de38aaacab3a801f9a8f1caf6f997b7c735ad808ace99bfe033d8a",
+  "entry_id": "render_03c_c2f52a454618b91521c4",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "c657951ed6c8d5ae46e18ea2bf9ffb7c88e6b5abf9bf4d4e44c65daa6784023b",
+  "render_seed": 645,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "983be51cb8de38aaacab3a801f9a8f1caf6f997b7c735ad808ace99bfe033d8a",
+    "observations": [
+      {
+        "component_id": "event_pipeline_consumer",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "runtime-native signal for event_pipeline_consumer: incoming_rate=1225.6737; lag=185701; processing_rate=285.1243 (java/spring)",
+        "timestamp": "2026-01-01T00:09:10Z",
+        "value": {
+          "incoming_rate": 1225.6737,
+          "lag": 185701,
+          "processing_rate": 285.1243
+        }
+      },
+      {
+        "component_id": "event_pipeline_consumer",
+        "evidence_id": "alert_001",
+        "kind": "alert",
+        "text": "runtime-native signal for event_pipeline_consumer: consumer_health=degraded (java/spring)",
+        "timestamp": "2026-01-01T00:35:52Z",
+        "value": {
+          "consumer_health": "degraded"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "9f6b46721afcb3cbb581dc743e2fd60620f9a891426a01d02157e4fe014155f3",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-ecosystem-native-v1",
+      "provider": "fake",
+      "seed": 645
+    },
+    "scenario_id": "scenario_03b_f5c136422549697a20db",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "ecosystem_native_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_f5c136422549697a20db",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

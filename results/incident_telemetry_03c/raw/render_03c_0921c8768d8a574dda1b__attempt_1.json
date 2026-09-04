@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_db_postgres\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for web_db_postgres: active_connections=40; pool_size=40; waiting_requests=160 (node/nestjs)\", \"timestamp_offset_seconds\": 202, \"value\": {\"active_connections\": 40, \"pool_size\": 40, \"waiting_requests\": 160}}, {\"component_id\": \"web_db_postgres\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"runtime-native signal for web_db_postgres: acquisition_timeout_rate=0.7319858883321223 (node/nestjs)\", \"timestamp_offset_seconds\": 2812, \"value\": {\"acquisition_timeout_rate\": 0.7319858883321223}}, {\"component_id\": \"web_db_postgres\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"runtime-native signal for web_db_postgres: database_health=healthy (node/nestjs)\", \"timestamp_offset_seconds\": 2400, \"value\": {\"database_health\": \"healthy\"}}]}",
+  "entry_id": "render_03c_0921c8768d8a574dda1b",
+  "raw_response_hash": "82ba05bad835c2ab82272c43447a8dfd061b597ac787b9469bf51d8e24be0604",
+  "usage": {
+    "input_tokens": 193,
+    "output_tokens": 61,
+    "total_tokens": 254
+  }
+}

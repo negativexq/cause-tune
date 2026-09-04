@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"async_worker_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for async_worker_api: memory_limit=4096; working_set=7559\", \"timestamp_offset_seconds\": 2893, \"value\": {\"memory_limit\": 4096, \"working_set\": 7559}}, {\"component_id\": \"async_worker_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"enterprise observation for async_worker_api: restart_count=4; termination_reason=OOMKilled\", \"timestamp_offset_seconds\": 1434, \"value\": {\"restart_count\": 4, \"termination_reason\": \"OOMKilled\"}}, {\"component_id\": \"async_worker_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"enterprise observation for async_worker_api: latency_effect=elevated\", \"timestamp_offset_seconds\": 1339, \"value\": {\"latency_effect\": \"elevated\"}}, {\"component_id\": \"async_worker_worker\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for async_worker_worker: distractor_intensity=mild\", \"timestamp_offset_seconds\": 1313, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"async_worker_broker\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"enterprise observation for async_worker_broker: change_scope=neighbor\", \"timestamp_offset_seconds\": 2556, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_64e79bc618b4e948f44f",
+  "raw_response_hash": "d93e7daff281429957972476eda9bcfbbc11966632d4ca0a69a6cf81dd74d1eb",
+  "usage": {
+    "input_tokens": 252,
+    "output_tokens": 92,
+    "total_tokens": 344
+  }
+}

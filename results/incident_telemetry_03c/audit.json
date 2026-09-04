@@ -1,0 +1,321 @@
+{
+  "acceptance_by_difficulty": {
+    "COUNTERFACTUAL": {
+      "accepted": 6,
+      "rejected": 0
+    },
+    "HARD": {
+      "accepted": 51,
+      "rejected": 0
+    },
+    "INCOMPLETE": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "STANDARD": {
+      "accepted": 75,
+      "rejected": 0
+    }
+  },
+  "acceptance_by_fault_domain": {
+    "APPLICATION": {
+      "accepted": 24,
+      "rejected": 0
+    },
+    "CACHE": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "DATABASE": {
+      "accepted": 24,
+      "rejected": 0
+    },
+    "DEPENDENCY": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "KUBERNETES_RUNTIME": {
+      "accepted": 9,
+      "rejected": 0
+    },
+    "MESSAGING": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "NETWORK": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "RESOURCE": {
+      "accepted": 30,
+      "rejected": 0
+    },
+    "SCALING": {
+      "accepted": 9,
+      "rejected": 0
+    }
+  },
+  "acceptance_by_root_cause": {
+    "cache_stampede": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "configuration_regression": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "container_memory_exhaustion": {
+      "accepted": 15,
+      "rejected": 0
+    },
+    "cpu_throttling": {
+      "accepted": 15,
+      "rejected": 0
+    },
+    "db_connection_pool_exhaustion": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "db_query_regression": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "dns_resolution_failure": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "downstream_dependency_timeout": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "insufficient_replicas": {
+      "accepted": 9,
+      "rejected": 0
+    },
+    "kafka_consumer_lag": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "readiness_probe_failure": {
+      "accepted": 9,
+      "rejected": 0
+    },
+    "thread_pool_exhaustion": {
+      "accepted": 12,
+      "rejected": 0
+    }
+  },
+  "acceptance_by_runtime": {
+    "go_http": {
+      "accepted": 30,
+      "rejected": 0
+    },
+    "java_spring": {
+      "accepted": 30,
+      "rejected": 0
+    },
+    "node_nestjs": {
+      "accepted": 42,
+      "rejected": 0
+    },
+    "python_django": {
+      "accepted": 18,
+      "rejected": 0
+    },
+    "python_fastapi": {
+      "accepted": 24,
+      "rejected": 0
+    }
+  },
+  "acceptance_by_topology": {
+    "ASYNC_WORKER": {
+      "accepted": 9,
+      "rejected": 0
+    },
+    "CHECKOUT": {
+      "accepted": 39,
+      "rejected": 0
+    },
+    "EVENT_PIPELINE": {
+      "accepted": 12,
+      "rejected": 0
+    },
+    "MULTI_SERVICE": {
+      "accepted": 21,
+      "rejected": 0
+    },
+    "WEB_CACHE_DB": {
+      "accepted": 36,
+      "rejected": 0
+    },
+    "WEB_DB": {
+      "accepted": 27,
+      "rejected": 0
+    }
+  },
+  "accepted": 144,
+  "attempted_renders": 144,
+  "exact_duplicate_rendered_surfaces": 0,
+  "failure_details": [],
+  "label_leakage_failures": 0,
+  "malformed_output_failures": 0,
+  "missing_evidence_failures": 0,
+  "pilot_version": "incident-telemetry-03c-pilot-v1",
+  "provider_failures": 0,
+  "rejected": 0,
+  "render_failures_by_provider_model": {},
+  "render_failures_by_renderer_family": {},
+  "renderer_audits": [
+    {
+      "counterfactual_pair_count": 1,
+      "distributions": {
+        "difficulty": {
+          "COUNTERFACTUAL": 2,
+          "HARD": 17,
+          "INCOMPLETE": 4,
+          "STANDARD": 25
+        },
+        "failure_mode_catalog_size": 28,
+        "fault_domain": {
+          "APPLICATION": 8,
+          "CACHE": 4,
+          "DATABASE": 8,
+          "DEPENDENCY": 4,
+          "KUBERNETES_RUNTIME": 3,
+          "MESSAGING": 4,
+          "NETWORK": 4,
+          "RESOURCE": 10,
+          "SCALING": 3
+        },
+        "root_cause_id": {
+          "cache_stampede": 4,
+          "configuration_regression": 4,
+          "container_memory_exhaustion": 5,
+          "cpu_throttling": 5,
+          "db_connection_pool_exhaustion": 4,
+          "db_query_regression": 4,
+          "dns_resolution_failure": 4,
+          "downstream_dependency_timeout": 4,
+          "insufficient_replicas": 3,
+          "kafka_consumer_lag": 4,
+          "readiness_probe_failure": 3,
+          "thread_pool_exhaustion": 4
+        }
+      },
+      "duplicate_canonical_content_count": 0,
+      "duplicate_rendered_count": 0,
+      "errors": [],
+      "outputs": {
+        "status": "not_provided"
+      },
+      "rendered_telemetry_count": 48,
+      "scenario_count": 48,
+      "split": {
+        "status": "not_provided"
+      },
+      "status": "pass"
+    },
+    {
+      "counterfactual_pair_count": 1,
+      "distributions": {
+        "difficulty": {
+          "COUNTERFACTUAL": 2,
+          "HARD": 17,
+          "INCOMPLETE": 4,
+          "STANDARD": 25
+        },
+        "failure_mode_catalog_size": 28,
+        "fault_domain": {
+          "APPLICATION": 8,
+          "CACHE": 4,
+          "DATABASE": 8,
+          "DEPENDENCY": 4,
+          "KUBERNETES_RUNTIME": 3,
+          "MESSAGING": 4,
+          "NETWORK": 4,
+          "RESOURCE": 10,
+          "SCALING": 3
+        },
+        "root_cause_id": {
+          "cache_stampede": 4,
+          "configuration_regression": 4,
+          "container_memory_exhaustion": 5,
+          "cpu_throttling": 5,
+          "db_connection_pool_exhaustion": 4,
+          "db_query_regression": 4,
+          "dns_resolution_failure": 4,
+          "downstream_dependency_timeout": 4,
+          "insufficient_replicas": 3,
+          "kafka_consumer_lag": 4,
+          "readiness_probe_failure": 3,
+          "thread_pool_exhaustion": 4
+        }
+      },
+      "duplicate_canonical_content_count": 0,
+      "duplicate_rendered_count": 0,
+      "errors": [],
+      "outputs": {
+        "status": "not_provided"
+      },
+      "rendered_telemetry_count": 48,
+      "scenario_count": 48,
+      "split": {
+        "status": "not_provided"
+      },
+      "status": "pass"
+    },
+    {
+      "counterfactual_pair_count": 1,
+      "distributions": {
+        "difficulty": {
+          "COUNTERFACTUAL": 2,
+          "HARD": 17,
+          "INCOMPLETE": 4,
+          "STANDARD": 25
+        },
+        "failure_mode_catalog_size": 28,
+        "fault_domain": {
+          "APPLICATION": 8,
+          "CACHE": 4,
+          "DATABASE": 8,
+          "DEPENDENCY": 4,
+          "KUBERNETES_RUNTIME": 3,
+          "MESSAGING": 4,
+          "NETWORK": 4,
+          "RESOURCE": 10,
+          "SCALING": 3
+        },
+        "root_cause_id": {
+          "cache_stampede": 4,
+          "configuration_regression": 4,
+          "container_memory_exhaustion": 5,
+          "cpu_throttling": 5,
+          "db_connection_pool_exhaustion": 4,
+          "db_query_regression": 4,
+          "dns_resolution_failure": 4,
+          "downstream_dependency_timeout": 4,
+          "insufficient_replicas": 3,
+          "kafka_consumer_lag": 4,
+          "readiness_probe_failure": 3,
+          "thread_pool_exhaustion": 4
+        }
+      },
+      "duplicate_canonical_content_count": 0,
+      "duplicate_rendered_count": 0,
+      "errors": [],
+      "outputs": {
+        "status": "not_provided"
+      },
+      "rendered_telemetry_count": 48,
+      "scenario_count": 48,
+      "split": {
+        "status": "not_provided"
+      },
+      "status": "pass"
+    }
+  ],
+  "retries": 0,
+  "semantic_consistency_failures": 0,
+  "status": "pass",
+  "unsupported_evidence_failures": 0
+}

@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"multi_service_payment_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for multi_service_payment_api: lookup_latency_ms=2382.0598; normal_lookup_latency_ms=3\", \"timestamp_offset_seconds\": 3349, \"value\": {\"lookup_latency_ms\": 2382.0598, \"normal_lookup_latency_ms\": 3}}, {\"component_id\": \"multi_service_payment_api\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"ops signal for multi_service_payment_api: negative_answer_rate=0.8031990777987089\", \"timestamp_offset_seconds\": 1134, \"value\": {\"negative_answer_rate\": 0.8031990777987089}}, {\"component_id\": \"multi_service_payment_api\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"ops signal for multi_service_payment_api: existing_connections=healthy\", \"timestamp_offset_seconds\": 498, \"value\": {\"existing_connections\": \"healthy\"}}]}",
+  "entry_id": "render_03c_614aa12a5b2633c1a650",
+  "raw_response_hash": "a7b6fe0aa66fd363b5d8be2a25bb506c9118f465bd4d281d933a6eb257bc7bb1",
+  "usage": {
+    "input_tokens": 194,
+    "output_tokens": 55,
+    "total_tokens": 249
+  }
+}

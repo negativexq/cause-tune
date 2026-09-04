@@ -1,0 +1,87 @@
+{
+  "audit_version": "cloud-opsbench-audit-v1",
+  "case_count": 754,
+  "classification_values": [
+    "MODEL_VISIBLE_SAFE",
+    "MODEL_VISIBLE_WITH_TRANSFORM",
+    "SUPERVISION_ONLY",
+    "PROVENANCE_ONLY",
+    "FORBIDDEN_INPUT"
+  ],
+  "experiment": "03C",
+  "fields": [
+    {
+      "classification": "PROVENANCE_ONLY",
+      "field": "benchmark path category/case ID",
+      "rationale": "directory names can encode native labels or identity"
+    },
+    {
+      "classification": "SUPERVISION_ONLY",
+      "field": "metadata fault fields and diagnosis",
+      "rationale": "explicit source targets"
+    },
+    {
+      "classification": "MODEL_VISIBLE_WITH_TRANSFORM",
+      "field": "metadata query/question",
+      "rationale": "inspect and strip explicit answer/label text before input"
+    },
+    {
+      "classification": "MODEL_VISIBLE_SAFE",
+      "field": "raw_data alert/logs/k8s/metrics",
+      "rationale": "observable telemetry, subject to case-identity/path stripping"
+    },
+    {
+      "classification": "MODEL_VISIBLE_WITH_TRANSFORM",
+      "field": "tool_cache",
+      "rationale": "remove cached target answers or source metadata fields"
+    },
+    {
+      "classification": "MODEL_VISIBLE_SAFE",
+      "field": "code/",
+      "rationale": "only where the future task explicitly allows code; normalize paths"
+    },
+    {
+      "classification": "SUPERVISION_ONLY",
+      "field": "process-label/milestone.json",
+      "rationale": "diagnostic process target"
+    },
+    {
+      "classification": "SUPERVISION_ONLY",
+      "field": "golden-trajectory/path1.json and path2.json",
+      "rationale": "expert trajectory and final answer"
+    },
+    {
+      "classification": "PROVENANCE_ONLY",
+      "field": "source fingerprint/revision",
+      "rationale": "audit identity, never model input"
+    },
+    {
+      "classification": "FORBIDDEN_INPUT",
+      "field": "golden final answer/query fields",
+      "rationale": "would trivially leak the target"
+    }
+  ],
+  "policy_version": "cloud-opsbench-leakage-policy-v1",
+  "source": {
+    "adapter_version": "cloud-opsbench-adapter-v1",
+    "documented_case_count": 754,
+    "documented_fault_type_count": 57,
+    "documented_system_case_counts": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "expected_layout": "benchmark/<system>/<fault_category>/<case_id>/",
+    "license": "MIT",
+    "license_file_sha256": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+    "official_repository_url": "https://github.com/LLM4Ops/Cloud-OpsBench",
+    "registry_version": "cloud-opsbench-source-v1",
+    "release_identity": "main@03c415e5709297432282fbbfd499f1bca0f8c347",
+    "source_name": "Cloud-OpsBench",
+    "systems": [
+      "boutique",
+      "trainticket"
+    ],
+    "upstream_revision": "03c415e5709297432282fbbfd499f1bca0f8c347"
+  },
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench"
+}

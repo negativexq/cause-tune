@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"async_worker_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for async_worker_api: cpu_limit=2.0; demand=3.3068; throttle_ratio=0.6618636910919928\", \"timestamp_offset_seconds\": 3501, \"value\": {\"cpu_limit\": 2.0, \"demand\": 3.3068, \"throttle_ratio\": 0.6618636910919928}}, {\"component_id\": \"async_worker_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"ops signal for async_worker_api: latency_effect=elevated\", \"timestamp_offset_seconds\": 650, \"value\": {\"latency_effect\": \"elevated\"}}, {\"component_id\": \"async_worker_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"ops signal for async_worker_api: throttle_ratio=0.6618636910919928\", \"timestamp_offset_seconds\": 2401, \"value\": {\"throttle_ratio\": 0.6618636910919928}}]}",
+  "entry_id": "render_03c_303b87a4c3daf3c80422",
+  "raw_response_hash": "33ee58a922e1f4b872c8b7c192df1f63a7bb8093d52d13df98697e9fd73f4df7",
+  "usage": {
+    "input_tokens": 200,
+    "output_tokens": 58,
+    "total_tokens": 258
+  }
+}

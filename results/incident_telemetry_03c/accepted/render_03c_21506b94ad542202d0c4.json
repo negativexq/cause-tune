@@ -1,0 +1,65 @@
+{
+  "accepted_render_hash": "d5e9daf42a1632f6bc8649a63435ad71d09d79a8a2cc6ceaf860e139e0942171",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "66734c7ba86bc7dbe24b98a0a6f21069db7a27096d6abddf3a12672bfce39983",
+  "entry_id": "render_03c_21506b94ad542202d0c4",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "e8e1bd2eaa8606d4046cccea8aa0f50def13e70bc115cf9f8a2836bc8104bb29",
+  "render_seed": 458,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "66734c7ba86bc7dbe24b98a0a6f21069db7a27096d6abddf3a12672bfce39983",
+    "observations": [
+      {
+        "component_id": "checkout_redis",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "runtime-native signal for checkout_redis: cache_miss_ratio=0.9362484937487748; database_read_rate=8725.9836 (python/django)",
+        "timestamp": "2026-01-01T00:02:14Z",
+        "value": {
+          "cache_miss_ratio": 0.9362484937487748,
+          "database_read_rate": 8725.9836
+        }
+      },
+      {
+        "component_id": "checkout_redis",
+        "evidence_id": "event_001",
+        "kind": "runtime_event",
+        "text": "runtime-native signal for checkout_redis: hot_key_expiry=shared (python/django)",
+        "timestamp": "2026-01-01T00:24:02Z",
+        "value": {
+          "hot_key_expiry": "shared"
+        }
+      },
+      {
+        "component_id": "checkout_redis",
+        "evidence_id": "metric_002",
+        "kind": "metric",
+        "text": "runtime-native signal for checkout_redis: request_rate=8382.2774 (python/django)",
+        "timestamp": "2026-01-01T00:23:49Z",
+        "value": {
+          "request_rate": 8382.2774
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "d5e9daf42a1632f6bc8649a63435ad71d09d79a8a2cc6ceaf860e139e0942171",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-ecosystem-native-v1",
+      "provider": "fake",
+      "seed": 458
+    },
+    "scenario_id": "scenario_03b_8e198c6a34512132bceb",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "ecosystem_native_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_8e198c6a34512132bceb",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

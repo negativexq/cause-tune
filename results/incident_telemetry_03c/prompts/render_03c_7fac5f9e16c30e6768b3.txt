@@ -1,0 +1,60 @@
+You are a telemetry renderer, not an incident diagnostician.
+Return JSON with exactly one key, observations. Render only the declared semantic observations.
+Never give a diagnosis, root-cause label, remediation, answerability, or expected output.
+Never add evidence, change evidence IDs/components/kinds, make missing evidence reappear, or turn distractors into causal evidence.
+Rendering contract family: ecosystem_native_v1; style: runtime-native telemetry terminology.
+Runtime guidance: Python/FastAPI request and worker terminology.
+Provider input (semantic evidence only):
+{
+  "evidence": [
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "metric_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "thread_limit",
+          "value": 64
+        },
+        {
+          "name": "busy_threads",
+          "value": 64
+        },
+        {
+          "name": "blocked_requests",
+          "value": 108
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "web_db_api",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "log_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "APPLICATION_LOG"
+      ],
+      "required_attributes": [
+        {
+          "name": "cpu_state",
+          "value": "moderate"
+        }
+      ],
+      "semantic_kind": "application_log",
+      "source_component": "web_db_api",
+      "variation_family": "ecosystem_native_v1"
+    }
+  ],
+  "prompt_template_version": "03c-ecosystem-native-v1",
+  "render_contract": "03c-telemetry-surface-v1",
+  "render_seed": 611,
+  "renderer_family": "ecosystem_native_v1",
+  "runtime_id": "python_fastapi",
+  "runtime_instruction": "Use terminology appropriate to the supplied runtime without naming a diagnosis.",
+  "style": "runtime-native telemetry terminology"
+}

@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"event_pipeline_consumer\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"enterprise observation for event_pipeline_consumer: consumer_health=degraded\", \"timestamp_offset_seconds\": 110, \"value\": {\"consumer_health\": \"degraded\"}}]}",
+  "entry_id": "render_03c_2fa9ba7ed38fac605833",
+  "raw_response_hash": "a15492b7c62c769e9132a4e34f6fae15e0a687b0e15830ec487e024959ce5f77",
+  "usage": {
+    "input_tokens": 169,
+    "output_tokens": 18,
+    "total_tokens": 187
+  }
+}

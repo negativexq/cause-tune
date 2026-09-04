@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for web_cache_db_api: available_replicas=2; desired_replicas=8; traffic_rate=9438.9119\", \"timestamp_offset_seconds\": 2745, \"value\": {\"available_replicas\": 2, \"desired_replicas\": 8, \"traffic_rate\": 9438.9119}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"ops signal for web_cache_db_api: capacity_state=exhausted\", \"timestamp_offset_seconds\": 2142, \"value\": {\"capacity_state\": \"exhausted\"}}]}",
+  "entry_id": "render_03c_cf65bce4f18de783da30",
+  "raw_response_hash": "5c81037ca97b2fc75e9857bdbea34fa86e955c2d1db03b95d689df56bf2b8320",
+  "usage": {
+    "input_tokens": 172,
+    "output_tokens": 41,
+    "total_tokens": 213
+  }
+}

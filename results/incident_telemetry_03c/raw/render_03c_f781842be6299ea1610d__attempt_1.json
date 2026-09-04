@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"event_pipeline_consumer\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"runtime-native signal for event_pipeline_consumer: consumer_health=degraded (java/spring)\", \"timestamp_offset_seconds\": 2006, \"value\": {\"consumer_health\": \"degraded\"}}]}",
+  "entry_id": "render_03c_f781842be6299ea1610d",
+  "raw_response_hash": "e50c5e89218ccbb4f93b9e7bbdb46c9c1d2d755937200cfd4fa629b122d86858",
+  "usage": {
+    "input_tokens": 163,
+    "output_tokens": 19,
+    "total_tokens": 182
+  }
+}

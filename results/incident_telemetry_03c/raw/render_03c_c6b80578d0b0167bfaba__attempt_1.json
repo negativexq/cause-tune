@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"multi_service_orders_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for multi_service_orders_api: memory_limit=4096; working_set=8002 (node/nestjs)\", \"timestamp_offset_seconds\": 1206, \"value\": {\"memory_limit\": 4096, \"working_set\": 8002}}, {\"component_id\": \"multi_service_orders_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"runtime-native signal for multi_service_orders_api: restart_count=4; termination_reason=OOMKilled (node/nestjs)\", \"timestamp_offset_seconds\": 1406, \"value\": {\"restart_count\": 4, \"termination_reason\": \"OOMKilled\"}}, {\"component_id\": \"multi_service_orders_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"runtime-native signal for multi_service_orders_api: latency_effect=elevated (node/nestjs)\", \"timestamp_offset_seconds\": 2782, \"value\": {\"latency_effect\": \"elevated\"}}]}",
+  "entry_id": "render_03c_c6b80578d0b0167bfaba",
+  "raw_response_hash": "27dd54891756891e056f34523c257ac3d5a2eb8b32c9e5a913740cc51dd7cf1e",
+  "usage": {
+    "input_tokens": 193,
+    "output_tokens": 61,
+    "total_tokens": 254
+  }
+}

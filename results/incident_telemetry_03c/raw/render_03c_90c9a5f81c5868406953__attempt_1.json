@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"multi_service_orders_api\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"runtime-native signal for multi_service_orders_api: cpu_state=moderate (node/nestjs)\", \"timestamp_offset_seconds\": 1751, \"value\": {\"cpu_state\": \"moderate\"}}]}",
+  "entry_id": "render_03c_90c9a5f81c5868406953",
+  "raw_response_hash": "2048ecd8ab26b720121905a4f274317f70ab8c78c6ef930500e8a993c000d22b",
+  "usage": {
+    "input_tokens": 166,
+    "output_tokens": 19,
+    "total_tokens": 185
+  }
+}

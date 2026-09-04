@@ -1,0 +1,82 @@
+{
+  "accepted": 144,
+  "by_split": {
+    "ABSTENTION_TEST": 12,
+    "COUNTERFACTUAL_TEST": 6,
+    "GENERATOR_OOD": 12,
+    "HARD_TEST": 15,
+    "ID_TEST": 15,
+    "TEMPLATE_OOD": 12,
+    "TOPOLOGY_OOD": 12,
+    "TRAIN": 36,
+    "VALIDATION": 24
+  },
+  "diversity": {
+    "by_renderer_family": {
+      "concise_ops_v1": {
+        "observation_count": 160,
+        "unique_normalized_messages": 80
+      },
+      "ecosystem_native_v1": {
+        "observation_count": 160,
+        "unique_normalized_messages": 135
+      },
+      "verbose_enterprise_v1": {
+        "observation_count": 160,
+        "unique_normalized_messages": 80
+      }
+    },
+    "exact_duplicate_rate": 0.216667,
+    "interpretation": "Lexical statistics only; semantic diversity and near-duplicate detection are deferred.",
+    "most_repeated_normalized_messages": [
+      {
+        "count": 4,
+        "message": "ops signal for checkout_checkout_api: latency_effect=elevated"
+      },
+      {
+        "count": 4,
+        "message": "enterprise observation for checkout_checkout_api: latency_effect=elevated"
+      },
+      {
+        "count": 4,
+        "message": "ops signal for web_db_postgres: active_connections=<number>; pool_size=<number>; waiting_requests=<number>"
+      },
+      {
+        "count": 4,
+        "message": "ops signal for web_db_postgres: acquisition_timeout_rate=<number>"
+      },
+      {
+        "count": 4,
+        "message": "ops signal for web_db_postgres: database_health=healthy"
+      },
+      {
+        "count": 4,
+        "message": "enterprise observation for web_db_postgres: active_connections=<number>; pool_size=<number>; waiting_requests=<number>"
+      },
+      {
+        "count": 4,
+        "message": "enterprise observation for web_db_postgres: acquisition_timeout_rate=<number>"
+      },
+      {
+        "count": 4,
+        "message": "enterprise observation for web_db_postgres: database_health=healthy"
+      },
+      {
+        "count": 4,
+        "message": "ops signal for web_cache_db_postgres: baseline_query_latency_ms=<number>; database_cpu=<number>; query_latency_ms=<number>"
+      },
+      {
+        "count": 4,
+        "message": "ops signal for web_cache_db_postgres: connection_wait=normal"
+      }
+    ],
+    "normalized_duplicate_rate": 0.385417,
+    "observation_count": 480,
+    "unique_message_count": 376,
+    "unique_normalized_message_count": 295,
+    "vocabulary_size": 208
+  },
+  "pilot_version": "incident-telemetry-03c-pilot-v1",
+  "rejected": 0,
+  "scenario_count": 48
+}

@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_postgres\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for web_cache_db_postgres: baseline_query_latency_ms=82; database_cpu=0.7558705791525983; query_latency_ms=4437.9945\", \"timestamp_offset_seconds\": 2987, \"value\": {\"baseline_query_latency_ms\": 82, \"database_cpu\": 0.7558705791525983, \"query_latency_ms\": 4437.9945}}, {\"component_id\": \"web_cache_db_postgres\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"ops signal for web_cache_db_postgres: connection_wait=normal\", \"timestamp_offset_seconds\": 1128, \"value\": {\"connection_wait\": \"normal\"}}, {\"component_id\": \"web_cache_db_redis\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"ops signal for web_cache_db_redis: distractor_intensity=mild\", \"timestamp_offset_seconds\": 3110, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"web_cache_db_frontend\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"ops signal for web_cache_db_frontend: change_scope=neighbor\", \"timestamp_offset_seconds\": 2039, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_e4959566efcd67139143",
+  "raw_response_hash": "b0a817ac3ffa2c918e6d187a46bb37a24c1fddb4ab4571dcffcd65d72a6441d3",
+  "usage": {
+    "input_tokens": 227,
+    "output_tokens": 75,
+    "total_tokens": 302
+  }
+}

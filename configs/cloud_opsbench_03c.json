@@ -1,0 +1,29 @@
+{
+  "experiment": "03C",
+  "status": "ACTIVE_CORPUS_AUDIT",
+  "source_name": "Cloud-OpsBench",
+  "official_repository_url": "https://github.com/LLM4Ops/Cloud-OpsBench",
+  "upstream_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "license": "MIT",
+  "license_file_sha256": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+  "release_identity": "main@03c415e5709297432282fbbfd499f1bca0f8c347",
+  "root_env_var": "CLOUD_OPSBENCH_ROOT",
+  "adapter_version": "cloud-opsbench-adapter-v1",
+  "documented_counts": {
+    "cases": 754,
+    "fault_types": 57,
+    "systems": {
+      "boutique": 550,
+      "trainticket": 204
+    }
+  },
+  "expected_layout": {
+    "benchmark": "benchmark/<system>/<fault_category>/<case_id>/",
+    "process_labels": "process-label/<system>/<fault_category>/<case_id>/milestone.json",
+    "golden_trajectory": "golden-trajectory/<system>/<fault_category>/<case_id>/{path1,path2}.json"
+  },
+  "context_budget_tokens_for_audit": 8192,
+  "final_split_frozen": false,
+  "rcaeval_in_training": false,
+  "network_required_for_tests": false
+}

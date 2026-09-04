@@ -68,6 +68,34 @@ from .archetypes import ARCHETYPE_BY_ID, ARCHETYPES, validate_archetype_catalog
 from .reference import REFERENCE_SEED, build_reference_corpus, distribution_summary, write_reference_corpus
 from .runtimes import RUNTIME_FAMILIES, build_runtime, validate_runtime_catalog
 from .topologies import TOPOLOGY_FAMILIES, build_topology, validate_topology_catalog
+from .rendering import (
+    RENDERER_FAMILIES,
+    RenderContractError,
+    RenderPlan,
+    RendererFamilySpec,
+    build_render_plan,
+    build_render_prompt,
+    check_label_leakage,
+    render_provider_payload,
+)
+from .providers import (
+    FakeTelemetryProvider,
+    OpenAICompatibleConfig,
+    OpenAICompatibleProvider,
+    ProviderError,
+    ProviderRawResponse,
+    ProviderUsage,
+)
+from .pilot import (
+    DEFAULT_RENDER_SEED,
+    PILOT_VERSION,
+    PilotManifest,
+    PilotManifestEntry,
+    PilotProviderConfig,
+    build_pilot_manifest,
+    pilot_manifest_fingerprint,
+    run_rendering_pilot,
+)
 from .splits import (
     SPLIT_MANIFEST_VERSION,
     SplitAssignment,
@@ -150,4 +178,26 @@ __all__ = [
     "validate_runtime_catalog",
     "validate_topology_catalog",
     "write_reference_corpus",
+    "RENDERER_FAMILIES",
+    "RenderContractError",
+    "RenderPlan",
+    "RendererFamilySpec",
+    "build_render_plan",
+    "build_render_prompt",
+    "check_label_leakage",
+    "render_provider_payload",
+    "FakeTelemetryProvider",
+    "OpenAICompatibleConfig",
+    "OpenAICompatibleProvider",
+    "ProviderError",
+    "ProviderRawResponse",
+    "ProviderUsage",
+    "DEFAULT_RENDER_SEED",
+    "PILOT_VERSION",
+    "PilotManifest",
+    "PilotManifestEntry",
+    "PilotProviderConfig",
+    "build_pilot_manifest",
+    "pilot_manifest_fingerprint",
+    "run_rendering_pilot",
 ]

@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_db_postgres\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for web_db_postgres: active_connections=40; pool_size=40; waiting_requests=160\", \"timestamp_offset_seconds\": 2110, \"value\": {\"active_connections\": 40, \"pool_size\": 40, \"waiting_requests\": 160}}, {\"component_id\": \"web_db_postgres\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"enterprise observation for web_db_postgres: acquisition_timeout_rate=0.7319858883321223\", \"timestamp_offset_seconds\": 3184, \"value\": {\"acquisition_timeout_rate\": 0.7319858883321223}}, {\"component_id\": \"web_db_postgres\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"enterprise observation for web_db_postgres: database_health=healthy\", \"timestamp_offset_seconds\": 1156, \"value\": {\"database_health\": \"healthy\"}}]}",
+  "entry_id": "render_03c_7126d9ccc18d7af80738",
+  "raw_response_hash": "59ca33a69e3347f9a42c8e9188023db21757fba0241c924bd017de8ebb80cfc7",
+  "usage": {
+    "input_tokens": 199,
+    "output_tokens": 58,
+    "total_tokens": 257
+  }
+}

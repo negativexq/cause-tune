@@ -1,0 +1,56 @@
+{
+  "accepted_render_hash": "bb0a32a0324d9fbd92c1ef777b8301fd3e66bfd2c79df08c69f46ec3b2d25d71",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "9d328b583606923a15d631c4ed34018032da53acaa3a41513bf226a12543a85f",
+  "entry_id": "render_03c_abdd1561eff726568267",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "75b2ae330cc873d41c61d312530023779ae3935d4ea6f426082b11faf94dc233",
+  "render_seed": 355,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "9d328b583606923a15d631c4ed34018032da53acaa3a41513bf226a12543a85f",
+    "observations": [
+      {
+        "component_id": "web_cache_db_postgres",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "enterprise observation for web_cache_db_postgres: baseline_query_latency_ms=82; database_cpu=0.7601785879135331; query_latency_ms=4358.531",
+        "timestamp": "2026-01-01T00:53:41Z",
+        "value": {
+          "baseline_query_latency_ms": 82,
+          "database_cpu": 0.7601785879135331,
+          "query_latency_ms": 4358.531
+        }
+      },
+      {
+        "component_id": "web_cache_db_postgres",
+        "evidence_id": "log_001",
+        "kind": "application_log",
+        "text": "enterprise observation for web_cache_db_postgres: connection_wait=normal",
+        "timestamp": "2026-01-01T00:41:45Z",
+        "value": {
+          "connection_wait": "normal"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "bb0a32a0324d9fbd92c1ef777b8301fd3e66bfd2c79df08c69f46ec3b2d25d71",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-verbose-enterprise-v1",
+      "provider": "fake",
+      "seed": 355
+    },
+    "scenario_id": "scenario_03b_422c454ec24e851bbb64",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "verbose_enterprise_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_422c454ec24e851bbb64",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

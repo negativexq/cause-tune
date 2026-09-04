@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for web_cache_db_api: baseline_error_rate=0.004; error_rate=0.1999215428259584\", \"timestamp_offset_seconds\": 3213, \"value\": {\"baseline_error_rate\": 0.004, \"error_rate\": 0.1999215428259584}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"change_001\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"ops signal for web_cache_db_api: feature_flag_state=enabled\", \"timestamp_offset_seconds\": 1996, \"value\": {\"feature_flag_state\": \"enabled\"}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"ops signal for web_cache_db_api: dependency_health=healthy\", \"timestamp_offset_seconds\": 1938, \"value\": {\"dependency_health\": \"healthy\"}}]}",
+  "entry_id": "render_03c_68d5d6db5ca3bf0a9f61",
+  "raw_response_hash": "20059232d7046f54431268cd7619bff63378487837c790a43cee8a5fad3cfda4",
+  "usage": {
+    "input_tokens": 194,
+    "output_tokens": 55,
+    "total_tokens": 249
+  }
+}

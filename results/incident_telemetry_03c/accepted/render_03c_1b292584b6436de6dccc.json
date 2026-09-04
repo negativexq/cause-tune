@@ -1,0 +1,54 @@
+{
+  "accepted_render_hash": "dcef03ae040d7ab93af3409c80df5508f43d53dff2258061f7ec11f7eaaf60dc",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "c68e1e6d90bc7b55eaac60f3a0a76df2e3f40833b8df12477a102dd286630b61",
+  "entry_id": "render_03c_1b292584b6436de6dccc",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "0de6f6541385ccbd5c1d446a2612daa33d9d0d08feb3c5e945c51cc33ef686dc",
+  "render_seed": 1035,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "c68e1e6d90bc7b55eaac60f3a0a76df2e3f40833b8df12477a102dd286630b61",
+    "observations": [
+      {
+        "component_id": "web_cache_db_api",
+        "evidence_id": "change_001",
+        "kind": "change",
+        "text": "enterprise observation for web_cache_db_api: feature_flag_state=enabled",
+        "timestamp": "2026-01-01T00:58:55Z",
+        "value": {
+          "feature_flag_state": "enabled"
+        }
+      },
+      {
+        "component_id": "web_cache_db_api",
+        "evidence_id": "dependency_001",
+        "kind": "dependency_health",
+        "text": "enterprise observation for web_cache_db_api: dependency_health=healthy",
+        "timestamp": "2026-01-01T00:36:10Z",
+        "value": {
+          "dependency_health": "healthy"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "dcef03ae040d7ab93af3409c80df5508f43d53dff2258061f7ec11f7eaaf60dc",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-verbose-enterprise-v1",
+      "provider": "fake",
+      "seed": 1035
+    },
+    "scenario_id": "scenario_03b_31220bcd03c166db7596",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "verbose_enterprise_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_31220bcd03c166db7596",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

@@ -1,0 +1,128 @@
+{
+  "audit_version": "cloud-opsbench-audit-v1",
+  "case_count": 754,
+  "documented_count_comparison": {
+    "native_fault_type_count_match": true,
+    "system_case_counts_match": true,
+    "total_cases_match": true
+  },
+  "documented_upstream": {
+    "fault_type_count": 57,
+    "system_case_counts": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "total_cases": 754
+  },
+  "experiment": "03C",
+  "observed": {
+    "by_fault_category": {
+      "Admission_Fault": 58,
+      "Application_Code_Defect": 98,
+      "Infrastructure_Fault": 40,
+      "Performance_Fault": 76,
+      "Runtime_Fault": 141,
+      "Scheduling_Fault": 164,
+      "Service_Routing_Fault": 91,
+      "Startup_Fault": 86
+    },
+    "by_native_fault_type": {
+      "code_artificial_delay": 6,
+      "code_busy_loop": 16,
+      "code_excessive_file_reads": 16,
+      "code_excessive_file_writes": 13,
+      "code_memory_leak": 4,
+      "code_missing_parameter": 20,
+      "code_wrong_argument_order": 8,
+      "code_wrong_return": 15,
+      "container_memory_limit_too_low": 9,
+      "containerd_unavailable": 10,
+      "cpu_capacity_mismatch": 18,
+      "db_connection_exhaustion": 5,
+      "db_readonly_mode": 10,
+      "deployment_zero_replicas": 17,
+      "gateway_misrouted": 19,
+      "image_registry_dns_failure": 13,
+      "incorrect_image_reference": 28,
+      "kube_proxy_unavailable": 8,
+      "kube_scheduler_unavailable": 11,
+      "kubelet_unavailable": 11,
+      "liveness_probe_incorrect_port": 8,
+      "liveness_probe_incorrect_protocol": 8,
+      "liveness_probe_incorrect_timing": 5,
+      "memory_capacity_mismatch": 18,
+      "missing_image_pull_secret": 18,
+      "missing_secret_binding": 24,
+      "missing_service_account": 11,
+      "mysql_invalid_credentials": 24,
+      "mysql_invalid_port": 22,
+      "namespace_cpu_quota_exceeded": 10,
+      "namespace_memory_quota_exceeded": 11,
+      "namespace_pod_quota_exceeded": 11,
+      "namespace_service_quota_exceeded": 11,
+      "namespace_storage_quota_exceeded": 4,
+      "node_affinity_mismatch": 24,
+      "node_cordon_mismatch": 16,
+      "node_network_delay": 4,
+      "node_network_packet_loss": 4,
+      "node_selector_mismatch": 32,
+      "pod_anti_affinity_conflict": 16,
+      "pod_cpu_overload": 11,
+      "pod_network_delay": 57,
+      "pv_binding_occupied": 4,
+      "pvc_access_mode_mismatch": 3,
+      "pvc_capacity_mismatch": 3,
+      "pvc_selector_mismatch": 3,
+      "pvc_storage_class_mismatch": 3,
+      "readiness_probe_incorrect_port": 7,
+      "readiness_probe_incorrect_protocol": 8,
+      "service_dns_resolution_failure": 18,
+      "service_env_var_address_mismatch": 8,
+      "service_port_mapping_mismatch": 14,
+      "service_protocol_mismatch": 8,
+      "service_selector_mismatch": 24,
+      "service_sidecar_port_conflict": 18,
+      "taint_toleration_mismatch": 24,
+      "volume_mount_permission_denied": 3
+    },
+    "by_system": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "by_upstream_difficulty": {
+      "easy": 391,
+      "hard": 174,
+      "medium": 189
+    },
+    "total_cases": 754
+  },
+  "read_only": true,
+  "scanner_issues": [],
+  "source": {
+    "adapter_version": "cloud-opsbench-adapter-v1",
+    "documented_case_count": 754,
+    "documented_fault_type_count": 57,
+    "documented_system_case_counts": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "expected_layout": "benchmark/<system>/<fault_category>/<case_id>/",
+    "license": "MIT",
+    "license_file_sha256": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+    "official_repository_url": "https://github.com/LLM4Ops/Cloud-OpsBench",
+    "registry_version": "cloud-opsbench-source-v1",
+    "release_identity": "main@03c415e5709297432282fbbfd499f1bca0f8c347",
+    "source_name": "Cloud-OpsBench",
+    "systems": [
+      "boutique",
+      "trainticket"
+    ],
+    "upstream_revision": "03c415e5709297432282fbbfd499f1bca0f8c347"
+  },
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "taxonomy_integrity": {
+    "category_mismatches": [],
+    "unknown_observed_fault_types": []
+  }
+}

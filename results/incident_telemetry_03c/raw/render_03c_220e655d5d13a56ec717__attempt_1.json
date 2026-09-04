@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_db_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for web_db_api: desired_replicas=4; ready_replicas=0\", \"timestamp_offset_seconds\": 1587, \"value\": {\"desired_replicas\": 4, \"ready_replicas\": 0}}, {\"component_id\": \"web_db_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"ops signal for web_db_api: container_state=running; probe_failure_rate=0.9698872334081786\", \"timestamp_offset_seconds\": 1648, \"value\": {\"container_state\": \"running\", \"probe_failure_rate\": 0.9698872334081786}}, {\"component_id\": \"web_db_frontend\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"ops signal for web_db_frontend: distractor_intensity=mild\", \"timestamp_offset_seconds\": 958, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"web_db_postgres\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"ops signal for web_db_postgres: change_scope=neighbor\", \"timestamp_offset_seconds\": 2667, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_220e655d5d13a56ec717",
+  "raw_response_hash": "b6d84bad25f9797ed75cce21c0b270645bfb657c88c674780c85ae96e4bdbad6",
+  "usage": {
+    "input_tokens": 227,
+    "output_tokens": 75,
+    "total_tokens": 302
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"multi_service_payment_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for multi_service_payment_api: lookup_latency_ms=2414.6066; normal_lookup_latency_ms=3 (node/nestjs)\", \"timestamp_offset_seconds\": 3371, \"value\": {\"lookup_latency_ms\": 2414.6066, \"normal_lookup_latency_ms\": 3}}, {\"component_id\": \"multi_service_payment_api\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"runtime-native signal for multi_service_payment_api: negative_answer_rate=0.8405206978995841 (node/nestjs)\", \"timestamp_offset_seconds\": 774, \"value\": {\"negative_answer_rate\": 0.8405206978995841}}, {\"component_id\": \"multi_service_payment_api\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"runtime-native signal for multi_service_payment_api: existing_connections=healthy (node/nestjs)\", \"timestamp_offset_seconds\": 176, \"value\": {\"existing_connections\": \"healthy\"}}]}",
+  "entry_id": "render_03c_1c45c5e9da49034fa07a",
+  "raw_response_hash": "252e315040ee1fbb1bba2c6619d967704b8fa35978bf74821dab3302e3bb95e6",
+  "usage": {
+    "input_tokens": 187,
+    "output_tokens": 58,
+    "total_tokens": 245
+  }
+}

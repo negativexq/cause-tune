@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for checkout_checkout_api: blocked_requests=102; busy_threads=64; thread_limit=64\", \"timestamp_offset_seconds\": 3028, \"value\": {\"blocked_requests\": 102, \"busy_threads\": 64, \"thread_limit\": 64}}, {\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"ops signal for checkout_checkout_api: cpu_state=moderate\", \"timestamp_offset_seconds\": 1208, \"value\": {\"cpu_state\": \"moderate\"}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"ops signal for checkout_redis: distractor_intensity=mild\", \"timestamp_offset_seconds\": 1496, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"checkout_postgres\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"ops signal for checkout_postgres: change_scope=neighbor\", \"timestamp_offset_seconds\": 3067, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_ad0fa7a08c3d654a22ff",
+  "raw_response_hash": "022a800eda0c6413b5ac3cb4eff2cf04b313d316cb8aa3b6d70ab72941c950ae",
+  "usage": {
+    "input_tokens": 224,
+    "output_tokens": 75,
+    "total_tokens": 299
+  }
+}

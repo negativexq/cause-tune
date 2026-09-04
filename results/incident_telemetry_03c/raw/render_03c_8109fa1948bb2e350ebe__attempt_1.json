@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_db_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for web_db_api: cpu_limit=2.0; demand=3.7861; throttle_ratio=0.6381512057308105\", \"timestamp_offset_seconds\": 2607, \"value\": {\"cpu_limit\": 2.0, \"demand\": 3.7861, \"throttle_ratio\": 0.6381512057308105}}, {\"component_id\": \"web_db_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"ops signal for web_db_api: latency_effect=elevated\", \"timestamp_offset_seconds\": 36, \"value\": {\"latency_effect\": \"elevated\"}}, {\"component_id\": \"web_db_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"ops signal for web_db_api: throttle_ratio=0.6381512057308105\", \"timestamp_offset_seconds\": 2463, \"value\": {\"throttle_ratio\": 0.6381512057308105}}]}",
+  "entry_id": "render_03c_8109fa1948bb2e350ebe",
+  "raw_response_hash": "0a4b047dfe66e4cf7eef2aee162c7127a242b0d9f8e8a5bdc85e0af984502fd1",
+  "usage": {
+    "input_tokens": 200,
+    "output_tokens": 58,
+    "total_tokens": 258
+  }
+}

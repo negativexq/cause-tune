@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for web_cache_db_api: baseline_error_rate=0.004; error_rate=0.1861775927584729 (node/nestjs)\", \"timestamp_offset_seconds\": 916, \"value\": {\"baseline_error_rate\": 0.004, \"error_rate\": 0.1861775927584729}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"change_001\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"runtime-native signal for web_cache_db_api: feature_flag_state=enabled (node/nestjs)\", \"timestamp_offset_seconds\": 1321, \"value\": {\"feature_flag_state\": \"enabled\"}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"runtime-native signal for web_cache_db_api: dependency_health=healthy (node/nestjs)\", \"timestamp_offset_seconds\": 633, \"value\": {\"dependency_health\": \"healthy\"}}]}",
+  "entry_id": "render_03c_7a22fac5426d6b8528e0",
+  "raw_response_hash": "ae2a03180ec0f10041b81c8f9fe792486d5d3d06e5fc9d3997fb60da7a46bcf3",
+  "usage": {
+    "input_tokens": 187,
+    "output_tokens": 58,
+    "total_tokens": 245
+  }
+}

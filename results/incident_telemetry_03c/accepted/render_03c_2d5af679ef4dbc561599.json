@@ -1,0 +1,86 @@
+{
+  "accepted_render_hash": "6671deebfc414a532e82d4d03d3ec421cd22d3dea8a062146c3a3171b4de1526",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "0ae1ab6c8e40015b8b4ec3315c34aa9d88caa9220b4ccb92cbdb84193254351d",
+  "entry_id": "render_03c_2d5af679ef4dbc561599",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "900636b767e63a45f2cc1a8d4a45929bb99a0408b469376398293a96e9a97230",
+  "render_seed": 915,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "0ae1ab6c8e40015b8b4ec3315c34aa9d88caa9220b4ccb92cbdb84193254351d",
+    "observations": [
+      {
+        "component_id": "async_worker_api",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "ops signal for async_worker_api: memory_limit=4096; working_set=7559",
+        "timestamp": "2026-01-01T00:45:41Z",
+        "value": {
+          "memory_limit": 4096,
+          "working_set": 7559
+        }
+      },
+      {
+        "component_id": "async_worker_api",
+        "evidence_id": "event_001",
+        "kind": "runtime_event",
+        "text": "ops signal for async_worker_api: restart_count=4; termination_reason=OOMKilled",
+        "timestamp": "2026-01-01T00:01:52Z",
+        "value": {
+          "restart_count": 4,
+          "termination_reason": "OOMKilled"
+        }
+      },
+      {
+        "component_id": "async_worker_api",
+        "evidence_id": "alert_001",
+        "kind": "alert",
+        "text": "ops signal for async_worker_api: latency_effect=elevated",
+        "timestamp": "2026-01-01T00:58:06Z",
+        "value": {
+          "latency_effect": "elevated"
+        }
+      },
+      {
+        "component_id": "async_worker_worker",
+        "evidence_id": "metric_101",
+        "kind": "metric",
+        "text": "ops signal for async_worker_worker: distractor_intensity=mild",
+        "timestamp": "2026-01-01T00:46:03Z",
+        "value": {
+          "distractor_intensity": "mild"
+        }
+      },
+      {
+        "component_id": "async_worker_broker",
+        "evidence_id": "change_101",
+        "kind": "change",
+        "text": "ops signal for async_worker_broker: change_scope=neighbor",
+        "timestamp": "2026-01-01T00:55:29Z",
+        "value": {
+          "change_scope": "neighbor"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "6671deebfc414a532e82d4d03d3ec421cd22d3dea8a062146c3a3171b4de1526",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-concise-ops-v1",
+      "provider": "fake",
+      "seed": 915
+    },
+    "scenario_id": "scenario_03b_8e49c8dbf9a7c6e5780b",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "concise_ops_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_8e49c8dbf9a7c6e5780b",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

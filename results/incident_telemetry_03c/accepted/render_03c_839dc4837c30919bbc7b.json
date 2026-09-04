@@ -1,0 +1,66 @@
+{
+  "accepted_render_hash": "11b9e040c2c616c052f53d7ca356f6e13aca694aad161b07e57facecdb4ec9fc",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "b39ffe52e91c5f49400dcde1cd50858d347e7b675535312d68b31c32eaa7d65e",
+  "entry_id": "render_03c_839dc4837c30919bbc7b",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "2325ab63952caac72fbc2c6122a7219aa02de0f89980330924a4c8ceffb2eab8",
+  "render_seed": 526,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "b39ffe52e91c5f49400dcde1cd50858d347e7b675535312d68b31c32eaa7d65e",
+    "observations": [
+      {
+        "component_id": "web_db_api",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "runtime-native signal for web_db_api: cpu_limit=2.0; demand=3.7861; throttle_ratio=0.6381512057308105 (node/nestjs)",
+        "timestamp": "2026-01-01T00:47:35Z",
+        "value": {
+          "cpu_limit": 2.0,
+          "demand": 3.7861,
+          "throttle_ratio": 0.6381512057308105
+        }
+      },
+      {
+        "component_id": "web_db_api",
+        "evidence_id": "alert_001",
+        "kind": "alert",
+        "text": "runtime-native signal for web_db_api: latency_effect=elevated (node/nestjs)",
+        "timestamp": "2026-01-01T00:10:21Z",
+        "value": {
+          "latency_effect": "elevated"
+        }
+      },
+      {
+        "component_id": "web_db_api",
+        "evidence_id": "event_001",
+        "kind": "runtime_event",
+        "text": "runtime-native signal for web_db_api: throttle_ratio=0.6381512057308105 (node/nestjs)",
+        "timestamp": "2026-01-01T00:56:52Z",
+        "value": {
+          "throttle_ratio": 0.6381512057308105
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "11b9e040c2c616c052f53d7ca356f6e13aca694aad161b07e57facecdb4ec9fc",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-ecosystem-native-v1",
+      "provider": "fake",
+      "seed": 526
+    },
+    "scenario_id": "scenario_03b_1de114378450e76e467c",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "ecosystem_native_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_1de114378450e76e467c",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

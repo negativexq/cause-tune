@@ -1,0 +1,65 @@
+{
+  "accepted_render_hash": "ea0938a421ed43d0ab36409c29db2618ef9814cac060eb629f6c33306886da0d",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "dca31f5ec31d4981767e275d97f93fce848846eb2a5875fc6582b170aec3c6b4",
+  "entry_id": "render_03c_d3aa4dc9ea896da56bdd",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "ea10f340e4897e2c5d9ecbd7489773faa35e4ca21ff180ff5375d73256db790e",
+  "render_seed": 371,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "dca31f5ec31d4981767e275d97f93fce848846eb2a5875fc6582b170aec3c6b4",
+    "observations": [
+      {
+        "component_id": "checkout_payment_api",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "ops signal for checkout_payment_api: client_deadline_ms=2000; dependency_latency_ms=6799.4095",
+        "timestamp": "2026-01-01T00:01:14Z",
+        "value": {
+          "client_deadline_ms": 2000,
+          "dependency_latency_ms": 6799.4095
+        }
+      },
+      {
+        "component_id": "checkout_payment_api",
+        "evidence_id": "alert_001",
+        "kind": "alert",
+        "text": "ops signal for checkout_payment_api: dependency_health=degraded",
+        "timestamp": "2026-01-01T00:35:45Z",
+        "value": {
+          "dependency_health": "degraded"
+        }
+      },
+      {
+        "component_id": "checkout_payment_api",
+        "evidence_id": "dependency_001",
+        "kind": "dependency_health",
+        "text": "ops signal for checkout_payment_api: local_queue_state=healthy",
+        "timestamp": "2026-01-01T00:00:22Z",
+        "value": {
+          "local_queue_state": "healthy"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "ea0938a421ed43d0ab36409c29db2618ef9814cac060eb629f6c33306886da0d",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-concise-ops-v1",
+      "provider": "fake",
+      "seed": 371
+    },
+    "scenario_id": "scenario_03b_f936b8d7c4852e412c53",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "concise_ops_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_f936b8d7c4852e412c53",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for checkout_payment_api: client_deadline_ms=2000; dependency_latency_ms=6734.0376\", \"timestamp_offset_seconds\": 140, \"value\": {\"client_deadline_ms\": 2000, \"dependency_latency_ms\": 6734.0376}}, {\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"ops signal for checkout_payment_api: dependency_health=degraded\", \"timestamp_offset_seconds\": 574, \"value\": {\"dependency_health\": \"degraded\"}}, {\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"ops signal for checkout_payment_api: local_queue_state=healthy\", \"timestamp_offset_seconds\": 1463, \"value\": {\"local_queue_state\": \"healthy\"}}, {\"component_id\": \"checkout_frontend\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"ops signal for checkout_frontend: distractor_intensity=mild\", \"timestamp_offset_seconds\": 3508, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"checkout_postgres\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"ops signal for checkout_postgres: change_scope=neighbor\", \"timestamp_offset_seconds\": 702, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_7fe6c447875f09151ccd",
+  "raw_response_hash": "43b2f8a5786950efe310a703c9e64f241acf1e4f6ec250968f6a84e5cef04ae0",
+  "usage": {
+    "input_tokens": 247,
+    "output_tokens": 89,
+    "total_tokens": 336
+  }
+}

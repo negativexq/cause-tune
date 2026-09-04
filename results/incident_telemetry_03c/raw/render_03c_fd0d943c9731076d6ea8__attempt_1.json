@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"multi_service_orders_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for multi_service_orders_api: memory_limit=4096; working_set=8002\", \"timestamp_offset_seconds\": 1643, \"value\": {\"memory_limit\": 4096, \"working_set\": 8002}}, {\"component_id\": \"multi_service_orders_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"enterprise observation for multi_service_orders_api: restart_count=4; termination_reason=OOMKilled\", \"timestamp_offset_seconds\": 419, \"value\": {\"restart_count\": 4, \"termination_reason\": \"OOMKilled\"}}, {\"component_id\": \"multi_service_orders_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"enterprise observation for multi_service_orders_api: latency_effect=elevated\", \"timestamp_offset_seconds\": 920, \"value\": {\"latency_effect\": \"elevated\"}}]}",
+  "entry_id": "render_03c_fd0d943c9731076d6ea8",
+  "raw_response_hash": "4dbad663e38dc8fc3f5d69c6ea97006082872ee52ca5ac6a30f5900a5ffe6755",
+  "usage": {
+    "input_tokens": 199,
+    "output_tokens": 58,
+    "total_tokens": 257
+  }
+}

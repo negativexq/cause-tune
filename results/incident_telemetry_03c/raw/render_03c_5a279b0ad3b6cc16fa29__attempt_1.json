@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_db_postgres\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for web_db_postgres: active_connections=40; pool_size=40; waiting_requests=193\", \"timestamp_offset_seconds\": 1526, \"value\": {\"active_connections\": 40, \"pool_size\": 40, \"waiting_requests\": 193}}, {\"component_id\": \"web_db_postgres\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"ops signal for web_db_postgres: acquisition_timeout_rate=0.6982158194604787\", \"timestamp_offset_seconds\": 3168, \"value\": {\"acquisition_timeout_rate\": 0.6982158194604787}}, {\"component_id\": \"web_db_postgres\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"ops signal for web_db_postgres: database_health=healthy\", \"timestamp_offset_seconds\": 2525, \"value\": {\"database_health\": \"healthy\"}}, {\"component_id\": \"web_db_api\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"ops signal for web_db_api: distractor_intensity=mild\", \"timestamp_offset_seconds\": 1481, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"web_db_api\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"ops signal for web_db_api: change_scope=neighbor\", \"timestamp_offset_seconds\": 2966, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_5a279b0ad3b6cc16fa29",
+  "raw_response_hash": "faf112cb95c0ef8d598c0a3f985dcf8b435b03cc4f70fef13612b7d7e9177abe",
+  "usage": {
+    "input_tokens": 254,
+    "output_tokens": 92,
+    "total_tokens": 346
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "audit_version": "cloud-opsbench-audit-v1",
+  "case_count": 754,
+  "concrete_examples": {
+    "case_id_path_component": "31",
+    "category_path": "benchmark/boutique/infrastructure/31/",
+    "golden_final_answer": "golden-trajectory/boutique/infrastructure/31/path1.json (audited object contains diagnostic_trace, no explicit final answer field)",
+    "process_label": "process-label/boutique/infrastructure/31/milestone.json",
+    "query_values": {
+      "Partial Service Unreachability.": 290,
+      "Service Availability Disruption.": 301,
+      "Service Performance Degradation.": 51,
+      "Service abnormal restart.": 36,
+      "Service latency increased significantly": 18,
+      "Service quality degradation.": 58
+    },
+    "target_metadata": "benchmark/boutique/infrastructure/31/metadata.json::result.root_cause"
+  },
+  "experiment": "03C",
+  "explicit_target_fields": {
+    "metadata.result.fault_object": 754,
+    "metadata.result.fault_taxonomy": 754,
+    "metadata.result.root_cause": 754
+  },
+  "input_boundary": {
+    "benchmark/process-label/golden-trajectory paths": "PROVENANCE_ONLY or SUPERVISION_ONLY",
+    "metadata.result.*": "SUPERVISION_ONLY",
+    "raw_data": "MODEL_VISIBLE_SAFE subject to path/label stripping",
+    "tool_cache": "MODEL_VISIBLE_WITH_TRANSFORM"
+  },
+  "legitimate_observable_surfaces": [
+    "raw_data/alert.json",
+    "raw_data/logs.json",
+    "raw_data/k8s_states.json",
+    "raw_data/metrics.csv when present"
+  ],
+  "note": "This is a field/path leakage audit, not a semantic claim that every observable signal is safe for every future task.",
+  "source": {
+    "adapter_version": "cloud-opsbench-adapter-v1",
+    "documented_case_count": 754,
+    "documented_fault_type_count": 57,
+    "documented_system_case_counts": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "expected_layout": "benchmark/<system>/<fault_category>/<case_id>/",
+    "license": "MIT",
+    "license_file_sha256": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+    "official_repository_url": "https://github.com/LLM4Ops/Cloud-OpsBench",
+    "registry_version": "cloud-opsbench-source-v1",
+    "release_identity": "main@03c415e5709297432282fbbfd499f1bca0f8c347",
+    "source_name": "Cloud-OpsBench",
+    "systems": [
+      "boutique",
+      "trainticket"
+    ],
+    "upstream_revision": "03c415e5709297432282fbbfd499f1bca0f8c347"
+  },
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "tool_cache_key_prefix_counts": {
+    "CheckNodeServiceStatus": 9802,
+    "CheckServiceConnectivity": 15211,
+    "CheckServiceConnectivity-boutique-redis-cart-6379": 19,
+    "DescribeResource": 111218,
+    "GetAlerts": 754,
+    "GetAppYAML": 14414,
+    "GetClusterConfiguration": 754,
+    "GetErrorLogs": 15230,
+    "GetResources": 428429,
+    "GetServiceDependencies": 14414,
+    "ListCodeFiles": 5500,
+    "collection_timestamp": 754
+  }
+}

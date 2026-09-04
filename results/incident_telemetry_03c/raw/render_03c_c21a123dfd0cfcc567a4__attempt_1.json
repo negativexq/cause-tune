@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_db_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for web_db_api: desired_replicas=4; ready_replicas=0 (java/spring)\", \"timestamp_offset_seconds\": 557, \"value\": {\"desired_replicas\": 4, \"ready_replicas\": 0}}, {\"component_id\": \"web_db_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"runtime-native signal for web_db_api: container_state=running; probe_failure_rate=0.965363054619611 (java/spring)\", \"timestamp_offset_seconds\": 2250, \"value\": {\"container_state\": \"running\", \"probe_failure_rate\": 0.965363054619611}}]}",
+  "entry_id": "render_03c_c21a123dfd0cfcc567a4",
+  "raw_response_hash": "47b7efb599d5176c259a117a3437fdf8e4d1409599b1c25c3cc5dd979b8ed27e",
+  "usage": {
+    "input_tokens": 163,
+    "output_tokens": 43,
+    "total_tokens": 206
+  }
+}

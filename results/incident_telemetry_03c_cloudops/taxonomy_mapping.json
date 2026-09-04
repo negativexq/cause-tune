@@ -1,0 +1,569 @@
+{
+  "audit_version": "cloud-opsbench-audit-v1",
+  "authority": "native Cloud-OpsBench labels remain authoritative; normalized IDs are optional audit metadata",
+  "case_count": 754,
+  "experiment": "03C",
+  "mapping": [
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Admission_Fault",
+      "native_fault_type": "missing_service_account",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 11,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Admission_Fault",
+      "native_fault_type": "namespace_cpu_quota_exceeded",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 10,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Admission_Fault",
+      "native_fault_type": "namespace_memory_quota_exceeded",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 11,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Admission_Fault",
+      "native_fault_type": "namespace_pod_quota_exceeded",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 11,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Admission_Fault",
+      "native_fault_type": "namespace_service_quota_exceeded",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 11,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Admission_Fault",
+      "native_fault_type": "namespace_storage_quota_exceeded",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 4,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Application_Code_Defect",
+      "native_fault_type": "code_artificial_delay",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 6,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Application_Code_Defect",
+      "native_fault_type": "code_busy_loop",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 16,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Application_Code_Defect",
+      "native_fault_type": "code_excessive_file_reads",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 16,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Application_Code_Defect",
+      "native_fault_type": "code_excessive_file_writes",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 13,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "COMPATIBLE_ALIAS",
+      "native_fault_category": "Application_Code_Defect",
+      "native_fault_type": "code_memory_leak",
+      "normalized_causetune_fault_id": "memory_leak",
+      "observed_case_count": 4,
+      "rationale": "native code memory leak matches the frozen resource ID"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Application_Code_Defect",
+      "native_fault_type": "code_missing_parameter",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 20,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Application_Code_Defect",
+      "native_fault_type": "code_wrong_argument_order",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 8,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Application_Code_Defect",
+      "native_fault_type": "code_wrong_return",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 15,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Infrastructure_Fault",
+      "native_fault_type": "containerd_unavailable",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 10,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Infrastructure_Fault",
+      "native_fault_type": "kube_proxy_unavailable",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 8,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Infrastructure_Fault",
+      "native_fault_type": "kube_scheduler_unavailable",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 11,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Infrastructure_Fault",
+      "native_fault_type": "kubelet_unavailable",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 11,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Performance_Fault",
+      "native_fault_type": "node_network_delay",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 4,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Performance_Fault",
+      "native_fault_type": "node_network_packet_loss",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 4,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "PARTIAL_SEMANTIC_OVERLAP",
+      "native_fault_category": "Performance_Fault",
+      "native_fault_type": "pod_cpu_overload",
+      "normalized_causetune_fault_id": "cpu_throttling",
+      "observed_case_count": 11,
+      "rationale": "overload can cause throttling but is not identical to the frozen mechanism"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Performance_Fault",
+      "native_fault_type": "pod_network_delay",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 57,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "SOURCE_MORE_SPECIFIC",
+      "native_fault_category": "Runtime_Fault",
+      "native_fault_type": "container_memory_limit_too_low",
+      "normalized_causetune_fault_id": "container_memory_exhaustion",
+      "observed_case_count": 9,
+      "rationale": "native memory-limit fault is narrower than the frozen resource ID"
+    },
+    {
+      "classification": "COMPATIBLE_ALIAS",
+      "native_fault_category": "Runtime_Fault",
+      "native_fault_type": "db_connection_exhaustion",
+      "normalized_causetune_fault_id": "db_connection_pool_exhaustion",
+      "observed_case_count": 5,
+      "rationale": "native connection exhaustion matches the frozen pool fault"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Runtime_Fault",
+      "native_fault_type": "db_readonly_mode",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 10,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "COMPATIBLE_ALIAS",
+      "native_fault_category": "Runtime_Fault",
+      "native_fault_type": "deployment_zero_replicas",
+      "normalized_causetune_fault_id": "insufficient_replicas",
+      "observed_case_count": 17,
+      "rationale": "zero replicas is a concrete insufficient-capacity condition"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Runtime_Fault",
+      "native_fault_type": "liveness_probe_incorrect_port",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 8,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Runtime_Fault",
+      "native_fault_type": "liveness_probe_incorrect_protocol",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 8,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Runtime_Fault",
+      "native_fault_type": "liveness_probe_incorrect_timing",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 5,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Runtime_Fault",
+      "native_fault_type": "mysql_invalid_credentials",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 24,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Runtime_Fault",
+      "native_fault_type": "mysql_invalid_port",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 22,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "SOURCE_MORE_SPECIFIC",
+      "native_fault_category": "Runtime_Fault",
+      "native_fault_type": "readiness_probe_incorrect_port",
+      "normalized_causetune_fault_id": "readiness_probe_failure",
+      "observed_case_count": 7,
+      "rationale": "probe port is a specific readiness failure"
+    },
+    {
+      "classification": "SOURCE_MORE_SPECIFIC",
+      "native_fault_category": "Runtime_Fault",
+      "native_fault_type": "readiness_probe_incorrect_protocol",
+      "normalized_causetune_fault_id": "readiness_probe_failure",
+      "observed_case_count": 8,
+      "rationale": "probe protocol is a specific readiness failure"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Runtime_Fault",
+      "native_fault_type": "service_sidecar_port_conflict",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 18,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Scheduling_Fault",
+      "native_fault_type": "cpu_capacity_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 18,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Scheduling_Fault",
+      "native_fault_type": "memory_capacity_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 18,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Scheduling_Fault",
+      "native_fault_type": "node_affinity_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 24,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Scheduling_Fault",
+      "native_fault_type": "node_cordon_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 16,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Scheduling_Fault",
+      "native_fault_type": "node_selector_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 32,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Scheduling_Fault",
+      "native_fault_type": "pod_anti_affinity_conflict",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 16,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Scheduling_Fault",
+      "native_fault_type": "pv_binding_occupied",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 4,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Scheduling_Fault",
+      "native_fault_type": "pvc_access_mode_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 3,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Scheduling_Fault",
+      "native_fault_type": "pvc_capacity_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 3,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Scheduling_Fault",
+      "native_fault_type": "pvc_selector_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 3,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Scheduling_Fault",
+      "native_fault_type": "pvc_storage_class_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 3,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Scheduling_Fault",
+      "native_fault_type": "taint_toleration_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 24,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Service_Routing_Fault",
+      "native_fault_type": "gateway_misrouted",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 19,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "COMPATIBLE_ALIAS",
+      "native_fault_category": "Service_Routing_Fault",
+      "native_fault_type": "service_dns_resolution_failure",
+      "normalized_causetune_fault_id": "dns_resolution_failure",
+      "observed_case_count": 18,
+      "rationale": "native service DNS fault matches the frozen network ID"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Service_Routing_Fault",
+      "native_fault_type": "service_env_var_address_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 8,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Service_Routing_Fault",
+      "native_fault_type": "service_port_mapping_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 14,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Service_Routing_Fault",
+      "native_fault_type": "service_protocol_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 8,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Service_Routing_Fault",
+      "native_fault_type": "service_selector_mismatch",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 24,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "PARTIAL_SEMANTIC_OVERLAP",
+      "native_fault_category": "Startup_Fault",
+      "native_fault_type": "image_registry_dns_failure",
+      "normalized_causetune_fault_id": "dns_resolution_failure",
+      "observed_case_count": 13,
+      "rationale": "registry-specific DNS failure is narrower than generic DNS failure"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Startup_Fault",
+      "native_fault_type": "incorrect_image_reference",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 28,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Startup_Fault",
+      "native_fault_type": "missing_image_pull_secret",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 18,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Startup_Fault",
+      "native_fault_type": "missing_secret_binding",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 24,
+      "rationale": "no conservative V1 mapping approved"
+    },
+    {
+      "classification": "UNMAPPED",
+      "native_fault_category": "Startup_Fault",
+      "native_fault_type": "volume_mount_permission_denied",
+      "normalized_causetune_fault_id": null,
+      "observed_case_count": 3,
+      "rationale": "no conservative V1 mapping approved"
+    }
+  ],
+  "mapping_classification_counts": {
+    "COMPATIBLE_ALIAS": 4,
+    "PARTIAL_SEMANTIC_OVERLAP": 2,
+    "SOURCE_MORE_SPECIFIC": 3,
+    "UNMAPPED": 48
+  },
+  "native_fault_type_count": 57,
+  "native_taxonomy": {
+    "Admission_Fault": [
+      "namespace_cpu_quota_exceeded",
+      "namespace_memory_quota_exceeded",
+      "namespace_pod_quota_exceeded",
+      "namespace_service_quota_exceeded",
+      "namespace_storage_quota_exceeded",
+      "missing_service_account"
+    ],
+    "Application_Code_Defect": [
+      "code_missing_parameter",
+      "code_busy_loop",
+      "code_excessive_file_reads",
+      "code_wrong_return",
+      "code_excessive_file_writes",
+      "code_wrong_argument_order",
+      "code_artificial_delay",
+      "code_memory_leak"
+    ],
+    "Infrastructure_Fault": [
+      "containerd_unavailable",
+      "kubelet_unavailable",
+      "kube_proxy_unavailable",
+      "kube_scheduler_unavailable"
+    ],
+    "Performance_Fault": [
+      "pod_cpu_overload",
+      "pod_network_delay",
+      "node_network_delay",
+      "node_network_packet_loss"
+    ],
+    "Runtime_Fault": [
+      "container_memory_limit_too_low",
+      "liveness_probe_incorrect_protocol",
+      "liveness_probe_incorrect_port",
+      "liveness_probe_incorrect_timing",
+      "readiness_probe_incorrect_protocol",
+      "readiness_probe_incorrect_port",
+      "service_sidecar_port_conflict",
+      "mysql_invalid_credentials",
+      "mysql_invalid_port",
+      "db_readonly_mode",
+      "db_connection_exhaustion",
+      "deployment_zero_replicas"
+    ],
+    "Scheduling_Fault": [
+      "node_cordon_mismatch",
+      "node_affinity_mismatch",
+      "node_selector_mismatch",
+      "pod_anti_affinity_conflict",
+      "taint_toleration_mismatch",
+      "cpu_capacity_mismatch",
+      "memory_capacity_mismatch",
+      "pv_binding_occupied",
+      "pvc_selector_mismatch",
+      "pvc_storage_class_mismatch",
+      "pvc_capacity_mismatch",
+      "pvc_access_mode_mismatch"
+    ],
+    "Service_Routing_Fault": [
+      "service_selector_mismatch",
+      "service_port_mapping_mismatch",
+      "service_protocol_mismatch",
+      "service_env_var_address_mismatch",
+      "gateway_misrouted",
+      "service_dns_resolution_failure"
+    ],
+    "Startup_Fault": [
+      "volume_mount_permission_denied",
+      "missing_secret_binding",
+      "incorrect_image_reference",
+      "image_registry_dns_failure",
+      "missing_image_pull_secret"
+    ]
+  },
+  "observed_fault_type_count": 57,
+  "source": {
+    "adapter_version": "cloud-opsbench-adapter-v1",
+    "documented_case_count": 754,
+    "documented_fault_type_count": 57,
+    "documented_system_case_counts": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "expected_layout": "benchmark/<system>/<fault_category>/<case_id>/",
+    "license": "MIT",
+    "license_file_sha256": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+    "official_repository_url": "https://github.com/LLM4Ops/Cloud-OpsBench",
+    "registry_version": "cloud-opsbench-source-v1",
+    "release_identity": "main@03c415e5709297432282fbbfd499f1bca0f8c347",
+    "source_name": "Cloud-OpsBench",
+    "systems": [
+      "boutique",
+      "trainticket"
+    ],
+    "upstream_revision": "03c415e5709297432282fbbfd499f1bca0f8c347"
+  },
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench"
+}

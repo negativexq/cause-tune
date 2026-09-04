@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"async_worker_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for async_worker_api: blocked_requests=105; busy_threads=64; thread_limit=64\", \"timestamp_offset_seconds\": 1614, \"value\": {\"blocked_requests\": 105, \"busy_threads\": 64, \"thread_limit\": 64}}, {\"component_id\": \"async_worker_api\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"enterprise observation for async_worker_api: cpu_state=moderate\", \"timestamp_offset_seconds\": 2769, \"value\": {\"cpu_state\": \"moderate\"}}]}",
+  "entry_id": "render_03c_e50494400230641b6d47",
+  "raw_response_hash": "f6f5a1610cf67cfb8380feffdc5d9dea9afb7c270d6d87b44c98a0c6b3e0308c",
+  "usage": {
+    "input_tokens": 171,
+    "output_tokens": 41,
+    "total_tokens": 212
+  }
+}

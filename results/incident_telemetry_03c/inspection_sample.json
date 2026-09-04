@@ -1,0 +1,1480 @@
+{
+  "ground_truth_included": false,
+  "pilot_version": "incident-telemetry-03c-pilot-v1",
+  "samples": [
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_16aedc2fdb5f50cfec2f",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "7cdb09a1a6a1c18dc8c6d97a87bd0a6a54d2ab4f474d14beadfc1d412d4a6576",
+        "observations": [
+          {
+            "component_id": "checkout_checkout_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "ops signal for checkout_checkout_api: memory_limit=4096; working_set=8070",
+            "timestamp": "2026-01-01T00:17:02Z",
+            "value": {
+              "memory_limit": 4096,
+              "working_set": 8070
+            }
+          },
+          {
+            "component_id": "checkout_checkout_api",
+            "evidence_id": "event_001",
+            "kind": "runtime_event",
+            "text": "ops signal for checkout_checkout_api: restart_count=5; termination_reason=OOMKilled",
+            "timestamp": "2026-01-01T00:17:08Z",
+            "value": {
+              "restart_count": 5,
+              "termination_reason": "OOMKilled"
+            }
+          },
+          {
+            "component_id": "checkout_checkout_api",
+            "evidence_id": "alert_001",
+            "kind": "alert",
+            "text": "ops signal for checkout_checkout_api: latency_effect=elevated",
+            "timestamp": "2026-01-01T00:25:04Z",
+            "value": {
+              "latency_effect": "elevated"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "715eb1f70c31dfd529ceb7436ba8c5b4a76df82c78d3d254c03a9abe843d303e",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-concise-ops-v1",
+          "provider": "fake",
+          "seed": 303
+        },
+        "scenario_id": "scenario_03b_bad45e2638fb3f07e15d",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "concise_ops_v1",
+      "runtime": {
+        "ecosystem": "java",
+        "runtime_id": "java_spring",
+        "version": "spring"
+      },
+      "scenario_id": "scenario_03b_bad45e2638fb3f07e15d",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "checkout_checkout_api"
+        },
+        {
+          "evidence_id": "event_001",
+          "kind": "runtime_event",
+          "role": "CAUSAL",
+          "source_component": "checkout_checkout_api"
+        },
+        {
+          "evidence_id": "alert_001",
+          "kind": "alert",
+          "role": "SUPPORTING",
+          "source_component": "checkout_checkout_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_7413c4e48ffa8c9db9ac",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "7cdb09a1a6a1c18dc8c6d97a87bd0a6a54d2ab4f474d14beadfc1d412d4a6576",
+        "observations": [
+          {
+            "component_id": "checkout_checkout_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "enterprise observation for checkout_checkout_api: memory_limit=4096; working_set=8070",
+            "timestamp": "2026-01-01T00:56:42Z",
+            "value": {
+              "memory_limit": 4096,
+              "working_set": 8070
+            }
+          },
+          {
+            "component_id": "checkout_checkout_api",
+            "evidence_id": "event_001",
+            "kind": "runtime_event",
+            "text": "enterprise observation for checkout_checkout_api: restart_count=5; termination_reason=OOMKilled",
+            "timestamp": "2026-01-01T00:48:53Z",
+            "value": {
+              "restart_count": 5,
+              "termination_reason": "OOMKilled"
+            }
+          },
+          {
+            "component_id": "checkout_checkout_api",
+            "evidence_id": "alert_001",
+            "kind": "alert",
+            "text": "enterprise observation for checkout_checkout_api: latency_effect=elevated",
+            "timestamp": "2026-01-01T00:18:44Z",
+            "value": {
+              "latency_effect": "elevated"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "cdde62c9075ff8ef425a7af3b70a3c089214a1316378913a9c567a97c74fbafe",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-verbose-enterprise-v1",
+          "provider": "fake",
+          "seed": 304
+        },
+        "scenario_id": "scenario_03b_bad45e2638fb3f07e15d",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "verbose_enterprise_v1",
+      "runtime": {
+        "ecosystem": "java",
+        "runtime_id": "java_spring",
+        "version": "spring"
+      },
+      "scenario_id": "scenario_03b_bad45e2638fb3f07e15d",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "checkout_checkout_api"
+        },
+        {
+          "evidence_id": "event_001",
+          "kind": "runtime_event",
+          "role": "CAUSAL",
+          "source_component": "checkout_checkout_api"
+        },
+        {
+          "evidence_id": "alert_001",
+          "kind": "alert",
+          "role": "SUPPORTING",
+          "source_component": "checkout_checkout_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_2e7873d32eec559a6745",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "7cdb09a1a6a1c18dc8c6d97a87bd0a6a54d2ab4f474d14beadfc1d412d4a6576",
+        "observations": [
+          {
+            "component_id": "checkout_checkout_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "runtime-native signal for checkout_checkout_api: memory_limit=4096; working_set=8070 (java/spring)",
+            "timestamp": "2026-01-01T00:45:04Z",
+            "value": {
+              "memory_limit": 4096,
+              "working_set": 8070
+            }
+          },
+          {
+            "component_id": "checkout_checkout_api",
+            "evidence_id": "event_001",
+            "kind": "runtime_event",
+            "text": "runtime-native signal for checkout_checkout_api: restart_count=5; termination_reason=OOMKilled (java/spring)",
+            "timestamp": "2026-01-01T00:08:10Z",
+            "value": {
+              "restart_count": 5,
+              "termination_reason": "OOMKilled"
+            }
+          },
+          {
+            "component_id": "checkout_checkout_api",
+            "evidence_id": "alert_001",
+            "kind": "alert",
+            "text": "runtime-native signal for checkout_checkout_api: latency_effect=elevated (java/spring)",
+            "timestamp": "2026-01-01T00:30:11Z",
+            "value": {
+              "latency_effect": "elevated"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "2964c55aad1021eaecda45a026a1c6bbe34a732be3f19d5aa01303f62ce2ba8e",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-ecosystem-native-v1",
+          "provider": "fake",
+          "seed": 305
+        },
+        "scenario_id": "scenario_03b_bad45e2638fb3f07e15d",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "ecosystem_native_v1",
+      "runtime": {
+        "ecosystem": "java",
+        "runtime_id": "java_spring",
+        "version": "spring"
+      },
+      "scenario_id": "scenario_03b_bad45e2638fb3f07e15d",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "checkout_checkout_api"
+        },
+        {
+          "evidence_id": "event_001",
+          "kind": "runtime_event",
+          "role": "CAUSAL",
+          "source_component": "checkout_checkout_api"
+        },
+        {
+          "evidence_id": "alert_001",
+          "kind": "alert",
+          "role": "SUPPORTING",
+          "source_component": "checkout_checkout_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_303b87a4c3daf3c80422",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "95dc7b905317e58ae79c6d0fb49a4f4ba43b6eab170b5f334895d483a789b292",
+        "observations": [
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "ops signal for async_worker_api: cpu_limit=2.0; demand=3.3068; throttle_ratio=0.6618636910919928",
+            "timestamp": "2026-01-01T00:58:21Z",
+            "value": {
+              "cpu_limit": 2.0,
+              "demand": 3.3068,
+              "throttle_ratio": 0.6618636910919928
+            }
+          },
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "alert_001",
+            "kind": "alert",
+            "text": "ops signal for async_worker_api: latency_effect=elevated",
+            "timestamp": "2026-01-01T00:10:50Z",
+            "value": {
+              "latency_effect": "elevated"
+            }
+          },
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "event_001",
+            "kind": "runtime_event",
+            "text": "ops signal for async_worker_api: throttle_ratio=0.6618636910919928",
+            "timestamp": "2026-01-01T00:40:01Z",
+            "value": {
+              "throttle_ratio": 0.6618636910919928
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "da960105bb42a0712232ab658d64c4c977d359e39af97564a26e4e2c8a7c004c",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-concise-ops-v1",
+          "provider": "fake",
+          "seed": 320
+        },
+        "scenario_id": "scenario_03b_e3bc93e0e419ea2c7756",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "concise_ops_v1",
+      "runtime": {
+        "ecosystem": "node",
+        "runtime_id": "node_nestjs",
+        "version": "nestjs"
+      },
+      "scenario_id": "scenario_03b_e3bc93e0e419ea2c7756",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "async_worker_api"
+        },
+        {
+          "evidence_id": "alert_001",
+          "kind": "alert",
+          "role": "CAUSAL",
+          "source_component": "async_worker_api"
+        },
+        {
+          "evidence_id": "event_001",
+          "kind": "runtime_event",
+          "role": "SUPPORTING",
+          "source_component": "async_worker_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_3378427c3df8253f39d7",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "95dc7b905317e58ae79c6d0fb49a4f4ba43b6eab170b5f334895d483a789b292",
+        "observations": [
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "enterprise observation for async_worker_api: cpu_limit=2.0; demand=3.3068; throttle_ratio=0.6618636910919928",
+            "timestamp": "2026-01-01T00:53:44Z",
+            "value": {
+              "cpu_limit": 2.0,
+              "demand": 3.3068,
+              "throttle_ratio": 0.6618636910919928
+            }
+          },
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "alert_001",
+            "kind": "alert",
+            "text": "enterprise observation for async_worker_api: latency_effect=elevated",
+            "timestamp": "2026-01-01T00:32:14Z",
+            "value": {
+              "latency_effect": "elevated"
+            }
+          },
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "event_001",
+            "kind": "runtime_event",
+            "text": "enterprise observation for async_worker_api: throttle_ratio=0.6618636910919928",
+            "timestamp": "2026-01-01T00:25:20Z",
+            "value": {
+              "throttle_ratio": 0.6618636910919928
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "6222caf371405f68b09e52dc1204838e14714c92e30fa22f8a7788d5ce7ce6e1",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-verbose-enterprise-v1",
+          "provider": "fake",
+          "seed": 321
+        },
+        "scenario_id": "scenario_03b_e3bc93e0e419ea2c7756",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "verbose_enterprise_v1",
+      "runtime": {
+        "ecosystem": "node",
+        "runtime_id": "node_nestjs",
+        "version": "nestjs"
+      },
+      "scenario_id": "scenario_03b_e3bc93e0e419ea2c7756",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "async_worker_api"
+        },
+        {
+          "evidence_id": "alert_001",
+          "kind": "alert",
+          "role": "CAUSAL",
+          "source_component": "async_worker_api"
+        },
+        {
+          "evidence_id": "event_001",
+          "kind": "runtime_event",
+          "role": "SUPPORTING",
+          "source_component": "async_worker_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_38f3c64d76dd3a3eb6ed",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "95dc7b905317e58ae79c6d0fb49a4f4ba43b6eab170b5f334895d483a789b292",
+        "observations": [
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "runtime-native signal for async_worker_api: cpu_limit=2.0; demand=3.3068; throttle_ratio=0.6618636910919928 (node/nestjs)",
+            "timestamp": "2026-01-01T00:43:01Z",
+            "value": {
+              "cpu_limit": 2.0,
+              "demand": 3.3068,
+              "throttle_ratio": 0.6618636910919928
+            }
+          },
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "alert_001",
+            "kind": "alert",
+            "text": "runtime-native signal for async_worker_api: latency_effect=elevated (node/nestjs)",
+            "timestamp": "2026-01-01T00:45:44Z",
+            "value": {
+              "latency_effect": "elevated"
+            }
+          },
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "event_001",
+            "kind": "runtime_event",
+            "text": "runtime-native signal for async_worker_api: throttle_ratio=0.6618636910919928 (node/nestjs)",
+            "timestamp": "2026-01-01T00:08:30Z",
+            "value": {
+              "throttle_ratio": 0.6618636910919928
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "2261d46be5951b2a584e9c8ace8d6f6528e7a5fe594a4370282d358b6d96a88b",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-ecosystem-native-v1",
+          "provider": "fake",
+          "seed": 322
+        },
+        "scenario_id": "scenario_03b_e3bc93e0e419ea2c7756",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "ecosystem_native_v1",
+      "runtime": {
+        "ecosystem": "node",
+        "runtime_id": "node_nestjs",
+        "version": "nestjs"
+      },
+      "scenario_id": "scenario_03b_e3bc93e0e419ea2c7756",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "async_worker_api"
+        },
+        {
+          "evidence_id": "alert_001",
+          "kind": "alert",
+          "role": "CAUSAL",
+          "source_component": "async_worker_api"
+        },
+        {
+          "evidence_id": "event_001",
+          "kind": "runtime_event",
+          "role": "SUPPORTING",
+          "source_component": "async_worker_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_fb473b9902658827993b",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "9702a5b2f8f9f9dcc07c60fe0e1423b6aa01c6b99c94e538841ae7d6ee66aafe",
+        "observations": [
+          {
+            "component_id": "web_db_postgres",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "ops signal for web_db_postgres: active_connections=40; pool_size=40; waiting_requests=160",
+            "timestamp": "2026-01-01T00:44:42Z",
+            "value": {
+              "active_connections": 40,
+              "pool_size": 40,
+              "waiting_requests": 160
+            }
+          },
+          {
+            "component_id": "web_db_postgres",
+            "evidence_id": "log_001",
+            "kind": "application_log",
+            "text": "ops signal for web_db_postgres: acquisition_timeout_rate=0.7319858883321223",
+            "timestamp": "2026-01-01T00:00:23Z",
+            "value": {
+              "acquisition_timeout_rate": 0.7319858883321223
+            }
+          },
+          {
+            "component_id": "web_db_postgres",
+            "evidence_id": "dependency_001",
+            "kind": "dependency_health",
+            "text": "ops signal for web_db_postgres: database_health=healthy",
+            "timestamp": "2026-01-01T00:55:39Z",
+            "value": {
+              "database_health": "healthy"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "9f8a5a4f0fdd53415260148654cd9ba66fea2efe9a40d714c4d6664afd548531",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-concise-ops-v1",
+          "provider": "fake",
+          "seed": 337
+        },
+        "scenario_id": "scenario_03b_3ce78869a291fed1f9a0",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "concise_ops_v1",
+      "runtime": {
+        "ecosystem": "node",
+        "runtime_id": "node_nestjs",
+        "version": "nestjs"
+      },
+      "scenario_id": "scenario_03b_3ce78869a291fed1f9a0",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "web_db_postgres"
+        },
+        {
+          "evidence_id": "log_001",
+          "kind": "application_log",
+          "role": "CAUSAL",
+          "source_component": "web_db_postgres"
+        },
+        {
+          "evidence_id": "dependency_001",
+          "kind": "dependency_health",
+          "role": "SUPPORTING",
+          "source_component": "web_db_postgres"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_7126d9ccc18d7af80738",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "9702a5b2f8f9f9dcc07c60fe0e1423b6aa01c6b99c94e538841ae7d6ee66aafe",
+        "observations": [
+          {
+            "component_id": "web_db_postgres",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "enterprise observation for web_db_postgres: active_connections=40; pool_size=40; waiting_requests=160",
+            "timestamp": "2026-01-01T00:35:10Z",
+            "value": {
+              "active_connections": 40,
+              "pool_size": 40,
+              "waiting_requests": 160
+            }
+          },
+          {
+            "component_id": "web_db_postgres",
+            "evidence_id": "log_001",
+            "kind": "application_log",
+            "text": "enterprise observation for web_db_postgres: acquisition_timeout_rate=0.7319858883321223",
+            "timestamp": "2026-01-01T00:53:04Z",
+            "value": {
+              "acquisition_timeout_rate": 0.7319858883321223
+            }
+          },
+          {
+            "component_id": "web_db_postgres",
+            "evidence_id": "dependency_001",
+            "kind": "dependency_health",
+            "text": "enterprise observation for web_db_postgres: database_health=healthy",
+            "timestamp": "2026-01-01T00:19:16Z",
+            "value": {
+              "database_health": "healthy"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "9dbc9929eae42fdbb6e40816da43cea34c3b3846db595e34563d286b86b9b49f",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-verbose-enterprise-v1",
+          "provider": "fake",
+          "seed": 338
+        },
+        "scenario_id": "scenario_03b_3ce78869a291fed1f9a0",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "verbose_enterprise_v1",
+      "runtime": {
+        "ecosystem": "node",
+        "runtime_id": "node_nestjs",
+        "version": "nestjs"
+      },
+      "scenario_id": "scenario_03b_3ce78869a291fed1f9a0",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "web_db_postgres"
+        },
+        {
+          "evidence_id": "log_001",
+          "kind": "application_log",
+          "role": "CAUSAL",
+          "source_component": "web_db_postgres"
+        },
+        {
+          "evidence_id": "dependency_001",
+          "kind": "dependency_health",
+          "role": "SUPPORTING",
+          "source_component": "web_db_postgres"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_0921c8768d8a574dda1b",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "9702a5b2f8f9f9dcc07c60fe0e1423b6aa01c6b99c94e538841ae7d6ee66aafe",
+        "observations": [
+          {
+            "component_id": "web_db_postgres",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "runtime-native signal for web_db_postgres: active_connections=40; pool_size=40; waiting_requests=160 (node/nestjs)",
+            "timestamp": "2026-01-01T00:03:22Z",
+            "value": {
+              "active_connections": 40,
+              "pool_size": 40,
+              "waiting_requests": 160
+            }
+          },
+          {
+            "component_id": "web_db_postgres",
+            "evidence_id": "log_001",
+            "kind": "application_log",
+            "text": "runtime-native signal for web_db_postgres: acquisition_timeout_rate=0.7319858883321223 (node/nestjs)",
+            "timestamp": "2026-01-01T00:46:52Z",
+            "value": {
+              "acquisition_timeout_rate": 0.7319858883321223
+            }
+          },
+          {
+            "component_id": "web_db_postgres",
+            "evidence_id": "dependency_001",
+            "kind": "dependency_health",
+            "text": "runtime-native signal for web_db_postgres: database_health=healthy (node/nestjs)",
+            "timestamp": "2026-01-01T00:40:00Z",
+            "value": {
+              "database_health": "healthy"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "dfb6402c44a2257ef422cfc676a2e14c5f219938db09491b95f39c3ebb588b25",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-ecosystem-native-v1",
+          "provider": "fake",
+          "seed": 339
+        },
+        "scenario_id": "scenario_03b_3ce78869a291fed1f9a0",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "ecosystem_native_v1",
+      "runtime": {
+        "ecosystem": "node",
+        "runtime_id": "node_nestjs",
+        "version": "nestjs"
+      },
+      "scenario_id": "scenario_03b_3ce78869a291fed1f9a0",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "web_db_postgres"
+        },
+        {
+          "evidence_id": "log_001",
+          "kind": "application_log",
+          "role": "CAUSAL",
+          "source_component": "web_db_postgres"
+        },
+        {
+          "evidence_id": "dependency_001",
+          "kind": "dependency_health",
+          "role": "SUPPORTING",
+          "source_component": "web_db_postgres"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_3c76a14723ac9d033765",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "9d328b583606923a15d631c4ed34018032da53acaa3a41513bf226a12543a85f",
+        "observations": [
+          {
+            "component_id": "web_cache_db_postgres",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "ops signal for web_cache_db_postgres: baseline_query_latency_ms=82; database_cpu=0.7601785879135331; query_latency_ms=4358.531",
+            "timestamp": "2026-01-01T00:21:55Z",
+            "value": {
+              "baseline_query_latency_ms": 82,
+              "database_cpu": 0.7601785879135331,
+              "query_latency_ms": 4358.531
+            }
+          },
+          {
+            "component_id": "web_cache_db_postgres",
+            "evidence_id": "log_001",
+            "kind": "application_log",
+            "text": "ops signal for web_cache_db_postgres: connection_wait=normal",
+            "timestamp": "2026-01-01T00:32:14Z",
+            "value": {
+              "connection_wait": "normal"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "6babd567d5360b9c3965962c0ca592e64f9c0003d9e00223c2a2ab05da2376d9",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-concise-ops-v1",
+          "provider": "fake",
+          "seed": 354
+        },
+        "scenario_id": "scenario_03b_422c454ec24e851bbb64",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "concise_ops_v1",
+      "runtime": {
+        "ecosystem": "python",
+        "runtime_id": "python_fastapi",
+        "version": "fastapi"
+      },
+      "scenario_id": "scenario_03b_422c454ec24e851bbb64",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "web_cache_db_postgres"
+        },
+        {
+          "evidence_id": "log_001",
+          "kind": "application_log",
+          "role": "CAUSAL",
+          "source_component": "web_cache_db_postgres"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_abdd1561eff726568267",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "9d328b583606923a15d631c4ed34018032da53acaa3a41513bf226a12543a85f",
+        "observations": [
+          {
+            "component_id": "web_cache_db_postgres",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "enterprise observation for web_cache_db_postgres: baseline_query_latency_ms=82; database_cpu=0.7601785879135331; query_latency_ms=4358.531",
+            "timestamp": "2026-01-01T00:53:41Z",
+            "value": {
+              "baseline_query_latency_ms": 82,
+              "database_cpu": 0.7601785879135331,
+              "query_latency_ms": 4358.531
+            }
+          },
+          {
+            "component_id": "web_cache_db_postgres",
+            "evidence_id": "log_001",
+            "kind": "application_log",
+            "text": "enterprise observation for web_cache_db_postgres: connection_wait=normal",
+            "timestamp": "2026-01-01T00:41:45Z",
+            "value": {
+              "connection_wait": "normal"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "bb0a32a0324d9fbd92c1ef777b8301fd3e66bfd2c79df08c69f46ec3b2d25d71",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-verbose-enterprise-v1",
+          "provider": "fake",
+          "seed": 355
+        },
+        "scenario_id": "scenario_03b_422c454ec24e851bbb64",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "verbose_enterprise_v1",
+      "runtime": {
+        "ecosystem": "python",
+        "runtime_id": "python_fastapi",
+        "version": "fastapi"
+      },
+      "scenario_id": "scenario_03b_422c454ec24e851bbb64",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "web_cache_db_postgres"
+        },
+        {
+          "evidence_id": "log_001",
+          "kind": "application_log",
+          "role": "CAUSAL",
+          "source_component": "web_cache_db_postgres"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_29a5a4f29916def1c085",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "9d328b583606923a15d631c4ed34018032da53acaa3a41513bf226a12543a85f",
+        "observations": [
+          {
+            "component_id": "web_cache_db_postgres",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "runtime-native signal for web_cache_db_postgres: baseline_query_latency_ms=82; database_cpu=0.7601785879135331; query_latency_ms=4358.531 (python/fastapi)",
+            "timestamp": "2026-01-01T00:38:02Z",
+            "value": {
+              "baseline_query_latency_ms": 82,
+              "database_cpu": 0.7601785879135331,
+              "query_latency_ms": 4358.531
+            }
+          },
+          {
+            "component_id": "web_cache_db_postgres",
+            "evidence_id": "log_001",
+            "kind": "application_log",
+            "text": "runtime-native signal for web_cache_db_postgres: connection_wait=normal (python/fastapi)",
+            "timestamp": "2026-01-01T00:43:56Z",
+            "value": {
+              "connection_wait": "normal"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "0f8e2a11a934a517863beee6eb12861f455319dfaf7ad2f0e5ac8e3039a69401",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-ecosystem-native-v1",
+          "provider": "fake",
+          "seed": 356
+        },
+        "scenario_id": "scenario_03b_422c454ec24e851bbb64",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "ecosystem_native_v1",
+      "runtime": {
+        "ecosystem": "python",
+        "runtime_id": "python_fastapi",
+        "version": "fastapi"
+      },
+      "scenario_id": "scenario_03b_422c454ec24e851bbb64",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "web_cache_db_postgres"
+        },
+        {
+          "evidence_id": "log_001",
+          "kind": "application_log",
+          "role": "CAUSAL",
+          "source_component": "web_cache_db_postgres"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_d3aa4dc9ea896da56bdd",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "dca31f5ec31d4981767e275d97f93fce848846eb2a5875fc6582b170aec3c6b4",
+        "observations": [
+          {
+            "component_id": "checkout_payment_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "ops signal for checkout_payment_api: client_deadline_ms=2000; dependency_latency_ms=6799.4095",
+            "timestamp": "2026-01-01T00:01:14Z",
+            "value": {
+              "client_deadline_ms": 2000,
+              "dependency_latency_ms": 6799.4095
+            }
+          },
+          {
+            "component_id": "checkout_payment_api",
+            "evidence_id": "alert_001",
+            "kind": "alert",
+            "text": "ops signal for checkout_payment_api: dependency_health=degraded",
+            "timestamp": "2026-01-01T00:35:45Z",
+            "value": {
+              "dependency_health": "degraded"
+            }
+          },
+          {
+            "component_id": "checkout_payment_api",
+            "evidence_id": "dependency_001",
+            "kind": "dependency_health",
+            "text": "ops signal for checkout_payment_api: local_queue_state=healthy",
+            "timestamp": "2026-01-01T00:00:22Z",
+            "value": {
+              "local_queue_state": "healthy"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "ea0938a421ed43d0ab36409c29db2618ef9814cac060eb629f6c33306886da0d",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-concise-ops-v1",
+          "provider": "fake",
+          "seed": 371
+        },
+        "scenario_id": "scenario_03b_f936b8d7c4852e412c53",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "concise_ops_v1",
+      "runtime": {
+        "ecosystem": "go",
+        "runtime_id": "go_http",
+        "version": "net_http"
+      },
+      "scenario_id": "scenario_03b_f936b8d7c4852e412c53",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "checkout_payment_api"
+        },
+        {
+          "evidence_id": "alert_001",
+          "kind": "alert",
+          "role": "CAUSAL",
+          "source_component": "checkout_payment_api"
+        },
+        {
+          "evidence_id": "dependency_001",
+          "kind": "dependency_health",
+          "role": "SUPPORTING",
+          "source_component": "checkout_payment_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_a7b8f373054c7aacaea1",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "dca31f5ec31d4981767e275d97f93fce848846eb2a5875fc6582b170aec3c6b4",
+        "observations": [
+          {
+            "component_id": "checkout_payment_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "enterprise observation for checkout_payment_api: client_deadline_ms=2000; dependency_latency_ms=6799.4095",
+            "timestamp": "2026-01-01T00:30:51Z",
+            "value": {
+              "client_deadline_ms": 2000,
+              "dependency_latency_ms": 6799.4095
+            }
+          },
+          {
+            "component_id": "checkout_payment_api",
+            "evidence_id": "alert_001",
+            "kind": "alert",
+            "text": "enterprise observation for checkout_payment_api: dependency_health=degraded",
+            "timestamp": "2026-01-01T00:25:29Z",
+            "value": {
+              "dependency_health": "degraded"
+            }
+          },
+          {
+            "component_id": "checkout_payment_api",
+            "evidence_id": "dependency_001",
+            "kind": "dependency_health",
+            "text": "enterprise observation for checkout_payment_api: local_queue_state=healthy",
+            "timestamp": "2026-01-01T00:47:43Z",
+            "value": {
+              "local_queue_state": "healthy"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "3b4d9eec4b884f0bd5270b492d9d4f611f1e1841ecefb19a621194b392b54435",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-verbose-enterprise-v1",
+          "provider": "fake",
+          "seed": 372
+        },
+        "scenario_id": "scenario_03b_f936b8d7c4852e412c53",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "verbose_enterprise_v1",
+      "runtime": {
+        "ecosystem": "go",
+        "runtime_id": "go_http",
+        "version": "net_http"
+      },
+      "scenario_id": "scenario_03b_f936b8d7c4852e412c53",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "checkout_payment_api"
+        },
+        {
+          "evidence_id": "alert_001",
+          "kind": "alert",
+          "role": "CAUSAL",
+          "source_component": "checkout_payment_api"
+        },
+        {
+          "evidence_id": "dependency_001",
+          "kind": "dependency_health",
+          "role": "SUPPORTING",
+          "source_component": "checkout_payment_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_a84d5685ec5c85826a20",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "dca31f5ec31d4981767e275d97f93fce848846eb2a5875fc6582b170aec3c6b4",
+        "observations": [
+          {
+            "component_id": "checkout_payment_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "runtime-native signal for checkout_payment_api: client_deadline_ms=2000; dependency_latency_ms=6799.4095 (go/http)",
+            "timestamp": "2026-01-01T00:32:24Z",
+            "value": {
+              "client_deadline_ms": 2000,
+              "dependency_latency_ms": 6799.4095
+            }
+          },
+          {
+            "component_id": "checkout_payment_api",
+            "evidence_id": "alert_001",
+            "kind": "alert",
+            "text": "runtime-native signal for checkout_payment_api: dependency_health=degraded (go/http)",
+            "timestamp": "2026-01-01T00:53:31Z",
+            "value": {
+              "dependency_health": "degraded"
+            }
+          },
+          {
+            "component_id": "checkout_payment_api",
+            "evidence_id": "dependency_001",
+            "kind": "dependency_health",
+            "text": "runtime-native signal for checkout_payment_api: local_queue_state=healthy (go/http)",
+            "timestamp": "2026-01-01T00:01:53Z",
+            "value": {
+              "local_queue_state": "healthy"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "52e5c98e723a9b9a5111a2b7c75266969184324e485d0c4981868990ccbcab21",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-ecosystem-native-v1",
+          "provider": "fake",
+          "seed": 373
+        },
+        "scenario_id": "scenario_03b_f936b8d7c4852e412c53",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "ecosystem_native_v1",
+      "runtime": {
+        "ecosystem": "go",
+        "runtime_id": "go_http",
+        "version": "net_http"
+      },
+      "scenario_id": "scenario_03b_f936b8d7c4852e412c53",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "checkout_payment_api"
+        },
+        {
+          "evidence_id": "alert_001",
+          "kind": "alert",
+          "role": "CAUSAL",
+          "source_component": "checkout_payment_api"
+        },
+        {
+          "evidence_id": "dependency_001",
+          "kind": "dependency_health",
+          "role": "SUPPORTING",
+          "source_component": "checkout_payment_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_614aa12a5b2633c1a650",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "acf21301cb38b51db62ba43877296d2b411aa02db481c038766b47622b168cf3",
+        "observations": [
+          {
+            "component_id": "multi_service_payment_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "ops signal for multi_service_payment_api: lookup_latency_ms=2382.0598; normal_lookup_latency_ms=3",
+            "timestamp": "2026-01-01T00:55:49Z",
+            "value": {
+              "lookup_latency_ms": 2382.0598,
+              "normal_lookup_latency_ms": 3
+            }
+          },
+          {
+            "component_id": "multi_service_payment_api",
+            "evidence_id": "log_001",
+            "kind": "application_log",
+            "text": "ops signal for multi_service_payment_api: negative_answer_rate=0.8031990777987089",
+            "timestamp": "2026-01-01T00:18:54Z",
+            "value": {
+              "negative_answer_rate": 0.8031990777987089
+            }
+          },
+          {
+            "component_id": "multi_service_payment_api",
+            "evidence_id": "dependency_001",
+            "kind": "dependency_health",
+            "text": "ops signal for multi_service_payment_api: existing_connections=healthy",
+            "timestamp": "2026-01-01T00:08:18Z",
+            "value": {
+              "existing_connections": "healthy"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "c1245ca04d1353d01a1d15bae24c269e0a92f7e7f45b7a05d6a5f305dcbc1d7a",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-concise-ops-v1",
+          "provider": "fake",
+          "seed": 388
+        },
+        "scenario_id": "scenario_03b_5296a4bd8a89399e4344",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "concise_ops_v1",
+      "runtime": {
+        "ecosystem": "node",
+        "runtime_id": "node_nestjs",
+        "version": "nestjs"
+      },
+      "scenario_id": "scenario_03b_5296a4bd8a89399e4344",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "multi_service_payment_api"
+        },
+        {
+          "evidence_id": "log_001",
+          "kind": "application_log",
+          "role": "CAUSAL",
+          "source_component": "multi_service_payment_api"
+        },
+        {
+          "evidence_id": "dependency_001",
+          "kind": "dependency_health",
+          "role": "SUPPORTING",
+          "source_component": "multi_service_payment_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_ba48a589b1f7c64f0eed",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "acf21301cb38b51db62ba43877296d2b411aa02db481c038766b47622b168cf3",
+        "observations": [
+          {
+            "component_id": "multi_service_payment_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "enterprise observation for multi_service_payment_api: lookup_latency_ms=2382.0598; normal_lookup_latency_ms=3",
+            "timestamp": "2026-01-01T00:29:42Z",
+            "value": {
+              "lookup_latency_ms": 2382.0598,
+              "normal_lookup_latency_ms": 3
+            }
+          },
+          {
+            "component_id": "multi_service_payment_api",
+            "evidence_id": "log_001",
+            "kind": "application_log",
+            "text": "enterprise observation for multi_service_payment_api: negative_answer_rate=0.8031990777987089",
+            "timestamp": "2026-01-01T00:11:05Z",
+            "value": {
+              "negative_answer_rate": 0.8031990777987089
+            }
+          },
+          {
+            "component_id": "multi_service_payment_api",
+            "evidence_id": "dependency_001",
+            "kind": "dependency_health",
+            "text": "enterprise observation for multi_service_payment_api: existing_connections=healthy",
+            "timestamp": "2026-01-01T00:14:47Z",
+            "value": {
+              "existing_connections": "healthy"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "bedbe9993a9838a510618d5b22e43d0e568fa5cdd3af6c49ffe7cc567d6dfc5b",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-verbose-enterprise-v1",
+          "provider": "fake",
+          "seed": 389
+        },
+        "scenario_id": "scenario_03b_5296a4bd8a89399e4344",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "verbose_enterprise_v1",
+      "runtime": {
+        "ecosystem": "node",
+        "runtime_id": "node_nestjs",
+        "version": "nestjs"
+      },
+      "scenario_id": "scenario_03b_5296a4bd8a89399e4344",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "multi_service_payment_api"
+        },
+        {
+          "evidence_id": "log_001",
+          "kind": "application_log",
+          "role": "CAUSAL",
+          "source_component": "multi_service_payment_api"
+        },
+        {
+          "evidence_id": "dependency_001",
+          "kind": "dependency_health",
+          "role": "SUPPORTING",
+          "source_component": "multi_service_payment_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_98a5ac49325566d68f50",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "acf21301cb38b51db62ba43877296d2b411aa02db481c038766b47622b168cf3",
+        "observations": [
+          {
+            "component_id": "multi_service_payment_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "runtime-native signal for multi_service_payment_api: lookup_latency_ms=2382.0598; normal_lookup_latency_ms=3 (node/nestjs)",
+            "timestamp": "2026-01-01T00:44:03Z",
+            "value": {
+              "lookup_latency_ms": 2382.0598,
+              "normal_lookup_latency_ms": 3
+            }
+          },
+          {
+            "component_id": "multi_service_payment_api",
+            "evidence_id": "log_001",
+            "kind": "application_log",
+            "text": "runtime-native signal for multi_service_payment_api: negative_answer_rate=0.8031990777987089 (node/nestjs)",
+            "timestamp": "2026-01-01T00:45:35Z",
+            "value": {
+              "negative_answer_rate": 0.8031990777987089
+            }
+          },
+          {
+            "component_id": "multi_service_payment_api",
+            "evidence_id": "dependency_001",
+            "kind": "dependency_health",
+            "text": "runtime-native signal for multi_service_payment_api: existing_connections=healthy (node/nestjs)",
+            "timestamp": "2026-01-01T00:20:05Z",
+            "value": {
+              "existing_connections": "healthy"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "89aa96aca3cab70d11b4520b69ce3445de44f2e1136c62cf1c2f828373415f1a",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-ecosystem-native-v1",
+          "provider": "fake",
+          "seed": 390
+        },
+        "scenario_id": "scenario_03b_5296a4bd8a89399e4344",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "ecosystem_native_v1",
+      "runtime": {
+        "ecosystem": "node",
+        "runtime_id": "node_nestjs",
+        "version": "nestjs"
+      },
+      "scenario_id": "scenario_03b_5296a4bd8a89399e4344",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "multi_service_payment_api"
+        },
+        {
+          "evidence_id": "log_001",
+          "kind": "application_log",
+          "role": "CAUSAL",
+          "source_component": "multi_service_payment_api"
+        },
+        {
+          "evidence_id": "dependency_001",
+          "kind": "dependency_health",
+          "role": "SUPPORTING",
+          "source_component": "multi_service_payment_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_1d38a3274c8116216ee1",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "a5d2d85cb5ccaa614ae6f396e79bcfc986195e15ab6b210541e71577f4bcf624",
+        "observations": [
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "ops signal for async_worker_api: blocked_requests=105; busy_threads=64; thread_limit=64",
+            "timestamp": "2026-01-01T00:05:23Z",
+            "value": {
+              "blocked_requests": 105,
+              "busy_threads": 64,
+              "thread_limit": 64
+            }
+          },
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "log_001",
+            "kind": "application_log",
+            "text": "ops signal for async_worker_api: cpu_state=moderate",
+            "timestamp": "2026-01-01T00:48:11Z",
+            "value": {
+              "cpu_state": "moderate"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "f67be3ae0ceefefc9aeb9b3a949c4c623b1588e60dfd1e0bde14c0258b448479",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-concise-ops-v1",
+          "provider": "fake",
+          "seed": 405
+        },
+        "scenario_id": "scenario_03b_c672ad8a526d5311860f",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "concise_ops_v1",
+      "runtime": {
+        "ecosystem": "go",
+        "runtime_id": "go_http",
+        "version": "net_http"
+      },
+      "scenario_id": "scenario_03b_c672ad8a526d5311860f",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "async_worker_api"
+        },
+        {
+          "evidence_id": "log_001",
+          "kind": "application_log",
+          "role": "CAUSAL",
+          "source_component": "async_worker_api"
+        }
+      ]
+    },
+    {
+      "difficulty": "STANDARD",
+      "entry_id": "render_03c_e50494400230641b6d47",
+      "rendered_telemetry": {
+        "canonical_scenario_hash": "a5d2d85cb5ccaa614ae6f396e79bcfc986195e15ab6b210541e71577f4bcf624",
+        "observations": [
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "metric_001",
+            "kind": "metric",
+            "text": "enterprise observation for async_worker_api: blocked_requests=105; busy_threads=64; thread_limit=64",
+            "timestamp": "2026-01-01T00:26:54Z",
+            "value": {
+              "blocked_requests": 105,
+              "busy_threads": 64,
+              "thread_limit": 64
+            }
+          },
+          {
+            "component_id": "async_worker_api",
+            "evidence_id": "log_001",
+            "kind": "application_log",
+            "text": "enterprise observation for async_worker_api: cpu_state=moderate",
+            "timestamp": "2026-01-01T00:46:09Z",
+            "value": {
+              "cpu_state": "moderate"
+            }
+          }
+        ],
+        "rendered_telemetry_hash": "56dfd982c79a7101fd3c8285ff70b2e887c6af609c98660d76570240bdfb2f79",
+        "renderer": {
+          "model_identifier": "fake-telemetry-renderer-v1",
+          "prompt_template_version": "03c-verbose-enterprise-v1",
+          "provider": "fake",
+          "seed": 406
+        },
+        "scenario_id": "scenario_03b_c672ad8a526d5311860f",
+        "schema_version": "rendered-telemetry-v1",
+        "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+      },
+      "renderer_family": "verbose_enterprise_v1",
+      "runtime": {
+        "ecosystem": "go",
+        "runtime_id": "go_http",
+        "version": "net_http"
+      },
+      "scenario_id": "scenario_03b_c672ad8a526d5311860f",
+      "semantic_evidence": [
+        {
+          "evidence_id": "metric_001",
+          "kind": "metric",
+          "role": "CAUSAL",
+          "source_component": "async_worker_api"
+        },
+        {
+          "evidence_id": "log_001",
+          "kind": "application_log",
+          "role": "CAUSAL",
+          "source_component": "async_worker_api"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_checkout_api: memory_limit=4096; working_set=8070 (java/spring)\", \"timestamp_offset_seconds\": 2704, \"value\": {\"memory_limit\": 4096, \"working_set\": 8070}}, {\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"runtime-native signal for checkout_checkout_api: restart_count=5; termination_reason=OOMKilled (java/spring)\", \"timestamp_offset_seconds\": 490, \"value\": {\"restart_count\": 5, \"termination_reason\": \"OOMKilled\"}}, {\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"runtime-native signal for checkout_checkout_api: latency_effect=elevated (java/spring)\", \"timestamp_offset_seconds\": 1811, \"value\": {\"latency_effect\": \"elevated\"}}]}",
+  "entry_id": "render_03c_2e7873d32eec559a6745",
+  "raw_response_hash": "073bd32ab21b522a64ddff37a23c4295e58532dc76fe7430647298b9c61f9d07",
+  "usage": {
+    "input_tokens": 190,
+    "output_tokens": 61,
+    "total_tokens": 251
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"multi_service_payment_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for multi_service_payment_api: lookup_latency_ms=2370.2351; normal_lookup_latency_ms=3\", \"timestamp_offset_seconds\": 2491, \"value\": {\"lookup_latency_ms\": 2370.2351, \"normal_lookup_latency_ms\": 3}}, {\"component_id\": \"multi_service_payment_api\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"enterprise observation for multi_service_payment_api: negative_answer_rate=0.8363275822965699\", \"timestamp_offset_seconds\": 258, \"value\": {\"negative_answer_rate\": 0.8363275822965699}}, {\"component_id\": \"multi_service_payment_api\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"enterprise observation for multi_service_payment_api: existing_connections=healthy\", \"timestamp_offset_seconds\": 2201, \"value\": {\"existing_connections\": \"healthy\"}}, {\"component_id\": \"multi_service_gateway\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for multi_service_gateway: distractor_intensity=mild\", \"timestamp_offset_seconds\": 2241, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"multi_service_inventory_api\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"enterprise observation for multi_service_inventory_api: change_scope=neighbor\", \"timestamp_offset_seconds\": 1470, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_26d28a99a1710ba8b4b0",
+  "raw_response_hash": "7fdb2f52ef54c2e3e0629358f1266bbdb48f7c4dfeedb7e6118fdac91b3843a2",
+  "usage": {
+    "input_tokens": 247,
+    "output_tokens": 89,
+    "total_tokens": 336
+  }
+}

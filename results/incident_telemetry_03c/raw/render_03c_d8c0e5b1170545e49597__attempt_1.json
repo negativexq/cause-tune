@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_checkout_api: cpu_limit=2.0; demand=3.7262; throttle_ratio=0.6650559811070997 (node/nestjs)\", \"timestamp_offset_seconds\": 1617, \"value\": {\"cpu_limit\": 2.0, \"demand\": 3.7262, \"throttle_ratio\": 0.6650559811070997}}, {\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"runtime-native signal for checkout_checkout_api: latency_effect=elevated (node/nestjs)\", \"timestamp_offset_seconds\": 992, \"value\": {\"latency_effect\": \"elevated\"}}, {\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"runtime-native signal for checkout_checkout_api: throttle_ratio=0.6650559811070997 (node/nestjs)\", \"timestamp_offset_seconds\": 3414, \"value\": {\"throttle_ratio\": 0.6650559811070997}}, {\"component_id\": \"checkout_frontend\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_frontend: distractor_intensity=mild (node/nestjs)\", \"timestamp_offset_seconds\": 2890, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"runtime-native signal for checkout_redis: change_scope=neighbor (node/nestjs)\", \"timestamp_offset_seconds\": 113, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_d8c0e5b1170545e49597",
+  "raw_response_hash": "a02f5b5c915031af96a3da872f95d42b65e14bfdc9d43b4e4abe871968139be1",
+  "usage": {
+    "input_tokens": 247,
+    "output_tokens": 97,
+    "total_tokens": 344
+  }
+}

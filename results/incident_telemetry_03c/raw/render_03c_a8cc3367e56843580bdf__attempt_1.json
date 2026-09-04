@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"event_pipeline_consumer\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for event_pipeline_consumer: incoming_rate=1225.6737; lag=185701; processing_rate=285.1243\", \"timestamp_offset_seconds\": 1979, \"value\": {\"incoming_rate\": 1225.6737, \"lag\": 185701, \"processing_rate\": 285.1243}}, {\"component_id\": \"event_pipeline_consumer\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"ops signal for event_pipeline_consumer: consumer_health=degraded\", \"timestamp_offset_seconds\": 427, \"value\": {\"consumer_health\": \"degraded\"}}]}",
+  "entry_id": "render_03c_a8cc3367e56843580bdf",
+  "raw_response_hash": "94590a392d08524a5943f598cc06f191ebc4c2c7deb22480713ca877712ffb8d",
+  "usage": {
+    "input_tokens": 170,
+    "output_tokens": 41,
+    "total_tokens": 211
+  }
+}

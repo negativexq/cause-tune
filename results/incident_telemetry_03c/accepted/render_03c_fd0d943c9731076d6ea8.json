@@ -1,0 +1,66 @@
+{
+  "accepted_render_hash": "6b2df4aa54e1fa73ee22c4d96aab0483261806ca87db8e1c3258609f83401ae0",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "48303fd5c9a54c949213b9a355c997c4e35bb3a4d2a73c75a85d12f4af004084",
+  "entry_id": "render_03c_fd0d943c9731076d6ea8",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "4dbad663e38dc8fc3f5d69c6ea97006082872ee52ca5ac6a30f5900a5ffe6755",
+  "render_seed": 508,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "48303fd5c9a54c949213b9a355c997c4e35bb3a4d2a73c75a85d12f4af004084",
+    "observations": [
+      {
+        "component_id": "multi_service_orders_api",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "enterprise observation for multi_service_orders_api: memory_limit=4096; working_set=8002",
+        "timestamp": "2026-01-01T00:27:23Z",
+        "value": {
+          "memory_limit": 4096,
+          "working_set": 8002
+        }
+      },
+      {
+        "component_id": "multi_service_orders_api",
+        "evidence_id": "event_001",
+        "kind": "runtime_event",
+        "text": "enterprise observation for multi_service_orders_api: restart_count=4; termination_reason=OOMKilled",
+        "timestamp": "2026-01-01T00:06:59Z",
+        "value": {
+          "restart_count": 4,
+          "termination_reason": "OOMKilled"
+        }
+      },
+      {
+        "component_id": "multi_service_orders_api",
+        "evidence_id": "alert_001",
+        "kind": "alert",
+        "text": "enterprise observation for multi_service_orders_api: latency_effect=elevated",
+        "timestamp": "2026-01-01T00:15:20Z",
+        "value": {
+          "latency_effect": "elevated"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "6b2df4aa54e1fa73ee22c4d96aab0483261806ca87db8e1c3258609f83401ae0",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-verbose-enterprise-v1",
+      "provider": "fake",
+      "seed": 508
+    },
+    "scenario_id": "scenario_03b_36e065eff180e401de52",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "verbose_enterprise_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_36e065eff180e401de52",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

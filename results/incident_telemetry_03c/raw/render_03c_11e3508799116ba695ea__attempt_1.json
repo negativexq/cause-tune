@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_db_postgres\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for web_db_postgres: active_connections=40; pool_size=40; waiting_requests=199 (python/django)\", \"timestamp_offset_seconds\": 934, \"value\": {\"active_connections\": 40, \"pool_size\": 40, \"waiting_requests\": 199}}, {\"component_id\": \"web_db_postgres\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"runtime-native signal for web_db_postgres: acquisition_timeout_rate=0.7197795103004979 (python/django)\", \"timestamp_offset_seconds\": 1508, \"value\": {\"acquisition_timeout_rate\": 0.7197795103004979}}, {\"component_id\": \"web_db_postgres\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"runtime-native signal for web_db_postgres: database_health=healthy (python/django)\", \"timestamp_offset_seconds\": 2827, \"value\": {\"database_health\": \"healthy\"}}]}",
+  "entry_id": "render_03c_11e3508799116ba695ea",
+  "raw_response_hash": "cd36f04b6669b02aa35892a6ea55913637b02ffe85d9059c1759a3944d0bcbf5",
+  "usage": {
+    "input_tokens": 193,
+    "output_tokens": 61,
+    "total_tokens": 254
+  }
+}

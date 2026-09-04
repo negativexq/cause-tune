@@ -1,0 +1,60 @@
+You are a telemetry renderer, not an incident diagnostician.
+Return JSON with exactly one key, observations. Render only the declared semantic observations.
+Never give a diagnosis, root-cause label, remediation, answerability, or expected output.
+Never add evidence, change evidence IDs/components/kinds, make missing evidence reappear, or turn distractors into causal evidence.
+Rendering contract family: ecosystem_native_v1; style: runtime-native telemetry terminology.
+Runtime guidance: JVM/Spring/JDBC terminology.
+Provider input (semantic evidence only):
+{
+  "evidence": [
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "metric_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "ready_replicas",
+          "value": 0
+        },
+        {
+          "name": "desired_replicas",
+          "value": 4
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "web_db_api",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "event_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "RUNTIME_EVENT"
+      ],
+      "required_attributes": [
+        {
+          "name": "probe_failure_rate",
+          "value": 0.965363054619611
+        },
+        {
+          "name": "container_state",
+          "value": "running"
+        }
+      ],
+      "semantic_kind": "runtime_event",
+      "source_component": "web_db_api",
+      "variation_family": "ecosystem_native_v1"
+    }
+  ],
+  "prompt_template_version": "03c-ecosystem-native-v1",
+  "render_contract": "03c-telemetry-surface-v1",
+  "render_seed": 475,
+  "renderer_family": "ecosystem_native_v1",
+  "runtime_id": "java_spring",
+  "runtime_instruction": "Use terminology appropriate to the supplied runtime without naming a diagnosis.",
+  "style": "runtime-native telemetry terminology"
+}

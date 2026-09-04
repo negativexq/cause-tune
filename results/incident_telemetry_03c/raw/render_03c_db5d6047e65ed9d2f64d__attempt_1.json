@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_payment_api: client_deadline_ms=2000; dependency_latency_ms=7103.8942 (go/http)\", \"timestamp_offset_seconds\": 800, \"value\": {\"client_deadline_ms\": 2000, \"dependency_latency_ms\": 7103.8942}}, {\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"runtime-native signal for checkout_payment_api: dependency_health=degraded (go/http)\", \"timestamp_offset_seconds\": 3000, \"value\": {\"dependency_health\": \"degraded\"}}, {\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"runtime-native signal for checkout_payment_api: local_queue_state=healthy (go/http)\", \"timestamp_offset_seconds\": 2254, \"value\": {\"local_queue_state\": \"healthy\"}}, {\"component_id\": \"checkout_postgres\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_postgres: distractor_intensity=mild (go/http)\", \"timestamp_offset_seconds\": 499, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"runtime-native signal for checkout_checkout_api: change_scope=neighbor (go/http)\", \"timestamp_offset_seconds\": 3555, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_db5d6047e65ed9d2f64d",
+  "raw_response_hash": "7d9812ea901f2486a1cca782fb7f846daa8541b76a669a1178e134d79d143b12",
+  "usage": {
+    "input_tokens": 240,
+    "output_tokens": 94,
+    "total_tokens": 334
+  }
+}

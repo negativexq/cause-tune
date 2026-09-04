@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_postgres\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for web_cache_db_postgres: baseline_query_latency_ms=82; database_cpu=0.7601785879135331; query_latency_ms=4358.531 (python/fastapi)\", \"timestamp_offset_seconds\": 2282, \"value\": {\"baseline_query_latency_ms\": 82, \"database_cpu\": 0.7601785879135331, \"query_latency_ms\": 4358.531}}, {\"component_id\": \"web_cache_db_postgres\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"runtime-native signal for web_cache_db_postgres: connection_wait=normal (python/fastapi)\", \"timestamp_offset_seconds\": 2636, \"value\": {\"connection_wait\": \"normal\"}}]}",
+  "entry_id": "render_03c_29a5a4f29916def1c085",
+  "raw_response_hash": "558ff0688da94a4bb60f7f07ae0c831c9d623a7dd464163eb5d1ebc3b13794d0",
+  "usage": {
+    "input_tokens": 166,
+    "output_tokens": 43,
+    "total_tokens": 209
+  }
+}

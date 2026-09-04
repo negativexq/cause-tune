@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"async_worker_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for async_worker_api: cpu_limit=2.0; demand=3.3068; throttle_ratio=0.6618636910919928 (node/nestjs)\", \"timestamp_offset_seconds\": 2581, \"value\": {\"cpu_limit\": 2.0, \"demand\": 3.3068, \"throttle_ratio\": 0.6618636910919928}}, {\"component_id\": \"async_worker_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"runtime-native signal for async_worker_api: latency_effect=elevated (node/nestjs)\", \"timestamp_offset_seconds\": 2744, \"value\": {\"latency_effect\": \"elevated\"}}, {\"component_id\": \"async_worker_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"runtime-native signal for async_worker_api: throttle_ratio=0.6618636910919928 (node/nestjs)\", \"timestamp_offset_seconds\": 510, \"value\": {\"throttle_ratio\": 0.6618636910919928}}]}",
+  "entry_id": "render_03c_38f3c64d76dd3a3eb6ed",
+  "raw_response_hash": "d49eff54dc5d7f28434eae6e447da26e95044af44f37d35bed914897527adcd1",
+  "usage": {
+    "input_tokens": 193,
+    "output_tokens": 61,
+    "total_tokens": 254
+  }
+}

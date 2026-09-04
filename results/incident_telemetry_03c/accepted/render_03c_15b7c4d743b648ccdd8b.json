@@ -1,0 +1,76 @@
+{
+  "accepted_render_hash": "2692ce8f0afc918d42921210339fbe061717423cf750e675ffd0215b000f9cbf",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "b39396145232ee629bcf1e424c03bf917dcb9f22b781bea4faf0958c42f61d6b",
+  "entry_id": "render_03c_15b7c4d743b648ccdd8b",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "1819df1f885f3c5d4bdec2daafc48161b6b07e6bab9690ae7e17be4a61ee3d5c",
+  "render_seed": 848,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "b39396145232ee629bcf1e424c03bf917dcb9f22b781bea4faf0958c42f61d6b",
+    "observations": [
+      {
+        "component_id": "event_pipeline_consumer",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "enterprise observation for event_pipeline_consumer: incoming_rate=1136.3701; lag=177276; processing_rate=299.2513",
+        "timestamp": "2026-01-01T00:12:48Z",
+        "value": {
+          "incoming_rate": 1136.3701,
+          "lag": 177276,
+          "processing_rate": 299.2513
+        }
+      },
+      {
+        "component_id": "event_pipeline_consumer",
+        "evidence_id": "alert_001",
+        "kind": "alert",
+        "text": "enterprise observation for event_pipeline_consumer: consumer_health=degraded",
+        "timestamp": "2026-01-01T00:06:06Z",
+        "value": {
+          "consumer_health": "degraded"
+        }
+      },
+      {
+        "component_id": "event_pipeline_database",
+        "evidence_id": "metric_101",
+        "kind": "metric",
+        "text": "enterprise observation for event_pipeline_database: distractor_intensity=mild",
+        "timestamp": "2026-01-01T00:11:52Z",
+        "value": {
+          "distractor_intensity": "mild"
+        }
+      },
+      {
+        "component_id": "event_pipeline_kafka",
+        "evidence_id": "change_101",
+        "kind": "change",
+        "text": "enterprise observation for event_pipeline_kafka: change_scope=neighbor",
+        "timestamp": "2026-01-01T00:08:30Z",
+        "value": {
+          "change_scope": "neighbor"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "2692ce8f0afc918d42921210339fbe061717423cf750e675ffd0215b000f9cbf",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-verbose-enterprise-v1",
+      "provider": "fake",
+      "seed": 848
+    },
+    "scenario_id": "scenario_03b_bc321647a9eeeaf293ca",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "verbose_enterprise_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_bc321647a9eeeaf293ca",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

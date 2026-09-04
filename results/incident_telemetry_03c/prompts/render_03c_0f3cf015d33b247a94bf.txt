@@ -1,0 +1,73 @@
+You are a telemetry renderer, not an incident diagnostician.
+Return JSON with exactly one key, observations. Render only the declared semantic observations.
+Never give a diagnosis, root-cause label, remediation, answerability, or expected output.
+Never add evidence, change evidence IDs/components/kinds, make missing evidence reappear, or turn distractors into causal evidence.
+Rendering contract family: concise_ops_v1; style: compact operational records with short, precise messages.
+Runtime guidance: JVM/Spring/JDBC terminology.
+Provider input (semantic evidence only):
+{
+  "evidence": [
+    {
+      "causal_role": "MISSING_REQUIRED",
+      "evidence_id": "metric_001",
+      "may_be_omitted": true,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "cache_miss_ratio",
+          "value": 0.9005877373468961
+        },
+        {
+          "name": "database_read_rate",
+          "value": 8932.4716
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "checkout_redis",
+      "variation_family": "concise_ops_v1"
+    },
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "event_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "RUNTIME_EVENT"
+      ],
+      "required_attributes": [
+        {
+          "name": "hot_key_expiry",
+          "value": "shared"
+        }
+      ],
+      "semantic_kind": "runtime_event",
+      "source_component": "checkout_redis",
+      "variation_family": "concise_ops_v1"
+    },
+    {
+      "causal_role": "SUPPORTING",
+      "evidence_id": "metric_002",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "request_rate",
+          "value": 8175.4089
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "checkout_redis",
+      "variation_family": "concise_ops_v1"
+    }
+  ],
+  "prompt_template_version": "03c-concise-ops-v1",
+  "render_contract": "03c-telemetry-surface-v1",
+  "render_seed": 1068,
+  "renderer_family": "concise_ops_v1",
+  "runtime_id": "java_spring",
+  "runtime_instruction": "Prefer terse operator language and one observable fact per record.",
+  "style": "compact operational records with short, precise messages"
+}

@@ -1,0 +1,86 @@
+{
+  "accepted_render_hash": "f6ae499824a6bca53a84b07eef7dcfaa6026a6689832310918411e44074e2139",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "42cd62c2ccab0e0b616bf20b01f7b76a25d895de4c8c47e79a4deac049ddc076",
+  "entry_id": "render_03c_65f930746de3fade033e",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "ea4cabf42d260fa7de01aac397cf125c761f39575987c8dae0a51283208ca81b",
+  "render_seed": 934,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "42cd62c2ccab0e0b616bf20b01f7b76a25d895de4c8c47e79a4deac049ddc076",
+    "observations": [
+      {
+        "component_id": "multi_service_orders_api",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "runtime-native signal for multi_service_orders_api: cpu_limit=2.0; demand=3.6836; throttle_ratio=0.6089460121727713 (node/nestjs)",
+        "timestamp": "2026-01-01T00:18:01Z",
+        "value": {
+          "cpu_limit": 2.0,
+          "demand": 3.6836,
+          "throttle_ratio": 0.6089460121727713
+        }
+      },
+      {
+        "component_id": "multi_service_orders_api",
+        "evidence_id": "alert_001",
+        "kind": "alert",
+        "text": "runtime-native signal for multi_service_orders_api: latency_effect=elevated (node/nestjs)",
+        "timestamp": "2026-01-01T00:17:56Z",
+        "value": {
+          "latency_effect": "elevated"
+        }
+      },
+      {
+        "component_id": "multi_service_orders_api",
+        "evidence_id": "event_001",
+        "kind": "runtime_event",
+        "text": "runtime-native signal for multi_service_orders_api: throttle_ratio=0.6089460121727713 (node/nestjs)",
+        "timestamp": "2026-01-01T00:13:01Z",
+        "value": {
+          "throttle_ratio": 0.6089460121727713
+        }
+      },
+      {
+        "component_id": "multi_service_payment_api",
+        "evidence_id": "metric_101",
+        "kind": "metric",
+        "text": "runtime-native signal for multi_service_payment_api: distractor_intensity=mild (node/nestjs)",
+        "timestamp": "2026-01-01T00:00:15Z",
+        "value": {
+          "distractor_intensity": "mild"
+        }
+      },
+      {
+        "component_id": "multi_service_payment_api",
+        "evidence_id": "change_101",
+        "kind": "change",
+        "text": "runtime-native signal for multi_service_payment_api: change_scope=neighbor (node/nestjs)",
+        "timestamp": "2026-01-01T00:43:07Z",
+        "value": {
+          "change_scope": "neighbor"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "f6ae499824a6bca53a84b07eef7dcfaa6026a6689832310918411e44074e2139",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-ecosystem-native-v1",
+      "provider": "fake",
+      "seed": 934
+    },
+    "scenario_id": "scenario_03b_f11d0f6516eb0bc9e3ee",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "ecosystem_native_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_f11d0f6516eb0bc9e3ee",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

@@ -1,0 +1,60 @@
+You are a telemetry renderer, not an incident diagnostician.
+Return JSON with exactly one key, observations. Render only the declared semantic observations.
+Never give a diagnosis, root-cause label, remediation, answerability, or expected output.
+Never add evidence, change evidence IDs/components/kinds, make missing evidence reappear, or turn distractors into causal evidence.
+Rendering contract family: concise_ops_v1; style: compact operational records with short, precise messages.
+Runtime guidance: Python/FastAPI request and worker terminology.
+Provider input (semantic evidence only):
+{
+  "evidence": [
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "metric_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "query_latency_ms",
+          "value": 4358.531
+        },
+        {
+          "name": "baseline_query_latency_ms",
+          "value": 82
+        },
+        {
+          "name": "database_cpu",
+          "value": 0.7601785879135331
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "web_cache_db_postgres",
+      "variation_family": "concise_ops_v1"
+    },
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "log_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "APPLICATION_LOG"
+      ],
+      "required_attributes": [
+        {
+          "name": "connection_wait",
+          "value": "normal"
+        }
+      ],
+      "semantic_kind": "application_log",
+      "source_component": "web_cache_db_postgres",
+      "variation_family": "concise_ops_v1"
+    }
+  ],
+  "prompt_template_version": "03c-concise-ops-v1",
+  "render_contract": "03c-telemetry-surface-v1",
+  "render_seed": 354,
+  "renderer_family": "concise_ops_v1",
+  "runtime_id": "python_fastapi",
+  "runtime_instruction": "Prefer terse operator language and one observable fact per record.",
+  "style": "compact operational records with short, precise messages"
+}

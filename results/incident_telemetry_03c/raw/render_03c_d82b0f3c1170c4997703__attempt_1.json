@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for checkout_checkout_api: memory_limit=4096; working_set=7520\", \"timestamp_offset_seconds\": 2593, \"value\": {\"memory_limit\": 4096, \"working_set\": 7520}}, {\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"ops signal for checkout_checkout_api: restart_count=4; termination_reason=OOMKilled\", \"timestamp_offset_seconds\": 3505, \"value\": {\"restart_count\": 4, \"termination_reason\": \"OOMKilled\"}}, {\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"ops signal for checkout_checkout_api: latency_effect=elevated\", \"timestamp_offset_seconds\": 3513, \"value\": {\"latency_effect\": \"elevated\"}}, {\"component_id\": \"checkout_frontend\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"ops signal for checkout_frontend: distractor_intensity=mild\", \"timestamp_offset_seconds\": 26, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"ops signal for checkout_redis: change_scope=neighbor\", \"timestamp_offset_seconds\": 1905, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_d82b0f3c1170c4997703",
+  "raw_response_hash": "3de192a6b381c04969ea236c48842f6897cb5e0a663e1ddb89d2e701280162ec",
+  "usage": {
+    "input_tokens": 254,
+    "output_tokens": 92,
+    "total_tokens": 346
+  }
+}

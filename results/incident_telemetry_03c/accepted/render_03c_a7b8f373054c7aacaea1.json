@@ -1,0 +1,65 @@
+{
+  "accepted_render_hash": "3b4d9eec4b884f0bd5270b492d9d4f611f1e1841ecefb19a621194b392b54435",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "dca31f5ec31d4981767e275d97f93fce848846eb2a5875fc6582b170aec3c6b4",
+  "entry_id": "render_03c_a7b8f373054c7aacaea1",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "28ad9578e72be81f5ef97e860f7035caa12e5698d4ea0231f0a0374f0ca7d6ed",
+  "render_seed": 372,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "dca31f5ec31d4981767e275d97f93fce848846eb2a5875fc6582b170aec3c6b4",
+    "observations": [
+      {
+        "component_id": "checkout_payment_api",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "enterprise observation for checkout_payment_api: client_deadline_ms=2000; dependency_latency_ms=6799.4095",
+        "timestamp": "2026-01-01T00:30:51Z",
+        "value": {
+          "client_deadline_ms": 2000,
+          "dependency_latency_ms": 6799.4095
+        }
+      },
+      {
+        "component_id": "checkout_payment_api",
+        "evidence_id": "alert_001",
+        "kind": "alert",
+        "text": "enterprise observation for checkout_payment_api: dependency_health=degraded",
+        "timestamp": "2026-01-01T00:25:29Z",
+        "value": {
+          "dependency_health": "degraded"
+        }
+      },
+      {
+        "component_id": "checkout_payment_api",
+        "evidence_id": "dependency_001",
+        "kind": "dependency_health",
+        "text": "enterprise observation for checkout_payment_api: local_queue_state=healthy",
+        "timestamp": "2026-01-01T00:47:43Z",
+        "value": {
+          "local_queue_state": "healthy"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "3b4d9eec4b884f0bd5270b492d9d4f611f1e1841ecefb19a621194b392b54435",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-verbose-enterprise-v1",
+      "provider": "fake",
+      "seed": 372
+    },
+    "scenario_id": "scenario_03b_f936b8d7c4852e412c53",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "verbose_enterprise_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_f936b8d7c4852e412c53",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

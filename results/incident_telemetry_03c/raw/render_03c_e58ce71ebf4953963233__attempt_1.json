@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"change_001\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"runtime-native signal for web_cache_db_api: feature_flag_state=enabled (python/fastapi)\", \"timestamp_offset_seconds\": 2377, \"value\": {\"feature_flag_state\": \"enabled\"}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"runtime-native signal for web_cache_db_api: dependency_health=healthy (python/fastapi)\", \"timestamp_offset_seconds\": 3472, \"value\": {\"dependency_health\": \"healthy\"}}]}",
+  "entry_id": "render_03c_e58ce71ebf4953963233",
+  "raw_response_hash": "a7ca81b3ba456e2b0d0a5164846f6c49bd6682d1c9e3db3269e3f9a8b5540795",
+  "usage": {
+    "input_tokens": 187,
+    "output_tokens": 37,
+    "total_tokens": 224
+  }
+}

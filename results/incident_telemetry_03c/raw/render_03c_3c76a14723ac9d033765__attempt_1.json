@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_postgres\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for web_cache_db_postgres: baseline_query_latency_ms=82; database_cpu=0.7601785879135331; query_latency_ms=4358.531\", \"timestamp_offset_seconds\": 1315, \"value\": {\"baseline_query_latency_ms\": 82, \"database_cpu\": 0.7601785879135331, \"query_latency_ms\": 4358.531}}, {\"component_id\": \"web_cache_db_postgres\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"ops signal for web_cache_db_postgres: connection_wait=normal\", \"timestamp_offset_seconds\": 1934, \"value\": {\"connection_wait\": \"normal\"}}]}",
+  "entry_id": "render_03c_3c76a14723ac9d033765",
+  "raw_response_hash": "08f44dcdc2c3dcafad4317a07631cf4cf3865d52645a0c5c8f89975c7a5f095a",
+  "usage": {
+    "input_tokens": 173,
+    "output_tokens": 41,
+    "total_tokens": 214
+  }
+}

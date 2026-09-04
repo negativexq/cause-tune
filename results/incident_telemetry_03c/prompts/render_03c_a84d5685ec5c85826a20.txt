@@ -1,0 +1,73 @@
+You are a telemetry renderer, not an incident diagnostician.
+Return JSON with exactly one key, observations. Render only the declared semantic observations.
+Never give a diagnosis, root-cause label, remediation, answerability, or expected output.
+Never add evidence, change evidence IDs/components/kinds, make missing evidence reappear, or turn distractors into causal evidence.
+Rendering contract family: ecosystem_native_v1; style: runtime-native telemetry terminology.
+Runtime guidance: idiomatic Go HTTP/client terminology.
+Provider input (semantic evidence only):
+{
+  "evidence": [
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "metric_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "dependency_latency_ms",
+          "value": 6799.4095
+        },
+        {
+          "name": "client_deadline_ms",
+          "value": 2000
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "checkout_payment_api",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "alert_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "ALERT"
+      ],
+      "required_attributes": [
+        {
+          "name": "dependency_health",
+          "value": "degraded"
+        }
+      ],
+      "semantic_kind": "alert",
+      "source_component": "checkout_payment_api",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "SUPPORTING",
+      "evidence_id": "dependency_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "DEPENDENCY_HEALTH"
+      ],
+      "required_attributes": [
+        {
+          "name": "local_queue_state",
+          "value": "healthy"
+        }
+      ],
+      "semantic_kind": "dependency_health",
+      "source_component": "checkout_payment_api",
+      "variation_family": "ecosystem_native_v1"
+    }
+  ],
+  "prompt_template_version": "03c-ecosystem-native-v1",
+  "render_contract": "03c-telemetry-surface-v1",
+  "render_seed": 373,
+  "renderer_family": "ecosystem_native_v1",
+  "runtime_id": "go_http",
+  "runtime_instruction": "Use terminology appropriate to the supplied runtime without naming a diagnosis.",
+  "style": "runtime-native telemetry terminology"
+}

@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"change_001\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"enterprise observation for web_cache_db_api: feature_flag_state=enabled\", \"timestamp_offset_seconds\": 3535, \"value\": {\"feature_flag_state\": \"enabled\"}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"enterprise observation for web_cache_db_api: dependency_health=healthy\", \"timestamp_offset_seconds\": 2170, \"value\": {\"dependency_health\": \"healthy\"}}]}",
+  "entry_id": "render_03c_1b292584b6436de6dccc",
+  "raw_response_hash": "0de6f6541385ccbd5c1d446a2612daa33d9d0d08feb3c5e945c51cc33ef686dc",
+  "usage": {
+    "input_tokens": 193,
+    "output_tokens": 35,
+    "total_tokens": 228
+  }
+}

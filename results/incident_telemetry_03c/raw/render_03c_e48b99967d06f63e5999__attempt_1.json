@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_redis\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_redis: cache_miss_ratio=0.9289951945221959; database_read_rate=8766.1398 (go/http)\", \"timestamp_offset_seconds\": 2439, \"value\": {\"cache_miss_ratio\": 0.9289951945221959, \"database_read_rate\": 8766.1398}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"runtime-native signal for checkout_redis: hot_key_expiry=shared (go/http)\", \"timestamp_offset_seconds\": 1940, \"value\": {\"hot_key_expiry\": \"shared\"}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"metric_002\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_redis: request_rate=8194.4066 (go/http)\", \"timestamp_offset_seconds\": 3038, \"value\": {\"request_rate\": 8194.4066}}]}",
+  "entry_id": "render_03c_e48b99967d06f63e5999",
+  "raw_response_hash": "28c2a499e767d99708688770e3ff1ee4f7c23360fb10549bd214a4a8b8411eca",
+  "usage": {
+    "input_tokens": 186,
+    "output_tokens": 58,
+    "total_tokens": 244
+  }
+}

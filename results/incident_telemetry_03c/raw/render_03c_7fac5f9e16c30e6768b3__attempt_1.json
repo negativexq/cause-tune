@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_db_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for web_db_api: blocked_requests=108; busy_threads=64; thread_limit=64 (python/fastapi)\", \"timestamp_offset_seconds\": 626, \"value\": {\"blocked_requests\": 108, \"busy_threads\": 64, \"thread_limit\": 64}}, {\"component_id\": \"web_db_api\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"runtime-native signal for web_db_api: cpu_state=moderate (python/fastapi)\", \"timestamp_offset_seconds\": 1336, \"value\": {\"cpu_state\": \"moderate\"}}]}",
+  "entry_id": "render_03c_7fac5f9e16c30e6768b3",
+  "raw_response_hash": "3111ce3c2172cdb4a19bd898a48484893684af3f6608d8f1769bebad361755a2",
+  "usage": {
+    "input_tokens": 166,
+    "output_tokens": 43,
+    "total_tokens": 209
+  }
+}

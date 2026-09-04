@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_redis\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"ops signal for checkout_redis: hot_key_expiry=shared\", \"timestamp_offset_seconds\": 166, \"value\": {\"hot_key_expiry\": \"shared\"}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"metric_002\", \"kind\": \"METRIC\", \"text\": \"ops signal for checkout_redis: request_rate=8175.4089\", \"timestamp_offset_seconds\": 2191, \"value\": {\"request_rate\": 8175.4089}}]}",
+  "entry_id": "render_03c_0f3cf015d33b247a94bf",
+  "raw_response_hash": "872c0bd04d4583e6b76ea4a9688afc02d6425995dd10c9185b075faf455a6dec",
+  "usage": {
+    "input_tokens": 191,
+    "output_tokens": 35,
+    "total_tokens": 226
+  }
+}

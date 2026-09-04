@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for web_cache_db_api: available_replicas=2; desired_replicas=8; traffic_rate=8547.8363\", \"timestamp_offset_seconds\": 2228, \"value\": {\"available_replicas\": 2, \"desired_replicas\": 8, \"traffic_rate\": 8547.8363}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"ops signal for web_cache_db_api: capacity_state=exhausted\", \"timestamp_offset_seconds\": 48, \"value\": {\"capacity_state\": \"exhausted\"}}, {\"component_id\": \"web_cache_db_frontend\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"ops signal for web_cache_db_frontend: distractor_intensity=mild\", \"timestamp_offset_seconds\": 1184, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"web_cache_db_postgres\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"ops signal for web_cache_db_postgres: change_scope=neighbor\", \"timestamp_offset_seconds\": 2763, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_5e12bf681d51b938b78b",
+  "raw_response_hash": "c56735876c004f4c81f20f3ba41774e5cf9e2e0d54061521a265ee7d81f64667",
+  "usage": {
+    "input_tokens": 224,
+    "output_tokens": 75,
+    "total_tokens": 299
+  }
+}

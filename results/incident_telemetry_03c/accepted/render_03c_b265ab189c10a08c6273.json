@@ -1,0 +1,86 @@
+{
+  "accepted_render_hash": "e9a4fafe813e7324b8576f77b3b3b4d2a337b5237f3d21d94aab7a564b0742f6",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "5bf1ac4298b759ece0bd7c0117749e866a36b9edd2ea71e3dccf652e8779d5af",
+  "entry_id": "render_03c_b265ab189c10a08c6273",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "7f9d67893ff987cf2c1b54cb2a2907ec986b31a6a3a46d1407c2f810be6456f7",
+  "render_seed": 747,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "5bf1ac4298b759ece0bd7c0117749e866a36b9edd2ea71e3dccf652e8779d5af",
+    "observations": [
+      {
+        "component_id": "web_db_postgres",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "runtime-native signal for web_db_postgres: active_connections=40; pool_size=40; waiting_requests=179 (go/http)",
+        "timestamp": "2026-01-01T00:48:30Z",
+        "value": {
+          "active_connections": 40,
+          "pool_size": 40,
+          "waiting_requests": 179
+        }
+      },
+      {
+        "component_id": "web_db_postgres",
+        "evidence_id": "log_001",
+        "kind": "application_log",
+        "text": "runtime-native signal for web_db_postgres: acquisition_timeout_rate=0.732687054596746 (go/http)",
+        "timestamp": "2026-01-01T00:14:21Z",
+        "value": {
+          "acquisition_timeout_rate": 0.732687054596746
+        }
+      },
+      {
+        "component_id": "web_db_postgres",
+        "evidence_id": "dependency_001",
+        "kind": "dependency_health",
+        "text": "runtime-native signal for web_db_postgres: database_health=healthy (go/http)",
+        "timestamp": "2026-01-01T00:58:07Z",
+        "value": {
+          "database_health": "healthy"
+        }
+      },
+      {
+        "component_id": "web_db_frontend",
+        "evidence_id": "metric_101",
+        "kind": "metric",
+        "text": "runtime-native signal for web_db_frontend: distractor_intensity=mild (go/http)",
+        "timestamp": "2026-01-01T00:44:58Z",
+        "value": {
+          "distractor_intensity": "mild"
+        }
+      },
+      {
+        "component_id": "web_db_api",
+        "evidence_id": "change_101",
+        "kind": "change",
+        "text": "runtime-native signal for web_db_api: change_scope=neighbor (go/http)",
+        "timestamp": "2026-01-01T00:44:11Z",
+        "value": {
+          "change_scope": "neighbor"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "e9a4fafe813e7324b8576f77b3b3b4d2a337b5237f3d21d94aab7a564b0742f6",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-ecosystem-native-v1",
+      "provider": "fake",
+      "seed": 747
+    },
+    "scenario_id": "scenario_03b_fa9046b7c60fd6e745c6",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "ecosystem_native_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_fa9046b7c60fd6e745c6",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

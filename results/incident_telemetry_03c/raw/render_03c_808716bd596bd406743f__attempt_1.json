@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"ops signal for checkout_checkout_api: cpu_limit=2.0; demand=3.2118; throttle_ratio=0.6292730693609814\", \"timestamp_offset_seconds\": 2443, \"value\": {\"cpu_limit\": 2.0, \"demand\": 3.2118, \"throttle_ratio\": 0.6292730693609814}}, {\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"ops signal for checkout_checkout_api: latency_effect=elevated\", \"timestamp_offset_seconds\": 430, \"value\": {\"latency_effect\": \"elevated\"}}, {\"component_id\": \"checkout_checkout_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"ops signal for checkout_checkout_api: throttle_ratio=0.6292730693609814\", \"timestamp_offset_seconds\": 948, \"value\": {\"throttle_ratio\": 0.6292730693609814}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"ops signal for checkout_redis: distractor_intensity=mild\", \"timestamp_offset_seconds\": 2880, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"checkout_frontend\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"ops signal for checkout_frontend: change_scope=neighbor\", \"timestamp_offset_seconds\": 1519, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_808716bd596bd406743f",
+  "raw_response_hash": "05e970951dc88d8b0f4c41cac4b8b7655b287a56ca988a2747ba6c1504f5e651",
+  "usage": {
+    "input_tokens": 254,
+    "output_tokens": 92,
+    "total_tokens": 346
+  }
+}

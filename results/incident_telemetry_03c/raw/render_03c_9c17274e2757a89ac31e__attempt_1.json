@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_redis\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for checkout_redis: cache_miss_ratio=0.9289951945221959; database_read_rate=8766.1398\", \"timestamp_offset_seconds\": 2476, \"value\": {\"cache_miss_ratio\": 0.9289951945221959, \"database_read_rate\": 8766.1398}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"enterprise observation for checkout_redis: hot_key_expiry=shared\", \"timestamp_offset_seconds\": 2512, \"value\": {\"hot_key_expiry\": \"shared\"}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"metric_002\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for checkout_redis: request_rate=8194.4066\", \"timestamp_offset_seconds\": 2267, \"value\": {\"request_rate\": 8194.4066}}]}",
+  "entry_id": "render_03c_9c17274e2757a89ac31e",
+  "raw_response_hash": "e37ad62f739dfd7ac2519b6ecd3d9ed16da26c941cbc342a5ee5b7c445c25e5c",
+  "usage": {
+    "input_tokens": 192,
+    "output_tokens": 55,
+    "total_tokens": 247
+  }
+}

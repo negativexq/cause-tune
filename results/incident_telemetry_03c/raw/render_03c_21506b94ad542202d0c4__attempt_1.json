@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_redis\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_redis: cache_miss_ratio=0.9362484937487748; database_read_rate=8725.9836 (python/django)\", \"timestamp_offset_seconds\": 134, \"value\": {\"cache_miss_ratio\": 0.9362484937487748, \"database_read_rate\": 8725.9836}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"runtime-native signal for checkout_redis: hot_key_expiry=shared (python/django)\", \"timestamp_offset_seconds\": 1442, \"value\": {\"hot_key_expiry\": \"shared\"}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"metric_002\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_redis: request_rate=8382.2774 (python/django)\", \"timestamp_offset_seconds\": 1429, \"value\": {\"request_rate\": 8382.2774}}]}",
+  "entry_id": "render_03c_21506b94ad542202d0c4",
+  "raw_response_hash": "e8e1bd2eaa8606d4046cccea8aa0f50def13e70bc115cf9f8a2836bc8104bb29",
+  "usage": {
+    "input_tokens": 187,
+    "output_tokens": 58,
+    "total_tokens": 245
+  }
+}

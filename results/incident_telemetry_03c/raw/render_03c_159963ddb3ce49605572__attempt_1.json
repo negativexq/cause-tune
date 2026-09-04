@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"multi_service_orders_api\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"enterprise observation for multi_service_orders_api: cpu_state=moderate\", \"timestamp_offset_seconds\": 2656, \"value\": {\"cpu_state\": \"moderate\"}}]}",
+  "entry_id": "render_03c_159963ddb3ce49605572",
+  "raw_response_hash": "1ca67eeb202dc9411bfbc2b73fe13adbdf653facb3b4ca5c80b0d256ea5fb0db",
+  "usage": {
+    "input_tokens": 172,
+    "output_tokens": 18,
+    "total_tokens": 190
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"event_pipeline_consumer\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for event_pipeline_consumer: incoming_rate=1136.3701; lag=177276; processing_rate=299.2513\", \"timestamp_offset_seconds\": 768, \"value\": {\"incoming_rate\": 1136.3701, \"lag\": 177276, \"processing_rate\": 299.2513}}, {\"component_id\": \"event_pipeline_consumer\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"enterprise observation for event_pipeline_consumer: consumer_health=degraded\", \"timestamp_offset_seconds\": 366, \"value\": {\"consumer_health\": \"degraded\"}}, {\"component_id\": \"event_pipeline_database\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for event_pipeline_database: distractor_intensity=mild\", \"timestamp_offset_seconds\": 712, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"event_pipeline_kafka\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"enterprise observation for event_pipeline_kafka: change_scope=neighbor\", \"timestamp_offset_seconds\": 510, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_15b7c4d743b648ccdd8b",
+  "raw_response_hash": "1819df1f885f3c5d4bdec2daafc48161b6b07e6bab9690ae7e17be4a61ee3d5c",
+  "usage": {
+    "input_tokens": 223,
+    "output_tokens": 75,
+    "total_tokens": 298
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "accepted_render_hash": "bedbe9993a9838a510618d5b22e43d0e568fa5cdd3af6c49ffe7cc567d6dfc5b",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "acf21301cb38b51db62ba43877296d2b411aa02db481c038766b47622b168cf3",
+  "entry_id": "render_03c_ba48a589b1f7c64f0eed",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "98f600ee0938b54cdddf4910cb09d22c2c8bbff838eee0da096c85b9f73d6f08",
+  "render_seed": 389,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "acf21301cb38b51db62ba43877296d2b411aa02db481c038766b47622b168cf3",
+    "observations": [
+      {
+        "component_id": "multi_service_payment_api",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "enterprise observation for multi_service_payment_api: lookup_latency_ms=2382.0598; normal_lookup_latency_ms=3",
+        "timestamp": "2026-01-01T00:29:42Z",
+        "value": {
+          "lookup_latency_ms": 2382.0598,
+          "normal_lookup_latency_ms": 3
+        }
+      },
+      {
+        "component_id": "multi_service_payment_api",
+        "evidence_id": "log_001",
+        "kind": "application_log",
+        "text": "enterprise observation for multi_service_payment_api: negative_answer_rate=0.8031990777987089",
+        "timestamp": "2026-01-01T00:11:05Z",
+        "value": {
+          "negative_answer_rate": 0.8031990777987089
+        }
+      },
+      {
+        "component_id": "multi_service_payment_api",
+        "evidence_id": "dependency_001",
+        "kind": "dependency_health",
+        "text": "enterprise observation for multi_service_payment_api: existing_connections=healthy",
+        "timestamp": "2026-01-01T00:14:47Z",
+        "value": {
+          "existing_connections": "healthy"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "bedbe9993a9838a510618d5b22e43d0e568fa5cdd3af6c49ffe7cc567d6dfc5b",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-verbose-enterprise-v1",
+      "provider": "fake",
+      "seed": 389
+    },
+    "scenario_id": "scenario_03b_5296a4bd8a89399e4344",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "verbose_enterprise_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_5296a4bd8a89399e4344",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

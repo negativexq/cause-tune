@@ -58,7 +58,7 @@ specialization are complete.
 
 ## Experiment 03 — Causal Telemetry Incident Specialization
 
-### 03A — Frozen contract and ontology — contract frozen
+### 03A — Frozen experimental contract — complete / contract frozen
 
 The typed ontology, canonical scenario contract, telemetry and diagnostic output
 schemas, grouped split protocol, provenance fingerprints, and fail-closed audit
@@ -66,7 +66,7 @@ foundation are implemented. No dataset, provider rendering, model evaluation,
 or training evidence exists yet. Experiment 02 is not reused as an Experiment
 03 selection or test set.
 
-### 03B — Deterministic causal scenario engine — complete
+### 03B — Deterministic causal scenario engine — complete / supporting infrastructure
 
 The typed deterministic engine now generates authoritative canonical scenarios
 from a bounded declarative archetype catalog, validates causal state and
@@ -75,17 +75,36 @@ pre-render reference corpus with grouped split metadata. This milestone has no
 LLM-rendered telemetry, model evaluation, training, or model-performance
 evidence. See `docs/experiment-03/03b-causal-scenario-engine.md`.
 
+### Renderer Prototype R0 — implemented / live provider not run
+
+The provider-neutral RenderPlan, bounded renderer families, opt-in
+OpenAI-compatible adapter, fake-provider dry-run, leakage/semantic validation,
+retry policy, and raw/accepted/rejected artifacts are retained as optional
+controlled-augmentation infrastructure. No live provider was run and no model
+performance evidence exists. R0 is not the current scientific critical path.
+
+### 03C — Cloud-OpsBench adoption and corpus audit — complete
+
+Cloud-OpsBench is the selected primary empirical fault-injection corpus. This
+milestone adds a pinned source registry, read-only census, native taxonomy
+preservation/mapping report, modality and golden-trajectory audit, context-size
+audit, leakage policy, and candidate split feasibility analysis. It does not
+vendor the dataset, freeze the final split, train a model, or call a provider.
+RCAEval is reserved as a candidate independent cross-dataset benchmark for
+03H and is not ingested into training. The pinned real corpus audit observed
+754/754 cases and matched the documented 550/204 system counts and 57 native
+fault types. See `docs/experiment-03/03c-cloudopsbench-adoption.md`.
+
 ### Planned sequence
 
-- 03C — LLM telemetry rendering and dataset generation
-- 03D — Dataset integrity/leakage audit and freeze
+- 03D — Case-level split design, normalization, contamination audit and corpus freeze
 - 03E — Untouched base-model capability-gap screening
 - 03F — QLoRA specialization
 - 03G — Controlled data/training ablations
-- 03H — Sealed final holdout evaluation
+- 03H — Protected in-domain evaluation plus external cross-dataset generalization
 
 Model selection belongs to the capability-gap phase. No model is selected for
-Experiment 03 in 03A.
+Experiment 03 yet; selection belongs to 03E after the dataset is frozen.
 
 ## Focused optimization — later
 

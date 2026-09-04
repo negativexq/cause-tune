@@ -1,0 +1,60 @@
+You are a telemetry renderer, not an incident diagnostician.
+Return JSON with exactly one key, observations. Render only the declared semantic observations.
+Never give a diagnosis, root-cause label, remediation, answerability, or expected output.
+Never add evidence, change evidence IDs/components/kinds, make missing evidence reappear, or turn distractors into causal evidence.
+Rendering contract family: ecosystem_native_v1; style: runtime-native telemetry terminology.
+Runtime guidance: idiomatic Go HTTP/client terminology.
+Provider input (semantic evidence only):
+{
+  "evidence": [
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "metric_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "desired_replicas",
+          "value": 8
+        },
+        {
+          "name": "available_replicas",
+          "value": 2
+        },
+        {
+          "name": "traffic_rate",
+          "value": 9438.9119
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "web_cache_db_api",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "alert_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "ALERT"
+      ],
+      "required_attributes": [
+        {
+          "name": "capacity_state",
+          "value": "exhausted"
+        }
+      ],
+      "semantic_kind": "alert",
+      "source_component": "web_cache_db_api",
+      "variation_family": "ecosystem_native_v1"
+    }
+  ],
+  "prompt_template_version": "03c-ecosystem-native-v1",
+  "render_contract": "03c-telemetry-surface-v1",
+  "render_seed": 492,
+  "renderer_family": "ecosystem_native_v1",
+  "runtime_id": "go_http",
+  "runtime_instruction": "Use terminology appropriate to the supplied runtime without naming a diagnosis.",
+  "style": "runtime-native telemetry terminology"
+}

@@ -1,0 +1,76 @@
+{
+  "accepted_render_hash": "1aa49efda70b4eda1416bbb86a0db3c25e9db2ce4e3d71c0b3f926b85947f528",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "c33b97455edfb99ab01321a70f76e3938d3c3dea71ed2c9f11fee68570895555",
+  "entry_id": "render_03c_c5482293a027cdfcaa41",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "543f976c90fea160197d6ae489b4296d7f8a12db762f7016c6f4ea201cd616ac",
+  "render_seed": 764,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "c33b97455edfb99ab01321a70f76e3938d3c3dea71ed2c9f11fee68570895555",
+    "observations": [
+      {
+        "component_id": "web_cache_db_postgres",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "runtime-native signal for web_cache_db_postgres: baseline_query_latency_ms=82; database_cpu=0.7924617574665676; query_latency_ms=4435.0228 (node/nestjs)",
+        "timestamp": "2026-01-01T00:28:54Z",
+        "value": {
+          "baseline_query_latency_ms": 82,
+          "database_cpu": 0.7924617574665676,
+          "query_latency_ms": 4435.0228
+        }
+      },
+      {
+        "component_id": "web_cache_db_postgres",
+        "evidence_id": "log_001",
+        "kind": "application_log",
+        "text": "runtime-native signal for web_cache_db_postgres: connection_wait=normal (node/nestjs)",
+        "timestamp": "2026-01-01T00:16:00Z",
+        "value": {
+          "connection_wait": "normal"
+        }
+      },
+      {
+        "component_id": "web_cache_db_api",
+        "evidence_id": "metric_101",
+        "kind": "metric",
+        "text": "runtime-native signal for web_cache_db_api: distractor_intensity=mild (node/nestjs)",
+        "timestamp": "2026-01-01T00:16:40Z",
+        "value": {
+          "distractor_intensity": "mild"
+        }
+      },
+      {
+        "component_id": "web_cache_db_redis",
+        "evidence_id": "change_101",
+        "kind": "change",
+        "text": "runtime-native signal for web_cache_db_redis: change_scope=neighbor (node/nestjs)",
+        "timestamp": "2026-01-01T00:42:33Z",
+        "value": {
+          "change_scope": "neighbor"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "1aa49efda70b4eda1416bbb86a0db3c25e9db2ce4e3d71c0b3f926b85947f528",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-ecosystem-native-v1",
+      "provider": "fake",
+      "seed": 764
+    },
+    "scenario_id": "scenario_03b_40eb6667501cf631ce59",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "ecosystem_native_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_40eb6667501cf631ce59",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

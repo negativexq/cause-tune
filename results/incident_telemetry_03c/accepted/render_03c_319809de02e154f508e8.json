@@ -1,0 +1,85 @@
+{
+  "accepted_render_hash": "c8c51e40191585853057142d56439b84269375c6cbdc5307eedaf3d7792ad105",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "5a9591f8e6d57317eaf0ddabc0f7d3e6a31e72c2f594fc8e5511eeb63297818e",
+  "entry_id": "render_03c_319809de02e154f508e8",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "5ac0425e277539022bdbb63d961e2cd4a4f268e39864fba4b53fd8d589a823ea",
+  "render_seed": 832,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "5a9591f8e6d57317eaf0ddabc0f7d3e6a31e72c2f594fc8e5511eeb63297818e",
+    "observations": [
+      {
+        "component_id": "web_cache_db_api",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "runtime-native signal for web_cache_db_api: baseline_error_rate=0.004; error_rate=0.16824961730815846 (go/http)",
+        "timestamp": "2026-01-01T00:58:18Z",
+        "value": {
+          "baseline_error_rate": 0.004,
+          "error_rate": 0.16824961730815846
+        }
+      },
+      {
+        "component_id": "web_cache_db_api",
+        "evidence_id": "change_001",
+        "kind": "change",
+        "text": "runtime-native signal for web_cache_db_api: feature_flag_state=enabled (go/http)",
+        "timestamp": "2026-01-01T00:32:53Z",
+        "value": {
+          "feature_flag_state": "enabled"
+        }
+      },
+      {
+        "component_id": "web_cache_db_api",
+        "evidence_id": "dependency_001",
+        "kind": "dependency_health",
+        "text": "runtime-native signal for web_cache_db_api: dependency_health=healthy (go/http)",
+        "timestamp": "2026-01-01T00:47:01Z",
+        "value": {
+          "dependency_health": "healthy"
+        }
+      },
+      {
+        "component_id": "web_cache_db_postgres",
+        "evidence_id": "metric_101",
+        "kind": "metric",
+        "text": "runtime-native signal for web_cache_db_postgres: distractor_intensity=mild (go/http)",
+        "timestamp": "2026-01-01T00:52:54Z",
+        "value": {
+          "distractor_intensity": "mild"
+        }
+      },
+      {
+        "component_id": "web_cache_db_frontend",
+        "evidence_id": "change_101",
+        "kind": "change",
+        "text": "runtime-native signal for web_cache_db_frontend: change_scope=neighbor (go/http)",
+        "timestamp": "2026-01-01T00:47:16Z",
+        "value": {
+          "change_scope": "neighbor"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "c8c51e40191585853057142d56439b84269375c6cbdc5307eedaf3d7792ad105",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-ecosystem-native-v1",
+      "provider": "fake",
+      "seed": 832
+    },
+    "scenario_id": "scenario_03b_65c03ecd4e6e7c37033f",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "ecosystem_native_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_65c03ecd4e6e7c37033f",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

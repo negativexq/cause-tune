@@ -1,0 +1,35 @@
+{
+  "experiment": "03C",
+  "status": "IMPLEMENTED_NOT_RUN_LIVE",
+  "source_reference_seed": 302,
+  "render_seed": 303,
+  "provider_config_id": "fake_renderer_v1",
+  "pilot": {
+    "max_attempts": 3,
+    "excluded_splits": ["SEALED_HOLDOUT"],
+    "renderer_families": [
+      "concise_ops_v1",
+      "verbose_enterprise_v1",
+      "ecosystem_native_v1"
+    ]
+  },
+  "fake_provider": {
+    "model_identifier": "fake-telemetry-renderer-v1",
+    "temperature": 0.0,
+    "max_output_tokens": 2048
+  },
+  "live_provider": {
+    "config_id": "openai_compatible_live_v1",
+    "adapter": "openai_compatible",
+    "model_identifier_env": "CAUSETUNE_03C_MODEL",
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url_env": "OPENAI_BASE_URL",
+    "timeout_seconds": 60.0,
+    "max_retries": 2,
+    "temperature": 0.0,
+    "max_output_tokens": 2048
+  },
+  "network_calls_allowed_by_default": false,
+  "training_allowed": false,
+  "model_evaluation_allowed": false
+}

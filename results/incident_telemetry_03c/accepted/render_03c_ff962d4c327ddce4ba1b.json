@@ -1,0 +1,85 @@
+{
+  "accepted_render_hash": "101f2de3a3e717fb8e436015c3b4ee288a3315ed81311366d3201de13769b1fe",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "a9992ee8c1e0f646d150bb1282c359e7820bd7c7a9acc670319fb38861782b50",
+  "entry_id": "render_03c_ff962d4c327ddce4ba1b",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "fd4bbcc5d5dfd74666e54b1b5c2ab8f6365cdca2588b9184af5631684cb87746",
+  "render_seed": 796,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "a9992ee8c1e0f646d150bb1282c359e7820bd7c7a9acc670319fb38861782b50",
+    "observations": [
+      {
+        "component_id": "multi_service_payment_api",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "ops signal for multi_service_payment_api: lookup_latency_ms=2370.2351; normal_lookup_latency_ms=3",
+        "timestamp": "2026-01-01T00:40:17Z",
+        "value": {
+          "lookup_latency_ms": 2370.2351,
+          "normal_lookup_latency_ms": 3
+        }
+      },
+      {
+        "component_id": "multi_service_payment_api",
+        "evidence_id": "log_001",
+        "kind": "application_log",
+        "text": "ops signal for multi_service_payment_api: negative_answer_rate=0.8363275822965699",
+        "timestamp": "2026-01-01T00:28:03Z",
+        "value": {
+          "negative_answer_rate": 0.8363275822965699
+        }
+      },
+      {
+        "component_id": "multi_service_payment_api",
+        "evidence_id": "dependency_001",
+        "kind": "dependency_health",
+        "text": "ops signal for multi_service_payment_api: existing_connections=healthy",
+        "timestamp": "2026-01-01T00:43:55Z",
+        "value": {
+          "existing_connections": "healthy"
+        }
+      },
+      {
+        "component_id": "multi_service_gateway",
+        "evidence_id": "metric_101",
+        "kind": "metric",
+        "text": "ops signal for multi_service_gateway: distractor_intensity=mild",
+        "timestamp": "2026-01-01T00:34:14Z",
+        "value": {
+          "distractor_intensity": "mild"
+        }
+      },
+      {
+        "component_id": "multi_service_inventory_api",
+        "evidence_id": "change_101",
+        "kind": "change",
+        "text": "ops signal for multi_service_inventory_api: change_scope=neighbor",
+        "timestamp": "2026-01-01T00:49:22Z",
+        "value": {
+          "change_scope": "neighbor"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "101f2de3a3e717fb8e436015c3b4ee288a3315ed81311366d3201de13769b1fe",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-concise-ops-v1",
+      "provider": "fake",
+      "seed": 796
+    },
+    "scenario_id": "scenario_03b_8fffd4e3143908a0b9b5",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "concise_ops_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_8fffd4e3143908a0b9b5",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

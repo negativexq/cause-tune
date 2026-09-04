@@ -1,0 +1,76 @@
+{
+  "accepted_render_hash": "a00ead9201db3bf44a8d0643ab5519935f90d9fd1b77c45b5c985b2b9c079ab8",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "2a78046df18e280becaf2d6df92d1f155e79bea19aaa463939b1cc935aae0c3c",
+  "entry_id": "render_03c_220e655d5d13a56ec717",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "b6d84bad25f9797ed75cce21c0b270645bfb657c88c674780c85ae96e4bdbad6",
+  "render_seed": 881,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "2a78046df18e280becaf2d6df92d1f155e79bea19aaa463939b1cc935aae0c3c",
+    "observations": [
+      {
+        "component_id": "web_db_api",
+        "evidence_id": "metric_001",
+        "kind": "metric",
+        "text": "ops signal for web_db_api: desired_replicas=4; ready_replicas=0",
+        "timestamp": "2026-01-01T00:26:27Z",
+        "value": {
+          "desired_replicas": 4,
+          "ready_replicas": 0
+        }
+      },
+      {
+        "component_id": "web_db_api",
+        "evidence_id": "event_001",
+        "kind": "runtime_event",
+        "text": "ops signal for web_db_api: container_state=running; probe_failure_rate=0.9698872334081786",
+        "timestamp": "2026-01-01T00:27:28Z",
+        "value": {
+          "container_state": "running",
+          "probe_failure_rate": 0.9698872334081786
+        }
+      },
+      {
+        "component_id": "web_db_frontend",
+        "evidence_id": "metric_101",
+        "kind": "metric",
+        "text": "ops signal for web_db_frontend: distractor_intensity=mild",
+        "timestamp": "2026-01-01T00:15:58Z",
+        "value": {
+          "distractor_intensity": "mild"
+        }
+      },
+      {
+        "component_id": "web_db_postgres",
+        "evidence_id": "change_101",
+        "kind": "change",
+        "text": "ops signal for web_db_postgres: change_scope=neighbor",
+        "timestamp": "2026-01-01T00:44:27Z",
+        "value": {
+          "change_scope": "neighbor"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "a00ead9201db3bf44a8d0643ab5519935f90d9fd1b77c45b5c985b2b9c079ab8",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-concise-ops-v1",
+      "provider": "fake",
+      "seed": 881
+    },
+    "scenario_id": "scenario_03b_a3aaeda7492980aabf15",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "concise_ops_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_a3aaeda7492980aabf15",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

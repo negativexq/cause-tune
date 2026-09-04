@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_postgres\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for web_cache_db_postgres: baseline_query_latency_ms=82; database_cpu=0.7924617574665676; query_latency_ms=4435.0228 (node/nestjs)\", \"timestamp_offset_seconds\": 1734, \"value\": {\"baseline_query_latency_ms\": 82, \"database_cpu\": 0.7924617574665676, \"query_latency_ms\": 4435.0228}}, {\"component_id\": \"web_cache_db_postgres\", \"evidence_id\": \"log_001\", \"kind\": \"APPLICATION_LOG\", \"text\": \"runtime-native signal for web_cache_db_postgres: connection_wait=normal (node/nestjs)\", \"timestamp_offset_seconds\": 960, \"value\": {\"connection_wait\": \"normal\"}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for web_cache_db_api: distractor_intensity=mild (node/nestjs)\", \"timestamp_offset_seconds\": 1000, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"web_cache_db_redis\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"runtime-native signal for web_cache_db_redis: change_scope=neighbor (node/nestjs)\", \"timestamp_offset_seconds\": 2553, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_c5482293a027cdfcaa41",
+  "raw_response_hash": "543f976c90fea160197d6ae489b4296d7f8a12db762f7016c6f4ea201cd616ac",
+  "usage": {
+    "input_tokens": 220,
+    "output_tokens": 79,
+    "total_tokens": 299
+  }
+}

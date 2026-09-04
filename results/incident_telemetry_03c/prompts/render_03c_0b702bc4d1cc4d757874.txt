@@ -1,0 +1,94 @@
+You are a telemetry renderer, not an incident diagnostician.
+Return JSON with exactly one key, observations. Render only the declared semantic observations.
+Never give a diagnosis, root-cause label, remediation, answerability, or expected output.
+Never add evidence, change evidence IDs/components/kinds, make missing evidence reappear, or turn distractors into causal evidence.
+Rendering contract family: ecosystem_native_v1; style: runtime-native telemetry terminology.
+Runtime guidance: JVM/Spring/JDBC terminology.
+Provider input (semantic evidence only):
+{
+  "evidence": [
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "metric_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "incoming_rate",
+          "value": 1136.3701
+        },
+        {
+          "name": "processing_rate",
+          "value": 299.2513
+        },
+        {
+          "name": "lag",
+          "value": 177276
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "event_pipeline_consumer",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "alert_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "ALERT"
+      ],
+      "required_attributes": [
+        {
+          "name": "consumer_health",
+          "value": "degraded"
+        }
+      ],
+      "semantic_kind": "alert",
+      "source_component": "event_pipeline_consumer",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "DISTRACTOR",
+      "evidence_id": "metric_101",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "distractor_intensity",
+          "value": "mild"
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "event_pipeline_database",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "DISTRACTOR",
+      "evidence_id": "change_101",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "DEPLOYMENT_CHANGE"
+      ],
+      "required_attributes": [
+        {
+          "name": "change_scope",
+          "value": "neighbor"
+        }
+      ],
+      "semantic_kind": "change",
+      "source_component": "event_pipeline_kafka",
+      "variation_family": "ecosystem_native_v1"
+    }
+  ],
+  "prompt_template_version": "03c-ecosystem-native-v1",
+  "render_contract": "03c-telemetry-surface-v1",
+  "render_seed": 849,
+  "renderer_family": "ecosystem_native_v1",
+  "runtime_id": "java_spring",
+  "runtime_instruction": "Use terminology appropriate to the supplied runtime without naming a diagnosis.",
+  "style": "runtime-native telemetry terminology"
+}

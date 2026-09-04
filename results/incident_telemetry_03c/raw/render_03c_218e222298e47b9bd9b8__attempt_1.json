@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for checkout_payment_api: client_deadline_ms=2000; dependency_latency_ms=6948.9719\", \"timestamp_offset_seconds\": 1947, \"value\": {\"client_deadline_ms\": 2000, \"dependency_latency_ms\": 6948.9719}}, {\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"enterprise observation for checkout_payment_api: dependency_health=degraded\", \"timestamp_offset_seconds\": 434, \"value\": {\"dependency_health\": \"degraded\"}}, {\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"enterprise observation for checkout_payment_api: local_queue_state=healthy\", \"timestamp_offset_seconds\": 3276, \"value\": {\"local_queue_state\": \"healthy\"}}]}",
+  "entry_id": "render_03c_218e222298e47b9bd9b8",
+  "raw_response_hash": "9f57c07b44492ad66c1b1014268f16c0a4044e641c818cef92d51f5f3ab053ac",
+  "usage": {
+    "input_tokens": 192,
+    "output_tokens": 55,
+    "total_tokens": 247
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_redis\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_redis: cache_miss_ratio=0.9232596930426167; database_read_rate=8855.52 (python/fastapi)\", \"timestamp_offset_seconds\": 2039, \"value\": {\"cache_miss_ratio\": 0.9232596930426167, \"database_read_rate\": 8855.52}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"runtime-native signal for checkout_redis: hot_key_expiry=shared (python/fastapi)\", \"timestamp_offset_seconds\": 1018, \"value\": {\"hot_key_expiry\": \"shared\"}}, {\"component_id\": \"checkout_redis\", \"evidence_id\": \"metric_002\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_redis: request_rate=8539.2452 (python/fastapi)\", \"timestamp_offset_seconds\": 2412, \"value\": {\"request_rate\": 8539.2452}}, {\"component_id\": \"checkout_postgres\", \"evidence_id\": \"metric_101\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_postgres: distractor_intensity=mild (python/fastapi)\", \"timestamp_offset_seconds\": 1240, \"value\": {\"distractor_intensity\": \"mild\"}}, {\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"change_101\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"runtime-native signal for checkout_payment_api: change_scope=neighbor (python/fastapi)\", \"timestamp_offset_seconds\": 70, \"value\": {\"change_scope\": \"neighbor\"}}]}",
+  "entry_id": "render_03c_fcf86ae315484e8dad65",
+  "raw_response_hash": "9c5e44ada39c68c64d1835249c976affa52bc57a36d4f1a089eed5d0e9227e28",
+  "usage": {
+    "input_tokens": 241,
+    "output_tokens": 94,
+    "total_tokens": 335
+  }
+}

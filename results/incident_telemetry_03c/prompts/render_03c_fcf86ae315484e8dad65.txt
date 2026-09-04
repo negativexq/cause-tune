@@ -1,0 +1,107 @@
+You are a telemetry renderer, not an incident diagnostician.
+Return JSON with exactly one key, observations. Render only the declared semantic observations.
+Never give a diagnosis, root-cause label, remediation, answerability, or expected output.
+Never add evidence, change evidence IDs/components/kinds, make missing evidence reappear, or turn distractors into causal evidence.
+Rendering contract family: ecosystem_native_v1; style: runtime-native telemetry terminology.
+Runtime guidance: Python/FastAPI request and worker terminology.
+Provider input (semantic evidence only):
+{
+  "evidence": [
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "metric_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "cache_miss_ratio",
+          "value": 0.9232596930426167
+        },
+        {
+          "name": "database_read_rate",
+          "value": 8855.52
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "checkout_redis",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "CAUSAL",
+      "evidence_id": "event_001",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "RUNTIME_EVENT"
+      ],
+      "required_attributes": [
+        {
+          "name": "hot_key_expiry",
+          "value": "shared"
+        }
+      ],
+      "semantic_kind": "runtime_event",
+      "source_component": "checkout_redis",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "SUPPORTING",
+      "evidence_id": "metric_002",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "request_rate",
+          "value": 8539.2452
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "checkout_redis",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "DISTRACTOR",
+      "evidence_id": "metric_101",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "METRIC"
+      ],
+      "required_attributes": [
+        {
+          "name": "distractor_intensity",
+          "value": "mild"
+        }
+      ],
+      "semantic_kind": "metric",
+      "source_component": "checkout_postgres",
+      "variation_family": "ecosystem_native_v1"
+    },
+    {
+      "causal_role": "DISTRACTOR",
+      "evidence_id": "change_101",
+      "may_be_omitted": false,
+      "permitted_surface_types": [
+        "DEPLOYMENT_CHANGE"
+      ],
+      "required_attributes": [
+        {
+          "name": "change_scope",
+          "value": "neighbor"
+        }
+      ],
+      "semantic_kind": "change",
+      "source_component": "checkout_payment_api",
+      "variation_family": "ecosystem_native_v1"
+    }
+  ],
+  "prompt_template_version": "03c-ecosystem-native-v1",
+  "render_contract": "03c-telemetry-surface-v1",
+  "render_seed": 866,
+  "renderer_family": "ecosystem_native_v1",
+  "runtime_id": "python_fastapi",
+  "runtime_instruction": "Use terminology appropriate to the supplied runtime without naming a diagnosis.",
+  "style": "runtime-native telemetry terminology"
+}

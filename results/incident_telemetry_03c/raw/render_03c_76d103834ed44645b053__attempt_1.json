@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for web_cache_db_api: baseline_error_rate=0.004; error_rate=0.1999215428259584 (python/django)\", \"timestamp_offset_seconds\": 1763, \"value\": {\"baseline_error_rate\": 0.004, \"error_rate\": 0.1999215428259584}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"change_001\", \"kind\": \"DEPLOYMENT_CHANGE\", \"text\": \"runtime-native signal for web_cache_db_api: feature_flag_state=enabled (python/django)\", \"timestamp_offset_seconds\": 510, \"value\": {\"feature_flag_state\": \"enabled\"}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"runtime-native signal for web_cache_db_api: dependency_health=healthy (python/django)\", \"timestamp_offset_seconds\": 3489, \"value\": {\"dependency_health\": \"healthy\"}}]}",
+  "entry_id": "render_03c_76d103834ed44645b053",
+  "raw_response_hash": "e191c0e841105cafd4b0a637718125a7c6adf47f1bf959568f8468d32634f113",
+  "usage": {
+    "input_tokens": 187,
+    "output_tokens": 58,
+    "total_tokens": 245
+  }
+}

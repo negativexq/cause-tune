@@ -1,0 +1,44 @@
+{
+  "accepted_render_hash": "720e060967c4480914b4d14fccfd0ec166108e4714288ab680c157ffee7a1fb2",
+  "attempt": 1,
+  "canonical_scenario_fingerprint": "c8764fe6d50bda861ddc7076a8de7a7e708086787259e7d576e54bccbf6c9e21",
+  "entry_id": "render_03c_90c9a5f81c5868406953",
+  "experiment_version": "03C",
+  "model_identifier": "fake-telemetry-renderer-v1",
+  "ontology_version": "incident-telemetry-ontology-v1",
+  "output_contract_version": "diagnostic-output-v1",
+  "provider": "fake",
+  "provider_adapter_version": "fake-provider-03c-v1",
+  "raw_response_hash": "2048ecd8ab26b720121905a4f274317f70ab8c78c6ef930500e8a993c000d22b",
+  "render_seed": 1019,
+  "rendered_telemetry": {
+    "canonical_scenario_hash": "c8764fe6d50bda861ddc7076a8de7a7e708086787259e7d576e54bccbf6c9e21",
+    "observations": [
+      {
+        "component_id": "multi_service_orders_api",
+        "evidence_id": "log_001",
+        "kind": "application_log",
+        "text": "runtime-native signal for multi_service_orders_api: cpu_state=moderate (node/nestjs)",
+        "timestamp": "2026-01-01T00:29:11Z",
+        "value": {
+          "cpu_state": "moderate"
+        }
+      }
+    ],
+    "rendered_telemetry_hash": "720e060967c4480914b4d14fccfd0ec166108e4714288ab680c157ffee7a1fb2",
+    "renderer": {
+      "model_identifier": "fake-telemetry-renderer-v1",
+      "prompt_template_version": "03c-ecosystem-native-v1",
+      "provider": "fake",
+      "seed": 1019
+    },
+    "scenario_id": "scenario_03b_fa6c83fa682195cc2310",
+    "schema_version": "rendered-telemetry-v1",
+    "split_manifest_hash": "ac89654a14e323f677c5bdf8e291c5e3f930f1b1a6dbb47c0d0256d17af24453"
+  },
+  "renderer_family": "ecosystem_native_v1",
+  "scenario_engine_version": "incident-telemetry-scenario-engine-03b-v1",
+  "scenario_id": "scenario_03b_fa6c83fa682195cc2310",
+  "scenario_schema_version": "canonical-scenario-v1",
+  "telemetry_schema_version": "rendered-telemetry-v1"
+}

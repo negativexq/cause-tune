@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"enterprise observation for web_cache_db_api: memory_limit=4096; working_set=7889\", \"timestamp_offset_seconds\": 3206, \"value\": {\"memory_limit\": 4096, \"working_set\": 7889}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"event_001\", \"kind\": \"RUNTIME_EVENT\", \"text\": \"enterprise observation for web_cache_db_api: restart_count=5; termination_reason=OOMKilled\", \"timestamp_offset_seconds\": 1153, \"value\": {\"restart_count\": 5, \"termination_reason\": \"OOMKilled\"}}, {\"component_id\": \"web_cache_db_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"enterprise observation for web_cache_db_api: latency_effect=elevated\", \"timestamp_offset_seconds\": 3401, \"value\": {\"latency_effect\": \"elevated\"}}]}",
+  "entry_id": "render_03c_ba683e9321c4becf9920",
+  "raw_response_hash": "249e18cd4053af58e361826cab72c064a3ef632112a2d85728060dc8779c010b",
+  "usage": {
+    "input_tokens": 199,
+    "output_tokens": 58,
+    "total_tokens": 257
+  }
+}

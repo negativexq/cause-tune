@@ -1,0 +1,41 @@
+{
+  "artifacts": {
+    "audit_summary.json": "58d1d86578e73ad3daa1f003939f59d44597dc8a6144d73b8a2d3390610442b3",
+    "context_size_audit.json": "2b29bf737e30aebecd0fdd2b056737f57597dca471121ca36ca883644c689807",
+    "corpus_census.json": "733d67b8174cbc97d1e9de9bcf802d6b6139059c969e73bf1bb7d1ace98eedf6",
+    "golden_trajectory_audit.json": "6491375b724cda24aa42347e97a6246f7c7568d6c79ac714cbf060a425140d03",
+    "leakage_audit.json": "07954d838907ec4d26c0eca9ad1effd9065f94201bf2758a9f91e53e66defa41",
+    "leakage_field_policy.json": "911cf1e03e02c51af89b5ab40bdab989d3f243b91f5eb6c786e2a8b59264337f",
+    "modality_availability.json": "9c205146409124d744405db2d93f452a9d5d901c43af373f41c28024dfa887f6",
+    "native_taxonomy.json": "780c9f0f7dd93b7a948df0a07bbecd1dd39ef98c6155c7ca62e545e341213552",
+    "source_manifest.json": "dd57ff90715af8b47c2651fdb2ba06ea4b4a3c2bf9a7c83ed5ab101b0a24d9c3",
+    "split_feasibility.json": "a4522f623d36123df3b756a849ba9929e9bd80d071ff6a8e99fa12ba48735ce9",
+    "target_availability.json": "7c6b6661b33c81ed8c476d41c77646c748fae209819f6d909a61aa5e8559c50d",
+    "taxonomy_mapping.json": "5f3d334021dbd4a064a7e85fbf059449a54338ee0a529915ecbf097aab299686"
+  },
+  "audit_version": "cloud-opsbench-audit-v1",
+  "case_count": 754,
+  "experiment": "03C",
+  "source": {
+    "adapter_version": "cloud-opsbench-adapter-v1",
+    "documented_case_count": 754,
+    "documented_fault_type_count": 57,
+    "documented_system_case_counts": {
+      "boutique": 550,
+      "trainticket": 204
+    },
+    "expected_layout": "benchmark/<system>/<fault_category>/<case_id>/",
+    "license": "MIT",
+    "license_file_sha256": "d19af713964259f9ab5d662bfc706d2c072ee9211495d3d6d4c3c7588f59abbc",
+    "official_repository_url": "https://github.com/LLM4Ops/Cloud-OpsBench",
+    "registry_version": "cloud-opsbench-source-v1",
+    "release_identity": "main@03c415e5709297432282fbbfd499f1bca0f8c347",
+    "source_name": "Cloud-OpsBench",
+    "systems": [
+      "boutique",
+      "trainticket"
+    ],
+    "upstream_revision": "03c415e5709297432282fbbfd499f1bca0f8c347"
+  },
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench"
+}

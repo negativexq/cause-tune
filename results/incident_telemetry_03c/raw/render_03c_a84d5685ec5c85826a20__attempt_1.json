@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "content": "{\"observations\": [{\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"metric_001\", \"kind\": \"METRIC\", \"text\": \"runtime-native signal for checkout_payment_api: client_deadline_ms=2000; dependency_latency_ms=6799.4095 (go/http)\", \"timestamp_offset_seconds\": 1944, \"value\": {\"client_deadline_ms\": 2000, \"dependency_latency_ms\": 6799.4095}}, {\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"alert_001\", \"kind\": \"ALERT\", \"text\": \"runtime-native signal for checkout_payment_api: dependency_health=degraded (go/http)\", \"timestamp_offset_seconds\": 3211, \"value\": {\"dependency_health\": \"degraded\"}}, {\"component_id\": \"checkout_payment_api\", \"evidence_id\": \"dependency_001\", \"kind\": \"DEPENDENCY_HEALTH\", \"text\": \"runtime-native signal for checkout_payment_api: local_queue_state=healthy (go/http)\", \"timestamp_offset_seconds\": 113, \"value\": {\"local_queue_state\": \"healthy\"}}]}",
+  "entry_id": "render_03c_a84d5685ec5c85826a20",
+  "raw_response_hash": "9d66197cb56cc55fae318233ba18a637a2b3749f4a478504b612da3e499688a6",
+  "usage": {
+    "input_tokens": 186,
+    "output_tokens": 58,
+    "total_tokens": 244
+  }
+}
