@@ -1,0 +1,191 @@
+{
+  "audit_version": "cloud-opsbench-03e1-contract-validity-audit-v1",
+  "evidence": [
+    "2B oracle schema valid 57/57 but native type/category/object exact 0/57",
+    "2B predictions are consistently human-readable symptom/resource phrases rather than native identifiers",
+    "native type values cover 57 unique labels and category values 8 high-level labels"
+  ],
+  "experiment": "03E.1",
+  "finding": "V1 required exact native_fault_type/native_fault_category/fault_object strings but did not provide the valid native category/type vocabulary. The model therefore had to infer internal identifiers from natural telemetry and tool observations.",
+  "llm_judge_used": false,
+  "model_training": false,
+  "observed_native_taxonomy": {
+    "categories": 8,
+    "fault_types": 57
+  },
+  "provider_called": false,
+  "recommendation": {
+    "expose_57_native_fault_types": true,
+    "expose_8_native_categories": true,
+    "expose_case_target": false,
+    "keep_fault_object_separate": true,
+    "require_one_of_enum_values": true
+  },
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "scope_boundary": "This explains label-vocabulary burden; it does not prove that any noncanonical prediction is a correct root-cause diagnosis.",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "task_semantics": {
+    "future_enum_prompt": "CLOSED_TAXONOMY_CLASSIFICATION",
+    "label_leakage_assessment": "A fixed 8-category and 57-fault-type enum supplied identically for every case is task schema, not per-case target leakage; the correct case label must not be exposed.",
+    "v1": "OPEN_VOCABULARY_DIAGNOSIS"
+  },
+  "test_model_facing": false,
+  "v1_artifacts_modified": false,
+  "v1_prompt_contract": {
+    "few_shot": false,
+    "final_schema": [
+      "native_fault_type",
+      "native_fault_category",
+      "fault_object"
+    ],
+    "system": "You are an offline production-incident diagnostic agent. Use only the allowed diagnostic tools and their returned observations. Do not invent tool names, arguments, observations, labels, or evidence. You may call one tool at a time, or return the final diagnosis.\n\nWhen calling a tool, use the native function-call format exactly.\nWhen finalizing, return JSON only with exactly these keys:\n{\"native_fault_type\": string, \"native_fault_category\": string, \"fault_object\": string}\n\nDo not explain your reasoning. Do not output hidden reasoning. The incident request and tool observations are the complete model-visible input; benchmark metadata, process labels, golden answers, and source paths are unavailable.\n",
+    "tools": [
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetResources",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "DescribeResource",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetAppYAML",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetServiceDependencies",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "CheckServiceConnectivity",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetAlerts",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetRecentLogs",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetErrorLogs",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "ListCodeFiles",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetSourceCode",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetClusterConfiguration",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "CheckNodeServiceStatus",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      }
+    ]
+  }
+}

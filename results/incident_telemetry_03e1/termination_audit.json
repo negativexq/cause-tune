@@ -1,0 +1,3738 @@
+{
+  "audit_version": "cloud-opsbench-03e1-contract-validity-audit-v1",
+  "classes": [
+    "PREMATURE_FINAL",
+    "NO_FINAL_DIAGNOSIS",
+    "MAX_STEP_EXHAUSTION",
+    "REPEATED_TOOL_LOOP",
+    "UNIQUE_TOOL_NO_TERMINATION",
+    "INVALID_REPLAY_BLOCKED_PROGRESS"
+  ],
+  "experiment": "03E.1",
+  "headline": {
+    "EVIDENCE_SUFFICIENT_BUT_NO_FINAL": {
+      "0.8B": 0,
+      "2B": 3,
+      "4B": 0
+    },
+    "interpretation": "3 2B cases had all required process milestones established before the replay-blocking GetRecentLogs failure. 4B had partial evidence but no process-complete case; 0.8B acquired no evidence."
+  },
+  "llm_judge_used": false,
+  "model_training": false,
+  "per_candidate": {
+    "0.8B": {
+      "evidence_sufficient_but_no_final": 0,
+      "failure_class_counts": {
+        "PREMATURE_FINAL": 57
+      },
+      "record_count": 57,
+      "records": [
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "namespace_cpu_quota_exceeded",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:26",
+          "source_case_id": "26",
+          "source_fault_type": "namespace_memory_quota_exceeded",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:39",
+          "source_case_id": "39",
+          "source_fault_type": "namespace_pod_quota_exceeded",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:45",
+          "source_case_id": "45",
+          "source_fault_type": "namespace_service_quota_exceeded",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:5",
+          "source_case_id": "5",
+          "source_fault_type": "missing_service_account",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:57",
+          "source_case_id": "57",
+          "source_fault_type": "namespace_storage_quota_exceeded",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 5,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:17",
+          "source_case_id": "17",
+          "source_fault_type": "code_missing_parameter",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:23",
+          "source_case_id": "23",
+          "source_fault_type": "code_excessive_file_reads",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 5,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:32",
+          "source_case_id": "32",
+          "source_fault_type": "code_wrong_argument_order",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:35",
+          "source_case_id": "35",
+          "source_fault_type": "code_busy_loop",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:60",
+          "source_case_id": "60",
+          "source_fault_type": "code_excessive_file_writes",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:77",
+          "source_case_id": "77",
+          "source_fault_type": "code_wrong_return",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:89",
+          "source_case_id": "89",
+          "source_fault_type": "code_artificial_delay",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:90",
+          "source_case_id": "90",
+          "source_fault_type": "code_memory_leak",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "kube_proxy_unavailable",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:21",
+          "source_case_id": "21",
+          "source_fault_type": "kube_scheduler_unavailable",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:30",
+          "source_case_id": "30",
+          "source_fault_type": "kubelet_unavailable",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:9",
+          "source_case_id": "9",
+          "source_fault_type": "containerd_unavailable",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 2,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:10",
+          "source_case_id": "10",
+          "source_fault_type": "pod_cpu_overload",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 2,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:14",
+          "source_case_id": "14",
+          "source_fault_type": "pod_network_delay",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 2,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "node_network_delay",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 2,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:26",
+          "source_case_id": "26",
+          "source_fault_type": "node_network_packet_loss",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:11",
+          "source_case_id": "11",
+          "source_fault_type": "liveness_probe_incorrect_port",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:17",
+          "source_case_id": "17",
+          "source_fault_type": "liveness_probe_incorrect_timing",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "container_memory_limit_too_low",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:36",
+          "source_case_id": "36",
+          "source_fault_type": "readiness_probe_incorrect_protocol",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:42",
+          "source_case_id": "42",
+          "source_fault_type": "readiness_probe_incorrect_port",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:7",
+          "source_case_id": "7",
+          "source_fault_type": "liveness_probe_incorrect_protocol",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:1",
+          "source_case_id": "1",
+          "source_fault_type": "node_cordon_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:110",
+          "source_case_id": "110",
+          "source_fault_type": "node_selector_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:119",
+          "source_case_id": "119",
+          "source_fault_type": "pod_anti_affinity_conflict",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:129",
+          "source_case_id": "129",
+          "source_fault_type": "pvc_access_mode_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:132",
+          "source_case_id": "132",
+          "source_fault_type": "pvc_selector_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:136",
+          "source_case_id": "136",
+          "source_fault_type": "pvc_storage_class_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:137",
+          "source_case_id": "137",
+          "source_fault_type": "pv_binding_occupied",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:150",
+          "source_case_id": "150",
+          "source_fault_type": "taint_toleration_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:24",
+          "source_case_id": "24",
+          "source_fault_type": "cpu_capacity_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:35",
+          "source_case_id": "35",
+          "source_fault_type": "memory_capacity_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:53",
+          "source_case_id": "53",
+          "source_fault_type": "pvc_capacity_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:59",
+          "source_case_id": "59",
+          "source_fault_type": "node_affinity_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2a",
+            "M2b",
+            "M2c"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:12",
+          "source_case_id": "12",
+          "source_fault_type": "service_port_mapping_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2a",
+            "M2b",
+            "M2c"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "service_protocol_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2a",
+            "M2b",
+            "M2c"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:37",
+          "source_case_id": "37",
+          "source_fault_type": "service_selector_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:6",
+          "source_case_id": "6",
+          "source_fault_type": "service_env_var_address_mismatch",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:2",
+          "source_case_id": "2",
+          "source_fault_type": "image_registry_dns_failure",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "incorrect_image_reference",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:48",
+          "source_case_id": "48",
+          "source_fault_type": "missing_image_pull_secret",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:60",
+          "source_case_id": "60",
+          "source_fault_type": "volume_mount_permission_denied",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 2,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:25",
+          "source_case_id": "25",
+          "source_fault_type": "deployment_zero_replicas",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:3",
+          "source_case_id": "3",
+          "source_fault_type": "db_connection_exhaustion",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:42",
+          "source_case_id": "42",
+          "source_fault_type": "mysql_invalid_credentials",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 5,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:59",
+          "source_case_id": "59",
+          "source_fault_type": "mysql_invalid_port",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:79",
+          "source_case_id": "79",
+          "source_fault_type": "service_sidecar_port_conflict",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:9",
+          "source_case_id": "9",
+          "source_fault_type": "db_readonly_mode",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "gateway_misrouted",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:27",
+          "source_case_id": "27",
+          "source_fault_type": "service_dns_resolution_failure",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Startup_Fault:11",
+          "source_case_id": "11",
+          "source_fault_type": "missing_secret_binding",
+          "termination_class": "PREMATURE_FINAL",
+          "valid_tool_steps": 0
+        }
+      ]
+    },
+    "2B": {
+      "evidence_sufficient_but_no_final": 3,
+      "failure_class_counts": {
+        "INVALID_REPLAY_BLOCKED_PROGRESS": 27
+      },
+      "record_count": 57,
+      "records": [
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "namespace_cpu_quota_exceeded",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:26",
+          "source_case_id": "26",
+          "source_fault_type": "namespace_memory_quota_exceeded",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:39",
+          "source_case_id": "39",
+          "source_fault_type": "namespace_pod_quota_exceeded",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:45",
+          "source_case_id": "45",
+          "source_fault_type": "namespace_service_quota_exceeded",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:5",
+          "source_case_id": "5",
+          "source_fault_type": "missing_service_account",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:57",
+          "source_case_id": "57",
+          "source_fault_type": "namespace_storage_quota_exceeded",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [
+            "M0"
+          ],
+          "evidence_order_coverage": 0.2,
+          "milestone_count": 5,
+          "milestone_coverage": 0.2,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:17",
+          "source_case_id": "17",
+          "source_fault_type": "code_missing_parameter",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:23",
+          "source_case_id": "23",
+          "source_fault_type": "code_excessive_file_reads",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [
+            "M0"
+          ],
+          "evidence_order_coverage": 0.2,
+          "milestone_count": 5,
+          "milestone_coverage": 0.2,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:32",
+          "source_case_id": "32",
+          "source_fault_type": "code_wrong_argument_order",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:35",
+          "source_case_id": "35",
+          "source_fault_type": "code_busy_loop",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:60",
+          "source_case_id": "60",
+          "source_fault_type": "code_excessive_file_writes",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [
+            "M0"
+          ],
+          "evidence_order_coverage": 0.25,
+          "milestone_count": 4,
+          "milestone_coverage": 0.25,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:77",
+          "source_case_id": "77",
+          "source_fault_type": "code_wrong_return",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:89",
+          "source_case_id": "89",
+          "source_fault_type": "code_artificial_delay",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:90",
+          "source_case_id": "90",
+          "source_fault_type": "code_memory_leak",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "kube_proxy_unavailable",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:21",
+          "source_case_id": "21",
+          "source_fault_type": "kube_scheduler_unavailable",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:30",
+          "source_case_id": "30",
+          "source_fault_type": "kubelet_unavailable",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:9",
+          "source_case_id": "9",
+          "source_fault_type": "containerd_unavailable",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "evidence_order_coverage": 1.0,
+          "milestone_count": 2,
+          "milestone_coverage": 1.0,
+          "missing_milestones": [],
+          "process_complete_before_termination": true,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:10",
+          "source_case_id": "10",
+          "source_fault_type": "pod_cpu_overload",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [
+            "M1"
+          ],
+          "evidence_order_coverage": 0.5,
+          "milestone_count": 2,
+          "milestone_coverage": 0.5,
+          "missing_milestones": [
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:14",
+          "source_case_id": "14",
+          "source_fault_type": "pod_network_delay",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 3
+        },
+        {
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "evidence_order_coverage": 1.0,
+          "milestone_count": 2,
+          "milestone_coverage": 1.0,
+          "missing_milestones": [],
+          "process_complete_before_termination": true,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "node_network_delay",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 5
+        },
+        {
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "evidence_order_coverage": 1.0,
+          "milestone_count": 2,
+          "milestone_coverage": 1.0,
+          "missing_milestones": [],
+          "process_complete_before_termination": true,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:26",
+          "source_case_id": "26",
+          "source_fault_type": "node_network_packet_loss",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 3
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:11",
+          "source_case_id": "11",
+          "source_fault_type": "liveness_probe_incorrect_port",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:17",
+          "source_case_id": "17",
+          "source_fault_type": "liveness_probe_incorrect_timing",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "container_memory_limit_too_low",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:36",
+          "source_case_id": "36",
+          "source_fault_type": "readiness_probe_incorrect_protocol",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:42",
+          "source_case_id": "42",
+          "source_fault_type": "readiness_probe_incorrect_port",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:7",
+          "source_case_id": "7",
+          "source_fault_type": "liveness_probe_incorrect_protocol",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:1",
+          "source_case_id": "1",
+          "source_fault_type": "node_cordon_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:110",
+          "source_case_id": "110",
+          "source_fault_type": "node_selector_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:119",
+          "source_case_id": "119",
+          "source_fault_type": "pod_anti_affinity_conflict",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:129",
+          "source_case_id": "129",
+          "source_fault_type": "pvc_access_mode_mismatch",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:132",
+          "source_case_id": "132",
+          "source_fault_type": "pvc_selector_mismatch",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:136",
+          "source_case_id": "136",
+          "source_fault_type": "pvc_storage_class_mismatch",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:137",
+          "source_case_id": "137",
+          "source_fault_type": "pv_binding_occupied",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:150",
+          "source_case_id": "150",
+          "source_fault_type": "taint_toleration_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:24",
+          "source_case_id": "24",
+          "source_fault_type": "cpu_capacity_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:35",
+          "source_case_id": "35",
+          "source_fault_type": "memory_capacity_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:53",
+          "source_case_id": "53",
+          "source_fault_type": "pvc_capacity_mismatch",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:59",
+          "source_case_id": "59",
+          "source_fault_type": "node_affinity_mismatch",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2a",
+            "M2b",
+            "M2c"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:12",
+          "source_case_id": "12",
+          "source_fault_type": "service_port_mapping_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2a",
+            "M2b",
+            "M2c"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "service_protocol_mismatch",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2a",
+            "M2b",
+            "M2c"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:37",
+          "source_case_id": "37",
+          "source_fault_type": "service_selector_mismatch",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:6",
+          "source_case_id": "6",
+          "source_fault_type": "service_env_var_address_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:2",
+          "source_case_id": "2",
+          "source_fault_type": "image_registry_dns_failure",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "incorrect_image_reference",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:48",
+          "source_case_id": "48",
+          "source_fault_type": "missing_image_pull_secret",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:60",
+          "source_case_id": "60",
+          "source_fault_type": "volume_mount_permission_denied",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 2,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:25",
+          "source_case_id": "25",
+          "source_fault_type": "deployment_zero_replicas",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:3",
+          "source_case_id": "3",
+          "source_fault_type": "db_connection_exhaustion",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:42",
+          "source_case_id": "42",
+          "source_fault_type": "mysql_invalid_credentials",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 5,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:59",
+          "source_case_id": "59",
+          "source_fault_type": "mysql_invalid_port",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:79",
+          "source_case_id": "79",
+          "source_fault_type": "service_sidecar_port_conflict",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:9",
+          "source_case_id": "9",
+          "source_fault_type": "db_readonly_mode",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [
+            "M0"
+          ],
+          "evidence_order_coverage": 0.3333333333333333,
+          "milestone_count": 3,
+          "milestone_coverage": 0.3333333333333333,
+          "missing_milestones": [
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "gateway_misrouted",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [
+            "M1"
+          ],
+          "evidence_order_coverage": 0.25,
+          "milestone_count": 4,
+          "milestone_coverage": 0.25,
+          "missing_milestones": [
+            "M0",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:27",
+          "source_case_id": "27",
+          "source_fault_type": "service_dns_resolution_failure",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 1
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Startup_Fault:11",
+          "source_case_id": "11",
+          "source_fault_type": "missing_secret_binding",
+          "termination_class": "FINAL_DIAGNOSIS",
+          "valid_tool_steps": 1
+        }
+      ]
+    },
+    "4B": {
+      "evidence_sufficient_but_no_final": 0,
+      "failure_class_counts": {
+        "INVALID_REPLAY_BLOCKED_PROGRESS": 57
+      },
+      "record_count": 57,
+      "records": [
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "namespace_cpu_quota_exceeded",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:26",
+          "source_case_id": "26",
+          "source_fault_type": "namespace_memory_quota_exceeded",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:39",
+          "source_case_id": "39",
+          "source_fault_type": "namespace_pod_quota_exceeded",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:45",
+          "source_case_id": "45",
+          "source_fault_type": "namespace_service_quota_exceeded",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:5",
+          "source_case_id": "5",
+          "source_fault_type": "missing_service_account",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:57",
+          "source_case_id": "57",
+          "source_fault_type": "namespace_storage_quota_exceeded",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "evidence_order_coverage": 0.2,
+          "milestone_count": 5,
+          "milestone_coverage": 0.4,
+          "missing_milestones": [
+            "M1",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:17",
+          "source_case_id": "17",
+          "source_fault_type": "code_missing_parameter",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [
+            "M1"
+          ],
+          "evidence_order_coverage": 0.3333333333333333,
+          "milestone_count": 3,
+          "milestone_coverage": 0.3333333333333333,
+          "missing_milestones": [
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:23",
+          "source_case_id": "23",
+          "source_fault_type": "code_excessive_file_reads",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "evidence_order_coverage": 0.2,
+          "milestone_count": 5,
+          "milestone_coverage": 0.4,
+          "missing_milestones": [
+            "M1",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:32",
+          "source_case_id": "32",
+          "source_fault_type": "code_wrong_argument_order",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [
+            "M1"
+          ],
+          "evidence_order_coverage": 0.3333333333333333,
+          "milestone_count": 3,
+          "milestone_coverage": 0.3333333333333333,
+          "missing_milestones": [
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:35",
+          "source_case_id": "35",
+          "source_fault_type": "code_busy_loop",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [
+            "M1"
+          ],
+          "evidence_order_coverage": 0.3333333333333333,
+          "milestone_count": 3,
+          "milestone_coverage": 0.3333333333333333,
+          "missing_milestones": [
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:60",
+          "source_case_id": "60",
+          "source_fault_type": "code_excessive_file_writes",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [
+            "M0"
+          ],
+          "evidence_order_coverage": 0.25,
+          "milestone_count": 4,
+          "milestone_coverage": 0.25,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:77",
+          "source_case_id": "77",
+          "source_fault_type": "code_wrong_return",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [
+            "M1"
+          ],
+          "evidence_order_coverage": 0.3333333333333333,
+          "milestone_count": 3,
+          "milestone_coverage": 0.3333333333333333,
+          "missing_milestones": [
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:89",
+          "source_case_id": "89",
+          "source_fault_type": "code_artificial_delay",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:90",
+          "source_case_id": "90",
+          "source_fault_type": "code_memory_leak",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "kube_proxy_unavailable",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:21",
+          "source_case_id": "21",
+          "source_fault_type": "kube_scheduler_unavailable",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:30",
+          "source_case_id": "30",
+          "source_fault_type": "kubelet_unavailable",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:9",
+          "source_case_id": "9",
+          "source_fault_type": "containerd_unavailable",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [
+            "M1"
+          ],
+          "evidence_order_coverage": 0.5,
+          "milestone_count": 2,
+          "milestone_coverage": 0.5,
+          "missing_milestones": [
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:10",
+          "source_case_id": "10",
+          "source_fault_type": "pod_cpu_overload",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 5
+        },
+        {
+          "established_milestones": [
+            "M1"
+          ],
+          "evidence_order_coverage": 0.5,
+          "milestone_count": 2,
+          "milestone_coverage": 0.5,
+          "missing_milestones": [
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:14",
+          "source_case_id": "14",
+          "source_fault_type": "pod_network_delay",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 5
+        },
+        {
+          "established_milestones": [
+            "M1"
+          ],
+          "evidence_order_coverage": 0.5,
+          "milestone_count": 2,
+          "milestone_coverage": 0.5,
+          "missing_milestones": [
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "node_network_delay",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 5
+        },
+        {
+          "established_milestones": [
+            "M1"
+          ],
+          "evidence_order_coverage": 0.5,
+          "milestone_count": 2,
+          "milestone_coverage": 0.5,
+          "missing_milestones": [
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:26",
+          "source_case_id": "26",
+          "source_fault_type": "node_network_packet_loss",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 5
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:11",
+          "source_case_id": "11",
+          "source_fault_type": "liveness_probe_incorrect_port",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:17",
+          "source_case_id": "17",
+          "source_fault_type": "liveness_probe_incorrect_timing",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 5
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "container_memory_limit_too_low",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:36",
+          "source_case_id": "36",
+          "source_fault_type": "readiness_probe_incorrect_protocol",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:42",
+          "source_case_id": "42",
+          "source_fault_type": "readiness_probe_incorrect_port",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:7",
+          "source_case_id": "7",
+          "source_fault_type": "liveness_probe_incorrect_protocol",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:1",
+          "source_case_id": "1",
+          "source_fault_type": "node_cordon_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:110",
+          "source_case_id": "110",
+          "source_fault_type": "node_selector_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:119",
+          "source_case_id": "119",
+          "source_fault_type": "pod_anti_affinity_conflict",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:129",
+          "source_case_id": "129",
+          "source_fault_type": "pvc_access_mode_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:132",
+          "source_case_id": "132",
+          "source_fault_type": "pvc_selector_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:136",
+          "source_case_id": "136",
+          "source_fault_type": "pvc_storage_class_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:137",
+          "source_case_id": "137",
+          "source_fault_type": "pv_binding_occupied",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:150",
+          "source_case_id": "150",
+          "source_fault_type": "taint_toleration_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:24",
+          "source_case_id": "24",
+          "source_fault_type": "cpu_capacity_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:35",
+          "source_case_id": "35",
+          "source_fault_type": "memory_capacity_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:53",
+          "source_case_id": "53",
+          "source_fault_type": "pvc_capacity_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:59",
+          "source_case_id": "59",
+          "source_fault_type": "node_affinity_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2a",
+            "M2b",
+            "M2c"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:12",
+          "source_case_id": "12",
+          "source_fault_type": "service_port_mapping_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2a",
+            "M2b",
+            "M2c"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "service_protocol_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2a",
+            "M2b",
+            "M2c"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:37",
+          "source_case_id": "37",
+          "source_fault_type": "service_selector_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:6",
+          "source_case_id": "6",
+          "source_fault_type": "service_env_var_address_mismatch",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:2",
+          "source_case_id": "2",
+          "source_fault_type": "image_registry_dns_failure",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "incorrect_image_reference",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:48",
+          "source_case_id": "48",
+          "source_fault_type": "missing_image_pull_secret",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:60",
+          "source_case_id": "60",
+          "source_fault_type": "volume_mount_permission_denied",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 2,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:25",
+          "source_case_id": "25",
+          "source_fault_type": "deployment_zero_replicas",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:3",
+          "source_case_id": "3",
+          "source_fault_type": "db_connection_exhaustion",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:42",
+          "source_case_id": "42",
+          "source_fault_type": "mysql_invalid_credentials",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 5,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:59",
+          "source_case_id": "59",
+          "source_fault_type": "mysql_invalid_port",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 3,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:79",
+          "source_case_id": "79",
+          "source_fault_type": "service_sidecar_port_conflict",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [
+            "M0"
+          ],
+          "evidence_order_coverage": 0.3333333333333333,
+          "milestone_count": 3,
+          "milestone_coverage": 0.3333333333333333,
+          "missing_milestones": [
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:9",
+          "source_case_id": "9",
+          "source_fault_type": "db_readonly_mode",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [
+            "M0"
+          ],
+          "evidence_order_coverage": 0.3333333333333333,
+          "milestone_count": 3,
+          "milestone_coverage": 0.3333333333333333,
+          "missing_milestones": [
+            "M1",
+            "M2"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "gateway_misrouted",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [
+            "M1"
+          ],
+          "evidence_order_coverage": 0.25,
+          "milestone_count": 4,
+          "milestone_coverage": 0.25,
+          "missing_milestones": [
+            "M0",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:27",
+          "source_case_id": "27",
+          "source_fault_type": "service_dns_resolution_failure",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        },
+        {
+          "established_milestones": [],
+          "evidence_order_coverage": 0.0,
+          "milestone_count": 4,
+          "milestone_coverage": 0.0,
+          "missing_milestones": [
+            "M0",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "process_complete_before_termination": false,
+          "replay_status": [
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED",
+            "REPLAYED"
+          ],
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Startup_Fault:11",
+          "source_case_id": "11",
+          "source_fault_type": "missing_secret_binding",
+          "termination_class": "INVALID_REPLAY_BLOCKED_PROGRESS",
+          "valid_tool_steps": 6
+        }
+      ]
+    }
+  },
+  "provider_called": false,
+  "purpose": "termination and evidence-sufficiency audit from persisted closed-loop events plus deterministic offline process-label evaluation",
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "v1_artifacts_modified": false
+}

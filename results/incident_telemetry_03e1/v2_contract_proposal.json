@@ -1,0 +1,60 @@
+{
+  "audit_version": "cloud-opsbench-03e1-contract-validity-audit-v1",
+  "candidate_recommendation": {
+    "4B": "defer until separate frozen hardware re-screen; current evidence is incomplete",
+    "rerun_now_under_frozen_v2": "0.8B, 2B",
+    "test": "never use TEST in this rescreen"
+  },
+  "contract_changes": [
+    {
+      "change": "Expose fixed 8 native category enum and fixed 57 native fault-type enum equally for every case",
+      "guardrail": "Do not expose the correct case label or target metadata",
+      "justification": "2B produced 57/57 valid schemas and 0/57 native matches; V1 required reconstructing internal identifiers from observations"
+    },
+    {
+      "change": "Keep strict native-label scoring and report mechanical-equivalent scoring as a separate metric",
+      "guardrail": "Never overwrite V1 strict exact",
+      "justification": "17/57 2B object differences are source-kind-prefix omissions; no full diagnosis was mechanically equivalent"
+    },
+    {
+      "change": "Define fault-object bare logical-name alias only for uniquely resolvable source-derived app identity",
+      "guardrail": "Ambiguous aliases fail closed; no ground-truth lookup",
+      "justification": "17/57 object outputs omit app/node/namespace prefix; pod/deployment/PVC identities must remain distinct"
+    },
+    {
+      "change": "Remove or repair the allowed GetRecentLogs replay mismatch before screening",
+      "guardrail": "Case-local deterministic replay only; no golden target-aware fallback",
+      "justification": "84/84 2B+4B replay failures are GetRecentLogs {} with no case-local replay source"
+    },
+    {
+      "change": "Score process by milestone/evidence/order semantics with both golden paths and admissible alternatives",
+      "guardrail": "Deterministic upstream evaluator; no LLM judge",
+      "justification": "Teacher-forced tool-name exactness is one-path imitation; 3 2B cases were process-complete before replay-blocked termination"
+    },
+    {
+      "change": "Add explicit finalization instruction and report final-vs-evidence acquisition outcomes",
+      "guardrail": "Do not tune to individual case labels",
+      "justification": "0.8B prematurely finalized on all 57; 2B had 3 evidence-sufficient no-final cases"
+    }
+  ],
+  "decision": "V2_RESCREEN_REQUIRED",
+  "experiment": "03E.1",
+  "llm_judge_used": false,
+  "model_training": false,
+  "new_experiment_boundary": "Any execution under this contract is a new screening experiment; it must not replace 03E V1 numbers.",
+  "non_changes": [
+    "Do not train",
+    "Do not start QLoRA",
+    "Do not modify 03D split",
+    "Do not rerun current 4B in this audit",
+    "Do not use semantic synonym mappings to manufacture score"
+  ],
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "status": "DESIGNED_NOT_RUN",
+  "test_model_facing": false,
+  "v1_artifacts_modified": false
+}

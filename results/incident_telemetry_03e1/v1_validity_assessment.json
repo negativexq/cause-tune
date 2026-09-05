@@ -1,0 +1,60 @@
+{
+  "acceptance_answers": {
+    "10_qlora": "Still blocked; no training and no QLoRA until V2 produces a credible oracle diagnosis signal.",
+    "1_why_2b_valid_schema_zero_exact": "The 2B generated structurally valid JSON for all 57 oracle cases, but V1 required exact native identifiers without exposing their valid vocabulary. Its values are mostly natural-language symptom/resource phrases; none equals the native type, category, or object string. This is a vocabulary/representation burden plus genuine residual diagnosis error, not a schema failure.",
+    "2_oracle_failure_counts": "Across 171 2B field comparisons: 17 are deterministic mechanical resource-prefix mismatches, 150 are source-family-plausible but noncanonical, and 21 are wrong-target field mismatches. At whole-diagnosis level, 0 are mechanically equivalent, 36 have all fields source-family plausible/noncanonical, and 21 are mixed or contain a wrong-target field. These are audit dispositions, not corrected V1 scores.",
+    "3_teacher_forced_validity": "Valid only as narrow next-tool-name imitation. Not valid as the sole process-capability metric because it ignores alternative admissible actions, evidence, ordering, redundancy, and arguments; full-call exactness is separately 0/160 for every candidate.",
+    "4_replay_canonicalization": "0 failures were caused by canonicalization. 84/84 2B+4B failures were the allowed GetRecentLogs tool with no case-local replay source, an evaluator/tool-source mismatch; 0 are certified genuinely invalid calls under the permissive V1 schema.",
+    "5_sufficient_evidence_no_final": "2B 3; 0.8B 0; 4B 0 under deterministic upstream process-complete semantics.",
+    "6_4b_interpretable": "No. 44/57 CUDA/CUBLAS failures and memory-envelope overrun make it hardware-constrained/incomplete evidence.",
+    "7_v1_validity": "Partially mis-specified: strict exact native labels and replay semantics are valid as a benchmark definition, but V1 was not a fair capability contract for open-vocabulary base models and allowed a tool without a case replay source; golden-next-action was overinterpretable.",
+    "8_should_v2_run": "Yes, a new V2 screening contract should be designed and frozen before execution.",
+    "9_candidates": "Rerun 2B and 0.8B under the corrected identical V2 contract; rerun 4B only after a separately frozen hardware re-screen confirms executable coverage. Do not treat current 4B as a clean comparison."
+  },
+  "assessment": "PARTIALLY_MIS-SPECIFIED",
+  "audit_version": "cloud-opsbench-03e1-contract-validity-audit-v1",
+  "evidence_links": {
+    "hardware": "hardware_validity.json",
+    "next_action": "next_action_validity_audit.json",
+    "normalization": "normalization_audit.json",
+    "object": "fault_object_audit.json",
+    "oracle": "oracle_mismatch_audit.json",
+    "replay": "replay_failure_audit.json",
+    "termination": "termination_audit.json",
+    "vocabulary": "label_vocabulary_audit.json"
+  },
+  "experiment": "03E.1",
+  "final_recommendation": "V2_RESCREEN_REQUIRED",
+  "floor_analysis": {
+    "candidate": "0.8B",
+    "closed_loop_termination": "57/57 PREMATURE_FINAL; 0 valid tool calls; 0 schema-valid final diagnoses",
+    "dominant_failure": "premature final behavior and invalid/malformed schema; semantic diagnosis capability is not cleanly measurable because only 33 oracle values parsed",
+    "interpretation": "0.8B remains a lower-bound/floor signal; no disproportionate repair or model-selection inference is made from it.",
+    "oracle": {
+      "malformed_json": "24/57",
+      "records": 57,
+      "schema_valid": "33/57",
+      "strict_joint": "0/57"
+    },
+    "role": "lower-bound/floor"
+  },
+  "frozen_v1_metrics": {
+    "closed_loop_joint": "0/57 for 0.8B/2B/4B",
+    "oracle_joint": "0/57 for 0.8B/2B/4B",
+    "teacher_forced_exact": {
+      "0.8B": "26.88%",
+      "2B": "18.75%",
+      "4B": "40.63%"
+    }
+  },
+  "llm_judge_used": false,
+  "model_training": false,
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "v1_artifacts_modified": false,
+  "v1_result_preserved": "NO_CREDIBLE_STUDENT_YET"
+}

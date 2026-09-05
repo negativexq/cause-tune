@@ -1,0 +1,1860 @@
+{
+  "all_field_classification_counts": {
+    "CANONICAL_FORMAT_ONLY": 0,
+    "CASE_ONLY": 0,
+    "EXACT": 0,
+    "LEXICALLY_EQUIVALENT": 0,
+    "MISSING": 0,
+    "OTHER": 0,
+    "RESOURCE_PREFIX_ONLY": 17,
+    "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 135,
+    "SEPARATOR_ONLY": 0,
+    "WRONG_TARGET": 19
+  },
+  "audit_version": "cloud-opsbench-03e1-contract-validity-audit-v1",
+  "case_disposition_counts": {
+    "MIXED_OR_WRONG_TARGET": 19,
+    "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 38
+  },
+  "classification_policy": "Mechanical classes are deterministic string/resource-form checks. Plausibility is a separately reported, predeclared source-family relation from Cloud-OpsBench observable semantics; it never changes strict scoring and is not an LLM judgment.",
+  "experiment": "03E.1",
+  "field_classification_counts": {
+    "fault_object": {
+      "CANONICAL_FORMAT_ONLY": 0,
+      "CASE_ONLY": 0,
+      "EXACT": 0,
+      "LEXICALLY_EQUIVALENT": 0,
+      "MISSING": 0,
+      "OTHER": 0,
+      "RESOURCE_PREFIX_ONLY": 17,
+      "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 21,
+      "SEPARATOR_ONLY": 0,
+      "WRONG_TARGET": 19
+    },
+    "native_fault_category": {
+      "CANONICAL_FORMAT_ONLY": 0,
+      "CASE_ONLY": 0,
+      "EXACT": 0,
+      "LEXICALLY_EQUIVALENT": 0,
+      "MISSING": 0,
+      "OTHER": 0,
+      "RESOURCE_PREFIX_ONLY": 0,
+      "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 57,
+      "SEPARATOR_ONLY": 0,
+      "WRONG_TARGET": 0
+    },
+    "native_fault_type": {
+      "CANONICAL_FORMAT_ONLY": 0,
+      "CASE_ONLY": 0,
+      "EXACT": 0,
+      "LEXICALLY_EQUIVALENT": 0,
+      "MISSING": 0,
+      "OTHER": 0,
+      "RESOURCE_PREFIX_ONLY": 0,
+      "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 57,
+      "SEPARATOR_ONLY": 0,
+      "WRONG_TARGET": 0
+    }
+  },
+  "headline_failure_counts": {
+    "all_fields_source_family_plausible_cases": 38,
+    "field_comparisons_total": 171,
+    "mechanical_representation_mismatches": 17,
+    "mechanically_equivalent_full_diagnoses": 0,
+    "mixed_or_wrong_target_cases": 19,
+    "semantically_plausible_but_noncanonical_field_mismatches": 135,
+    "wrong_target_field_mismatches": 19
+  },
+  "input_artifact": "results/incident_telemetry_03e/Qwen__Qwen3.5-2B/oracle_evidence_predictions.jsonl",
+  "llm_judge_used": false,
+  "model": "Qwen/Qwen3.5-2B",
+  "model_training": false,
+  "parse_counts": {
+    "valid": 57
+  },
+  "provider_called": false,
+  "purpose": "all 57 persisted raw 2B oracle predictions, field-by-field against authoritative native targets",
+  "record_count": 57,
+  "records": [
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "currencyservice",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "namespace/boutique"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "CPU Request Quota",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Admission_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ResourceQuota",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "namespace_cpu_quota_exceeded"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"ResourceQuota\", \"native_fault_category\": \"CPU Request Quota\", \"fault_object\": \"currencyservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:15",
+      "source_case_id": "15",
+      "source_fault_category": "Admission_Fault",
+      "source_fault_type": "namespace_cpu_quota_exceeded",
+      "source_fingerprint": "33c58778dfebabc445d7229eeb3e6fcf5d9ade73edfc1da7d00dd1cbc4e852a8",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "emailservice",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "namespace/boutique"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "resource",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Admission_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "memory-request-quota",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "namespace_memory_quota_exceeded"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"memory-request-quota\", \"native_fault_category\": \"resource\", \"fault_object\": \"emailservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:26",
+      "source_case_id": "26",
+      "source_fault_category": "Admission_Fault",
+      "source_fault_type": "namespace_memory_quota_exceeded",
+      "source_fingerprint": "b09fa7f744e58361f8c8695a5ca7a413c981fb561fce642d828ba59d2adf03fa",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "paymentservice",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "namespace/boutique"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "resource",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Admission_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "pod-quota",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "namespace_pod_quota_exceeded"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"pod-quota\", \"native_fault_category\": \"resource\", \"fault_object\": \"paymentservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:39",
+      "source_case_id": "39",
+      "source_fault_category": "Admission_Fault",
+      "source_fault_type": "namespace_pod_quota_exceeded",
+      "source_fingerprint": "56b4ee74f2ba71feec8fc82dc2ffc24f297d9510113559163ca6eb7ea6cdca71",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "cartservice",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "namespace/boutique"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Network",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Admission_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Unreachable",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "namespace_service_quota_exceeded"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service Unreachable\", \"native_fault_category\": \"Network\", \"fault_object\": \"cartservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:45",
+      "source_case_id": "45",
+      "source_fault_category": "Admission_Fault",
+      "source_fault_type": "namespace_service_quota_exceeded",
+      "source_fingerprint": "7e1103aa3e688002b9dddefa8c2f3e4051f0ce9b734016a175081f203afa1776",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "emailservice",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/emailservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ConfigurationError",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Admission_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ServiceAccountNotFound",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "missing_service_account"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"ServiceAccountNotFound\", \"native_fault_category\": \"ConfigurationError\", \"fault_object\": \"emailservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:5",
+      "source_case_id": "5",
+      "source_fault_category": "Admission_Fault",
+      "source_fault_type": "missing_service_account",
+      "source_fingerprint": "36b1a844d6eb86030ee83ed0e62ed7ffb3558ba9687dd1846aecccef678714a6",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "redis-cart-pvc",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "namespace/boutique"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Storage",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Admission_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "PersistentVolumeClaim",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "namespace_storage_quota_exceeded"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"PersistentVolumeClaim\", \"native_fault_category\": \"Storage\", \"fault_object\": \"redis-cart-pvc\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:57",
+      "source_case_id": "57",
+      "source_fault_category": "Admission_Fault",
+      "source_fault_type": "namespace_storage_quota_exceeded",
+      "source_fingerprint": "b983c93dc89ae838b05ff96e93e481a4e11ed501fd050f87cad54033041c7211",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "checkoutservice",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/checkoutservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Application_Code_Defect"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Availability",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "code_missing_parameter"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service Availability\", \"native_fault_category\": \"Service\", \"fault_object\": \"checkoutservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:17",
+      "source_case_id": "17",
+      "source_fault_category": "Application_Code_Defect",
+      "source_fault_type": "code_missing_parameter",
+      "source_fingerprint": "c5235197781317592ffb9302ee68b58069f8c67bff4dfc859be39d2cc3323d4d",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "checkoutservice",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/checkoutservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Resource",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Application_Code_Defect"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "code_excessive_file_reads"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service\", \"native_fault_category\": \"Resource\", \"fault_object\": \"checkoutservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:23",
+      "source_case_id": "23",
+      "source_fault_category": "Application_Code_Defect",
+      "source_fault_type": "code_excessive_file_reads",
+      "source_fingerprint": "7c4231554695a84827f18f3ffc0c8a75067af66b3d65ea4aada93d2687d90525",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "frontend",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/frontend"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Unavailable",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Application_Code_Defect"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "503",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "code_wrong_argument_order"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"503\", \"native_fault_category\": \"Service Unavailable\", \"fault_object\": \"frontend\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:32",
+      "source_case_id": "32",
+      "source_fault_category": "Application_Code_Defect",
+      "source_fault_type": "code_wrong_argument_order",
+      "source_fingerprint": "b4e178137a1cd049c0f2e4f4dcc36c0a2cb56152bdc0e7caef6a4c4b45fc3980",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "frontend",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/frontend"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Resource",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Application_Code_Defect"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "code_busy_loop"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service\", \"native_fault_category\": \"Resource\", \"fault_object\": \"frontend\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:35",
+      "source_case_id": "35",
+      "source_fault_category": "Application_Code_Defect",
+      "source_fault_type": "code_busy_loop",
+      "source_fingerprint": "6d80c8db368cf26f3d79227787a54da214119f5d0fe251768a7a6142b0941694",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "frontend",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/frontend"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "HTTP Error",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Application_Code_Defect"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Unavailable",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "code_excessive_file_writes"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service Unavailable\", \"native_fault_category\": \"HTTP Error\", \"fault_object\": \"frontend\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:60",
+      "source_case_id": "60",
+      "source_fault_category": "Application_Code_Defect",
+      "source_fault_type": "code_excessive_file_writes",
+      "source_fingerprint": "9002ac012e9b980a008755feaad0146e2f09dc4f2956b459b9a1fe67ad791406",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "productcatalogservice",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/productcatalogservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Product Catalog Service",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Application_Code_Defect"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Unavailability",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "code_wrong_return"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service Unavailability\", \"native_fault_category\": \"Product Catalog Service\", \"fault_object\": \"productcatalogservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:77",
+      "source_case_id": "77",
+      "source_fault_category": "Application_Code_Defect",
+      "source_fault_type": "code_wrong_return",
+      "source_fingerprint": "e059b2003855c1c6fce297e65e8571c0ae1fd4a1037570a6a16f90765f32899a",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "frontend",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "app/shippingservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Latency",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Application_Code_Defect"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "code_artificial_delay"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service\", \"native_fault_category\": \"Latency\", \"fault_object\": \"frontend\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:89",
+      "source_case_id": "89",
+      "source_fault_category": "Application_Code_Defect",
+      "source_fault_type": "code_artificial_delay",
+      "source_fingerprint": "2dd05e90ad745f54edc8bd14d4c2b63cfb32bfaced848fb34fd2d3402b32f135",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "shippingservice-db6465f5d-sk8rt",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/shippingservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Container",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Application_Code_Defect"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "CrashLoopBackOff",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "code_memory_leak"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"CrashLoopBackOff\", \"native_fault_category\": \"Container\", \"fault_object\": \"shippingservice-db6465f5d-sk8rt\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:90",
+      "source_case_id": "90",
+      "source_fault_category": "Application_Code_Defect",
+      "source_fault_type": "code_memory_leak",
+      "source_fingerprint": "095715616df16daed5d7bedeec0db7604f24156d05b933274fdb5c4ff148fb1c",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "kube-proxy.service",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "node/worker-01"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Network",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Infrastructure_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Unreachability",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "kube_proxy_unavailable"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service Unreachability\", \"native_fault_category\": \"Network\", \"fault_object\": \"kube-proxy.service\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:15",
+      "source_case_id": "15",
+      "source_fault_category": "Infrastructure_Fault",
+      "source_fault_type": "kube_proxy_unavailable",
+      "source_fingerprint": "dcd718a0c488c059251ca3086e585c695d2a77621544b65f921bdcd5ed0783af",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "checkoutservice-8445f8b6cb-58chn",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "node/master"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ServiceUnreachability",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Infrastructure_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ServiceUnavailable",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "kube_scheduler_unavailable"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"ServiceUnavailable\", \"native_fault_category\": \"ServiceUnreachability\", \"fault_object\": \"checkoutservice-8445f8b6cb-58chn\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:21",
+      "source_case_id": "21",
+      "source_fault_category": "Infrastructure_Fault",
+      "source_fault_type": "kube_scheduler_unavailable",
+      "source_fingerprint": "19d3580e8b7234ca50218ca1581eb8be3fc5be736b8dd4095899c02cad2d135f",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "worker-01",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "node/worker-01"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Infrastructure_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Kubelet",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "kubelet_unavailable"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Kubelet\", \"native_fault_category\": \"Service\", \"fault_object\": \"worker-01\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:30",
+      "source_case_id": "30",
+      "source_fault_category": "Infrastructure_Fault",
+      "source_fault_type": "kubelet_unavailable",
+      "source_fingerprint": "b8ee3c2be0a171d8c1526ae8e0be290add6faf48752691ef31584c73962351b2",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "containerd.service - containerd container runtime",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "node/worker-01"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Containerd socket unavailable",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Infrastructure_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Containerd runtime failure",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "containerd_unavailable"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Containerd runtime failure\", \"native_fault_category\": \"Containerd socket unavailable\", \"fault_object\": \"containerd.service - containerd container runtime\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:9",
+      "source_case_id": "9",
+      "source_fault_category": "Infrastructure_Fault",
+      "source_fault_type": "containerd_unavailable",
+      "source_fingerprint": "6a3fb471307377f4b17a39c0c90cd45ec3a15787fe97a5154b581489a8619b37",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "cartservice",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "app/redis-cart"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Performance_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Latency Degradation",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "pod_cpu_overload"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service Latency Degradation\", \"native_fault_category\": \"Service\", \"fault_object\": \"cartservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:10",
+      "source_case_id": "10",
+      "source_fault_category": "Performance_Fault",
+      "source_fault_type": "pod_cpu_overload",
+      "source_fingerprint": "5dec4daaea600e7bafe21b70d78c39d37c223859bbdf0f10348313e14dade0df",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "checkoutservice",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/checkoutservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "High Latency",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Performance_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Latency Degradation",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "pod_network_delay"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service Latency Degradation\", \"native_fault_category\": \"High Latency\", \"fault_object\": \"checkoutservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:14",
+      "source_case_id": "14",
+      "source_fault_category": "Performance_Fault",
+      "source_fault_type": "pod_network_delay",
+      "source_fingerprint": "165bafb0c468a2802018833b1764269e9d6bfbbfc328dd7c5fe96495bfde052a",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "cartservice",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "node/worker-02"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Latency",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Performance_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Network",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "node_network_delay"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Network\", \"native_fault_category\": \"Latency\", \"fault_object\": \"cartservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:23",
+      "source_case_id": "23",
+      "source_fault_category": "Performance_Fault",
+      "source_fault_type": "node_network_delay",
+      "source_fingerprint": "b47459a86c93c3cd9bce4ffe9102ffc9ffc90288dced48880a8ed94cd75a4cb1",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "checkoutservice",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "node/worker-01"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Network Quality Degradation",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Performance_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Latency Degradation",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "node_network_packet_loss"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service Latency Degradation\", \"native_fault_category\": \"Network Quality Degradation\", \"fault_object\": \"checkoutservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:26",
+      "source_case_id": "26",
+      "source_fault_category": "Performance_Fault",
+      "source_fault_type": "node_network_packet_loss",
+      "source_fingerprint": "640b7e3602a876c6a1d4864a28d2a92d8571ca9f111498286d4e47e0c1055427",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "currencyservice-68bd7787c9-z922l",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/currencyservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Container restart",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Runtime_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Liveness probe timeout",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "liveness_probe_incorrect_port"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Liveness probe timeout\", \"native_fault_category\": \"Container restart\", \"fault_object\": \"currencyservice-68bd7787c9-z922l\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:11",
+      "source_case_id": "11",
+      "source_fault_category": "Runtime_Fault",
+      "source_fault_type": "liveness_probe_incorrect_port",
+      "source_fingerprint": "e43fd94a850022b92abb369881cd24ea7fa3e1befe1f496ab76497e7b3986b18",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "adservice-75d5d88689-7djn4",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/adservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "LivenessProbeFailure",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Runtime_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "CrashLoopBackOff",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "liveness_probe_incorrect_timing"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"CrashLoopBackOff\", \"native_fault_category\": \"LivenessProbeFailure\", \"fault_object\": \"adservice-75d5d88689-7djn4\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:17",
+      "source_case_id": "17",
+      "source_fault_category": "Runtime_Fault",
+      "source_fault_type": "liveness_probe_incorrect_timing",
+      "source_fingerprint": "b8e662872b6b96ec9f956921bf3f8b510018a3aed9c43bd937552dd623a49e25",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "cartservice-8c5b58976-49rrx",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/cartservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Resource",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Runtime_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "OOMKilled",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "container_memory_limit_too_low"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"OOMKilled\", \"native_fault_category\": \"Resource\", \"fault_object\": \"cartservice-8c5b58976-49rrx\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:23",
+      "source_case_id": "23",
+      "source_fault_category": "Runtime_Fault",
+      "source_fault_type": "container_memory_limit_too_low",
+      "source_fingerprint": "cea098619cb2ebe8a875af9d4ac17d987ebda24f8fcb4a3786db37f21bd425c5",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "productcatalogservice-695767b548-2x2xc",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/productcatalogservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "HTTP transport connection broken",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Runtime_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Readiness probe failure",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "readiness_probe_incorrect_protocol"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Readiness probe failure\", \"native_fault_category\": \"HTTP transport connection broken\", \"fault_object\": \"productcatalogservice-695767b548-2x2xc\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:36",
+      "source_case_id": "36",
+      "source_fault_category": "Runtime_Fault",
+      "source_fault_type": "readiness_probe_incorrect_protocol",
+      "source_fingerprint": "c5a1b04d290f9aff69148757c4b51d822647d2120898373811bbc6ffb1f551a1",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "emailservice-5795bc6dc5-tt6tf",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/emailservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Liveness probe failure",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Runtime_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Readiness probe timeout",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "readiness_probe_incorrect_port"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Readiness probe timeout\", \"native_fault_category\": \"Liveness probe failure\", \"fault_object\": \"emailservice-5795bc6dc5-tt6tf\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:42",
+      "source_case_id": "42",
+      "source_fault_category": "Runtime_Fault",
+      "source_fault_type": "readiness_probe_incorrect_port",
+      "source_fingerprint": "0e822eff3604d8fe9439ff2bf7f04ab5f4156e0918275ce2f99d74d3e3f2fab7",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "recommendationservice-667699c9dd-cx2c9",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/recommendationservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Container restart",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Runtime_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Liveness probe failure",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "liveness_probe_incorrect_protocol"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Liveness probe failure\", \"native_fault_category\": \"Container restart\", \"fault_object\": \"recommendationservice-667699c9dd-cx2c9\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:7",
+      "source_case_id": "7",
+      "source_fault_category": "Runtime_Fault",
+      "source_fault_type": "liveness_probe_incorrect_protocol",
+      "source_fingerprint": "a5da66c97209ad59a1efe14c6778f461f4b5eb275e57b1f5ff5f104ddc540fd1",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "cartservice-79b49f5555-rl2kp",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/cartservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Node",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Scheduling_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Scheduling",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "node_cordon_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Scheduling\", \"native_fault_category\": \"Node\", \"fault_object\": \"cartservice-79b49f5555-rl2kp\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:1",
+      "source_case_id": "1",
+      "source_fault_category": "Scheduling_Fault",
+      "source_fault_type": "node_cordon_mismatch",
+      "source_fingerprint": "e3bf189610b5ef8f2d81992226a7b6be5d67014c6a3638a6cf68d61908994d4b",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "redis-cart-5d5fdb58ff",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/redis-cart"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "NodeAffinity",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Scheduling_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "PodSchedulingFailure",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "node_selector_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"PodSchedulingFailure\", \"native_fault_category\": \"NodeAffinity\", \"fault_object\": \"redis-cart-5d5fdb58ff\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:110",
+      "source_case_id": "110",
+      "source_fault_category": "Scheduling_Fault",
+      "source_fault_type": "node_selector_mismatch",
+      "source_fingerprint": "64c752735f97bff341144c34f2cb96e0c9f24adaf9dc6cd9e900157fe728d258",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "shippingservice-57cffd957b-nk5sm",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/shippingservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Scheduling",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Scheduling_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Pending",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "pod_anti_affinity_conflict"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Pending\", \"native_fault_category\": \"Scheduling\", \"fault_object\": \"shippingservice-57cffd957b-nk5sm\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:119",
+      "source_case_id": "119",
+      "source_fault_category": "Scheduling_Fault",
+      "source_fault_type": "pod_anti_affinity_conflict",
+      "source_fingerprint": "5a3bd9e20f26118ceadcce80c9e44d79fa28c8503c9c9a37d63271c184f11f8c",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "redis-cart-pvc",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "app/redis-cart"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Pending",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Scheduling_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "PersistentVolumeClaim",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "pvc_access_mode_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"PersistentVolumeClaim\", \"native_fault_category\": \"Pending\", \"fault_object\": \"redis-cart-pvc\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:129",
+      "source_case_id": "129",
+      "source_fault_category": "Scheduling_Fault",
+      "source_fault_type": "pvc_access_mode_mismatch",
+      "source_fingerprint": "f4033a3763d57f92132d5f5b73f1ad10d3f04f82e94fab29dbaf815ad54c3144",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "redis-cart-pvc",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "app/redis-cart"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Pending",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Scheduling_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "PersistentVolumeClaim",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "pvc_selector_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"PersistentVolumeClaim\", \"native_fault_category\": \"Pending\", \"fault_object\": \"redis-cart-pvc\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:132",
+      "source_case_id": "132",
+      "source_fault_category": "Scheduling_Fault",
+      "source_fault_type": "pvc_selector_mismatch",
+      "source_fingerprint": "d2b1459508a8f40d7f2e683a3373568129b0f8df944ab5997df641381a258777",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "redis-cart-68db7b6f97-2jwj6",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/redis-cart"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Scheduling",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Scheduling_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "PodUnbound",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "pvc_storage_class_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"PodUnbound\", \"native_fault_category\": \"Scheduling\", \"fault_object\": \"redis-cart-68db7b6f97-2jwj6\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:136",
+      "source_case_id": "136",
+      "source_fault_category": "Scheduling_Fault",
+      "source_fault_type": "pvc_storage_class_mismatch",
+      "source_fingerprint": "e10f874499e69121ea1e63cfa6d9ca6718356d8750dfec4a5a75a30450e09916",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "redis-cart-pvc",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "app/redis-cart"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Pending",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Scheduling_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "PersistentVolumeClaim",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "pv_binding_occupied"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"PersistentVolumeClaim\", \"native_fault_category\": \"Pending\", \"fault_object\": \"redis-cart-pvc\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:137",
+      "source_case_id": "137",
+      "source_fault_category": "Scheduling_Fault",
+      "source_fault_type": "pv_binding_occupied",
+      "source_fingerprint": "fd120b296c452fa1232fa7cd6cfd28bdcbeb828578d4808ddd604fa9e271934c",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "worker-01",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "app/checkoutservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Node Unhealthy",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Scheduling_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Scheduling",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "taint_toleration_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Scheduling\", \"native_fault_category\": \"Node Unhealthy\", \"fault_object\": \"worker-01\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:150",
+      "source_case_id": "150",
+      "source_fault_category": "Scheduling_Fault",
+      "source_fault_type": "taint_toleration_mismatch",
+      "source_fingerprint": "55b6e19d7c055d2a407d6845cb061e8ab48269abeb3116fc7819cad5d899f27d",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "redis-cart-54754cc77c",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/redis-cart"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "resource-constraint",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Scheduling_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "pod-scheduling",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "cpu_capacity_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"pod-scheduling\", \"native_fault_category\": \"resource-constraint\", \"fault_object\": \"redis-cart-54754cc77c\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:24",
+      "source_case_id": "24",
+      "source_fault_category": "Scheduling_Fault",
+      "source_fault_type": "cpu_capacity_mismatch",
+      "source_fingerprint": "401833f9ffb452dede46514010dc07106703410970ede897694b0fbdec9351e8",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "worker-03",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "app/cartservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Node",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Scheduling_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "MemoryPressure",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "memory_capacity_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"MemoryPressure\", \"native_fault_category\": \"Node\", \"fault_object\": \"worker-03\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:35",
+      "source_case_id": "35",
+      "source_fault_category": "Scheduling_Fault",
+      "source_fault_type": "memory_capacity_mismatch",
+      "source_fingerprint": "3b4a8b95052a701be89430c4489130d048446bcfab6642540906a005c109d207",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "redis-cart-pvc",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "app/redis-cart"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Pending",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Scheduling_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "PersistentVolumeClaim",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "pvc_capacity_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"PersistentVolumeClaim\", \"native_fault_category\": \"Pending\", \"fault_object\": \"redis-cart-pvc\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:53",
+      "source_case_id": "53",
+      "source_fault_category": "Scheduling_Fault",
+      "source_fault_type": "pvc_capacity_mismatch",
+      "source_fingerprint": "89841c61bcf05d5ce466b3cba4ebd6ce8bc4dcd0700b9ba58cc8b7896d3bdfcc",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "emailservice",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/emailservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Node Affinity",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Scheduling_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Unreachable",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "node_affinity_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service Unreachable\", \"native_fault_category\": \"Node Affinity\", \"fault_object\": \"emailservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:59",
+      "source_case_id": "59",
+      "source_fault_category": "Scheduling_Fault",
+      "source_fault_type": "node_affinity_mismatch",
+      "source_fingerprint": "0175decf2cd88f743b8e3f7b3b038429e24d4825e7d093df8594c483ee30c717",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "shippingservice",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "app/paymentservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "transport",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Service_Routing_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "connection error",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "service_port_mapping_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"connection error\", \"native_fault_category\": \"transport\", \"fault_object\": \"shippingservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:12",
+      "source_case_id": "12",
+      "source_fault_category": "Service_Routing_Fault",
+      "source_fault_type": "service_port_mapping_mismatch",
+      "source_fingerprint": "fc3b67a9ff8774f8f4d7aa32848c6c262701c4efeaaf01ef69bc9595d6456f00",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "adservice",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/adservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "transport",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Service_Routing_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "connection refused",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "service_protocol_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"connection refused\", \"native_fault_category\": \"transport\", \"fault_object\": \"adservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:23",
+      "source_case_id": "23",
+      "source_fault_category": "Service_Routing_Fault",
+      "source_fault_type": "service_protocol_mismatch",
+      "source_fingerprint": "2183dd564d75a97f61fd61eaff8da88f5e9e136b449ab3a204e805eadb4148c4",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "redis-cart",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/redis-cart"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ServiceUnreachability",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Service_Routing_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "RedisConnectionTimeout",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "service_selector_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"RedisConnectionTimeout\", \"native_fault_category\": \"ServiceUnreachability\", \"fault_object\": \"redis-cart\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:37",
+      "source_case_id": "37",
+      "source_fault_category": "Service_Routing_Fault",
+      "source_fault_type": "service_selector_mismatch",
+      "source_fingerprint": "2c9b057cbdf69d18862a00ec440ca9c28d90201ee7f415a92d0c35ff47216ff2",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "checkoutservice",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/checkoutservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "network_layer",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Service_Routing_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "dns_resolution_failure",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "service_env_var_address_mismatch"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"dns_resolution_failure\", \"native_fault_category\": \"network_layer\", \"fault_object\": \"checkoutservice\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:6",
+      "source_case_id": "6",
+      "source_fault_category": "Service_Routing_Fault",
+      "source_fault_type": "service_env_var_address_mismatch",
+      "source_fingerprint": "9dac6fd21fb772595ce843f0f46302afb8d488e380bff6d348e6750cf5cbb24e",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "cartservice-59798f66d6-87776",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/cartservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ImagePull",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Startup_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ImagePullBackOff",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "image_registry_dns_failure"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"ImagePullBackOff\", \"native_fault_category\": \"ImagePull\", \"fault_object\": \"cartservice-59798f66d6-87776\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:2",
+      "source_case_id": "2",
+      "source_fault_category": "Startup_Fault",
+      "source_fault_type": "image_registry_dns_failure",
+      "source_fingerprint": "9202b449ba6f79a7673ef188b11c31d88ff199e7086f2feb412e6f415d4f7e87",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "frontend-5f87c65786-gpl9k",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/frontend"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ImagePullBackOff",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Startup_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ErrImagePull",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "incorrect_image_reference"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"ErrImagePull\", \"native_fault_category\": \"ImagePullBackOff\", \"fault_object\": \"frontend-5f87c65786-gpl9k\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:23",
+      "source_case_id": "23",
+      "source_fault_category": "Startup_Fault",
+      "source_fault_type": "incorrect_image_reference",
+      "source_fingerprint": "a3fb715948151fbdaae2e99875cf3c475ad67d541a14dd75da648360c2e35937",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "recommendationservice-655b6d9489-r9w5h",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/recommendationservice"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ImagePull",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Startup_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ErrImagePull",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "missing_image_pull_secret"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"ErrImagePull\", \"native_fault_category\": \"ImagePull\", \"fault_object\": \"recommendationservice-655b6d9489-r9w5h\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:48",
+      "source_case_id": "48",
+      "source_fault_category": "Startup_Fault",
+      "source_fault_type": "missing_image_pull_secret",
+      "source_fingerprint": "36356d0c3a04788d540475527b34d3c18d559688722029b47c94a02e13470508",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "redis-cart-79598c9984-fs47p",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/redis-cart"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Container",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Startup_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "CrashLoopBackOff",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "volume_mount_permission_denied"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"CrashLoopBackOff\", \"native_fault_category\": \"Container\", \"fault_object\": \"redis-cart-79598c9984-fs47p\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:60",
+      "source_case_id": "60",
+      "source_fault_category": "Startup_Fault",
+      "source_fault_type": "volume_mount_permission_denied",
+      "source_fingerprint": "8d3ce87c5dc818abd693af8bc29c258af8b5850566803917cca20b1a7ca480ef",
+      "source_system": "boutique"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "ts-price-service",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/ts-price-service"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Unavailability",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Runtime_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Availability",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "deployment_zero_replicas"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service Availability\", \"native_fault_category\": \"Service Unavailability\", \"fault_object\": \"ts-price-service\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:25",
+      "source_case_id": "25",
+      "source_fault_category": "Runtime_Fault",
+      "source_fault_type": "deployment_zero_replicas",
+      "source_fingerprint": "55498a372634566d24618e7a7b83440ce3e886c9e7be21367b5379585757f6ed",
+      "source_system": "trainticket"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "nacosdb-mysql-0",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "app/tsdb-mysql"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Database connection pool exhaustion",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Runtime_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "HikariPool initialization failure",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "db_connection_exhaustion"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"HikariPool initialization failure\", \"native_fault_category\": \"Database connection pool exhaustion\", \"fault_object\": \"nacosdb-mysql-0\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:3",
+      "source_case_id": "3",
+      "source_fault_category": "Runtime_Fault",
+      "source_fault_type": "db_connection_exhaustion",
+      "source_fingerprint": "363026f3422cc86582a71d43541b9659d16014f85bf36f624b23ad02a462a31e",
+      "source_system": "trainticket"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "ts-order-other-service",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/ts-order-other-service"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Authentication",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Runtime_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "DatabaseConnectionFailure",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "mysql_invalid_credentials"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"DatabaseConnectionFailure\", \"native_fault_category\": \"Authentication\", \"fault_object\": \"ts-order-other-service\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:42",
+      "source_case_id": "42",
+      "source_fault_category": "Runtime_Fault",
+      "source_fault_type": "mysql_invalid_credentials",
+      "source_fingerprint": "9308cbbda8c3ebbd33a2139592149fb092094b68faf43bce44d454a32773c76b",
+      "source_system": "trainticket"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ts-config-service-778646698d-qmbf9",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/ts-config-service"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Database Connectivity",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Runtime_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "JDBCConnectionException",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "mysql_invalid_port"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"JDBCConnectionException\", \"native_fault_category\": \"Database Connectivity\", \"fault_object\": \"ts-config-service-778646698d-qmbf9\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:59",
+      "source_case_id": "59",
+      "source_fault_category": "Runtime_Fault",
+      "source_fault_type": "mysql_invalid_port",
+      "source_fingerprint": "e889bcae1523e908d9e667ec1146b9bbda3cceacd5c1889b599b9a86b3dd5e50",
+      "source_system": "trainticket"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ts-assurance-service-5df4cbbdc-5wkbb",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/ts-assurance-service"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Unreachability",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Runtime_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "PortInUseException",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "service_sidecar_port_conflict"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"PortInUseException\", \"native_fault_category\": \"Service Unreachability\", \"fault_object\": \"ts-assurance-service-5df4cbbdc-5wkbb\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:79",
+      "source_case_id": "79",
+      "source_fault_category": "Runtime_Fault",
+      "source_fault_type": "service_sidecar_port_conflict",
+      "source_fingerprint": "ecd31d3b67bc1d4cbc43c12c5246810015c64b2380d1bd21c46b4b1b0433fcd9",
+      "source_system": "trainticket"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "tsdb-mysql",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/tsdb-mysql"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Read-Only Mode",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Runtime_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Database Connection Error",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "db_readonly_mode"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Database Connection Error\", \"native_fault_category\": \"Read-Only Mode\", \"fault_object\": \"tsdb-mysql\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:9",
+      "source_case_id": "9",
+      "source_fault_category": "Runtime_Fault",
+      "source_fault_type": "db_readonly_mode",
+      "source_fingerprint": "8de0bfaa72f9fc890bb3c185be2622b9feeeaca89f62d5a82dd6ff29d4fe06d1",
+      "source_system": "trainticket"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "WRONG_TARGET",
+          "prediction": "ts-travel-service",
+          "rationale": "no deterministic mechanical or source-family relation certified",
+          "target": "app/ts-gateway-service"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Availability",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Service_Routing_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Unavailable",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "gateway_misrouted"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Service Unavailable\", \"native_fault_category\": \"Service Availability\", \"fault_object\": \"ts-travel-service\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:15",
+      "source_case_id": "15",
+      "source_fault_category": "Service_Routing_Fault",
+      "source_fault_type": "gateway_misrouted",
+      "source_fingerprint": "9df35b36f5eccecdbd66eb445084a6521b672d2e0c5ffc007077ad9cc4daafb3",
+      "source_system": "trainticket"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "RESOURCE_PREFIX_ONLY",
+          "prediction": "ts-order-service",
+          "rationale": "bare logical resource name equals the target name after its source kind prefix",
+          "target": "app/ts-order-service"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "DNS Resolution",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Service_Routing_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Network",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "service_dns_resolution_failure"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"Network\", \"native_fault_category\": \"DNS Resolution\", \"fault_object\": \"ts-order-service\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:27",
+      "source_case_id": "27",
+      "source_fault_category": "Service_Routing_Fault",
+      "source_fault_type": "service_dns_resolution_failure",
+      "source_fingerprint": "f622ec238ad3292b650eaec5187caef2bc1a276c96b3e702a1fd8b5b5067df24",
+      "source_system": "trainticket"
+    },
+    {
+      "fields": {
+        "fault_object": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "ts-order-service-6c6b786d8-kqmpg",
+          "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+          "target": "app/ts-order-service"
+        },
+        "native_fault_category": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "Service Unreachability",
+          "rationale": "matches a predeclared category-level symptom/resource family; not a native-label alias",
+          "target": "Startup_Fault"
+        },
+        "native_fault_type": {
+          "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+          "prediction": "CreateContainerConfigError",
+          "rationale": "matches a predeclared source-observable symptom/resource family; not a native-label alias",
+          "target": "missing_secret_binding"
+        }
+      },
+      "parse_category": "valid",
+      "parser_recovered": true,
+      "raw_output": "{\"native_fault_type\": \"CreateContainerConfigError\", \"native_fault_category\": \"Service Unreachability\", \"fault_object\": \"ts-order-service-6c6b786d8-kqmpg\"}<|im_end|>",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Startup_Fault:11",
+      "source_case_id": "11",
+      "source_fault_category": "Startup_Fault",
+      "source_fault_type": "missing_secret_binding",
+      "source_fingerprint": "d77953580cef9e61ee03cd5e237a90bfe83cd82a5bfac26209d6d68d5b9d41a5",
+      "source_system": "trainticket"
+    }
+  ],
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "strict_v1_result_preserved": {
+    "fault_object_exact": "0/57",
+    "joint_exact": "0/57",
+    "native_fault_category_exact": "0/57",
+    "native_fault_type_exact": "0/57",
+    "schema_valid": "57/57"
+  },
+  "test_model_facing": false,
+  "v1_artifacts_modified": false
+}

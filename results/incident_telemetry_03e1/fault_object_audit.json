@@ -1,0 +1,485 @@
+{
+  "audit_version": "cloud-opsbench-03e1-contract-validity-audit-v1",
+  "counts": {
+    "RESOURCE_PREFIX_ONLY": 17,
+    "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 21,
+    "WRONG_TARGET": 19
+  },
+  "experiment": "03E.1",
+  "finding": "17/57 object failures are deterministic source-kind-prefix omissions. Pod/replicaset/PVC and unrelated service/node names remain non-equivalent resources.",
+  "llm_judge_used": false,
+  "model": "Qwen/Qwen3.5-2B",
+  "model_training": false,
+  "policy": {
+    "ambiguous_alias": "leave unresolved; never use ground truth to break ties",
+    "bare_name": "resolve to app/name only when the source-visible logical application identity is unique; do not treat it as a deployment/pod/PVC identity",
+    "deployment_prefix": "distinct from app/name unless the contract explicitly defines logical-app equivalence",
+    "pod_name": "distinct Kubernetes resource/instance; never collapse to app/name"
+  },
+  "provider_called": false,
+  "record_count": 57,
+  "records": [
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "currencyservice",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:15",
+      "source_case_id": "15",
+      "target": "namespace/boutique"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "emailservice",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:26",
+      "source_case_id": "26",
+      "target": "namespace/boutique"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "paymentservice",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:39",
+      "source_case_id": "39",
+      "target": "namespace/boutique"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "cartservice",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:45",
+      "source_case_id": "45",
+      "target": "namespace/boutique"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "emailservice",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:5",
+      "source_case_id": "5",
+      "target": "app/emailservice"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "redis-cart-pvc",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:57",
+      "source_case_id": "57",
+      "target": "namespace/boutique"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "checkoutservice",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:17",
+      "source_case_id": "17",
+      "target": "app/checkoutservice"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "checkoutservice",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:23",
+      "source_case_id": "23",
+      "target": "app/checkoutservice"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "frontend",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:32",
+      "source_case_id": "32",
+      "target": "app/frontend"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "frontend",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:35",
+      "source_case_id": "35",
+      "target": "app/frontend"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "frontend",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:60",
+      "source_case_id": "60",
+      "target": "app/frontend"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "productcatalogservice",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:77",
+      "source_case_id": "77",
+      "target": "app/productcatalogservice"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "frontend",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:89",
+      "source_case_id": "89",
+      "target": "app/shippingservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "shippingservice-db6465f5d-sk8rt",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:90",
+      "source_case_id": "90",
+      "target": "app/shippingservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "kube-proxy.service",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:15",
+      "source_case_id": "15",
+      "target": "node/worker-01"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "checkoutservice-8445f8b6cb-58chn",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:21",
+      "source_case_id": "21",
+      "target": "node/master"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "worker-01",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:30",
+      "source_case_id": "30",
+      "target": "node/worker-01"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "containerd.service - containerd container runtime",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:9",
+      "source_case_id": "9",
+      "target": "node/worker-01"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "cartservice",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:10",
+      "source_case_id": "10",
+      "target": "app/redis-cart"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "checkoutservice",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:14",
+      "source_case_id": "14",
+      "target": "app/checkoutservice"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "cartservice",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:23",
+      "source_case_id": "23",
+      "target": "node/worker-02"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "checkoutservice",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:26",
+      "source_case_id": "26",
+      "target": "node/worker-01"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "currencyservice-68bd7787c9-z922l",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:11",
+      "source_case_id": "11",
+      "target": "app/currencyservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "adservice-75d5d88689-7djn4",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:17",
+      "source_case_id": "17",
+      "target": "app/adservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "cartservice-8c5b58976-49rrx",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:23",
+      "source_case_id": "23",
+      "target": "app/cartservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "productcatalogservice-695767b548-2x2xc",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:36",
+      "source_case_id": "36",
+      "target": "app/productcatalogservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "emailservice-5795bc6dc5-tt6tf",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:42",
+      "source_case_id": "42",
+      "target": "app/emailservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "recommendationservice-667699c9dd-cx2c9",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:7",
+      "source_case_id": "7",
+      "target": "app/recommendationservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "cartservice-79b49f5555-rl2kp",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:1",
+      "source_case_id": "1",
+      "target": "app/cartservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "redis-cart-5d5fdb58ff",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:110",
+      "source_case_id": "110",
+      "target": "app/redis-cart"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "shippingservice-57cffd957b-nk5sm",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:119",
+      "source_case_id": "119",
+      "target": "app/shippingservice"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "redis-cart-pvc",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:129",
+      "source_case_id": "129",
+      "target": "app/redis-cart"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "redis-cart-pvc",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:132",
+      "source_case_id": "132",
+      "target": "app/redis-cart"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "redis-cart-68db7b6f97-2jwj6",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:136",
+      "source_case_id": "136",
+      "target": "app/redis-cart"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "redis-cart-pvc",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:137",
+      "source_case_id": "137",
+      "target": "app/redis-cart"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "worker-01",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:150",
+      "source_case_id": "150",
+      "target": "app/checkoutservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "redis-cart-54754cc77c",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:24",
+      "source_case_id": "24",
+      "target": "app/redis-cart"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "worker-03",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:35",
+      "source_case_id": "35",
+      "target": "app/cartservice"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "redis-cart-pvc",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:53",
+      "source_case_id": "53",
+      "target": "app/redis-cart"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "emailservice",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:59",
+      "source_case_id": "59",
+      "target": "app/emailservice"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "shippingservice",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:12",
+      "source_case_id": "12",
+      "target": "app/paymentservice"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "adservice",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:23",
+      "source_case_id": "23",
+      "target": "app/adservice"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "redis-cart",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:37",
+      "source_case_id": "37",
+      "target": "app/redis-cart"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "checkoutservice",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:6",
+      "source_case_id": "6",
+      "target": "app/checkoutservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "cartservice-59798f66d6-87776",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:2",
+      "source_case_id": "2",
+      "target": "app/cartservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "frontend-5f87c65786-gpl9k",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:23",
+      "source_case_id": "23",
+      "target": "app/frontend"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "recommendationservice-655b6d9489-r9w5h",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:48",
+      "source_case_id": "48",
+      "target": "app/recommendationservice"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "redis-cart-79598c9984-fs47p",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:60",
+      "source_case_id": "60",
+      "target": "app/redis-cart"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "ts-price-service",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:25",
+      "source_case_id": "25",
+      "target": "app/ts-price-service"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "nacosdb-mysql-0",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:3",
+      "source_case_id": "3",
+      "target": "app/tsdb-mysql"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "ts-order-other-service",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:42",
+      "source_case_id": "42",
+      "target": "app/ts-order-other-service"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "ts-config-service-778646698d-qmbf9",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:59",
+      "source_case_id": "59",
+      "target": "app/ts-config-service"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "ts-assurance-service-5df4cbbdc-5wkbb",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:79",
+      "source_case_id": "79",
+      "target": "app/ts-assurance-service"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "tsdb-mysql",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:9",
+      "source_case_id": "9",
+      "target": "app/tsdb-mysql"
+    },
+    {
+      "classification": "WRONG_TARGET",
+      "prediction": "ts-travel-service",
+      "rationale": "no deterministic mechanical or source-family relation certified",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:15",
+      "source_case_id": "15",
+      "target": "app/ts-gateway-service"
+    },
+    {
+      "classification": "RESOURCE_PREFIX_ONLY",
+      "prediction": "ts-order-service",
+      "rationale": "bare logical resource name equals the target name after its source kind prefix",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:27",
+      "source_case_id": "27",
+      "target": "app/ts-order-service"
+    },
+    {
+      "classification": "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL",
+      "prediction": "ts-order-service-6c6b786d8-kqmpg",
+      "rationale": "same source-derived workload/node identity family, but a different Kubernetes granularity",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Startup_Fault:11",
+      "source_case_id": "11",
+      "target": "app/ts-order-service"
+    }
+  ],
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "v1_artifacts_modified": false
+}

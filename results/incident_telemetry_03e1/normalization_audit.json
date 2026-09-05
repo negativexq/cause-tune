@@ -1,0 +1,119 @@
+{
+  "audit_version": "cloud-opsbench-03e1-contract-validity-audit-v1",
+  "experiment": "03E.1",
+  "headline": {
+    "2B_oracle_mechanical_field_equivalences": {
+      "fault_object": 17,
+      "native_fault_category": 0,
+      "native_fault_type": 0
+    },
+    "2B_oracle_mechanical_joint_equivalences": 0
+  },
+  "llm_judge_used": false,
+  "model_training": false,
+  "normalization_functions": {
+    "fault_object": "only exact omission of source kind prefix for app/name, node/name, or namespace/name is RESOURCE_PREFIX_ONLY; no pod/deployment/PVC collapse",
+    "label": "strip; case-fold; collapse spaces/underscores/hyphens for separator equivalence; alphanumeric compaction only as canonical-format diagnostic",
+    "not_allowed": "semantic synonym maps, target-aware repair, LLM judging, arbitrary model-output rewrites"
+  },
+  "per_candidate": {
+    "0.8B": {
+      "classification_counts": {
+        "fault_object": {
+          "RESOURCE_PREFIX_ONLY": 3,
+          "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 11,
+          "WRONG_TARGET": 19
+        },
+        "native_fault_category": {
+          "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 30,
+          "WRONG_TARGET": 3
+        },
+        "native_fault_type": {
+          "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 27,
+          "WRONG_TARGET": 6
+        }
+      },
+      "mechanical_equivalent_field_counts": {
+        "fault_object": 3,
+        "native_fault_category": 0,
+        "native_fault_type": 0
+      },
+      "mechanical_equivalent_joint_case_ids": [],
+      "mechanical_equivalent_joint_cases": 0,
+      "parse_counts": {
+        "malformed_json": 24,
+        "valid": 33
+      },
+      "parsed_records": 33,
+      "records": 57,
+      "strict_v1_exact_unchanged": true
+    },
+    "2B": {
+      "classification_counts": {
+        "fault_object": {
+          "RESOURCE_PREFIX_ONLY": 17,
+          "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 21,
+          "WRONG_TARGET": 19
+        },
+        "native_fault_category": {
+          "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 57
+        },
+        "native_fault_type": {
+          "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 57
+        }
+      },
+      "mechanical_equivalent_field_counts": {
+        "fault_object": 17,
+        "native_fault_category": 0,
+        "native_fault_type": 0
+      },
+      "mechanical_equivalent_joint_case_ids": [],
+      "mechanical_equivalent_joint_cases": 0,
+      "parse_counts": {
+        "valid": 57
+      },
+      "parsed_records": 57,
+      "records": 57,
+      "strict_v1_exact_unchanged": true
+    },
+    "4B": {
+      "classification_counts": {
+        "fault_object": {
+          "RESOURCE_PREFIX_ONLY": 1,
+          "WRONG_TARGET": 6
+        },
+        "native_fault_category": {
+          "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 6,
+          "WRONG_TARGET": 1
+        },
+        "native_fault_type": {
+          "SEMANTICALLY_PLAUSIBLE_BUT_NONCANONICAL": 6,
+          "WRONG_TARGET": 1
+        }
+      },
+      "mechanical_equivalent_field_counts": {
+        "fault_object": 1,
+        "native_fault_category": 0,
+        "native_fault_type": 0
+      },
+      "mechanical_equivalent_joint_case_ids": [],
+      "mechanical_equivalent_joint_cases": 0,
+      "parse_counts": {
+        "execution_failure": 44,
+        "malformed_json": 6,
+        "valid": 7
+      },
+      "parsed_records": 7,
+      "records": 57,
+      "strict_v1_exact_unchanged": true
+    }
+  },
+  "provider_called": false,
+  "purpose": "predeclared deterministic normalization audit; strict V1 metrics remain visible and immutable",
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "v1_artifacts_modified": false
+}

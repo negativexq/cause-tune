@@ -1,0 +1,886 @@
+{
+  "audit_version": "cloud-opsbench-03e1-contract-validity-audit-v1",
+  "experiment": "03E.1",
+  "finding": "All 84 2B/4B failures are the same allowed GetRecentLogs {} call against a cache with no GetRecentLogs source. This is evaluator/replay contract strictness, not resource alias canonicalization; no ambiguous call was silently repaired.",
+  "ground_truth_resolution_used": false,
+  "headline": {
+    "allowed_tool_no_replay_source": 84,
+    "canonicalization_failures": 0,
+    "genuinely_invalid_tool_calls": 0,
+    "replay_strictness_fraction": 1.0,
+    "total_2B_4B_replay_failures": 84
+  },
+  "llm_judge_used": false,
+  "model_training": false,
+  "per_candidate": {
+    "0.8B": {
+      "classification_counts": {},
+      "failure_count": 0,
+      "records": []
+    },
+    "2B": {
+      "classification_counts": {
+        "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE": 27
+      },
+      "failure_count": 27,
+      "records": [
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:26",
+          "source_case_id": "26",
+          "source_fault_type": "namespace_memory_quota_exceeded",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:39",
+          "source_case_id": "39",
+          "source_fault_type": "namespace_pod_quota_exceeded",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:5",
+          "source_case_id": "5",
+          "source_fault_type": "missing_service_account",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:57",
+          "source_case_id": "57",
+          "source_fault_type": "namespace_storage_quota_exceeded",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:17",
+          "source_case_id": "17",
+          "source_fault_type": "code_missing_parameter",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:32",
+          "source_case_id": "32",
+          "source_fault_type": "code_wrong_argument_order",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:77",
+          "source_case_id": "77",
+          "source_fault_type": "code_wrong_return",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:90",
+          "source_case_id": "90",
+          "source_fault_type": "code_memory_leak",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:9",
+          "source_case_id": "9",
+          "source_fault_type": "containerd_unavailable",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:10",
+          "source_case_id": "10",
+          "source_fault_type": "pod_cpu_overload",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:14",
+          "source_case_id": "14",
+          "source_fault_type": "pod_network_delay",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "node_network_delay",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:26",
+          "source_case_id": "26",
+          "source_fault_type": "node_network_packet_loss",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "container_memory_limit_too_low",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:1",
+          "source_case_id": "1",
+          "source_fault_type": "node_cordon_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:110",
+          "source_case_id": "110",
+          "source_fault_type": "node_selector_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:119",
+          "source_case_id": "119",
+          "source_fault_type": "pod_anti_affinity_conflict",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:150",
+          "source_case_id": "150",
+          "source_fault_type": "taint_toleration_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:24",
+          "source_case_id": "24",
+          "source_fault_type": "cpu_capacity_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:35",
+          "source_case_id": "35",
+          "source_fault_type": "memory_capacity_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:12",
+          "source_case_id": "12",
+          "source_fault_type": "service_port_mapping_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:6",
+          "source_case_id": "6",
+          "source_fault_type": "service_env_var_address_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:2",
+          "source_case_id": "2",
+          "source_fault_type": "image_registry_dns_failure",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:25",
+          "source_case_id": "25",
+          "source_fault_type": "deployment_zero_replicas",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:3",
+          "source_case_id": "3",
+          "source_fault_type": "db_connection_exhaustion",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "gateway_misrouted",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:27",
+          "source_case_id": "27",
+          "source_fault_type": "service_dns_resolution_failure",
+          "tool": "GetRecentLogs"
+        }
+      ]
+    },
+    "4B": {
+      "classification_counts": {
+        "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE": 57
+      },
+      "failure_count": 57,
+      "records": [
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "namespace_cpu_quota_exceeded",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:26",
+          "source_case_id": "26",
+          "source_fault_type": "namespace_memory_quota_exceeded",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:39",
+          "source_case_id": "39",
+          "source_fault_type": "namespace_pod_quota_exceeded",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:45",
+          "source_case_id": "45",
+          "source_fault_type": "namespace_service_quota_exceeded",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:5",
+          "source_case_id": "5",
+          "source_fault_type": "missing_service_account",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:57",
+          "source_case_id": "57",
+          "source_fault_type": "namespace_storage_quota_exceeded",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:17",
+          "source_case_id": "17",
+          "source_fault_type": "code_missing_parameter",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:23",
+          "source_case_id": "23",
+          "source_fault_type": "code_excessive_file_reads",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:32",
+          "source_case_id": "32",
+          "source_fault_type": "code_wrong_argument_order",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:35",
+          "source_case_id": "35",
+          "source_fault_type": "code_busy_loop",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:60",
+          "source_case_id": "60",
+          "source_fault_type": "code_excessive_file_writes",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:77",
+          "source_case_id": "77",
+          "source_fault_type": "code_wrong_return",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:89",
+          "source_case_id": "89",
+          "source_fault_type": "code_artificial_delay",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:90",
+          "source_case_id": "90",
+          "source_fault_type": "code_memory_leak",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "kube_proxy_unavailable",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:21",
+          "source_case_id": "21",
+          "source_fault_type": "kube_scheduler_unavailable",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:30",
+          "source_case_id": "30",
+          "source_fault_type": "kubelet_unavailable",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:9",
+          "source_case_id": "9",
+          "source_fault_type": "containerd_unavailable",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:10",
+          "source_case_id": "10",
+          "source_fault_type": "pod_cpu_overload",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:14",
+          "source_case_id": "14",
+          "source_fault_type": "pod_network_delay",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "node_network_delay",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:26",
+          "source_case_id": "26",
+          "source_fault_type": "node_network_packet_loss",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:11",
+          "source_case_id": "11",
+          "source_fault_type": "liveness_probe_incorrect_port",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:17",
+          "source_case_id": "17",
+          "source_fault_type": "liveness_probe_incorrect_timing",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "container_memory_limit_too_low",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:36",
+          "source_case_id": "36",
+          "source_fault_type": "readiness_probe_incorrect_protocol",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:42",
+          "source_case_id": "42",
+          "source_fault_type": "readiness_probe_incorrect_port",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:7",
+          "source_case_id": "7",
+          "source_fault_type": "liveness_probe_incorrect_protocol",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:1",
+          "source_case_id": "1",
+          "source_fault_type": "node_cordon_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:110",
+          "source_case_id": "110",
+          "source_fault_type": "node_selector_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:119",
+          "source_case_id": "119",
+          "source_fault_type": "pod_anti_affinity_conflict",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:129",
+          "source_case_id": "129",
+          "source_fault_type": "pvc_access_mode_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:132",
+          "source_case_id": "132",
+          "source_fault_type": "pvc_selector_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:136",
+          "source_case_id": "136",
+          "source_fault_type": "pvc_storage_class_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:137",
+          "source_case_id": "137",
+          "source_fault_type": "pv_binding_occupied",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:150",
+          "source_case_id": "150",
+          "source_fault_type": "taint_toleration_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:24",
+          "source_case_id": "24",
+          "source_fault_type": "cpu_capacity_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:35",
+          "source_case_id": "35",
+          "source_fault_type": "memory_capacity_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:53",
+          "source_case_id": "53",
+          "source_fault_type": "pvc_capacity_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:59",
+          "source_case_id": "59",
+          "source_fault_type": "node_affinity_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:12",
+          "source_case_id": "12",
+          "source_fault_type": "service_port_mapping_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "service_protocol_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:37",
+          "source_case_id": "37",
+          "source_fault_type": "service_selector_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:6",
+          "source_case_id": "6",
+          "source_fault_type": "service_env_var_address_mismatch",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:2",
+          "source_case_id": "2",
+          "source_fault_type": "image_registry_dns_failure",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:23",
+          "source_case_id": "23",
+          "source_fault_type": "incorrect_image_reference",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:48",
+          "source_case_id": "48",
+          "source_fault_type": "missing_image_pull_secret",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:60",
+          "source_case_id": "60",
+          "source_fault_type": "volume_mount_permission_denied",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:25",
+          "source_case_id": "25",
+          "source_fault_type": "deployment_zero_replicas",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:3",
+          "source_case_id": "3",
+          "source_fault_type": "db_connection_exhaustion",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:42",
+          "source_case_id": "42",
+          "source_fault_type": "mysql_invalid_credentials",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:59",
+          "source_case_id": "59",
+          "source_fault_type": "mysql_invalid_port",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:79",
+          "source_case_id": "79",
+          "source_fault_type": "service_sidecar_port_conflict",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:9",
+          "source_case_id": "9",
+          "source_fault_type": "db_readonly_mode",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:15",
+          "source_case_id": "15",
+          "source_fault_type": "gateway_misrouted",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:27",
+          "source_case_id": "27",
+          "source_fault_type": "service_dns_resolution_failure",
+          "tool": "GetRecentLogs"
+        },
+        {
+          "arguments": {},
+          "classification": "OTHER_ALLOWED_TOOL_WITH_NO_CASE_REPLAY_SOURCE",
+          "error": "no_replay_observation",
+          "rationale": "The tool is in the V1 allowlist and the empty object passes its permissive schema, but the case-local frozen cache has no GetRecentLogs entries.",
+          "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Startup_Fault:11",
+          "source_case_id": "11",
+          "source_fault_type": "missing_secret_binding",
+          "tool": "GetRecentLogs"
+        }
+      ]
+    }
+  },
+  "provider_called": false,
+  "purpose": "classify every persisted 2B/4B closed-loop replay failure without repairing calls",
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "v1_artifacts_modified": false
+}
