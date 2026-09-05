@@ -1,0 +1,61 @@
+{
+  "budget_chars": 30000,
+  "coverage": {
+    "budget_chars": 30000,
+    "candidate": "R2_DETERMINISTIC_PATH_UNION",
+    "coverage": {
+      "FULL": 245,
+      "PARTIAL": 78,
+      "ZERO": 310,
+      "cases": 633,
+      "missing_patterns": 265,
+      "retained_patterns": 1889,
+      "retention_rate": 0.8769730733519034,
+      "total_patterns": 2154
+    },
+    "nonempty_packages": 633,
+    "package_size": {
+      "bytes": {
+        "count": 633,
+        "max": 30000,
+        "median": 8222,
+        "min": 1027,
+        "p75": 16613,
+        "p90": 28175,
+        "p95": 29668,
+        "p99": 30000
+      },
+      "chars": {
+        "count": 633,
+        "max": 30000,
+        "median": 8167,
+        "min": 1027,
+        "p75": 16613,
+        "p90": 27951,
+        "p95": 29668,
+        "p99": 30000
+      }
+    },
+    "truncated_packages": 27
+  },
+  "experiment": "03F.1",
+  "gpu_used": false,
+  "leakage_rules": [
+    "no metadata.result targets",
+    "no process labels",
+    "no golden answers",
+    "no source paths or provenance",
+    "no target-guided retrieval"
+  ],
+  "model_loaded": false,
+  "model_trained": false,
+  "provider_called": false,
+  "replayable": true,
+  "selected_candidate": "R2_DETERMINISTIC_PATH_UNION",
+  "selection_reason": "R2 removes deterministic alternate-path omission; process-label no-pattern and malformed-regex defects remain explicitly annotated rather than hidden",
+  "source_authoritative": true,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "target_blind": true,
+  "test_model_facing": false,
+  "version": "cloud-opsbench-03f1-evidence-integrity-v1"
+}

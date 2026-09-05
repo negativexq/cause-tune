@@ -1,0 +1,27 @@
+{
+  "basis": "pre-registered pattern: reliable schema/enum compliance, meaningful non-saturated diagnosis, usable protocol, remaining gap, local feasibility; no post-hoc threshold",
+  "candidates_not_run": [
+    "Qwen/Qwen3.5-0.8B",
+    "Qwen/Qwen3.5-4B"
+  ],
+  "candidates_rerun": [
+    "Qwen/Qwen3.5-2B"
+  ],
+  "classification": "BASE_TOO_WEAK",
+  "experiment": "03E.2",
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "model_training": false,
+  "postprocessed_without_regeneration": true,
+  "provider_called": false,
+  "qlora_unblocked": false,
+  "recommendation": "DO_NOT_START_QLORA",
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "validation_screen_count": 57,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03e2-frozen-v2-contract-v1"
+}

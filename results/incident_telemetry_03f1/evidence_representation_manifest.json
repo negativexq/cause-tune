@@ -1,0 +1,29 @@
+{
+  "03d1_representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "03d_split_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "03f_decomposition_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9",
+  "baseline_observation_policy": "not selected; R3 fixed modality definitions retained as future ablation",
+  "budget_chars": 30000,
+  "canonicalization_rules": [
+    "Unicode NFKC",
+    "casefold",
+    "whitespace collapse for matcher diagnostics only"
+  ],
+  "deduplication": "exact (tool, observation), stable first occurrence",
+  "evidence_representation_fingerprint": "b676b10a17d690f3796e237e942c340f2722a1aa5bcd97af1b43de1c0e972215",
+  "experiment": "03F.1",
+  "gpu_used": false,
+  "leakage_rules": [
+    "no target/process-label access by packager",
+    "no metadata result fields",
+    "no golden answer/reasoning/provenance/path fields"
+  ],
+  "model_loaded": false,
+  "model_trained": false,
+  "provider_called": false,
+  "selected_path_policy": "path1 then path2 deterministic union",
+  "selected_representation": "R2_DETERMINISTIC_PATH_UNION",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "test_model_facing": false,
+  "version": "cloud-opsbench-03f1-evidence-integrity-v1"
+}

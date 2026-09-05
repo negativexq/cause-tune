@@ -1,0 +1,31 @@
+{
+  "by_candidate_set_size": {
+    "12": {
+      "count": 24,
+      "root_cause_exact_count": 6,
+      "root_cause_exact_rate": 0.25
+    },
+    "4": {
+      "count": 8,
+      "root_cause_exact_count": 2,
+      "root_cause_exact_rate": 0.25
+    },
+    "5": {
+      "count": 5,
+      "root_cause_exact_count": 1,
+      "root_cause_exact_rate": 0.2
+    },
+    "6": {
+      "count": 12,
+      "root_cause_exact_count": 5,
+      "root_cause_exact_rate": 0.4166666666666667
+    },
+    "8": {
+      "count": 8,
+      "root_cause_exact_count": 1,
+      "root_cause_exact_rate": 0.125
+    }
+  },
+  "definition": "descriptive slices by frozen authoritative category candidate-set size",
+  "task": "TASK_B"
+}

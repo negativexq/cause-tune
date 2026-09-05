@@ -1,0 +1,61 @@
+{
+  "error_decomposition": [
+    "CATEGORY_ERROR",
+    "WITHIN_CATEGORY_DISCRIMINATION_ERROR"
+  ],
+  "experiment": "03F",
+  "gpu_used": false,
+  "label": "HIERARCHICAL_SELF_PREDICTED_RCA",
+  "metrics": [
+    "category_exact",
+    "root_cause_exact",
+    "hierarchical_joint_exact",
+    "stage2_conditional_accuracy_given_category_correct",
+    "stage2_failure_wrong_stage1_category"
+  ],
+  "model_loaded": false,
+  "model_trained": false,
+  "name": "TASK_C_HIERARCHICAL_SELF_PREDICTED",
+  "output_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "fault_category": {
+        "enum_ref": "hierarchy_registry.ordered_categories",
+        "type": "string"
+      },
+      "root_cause": {
+        "enum_ref": "hierarchy_registry.categories[predicted_fault_category]",
+        "type": "string"
+      }
+    },
+    "required": [
+      "fault_category",
+      "root_cause"
+    ],
+    "type": "object"
+  },
+  "primary": true,
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "stages": [
+    {
+      "context": "complete native category enum",
+      "input": "evidence",
+      "output": "predicted fault_category",
+      "stage": 1
+    },
+    {
+      "authoritative_category_used": false,
+      "candidate_set": "registry[predicted category]",
+      "input": "same evidence plus Stage-1 predicted category",
+      "output": "root_cause",
+      "stage": 2
+    }
+  ],
+  "test_model_facing": false,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03f-hierarchical-decomposition-v1"
+}

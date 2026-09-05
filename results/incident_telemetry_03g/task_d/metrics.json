@@ -1,0 +1,30 @@
+{
+  "count": 57,
+  "decomposition_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9",
+  "enum_valid_count": 57,
+  "enum_valid_rate": 1.0,
+  "evidence_representation_fingerprint": "b676b10a17d690f3796e237e942c340f2722a1aa5bcd97af1b43de1c0e972215",
+  "experiment": "03G",
+  "invalid_enum_outputs": 0,
+  "lora": false,
+  "missing_or_malformed_outputs": 0,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "normalized_object_exact_count": 0,
+  "normalized_object_exact_rate": 0.0,
+  "parse_status_counts": {
+    "valid": 57
+  },
+  "provider_called": false,
+  "schema_valid_count": 57,
+  "schema_valid_rate": 1.0,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "strict_object_exact_count": 0,
+  "strict_object_exact_rate": 0.0,
+  "task": "TASK_D",
+  "test_model_facing": false,
+  "training": false,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03g-decomposed-2b-screen-v1"
+}

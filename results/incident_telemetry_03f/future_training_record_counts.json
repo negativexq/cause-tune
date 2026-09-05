@@ -1,0 +1,31 @@
+{
+  "TASK_A_CATEGORY": {
+    "deterministic_records": 510
+  },
+  "TASK_B_ORACLE_CATEGORY_ROOT_CAUSE": {
+    "deterministic_records": 510,
+    "label": "ORACLE_CATEGORY_ROOT_CAUSE"
+  },
+  "TASK_C_HIERARCHICAL_SELF_PREDICTED": {
+    "deterministic_records_now": 0,
+    "future_records_per_train_case": 1,
+    "note": "Stage-1 predictions are not manufactured before a model run"
+  },
+  "TASK_D_FAULT_OBJECT": {
+    "deterministic_records": 510
+  },
+  "experiment": "03F",
+  "gpu_used": false,
+  "model_loaded": false,
+  "model_trained": false,
+  "multi_view_automatic_doubling": false,
+  "path_view_policy": "one preferred evidence view per case; alternate path is a future ablation, not automatic duplication",
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03f-hierarchical-decomposition-v1"
+}

@@ -1,0 +1,82 @@
+{
+  "Admission_Fault": {
+    "Admission_Fault": 0,
+    "Application_Code_Defect": 0,
+    "Infrastructure_Fault": 2,
+    "Performance_Fault": 0,
+    "Runtime_Fault": 0,
+    "Scheduling_Fault": 0,
+    "Service_Routing_Fault": 1,
+    "Startup_Fault": 3
+  },
+  "Application_Code_Defect": {
+    "Admission_Fault": 0,
+    "Application_Code_Defect": 1,
+    "Infrastructure_Fault": 0,
+    "Performance_Fault": 4,
+    "Runtime_Fault": 2,
+    "Scheduling_Fault": 0,
+    "Service_Routing_Fault": 0,
+    "Startup_Fault": 1
+  },
+  "Infrastructure_Fault": {
+    "Admission_Fault": 0,
+    "Application_Code_Defect": 0,
+    "Infrastructure_Fault": 3,
+    "Performance_Fault": 0,
+    "Runtime_Fault": 0,
+    "Scheduling_Fault": 0,
+    "Service_Routing_Fault": 1,
+    "Startup_Fault": 0
+  },
+  "Performance_Fault": {
+    "Admission_Fault": 0,
+    "Application_Code_Defect": 0,
+    "Infrastructure_Fault": 0,
+    "Performance_Fault": 4,
+    "Runtime_Fault": 0,
+    "Scheduling_Fault": 0,
+    "Service_Routing_Fault": 0,
+    "Startup_Fault": 0
+  },
+  "Runtime_Fault": {
+    "Admission_Fault": 0,
+    "Application_Code_Defect": 0,
+    "Infrastructure_Fault": 2,
+    "Performance_Fault": 0,
+    "Runtime_Fault": 2,
+    "Scheduling_Fault": 0,
+    "Service_Routing_Fault": 4,
+    "Startup_Fault": 4
+  },
+  "Scheduling_Fault": {
+    "Admission_Fault": 0,
+    "Application_Code_Defect": 0,
+    "Infrastructure_Fault": 10,
+    "Performance_Fault": 0,
+    "Runtime_Fault": 0,
+    "Scheduling_Fault": 1,
+    "Service_Routing_Fault": 0,
+    "Startup_Fault": 1
+  },
+  "Service_Routing_Fault": {
+    "Admission_Fault": 0,
+    "Application_Code_Defect": 0,
+    "Infrastructure_Fault": 4,
+    "Performance_Fault": 0,
+    "Runtime_Fault": 0,
+    "Scheduling_Fault": 0,
+    "Service_Routing_Fault": 2,
+    "Startup_Fault": 0
+  },
+  "Startup_Fault": {
+    "Admission_Fault": 0,
+    "Application_Code_Defect": 0,
+    "Infrastructure_Fault": 1,
+    "Performance_Fault": 0,
+    "Runtime_Fault": 0,
+    "Scheduling_Fault": 0,
+    "Service_Routing_Fault": 3,
+    "Startup_Fault": 1
+  }
+}

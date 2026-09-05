@@ -1,0 +1,443 @@
+{
+  "closed_loop_failure_categories": {
+    "invalid_tool_selection": 1,
+    "repeated_tool_loop": 56
+  },
+  "environment_contract_failures": 0,
+  "experiment": "03E.2",
+  "initial_v2_contract_gap": {
+    "corrected_in_final_v2_run": true,
+    "reason": "case-local code source absent but tool returned failure instead of explicit unavailable result",
+    "recorded_replay_failures": 50,
+    "tool": "GetSourceCode"
+  },
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "model_training": false,
+  "oracle_execution_failures": 0,
+  "postprocessed_without_regeneration": true,
+  "provider_called": false,
+  "replay_failures": 0,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "termination": {
+    "counts": {
+      "NO_FINAL_DIAGNOSIS": 1,
+      "REPEATED_TOOL_LOOP": 56
+    },
+    "evidence_sufficient_but_no_final_count": 2,
+    "records": [
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:15",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:26",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:39",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:45",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:5",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:57",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:17",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:23",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:32",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:35",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:60",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:77",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:89",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:90",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:15",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:21",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:30",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:9",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": true,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": true,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:10",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": true,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": true,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:14",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:23",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:26",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:11",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:17",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:23",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:36",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:42",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:7",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:1",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:110",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:119",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:129",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:132",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:136",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:137",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:150",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:24",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:35",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:53",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:59",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:12",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:23",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:37",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:6",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:2",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:23",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:48",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:60",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:25",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:3",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:42",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:59",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "invalid_tool_selection",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:79",
+        "termination_category": "NO_FINAL_DIAGNOSIS"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:9",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:15",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:27",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      },
+      {
+        "evidence_sufficient_but_no_final": false,
+        "failure_category": "repeated_tool_loop",
+        "required_process_milestones_satisfied": false,
+        "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Startup_Fault:11",
+        "termination_category": "REPEATED_TOOL_LOOP"
+      }
+    ],
+    "version": "03e2-termination-audit-v1"
+  },
+  "test_model_facing": false,
+  "v1_replay_context": {
+    "canonicalization_failures": 0,
+    "get_recent_logs_empty_call_failures": 84,
+    "recorded_failures": 84
+  },
+  "validation_screen_count": 57,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03e2-frozen-v2-contract-v1"
+}

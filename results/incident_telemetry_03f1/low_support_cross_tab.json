@@ -1,0 +1,298 @@
+{
+  "experiment": "03F.1",
+  "gpu_used": false,
+  "labels": [
+    {
+      "all_case_coverage": {
+        "FULL": 3
+      },
+      "available_modalities": {
+        "alerts": 3,
+        "code": 3,
+        "k8s_states": 3,
+        "logs": 3,
+        "metrics": 3
+      },
+      "category": "Application_Code_Defect",
+      "coverage": {
+        "FULL": 1
+      },
+      "package_chars": {
+        "count": 3,
+        "max": 16962,
+        "median": 16044,
+        "min": 14666,
+        "p75": 16962,
+        "p90": 16962,
+        "p95": 16962,
+        "p99": 16962
+      },
+      "root_cause": "code_memory_leak",
+      "train_count": 2,
+      "validation_count": 1
+    },
+    {
+      "all_case_coverage": {
+        "ZERO": 3
+      },
+      "available_modalities": {
+        "alerts": 3,
+        "code": 3,
+        "k8s_states": 3,
+        "logs": 3
+      },
+      "category": "Admission_Fault",
+      "coverage": {
+        "ZERO": 1
+      },
+      "package_chars": {
+        "count": 3,
+        "max": 13500,
+        "median": 8691,
+        "min": 5700,
+        "p75": 13500,
+        "p90": 13500,
+        "p95": 13500,
+        "p99": 13500
+      },
+      "root_cause": "namespace_storage_quota_exceeded",
+      "train_count": 2,
+      "validation_count": 1
+    },
+    {
+      "all_case_coverage": {
+        "ZERO": 3
+      },
+      "available_modalities": {
+        "alerts": 3,
+        "code": 3,
+        "k8s_states": 3,
+        "logs": 3,
+        "metrics": 1
+      },
+      "category": "Performance_Fault",
+      "coverage": {
+        "ZERO": 1
+      },
+      "package_chars": {
+        "count": 3,
+        "max": 12664,
+        "median": 1685,
+        "min": 1685,
+        "p75": 12664,
+        "p90": 12664,
+        "p95": 12664,
+        "p99": 12664
+      },
+      "root_cause": "node_network_delay",
+      "train_count": 2,
+      "validation_count": 1
+    },
+    {
+      "all_case_coverage": {
+        "ZERO": 3
+      },
+      "available_modalities": {
+        "alerts": 3,
+        "code": 3,
+        "k8s_states": 3,
+        "logs": 3,
+        "metrics": 1
+      },
+      "category": "Performance_Fault",
+      "coverage": {
+        "ZERO": 1
+      },
+      "package_chars": {
+        "count": 3,
+        "max": 1685,
+        "median": 1685,
+        "min": 1673,
+        "p75": 1685,
+        "p90": 1685,
+        "p95": 1685,
+        "p99": 1685
+      },
+      "root_cause": "node_network_packet_loss",
+      "train_count": 2,
+      "validation_count": 1
+    },
+    {
+      "all_case_coverage": {
+        "FULL": 3
+      },
+      "available_modalities": {
+        "alerts": 3,
+        "code": 3,
+        "k8s_states": 3,
+        "logs": 3
+      },
+      "category": "Scheduling_Fault",
+      "coverage": {
+        "FULL": 1
+      },
+      "package_chars": {
+        "count": 3,
+        "max": 5681,
+        "median": 5642,
+        "min": 3813,
+        "p75": 5681,
+        "p90": 5681,
+        "p95": 5681,
+        "p99": 5681
+      },
+      "root_cause": "pv_binding_occupied",
+      "train_count": 2,
+      "validation_count": 1
+    },
+    {
+      "all_case_coverage": {
+        "FULL": 2
+      },
+      "available_modalities": {
+        "alerts": 2,
+        "code": 2,
+        "k8s_states": 2,
+        "logs": 2
+      },
+      "category": "Scheduling_Fault",
+      "coverage": {
+        "FULL": 1
+      },
+      "package_chars": {
+        "count": 2,
+        "max": 6629,
+        "median": 6172,
+        "min": 6172,
+        "p75": 6629,
+        "p90": 6629,
+        "p95": 6629,
+        "p99": 6629
+      },
+      "root_cause": "pvc_access_mode_mismatch",
+      "train_count": 1,
+      "validation_count": 1
+    },
+    {
+      "all_case_coverage": {
+        "PARTIAL": 2
+      },
+      "available_modalities": {
+        "alerts": 2,
+        "code": 2,
+        "k8s_states": 2,
+        "logs": 2
+      },
+      "category": "Scheduling_Fault",
+      "coverage": {
+        "PARTIAL": 1
+      },
+      "package_chars": {
+        "count": 2,
+        "max": 6495,
+        "median": 5897,
+        "min": 5897,
+        "p75": 6495,
+        "p90": 6495,
+        "p95": 6495,
+        "p99": 6495
+      },
+      "root_cause": "pvc_capacity_mismatch",
+      "train_count": 1,
+      "validation_count": 1
+    },
+    {
+      "all_case_coverage": {
+        "FULL": 1,
+        "PARTIAL": 1
+      },
+      "available_modalities": {
+        "alerts": 2,
+        "code": 2,
+        "k8s_states": 2,
+        "logs": 2
+      },
+      "category": "Scheduling_Fault",
+      "coverage": {
+        "PARTIAL": 1
+      },
+      "package_chars": {
+        "count": 2,
+        "max": 14471,
+        "median": 6571,
+        "min": 6571,
+        "p75": 14471,
+        "p90": 14471,
+        "p95": 14471,
+        "p99": 14471
+      },
+      "root_cause": "pvc_selector_mismatch",
+      "train_count": 1,
+      "validation_count": 1
+    },
+    {
+      "all_case_coverage": {
+        "FULL": 2
+      },
+      "available_modalities": {
+        "alerts": 2,
+        "code": 2,
+        "k8s_states": 2,
+        "logs": 2
+      },
+      "category": "Scheduling_Fault",
+      "coverage": {
+        "FULL": 1
+      },
+      "package_chars": {
+        "count": 2,
+        "max": 6504,
+        "median": 5809,
+        "min": 5809,
+        "p75": 6504,
+        "p90": 6504,
+        "p95": 6504,
+        "p99": 6504
+      },
+      "root_cause": "pvc_storage_class_mismatch",
+      "train_count": 1,
+      "validation_count": 1
+    },
+    {
+      "all_case_coverage": {
+        "FULL": 2
+      },
+      "available_modalities": {
+        "alerts": 2,
+        "code": 2,
+        "k8s_states": 2,
+        "logs": 2
+      },
+      "category": "Startup_Fault",
+      "coverage": {
+        "FULL": 1
+      },
+      "package_chars": {
+        "count": 2,
+        "max": 13604,
+        "median": 13447,
+        "min": 13447,
+        "p75": 13604,
+        "p90": 13604,
+        "p95": 13604,
+        "p99": 13604
+      },
+      "root_cause": "volume_mount_permission_denied",
+      "train_count": 1,
+      "validation_count": 1
+    }
+  ],
+  "low_support_definition": "TRAIN count <3",
+  "low_support_label_count": 10,
+  "model_loaded": false,
+  "model_trained": false,
+  "provider_called": false,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "test_model_facing": false,
+  "version": "cloud-opsbench-03f1-evidence-integrity-v1"
+}

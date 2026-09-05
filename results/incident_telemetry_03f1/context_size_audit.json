@@ -1,0 +1,60 @@
+{
+  "bytes": {
+    "count": 633,
+    "max": 30000,
+    "median": 8222,
+    "min": 1027,
+    "p75": 16613,
+    "p90": 28175,
+    "p95": 29668,
+    "p99": 30000
+  },
+  "characters": {
+    "count": 633,
+    "max": 30000,
+    "median": 8167,
+    "min": 1027,
+    "p75": 16613,
+    "p90": 27951,
+    "p95": 29668,
+    "p99": 30000
+  },
+  "experiment": "03F.1",
+  "gpu_used": false,
+  "measurement": "deterministic serialized evidence package size; no tokenizer/model inference",
+  "model_loaded": false,
+  "model_trained": false,
+  "prior_03d1_full_history": {
+    "bytes": {
+      "count": 1508,
+      "max": 150042,
+      "median": 10532,
+      "min": 2046,
+      "p75": 19855,
+      "p90": 32702,
+      "p95": 56611,
+      "p99": 82341
+    },
+    "characters": {
+      "count": 1508,
+      "max": 150042,
+      "median": 10524,
+      "min": 2046,
+      "p75": 19785,
+      "p90": 32696,
+      "p95": 56611,
+      "p99": 82341
+    }
+  },
+  "provider_called": false,
+  "reduction_vs_prior_full_history": {
+    "max_char_fraction": 0.19994401567561082,
+    "median_char_fraction": 0.7760357278601292
+  },
+  "selected_budget_chars": 30000,
+  "selected_representation": "R2_DETERMINISTIC_PATH_UNION",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "test_model_facing": false,
+  "token_measurement": "not run: no Qwen/tokenizer loaded in 03F.1",
+  "version": "cloud-opsbench-03f1-evidence-integrity-v1"
+}

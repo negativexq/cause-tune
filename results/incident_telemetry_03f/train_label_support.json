@@ -1,0 +1,325 @@
+{
+  "by_category": {
+    "Admission_Fault": 40,
+    "Application_Code_Defect": 69,
+    "Infrastructure_Fault": 27,
+    "Performance_Fault": 51,
+    "Runtime_Fault": 93,
+    "Scheduling_Fault": 109,
+    "Service_Routing_Fault": 65,
+    "Startup_Fault": 56
+  },
+  "by_difficulty": {
+    "easy": 258,
+    "hard": 120,
+    "medium": 132
+  },
+  "by_root_cause": {
+    "code_artificial_delay": {
+      "category": "Application_Code_Defect",
+      "count": 4,
+      "support_class": "supported"
+    },
+    "code_busy_loop": {
+      "category": "Application_Code_Defect",
+      "count": 10,
+      "support_class": "supported"
+    },
+    "code_excessive_file_reads": {
+      "category": "Application_Code_Defect",
+      "count": 11,
+      "support_class": "supported"
+    },
+    "code_excessive_file_writes": {
+      "category": "Application_Code_Defect",
+      "count": 8,
+      "support_class": "supported"
+    },
+    "code_memory_leak": {
+      "category": "Application_Code_Defect",
+      "count": 2,
+      "support_class": "low"
+    },
+    "code_missing_parameter": {
+      "category": "Application_Code_Defect",
+      "count": 15,
+      "support_class": "supported"
+    },
+    "code_wrong_argument_order": {
+      "category": "Application_Code_Defect",
+      "count": 6,
+      "support_class": "supported"
+    },
+    "code_wrong_return": {
+      "category": "Application_Code_Defect",
+      "count": 13,
+      "support_class": "supported"
+    },
+    "container_memory_limit_too_low": {
+      "category": "Runtime_Fault",
+      "count": 6,
+      "support_class": "supported"
+    },
+    "containerd_unavailable": {
+      "category": "Infrastructure_Fault",
+      "count": 7,
+      "support_class": "supported"
+    },
+    "cpu_capacity_mismatch": {
+      "category": "Scheduling_Fault",
+      "count": 13,
+      "support_class": "supported"
+    },
+    "db_connection_exhaustion": {
+      "category": "Runtime_Fault",
+      "count": 3,
+      "support_class": "supported"
+    },
+    "db_readonly_mode": {
+      "category": "Runtime_Fault",
+      "count": 6,
+      "support_class": "supported"
+    },
+    "deployment_zero_replicas": {
+      "category": "Runtime_Fault",
+      "count": 13,
+      "support_class": "supported"
+    },
+    "gateway_misrouted": {
+      "category": "Service_Routing_Fault",
+      "count": 14,
+      "support_class": "supported"
+    },
+    "image_registry_dns_failure": {
+      "category": "Startup_Fault",
+      "count": 11,
+      "support_class": "supported"
+    },
+    "incorrect_image_reference": {
+      "category": "Startup_Fault",
+      "count": 20,
+      "support_class": "supported"
+    },
+    "kube_proxy_unavailable": {
+      "category": "Infrastructure_Fault",
+      "count": 6,
+      "support_class": "supported"
+    },
+    "kube_scheduler_unavailable": {
+      "category": "Infrastructure_Fault",
+      "count": 6,
+      "support_class": "supported"
+    },
+    "kubelet_unavailable": {
+      "category": "Infrastructure_Fault",
+      "count": 8,
+      "support_class": "supported"
+    },
+    "liveness_probe_incorrect_port": {
+      "category": "Runtime_Fault",
+      "count": 6,
+      "support_class": "supported"
+    },
+    "liveness_probe_incorrect_protocol": {
+      "category": "Runtime_Fault",
+      "count": 5,
+      "support_class": "supported"
+    },
+    "liveness_probe_incorrect_timing": {
+      "category": "Runtime_Fault",
+      "count": 3,
+      "support_class": "supported"
+    },
+    "memory_capacity_mismatch": {
+      "category": "Scheduling_Fault",
+      "count": 14,
+      "support_class": "supported"
+    },
+    "missing_image_pull_secret": {
+      "category": "Startup_Fault",
+      "count": 12,
+      "support_class": "supported"
+    },
+    "missing_secret_binding": {
+      "category": "Startup_Fault",
+      "count": 12,
+      "support_class": "supported"
+    },
+    "missing_service_account": {
+      "category": "Admission_Fault",
+      "count": 9,
+      "support_class": "supported"
+    },
+    "mysql_invalid_credentials": {
+      "category": "Runtime_Fault",
+      "count": 17,
+      "support_class": "supported"
+    },
+    "mysql_invalid_port": {
+      "category": "Runtime_Fault",
+      "count": 16,
+      "support_class": "supported"
+    },
+    "namespace_cpu_quota_exceeded": {
+      "category": "Admission_Fault",
+      "count": 7,
+      "support_class": "supported"
+    },
+    "namespace_memory_quota_exceeded": {
+      "category": "Admission_Fault",
+      "count": 8,
+      "support_class": "supported"
+    },
+    "namespace_pod_quota_exceeded": {
+      "category": "Admission_Fault",
+      "count": 8,
+      "support_class": "supported"
+    },
+    "namespace_service_quota_exceeded": {
+      "category": "Admission_Fault",
+      "count": 6,
+      "support_class": "supported"
+    },
+    "namespace_storage_quota_exceeded": {
+      "category": "Admission_Fault",
+      "count": 2,
+      "support_class": "low"
+    },
+    "node_affinity_mismatch": {
+      "category": "Scheduling_Fault",
+      "count": 18,
+      "support_class": "supported"
+    },
+    "node_cordon_mismatch": {
+      "category": "Scheduling_Fault",
+      "count": 9,
+      "support_class": "supported"
+    },
+    "node_network_delay": {
+      "category": "Performance_Fault",
+      "count": 2,
+      "support_class": "low"
+    },
+    "node_network_packet_loss": {
+      "category": "Performance_Fault",
+      "count": 2,
+      "support_class": "low"
+    },
+    "node_selector_mismatch": {
+      "category": "Scheduling_Fault",
+      "count": 23,
+      "support_class": "supported"
+    },
+    "pod_anti_affinity_conflict": {
+      "category": "Scheduling_Fault",
+      "count": 12,
+      "support_class": "supported"
+    },
+    "pod_cpu_overload": {
+      "category": "Performance_Fault",
+      "count": 7,
+      "support_class": "supported"
+    },
+    "pod_network_delay": {
+      "category": "Performance_Fault",
+      "count": 40,
+      "support_class": "supported"
+    },
+    "pv_binding_occupied": {
+      "category": "Scheduling_Fault",
+      "count": 2,
+      "support_class": "low"
+    },
+    "pvc_access_mode_mismatch": {
+      "category": "Scheduling_Fault",
+      "count": 1,
+      "support_class": "low"
+    },
+    "pvc_capacity_mismatch": {
+      "category": "Scheduling_Fault",
+      "count": 1,
+      "support_class": "low"
+    },
+    "pvc_selector_mismatch": {
+      "category": "Scheduling_Fault",
+      "count": 1,
+      "support_class": "low"
+    },
+    "pvc_storage_class_mismatch": {
+      "category": "Scheduling_Fault",
+      "count": 1,
+      "support_class": "low"
+    },
+    "readiness_probe_incorrect_port": {
+      "category": "Runtime_Fault",
+      "count": 3,
+      "support_class": "supported"
+    },
+    "readiness_probe_incorrect_protocol": {
+      "category": "Runtime_Fault",
+      "count": 5,
+      "support_class": "supported"
+    },
+    "service_dns_resolution_failure": {
+      "category": "Service_Routing_Fault",
+      "count": 12,
+      "support_class": "supported"
+    },
+    "service_env_var_address_mismatch": {
+      "category": "Service_Routing_Fault",
+      "count": 6,
+      "support_class": "supported"
+    },
+    "service_port_mapping_mismatch": {
+      "category": "Service_Routing_Fault",
+      "count": 9,
+      "support_class": "supported"
+    },
+    "service_protocol_mismatch": {
+      "category": "Service_Routing_Fault",
+      "count": 6,
+      "support_class": "supported"
+    },
+    "service_selector_mismatch": {
+      "category": "Service_Routing_Fault",
+      "count": 18,
+      "support_class": "supported"
+    },
+    "service_sidecar_port_conflict": {
+      "category": "Runtime_Fault",
+      "count": 10,
+      "support_class": "supported"
+    },
+    "taint_toleration_mismatch": {
+      "category": "Scheduling_Fault",
+      "count": 14,
+      "support_class": "supported"
+    },
+    "volume_mount_permission_denied": {
+      "category": "Startup_Fault",
+      "count": 1,
+      "support_class": "low"
+    }
+  },
+  "by_system": {
+    "boutique": 373,
+    "trainticket": 137
+  },
+  "experiment": "03F",
+  "gpu_used": false,
+  "low_support_threshold": "<3 TRAIN examples; descriptive audit only, no oversampling",
+  "maximum_examples_per_root_cause": 40,
+  "median_examples_per_root_cause": 8,
+  "minimum_examples_per_root_cause": 1,
+  "model_loaded": false,
+  "model_trained": false,
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "train_case_count": 510,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03f-hierarchical-decomposition-v1"
+}

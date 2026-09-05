@@ -1,0 +1,52 @@
+{
+  "budget_algorithm": "if serialized package exceeds budget, binary-search one equal deterministic per-observation line-package cap; no target/process/model signal",
+  "budget_chars": 30000,
+  "deduplication": "not applicable to single-path policy",
+  "experiment": "03F",
+  "fallback_path2_count": 0,
+  "gpu_used": false,
+  "model_facing_record_schema": {
+    "evidence": [
+      {
+        "observation": "bounded source observation",
+        "tool": "string"
+      }
+    ],
+    "incident_request": "string"
+  },
+  "model_loaded": false,
+  "model_trained": false,
+  "package_count": 633,
+  "package_counts_by_split": {
+    "TRAIN": 510,
+    "VALIDATION": 123
+  },
+  "packager_forbidden": [
+    "root cause",
+    "fault category",
+    "fault object",
+    "process labels",
+    "golden final answer",
+    "source paths",
+    "provenance metadata"
+  ],
+  "packager_inputs": [
+    "sanitized incident request",
+    "RESOLVED_FROM_TOOL_CACHE observations from selected golden path"
+  ],
+  "persisted_package_excludes_audit_join_metadata": true,
+  "policy": "PATH1_PREFERRED_WITH_PATH2_FALLBACK_ONLY_WHEN_PATH1_HAS_ZERO_EXECUTABLE_STEPS",
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "selected_path_counts": {
+    "golden_path1": 633
+  },
+  "selection_is_model_independent": true,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "union_policy": "not used; one deterministic preferred view per case",
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03f-hierarchical-decomposition-v1"
+}

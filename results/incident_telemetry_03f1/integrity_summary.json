@@ -1,0 +1,37 @@
+{
+  "experiment": "03F.1",
+  "full_case_count": 244,
+  "gpu_used": false,
+  "model_loaded": false,
+  "model_trained": false,
+  "partial_case_count": 79,
+  "partial_reason_counts": {
+    "PACKAGING_OR_BUDGET_LOSS": 6,
+    "PROCESS_EVIDENCE_ON_ALTERNATE_PATH": 28,
+    "SOURCE_ARTIFACT_AVAILABLE_BUT_NOT_PACKAGED": 45
+  },
+  "previous_evidence_fingerprints": {
+    "03d1_artifact_fingerprint": "cb75f36361bc702095099557bc563e5467a77c08d85d30dadf785c19595f8f8d",
+    "03d_split_manifest": "1563d705c52f1048abe15baf1d9ef5d91c60270e22b14392f507102b9e45e8b4",
+    "03e1_artifacts_sha256": "d73099d8370ed9db234d197817b9d91fb64d25690752921e4f8c5d626dd579dc",
+    "03e2_artifacts_sha256": "49b4d742e946614377a027bf1897162258b8f04ebdb88b69b7870f2454ad60bc",
+    "03e_artifacts_sha256": "ace90967c1b6189e6fc2fcc75fbd33dae78a1517cbba017b91b61ffcefcd095d",
+    "03f_decomposition_freeze_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9"
+  },
+  "previous_evidence_immutable": true,
+  "process_label_coverage_not_classification_sufficiency": true,
+  "provider_called": false,
+  "ready_for_03g": true,
+  "selected_budget_chars": 30000,
+  "selected_representation": "R2_DETERMINISTIC_PATH_UNION",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "status": "READY_FOR_03G",
+  "test_model_facing": false,
+  "validation_screen_clear_package_failures": 0,
+  "version": "cloud-opsbench-03f1-evidence-integrity-v1",
+  "zero_case_count": 310,
+  "zero_reason_counts": {
+    "MATCHER_SCHEMA_GAP": 9,
+    "PROCESS_LABEL_NO_MATCHABLE_PATTERNS": 301
+  }
+}

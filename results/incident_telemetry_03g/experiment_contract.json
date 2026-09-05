@@ -1,0 +1,403 @@
+{
+  "case_specific_examples": false,
+  "contract_version": "cloud-opsbench-03g-decomposed-2b-screen-v1",
+  "decomposition_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9",
+  "evidence_budget_chars": 30000,
+  "evidence_representation": "R2_DETERMINISTIC_PATH_UNION",
+  "evidence_representation_fingerprint": "b676b10a17d690f3796e237e942c340f2722a1aa5bcd97af1b43de1c0e972215",
+  "evidence_source": "results/incident_telemetry_03f1/evidence_packages.jsonl",
+  "experiment": "03G",
+  "few_shot": false,
+  "generation_frozen_before_first_inference": true,
+  "hierarchy_candidate_sets": {
+    "Admission_Fault": [
+      "missing_service_account",
+      "namespace_cpu_quota_exceeded",
+      "namespace_memory_quota_exceeded",
+      "namespace_pod_quota_exceeded",
+      "namespace_service_quota_exceeded",
+      "namespace_storage_quota_exceeded"
+    ],
+    "Application_Code_Defect": [
+      "code_artificial_delay",
+      "code_busy_loop",
+      "code_excessive_file_reads",
+      "code_excessive_file_writes",
+      "code_memory_leak",
+      "code_missing_parameter",
+      "code_wrong_argument_order",
+      "code_wrong_return"
+    ],
+    "Infrastructure_Fault": [
+      "containerd_unavailable",
+      "kube_proxy_unavailable",
+      "kube_scheduler_unavailable",
+      "kubelet_unavailable"
+    ],
+    "Performance_Fault": [
+      "node_network_delay",
+      "node_network_packet_loss",
+      "pod_cpu_overload",
+      "pod_network_delay"
+    ],
+    "Runtime_Fault": [
+      "container_memory_limit_too_low",
+      "db_connection_exhaustion",
+      "db_readonly_mode",
+      "deployment_zero_replicas",
+      "liveness_probe_incorrect_port",
+      "liveness_probe_incorrect_protocol",
+      "liveness_probe_incorrect_timing",
+      "mysql_invalid_credentials",
+      "mysql_invalid_port",
+      "readiness_probe_incorrect_port",
+      "readiness_probe_incorrect_protocol",
+      "service_sidecar_port_conflict"
+    ],
+    "Scheduling_Fault": [
+      "cpu_capacity_mismatch",
+      "memory_capacity_mismatch",
+      "node_affinity_mismatch",
+      "node_cordon_mismatch",
+      "node_selector_mismatch",
+      "pod_anti_affinity_conflict",
+      "pv_binding_occupied",
+      "pvc_access_mode_mismatch",
+      "pvc_capacity_mismatch",
+      "pvc_selector_mismatch",
+      "pvc_storage_class_mismatch",
+      "taint_toleration_mismatch"
+    ],
+    "Service_Routing_Fault": [
+      "gateway_misrouted",
+      "service_dns_resolution_failure",
+      "service_env_var_address_mismatch",
+      "service_port_mapping_mismatch",
+      "service_protocol_mismatch",
+      "service_selector_mismatch"
+    ],
+    "Startup_Fault": [
+      "image_registry_dns_failure",
+      "incorrect_image_reference",
+      "missing_image_pull_secret",
+      "missing_secret_binding",
+      "volume_mount_permission_denied"
+    ]
+  },
+  "lora": false,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "native_category_enum": [
+    "Admission_Fault",
+    "Application_Code_Defect",
+    "Infrastructure_Fault",
+    "Performance_Fault",
+    "Runtime_Fault",
+    "Scheduling_Fault",
+    "Service_Routing_Fault",
+    "Startup_Fault"
+  ],
+  "native_fault_type_enum": [
+    "missing_service_account",
+    "namespace_cpu_quota_exceeded",
+    "namespace_memory_quota_exceeded",
+    "namespace_pod_quota_exceeded",
+    "namespace_service_quota_exceeded",
+    "namespace_storage_quota_exceeded",
+    "code_artificial_delay",
+    "code_busy_loop",
+    "code_excessive_file_reads",
+    "code_excessive_file_writes",
+    "code_memory_leak",
+    "code_missing_parameter",
+    "code_wrong_argument_order",
+    "code_wrong_return",
+    "containerd_unavailable",
+    "kube_proxy_unavailable",
+    "kube_scheduler_unavailable",
+    "kubelet_unavailable",
+    "node_network_delay",
+    "node_network_packet_loss",
+    "pod_cpu_overload",
+    "pod_network_delay",
+    "container_memory_limit_too_low",
+    "db_connection_exhaustion",
+    "db_readonly_mode",
+    "deployment_zero_replicas",
+    "liveness_probe_incorrect_port",
+    "liveness_probe_incorrect_protocol",
+    "liveness_probe_incorrect_timing",
+    "mysql_invalid_credentials",
+    "mysql_invalid_port",
+    "readiness_probe_incorrect_port",
+    "readiness_probe_incorrect_protocol",
+    "service_sidecar_port_conflict",
+    "cpu_capacity_mismatch",
+    "memory_capacity_mismatch",
+    "node_affinity_mismatch",
+    "node_cordon_mismatch",
+    "node_selector_mismatch",
+    "pod_anti_affinity_conflict",
+    "pv_binding_occupied",
+    "pvc_access_mode_mismatch",
+    "pvc_capacity_mismatch",
+    "pvc_selector_mismatch",
+    "pvc_storage_class_mismatch",
+    "taint_toleration_mismatch",
+    "gateway_misrouted",
+    "service_dns_resolution_failure",
+    "service_env_var_address_mismatch",
+    "service_port_mapping_mismatch",
+    "service_protocol_mismatch",
+    "service_selector_mismatch",
+    "image_registry_dns_failure",
+    "incorrect_image_reference",
+    "missing_image_pull_secret",
+    "missing_secret_binding",
+    "volume_mount_permission_denied"
+  ],
+  "no_process_labels_in_input": true,
+  "no_target_labels_in_input": "except Task B authoritative category field",
+  "no_tools": true,
+  "prompt_frozen_before_first_inference": true,
+  "provider_called": false,
+  "screen_count": 57,
+  "screen_groups_fingerprint": "c293d12a46ac031aa2c250333f0fb27749bf060ac62e98954085106b7bb85d4d",
+  "screen_manifest_sha256": "f36680b795b710563c8297b85981d918e02c421847ed1abb7a78559fe574f0a2",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "task_b_contract_boundary": "authoritative category supplied as explicit decomposition context; never end-to-end RCA",
+  "task_c_stage2_boundary": "uses persisted Task A prediction only; authoritative category is never substituted",
+  "task_d_normalization": "strict object exact plus bare app/name -> app/name only when unique source-visible application identity is present",
+  "task_prompts": {
+    "TASK_A": {
+      "allowed_categories": [
+        "Admission_Fault",
+        "Application_Code_Defect",
+        "Infrastructure_Fault",
+        "Performance_Fault",
+        "Runtime_Fault",
+        "Scheduling_Fault",
+        "Service_Routing_Fault",
+        "Startup_Fault"
+      ],
+      "output_schema": {
+        "additionalProperties": false,
+        "required": [
+          "fault_category"
+        ],
+        "type": "object"
+      },
+      "system": "You are a bounded Cloud-OpsBench incident classifier. Use only the incident request and evidence supplied by the user. Return JSON only, with exactly this schema: {\"fault_category\": string}. The value must be exactly one item from this complete native category enum: [\"Admission_Fault\", \"Application_Code_Defect\", \"Infrastructure_Fault\", \"Performance_Fault\", \"Runtime_Fault\", \"Scheduling_Fault\", \"Service_Routing_Fault\", \"Startup_Fault\"]. Do not output root_cause, fault_object, reasoning, explanation, confidence, or any other key. Do not use synonyms."
+    },
+    "TASK_B": {
+      "candidate_sets": {
+        "Admission_Fault": [
+          "missing_service_account",
+          "namespace_cpu_quota_exceeded",
+          "namespace_memory_quota_exceeded",
+          "namespace_pod_quota_exceeded",
+          "namespace_service_quota_exceeded",
+          "namespace_storage_quota_exceeded"
+        ],
+        "Application_Code_Defect": [
+          "code_artificial_delay",
+          "code_busy_loop",
+          "code_excessive_file_reads",
+          "code_excessive_file_writes",
+          "code_memory_leak",
+          "code_missing_parameter",
+          "code_wrong_argument_order",
+          "code_wrong_return"
+        ],
+        "Infrastructure_Fault": [
+          "containerd_unavailable",
+          "kube_proxy_unavailable",
+          "kube_scheduler_unavailable",
+          "kubelet_unavailable"
+        ],
+        "Performance_Fault": [
+          "node_network_delay",
+          "node_network_packet_loss",
+          "pod_cpu_overload",
+          "pod_network_delay"
+        ],
+        "Runtime_Fault": [
+          "container_memory_limit_too_low",
+          "db_connection_exhaustion",
+          "db_readonly_mode",
+          "deployment_zero_replicas",
+          "liveness_probe_incorrect_port",
+          "liveness_probe_incorrect_protocol",
+          "liveness_probe_incorrect_timing",
+          "mysql_invalid_credentials",
+          "mysql_invalid_port",
+          "readiness_probe_incorrect_port",
+          "readiness_probe_incorrect_protocol",
+          "service_sidecar_port_conflict"
+        ],
+        "Scheduling_Fault": [
+          "cpu_capacity_mismatch",
+          "memory_capacity_mismatch",
+          "node_affinity_mismatch",
+          "node_cordon_mismatch",
+          "node_selector_mismatch",
+          "pod_anti_affinity_conflict",
+          "pv_binding_occupied",
+          "pvc_access_mode_mismatch",
+          "pvc_capacity_mismatch",
+          "pvc_selector_mismatch",
+          "pvc_storage_class_mismatch",
+          "taint_toleration_mismatch"
+        ],
+        "Service_Routing_Fault": [
+          "gateway_misrouted",
+          "service_dns_resolution_failure",
+          "service_env_var_address_mismatch",
+          "service_port_mapping_mismatch",
+          "service_protocol_mismatch",
+          "service_selector_mismatch"
+        ],
+        "Startup_Fault": [
+          "image_registry_dns_failure",
+          "incorrect_image_reference",
+          "missing_image_pull_secret",
+          "missing_secret_binding",
+          "volume_mount_permission_denied"
+        ]
+      },
+      "oracle_category": true,
+      "output_schema": {
+        "additionalProperties": false,
+        "required": [
+          "root_cause"
+        ],
+        "type": "object"
+      },
+      "system": "You are a bounded Cloud-OpsBench root-cause classifier. The authoritative fault category is supplied as task context. Use only the incident request and evidence. Return JSON only with exactly this schema: {\"root_cause\": string}. The value must be exactly one item from the supplied category-local native candidate enum. Do not output the category, object, reasoning, explanation, confidence, or any other key. This is ORACLE_CATEGORY_ROOT_CAUSE, not end-to-end RCA."
+    },
+    "TASK_C_STAGE1": {
+      "allowed_categories": [
+        "Admission_Fault",
+        "Application_Code_Defect",
+        "Infrastructure_Fault",
+        "Performance_Fault",
+        "Runtime_Fault",
+        "Scheduling_Fault",
+        "Service_Routing_Fault",
+        "Startup_Fault"
+      ],
+      "output_schema": {
+        "additionalProperties": false,
+        "required": [
+          "fault_category"
+        ],
+        "type": "object"
+      },
+      "system": "You are Stage 1 of a bounded hierarchical Cloud-OpsBench classifier. Infer only the native fault category from the incident request and evidence. Return JSON only with exactly this schema: {\"fault_category\": string}. The value must be exactly one item from this complete native category enum: [\"Admission_Fault\", \"Application_Code_Defect\", \"Infrastructure_Fault\", \"Performance_Fault\", \"Runtime_Fault\", \"Scheduling_Fault\", \"Service_Routing_Fault\", \"Startup_Fault\"]. Do not output root_cause, fault_object, reasoning, explanation, confidence, or any other key."
+    },
+    "TASK_C_STAGE2": {
+      "candidate_context": "model-predicted category only",
+      "candidate_sets": {
+        "Admission_Fault": [
+          "missing_service_account",
+          "namespace_cpu_quota_exceeded",
+          "namespace_memory_quota_exceeded",
+          "namespace_pod_quota_exceeded",
+          "namespace_service_quota_exceeded",
+          "namespace_storage_quota_exceeded"
+        ],
+        "Application_Code_Defect": [
+          "code_artificial_delay",
+          "code_busy_loop",
+          "code_excessive_file_reads",
+          "code_excessive_file_writes",
+          "code_memory_leak",
+          "code_missing_parameter",
+          "code_wrong_argument_order",
+          "code_wrong_return"
+        ],
+        "Infrastructure_Fault": [
+          "containerd_unavailable",
+          "kube_proxy_unavailable",
+          "kube_scheduler_unavailable",
+          "kubelet_unavailable"
+        ],
+        "Performance_Fault": [
+          "node_network_delay",
+          "node_network_packet_loss",
+          "pod_cpu_overload",
+          "pod_network_delay"
+        ],
+        "Runtime_Fault": [
+          "container_memory_limit_too_low",
+          "db_connection_exhaustion",
+          "db_readonly_mode",
+          "deployment_zero_replicas",
+          "liveness_probe_incorrect_port",
+          "liveness_probe_incorrect_protocol",
+          "liveness_probe_incorrect_timing",
+          "mysql_invalid_credentials",
+          "mysql_invalid_port",
+          "readiness_probe_incorrect_port",
+          "readiness_probe_incorrect_protocol",
+          "service_sidecar_port_conflict"
+        ],
+        "Scheduling_Fault": [
+          "cpu_capacity_mismatch",
+          "memory_capacity_mismatch",
+          "node_affinity_mismatch",
+          "node_cordon_mismatch",
+          "node_selector_mismatch",
+          "pod_anti_affinity_conflict",
+          "pv_binding_occupied",
+          "pvc_access_mode_mismatch",
+          "pvc_capacity_mismatch",
+          "pvc_selector_mismatch",
+          "pvc_storage_class_mismatch",
+          "taint_toleration_mismatch"
+        ],
+        "Service_Routing_Fault": [
+          "gateway_misrouted",
+          "service_dns_resolution_failure",
+          "service_env_var_address_mismatch",
+          "service_port_mapping_mismatch",
+          "service_protocol_mismatch",
+          "service_selector_mismatch"
+        ],
+        "Startup_Fault": [
+          "image_registry_dns_failure",
+          "incorrect_image_reference",
+          "missing_image_pull_secret",
+          "missing_secret_binding",
+          "volume_mount_permission_denied"
+        ]
+      },
+      "output_schema": {
+        "additionalProperties": false,
+        "required": [
+          "root_cause"
+        ],
+        "type": "object"
+      },
+      "system": "You are Stage 2 of a bounded hierarchical Cloud-OpsBench classifier. The category below is the model's Stage-1 prediction, not an authoritative label. Choose a root cause only from the candidate enum shown for that predicted category. Use only the same incident request and evidence. Return JSON only with exactly this schema: {\"root_cause\": string}. Do not output category, object, reasoning, explanation, confidence, or any other key. If the predicted category is invalid, the candidate enum is empty and you must not substitute another category."
+    },
+    "TASK_D": {
+      "object_candidates": false,
+      "output_schema": {
+        "additionalProperties": false,
+        "required": [
+          "fault_object"
+        ],
+        "type": "object"
+      },
+      "system": "You are a bounded Cloud-OpsBench fault-object resolver. Use only the incident request and evidence. Return JSON only with exactly this schema: {\"fault_object\": string}. Return the source-grounded resource identity you can resolve from the evidence. Do not output category, root cause, reasoning, explanation, confidence, or any other key. No object candidate list is provided."
+    }
+  },
+  "test_model_facing": false,
+  "test_used": false,
+  "training": false,
+  "validation_selection_model_facing": false,
+  "validation_selection_used": false,
+  "version": "cloud-opsbench-03g-decomposed-2b-screen-v1"
+}

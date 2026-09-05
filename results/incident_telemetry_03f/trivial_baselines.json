@@ -1,0 +1,50 @@
+{
+  "TASK_A": {
+    "majority_category": "Scheduling_Fault",
+    "majority_screen_exact": 0.21052631578947367,
+    "uniform_random_expected_accuracy": 0.125,
+    "uniform_random_screen_exact": 0.14035087719298245
+  },
+  "TASK_B_ORACLE_CATEGORY_ROOT_CAUSE": {
+    "majority_screen_exact": 0.14035087719298245,
+    "majority_within_category": {
+      "Admission_Fault": "missing_service_account",
+      "Application_Code_Defect": "code_missing_parameter",
+      "Infrastructure_Fault": "kubelet_unavailable",
+      "Performance_Fault": "pod_network_delay",
+      "Runtime_Fault": "mysql_invalid_credentials",
+      "Scheduling_Fault": "node_selector_mismatch",
+      "Service_Routing_Fault": "service_selector_mismatch",
+      "Startup_Fault": "incorrect_image_reference"
+    },
+    "uniform_random_expected_accuracy": 0.14035087719298245,
+    "uniform_random_screen_exact": 0.05263157894736842
+  },
+  "TASK_C_HIERARCHICAL_SELF_PREDICTED": {
+    "majority_category": "Scheduling_Fault",
+    "majority_root_given_majority_category": "node_selector_mismatch",
+    "uniform_random_category_expected_accuracy": 0.125,
+    "uniform_random_category_screen_exact": 0.08771929824561403,
+    "uniform_random_hierarchical_joint_expected_accuracy": 0.017543859649122806,
+    "uniform_random_joint_screen_exact": 0.0,
+    "uniform_random_root_screen_exact": 0.0
+  },
+  "TASK_D_FAULT_OBJECT": {
+    "baseline": "not defined: open-resource identity has no fixed closed vocabulary; use strict and deterministic normalized exact only"
+  },
+  "experiment": "03F",
+  "gpu_used": false,
+  "method": "fixed-seed deterministic random draws plus TRAIN-derived majority; no model run",
+  "model_loaded": false,
+  "model_trained": false,
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "screen_count": 57,
+  "seed": 20260303,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03f-hierarchical-decomposition-v1"
+}

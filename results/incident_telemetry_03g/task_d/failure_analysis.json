@@ -1,0 +1,1454 @@
+{
+  "decomposition_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9",
+  "evidence_representation_fingerprint": "b676b10a17d690f3796e237e942c340f2722a1aa5bcd97af1b43de1c0e972215",
+  "experiment": "03G",
+  "lora": false,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "normalized_object_successes": [],
+  "parse_failures": {},
+  "per_slice": {
+    "category": {
+      "Admission_Fault": {
+        "count": 6,
+        "enum_valid_count": 6,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 6
+        },
+        "schema_valid_count": 6,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "Application_Code_Defect": {
+        "count": 8,
+        "enum_valid_count": 8,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 8
+        },
+        "schema_valid_count": 8,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "Infrastructure_Fault": {
+        "count": 4,
+        "enum_valid_count": 4,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 4
+        },
+        "schema_valid_count": 4,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "Performance_Fault": {
+        "count": 4,
+        "enum_valid_count": 4,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 4
+        },
+        "schema_valid_count": 4,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "Runtime_Fault": {
+        "count": 12,
+        "enum_valid_count": 12,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 12
+        },
+        "schema_valid_count": 12,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "Scheduling_Fault": {
+        "count": 12,
+        "enum_valid_count": 12,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 12
+        },
+        "schema_valid_count": 12,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "Service_Routing_Fault": {
+        "count": 6,
+        "enum_valid_count": 6,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 6
+        },
+        "schema_valid_count": 6,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "Startup_Fault": {
+        "count": 5,
+        "enum_valid_count": 5,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 5
+        },
+        "schema_valid_count": 5,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      }
+    },
+    "code_available": {
+      "False": {
+        "count": 9,
+        "enum_valid_count": 9,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 9
+        },
+        "schema_valid_count": 9,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "True": {
+        "count": 48,
+        "enum_valid_count": 48,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 48
+        },
+        "schema_valid_count": 48,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      }
+    },
+    "difficulty": {
+      "easy": {
+        "count": 29,
+        "enum_valid_count": 29,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 29
+        },
+        "schema_valid_count": 29,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "hard": {
+        "count": 12,
+        "enum_valid_count": 12,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 12
+        },
+        "schema_valid_count": 12,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "medium": {
+        "count": 16,
+        "enum_valid_count": 16,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 16
+        },
+        "schema_valid_count": 16,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      }
+    },
+    "evidence_bucket": {
+      "FULL": {
+        "count": 22,
+        "enum_valid_count": 22,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 22
+        },
+        "schema_valid_count": 22,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "PARTIAL": {
+        "count": 11,
+        "enum_valid_count": 11,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 11
+        },
+        "schema_valid_count": 11,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "ZERO": {
+        "count": 24,
+        "enum_valid_count": 24,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 24
+        },
+        "schema_valid_count": 24,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      }
+    },
+    "metrics_available": {
+      "False": {
+        "count": 47,
+        "enum_valid_count": 47,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 47
+        },
+        "schema_valid_count": 47,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "True": {
+        "count": 10,
+        "enum_valid_count": 10,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 10
+        },
+        "schema_valid_count": 10,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      }
+    },
+    "package_token_bucket": {
+      "4k-8k": {
+        "count": 14,
+        "enum_valid_count": 14,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 14
+        },
+        "schema_valid_count": 14,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "8k-16k": {
+        "count": 7,
+        "enum_valid_count": 7,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 7
+        },
+        "schema_valid_count": 7,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "<4k": {
+        "count": 36,
+        "enum_valid_count": 36,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 36
+        },
+        "schema_valid_count": 36,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      }
+    },
+    "source_root_cause": {
+      "code_artificial_delay": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "code_busy_loop": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "code_excessive_file_reads": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "code_excessive_file_writes": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "code_memory_leak": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "code_missing_parameter": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "code_wrong_argument_order": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "code_wrong_return": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "container_memory_limit_too_low": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "containerd_unavailable": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "cpu_capacity_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "db_connection_exhaustion": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "db_readonly_mode": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "deployment_zero_replicas": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "gateway_misrouted": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "image_registry_dns_failure": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "incorrect_image_reference": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "kube_proxy_unavailable": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "kube_scheduler_unavailable": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "kubelet_unavailable": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "liveness_probe_incorrect_port": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "liveness_probe_incorrect_protocol": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "liveness_probe_incorrect_timing": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "memory_capacity_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "missing_image_pull_secret": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "missing_secret_binding": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "missing_service_account": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "mysql_invalid_credentials": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "mysql_invalid_port": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "namespace_cpu_quota_exceeded": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "namespace_memory_quota_exceeded": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "namespace_pod_quota_exceeded": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "namespace_service_quota_exceeded": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "namespace_storage_quota_exceeded": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "node_affinity_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "node_cordon_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "node_network_delay": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "node_network_packet_loss": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "node_selector_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "pod_anti_affinity_conflict": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "pod_cpu_overload": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "pod_network_delay": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "pv_binding_occupied": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "pvc_access_mode_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "pvc_capacity_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "pvc_selector_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "pvc_storage_class_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "readiness_probe_incorrect_port": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "readiness_probe_incorrect_protocol": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "service_dns_resolution_failure": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "service_env_var_address_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "service_port_mapping_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "service_protocol_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "service_selector_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "service_sidecar_port_conflict": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "taint_toleration_mismatch": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "volume_mount_permission_denied": {
+        "count": 1,
+        "enum_valid_count": 1,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 1
+        },
+        "schema_valid_count": 1,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      }
+    },
+    "source_system": {
+      "boutique": {
+        "count": 48,
+        "enum_valid_count": 48,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 48
+        },
+        "schema_valid_count": 48,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "trainticket": {
+        "count": 9,
+        "enum_valid_count": 9,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 9
+        },
+        "schema_valid_count": 9,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      }
+    }
+  },
+  "provider_called": false,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "strict_object_failures": [
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:15",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:26",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:39",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:45",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:5",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:57",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:17",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:23",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:32",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:35",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:60",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:77",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:89",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:90",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:15",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:21",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:30",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:9",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:10",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:14",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:23",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:26",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:11",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:17",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:23",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:36",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:42",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:7",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:1",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:110",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:119",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:129",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:132",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:136",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:137",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:150",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:24",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:35",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:53",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:59",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:12",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:23",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:37",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:6",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:2",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:23",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:48",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:60",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:25",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:3",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:42",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:59",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:79",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:9",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:15",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:27",
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Startup_Fault:11"
+  ],
+  "test_model_facing": false,
+  "training": false,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03g-decomposed-2b-screen-v1"
+}

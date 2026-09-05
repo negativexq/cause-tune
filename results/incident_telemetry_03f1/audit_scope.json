@@ -1,0 +1,17 @@
+{
+  "TEST_model_facing": 0,
+  "TRAIN": 510,
+  "VALIDATION": 123,
+  "case_count": 633,
+  "experiment": "03F.1",
+  "frozen_03f_decomposition_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9",
+  "gpu_used": false,
+  "model_loaded": false,
+  "model_trained": false,
+  "provider_called": false,
+  "screen_count": 57,
+  "screen_membership_unchanged": true,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "test_model_facing": false,
+  "version": "cloud-opsbench-03f1-evidence-integrity-v1"
+}

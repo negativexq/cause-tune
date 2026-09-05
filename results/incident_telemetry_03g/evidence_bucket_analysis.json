@@ -1,0 +1,237 @@
+{
+  "by_task": {
+    "TASK_A": {
+      "FULL": {
+        "category_exact_count": 2,
+        "category_exact_rate": 0.09090909090909091,
+        "count": 22,
+        "enum_valid_count": 22,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "parse_status_counts": {
+          "valid": 22
+        },
+        "schema_valid_count": 22,
+        "schema_valid_rate": 1.0,
+        "task": "TASK_A"
+      },
+      "PARTIAL": {
+        "category_exact_count": 4,
+        "category_exact_rate": 0.36363636363636365,
+        "count": 11,
+        "enum_valid_count": 11,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "parse_status_counts": {
+          "valid": 11
+        },
+        "schema_valid_count": 11,
+        "schema_valid_rate": 1.0,
+        "task": "TASK_A"
+      },
+      "ZERO": {
+        "category_exact_count": 8,
+        "category_exact_rate": 0.3333333333333333,
+        "count": 24,
+        "enum_valid_count": 24,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "parse_status_counts": {
+          "valid": 24
+        },
+        "schema_valid_count": 24,
+        "schema_valid_rate": 1.0,
+        "task": "TASK_A"
+      }
+    },
+    "TASK_B": {
+      "FULL": {
+        "count": 22,
+        "enum_valid_count": 22,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "parse_status_counts": {
+          "valid": 22
+        },
+        "root_cause_exact_count": 6,
+        "root_cause_exact_rate": 0.2727272727272727,
+        "schema_valid_count": 22,
+        "schema_valid_rate": 1.0,
+        "task": "TASK_B"
+      },
+      "PARTIAL": {
+        "count": 11,
+        "enum_valid_count": 11,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "parse_status_counts": {
+          "valid": 11
+        },
+        "root_cause_exact_count": 5,
+        "root_cause_exact_rate": 0.45454545454545453,
+        "schema_valid_count": 11,
+        "schema_valid_rate": 1.0,
+        "task": "TASK_B"
+      },
+      "ZERO": {
+        "count": 24,
+        "enum_valid_count": 24,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "parse_status_counts": {
+          "valid": 24
+        },
+        "root_cause_exact_count": 4,
+        "root_cause_exact_rate": 0.16666666666666666,
+        "schema_valid_count": 24,
+        "schema_valid_rate": 1.0,
+        "task": "TASK_B"
+      }
+    },
+    "TASK_C": {
+      "FULL": {
+        "count": 22,
+        "enum_valid_count": 21,
+        "enum_valid_rate": 0.9545454545454546,
+        "failures_despite_correct_stage1_category": 1,
+        "failures_wrong_stage1_category": 20,
+        "hierarchical_joint_exact_count": 1,
+        "hierarchical_joint_exact_rate": 0.045454545454545456,
+        "invalid_enum_outputs": 1,
+        "missing_or_malformed_outputs": 0,
+        "parse_status_counts": {
+          "valid": 22
+        },
+        "schema_valid_count": 22,
+        "schema_valid_rate": 1.0,
+        "stage1_category_exact_count": 2,
+        "stage1_category_exact_rate": 0.09090909090909091,
+        "stage2_exact_given_category_correct_count": 1,
+        "stage2_exact_given_category_correct_rate": 0.5,
+        "stage2_root_cause_exact_count": 1,
+        "stage2_root_cause_exact_rate": 0.045454545454545456,
+        "task": "TASK_C"
+      },
+      "PARTIAL": {
+        "count": 11,
+        "enum_valid_count": 11,
+        "enum_valid_rate": 1.0,
+        "failures_despite_correct_stage1_category": 2,
+        "failures_wrong_stage1_category": 7,
+        "hierarchical_joint_exact_count": 2,
+        "hierarchical_joint_exact_rate": 0.18181818181818182,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "parse_status_counts": {
+          "valid": 11
+        },
+        "schema_valid_count": 11,
+        "schema_valid_rate": 1.0,
+        "stage1_category_exact_count": 4,
+        "stage1_category_exact_rate": 0.36363636363636365,
+        "stage2_exact_given_category_correct_count": 2,
+        "stage2_exact_given_category_correct_rate": 0.5,
+        "stage2_root_cause_exact_count": 2,
+        "stage2_root_cause_exact_rate": 0.18181818181818182,
+        "task": "TASK_C"
+      },
+      "ZERO": {
+        "count": 24,
+        "enum_valid_count": 23,
+        "enum_valid_rate": 0.9583333333333334,
+        "failures_despite_correct_stage1_category": 7,
+        "failures_wrong_stage1_category": 16,
+        "hierarchical_joint_exact_count": 1,
+        "hierarchical_joint_exact_rate": 0.041666666666666664,
+        "invalid_enum_outputs": 1,
+        "missing_or_malformed_outputs": 0,
+        "parse_status_counts": {
+          "valid": 24
+        },
+        "schema_valid_count": 24,
+        "schema_valid_rate": 1.0,
+        "stage1_category_exact_count": 8,
+        "stage1_category_exact_rate": 0.3333333333333333,
+        "stage2_exact_given_category_correct_count": 1,
+        "stage2_exact_given_category_correct_rate": 0.125,
+        "stage2_root_cause_exact_count": 1,
+        "stage2_root_cause_exact_rate": 0.041666666666666664,
+        "task": "TASK_C"
+      }
+    },
+    "TASK_D": {
+      "FULL": {
+        "count": 22,
+        "enum_valid_count": 22,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 22
+        },
+        "schema_valid_count": 22,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "PARTIAL": {
+        "count": 11,
+        "enum_valid_count": 11,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 11
+        },
+        "schema_valid_count": 11,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      },
+      "ZERO": {
+        "count": 24,
+        "enum_valid_count": 24,
+        "enum_valid_rate": 1.0,
+        "invalid_enum_outputs": 0,
+        "missing_or_malformed_outputs": 0,
+        "normalized_object_exact_count": 0,
+        "normalized_object_exact_rate": 0.0,
+        "parse_status_counts": {
+          "valid": 24
+        },
+        "schema_valid_count": 24,
+        "schema_valid_rate": 1.0,
+        "strict_object_exact_count": 0,
+        "strict_object_exact_rate": 0.0,
+        "task": "TASK_D"
+      }
+    }
+  },
+  "decomposition_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9",
+  "evidence_representation_fingerprint": "b676b10a17d690f3796e237e942c340f2722a1aa5bcd97af1b43de1c0e972215",
+  "experiment": "03G",
+  "interpretation": "analysis slices only; ZERO does not imply no diagnostic information",
+  "lora": false,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "process_label_coverage_is_not_classification_sufficiency": true,
+  "provider_called": false,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "training": false,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03g-decomposed-2b-screen-v1"
+}

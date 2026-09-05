@@ -1,0 +1,286 @@
+{
+  "all_pattern_counts": {
+    "invalid_pattern": 0,
+    "matcher_schema_gap": 9,
+    "patterns": 2154,
+    "source_strict_match": 2080
+  },
+  "canonicalization": {
+    "deterministic": true,
+    "rules": [
+      "Unicode NFKC",
+      "casefold",
+      "collapse whitespace",
+      "no synonym dictionary",
+      "no resource identity rewriting"
+    ],
+    "semantic_fuzzy_matching": false,
+    "source_derived": true
+  },
+  "experiment": "03F.1",
+  "gpu_used": false,
+  "model_loaded": false,
+  "model_trained": false,
+  "policy": "strict source matcher; casefold/Unicode/whitespace canonicalization only for non-regex representations; impossible regex boundary counted as defect, not scoring repair",
+  "provider_called": false,
+  "representatives": [
+    {
+      "coverage_class": "FULL",
+      "matcher_schema_gaps": 0,
+      "path1_strict_matches": 2,
+      "path2_strict_matches": 2,
+      "pattern_count": 2,
+      "patterns": [
+        {
+          "candidate_observation_count": 1,
+          "canonical_match": true,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M1",
+          "strict_match": true,
+          "tool": "GetResources",
+          "value": "frontend"
+        },
+        {
+          "candidate_observation_count": 1,
+          "canonical_match": true,
+          "kind": "regex",
+          "matcher_schema_gap": false,
+          "milestone": "M1",
+          "strict_match": true,
+          "tool": "GetResources",
+          "value": "CrashLoopBackOff|OOMKilled|Exit Code:\\s*137"
+        }
+      ],
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:39",
+      "source_strict_matches": 2,
+      "union_strict_matches": 2
+    },
+    {
+      "coverage_class": "PARTIAL",
+      "matcher_schema_gaps": 0,
+      "path1_strict_matches": 16,
+      "path2_strict_matches": 14,
+      "pattern_count": 29,
+      "patterns": [
+        {
+          "candidate_observation_count": 0,
+          "canonical_match": false,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M0",
+          "strict_match": false,
+          "tool": "CheckServiceConnectivity",
+          "value": "Connection Failed"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": true,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M0",
+          "strict_match": true,
+          "tool": "GetResources",
+          "value": "cartservice"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": false,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M0",
+          "strict_match": false,
+          "tool": "GetResources",
+          "value": "<none>"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": true,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M0",
+          "strict_match": true,
+          "tool": "GetResources",
+          "value": "cartservice"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": false,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M0",
+          "strict_match": false,
+          "tool": "GetResources",
+          "value": "<none>"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": true,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M1",
+          "strict_match": true,
+          "tool": "GetResources",
+          "value": "cartservice"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": true,
+          "kind": "regex",
+          "matcher_schema_gap": false,
+          "milestone": "M1",
+          "strict_match": true,
+          "tool": "GetResources",
+          "value": "\\bcartservice\\b\\s+0/\\d+"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": true,
+          "kind": "regex",
+          "matcher_schema_gap": false,
+          "milestone": "M1",
+          "strict_match": true,
+          "tool": "GetResources",
+          "value": "^\\s*$"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": true,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M1",
+          "strict_match": true,
+          "tool": "GetResources",
+          "value": "cartservice-8cbf5b9d4"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": false,
+          "kind": "regex",
+          "matcher_schema_gap": false,
+          "milestone": "M1",
+          "strict_match": false,
+          "tool": "GetResources",
+          "value": "\\bcartservice\\-8cbf5b9d4\\b\\s+\\d+\\s+0\\s+0\\b"
+        },
+        {
+          "candidate_observation_count": 0,
+          "canonical_match": false,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M1",
+          "strict_match": false,
+          "tool": "DescribeResource",
+          "value": "Name:                   cartservice"
+        },
+        {
+          "candidate_observation_count": 0,
+          "canonical_match": false,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M1",
+          "strict_match": false,
+          "tool": "DescribeResource",
+          "value": "ReplicaFailure   True    FailedCreate"
+        },
+        {
+          "candidate_observation_count": 0,
+          "canonical_match": false,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M2",
+          "strict_match": false,
+          "tool": "DescribeResource",
+          "value": "cartservice-8cbf5b9d4"
+        },
+        {
+          "candidate_observation_count": 0,
+          "canonical_match": false,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M2",
+          "strict_match": false,
+          "tool": "DescribeResource",
+          "value": "FailedCreate"
+        },
+        {
+          "candidate_observation_count": 0,
+          "canonical_match": false,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M2",
+          "strict_match": false,
+          "tool": "DescribeResource",
+          "value": "exceeded quota: cpu-request-quota"
+        },
+        {
+          "candidate_observation_count": 0,
+          "canonical_match": false,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M2",
+          "strict_match": false,
+          "tool": "DescribeResource",
+          "value": "requests.cpu"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": true,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M2",
+          "strict_match": true,
+          "tool": "GetResources",
+          "value": "cartservice"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": true,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M2",
+          "strict_match": true,
+          "tool": "GetResources",
+          "value": "FailedCreate"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": true,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M2",
+          "strict_match": true,
+          "tool": "GetResources",
+          "value": "exceeded quota: cpu-request-quota"
+        },
+        {
+          "candidate_observation_count": 4,
+          "canonical_match": true,
+          "kind": "literal",
+          "matcher_schema_gap": false,
+          "milestone": "M2",
+          "strict_match": true,
+          "tool": "GetResources",
+          "value": "requests.cpu"
+        }
+      ],
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:13",
+      "source_strict_matches": 27,
+      "union_strict_matches": 24
+    },
+    {
+      "coverage_class": "ZERO",
+      "matcher_schema_gaps": 0,
+      "path1_strict_matches": 0,
+      "path2_strict_matches": 0,
+      "pattern_count": 0,
+      "patterns": [],
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:10",
+      "source_strict_matches": 0,
+      "union_strict_matches": 0
+    }
+  ],
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "test_model_facing": false,
+  "version": "cloud-opsbench-03f1-evidence-integrity-v1"
+}

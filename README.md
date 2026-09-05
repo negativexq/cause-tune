@@ -250,8 +250,9 @@ counterfactual pairs, grouped pre-render split manifests, and fail-closed
 audits. Its 52-scenario CPU-safe reference corpus is a fixture for contract
 validation—not training data, a benchmark, or model evidence. See the
 [03B engine record](docs/experiment-03/03b-causal-scenario-engine.md).
-03E is the validation-only model screen; training and protected evaluation
-remain future 03F+ milestones.
+03E is the completed validation-only full-agent model screen; decomposed
+diagnosis screening is now the 03G milestone and any future training is
+task-specific and separately authorized.
 
 ### Renderer Prototype R0 — supporting infrastructure
 
@@ -289,16 +290,35 @@ source-derived replay observations; 160 golden-only observations are retained
 for auxiliary analysis only. The protected split is unchanged, and no model
 has been selected or evaluated.
 
-### Experiment 03E — Untouched base-model capability-gap screening
+### Experiment 03E / 03E.1 / 03E.2 — Full-agent screening and contract audit
 
-**Status: COMPLETE — no credible student yet.** Three pinned post-trained
-Qwen3.5 candidates (0.8B, 2B, and 4B) were screened on a frozen 57-case
-`VALIDATION_SCREEN` covering all 57 native fault types. All candidates scored
-0/57 joint diagnosis under both closed-loop and oracle-evidence diagnosis, so
-03F QLoRA specialization is gated pending contract/model compatibility review.
-No TEST predictions were produced, no model was trained, and RCAEval remains
-reserved for later external generalization. See the
-[03E screening record](docs/experiment-03/03e-base-capability-gap-screening.md).
+**Status: COMPLETE — full joint task too difficult for untouched 2B.** 03E,
+03E.1, and 03E.2 preserved the original evidence, audited the contract, and
+rescreened only Qwen3.5-2B under the corrected V2 contract. The final result
+is `BASE_TOO_WEAK` / `DO_NOT_START_QLORA`; no TEST predictions were produced
+and no training was performed. See the [03E screening record](docs/experiment-03/03e-base-capability-gap-screening.md),
+[03E.1 audit artifacts](results/incident_telemetry_03e1/), and the
+[03E.2 V2 record](docs/experiment-03/03e2-v2-capability-rescreen.md).
+
+### Experiment 03F — Hierarchical RCA task decomposition
+
+**Status: COMPLETE — decomposition contract frozen.** 03F isolates bounded
+category, root-cause, hierarchical, and fault-object subtasks over the frozen
+Cloud-OpsBench evidence boundary. The full agent loop is separated from
+diagnosis so 03G can measure which capability is learnable on the local
+compact-model hardware. See the
+[03F decomposition record](docs/experiment-03/03f-hierarchical-rca-task-decomposition.md).
+
+### Experiment 03G — Decomposed untouched-2B capability screening
+
+**Status: COMPLETE — Task B selected as a future specialization candidate.**
+The untouched pinned Qwen3.5-2B screen measured category, oracle-category
+root-cause, hierarchical, and secondary object subtasks over the immutable
+03F.1 evidence representation. Task B showed a non-saturated above-baseline
+signal; no training or adapter creation occurred. The historical 03E.2
+full-agent conclusion remains `BASE_TOO_WEAK`. See the
+[03G screening record](docs/experiment-03/03g-decomposed-2b-capability-screening.md).
+03H is not started automatically.
 
 ## What CauseTune measures
 

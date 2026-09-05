@@ -1,0 +1,43 @@
+{
+  "decomposition_freeze_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9",
+  "evidence_selection_contract_fingerprint": "bf0c8ed9d9bfe94996ec61655cf6c35f4199519e8538dadc69b2e74f15957392",
+  "experiment": "03F",
+  "gpu_used": false,
+  "hierarchy_registry_fingerprint": "f054526239ace10b362ce7e0d0b480f7f2e591fc6ab8c913caebfd1f19f8b798",
+  "immutable_inputs": {
+    "03d_split_manifest": "1563d705c52f1048abe15baf1d9ef5d91c60270e22b14392f507102b9e45e8b4",
+    "03e_validation_subsplit": "f36680b795b710563c8297b85981d918e02c421847ed1abb7a78559fe574f0a2",
+    "prior_experiment_fingerprints": {
+      "03e": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+      "03e1": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+      "03e2": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76"
+    }
+  },
+  "model_facing_test_records": 0,
+  "model_loaded": false,
+  "model_outputs_present": false,
+  "model_trained": false,
+  "normalization_policy": {
+    "allowed": true,
+    "policy": "bare application name -> app/name only when a unique app identity is visible in packaged source observations; do not collapse different Kubernetes resources",
+    "uses_golden_target": false,
+    "uses_process_labels": false,
+    "uses_target": false
+  },
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "specialization_selection_policy_fingerprint": "842f3d0798ae3d2353fc23a08eae5ea02b08a0087dc1e84472a05d563f126e31",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "task_contract_fingerprints": {
+    "TASK_A_CATEGORY": "74e1a082632bd0a6eee8e13ba07019f0e4dfb03f9dda0155100d34347dd93b92",
+    "TASK_B_ORACLE_CATEGORY_ROOT_CAUSE": "f922fda61aa7afafe5e02b26db435b1c063016031632983c0cca13290c1dfa71",
+    "TASK_C_HIERARCHICAL_SELF_PREDICTED": "7460c2a892c20e0d1040a0367df874ed1b6f25a2b808fef5a0949169bf3bb12d",
+    "TASK_D_FAULT_OBJECT": "f3f780887d8827563ed378c6923f5ad560a0876a165a3752fe69bec787c4a571"
+  },
+  "test_model_facing": false,
+  "trivial_baseline_fingerprint": "6e001b0ee1c75bc793aaad1c876c9b760171a8c9e67f592840cc540d5b0a232b",
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03f-hierarchical-decomposition-v1"
+}

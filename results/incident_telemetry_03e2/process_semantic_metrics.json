@@ -1,0 +1,5696 @@
+{
+  "action_categories": {
+    "PROCESS_ADMISSIBLE_PROGRESS": {
+      "count": 28,
+      "rate": 0.04628099173553719
+    },
+    "VALID_BUT_REDUNDANT": {
+      "count": 577,
+      "rate": 0.9537190082644628
+    }
+  },
+  "case_metrics": {
+    "evidence_sufficient_but_no_final_count": 2,
+    "evidence_sufficient_but_no_final_rate": 0.03508771929824561,
+    "process_complete_count": 2,
+    "process_complete_rate": 0.03508771929824561
+  },
+  "cases": {
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:15": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:26": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:39": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:45": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M0",
+        "M1",
+        "M2"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:5": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:57": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:17": {
+      "action_classifications": [
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [
+            "M0"
+          ],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [
+            "M2"
+          ],
+          "step": 3,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetAppYAML"
+        }
+      ],
+      "established_milestones": [
+        "M0",
+        "M2"
+      ],
+      "evidence_order_coverage": 0.4,
+      "evidence_tool_count": 2,
+      "milestone_count": 5,
+      "milestone_coverage": 0.4,
+      "missing_milestones": [
+        "M1",
+        "M3",
+        "M4"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.4,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:23": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [
+            "M1"
+          ],
+          "step": 2,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetAppYAML"
+        }
+      ],
+      "established_milestones": [
+        "M1"
+      ],
+      "evidence_order_coverage": 0.3333333333333333,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:32": {
+      "action_classifications": [
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [
+            "M0"
+          ],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [
+            "M2"
+          ],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetAppYAML"
+        }
+      ],
+      "established_milestones": [
+        "M0",
+        "M2"
+      ],
+      "evidence_order_coverage": 0.4,
+      "evidence_tool_count": 2,
+      "milestone_count": 5,
+      "milestone_coverage": 0.4,
+      "missing_milestones": [
+        "M1",
+        "M3",
+        "M4"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.4,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:35": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [
+            "M1"
+          ],
+          "step": 2,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetAppYAML"
+        }
+      ],
+      "established_milestones": [
+        "M1"
+      ],
+      "evidence_order_coverage": 0.3333333333333333,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:60": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [
+            "M1"
+          ],
+          "step": 2,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetAppYAML"
+        }
+      ],
+      "established_milestones": [
+        "M1"
+      ],
+      "evidence_order_coverage": 0.3333333333333333,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:77": {
+      "action_classifications": [
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [
+            "M0"
+          ],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetAppYAML"
+        }
+      ],
+      "established_milestones": [
+        "M0"
+      ],
+      "evidence_order_coverage": 0.25,
+      "evidence_tool_count": 1,
+      "milestone_count": 4,
+      "milestone_coverage": 0.25,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.25,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:89": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [
+            "M1"
+          ],
+          "step": 2,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetAppYAML"
+        }
+      ],
+      "established_milestones": [
+        "M1"
+      ],
+      "evidence_order_coverage": 0.3333333333333333,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:90": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:15": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [
+            "M2"
+          ],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [
+        "M2"
+      ],
+      "evidence_order_coverage": 0.3333333333333333,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M1",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 10
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:21": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [
+            "M2"
+          ],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [
+        "M2"
+      ],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M1",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 10
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:30": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [
+            "M2"
+          ],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [
+        "M2"
+      ],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M1",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 10
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:9": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [
+            "M2"
+          ],
+          "step": 7,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [
+        "M2"
+      ],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M1",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 10
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:10": {
+      "action_classifications": [
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [
+            "M1"
+          ],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "new_milestones": [
+            "M2"
+          ],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [
+        "M1",
+        "M2"
+      ],
+      "evidence_order_coverage": 1.0,
+      "evidence_tool_count": 2,
+      "milestone_count": 2,
+      "milestone_coverage": 1.0,
+      "missing_milestones": [],
+      "process_complete": true,
+      "required_evidence_coverage": 1.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:14": {
+      "action_classifications": [
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [
+            "M1"
+          ],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "new_milestones": [
+            "M2"
+          ],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1",
+            "M2"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetAppYAML"
+        }
+      ],
+      "established_milestones": [
+        "M1",
+        "M2"
+      ],
+      "evidence_order_coverage": 1.0,
+      "evidence_tool_count": 2,
+      "milestone_count": 2,
+      "milestone_coverage": 1.0,
+      "missing_milestones": [],
+      "process_complete": true,
+      "required_evidence_coverage": 1.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:23": {
+      "action_classifications": [
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [
+            "M1"
+          ],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [
+        "M1"
+      ],
+      "evidence_order_coverage": 0.5,
+      "evidence_tool_count": 1,
+      "milestone_count": 2,
+      "milestone_coverage": 0.5,
+      "missing_milestones": [
+        "M2"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.5,
+      "valid_tool_calls": 3
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:26": {
+      "action_classifications": [
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [
+            "M1"
+          ],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [
+        "M1"
+      ],
+      "evidence_order_coverage": 0.5,
+      "evidence_tool_count": 1,
+      "milestone_count": 2,
+      "milestone_coverage": 0.5,
+      "missing_milestones": [
+        "M2"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.5,
+      "valid_tool_calls": 3
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:11": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 10
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:17": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 8
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:23": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:36": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAppYAML"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:42": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAppYAML"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:7": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAppYAML"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:1": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [
+            "M3"
+          ],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [
+        "M3"
+      ],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M1",
+        "M2"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:110": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [
+            "M3"
+          ],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [
+        "M3"
+      ],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M1",
+        "M2"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:119": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:129": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:132": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:136": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:137": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 10
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:150": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [
+            "M3"
+          ],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [
+        "M3"
+      ],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M1",
+        "M2"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:24": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [
+            "M3"
+          ],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [
+        "M3"
+      ],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M1",
+        "M2"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:35": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [
+            "M3"
+          ],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M3"
+          ],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [
+        "M3"
+      ],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M1",
+        "M2"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:53": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 10
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:59": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M4"
+          ],
+          "new_milestones": [
+            "M4"
+          ],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M4"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M4"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M4"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M4"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M4"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [
+        "M4"
+      ],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 1,
+      "milestone_count": 4,
+      "milestone_coverage": 0.25,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.25,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:12": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2a",
+        "M2b",
+        "M2c"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:23": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2a",
+        "M2b",
+        "M2c"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:37": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2a",
+        "M2b",
+        "M2c"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:6": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:2": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 11,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 12
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:23": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:48": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:60": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 10
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:25": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 2,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M0",
+        "M1"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:3": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M0",
+        "M1",
+        "M2"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:42": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:59": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 5,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M0",
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:79": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 3,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M0",
+        "M1",
+        "M2"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 2
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:9": {
+      "action_classifications": [
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [
+            "M0"
+          ],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [
+        "M0"
+      ],
+      "evidence_order_coverage": 0.3333333333333333,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M1",
+        "M2"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:15": {
+      "action_classifications": [
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [
+            "M0"
+          ],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M0"
+          ],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetServiceDependencies"
+        }
+      ],
+      "established_milestones": [
+        "M0"
+      ],
+      "evidence_order_coverage": 0.3333333333333333,
+      "evidence_tool_count": 1,
+      "milestone_count": 3,
+      "milestone_coverage": 0.3333333333333333,
+      "missing_milestones": [
+        "M1",
+        "M2"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.3333333333333333,
+      "valid_tool_calls": 11
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:27": {
+      "action_classifications": [
+        {
+          "classification": "PROCESS_ADMISSIBLE_PROGRESS",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [
+            "M1"
+          ],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "DescribeResource"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [
+            "M1"
+          ],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [
+        "M1"
+      ],
+      "evidence_order_coverage": 0.25,
+      "evidence_tool_count": 2,
+      "milestone_count": 4,
+      "milestone_coverage": 0.25,
+      "missing_milestones": [
+        "M0",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.25,
+      "valid_tool_calls": 8
+    },
+    "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Startup_Fault:11": {
+      "action_classifications": [
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 0,
+          "tool": "GetAlerts"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 1,
+          "tool": "GetServiceDependencies"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 2,
+          "tool": "GetResources"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 3,
+          "tool": "GetAppYAML"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 4,
+          "tool": "GetSourceCode"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 5,
+          "tool": "GetClusterConfiguration"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 6,
+          "tool": "CheckNodeServiceStatus"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 7,
+          "tool": "CheckServiceConnectivity"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 8,
+          "tool": "GetErrorLogs"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 9,
+          "tool": "ListCodeFiles"
+        },
+        {
+          "classification": "VALID_BUT_REDUNDANT",
+          "established_milestones": [],
+          "new_milestones": [],
+          "step": 10,
+          "tool": "GetAlerts"
+        }
+      ],
+      "established_milestones": [],
+      "evidence_order_coverage": 0.0,
+      "evidence_tool_count": 0,
+      "milestone_count": 4,
+      "milestone_coverage": 0.0,
+      "missing_milestones": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "process_complete": false,
+      "required_evidence_coverage": 0.0,
+      "valid_tool_calls": 11
+    }
+  },
+  "experiment": "03E.2",
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "model_training": false,
+  "primary_metric": "upstream milestone/evidence semantics; exact golden next action is auxiliary",
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "teacher_forced_run": false,
+  "test_model_facing": false,
+  "validation_screen_count": 57,
+  "validation_selection_model_facing": false,
+  "version": "03e2-process-semantic-action-metrics-v1"
+}

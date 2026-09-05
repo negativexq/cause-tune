@@ -1,0 +1,40 @@
+{
+  "candidate_tasks": [
+    "TASK_A_CATEGORY",
+    "TASK_B_ORACLE_CATEGORY_ROOT_CAUSE",
+    "TASK_C_HIERARCHICAL_SELF_PREDICTED"
+  ],
+  "experiment": "03F",
+  "fallback_if_no_candidate": "TASK_REDESIGN_REQUIRED",
+  "future_screen": "03G",
+  "gpu_used": false,
+  "model_loaded": false,
+  "model_trained": false,
+  "no_model_run_in_03F": true,
+  "pre_registered_criteria": [
+    "materially above deterministic trivial baseline",
+    "clearly below saturation",
+    "reliable schema and enum following",
+    "practical context and local hardware feasibility",
+    "enough TRAIN support for every target class",
+    "no environment-contract confound"
+  ],
+  "preference_order": [
+    "TASK_C_HIERARCHICAL_SELF_PREDICTED",
+    "TASK_B_ORACLE_CATEGORY_ROOT_CAUSE",
+    "TASK_A_CATEGORY"
+  ],
+  "provider_called": false,
+  "qlora_policy": "03H remains blocked until a future decomposed screen supports a credible specialization target",
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "task_b_boundary": "always report as ORACLE_CATEGORY_ROOT_CAUSE, never end-to-end RCA",
+  "task_c_gate": "both Stage 1 category and Stage 2 within-category discrimination must show meaningful signal",
+  "task_d_role": "secondary diagnostic head; not primary specialization target",
+  "test_model_facing": false,
+  "threshold_policy": "qualitative pre-registered pattern; no post-hoc numerical cutoff",
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03f-hierarchical-decomposition-v1"
+}

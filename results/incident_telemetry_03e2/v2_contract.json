@@ -1,0 +1,123 @@
+{
+  "contract_correction": "Optional case-local source absence now returns an explicit deterministic unavailable result; no fake observation and no ground-truth repair. Prompt and vocabulary unchanged.",
+  "contract_version": "cloud-opsbench-03e2-frozen-v2-contract-v1",
+  "experiment": "03E.2",
+  "fault_object_contract": "open source-grounded identity; only uniquely visible app/name prefix normalization",
+  "final_schema": [
+    "root_cause",
+    "fault_category",
+    "fault_object"
+  ],
+  "generation": {
+    "do_sample": false,
+    "enable_thinking": false,
+    "max_agent_steps": 20,
+    "max_new_tokens": 256,
+    "num_beams": 1,
+    "quantization": "NF4 4-bit / BF16 compute / double quantization"
+  },
+  "loRA": false,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "model_training": false,
+  "native_category_enum": "native_vocabulary.json::ordered_categories",
+  "native_root_cause_enum": "native_vocabulary.json::ordered_fault_types",
+  "normalization": "deterministic and source-derived; no target/process/golden information",
+  "prompt_frozen_before_inference": true,
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "screen_groups_fingerprint": "c293d12a46ac031aa2c250333f0fb27749bf060ac62e98954085106b7bb85d4d",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "termination_rule": "Once sufficient evidence has been collected to select a diagnosis, emit the structured final diagnosis instead of continuing to call tools.",
+  "test_model_facing": false,
+  "test_used": false,
+  "tool_contract": {
+    "advertised_tool_count": 11,
+    "advertised_tools_have_deterministic_executor": true,
+    "no_fake_observations": true,
+    "removal_reason": "all 84 V1 replay failures were GetRecentLogs {}; raw logs do not define a faithful empty-argument replay",
+    "removed_v1_tool": "GetRecentLogs",
+    "tools": {
+      "CheckNodeServiceStatus": {
+        "advertised": true,
+        "case_local_cache_cases": 57,
+        "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+        "environment_contract_failure_allowed": false
+      },
+      "CheckServiceConnectivity": {
+        "advertised": true,
+        "case_local_cache_cases": 57,
+        "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+        "environment_contract_failure_allowed": false
+      },
+      "DescribeResource": {
+        "advertised": true,
+        "case_local_cache_cases": 57,
+        "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+        "environment_contract_failure_allowed": false
+      },
+      "GetAlerts": {
+        "advertised": true,
+        "case_local_cache_cases": 57,
+        "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+        "environment_contract_failure_allowed": false
+      },
+      "GetAppYAML": {
+        "advertised": true,
+        "case_local_cache_cases": 57,
+        "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+        "environment_contract_failure_allowed": false
+      },
+      "GetClusterConfiguration": {
+        "advertised": true,
+        "case_local_cache_cases": 57,
+        "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+        "environment_contract_failure_allowed": false
+      },
+      "GetErrorLogs": {
+        "advertised": true,
+        "case_local_cache_cases": 57,
+        "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+        "environment_contract_failure_allowed": false
+      },
+      "GetRecentLogs": {
+        "advertised": false,
+        "case_local_cache_cases": 0,
+        "deterministic_semantics": "disabled: V1 empty-argument form had no executable source",
+        "environment_contract_failure_allowed": false
+      },
+      "GetResources": {
+        "advertised": true,
+        "case_local_cache_cases": 57,
+        "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+        "environment_contract_failure_allowed": false
+      },
+      "GetServiceDependencies": {
+        "advertised": true,
+        "case_local_cache_cases": 57,
+        "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+        "environment_contract_failure_allowed": false
+      },
+      "GetSourceCode": {
+        "advertised": true,
+        "case_local_cache_cases": 0,
+        "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+        "environment_contract_failure_allowed": false
+      },
+      "ListCodeFiles": {
+        "advertised": true,
+        "case_local_cache_cases": 48,
+        "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+        "environment_contract_failure_allowed": false
+      }
+    },
+    "version": "03e2-tool-executability-v1"
+  },
+  "training": false,
+  "validation_screen_count": 57,
+  "validation_selection_model_facing": false,
+  "validation_selection_used": false,
+  "version": "cloud-opsbench-03e2-frozen-v2-contract-v1"
+}

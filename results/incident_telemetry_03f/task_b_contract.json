@@ -1,0 +1,59 @@
+{
+  "candidate_restriction": "only root causes belonging to supplied authoritative category",
+  "end_to_end_rca": false,
+  "experiment": "03F",
+  "gpu_used": false,
+  "input_schema": {
+    "properties": {
+      "evidence": {
+        "type": "array"
+      },
+      "fault_category_context": {
+        "enum_ref": "hierarchy_registry.ordered_categories",
+        "type": "string"
+      },
+      "incident_request": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "incident_request",
+      "evidence",
+      "fault_category_context"
+    ],
+    "type": "object"
+  },
+  "label": "ORACLE_CATEGORY_ROOT_CAUSE",
+  "metrics": [
+    "root_cause_exact",
+    "schema_valid",
+    "enum_valid",
+    "per_category_accuracy"
+  ],
+  "model_loaded": false,
+  "model_trained": false,
+  "name": "TASK_B_ORACLE_CATEGORY_ROOT_CAUSE",
+  "oracle_context": true,
+  "output_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "root_cause": {
+        "enum_ref": "hierarchy_registry.categories[fault_category_context]",
+        "type": "string"
+      }
+    },
+    "required": [
+      "root_cause"
+    ],
+    "type": "object"
+  },
+  "primary": true,
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03f-hierarchical-decomposition-v1"
+}

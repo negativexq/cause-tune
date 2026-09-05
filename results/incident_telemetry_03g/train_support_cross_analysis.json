@@ -1,0 +1,600 @@
+{
+  "decomposition_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9",
+  "evidence_representation_fingerprint": "b676b10a17d690f3796e237e942c340f2722a1aa5bcd97af1b43de1c0e972215",
+  "experiment": "03G",
+  "lora": false,
+  "low_support_definition": "TRAIN count <3",
+  "low_support_labels": [
+    "code_memory_leak",
+    "namespace_storage_quota_exceeded",
+    "node_network_delay",
+    "node_network_packet_loss",
+    "pv_binding_occupied",
+    "pvc_access_mode_mismatch",
+    "pvc_capacity_mismatch",
+    "pvc_selector_mismatch",
+    "pvc_storage_class_mismatch",
+    "volume_mount_permission_denied"
+  ],
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "provider_called": false,
+  "records": [
+    {
+      "category": "Admission_Fault",
+      "low_support": false,
+      "root_cause": "namespace_cpu_quota_exceeded",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:15",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 7
+    },
+    {
+      "category": "Admission_Fault",
+      "low_support": false,
+      "root_cause": "namespace_memory_quota_exceeded",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:26",
+      "task_b_exact": true,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 8
+    },
+    {
+      "category": "Admission_Fault",
+      "low_support": false,
+      "root_cause": "namespace_pod_quota_exceeded",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:39",
+      "task_b_exact": true,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 8
+    },
+    {
+      "category": "Admission_Fault",
+      "low_support": false,
+      "root_cause": "namespace_service_quota_exceeded",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:45",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 6
+    },
+    {
+      "category": "Admission_Fault",
+      "low_support": false,
+      "root_cause": "missing_service_account",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:5",
+      "task_b_exact": true,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 9
+    },
+    {
+      "category": "Admission_Fault",
+      "low_support": true,
+      "root_cause": "namespace_storage_quota_exceeded",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:57",
+      "task_b_exact": true,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 2
+    },
+    {
+      "category": "Application_Code_Defect",
+      "low_support": false,
+      "root_cause": "code_missing_parameter",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:17",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 15
+    },
+    {
+      "category": "Application_Code_Defect",
+      "low_support": false,
+      "root_cause": "code_excessive_file_reads",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:23",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 11
+    },
+    {
+      "category": "Application_Code_Defect",
+      "low_support": false,
+      "root_cause": "code_wrong_argument_order",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:32",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 6
+    },
+    {
+      "category": "Application_Code_Defect",
+      "low_support": false,
+      "root_cause": "code_busy_loop",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:35",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 10
+    },
+    {
+      "category": "Application_Code_Defect",
+      "low_support": false,
+      "root_cause": "code_excessive_file_writes",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:60",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 8
+    },
+    {
+      "category": "Application_Code_Defect",
+      "low_support": false,
+      "root_cause": "code_wrong_return",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:77",
+      "task_b_exact": false,
+      "task_c_category_exact": true,
+      "task_c_root_exact": false,
+      "train_count": 13
+    },
+    {
+      "category": "Application_Code_Defect",
+      "low_support": false,
+      "root_cause": "code_artificial_delay",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:89",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 4
+    },
+    {
+      "category": "Application_Code_Defect",
+      "low_support": true,
+      "root_cause": "code_memory_leak",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:90",
+      "task_b_exact": true,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 2
+    },
+    {
+      "category": "Infrastructure_Fault",
+      "low_support": false,
+      "root_cause": "kube_proxy_unavailable",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:15",
+      "task_b_exact": false,
+      "task_c_category_exact": true,
+      "task_c_root_exact": false,
+      "train_count": 6
+    },
+    {
+      "category": "Infrastructure_Fault",
+      "low_support": false,
+      "root_cause": "kube_scheduler_unavailable",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:21",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 6
+    },
+    {
+      "category": "Infrastructure_Fault",
+      "low_support": false,
+      "root_cause": "kubelet_unavailable",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:30",
+      "task_b_exact": false,
+      "task_c_category_exact": true,
+      "task_c_root_exact": false,
+      "train_count": 8
+    },
+    {
+      "category": "Infrastructure_Fault",
+      "low_support": false,
+      "root_cause": "containerd_unavailable",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:9",
+      "task_b_exact": true,
+      "task_c_category_exact": true,
+      "task_c_root_exact": true,
+      "train_count": 7
+    },
+    {
+      "category": "Performance_Fault",
+      "low_support": false,
+      "root_cause": "pod_cpu_overload",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:10",
+      "task_b_exact": false,
+      "task_c_category_exact": true,
+      "task_c_root_exact": false,
+      "train_count": 7
+    },
+    {
+      "category": "Performance_Fault",
+      "low_support": false,
+      "root_cause": "pod_network_delay",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:14",
+      "task_b_exact": false,
+      "task_c_category_exact": true,
+      "task_c_root_exact": false,
+      "train_count": 40
+    },
+    {
+      "category": "Performance_Fault",
+      "low_support": true,
+      "root_cause": "node_network_delay",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:23",
+      "task_b_exact": true,
+      "task_c_category_exact": true,
+      "task_c_root_exact": true,
+      "train_count": 2
+    },
+    {
+      "category": "Performance_Fault",
+      "low_support": true,
+      "root_cause": "node_network_packet_loss",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:26",
+      "task_b_exact": false,
+      "task_c_category_exact": true,
+      "task_c_root_exact": false,
+      "train_count": 2
+    },
+    {
+      "category": "Runtime_Fault",
+      "low_support": false,
+      "root_cause": "liveness_probe_incorrect_port",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:11",
+      "task_b_exact": false,
+      "task_c_category_exact": true,
+      "task_c_root_exact": false,
+      "train_count": 6
+    },
+    {
+      "category": "Runtime_Fault",
+      "low_support": false,
+      "root_cause": "liveness_probe_incorrect_timing",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:17",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 3
+    },
+    {
+      "category": "Runtime_Fault",
+      "low_support": false,
+      "root_cause": "container_memory_limit_too_low",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:23",
+      "task_b_exact": true,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 6
+    },
+    {
+      "category": "Runtime_Fault",
+      "low_support": false,
+      "root_cause": "readiness_probe_incorrect_protocol",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:36",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 5
+    },
+    {
+      "category": "Runtime_Fault",
+      "low_support": false,
+      "root_cause": "readiness_probe_incorrect_port",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:42",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 3
+    },
+    {
+      "category": "Runtime_Fault",
+      "low_support": false,
+      "root_cause": "liveness_probe_incorrect_protocol",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:7",
+      "task_b_exact": true,
+      "task_c_category_exact": true,
+      "task_c_root_exact": true,
+      "train_count": 5
+    },
+    {
+      "category": "Scheduling_Fault",
+      "low_support": false,
+      "root_cause": "node_cordon_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:1",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 9
+    },
+    {
+      "category": "Scheduling_Fault",
+      "low_support": false,
+      "root_cause": "node_selector_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:110",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 23
+    },
+    {
+      "category": "Scheduling_Fault",
+      "low_support": false,
+      "root_cause": "pod_anti_affinity_conflict",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:119",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 12
+    },
+    {
+      "category": "Scheduling_Fault",
+      "low_support": true,
+      "root_cause": "pvc_access_mode_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:129",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 1
+    },
+    {
+      "category": "Scheduling_Fault",
+      "low_support": true,
+      "root_cause": "pvc_selector_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:132",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 1
+    },
+    {
+      "category": "Scheduling_Fault",
+      "low_support": true,
+      "root_cause": "pvc_storage_class_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:136",
+      "task_b_exact": true,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 1
+    },
+    {
+      "category": "Scheduling_Fault",
+      "low_support": true,
+      "root_cause": "pv_binding_occupied",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:137",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 2
+    },
+    {
+      "category": "Scheduling_Fault",
+      "low_support": false,
+      "root_cause": "taint_toleration_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:150",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 14
+    },
+    {
+      "category": "Scheduling_Fault",
+      "low_support": false,
+      "root_cause": "cpu_capacity_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:24",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 13
+    },
+    {
+      "category": "Scheduling_Fault",
+      "low_support": false,
+      "root_cause": "memory_capacity_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:35",
+      "task_b_exact": true,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 14
+    },
+    {
+      "category": "Scheduling_Fault",
+      "low_support": true,
+      "root_cause": "pvc_capacity_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:53",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 1
+    },
+    {
+      "category": "Scheduling_Fault",
+      "low_support": false,
+      "root_cause": "node_affinity_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:59",
+      "task_b_exact": false,
+      "task_c_category_exact": true,
+      "task_c_root_exact": false,
+      "train_count": 18
+    },
+    {
+      "category": "Service_Routing_Fault",
+      "low_support": false,
+      "root_cause": "service_port_mapping_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:12",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 9
+    },
+    {
+      "category": "Service_Routing_Fault",
+      "low_support": false,
+      "root_cause": "service_protocol_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:23",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 6
+    },
+    {
+      "category": "Service_Routing_Fault",
+      "low_support": false,
+      "root_cause": "service_selector_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:37",
+      "task_b_exact": true,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 18
+    },
+    {
+      "category": "Service_Routing_Fault",
+      "low_support": false,
+      "root_cause": "service_env_var_address_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:6",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 6
+    },
+    {
+      "category": "Startup_Fault",
+      "low_support": false,
+      "root_cause": "image_registry_dns_failure",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:2",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 11
+    },
+    {
+      "category": "Startup_Fault",
+      "low_support": false,
+      "root_cause": "incorrect_image_reference",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:23",
+      "task_b_exact": false,
+      "task_c_category_exact": true,
+      "task_c_root_exact": true,
+      "train_count": 20
+    },
+    {
+      "category": "Startup_Fault",
+      "low_support": false,
+      "root_cause": "missing_image_pull_secret",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:48",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 12
+    },
+    {
+      "category": "Startup_Fault",
+      "low_support": true,
+      "root_cause": "volume_mount_permission_denied",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:60",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 1
+    },
+    {
+      "category": "Runtime_Fault",
+      "low_support": false,
+      "root_cause": "deployment_zero_replicas",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:25",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 13
+    },
+    {
+      "category": "Runtime_Fault",
+      "low_support": false,
+      "root_cause": "db_connection_exhaustion",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:3",
+      "task_b_exact": true,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 3
+    },
+    {
+      "category": "Runtime_Fault",
+      "low_support": false,
+      "root_cause": "mysql_invalid_credentials",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:42",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 17
+    },
+    {
+      "category": "Runtime_Fault",
+      "low_support": false,
+      "root_cause": "mysql_invalid_port",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:59",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 16
+    },
+    {
+      "category": "Runtime_Fault",
+      "low_support": false,
+      "root_cause": "service_sidecar_port_conflict",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:79",
+      "task_b_exact": false,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 10
+    },
+    {
+      "category": "Runtime_Fault",
+      "low_support": false,
+      "root_cause": "db_readonly_mode",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:9",
+      "task_b_exact": true,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 6
+    },
+    {
+      "category": "Service_Routing_Fault",
+      "low_support": false,
+      "root_cause": "gateway_misrouted",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:15",
+      "task_b_exact": false,
+      "task_c_category_exact": true,
+      "task_c_root_exact": false,
+      "train_count": 14
+    },
+    {
+      "category": "Service_Routing_Fault",
+      "low_support": false,
+      "root_cause": "service_dns_resolution_failure",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:27",
+      "task_b_exact": false,
+      "task_c_category_exact": true,
+      "task_c_root_exact": false,
+      "train_count": 12
+    },
+    {
+      "category": "Startup_Fault",
+      "low_support": false,
+      "root_cause": "missing_secret_binding",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Startup_Fault:11",
+      "task_b_exact": true,
+      "task_c_category_exact": false,
+      "task_c_root_exact": false,
+      "train_count": 12
+    }
+  ],
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "training": false,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03g-decomposed-2b-screen-v1"
+}

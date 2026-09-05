@@ -1,0 +1,94 @@
+{
+  "candidate_set_size": {
+    "12": {
+      "count": 24,
+      "enum_valid_count": 24,
+      "enum_valid_rate": 1.0,
+      "invalid_enum_outputs": 0,
+      "missing_or_malformed_outputs": 0,
+      "parse_status_counts": {
+        "valid": 24
+      },
+      "root_cause_exact_count": 6,
+      "root_cause_exact_rate": 0.25,
+      "schema_valid_count": 24,
+      "schema_valid_rate": 1.0,
+      "task": "TASK_B"
+    },
+    "4": {
+      "count": 8,
+      "enum_valid_count": 8,
+      "enum_valid_rate": 1.0,
+      "invalid_enum_outputs": 0,
+      "missing_or_malformed_outputs": 0,
+      "parse_status_counts": {
+        "valid": 8
+      },
+      "root_cause_exact_count": 2,
+      "root_cause_exact_rate": 0.25,
+      "schema_valid_count": 8,
+      "schema_valid_rate": 1.0,
+      "task": "TASK_B"
+    },
+    "5": {
+      "count": 5,
+      "enum_valid_count": 5,
+      "enum_valid_rate": 1.0,
+      "invalid_enum_outputs": 0,
+      "missing_or_malformed_outputs": 0,
+      "parse_status_counts": {
+        "valid": 5
+      },
+      "root_cause_exact_count": 1,
+      "root_cause_exact_rate": 0.2,
+      "schema_valid_count": 5,
+      "schema_valid_rate": 1.0,
+      "task": "TASK_B"
+    },
+    "6": {
+      "count": 12,
+      "enum_valid_count": 12,
+      "enum_valid_rate": 1.0,
+      "invalid_enum_outputs": 0,
+      "missing_or_malformed_outputs": 0,
+      "parse_status_counts": {
+        "valid": 12
+      },
+      "root_cause_exact_count": 5,
+      "root_cause_exact_rate": 0.4166666666666667,
+      "schema_valid_count": 12,
+      "schema_valid_rate": 1.0,
+      "task": "TASK_B"
+    },
+    "8": {
+      "count": 8,
+      "enum_valid_count": 8,
+      "enum_valid_rate": 1.0,
+      "invalid_enum_outputs": 0,
+      "missing_or_malformed_outputs": 0,
+      "parse_status_counts": {
+        "valid": 8
+      },
+      "root_cause_exact_count": 1,
+      "root_cause_exact_rate": 0.125,
+      "schema_valid_count": 8,
+      "schema_valid_rate": 1.0,
+      "task": "TASK_B"
+    }
+  },
+  "decomposition_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9",
+  "enum_failures": [],
+  "evidence_representation_fingerprint": "b676b10a17d690f3796e237e942c340f2722a1aa5bcd97af1b43de1c0e972215",
+  "experiment": "03G",
+  "lora": false,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "parse_failures": {},
+  "provider_called": false,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "training": false,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03g-decomposed-2b-screen-v1"
+}

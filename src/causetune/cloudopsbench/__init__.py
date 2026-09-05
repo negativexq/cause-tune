@@ -70,6 +70,18 @@ from .representation_integrity import (
     token_budget_projection,
     tool_budget_analysis,
 )
+from .decomposition import (
+    DECOMPOSITION_VERSION,
+    build_evidence_package,
+    build_evidence_packages,
+    build_hierarchy_registry,
+    context_size_audit,
+    evidence_sufficiency_audit,
+    future_record_counts,
+    label_support,
+    task_contracts,
+    trivial_baselines,
+)
 
 __all__ = [
     "CLOUD_OPSBENCH_REVISION",
@@ -129,4 +141,14 @@ __all__ = [
     "representation_manifest",
     "token_budget_projection",
     "tool_budget_analysis",
+    "DECOMPOSITION_VERSION",
+    "build_evidence_package",
+    "build_evidence_packages",
+    "build_hierarchy_registry",
+    "context_size_audit",
+    "evidence_sufficiency_audit",
+    "future_record_counts",
+    "label_support",
+    "task_contracts",
+    "trivial_baselines",
 ]

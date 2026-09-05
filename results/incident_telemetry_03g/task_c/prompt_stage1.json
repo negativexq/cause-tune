@@ -1,0 +1,36 @@
+{
+  "allowed_categories": [
+    "Admission_Fault",
+    "Application_Code_Defect",
+    "Infrastructure_Fault",
+    "Performance_Fault",
+    "Runtime_Fault",
+    "Scheduling_Fault",
+    "Service_Routing_Fault",
+    "Startup_Fault"
+  ],
+  "decomposition_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9",
+  "evidence_representation_fingerprint": "b676b10a17d690f3796e237e942c340f2722a1aa5bcd97af1b43de1c0e972215",
+  "experiment": "03G",
+  "frozen_before_first_inference": true,
+  "lora": false,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "output_schema": {
+    "additionalProperties": false,
+    "required": [
+      "fault_category"
+    ],
+    "type": "object"
+  },
+  "prompt_fingerprint": "a3858a946be5b0b1eb658c7da6522af579df828cf7ab4cb56278cf6a044f254c",
+  "provider_called": false,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "system": "You are Stage 1 of a bounded hierarchical Cloud-OpsBench classifier. Infer only the native fault category from the incident request and evidence. Return JSON only with exactly this schema: {\"fault_category\": string}. The value must be exactly one item from this complete native category enum: [\"Admission_Fault\", \"Application_Code_Defect\", \"Infrastructure_Fault\", \"Performance_Fault\", \"Runtime_Fault\", \"Scheduling_Fault\", \"Service_Routing_Fault\", \"Startup_Fault\"]. Do not output root_cause, fault_object, reasoning, explanation, confidence, or any other key.",
+  "task": "TASK_C_STAGE1",
+  "test_model_facing": false,
+  "training": false,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03g-decomposed-2b-screen-v1"
+}

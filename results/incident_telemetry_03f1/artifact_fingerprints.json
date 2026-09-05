@@ -1,0 +1,36 @@
+{
+  "artifacts": {
+    "audit_scope.json": "6a9d56bcd56f8a4728f40facf2331129f51f2d5e5cee42ab124c6eca11051968",
+    "budget_analysis.json": "c25e0b189e638c44a22bd9d7bf05b8a56ee7d102da6e8e8ba17c77d703a85325",
+    "category_coverage.json": "800604a59a94078165083db580f038dd0886eef47ad5d60a3876fad05bd3d06d",
+    "context_size_audit.json": "55d7c6e69254221fcf44355073fbd5aa7cee123195064619a21151f84812989e",
+    "evidence_packages.jsonl": "47ad00b006dd472033ae1a0599a08f499dd09c5c84ef866d911ff3a9cf944865",
+    "evidence_representation_manifest.json": "01640d82adf67e2a7c660612fd30725d733c78141f8f4dc99f9f643bf8824222",
+    "integrity_summary.json": "0d86e03405b9bb76f46f99a74a6fe8990d7a31640b19ec3281881b3acb11ed60",
+    "low_support_cross_tab.json": "585d7355ac0fc2fdedb0a57edc79597e1fc8fe3308bdc036f4b103e333050574",
+    "matcher_validity.json": "a51cb0b363335fc6f28a77d554df365099037bee6051478a086edf2386f8f0d1",
+    "partial_case_audit.json": "2e65c5134552e2c150180c278e2bfec33e355e267bacdc668bd0a6494f70c60c",
+    "path_coverage_comparison.json": "dd8b6bcbdbf2af2906a3d2527434321cac004409ba6ad706e1c842d3bee578d2",
+    "representation_candidates.json": "6c1e2c34920f99b466ea34e0f843df310ad293c22f53c03042cc3fc827360657",
+    "selected_representation.json": "32297223465dae4bb1973d6f256bdb81c04eeab4dd51d54fca1d258b5b915eb7",
+    "validation_screen_sufficiency.json": "a9eb9849deacf7db5ae05948bc4ca7cac9054aaf5c80a1553cbd7d3489273eec",
+    "zero_case_audit.json": "d465d307ebb542de805083c1d128d78aa841299de0ef69ec1850b74b4f7f21b3"
+  },
+  "evidence_representation_fingerprint": "b676b10a17d690f3796e237e942c340f2722a1aa5bcd97af1b43de1c0e972215",
+  "experiment": "03F.1",
+  "gpu_used": false,
+  "model_loaded": false,
+  "model_trained": false,
+  "previous_evidence_immutable": {
+    "03d1_artifact_fingerprint": "cb75f36361bc702095099557bc563e5467a77c08d85d30dadf785c19595f8f8d",
+    "03d_split_manifest": "1563d705c52f1048abe15baf1d9ef5d91c60270e22b14392f507102b9e45e8b4",
+    "03e1_artifacts_sha256": "d73099d8370ed9db234d197817b9d91fb64d25690752921e4f8c5d626dd579dc",
+    "03e2_artifacts_sha256": "49b4d742e946614377a027bf1897162258b8f04ebdb88b69b7870f2454ad60bc",
+    "03e_artifacts_sha256": "ace90967c1b6189e6fc2fcc75fbd33dae78a1517cbba017b91b61ffcefcd095d",
+    "03f_decomposition_freeze_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9"
+  },
+  "provider_called": false,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "test_model_facing": false,
+  "version": "cloud-opsbench-03f1-evidence-integrity-v1"
+}

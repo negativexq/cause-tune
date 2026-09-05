@@ -1,0 +1,891 @@
+{
+  "cases": [
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Admission_Fault",
+      "coverage_class": "PARTIAL",
+      "package_chars": 16613,
+      "patterns": 29,
+      "retained": 23,
+      "root_cause": "namespace_cpu_quota_exceeded",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:15"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Admission_Fault",
+      "coverage_class": "PARTIAL",
+      "package_chars": 13459,
+      "patterns": 29,
+      "retained": 23,
+      "root_cause": "namespace_memory_quota_exceeded",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:26"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Admission_Fault",
+      "coverage_class": "PARTIAL",
+      "package_chars": 17063,
+      "patterns": 29,
+      "retained": 26,
+      "root_cause": "namespace_pod_quota_exceeded",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:39"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Admission_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 14346,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "namespace_service_quota_exceeded",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:45"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Admission_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 12085,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "missing_service_account",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:5"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Admission_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 13500,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "namespace_storage_quota_exceeded",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Admission_Fault:57"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "metrics",
+        "code"
+      ],
+      "category": "Application_Code_Defect",
+      "coverage_class": "ZERO",
+      "package_chars": 4414,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "code_missing_parameter",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:17"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "metrics",
+        "code"
+      ],
+      "category": "Application_Code_Defect",
+      "coverage_class": "ZERO",
+      "package_chars": 4570,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "code_excessive_file_reads",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:23"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "metrics",
+        "code"
+      ],
+      "category": "Application_Code_Defect",
+      "coverage_class": "ZERO",
+      "package_chars": 7977,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "code_wrong_argument_order",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:32"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "metrics",
+        "code"
+      ],
+      "category": "Application_Code_Defect",
+      "coverage_class": "ZERO",
+      "package_chars": 7245,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "code_busy_loop",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:35"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "metrics",
+        "code"
+      ],
+      "category": "Application_Code_Defect",
+      "coverage_class": "ZERO",
+      "package_chars": 3804,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "code_excessive_file_writes",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:60"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "metrics",
+        "code"
+      ],
+      "category": "Application_Code_Defect",
+      "coverage_class": "ZERO",
+      "package_chars": 5170,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "code_wrong_return",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:77"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "metrics",
+        "code"
+      ],
+      "category": "Application_Code_Defect",
+      "coverage_class": "ZERO",
+      "package_chars": 4077,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "code_artificial_delay",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:89"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "metrics",
+        "code"
+      ],
+      "category": "Application_Code_Defect",
+      "coverage_class": "FULL",
+      "package_chars": 16044,
+      "patterns": 2,
+      "retained": 2,
+      "root_cause": "code_memory_leak",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Application_Code_Defect:90"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Infrastructure_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 11761,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "kube_proxy_unavailable",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:15"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Infrastructure_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 12267,
+      "patterns": 1,
+      "retained": 0,
+      "root_cause": "kube_scheduler_unavailable",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:21"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Infrastructure_Fault",
+      "coverage_class": "PARTIAL",
+      "package_chars": 16661,
+      "patterns": 5,
+      "retained": 4,
+      "root_cause": "kubelet_unavailable",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:30"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Infrastructure_Fault",
+      "coverage_class": "PARTIAL",
+      "package_chars": 27845,
+      "patterns": 7,
+      "retained": 5,
+      "root_cause": "containerd_unavailable",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Infrastructure_Fault:9"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "metrics",
+        "code"
+      ],
+      "category": "Performance_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 1596,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "pod_cpu_overload",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:10"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "metrics",
+        "code"
+      ],
+      "category": "Performance_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 1647,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "pod_network_delay",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:14"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Performance_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 1685,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "node_network_delay",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:23"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Performance_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 1685,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "node_network_packet_loss",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Performance_Fault:26"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Runtime_Fault",
+      "coverage_class": "PARTIAL",
+      "package_chars": 6333,
+      "patterns": 4,
+      "retained": 3,
+      "root_cause": "liveness_probe_incorrect_port",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:11"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Runtime_Fault",
+      "coverage_class": "PARTIAL",
+      "package_chars": 6714,
+      "patterns": 5,
+      "retained": 4,
+      "root_cause": "liveness_probe_incorrect_timing",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:17"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Runtime_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 5162,
+      "patterns": 4,
+      "retained": 4,
+      "root_cause": "container_memory_limit_too_low",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:23"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Runtime_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 6195,
+      "patterns": 4,
+      "retained": 4,
+      "root_cause": "readiness_probe_incorrect_protocol",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:36"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Runtime_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 5912,
+      "patterns": 4,
+      "retained": 4,
+      "root_cause": "readiness_probe_incorrect_port",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:42"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Runtime_Fault",
+      "coverage_class": "PARTIAL",
+      "package_chars": 7596,
+      "patterns": 4,
+      "retained": 3,
+      "root_cause": "liveness_probe_incorrect_protocol",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Runtime_Fault:7"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Scheduling_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 5957,
+      "patterns": 4,
+      "retained": 4,
+      "root_cause": "node_cordon_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:1"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Scheduling_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 4906,
+      "patterns": 7,
+      "retained": 7,
+      "root_cause": "node_selector_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:110"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Scheduling_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 8512,
+      "patterns": 7,
+      "retained": 7,
+      "root_cause": "pod_anti_affinity_conflict",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:119"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Scheduling_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 6172,
+      "patterns": 5,
+      "retained": 5,
+      "root_cause": "pvc_access_mode_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:129"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Scheduling_Fault",
+      "coverage_class": "PARTIAL",
+      "package_chars": 6571,
+      "patterns": 8,
+      "retained": 6,
+      "root_cause": "pvc_selector_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:132"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Scheduling_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 5809,
+      "patterns": 8,
+      "retained": 8,
+      "root_cause": "pvc_storage_class_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:136"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Scheduling_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 5681,
+      "patterns": 10,
+      "retained": 10,
+      "root_cause": "pv_binding_occupied",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:137"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Scheduling_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 7478,
+      "patterns": 2,
+      "retained": 2,
+      "root_cause": "taint_toleration_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:150"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Scheduling_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 6872,
+      "patterns": 2,
+      "retained": 2,
+      "root_cause": "cpu_capacity_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:24"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Scheduling_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 2883,
+      "patterns": 2,
+      "retained": 2,
+      "root_cause": "memory_capacity_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:35"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Scheduling_Fault",
+      "coverage_class": "PARTIAL",
+      "package_chars": 5897,
+      "patterns": 7,
+      "retained": 5,
+      "root_cause": "pvc_capacity_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:53"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Scheduling_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 6844,
+      "patterns": 7,
+      "retained": 7,
+      "root_cause": "node_affinity_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Scheduling_Fault:59"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Service_Routing_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 6915,
+      "patterns": 2,
+      "retained": 2,
+      "root_cause": "service_port_mapping_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:12"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Service_Routing_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 7232,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "service_protocol_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:23"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Service_Routing_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 12162,
+      "patterns": 2,
+      "retained": 2,
+      "root_cause": "service_selector_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:37"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Service_Routing_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 10603,
+      "patterns": 6,
+      "retained": 6,
+      "root_cause": "service_env_var_address_mismatch",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Service_Routing_Fault:6"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Startup_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 6107,
+      "patterns": 4,
+      "retained": 4,
+      "root_cause": "image_registry_dns_failure",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:2"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Startup_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 9062,
+      "patterns": 4,
+      "retained": 4,
+      "root_cause": "incorrect_image_reference",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:23"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Startup_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 6672,
+      "patterns": 4,
+      "retained": 4,
+      "root_cause": "missing_image_pull_secret",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:48"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts",
+        "code"
+      ],
+      "category": "Startup_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 13604,
+      "patterns": 4,
+      "retained": 4,
+      "root_cause": "volume_mount_permission_denied",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:boutique:Startup_Fault:60"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts"
+      ],
+      "category": "Runtime_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 19155,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "deployment_zero_replicas",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:25"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts"
+      ],
+      "category": "Runtime_Fault",
+      "coverage_class": "PARTIAL",
+      "package_chars": 29994,
+      "patterns": 3,
+      "retained": 1,
+      "root_cause": "db_connection_exhaustion",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:3"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts"
+      ],
+      "category": "Runtime_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 18458,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "mysql_invalid_credentials",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:42"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts"
+      ],
+      "category": "Runtime_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 24390,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "mysql_invalid_port",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:59"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts"
+      ],
+      "category": "Runtime_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 29114,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "service_sidecar_port_conflict",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:79"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts"
+      ],
+      "category": "Runtime_Fault",
+      "coverage_class": "FULL",
+      "package_chars": 30000,
+      "patterns": 7,
+      "retained": 7,
+      "root_cause": "db_readonly_mode",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Runtime_Fault:9"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts"
+      ],
+      "category": "Service_Routing_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 26829,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "gateway_misrouted",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:15"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts"
+      ],
+      "category": "Service_Routing_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 29846,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "service_dns_resolution_failure",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Service_Routing_Fault:27"
+    },
+    {
+      "available_modalities": [
+        "k8s_states",
+        "logs",
+        "alerts"
+      ],
+      "category": "Startup_Fault",
+      "coverage_class": "ZERO",
+      "package_chars": 12188,
+      "patterns": 0,
+      "retained": 0,
+      "root_cause": "missing_secret_binding",
+      "source_case_group": "03c415e5709297432282fbbfd499f1bca0f8c347:trainticket:Startup_Fault:11"
+    }
+  ],
+  "coverage": {
+    "FULL": 22,
+    "PARTIAL": 11,
+    "ZERO": 24,
+    "patterns": 232,
+    "retained": 204
+  },
+  "diagnosis_input_validity": {
+    "clear_package_failures": 0,
+    "nonempty_source_evidence": 57,
+    "process_zero_reason_counts": {
+      "MATCHER_SCHEMA_GAP": 1,
+      "PROCESS_LABEL_NO_MATCHABLE_PATTERNS": 23
+    },
+    "screen_process_coverage_is_proxy": true
+  },
+  "experiment": "03F.1",
+  "gpu_used": false,
+  "model_loaded": false,
+  "model_trained": false,
+  "provider_called": false,
+  "screen_count": 57,
+  "screen_membership_unchanged": {
+    "actual": 57,
+    "expected": 57,
+    "set_equal": true
+  },
+  "selected_representation": "R2_DETERMINISTIC_PATH_UNION",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "test_model_facing": false,
+  "version": "cloud-opsbench-03f1-evidence-integrity-v1"
+}

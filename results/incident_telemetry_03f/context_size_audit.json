@@ -1,0 +1,174 @@
+{
+  "decomposed_input_is_not_full_history": true,
+  "experiment": "03F",
+  "gpu_used": false,
+  "measurement": "serialized deterministic task input; no model inference",
+  "model_loaded": false,
+  "model_trained": false,
+  "prior_full_history": {
+    "bytes": {
+      "count": 1508,
+      "max": 150042,
+      "median": 10532,
+      "min": 2046,
+      "p75": 19855,
+      "p90": 32702,
+      "p95": 56611,
+      "p99": 82341
+    },
+    "characters": {
+      "count": 1508,
+      "max": 150042,
+      "median": 10524,
+      "min": 2046,
+      "p75": 19785,
+      "p90": 32696,
+      "p95": 56611,
+      "p99": 82341
+    }
+  },
+  "provider_called": false,
+  "reduction_vs_prior_full_history": {
+    "max_chars_fraction": 0.20149691419735807,
+    "median_chars_fraction": 0.6755986316989738
+  },
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "scope": "TRAIN and VALIDATION only; TEST excluded from model-facing packages",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "task_c_source_context_note": "Stage 2 context sizes include the fixed candidate-set registry; no Stage-1 predictions were manufactured.",
+  "tasks": {
+    "TASK_A_CATEGORY": {
+      "bytes": {
+        "count": 633,
+        "max": 30233,
+        "median": 7110,
+        "min": 1260,
+        "p75": 15645,
+        "p90": 24623,
+        "p95": 29347,
+        "p99": 30233
+      },
+      "chars": {
+        "count": 633,
+        "max": 30233,
+        "median": 7110,
+        "min": 1260,
+        "p75": 15645,
+        "p90": 24623,
+        "p95": 29347,
+        "p99": 30233
+      },
+      "tokens": {
+        "count": 633,
+        "max": 12205,
+        "median": 2346,
+        "min": 452,
+        "p75": 5230,
+        "p90": 8295,
+        "p95": 9801,
+        "p99": 11823
+      }
+    },
+    "TASK_B_ORACLE_CATEGORY_ROOT_CAUSE": {
+      "bytes": {
+        "count": 633,
+        "max": 30490,
+        "median": 7291,
+        "min": 1249,
+        "p75": 15681,
+        "p90": 24880,
+        "p95": 29604,
+        "p99": 30487
+      },
+      "chars": {
+        "count": 633,
+        "max": 30490,
+        "median": 7291,
+        "min": 1249,
+        "p75": 15681,
+        "p90": 24880,
+        "p95": 29604,
+        "p99": 30487
+      },
+      "tokens": {
+        "count": 633,
+        "max": 12256,
+        "median": 2374,
+        "min": 448,
+        "p75": 5228,
+        "p90": 8309,
+        "p95": 9852,
+        "p99": 11874
+      }
+    },
+    "TASK_C_HIERARCHICAL_SELF_PREDICTED": {
+      "bytes": {
+        "count": 633,
+        "max": 32010,
+        "median": 8887,
+        "min": 3037,
+        "p75": 17422,
+        "p90": 26400,
+        "p95": 31124,
+        "p99": 32010
+      },
+      "chars": {
+        "count": 633,
+        "max": 32010,
+        "median": 8887,
+        "min": 3037,
+        "p75": 17422,
+        "p90": 26400,
+        "p95": 31124,
+        "p99": 32010
+      },
+      "tokens": {
+        "count": 633,
+        "max": 12572,
+        "median": 2713,
+        "min": 819,
+        "p75": 5597,
+        "p90": 8662,
+        "p95": 10168,
+        "p99": 12190
+      }
+    },
+    "TASK_D_FAULT_OBJECT": {
+      "bytes": {
+        "count": 633,
+        "max": 30052,
+        "median": 6929,
+        "min": 1079,
+        "p75": 15464,
+        "p90": 24442,
+        "p95": 29166,
+        "p99": 30052
+      },
+      "chars": {
+        "count": 633,
+        "max": 30052,
+        "median": 6929,
+        "min": 1079,
+        "p75": 15464,
+        "p90": 24442,
+        "p95": 29166,
+        "p99": 30052
+      },
+      "tokens": {
+        "count": 633,
+        "max": 12166,
+        "median": 2307,
+        "min": 413,
+        "p75": 5191,
+        "p90": 8256,
+        "p95": 9762,
+        "p99": 11784
+      }
+    }
+  },
+  "test_model_facing": false,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03f-hierarchical-decomposition-v1"
+}

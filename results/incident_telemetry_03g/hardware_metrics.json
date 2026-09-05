@@ -1,0 +1,60 @@
+{
+  "context_overflow_count": 0,
+  "decomposition_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9",
+  "evidence_representation_fingerprint": "b676b10a17d690f3796e237e942c340f2722a1aa5bcd97af1b43de1c0e972215",
+  "experiment": "03G",
+  "gpu_model": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "lora": false,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_load": {
+    "do_sample": false,
+    "enable_thinking": false,
+    "max_new_tokens": 256,
+    "model_id": "Qwen/Qwen3.5-2B",
+    "model_load_allocated_bytes": 1916872192,
+    "model_load_delta_bytes": 1916872192,
+    "model_load_seconds": 6.022491206000268,
+    "num_beams": 1,
+    "quantization": {
+      "compute_dtype": "bfloat16",
+      "double_quant": true,
+      "load_in_4bit": true,
+      "quant_type": "nf4"
+    },
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "snapshot_path": "/home/ofk/.cache/huggingface/hub/models--Qwen--Qwen3.5-2B/snapshots/15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "tokenizer_vocab_size": 248077
+  },
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "oom_count": 0,
+  "peak_allocated_bytes": 3552660992,
+  "peak_reserved_bytes": 4766826496,
+  "physical_vram_bytes": 8546484224,
+  "provider_called": false,
+  "software": {
+    "bitsandbytes": "0.50.2",
+    "cuda": "13.0",
+    "torch": "2.14.0+cu130",
+    "transformers": "5.16.1"
+  },
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "task_wall_seconds": {
+    "TASK_A": 88.04578695700184,
+    "TASK_B": 95.34855663601775,
+    "TASK_C_STAGE2": 92.29589880098501,
+    "TASK_D": 109.93249511600152
+  },
+  "test_model_facing": false,
+  "tokens_per_second": {
+    "TASK_A": 6.701058851210373,
+    "TASK_B": 6.859044573653804,
+    "TASK_C_STAGE2": 6.858376246651215,
+    "TASK_D": 8.359675626667665
+  },
+  "total_generation_count": 228,
+  "total_wall_seconds": 391.6452287160064,
+  "training": false,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03g-decomposed-2b-screen-v1"
+}

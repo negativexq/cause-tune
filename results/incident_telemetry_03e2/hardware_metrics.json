@@ -1,0 +1,38 @@
+{
+  "experiment": "03E.2",
+  "local_hardware_feasible": true,
+  "model": {
+    "enable_thinking": false,
+    "max_agent_steps": 20,
+    "max_new_tokens": 256,
+    "model_id": "Qwen/Qwen3.5-2B",
+    "quantization": {
+      "compute_dtype": "bfloat16",
+      "double_quant": true,
+      "load_in_4bit": true,
+      "quant_type": "nf4"
+    },
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "snapshot_path": "/home/ofk/.cache/huggingface/hub/models--Qwen--Qwen3.5-2B/snapshots/15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "v1_metadata_sha256": "87dd95421e51e268d4c0ccadc5d2c5de428ea840b62032788e78946491caa3be"
+  },
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "model_training": false,
+  "postprocessed_without_regeneration": true,
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "v1_4b_failures_not_rerun": true,
+  "v1_4b_interpretation": "HARDWARE-CONSTRAINED / INCOMPLETE CAPABILITY EVIDENCE; 4B not run in 03E.2",
+  "v2_closed_loop_prompt_token_max": 5100,
+  "v2_oracle_prompt_token_max": 35339,
+  "v2_peak_allocated_bytes": 6123361280,
+  "v2_peak_reserved_bytes": 8793358336,
+  "validation_screen_count": 57,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03e2-frozen-v2-contract-v1"
+}

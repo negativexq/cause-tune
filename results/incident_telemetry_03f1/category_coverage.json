@@ -1,0 +1,618 @@
+{
+  "dimensions": {
+    "category": {
+      "Admission_Fault": {
+        "FULL": 0,
+        "PARTIAL": 29,
+        "ZERO": 22,
+        "case_count": 51,
+        "patterns": 841,
+        "retained": 692
+      },
+      "Application_Code_Defect": {
+        "FULL": 3,
+        "PARTIAL": 0,
+        "ZERO": 79,
+        "case_count": 82,
+        "patterns": 6,
+        "retained": 6
+      },
+      "Infrastructure_Fault": {
+        "FULL": 0,
+        "PARTIAL": 17,
+        "ZERO": 16,
+        "case_count": 33,
+        "patterns": 110,
+        "retained": 50
+      },
+      "Performance_Fault": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 65,
+        "case_count": 65,
+        "patterns": 0,
+        "retained": 0
+      },
+      "Runtime_Fault": {
+        "FULL": 21,
+        "PARTIAL": 26,
+        "ZERO": 70,
+        "case_count": 117,
+        "patterns": 210,
+        "retained": 166
+      },
+      "Scheduling_Fault": {
+        "FULL": 130,
+        "PARTIAL": 6,
+        "ZERO": 0,
+        "case_count": 136,
+        "patterns": 673,
+        "retained": 661
+      },
+      "Service_Routing_Fault": {
+        "FULL": 39,
+        "PARTIAL": 0,
+        "ZERO": 40,
+        "case_count": 79,
+        "patterns": 106,
+        "retained": 106
+      },
+      "Startup_Fault": {
+        "FULL": 52,
+        "PARTIAL": 0,
+        "ZERO": 18,
+        "case_count": 70,
+        "patterns": 208,
+        "retained": 208
+      }
+    },
+    "code_available": {
+      "False": {
+        "FULL": 3,
+        "PARTIAL": 8,
+        "ZERO": 164,
+        "case_count": 175,
+        "patterns": 61,
+        "retained": 36
+      },
+      "True": {
+        "FULL": 242,
+        "PARTIAL": 70,
+        "ZERO": 146,
+        "case_count": 458,
+        "patterns": 2093,
+        "retained": 1853
+      }
+    },
+    "difficulty": {
+      "easy": {
+        "FULL": 203,
+        "PARTIAL": 32,
+        "ZERO": 88,
+        "case_count": 323,
+        "patterns": 1091,
+        "retained": 1035
+      },
+      "hard": {
+        "FULL": 3,
+        "PARTIAL": 0,
+        "ZERO": 144,
+        "case_count": 147,
+        "patterns": 6,
+        "retained": 6
+      },
+      "medium": {
+        "FULL": 39,
+        "PARTIAL": 46,
+        "ZERO": 78,
+        "case_count": 163,
+        "patterns": 1057,
+        "retained": 848
+      }
+    },
+    "metrics_available": {
+      "False": {
+        "FULL": 242,
+        "PARTIAL": 78,
+        "ZERO": 170,
+        "case_count": 490,
+        "patterns": 2148,
+        "retained": 1883
+      },
+      "True": {
+        "FULL": 3,
+        "PARTIAL": 0,
+        "ZERO": 140,
+        "case_count": 143,
+        "patterns": 6,
+        "retained": 6
+      }
+    },
+    "root_cause": {
+      "code_artificial_delay": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 5,
+        "case_count": 5,
+        "patterns": 0,
+        "retained": 0
+      },
+      "code_busy_loop": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 13,
+        "case_count": 13,
+        "patterns": 0,
+        "retained": 0
+      },
+      "code_excessive_file_reads": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 12,
+        "case_count": 12,
+        "patterns": 0,
+        "retained": 0
+      },
+      "code_excessive_file_writes": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 11,
+        "case_count": 11,
+        "patterns": 0,
+        "retained": 0
+      },
+      "code_memory_leak": {
+        "FULL": 3,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 3,
+        "patterns": 6,
+        "retained": 6
+      },
+      "code_missing_parameter": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 17,
+        "case_count": 17,
+        "patterns": 0,
+        "retained": 0
+      },
+      "code_wrong_argument_order": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 7,
+        "case_count": 7,
+        "patterns": 0,
+        "retained": 0
+      },
+      "code_wrong_return": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 14,
+        "case_count": 14,
+        "patterns": 0,
+        "retained": 0
+      },
+      "container_memory_limit_too_low": {
+        "FULL": 7,
+        "PARTIAL": 1,
+        "ZERO": 0,
+        "case_count": 8,
+        "patterns": 33,
+        "retained": 32
+      },
+      "containerd_unavailable": {
+        "FULL": 0,
+        "PARTIAL": 8,
+        "ZERO": 0,
+        "case_count": 8,
+        "patterns": 56,
+        "retained": 19
+      },
+      "cpu_capacity_mismatch": {
+        "FULL": 12,
+        "PARTIAL": 3,
+        "ZERO": 0,
+        "case_count": 15,
+        "patterns": 36,
+        "retained": 30
+      },
+      "db_connection_exhaustion": {
+        "FULL": 0,
+        "PARTIAL": 4,
+        "ZERO": 0,
+        "case_count": 4,
+        "patterns": 12,
+        "retained": 7
+      },
+      "db_readonly_mode": {
+        "FULL": 3,
+        "PARTIAL": 4,
+        "ZERO": 0,
+        "case_count": 7,
+        "patterns": 49,
+        "retained": 29
+      },
+      "deployment_zero_replicas": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 16,
+        "case_count": 16,
+        "patterns": 0,
+        "retained": 0
+      },
+      "gateway_misrouted": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 18,
+        "case_count": 18,
+        "patterns": 0,
+        "retained": 0
+      },
+      "image_registry_dns_failure": {
+        "FULL": 12,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 12,
+        "patterns": 48,
+        "retained": 48
+      },
+      "incorrect_image_reference": {
+        "FULL": 23,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 23,
+        "patterns": 92,
+        "retained": 92
+      },
+      "kube_proxy_unavailable": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 7,
+        "case_count": 7,
+        "patterns": 0,
+        "retained": 0
+      },
+      "kube_scheduler_unavailable": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 9,
+        "case_count": 9,
+        "patterns": 9,
+        "retained": 0
+      },
+      "kubelet_unavailable": {
+        "FULL": 0,
+        "PARTIAL": 9,
+        "ZERO": 0,
+        "case_count": 9,
+        "patterns": 45,
+        "retained": 31
+      },
+      "liveness_probe_incorrect_port": {
+        "FULL": 0,
+        "PARTIAL": 7,
+        "ZERO": 0,
+        "case_count": 7,
+        "patterns": 28,
+        "retained": 21
+      },
+      "liveness_probe_incorrect_protocol": {
+        "FULL": 0,
+        "PARTIAL": 6,
+        "ZERO": 0,
+        "case_count": 6,
+        "patterns": 24,
+        "retained": 18
+      },
+      "liveness_probe_incorrect_timing": {
+        "FULL": 0,
+        "PARTIAL": 4,
+        "ZERO": 0,
+        "case_count": 4,
+        "patterns": 20,
+        "retained": 15
+      },
+      "memory_capacity_mismatch": {
+        "FULL": 17,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 17,
+        "patterns": 34,
+        "retained": 34
+      },
+      "missing_image_pull_secret": {
+        "FULL": 15,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 15,
+        "patterns": 60,
+        "retained": 60
+      },
+      "missing_secret_binding": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 18,
+        "case_count": 18,
+        "patterns": 0,
+        "retained": 0
+      },
+      "missing_service_account": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 10,
+        "case_count": 10,
+        "patterns": 0,
+        "retained": 0
+      },
+      "mysql_invalid_credentials": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 20,
+        "case_count": 20,
+        "patterns": 0,
+        "retained": 0
+      },
+      "mysql_invalid_port": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 20,
+        "case_count": 20,
+        "patterns": 0,
+        "retained": 0
+      },
+      "namespace_cpu_quota_exceeded": {
+        "FULL": 0,
+        "PARTIAL": 9,
+        "ZERO": 0,
+        "case_count": 9,
+        "patterns": 261,
+        "retained": 209
+      },
+      "namespace_memory_quota_exceeded": {
+        "FULL": 0,
+        "PARTIAL": 10,
+        "ZERO": 0,
+        "case_count": 10,
+        "patterns": 290,
+        "retained": 239
+      },
+      "namespace_pod_quota_exceeded": {
+        "FULL": 0,
+        "PARTIAL": 10,
+        "ZERO": 0,
+        "case_count": 10,
+        "patterns": 290,
+        "retained": 244
+      },
+      "namespace_service_quota_exceeded": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 9,
+        "case_count": 9,
+        "patterns": 0,
+        "retained": 0
+      },
+      "namespace_storage_quota_exceeded": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 3,
+        "case_count": 3,
+        "patterns": 0,
+        "retained": 0
+      },
+      "node_affinity_mismatch": {
+        "FULL": 21,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 21,
+        "patterns": 147,
+        "retained": 147
+      },
+      "node_cordon_mismatch": {
+        "FULL": 13,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 13,
+        "patterns": 52,
+        "retained": 52
+      },
+      "node_network_delay": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 3,
+        "case_count": 3,
+        "patterns": 0,
+        "retained": 0
+      },
+      "node_network_packet_loss": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 3,
+        "case_count": 3,
+        "patterns": 0,
+        "retained": 0
+      },
+      "node_selector_mismatch": {
+        "FULL": 26,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 26,
+        "patterns": 182,
+        "retained": 182
+      },
+      "pod_anti_affinity_conflict": {
+        "FULL": 14,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 14,
+        "patterns": 98,
+        "retained": 98
+      },
+      "pod_cpu_overload": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 9,
+        "case_count": 9,
+        "patterns": 0,
+        "retained": 0
+      },
+      "pod_network_delay": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 50,
+        "case_count": 50,
+        "patterns": 0,
+        "retained": 0
+      },
+      "pv_binding_occupied": {
+        "FULL": 3,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 3,
+        "patterns": 30,
+        "retained": 30
+      },
+      "pvc_access_mode_mismatch": {
+        "FULL": 2,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 2,
+        "patterns": 10,
+        "retained": 10
+      },
+      "pvc_capacity_mismatch": {
+        "FULL": 0,
+        "PARTIAL": 2,
+        "ZERO": 0,
+        "case_count": 2,
+        "patterns": 14,
+        "retained": 10
+      },
+      "pvc_selector_mismatch": {
+        "FULL": 1,
+        "PARTIAL": 1,
+        "ZERO": 0,
+        "case_count": 2,
+        "patterns": 16,
+        "retained": 14
+      },
+      "pvc_storage_class_mismatch": {
+        "FULL": 2,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 2,
+        "patterns": 16,
+        "retained": 16
+      },
+      "readiness_probe_incorrect_port": {
+        "FULL": 5,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 5,
+        "patterns": 20,
+        "retained": 20
+      },
+      "readiness_probe_incorrect_protocol": {
+        "FULL": 6,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 6,
+        "patterns": 24,
+        "retained": 24
+      },
+      "service_dns_resolution_failure": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 15,
+        "case_count": 15,
+        "patterns": 0,
+        "retained": 0
+      },
+      "service_env_var_address_mismatch": {
+        "FULL": 7,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 7,
+        "patterns": 42,
+        "retained": 42
+      },
+      "service_port_mapping_mismatch": {
+        "FULL": 12,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 12,
+        "patterns": 24,
+        "retained": 24
+      },
+      "service_protocol_mismatch": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 7,
+        "case_count": 7,
+        "patterns": 0,
+        "retained": 0
+      },
+      "service_selector_mismatch": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 20,
+        "patterns": 40,
+        "retained": 40
+      },
+      "service_sidecar_port_conflict": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "ZERO": 14,
+        "case_count": 14,
+        "patterns": 0,
+        "retained": 0
+      },
+      "taint_toleration_mismatch": {
+        "FULL": 19,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 19,
+        "patterns": 38,
+        "retained": 38
+      },
+      "volume_mount_permission_denied": {
+        "FULL": 2,
+        "PARTIAL": 0,
+        "ZERO": 0,
+        "case_count": 2,
+        "patterns": 8,
+        "retained": 8
+      }
+    },
+    "system": {
+      "boutique": {
+        "FULL": 242,
+        "PARTIAL": 70,
+        "ZERO": 146,
+        "case_count": 458,
+        "patterns": 2093,
+        "retained": 1853
+      },
+      "trainticket": {
+        "FULL": 3,
+        "PARTIAL": 8,
+        "ZERO": 164,
+        "case_count": 175,
+        "patterns": 61,
+        "retained": 36
+      }
+    }
+  },
+  "experiment": "03F.1",
+  "gpu_used": false,
+  "interpretation": "process-label coverage is a proxy; category differences are not treated as diagnosis insufficiency when packages contain source evidence",
+  "model_loaded": false,
+  "model_trained": false,
+  "provider_called": false,
+  "selected_representation": "R2_DETERMINISTIC_PATH_UNION",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "test_model_facing": false,
+  "version": "cloud-opsbench-03f1-evidence-integrity-v1"
+}

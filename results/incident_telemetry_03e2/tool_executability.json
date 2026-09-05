@@ -1,0 +1,96 @@
+{
+  "advertised_tool_count": 11,
+  "advertised_tools_have_deterministic_executor": true,
+  "corrected_after_initial_contract_audit": true,
+  "experiment": "03E.2",
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "model_training": false,
+  "no_fake_observations": true,
+  "provider_called": false,
+  "removal_reason": "all 84 V1 replay failures were GetRecentLogs {}; raw logs do not define a faithful empty-argument replay",
+  "removed_v1_tool": "GetRecentLogs",
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "tool_schema_fingerprint": "94e39913ddb817685381133c7c3074d427dd6cc02d0fcacd7678e6e5c94e5a48",
+  "tools": {
+    "CheckNodeServiceStatus": {
+      "advertised": true,
+      "case_local_cache_cases": 57,
+      "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+      "environment_contract_failure_allowed": false
+    },
+    "CheckServiceConnectivity": {
+      "advertised": true,
+      "case_local_cache_cases": 57,
+      "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+      "environment_contract_failure_allowed": false
+    },
+    "DescribeResource": {
+      "advertised": true,
+      "case_local_cache_cases": 57,
+      "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+      "environment_contract_failure_allowed": false
+    },
+    "GetAlerts": {
+      "advertised": true,
+      "case_local_cache_cases": 57,
+      "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+      "environment_contract_failure_allowed": false
+    },
+    "GetAppYAML": {
+      "advertised": true,
+      "case_local_cache_cases": 57,
+      "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+      "environment_contract_failure_allowed": false
+    },
+    "GetClusterConfiguration": {
+      "advertised": true,
+      "case_local_cache_cases": 57,
+      "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+      "environment_contract_failure_allowed": false
+    },
+    "GetErrorLogs": {
+      "advertised": true,
+      "case_local_cache_cases": 57,
+      "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+      "environment_contract_failure_allowed": false
+    },
+    "GetRecentLogs": {
+      "advertised": false,
+      "case_local_cache_cases": 0,
+      "deterministic_semantics": "disabled: V1 empty-argument form had no executable source",
+      "environment_contract_failure_allowed": false
+    },
+    "GetResources": {
+      "advertised": true,
+      "case_local_cache_cases": 57,
+      "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+      "environment_contract_failure_allowed": false
+    },
+    "GetServiceDependencies": {
+      "advertised": true,
+      "case_local_cache_cases": 57,
+      "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+      "environment_contract_failure_allowed": false
+    },
+    "GetSourceCode": {
+      "advertised": true,
+      "case_local_cache_cases": 0,
+      "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+      "environment_contract_failure_allowed": false
+    },
+    "ListCodeFiles": {
+      "advertised": true,
+      "case_local_cache_cases": 48,
+      "deterministic_semantics": "case-cache exact/partial match with stable lexical default; explicit unavailable result when optional source is absent",
+      "environment_contract_failure_allowed": false
+    }
+  },
+  "validation_screen_count": 57,
+  "validation_selection_model_facing": false,
+  "version": "03e2-tool-executability-v1"
+}

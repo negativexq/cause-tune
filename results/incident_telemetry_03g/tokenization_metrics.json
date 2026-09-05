@@ -1,0 +1,82 @@
+{
+  "TASK_A": {
+    "count": 57,
+    "max": 13321,
+    "median": 2784,
+    "min": 716,
+    "p75": 4698,
+    "p90": 8404,
+    "p95": 9874,
+    "p99": 11949
+  },
+  "TASK_B": {
+    "count": 57,
+    "max": 13381,
+    "median": 2844,
+    "min": 721,
+    "p75": 4705,
+    "p90": 8427,
+    "p95": 9934,
+    "p99": 12009
+  },
+  "TASK_C_STAGE1": {
+    "count": 57,
+    "max": 13320,
+    "median": 2783,
+    "min": 715,
+    "p75": 4697,
+    "p90": 8403,
+    "p95": 9873,
+    "p99": 11948
+  },
+  "TASK_C_STAGE2": {
+    "count": 57,
+    "max": 13339,
+    "median": 2855,
+    "min": 733,
+    "p75": 4716,
+    "p90": 8438,
+    "p95": 9908,
+    "p99": 11983
+  },
+  "TASK_D": {
+    "count": 57,
+    "max": 13272,
+    "median": 2735,
+    "min": 667,
+    "p75": 4649,
+    "p90": 8355,
+    "p95": 9825,
+    "p99": 11900
+  },
+  "context_limit_tokens": 262144,
+  "context_overflow_count": 0,
+  "decomposition_fingerprint": "249254d440008c3d674171aa023b27efa83a89f598a021afac3c28655533dda9",
+  "evidence_representation_fingerprint": "b676b10a17d690f3796e237e942c340f2722a1aa5bcd97af1b43de1c0e972215",
+  "experiment": "03G",
+  "lora": false,
+  "measurement": "exact local tokenizer apply_chat_template; no truncation; Task C Stage 1 is Task A persisted prediction",
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_loaded": false,
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "oom_count": 0,
+  "package_input_tokens": {
+    "count": 57,
+    "max": 13203,
+    "median": 2664,
+    "min": 597,
+    "p75": 4580,
+    "p90": 8286,
+    "p95": 9756,
+    "p99": 11831
+  },
+  "provider_called": false,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "tokenizer_loaded": true,
+  "training": false,
+  "truncation_count": 0,
+  "validation_selection_model_facing": false,
+  "version": "cloud-opsbench-03g-decomposed-2b-screen-v1"
+}

@@ -113,25 +113,36 @@ primary SFT, and froze representation fingerprint
 source split remains unchanged. See
 `docs/experiment-03/03d1-tool-replay-integrity-gate.md`.
 
-### 03E — Untouched base-model capability-gap screening — complete / no credible student yet
+### 03E / 03E.1 / 03E.2 — Full-agent capability screening and contract audit — complete
 
-03E screened the pinned post-trained Qwen3.5 0.8B, 2B, and 4B candidates on a
-frozen 57-case `VALIDATION_SCREEN` covering all 57 native fault types. No model
-was trained and TEST remained sealed. All candidates scored 0/57 joint
-diagnosis under both closed-loop and oracle-evidence diagnosis; the 2B model
-had the strongest balanced protocol/footprint profile but no diagnosis
-learnability signal. The result is a deliberate **NO_CREDIBLE_STUDENT_YET**
-recommendation, so QLoRA specialization must not start automatically. See
-`docs/experiment-03/03e-base-capability-gap-screening.md`.
+03E screened the pinned post-trained Qwen3.5 candidates; 03E.1 audited the
+evaluation semantics; and 03E.2 reran only Qwen3.5-2B under the corrected
+contract. The final conclusion is **BASE_TOO_WEAK** for full joint agentic
+RCA and **DO_NOT_START_QLORA**. See the 03E records, including
+`docs/experiment-03/03e2-v2-capability-rescreen.md`.
+
+### 03F — Hierarchical RCA task decomposition — complete
+
+03F freezes four bounded diagnosis subtasks over target-blind executable
+evidence: category classification, oracle-category root-cause discrimination,
+self-predicted hierarchical RCA, and secondary fault-object resolution. No
+model was loaded or trained. The purpose is to isolate a learnable compact
+model diagnosis capability before any tool-policy specialization. See
+`docs/experiment-03/03f-hierarchical-rca-task-decomposition.md`.
 
 ### Planned sequence
 
-- 03F — QLoRA specialization
-- 03G — Controlled data/training ablations
-- 03H — Protected in-domain evaluation plus external cross-dataset generalization
+- 03G — Decomposed untouched-2B capability screening
+- 03H — QLoRA specialization of Task B — future / candidate selected, not started
+- 03I — Tool-policy specialization — future
+- 03J — Recomposed closed-loop evaluation — future
 
-03E completed the capability-gap screen but did not select a credible student;
-03F remains gated pending contract/model compatibility review.
+03F freezes the decomposition and 03F.1 freezes the target-blind R2 evidence
+representation. 03G applied the pre-registered qualitative selection policy
+without changing task definitions after inference began. Untouched 2B showed
+a bounded oracle-category root-cause signal, so Task B is a future 03H
+candidate; no QLoRA has been started. RCAEval remains reserved for later
+external generalization.
 
 ## Focused optimization — later
 
