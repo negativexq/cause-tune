@@ -1,0 +1,52 @@
+{
+  "experiment": "03E",
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "implementation_version": "cloud-opsbench-03e-screening-v1",
+  "model_training": false,
+  "peak_allocated_bytes": 9184317952,
+  "peak_reserved_bytes": 18683527168,
+  "probe_policy": "TRAIN-derived token-length distribution; synthetic EOS-filled contexts; no quality tuning",
+  "probes": [
+    {
+      "actual_input_tokens": 3134,
+      "output_tokens": 1,
+      "peak_allocated_bytes": 4155419648,
+      "peak_reserved_bytes": 13138657280,
+      "requested_tokens": 3134,
+      "seconds": 2.2013915220013587,
+      "status": "pass",
+      "tokens_per_second": 0.45425813173427076
+    },
+    {
+      "actual_input_tokens": 9658,
+      "output_tokens": 1,
+      "peak_allocated_bytes": 5734060032,
+      "peak_reserved_bytes": 13138657280,
+      "requested_tokens": 9658,
+      "seconds": 224.47138730900042,
+      "status": "pass",
+      "tokens_per_second": 0.004454910766080983
+    },
+    {
+      "actual_input_tokens": 23911,
+      "output_tokens": 1,
+      "peak_allocated_bytes": 9184317952,
+      "peak_reserved_bytes": 18683527168,
+      "requested_tokens": 23911,
+      "seconds": 968.2129772820044,
+      "status": "pass",
+      "tokens_per_second": 0.0010328306100660094
+    }
+  ],
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "software": {
+    "bitsandbytes": "0.50.2",
+    "torch": "2.14.0+cu130",
+    "transformers": "5.16.1"
+  },
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false
+}

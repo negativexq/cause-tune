@@ -1,0 +1,16 @@
+{
+  "eligible_oracle_cases": 36,
+  "experiment": "03E",
+  "implementation_version": "cloud-opsbench-03e-screening-v1",
+  "model_training": false,
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "screen_count": 57,
+  "selection_count": 66,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_cases_loaded_for_scan_only": 121,
+  "test_model_facing": false,
+  "test_model_predictions": false
+}

@@ -1,0 +1,74 @@
+{
+  "experiment": "03E",
+  "implementation_version": "cloud-opsbench-03e-screening-v1",
+  "measurement": "actual tokenizer apply_chat_template with enable_thinking=False; TEST excluded",
+  "model_training": false,
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "screen_context_recomputed_count": 57,
+  "screen_final_context_tokens": {
+    "count": 57,
+    "max": 35037,
+    "median": 3999,
+    "min": 1938,
+    "p75": 6474,
+    "p90": 10754,
+    "p95": 22506,
+    "p99": 29487
+  },
+  "screen_initial_and_action_tokens": {
+    "count": 340,
+    "max": 35041,
+    "median": 2468,
+    "min": 1016,
+    "p75": 3875,
+    "p90": 6823,
+    "p95": 10564,
+    "p99": 22742
+  },
+  "screen_native_context_overflow": 0,
+  "screen_observation_tokens": {
+    "count": 283,
+    "max": 15207,
+    "median": 505,
+    "min": 0,
+    "p75": 928,
+    "p90": 2057,
+    "p95": 3409,
+    "p99": 9820
+  },
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "threshold_counts": {
+    "screen_final_context_tokens": {
+      "over_16384_tokens": 4,
+      "over_32768_tokens": 1,
+      "over_4096_tokens": 26,
+      "over_65536_tokens": 0,
+      "over_8192_tokens": 11
+    },
+    "train_final_context_tokens": {
+      "over_16384_tokens": 4,
+      "over_32768_tokens": 0,
+      "over_4096_tokens": 87,
+      "over_65536_tokens": 0,
+      "over_8192_tokens": 18
+    }
+  },
+  "tokenizer_hash": "ffb7a28b27dabcc333662fd3e0b0005d9e79a1c22e31453ab5a3017fbd5f25c0",
+  "tokenizer_measurement_shared_across_candidates": true,
+  "train_context_recomputed_count": 292,
+  "train_final_context_tokens": {
+    "count": 292,
+    "max": 23911,
+    "median": 3134,
+    "min": 1931,
+    "p75": 4293,
+    "p90": 7446,
+    "p95": 9658,
+    "p99": 20772
+  },
+  "train_native_context_overflow": 0
+}

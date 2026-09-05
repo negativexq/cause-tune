@@ -1,0 +1,41 @@
+{
+  "evidence": {
+    "Qwen/Qwen3.5-0.8B": {
+      "closed_loop_joint_exact": 0.0,
+      "closed_loop_schema_valid_rate": 0.0,
+      "max_probe_peak_allocated_bytes": 3546174976,
+      "oracle_joint_exact": 0.0,
+      "oracle_schema_valid_rate": 0.5789473684210527,
+      "tool_name_exact_rate": 0.26875
+    },
+    "Qwen/Qwen3.5-2B": {
+      "closed_loop_joint_exact": 0.0,
+      "closed_loop_schema_valid_rate": 0.5263157894736842,
+      "max_probe_peak_allocated_bytes": 4777596416,
+      "oracle_joint_exact": 0.0,
+      "oracle_schema_valid_rate": 1.0,
+      "tool_name_exact_rate": 0.1875
+    },
+    "Qwen/Qwen3.5-4B": {
+      "closed_loop_joint_exact": 0.0,
+      "closed_loop_schema_valid_rate": 0.0,
+      "max_probe_peak_allocated_bytes": 9184317952,
+      "oracle_joint_exact": 0.0,
+      "oracle_schema_valid_rate": 0.12280701754385964,
+      "tool_name_exact_rate": 0.40625
+    }
+  },
+  "experiment": "03E",
+  "implementation_version": "cloud-opsbench-03e-screening-v1",
+  "model_training": false,
+  "provider_called": false,
+  "rationale": "All three untouched candidates scored 0/57 joint diagnosis under ORACLE_EVIDENCE_DIAGNOSIS and 0/57 under CLOSED_LOOP_AGENT. Qwen3.5-2B has the strongest protocol/schema combination, but no diagnosis learnability signal; Qwen3.5-4B has higher next-action exactness but is not a credible primary student because its oracle diagnosis remains zero and its longest probe exceeds the 8 GiB allocated-memory envelope.",
+  "recommendation": "NO_CREDIBLE_STUDENT_YET",
+  "recommendation_for_03f": "DO_NOT_START_QLORA; review target/prompt/tool compatibility and obtain a credible oracle diagnosis signal before specialization.",
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "selection_rule": "smallest model must show protocol viability, oracle learnability signal, closed-loop headroom, local feasibility, and a credible larger-model gradient",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false
+}

@@ -1,0 +1,116 @@
+{
+  "chat_template_hash": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+  "config_hash": "ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4",
+  "experiment": "03E",
+  "file_hashes": {
+    "LICENSE": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+    "chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+    "config.json": "ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4",
+    "model.safetensors.index.json": "aca8afed9da75b0f050b408d270766fd77627f1af401e240f61c3b47d0db02f9",
+    "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+    "tokenizer_config.json": "49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c"
+  },
+  "implementation_version": "cloud-opsbench-03e-screening-v1",
+  "license": "Apache-2.0",
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_load_allocated_bytes": 1949902336,
+  "model_load_delta_bytes": 1916346880,
+  "model_training": false,
+  "model_type": "qwen3_5",
+  "native_context_length": 262144,
+  "parameter_count": 2274069824,
+  "parameter_count_from_index": null,
+  "parameter_count_source": "safetensors header shapes",
+  "provider_called": false,
+  "quantization": {
+    "compute_dtype": "bfloat16",
+    "double_quant": true,
+    "load_in_4bit": true,
+    "quant_type": "nf4"
+  },
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "selection_candidate": true,
+  "snapshot_path": "/home/ofk/.cache/huggingface/hub/models--Qwen--Qwen3.5-2B/snapshots/15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "tokenization": {
+    "experiment": "03E",
+    "implementation_version": "cloud-opsbench-03e-screening-v1",
+    "measurement": "actual tokenizer apply_chat_template with enable_thinking=False; TEST excluded",
+    "model_training": false,
+    "provider_called": false,
+    "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+    "screen_context_recomputed_count": 57,
+    "screen_final_context_tokens": {
+      "count": 57,
+      "max": 35037,
+      "median": 3999,
+      "min": 1938,
+      "p75": 6474,
+      "p90": 10754,
+      "p95": 22506,
+      "p99": 29487
+    },
+    "screen_initial_and_action_tokens": {
+      "count": 340,
+      "max": 35041,
+      "median": 2468,
+      "min": 1016,
+      "p75": 3875,
+      "p90": 6823,
+      "p95": 10564,
+      "p99": 22742
+    },
+    "screen_native_context_overflow": 0,
+    "screen_observation_tokens": {
+      "count": 283,
+      "max": 15207,
+      "median": 505,
+      "min": 0,
+      "p75": 928,
+      "p90": 2057,
+      "p95": 3409,
+      "p99": 9820
+    },
+    "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+    "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+    "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+    "test_model_facing": false,
+    "threshold_counts": {
+      "screen_final_context_tokens": {
+        "over_16384_tokens": 4,
+        "over_32768_tokens": 1,
+        "over_4096_tokens": 26,
+        "over_65536_tokens": 0,
+        "over_8192_tokens": 11
+      },
+      "train_final_context_tokens": {
+        "over_16384_tokens": 4,
+        "over_32768_tokens": 0,
+        "over_4096_tokens": 87,
+        "over_65536_tokens": 0,
+        "over_8192_tokens": 18
+      }
+    },
+    "tokenizer_hash": "ffb7a28b27dabcc333662fd3e0b0005d9e79a1c22e31453ab5a3017fbd5f25c0",
+    "tokenizer_measurement_shared_across_candidates": true,
+    "train_context_recomputed_count": 292,
+    "train_final_context_tokens": {
+      "count": 292,
+      "max": 23911,
+      "median": 3134,
+      "min": 1931,
+      "p75": 4293,
+      "p90": 7446,
+      "p95": 9658,
+      "p99": 20772
+    },
+    "train_native_context_overflow": 0
+  },
+  "tokenizer_hash": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+  "tokenizer_vocab_size": 248077,
+  "transformers_config_version": "4.57.0.dev0"
+}

@@ -1,0 +1,27 @@
+{
+  "compute_capability": "12.0",
+  "driver": "581.80",
+  "experiment": "03E",
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "implementation_version": "cloud-opsbench-03e-screening-v1",
+  "model_training": false,
+  "note": "4B longest context probe completed technically but exceeded the 8 GiB physical allocated-memory envelope; reserved-memory accounting is reported separately in per-candidate artifacts.",
+  "provider_called": false,
+  "quantization": {
+    "compute_dtype": "bfloat16",
+    "double_quant": true,
+    "load_in_4bit": true,
+    "quant_type": "nf4"
+  },
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "software": {
+    "bitsandbytes": "0.50.2",
+    "torch": "2.14.0+cu130",
+    "transformers": "5.16.1"
+  },
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "vram_mib": 8151
+}

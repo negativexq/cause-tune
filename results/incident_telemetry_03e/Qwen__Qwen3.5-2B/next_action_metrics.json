@@ -1,0 +1,45 @@
+{
+  "argument_schema_valid_rate": 1.0,
+  "by_tool": {
+    "CheckNodeServiceStatus": {
+      "count": 1,
+      "exact_rate": 0.0
+    },
+    "CheckServiceConnectivity": {
+      "count": 4,
+      "exact_rate": 0.0
+    },
+    "DescribeResource": {
+      "count": 35,
+      "exact_rate": 0.0
+    },
+    "GetAppYAML": {
+      "count": 25,
+      "exact_rate": 0.24
+    },
+    "GetErrorLogs": {
+      "count": 13,
+      "exact_rate": 0.0
+    },
+    "GetResources": {
+      "count": 81,
+      "exact_rate": 0.2962962962962963
+    },
+    "GetServiceDependencies": {
+      "count": 1,
+      "exact_rate": 0.0
+    }
+  },
+  "count": 160,
+  "experiment": "03E",
+  "implementation_version": "cloud-opsbench-03e-screening-v1",
+  "model_training": false,
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "tool_name_exact_rate": 0.1875,
+  "tool_name_valid_rate": 1.0
+}

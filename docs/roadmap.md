@@ -113,15 +113,25 @@ primary SFT, and froze representation fingerprint
 source split remains unchanged. See
 `docs/experiment-03/03d1-tool-replay-integrity-gate.md`.
 
+### 03E — Untouched base-model capability-gap screening — complete / no credible student yet
+
+03E screened the pinned post-trained Qwen3.5 0.8B, 2B, and 4B candidates on a
+frozen 57-case `VALIDATION_SCREEN` covering all 57 native fault types. No model
+was trained and TEST remained sealed. All candidates scored 0/57 joint
+diagnosis under both closed-loop and oracle-evidence diagnosis; the 2B model
+had the strongest balanced protocol/footprint profile but no diagnosis
+learnability signal. The result is a deliberate **NO_CREDIBLE_STUDENT_YET**
+recommendation, so QLoRA specialization must not start automatically. See
+`docs/experiment-03/03e-base-capability-gap-screening.md`.
+
 ### Planned sequence
 
-- 03E — Untouched base-model capability-gap screening
 - 03F — QLoRA specialization
 - 03G — Controlled data/training ablations
 - 03H — Protected in-domain evaluation plus external cross-dataset generalization
 
-Model selection belongs to the capability-gap phase. No model is selected for
-Experiment 03 yet; selection belongs to 03E after the dataset is frozen.
+03E completed the capability-gap screen but did not select a credible student;
+03F remains gated pending contract/model compatibility review.
 
 ## Focused optimization — later
 

@@ -1,0 +1,21 @@
+{
+  "candidates": {
+    "Qwen__Qwen3.5-0.8B": {
+      "closed_loop_recovered": 0,
+      "oracle_recovered": 33
+    },
+    "Qwen__Qwen3.5-2B": {
+      "closed_loop_recovered": 30,
+      "oracle_recovered": 57
+    },
+    "Qwen__Qwen3.5-4B": {
+      "closed_loop_recovered": 0,
+      "oracle_recovered": 7
+    }
+  },
+  "experiment": "03E",
+  "model_execution": false,
+  "provider_called": false,
+  "raw_outputs_preserved": true,
+  "test_model_facing": false
+}

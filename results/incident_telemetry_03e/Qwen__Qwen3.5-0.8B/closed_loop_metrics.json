@@ -1,0 +1,721 @@
+{
+  "by_fault_category": {
+    "code_artificial_delay": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_busy_loop": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_excessive_file_reads": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_excessive_file_writes": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_memory_leak": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_missing_parameter": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_wrong_argument_order": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_wrong_return": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "container_memory_limit_too_low": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "containerd_unavailable": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "cpu_capacity_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "db_connection_exhaustion": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "db_readonly_mode": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "deployment_zero_replicas": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "gateway_misrouted": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "image_registry_dns_failure": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "incorrect_image_reference": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "kube_proxy_unavailable": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "kube_scheduler_unavailable": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "kubelet_unavailable": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "liveness_probe_incorrect_port": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "liveness_probe_incorrect_protocol": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "liveness_probe_incorrect_timing": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "memory_capacity_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "missing_image_pull_secret": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "missing_secret_binding": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "missing_service_account": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "mysql_invalid_credentials": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "mysql_invalid_port": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_cpu_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_memory_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_pod_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_service_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_storage_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_affinity_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_cordon_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_network_delay": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_network_packet_loss": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_selector_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pod_anti_affinity_conflict": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pod_cpu_overload": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pod_network_delay": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pv_binding_occupied": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pvc_access_mode_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pvc_capacity_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pvc_selector_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pvc_storage_class_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "readiness_probe_incorrect_port": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "readiness_probe_incorrect_protocol": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_dns_resolution_failure": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_env_var_address_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_port_mapping_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_protocol_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_selector_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_sidecar_port_conflict": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "taint_toleration_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "volume_mount_permission_denied": {
+      "count": 1,
+      "joint_exact": 0.0
+    }
+  },
+  "by_fault_type": {
+    "code_artificial_delay": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_busy_loop": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_excessive_file_reads": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_excessive_file_writes": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_memory_leak": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_missing_parameter": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_wrong_argument_order": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_wrong_return": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "container_memory_limit_too_low": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "containerd_unavailable": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "cpu_capacity_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "db_connection_exhaustion": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "db_readonly_mode": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "deployment_zero_replicas": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "gateway_misrouted": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "image_registry_dns_failure": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "incorrect_image_reference": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "kube_proxy_unavailable": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "kube_scheduler_unavailable": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "kubelet_unavailable": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "liveness_probe_incorrect_port": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "liveness_probe_incorrect_protocol": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "liveness_probe_incorrect_timing": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "memory_capacity_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "missing_image_pull_secret": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "missing_secret_binding": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "missing_service_account": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "mysql_invalid_credentials": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "mysql_invalid_port": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_cpu_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_memory_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_pod_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_service_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_storage_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_affinity_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_cordon_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_network_delay": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_network_packet_loss": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_selector_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pod_anti_affinity_conflict": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pod_cpu_overload": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pod_network_delay": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pv_binding_occupied": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pvc_access_mode_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pvc_capacity_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pvc_selector_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pvc_storage_class_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "readiness_probe_incorrect_port": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "readiness_probe_incorrect_protocol": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_dns_resolution_failure": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_env_var_address_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_port_mapping_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_protocol_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_selector_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_sidecar_port_conflict": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "taint_toleration_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "volume_mount_permission_denied": {
+      "count": 1,
+      "joint_exact": 0.0
+    }
+  },
+  "by_system": {
+    "code_artificial_delay": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_busy_loop": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_excessive_file_reads": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_excessive_file_writes": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_memory_leak": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_missing_parameter": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_wrong_argument_order": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "code_wrong_return": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "container_memory_limit_too_low": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "containerd_unavailable": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "cpu_capacity_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "db_connection_exhaustion": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "db_readonly_mode": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "deployment_zero_replicas": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "gateway_misrouted": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "image_registry_dns_failure": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "incorrect_image_reference": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "kube_proxy_unavailable": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "kube_scheduler_unavailable": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "kubelet_unavailable": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "liveness_probe_incorrect_port": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "liveness_probe_incorrect_protocol": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "liveness_probe_incorrect_timing": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "memory_capacity_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "missing_image_pull_secret": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "missing_secret_binding": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "missing_service_account": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "mysql_invalid_credentials": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "mysql_invalid_port": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_cpu_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_memory_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_pod_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_service_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "namespace_storage_quota_exceeded": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_affinity_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_cordon_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_network_delay": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_network_packet_loss": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "node_selector_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pod_anti_affinity_conflict": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pod_cpu_overload": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pod_network_delay": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pv_binding_occupied": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pvc_access_mode_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pvc_capacity_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pvc_selector_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "pvc_storage_class_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "readiness_probe_incorrect_port": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "readiness_probe_incorrect_protocol": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_dns_resolution_failure": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_env_var_address_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_port_mapping_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_protocol_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_selector_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "service_sidecar_port_conflict": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "taint_toleration_mismatch": {
+      "count": 1,
+      "joint_exact": 0.0
+    },
+    "volume_mount_permission_denied": {
+      "count": 1,
+      "joint_exact": 0.0
+    }
+  },
+  "count": 57,
+  "experiment": "03E",
+  "failure_categories": {
+    "premature_diagnosis": 57
+  },
+  "fault_object_exact": 0.0,
+  "implementation_version": "cloud-opsbench-03e-screening-v1",
+  "invalid_tool_call_rate": 0.0,
+  "joint_exact": 0.0,
+  "loop_rate": 0.0,
+  "max_step_exhaustion_rate": 0.0,
+  "mean_tool_steps": 0.0,
+  "model_training": false,
+  "native_fault_category_exact": 0.0,
+  "native_fault_type_exact": 0.0,
+  "parser_recovery": {
+    "control_token_cleanup": true,
+    "raw_outputs_preserved": true,
+    "recovered_predictions": 0
+  },
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "schema_valid_count": 0,
+  "schema_valid_rate": 0.0,
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "valid_tool_call_rate": 0.0
+}

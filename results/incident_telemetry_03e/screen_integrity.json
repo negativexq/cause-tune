@@ -1,0 +1,31 @@
+{
+  "experiment": "03E",
+  "implementation_version": "cloud-opsbench-03e-screening-v1",
+  "model_training": false,
+  "per_candidate": {
+    "Qwen/Qwen3.5-0.8B": {
+      "closed_loop_records": 57,
+      "oracle_records": 57,
+      "teacher_records": 160
+    },
+    "Qwen/Qwen3.5-2B": {
+      "closed_loop_records": 57,
+      "oracle_records": 57,
+      "teacher_records": 160
+    },
+    "Qwen/Qwen3.5-4B": {
+      "closed_loop_records": 57,
+      "oracle_records": 57,
+      "teacher_records": 160
+    }
+  },
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "test_model_facing": false,
+  "test_model_predictions": 0,
+  "validation_screen_cases": 57,
+  "validation_selection_cases": 66
+}

@@ -250,7 +250,8 @@ counterfactual pairs, grouped pre-render split manifests, and fail-closed
 audits. Its 52-scenario CPU-safe reference corpus is a fixture for contract
 validation—not training data, a benchmark, or model evidence. See the
 [03B engine record](docs/experiment-03/03b-causal-scenario-engine.md).
-Model selection, training, and evaluation remain future 03E+ milestones.
+03E is the validation-only model screen; training and protected evaluation
+remain future 03F+ milestones.
 
 ### Renderer Prototype R0 — supporting infrastructure
 
@@ -283,15 +284,21 @@ partition. Full raw-snapshot flattening is rejected as the primary input, and
 no model has been selected, loaded, trained, or evaluated in 03D. See the
 [03D training-contract record](docs/experiment-03/03d-training-contract-and-split-freeze.md).
 
-Experiment 03E is the next milestone: untouched base-model capability-gap
-screening using TRAIN/VALIDATION only. The renderer prototype remains
-supporting-only, and RCAEval remains reserved for later external
-generalization.
-
 The 03D.1 integrity gate found 6,384 exact, 633 canonical-equivalent, and 214
 source-derived replay observations; 160 golden-only observations are retained
 for auxiliary analysis only. The protected split is unchanged, and no model
 has been selected or evaluated.
+
+### Experiment 03E — Untouched base-model capability-gap screening
+
+**Status: COMPLETE — no credible student yet.** Three pinned post-trained
+Qwen3.5 candidates (0.8B, 2B, and 4B) were screened on a frozen 57-case
+`VALIDATION_SCREEN` covering all 57 native fault types. All candidates scored
+0/57 joint diagnosis under both closed-loop and oracle-evidence diagnosis, so
+03F QLoRA specialization is gated pending contract/model compatibility review.
+No TEST predictions were produced, no model was trained, and RCAEval remains
+reserved for later external generalization. See the
+[03E screening record](docs/experiment-03/03e-base-capability-gap-screening.md).
 
 ## What CauseTune measures
 

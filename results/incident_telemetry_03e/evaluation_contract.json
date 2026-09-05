@@ -1,0 +1,195 @@
+{
+  "experiment": "03E",
+  "generation": {
+    "do_sample": false,
+    "max_agent_steps": 20,
+    "max_new_tokens": 256,
+    "output_repair": false,
+    "retry_wrong_diagnosis": false,
+    "temperature": null,
+    "top_p": null,
+    "version": "cloud-opsbench-03e-deterministic-generation-v1"
+  },
+  "implementation_version": "cloud-opsbench-03e-screening-v1",
+  "model_training": false,
+  "primary_mode": "CLOSED_LOOP_AGENT",
+  "prompt": {
+    "few_shot": false,
+    "final_schema": [
+      "native_fault_type",
+      "native_fault_category",
+      "fault_object"
+    ],
+    "system": "You are an offline production-incident diagnostic agent. Use only the allowed diagnostic tools and their returned observations. Do not invent tool names, arguments, observations, labels, or evidence. You may call one tool at a time, or return the final diagnosis.\n\nWhen calling a tool, use the native function-call format exactly.\nWhen finalizing, return JSON only with exactly these keys:\n{\"native_fault_type\": string, \"native_fault_category\": string, \"fault_object\": string}\n\nDo not explain your reasoning. Do not output hidden reasoning. The incident request and tool observations are the complete model-visible input; benchmark metadata, process labels, golden answers, and source paths are unavailable.\n",
+    "tools": [
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetResources",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "DescribeResource",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetAppYAML",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetServiceDependencies",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "CheckServiceConnectivity",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetAlerts",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetRecentLogs",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetErrorLogs",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "ListCodeFiles",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetSourceCode",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "GetClusterConfiguration",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "description": "Inspect one immutable incident artifact; never invent observations.",
+          "name": "CheckNodeServiceStatus",
+          "parameters": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          }
+        },
+        "type": "function"
+      }
+    ]
+  },
+  "prompt_fingerprint": "ece9e9db78d499f9fec876bdcdbbd80f949e48e34be33cd5b71d68efb284ffbf",
+  "provider_called": false,
+  "representation_fingerprint": "f77e8133ef216632a61d9b6200bda1a269967336fe6b2ae4972d8685005a5fbf",
+  "secondary_modes": [
+    "ORACLE_EVIDENCE_DIAGNOSIS",
+    "TEACHER_FORCED_NEXT_ACTION",
+    "STATIC_EVIDENCE_DIAGNOSIS"
+  ],
+  "source_revision": "03c415e5709297432282fbbfd499f1bca0f8c347",
+  "source_root": "/home/ofk/projects/external-data/Cloud-OpsBench",
+  "split_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "split_manifest_fingerprint": "0ed9845d566e661ed0772fe82617cb1676cdca266f27f5badeed1f49ee5f5c76",
+  "targets": [
+    "native_fault_type",
+    "native_fault_category",
+    "fault_object"
+  ],
+  "test_model_facing": false,
+  "test_policy": "TEST is sealed and model-facing content is forbidden",
+  "thinking": {
+    "contract": "explicit enable_thinking=False",
+    "enabled": false
+  },
+  "version": "cloud-opsbench-03e-screening-v1"
+}
