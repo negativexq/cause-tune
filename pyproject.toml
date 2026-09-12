@@ -14,6 +14,9 @@ dependencies = [
   "peft>=0.10",
 ]
 
+[project.scripts]
+causetune = "causetune.cli:main"
+
 [project.optional-dependencies]
 dev = ["pytest>=8"]
 gpu = [
