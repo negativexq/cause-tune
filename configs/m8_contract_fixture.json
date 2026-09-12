@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "experiment_id": "m8-fixture",
+  "model": {
+    "model_id": "Qwen/Qwen3-4B",
+    "revision": "commit-abc123"
+  },
+  "data": {
+    "train": "data/m8-train.jsonl",
+    "validation": "data/m8-validation.jsonl",
+    "benchmark": "data/m8-benchmark.jsonl"
+  },
+  "training": {
+    "seed": 42
+  },
+  "evaluation": {
+    "contract_version": "m8-evaluation-v1",
+    "scorer_version": "m8-scorer-v1"
+  }
+}
