@@ -13,6 +13,7 @@ import json
 import re
 from dataclasses import dataclass, field
 from pathlib import PurePath
+from pathlib import Path
 from typing import Any, Mapping
 
 
@@ -346,7 +347,13 @@ class ExperimentContract:
         return result
 
     def canonical_json(self) -> str:
-        return json.dumps(self.to_dict(), ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        return json.dumps(
+            self.to_dict(),
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+            allow_nan=False,
+        )
 
     def resolved_json(self) -> str:
         return self.canonical_json() + "\n"
@@ -356,6 +363,13 @@ class ExperimentContract:
 
     def field_classification(self) -> dict[str, str]:
         return field_classification()
+
+    def write_resolved(self, path: str | Path) -> None:
+        """Persist the stable, default-expanded contract representation."""
+
+        destination = Path(path)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_text(self.resolved_json(), encoding="utf-8")
 
 
 def _validate_data_isolation(data: Mapping[str, DataRole]) -> None:
@@ -478,6 +492,81 @@ def experiment_contract_from_dict(raw: Mapping[str, Any]) -> ExperimentContract:
         output=OutputPolicy(**output),
         metadata={str(key): str(value) for key, value in metadata.items()},
     )
+
+
+def resolve_experiment_config(raw: Mapping[str, Any]) -> ExperimentContract:
+    """Expand defaults, then parse the resulting canonical contract.
+
+    The resolver accepts the two ergonomic shorthands used in planning notes:
+    top-level ``model_id`` and ``seed``.  They are normalized into the
+    canonical ``model`` and ``training`` sections before strict parsing.  A
+    resolved config is still required to identify all three data roles and a
+    pinned (or explicitly legacy-unpinned) model revision.
+    """
+
+    if not isinstance(raw, Mapping):
+        raise ExperimentContractError("configuration root must be an object")
+    source = dict(raw)
+    if "model_id" in source:
+        if "model" in source:
+            raise ExperimentContractError("model_id shorthand cannot be combined with model")
+        source["model"] = {"model_id": source.pop("model_id")}
+    if "seed" in source:
+        if "training" in source and isinstance(source["training"], Mapping) and "seed" in source["training"]:
+            raise ExperimentContractError("seed shorthand cannot be combined with training.seed")
+        training = dict(source.get("training", {}))
+        training["seed"] = source.pop("seed")
+        source["training"] = training
+
+    root = _parse_mapping(source, "config", _ROOT_KEYS)
+    if "experiment_id" not in root:
+        raise ExperimentContractError("missing experiment_id")
+    model = dict(_parse_mapping(root.get("model"), "model", _MODEL_KEYS))
+    if "model_id" not in model or "revision" not in model:
+        raise ExperimentContractError("model_id and model revision policy are required")
+    data = _parse_mapping(root.get("data"), "data", {"train", "validation", "benchmark"})
+    if set(data) != {"train", "validation", "benchmark"}:
+        raise ExperimentContractError("data must define train, validation, and benchmark roles")
+
+    training = dict(_parse_mapping(root.get("training"), "training", _TRAINING_KEYS))
+    training.setdefault("seed", None)
+    if training["seed"] is None:
+        raise ExperimentContractError("missing training.seed")
+    for key, allowed, defaults in (
+        ("quantization", _QUANTIZATION_KEYS, QuantizationPolicy().to_dict()),
+        ("lora", _LORA_KEYS, LoraPolicy().to_dict()),
+        ("optimizer", _OPTIMIZER_KEYS, OptimizerPolicy().to_dict()),
+        ("checkpoint_policy", _CHECKPOINT_KEYS, CheckpointPolicy().to_dict()),
+        ("stopping_policy", _STOPPING_KEYS, StoppingPolicy().to_dict()),
+        ("preprocessing", _PREPROCESSING_KEYS, PreprocessingPolicy(seed=training["seed"]).to_dict()),
+    ):
+        value = dict(_parse_mapping(training.get(key, {}), f"training.{key}", allowed))
+        merged = dict(defaults)
+        merged.update(value)
+        training[key] = merged
+    source["schema_version"] = root.get("schema_version", SCHEMA_VERSION)
+    source["model"] = model
+    source["training"] = training
+    source["evaluation"] = {
+        **EvaluationBoundary().to_dict(),
+        **_parse_mapping(root.get("evaluation", {}), "evaluation", _EVALUATION_KEYS),
+    }
+    output = root.get("output", {"output_dir": f"runs/{root['experiment_id']}"})
+    source["output"] = output
+    return experiment_contract_from_dict(source)
+
+
+def load_experiment_contract(path: str | Path) -> ExperimentContract:
+    """Load and resolve a JSON experiment contract."""
+
+    contract_path = Path(path)
+    try:
+        raw = json.loads(contract_path.read_text(encoding="utf-8"))
+    except FileNotFoundError as exc:
+        raise ExperimentContractError(f"configuration does not exist: {contract_path}") from exc
+    except json.JSONDecodeError as exc:
+        raise ExperimentContractError(f"invalid JSON configuration: {contract_path}: {exc}") from exc
+    return resolve_experiment_config(raw)
 
 
 def field_classification() -> dict[str, str]:
