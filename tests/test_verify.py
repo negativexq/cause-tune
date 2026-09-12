@@ -125,3 +125,12 @@ def test_missing_required_artifact_fails(tmp_path: Path) -> None:
     report = verification_report(run_dir)
     assert report["summary"]["status"] == "FAIL"
     assert verification_exit_code(report) == 4
+
+
+def test_verification_is_read_only(tmp_path: Path) -> None:
+    run_dir = _bundle(tmp_path)
+    before = sorted(path.relative_to(run_dir).as_posix() for path in run_dir.rglob("*"))
+    report = verification_report(run_dir, offline=True)
+    after = sorted(path.relative_to(run_dir).as_posix() for path in run_dir.rglob("*"))
+    assert report["summary"]["verified"] is True
+    assert before == after
