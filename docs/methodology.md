@@ -24,6 +24,25 @@ Qwen chat formatting is used for training, but loss is applied only to the assis
 
 Seeds, preprocessing, dataset fingerprints, exact training order, optimizer-window composition, and resolved configuration are persisted. Causal experiments change one training-affecting variable at a time. M6 changed only M5’s data order: deterministic shuffle with seed 42.
 
+## Experiment contract (Laboratory Hardening v1)
+
+New experiments use the versioned `ExperimentContract` as their identity, not
+as a loose collection of training hyperparameters. A contract names the model
+and revision, assigns immutable train/validation/benchmark data roles, records
+the training policy, and freezes the evaluation contract and scorer versions.
+Unknown keys, unsupported quantization or stopping combinations, missing model
+revision policy, empty LoRA targets, non-deterministic preprocessing, data-role
+collisions, and benchmark-based checkpoint selection fail before a run starts.
+
+The contract resolver expands defaults into a stable `resolved_config.json`.
+Its canonical JSON uses sorted keys and deterministic serialization, so the
+same semantic contract produces the same SHA-256 fingerprint. Every canonical
+field is classified as either `training-affecting` or `metadata-only`; a field
+cannot be present in configuration while being silently ignored by runtime
+policy. Existing E01/E02-shaped configurations remain representable through an
+explicit legacy adapter, which records their unpinned model revision rather
+than upgrading that historical provenance silently.
+
 ## Failed runs and optimizer-step analysis
 
 A falling training loss is not sufficient evidence of useful adaptation. CauseTune records validation progression, class composition per optimizer window, confusion matrices, failure transitions, throughput, and VRAM. M5’s failure showed why balanced class counts can still produce pathological sequential optimization.
