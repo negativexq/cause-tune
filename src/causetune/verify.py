@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from typing import Any, Mapping
 
-from .evidence import EvidenceError, artifact_hashes, canonical_json, load_manifest, sha256_file, sha256_path
+from .evidence import EvidenceError, artifact_hashes, experiment_fingerprint, load_manifest, make_run_id, sha256_path
 from .experiment_contract import ExperimentContractError, resolve_experiment_config
 
 
@@ -173,8 +173,10 @@ def verification_report(run_dir: str | Path, *, offline: bool = True) -> dict[st
         return _report(run_dir, offline, checks)
     checks.append(_check("manifest", PASS, "manifest schema is valid"))
 
+    resolved_contract = None
     try:
         resolved = resolve_experiment_config(_read_json(destination / "resolved_config.json"))
+        resolved_contract = resolved
         config_hash = resolved.sha256()
         if config_hash != manifest.get("config", {}).get("sha256"):
             checks.append(_check("config", FAIL, "resolved config hash mismatch"))
@@ -198,6 +200,13 @@ def verification_report(run_dir: str | Path, *, offline: bool = True) -> dict[st
                 checks.append(_check(f"data_{role}", FAIL, f"{role} fingerprint mismatch"))
             else:
                 checks.append(_check(f"data_{role}", PASS, f"{role} fingerprint matches"))
+        if resolved_contract is not None:
+            expected_run_id = make_run_id(resolved_contract, data_manifest)
+            expected_fingerprint = experiment_fingerprint(resolved_contract, data_manifest)
+            if manifest.get("run_id") != expected_run_id or manifest.get("experiment_fingerprint") != expected_fingerprint:
+                checks.append(_check("identity", FAIL, "manifest experiment identity mismatch"))
+            else:
+                checks.append(_check("identity", PASS, "manifest experiment identity matches"))
     except (KeyError, EvidenceError, OSError, TypeError) as exc:
         checks.append(_check("data", FAIL, str(exc)))
 

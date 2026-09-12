@@ -91,6 +91,16 @@ def test_benchmark_tampering_fails_without_repair(tmp_path: Path) -> None:
     assert (run_dir / "manifest.json").read_bytes() == before
 
 
+def test_manifest_identity_tampering_fails(tmp_path: Path) -> None:
+    run_dir = _bundle(tmp_path)
+    manifest_path = run_dir / "manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest["run_id"] = "tampered"
+    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+    report = verification_report(run_dir)
+    assert any(check["name"] == "identity" and check["status"] == "FAIL" for check in report["checks"])
+
+
 def test_optional_predictions_are_not_reported_as_pass(tmp_path: Path) -> None:
     run_dir = _bundle(tmp_path, predictions=False)
     report = verify(run_dir)
