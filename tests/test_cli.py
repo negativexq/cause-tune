@@ -36,15 +36,32 @@ def test_doctor_json_routes_to_application_api(tmp_path: Path, capsys) -> None:
     assert output["summary"]["ready"] is True
 
 
-def test_train_initializes_evidence_bundle_without_training(tmp_path: Path, capsys) -> None:
+def test_prepare_initializes_evidence_bundle_without_training(tmp_path: Path, capsys) -> None:
     config = _config(tmp_path)
-    code = main(["train", "--config", str(config), "--json"])
+    code = main(["prepare", "--config", str(config), "--json"])
     output = json.loads(capsys.readouterr().out)
     assert code == EXIT_SUCCESS
     assert output["execution"] == "not_started"
     run_dir = Path(output["run_dir"])
     assert (run_dir / "manifest.json").is_file()
     assert (run_dir / "resolved_config.json").is_file()
+
+
+def test_train_requires_explicit_prepare_only_until_runner_exists(tmp_path: Path, capsys) -> None:
+    config = _config(tmp_path)
+    code = main(["train", "--config", str(config)])
+    captured = capsys.readouterr()
+    assert code == 1
+    assert "no package-level training runner" in captured.err
+    assert not (tmp_path / "run").exists()
+
+
+def test_train_prepare_only_is_explicit_and_backward_compatible(tmp_path: Path, capsys) -> None:
+    config = _config(tmp_path)
+    code = main(["train", "--config", str(config), "--prepare-only", "--json"])
+    output = json.loads(capsys.readouterr().out)
+    assert code == EXIT_SUCCESS
+    assert output["execution"] == "not_started"
 
 
 def test_invalid_contract_has_contract_exit_code(tmp_path: Path, capsys) -> None:

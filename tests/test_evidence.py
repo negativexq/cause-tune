@@ -44,6 +44,40 @@ def test_run_identity_is_stable_and_paths_do_not_change_it(tmp_path: Path) -> No
     assert first["experiment_fingerprint"] == second["experiment_fingerprint"]
 
 
+def test_run_identity_uses_data_content_not_dataset_paths(tmp_path: Path) -> None:
+    first_root = tmp_path / "first"
+    second_root = tmp_path / "second"
+    first_root.mkdir()
+    second_root.mkdir()
+    for role, content in {
+        "train": '{"messages":[{"role":"assistant","content":"train"}]}\n',
+        "validation": '{"messages":[{"role":"assistant","content":"validation"}]}\n',
+        "benchmark": '{"input":"sealed"}\n',
+    }.items():
+        (first_root / f"{role}.jsonl").write_text(content, encoding="utf-8")
+        (second_root / f"{role}.jsonl").write_text(content, encoding="utf-8")
+
+    def make_contract(root: Path):
+        return resolve_experiment_config(
+            {
+                "experiment_id": "path-independent",
+                "model": {"model_id": "Qwen/Qwen3-4B", "revision": "commit-test"},
+                "data": {
+                    "train": str(root / "train.jsonl"),
+                    "validation": str(root / "validation.jsonl"),
+                    "benchmark": str(root / "benchmark.jsonl"),
+                },
+                "training": {"seed": 42},
+                "output": {"output_dir": str(root / "run")},
+            }
+        )
+
+    first = initialize_evidence(make_contract(first_root), first_root / "run")
+    second = initialize_evidence(make_contract(second_root), second_root / "run")
+    assert first["run_id"] == second["run_id"]
+    assert first["experiment_fingerprint"] == second["experiment_fingerprint"]
+
+
 def test_manifest_captures_provenance_and_finalize_hashes_artifacts(tmp_path: Path) -> None:
     contract = _contract(tmp_path)
     run_dir = tmp_path / "run"
