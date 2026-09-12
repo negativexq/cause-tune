@@ -5,7 +5,9 @@ from pathlib import Path
 
 import pytest
 
+import causetune.doctor as doctor_module
 from causetune.doctor import (
+    Check,
     DoctorFailure,
     doctor,
     doctor_exit_code,
@@ -108,6 +110,30 @@ def test_hardware_is_explicitly_opt_in(tmp_path: Path) -> None:
     assert not any(check["layer"] == "Hardware" for check in report["checks"])
     hardware_report = doctor_report(config, hardware=True)
     assert hardware_report["hardware_requested"] is True
+
+
+def test_warning_is_not_reported_as_failure(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    config = _doctor_config(tmp_path)
+    monkeypatch.setattr(
+        doctor_module,
+        "_check_hardware",
+        lambda: [Check("Hardware", "cuda", "WARN", "CUDA is not visible")],
+    )
+    report = doctor_report(config, hardware=True)
+    assert report["summary"]["status"] == "WARN"
+    assert report["summary"]["ready"] is True
+    assert doctor_exit_code(report) == 0
+
+
+def test_invalid_contract_is_reported_without_duplicate_validation(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    config = _doctor_config(tmp_path)
+    raw = json.loads(config.read_text(encoding="utf-8"))
+    raw["training"]["unknown"] = True
+    config.write_text(json.dumps(raw), encoding="utf-8")
+    report = doctor_report(config)
+    assert report["summary"]["status"] == "FAIL"
+    assert report["summary"]["counts"]["FAIL"] == 1
+    assert report["checks"][0]["layer"] == "Contract"
 
 
 def test_default_environment_snapshot_does_not_import_torch() -> None:
