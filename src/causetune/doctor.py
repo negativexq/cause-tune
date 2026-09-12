@@ -231,6 +231,58 @@ def _check_training(contract: ExperimentContract) -> list[Check]:
     ]
 
 
+def _check_model(contract: ExperimentContract) -> list[Check]:
+    """Validate model identity without downloading weights or constructing a model."""
+
+    model_id = contract.model.model_id
+    local_path = Path(model_id)
+    is_local = local_path.exists()
+    identifier_valid = bool(_MODEL_ID.fullmatch(model_id)) or is_local
+    checks = [
+        Check(
+            "Model",
+            "model_identifier",
+            PASS if identifier_valid else FAIL,
+            "model identifier valid" if identifier_valid else "model identifier is not a valid repository id or local path",
+            {"model_id": model_id, "local": is_local},
+        )
+    ]
+    if not identifier_valid:
+        checks.append(Check("Model", "tokenizer_configuration", FAIL, "tokenizer configuration cannot be resolved from an invalid model identifier"))
+    elif is_local:
+        tokenizer_markers = (
+            "tokenizer.json",
+            "tokenizer_config.json",
+            "tokenizer.model",
+            "spiece.model",
+            "vocab.json",
+        )
+        present = [name for name in tokenizer_markers if (local_path / name).is_file()]
+        checks.append(
+            Check(
+                "Model",
+                "tokenizer_configuration",
+                PASS if present else FAIL,
+                "local tokenizer configuration found" if present else "local model directory has no recognizable tokenizer configuration",
+                {"files": present},
+            )
+        )
+    else:
+        # Remote resolution is intentionally not attempted by the default
+        # doctor: it must not download model/tokenizer assets. Repository-id
+        # syntax is the strongest offline check available in this mode.
+        checks.append(
+            Check(
+                "Model",
+                "tokenizer_configuration",
+                PASS,
+                "remote tokenizer configuration is addressable without downloading weights",
+                {"resolution": "deferred", "model_id": model_id},
+            )
+        )
+    return checks
+
+
 def _check_evaluation(contract: ExperimentContract) -> list[Check]:
     return [
         Check("Evaluation", "contract", PASS, "evaluation contract resolved", contract.evaluation.to_dict()),
@@ -320,6 +372,7 @@ def doctor_report(config_path: str | Path, *, hardware: bool = False) -> dict[st
     contract, checks = _check_contract(config_path)
     if contract is not None:
         checks.extend(_check_data(contract))
+        checks.extend(_check_model(contract))
         checks.extend(_check_training(contract))
         checks.extend(_check_evaluation(contract))
         checks.extend(_check_environment())

@@ -141,3 +141,16 @@ def test_default_environment_snapshot_does_not_import_torch() -> None:
     assert snapshot["torch"]["imported"] is False
     assert "python" in snapshot
     assert "packages" in snapshot
+
+
+def test_invalid_model_identifier_is_blocking(tmp_path: Path) -> None:
+    config = _doctor_config(tmp_path)
+    raw = json.loads(config.read_text(encoding="utf-8"))
+    raw["model"]["model_id"] = "not a repository id"
+    config.write_text(json.dumps(raw), encoding="utf-8")
+    report = doctor_report(config)
+    assert report["summary"]["status"] == "FAIL"
+    assert any(
+        check["layer"] == "Model" and check["name"] == "model_identifier" and check["status"] == "FAIL"
+        for check in report["checks"]
+    )
