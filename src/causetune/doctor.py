@@ -136,12 +136,23 @@ def _check_contract(config_path: str | Path) -> tuple[ExperimentContract | None,
         contract = load_experiment_contract(config_path)
     except (ExperimentContractError, OSError) as exc:
         return None, [Check("Contract", "contract", FAIL, str(exc))]
-    return contract, [
+    try:
+        output_path = Path(contract.output.output_dir)
+        output_valid = "\x00" not in contract.output.output_dir and not output_path.exists() or output_path.is_dir()
+    except (OSError, ValueError):
+        output_valid = False
+    checks = [
         Check("Contract", "schema", PASS, "experiment schema valid"),
         Check("Contract", "experiment_id", PASS, f"experiment id: {contract.experiment_id}"),
         Check("Contract", "model_revision", PASS, f"model revision policy: {contract.model.revision_policy}"),
-        Check("Contract", "output_path", PASS, "output path valid"),
+        Check(
+            "Contract",
+            "output_path",
+            PASS if output_valid else FAIL,
+            "output path valid" if output_valid else "output path is invalid or points to a file",
+        ),
     ]
+    return contract, checks
 
 
 def _check_data(contract: ExperimentContract) -> list[Check]:
