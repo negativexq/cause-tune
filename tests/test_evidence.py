@@ -77,6 +77,15 @@ def test_checkpoint_provenance_cannot_use_benchmark(tmp_path: Path) -> None:
         record_checkpoint_selection(run_dir, checkpoint=1, source="benchmark")
 
 
+def test_completed_training_requires_checkpoint_provenance(tmp_path: Path) -> None:
+    contract = _contract(tmp_path)
+    run_dir = tmp_path / "run"
+    initialize_evidence(contract, run_dir)
+    record_training_result(run_dir, actual_steps=1, stop_reason="completed")
+    with pytest.raises(EvidenceError, match="checkpoint_selection"):
+        finalize_evidence(run_dir)
+
+
 def test_non_empty_run_directory_is_not_overwritten(tmp_path: Path) -> None:
     contract = _contract(tmp_path)
     run_dir = tmp_path / "run"

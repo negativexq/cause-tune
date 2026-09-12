@@ -198,10 +198,15 @@ def finalize_evidence(run_dir: str | Path) -> dict[str, Any]:
     manifest_path = destination / "manifest.json"
     if not manifest_path.is_file():
         raise EvidenceError(f"manifest is missing: {manifest_path}")
+    current_manifest = load_manifest(destination)
+    if current_manifest["training"].get("actual_steps") is not None and not (
+        destination / "checkpoint_selection.json"
+    ).is_file():
+        raise EvidenceError("training evidence is missing checkpoint_selection.json")
     artifacts = artifact_hashes(destination)
     artifact_hash_manifest = {"schema_version": 1, "artifacts": artifacts}
     _write_json(destination / "artifact_hashes.json", artifact_hash_manifest)
-    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest = current_manifest
     manifest["artifacts"] = dict(artifacts)
     _write_json(manifest_path, manifest)
     return manifest
