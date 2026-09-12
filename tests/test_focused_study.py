@@ -13,6 +13,9 @@ from causetune.focused_study import (
     select_data_fraction,
     validate_study_contract,
 )
+from causetune.e04a_data import materialize_data_efficiency_subsets
+from causetune.incident_training import TRAINING_GENERATOR_VERSION
+from causetune.incident_taxonomy import FAILURE_FAMILIES, FAILURE_SPECS
 
 
 def _kwargs(tmp_path: Path) -> dict:
@@ -59,3 +62,57 @@ def test_intervention_cannot_be_hidden_in_controlled_fields(tmp_path: Path) -> N
     contract["selection"]["tuning_on_blind_benchmark"] = True
     with pytest.raises(StudyContractError):
         validate_study_contract(contract)
+
+
+def _write_training_fixture(path: Path) -> None:
+    inputs = []
+    truths = []
+    for family_index, family in enumerate(FAILURE_FAMILIES):
+        for index in range(4):
+            incident_id = f"fixture-{family_index:02d}-{index}"
+            component = f"svc-{family_index}"
+            inputs.append({
+                "incident_id": incident_id,
+                "split": "train",
+                "incident_packet": f"INCIDENT {incident_id}\nTOPOLOGY\n{component}\nRECENT CHANGES\nmarker family{chr(97 + family_index)}sample{chr(97 + index)}\nMETRICS\nM1 signal\nLOGS / EVENTS\nE1 signal\nALERTS\nA1 signal",
+                "metadata": {
+                    "difficulty": "standard" if index < 2 else "hard",
+                    "topology_family": "topology-a" if index % 2 else "topology-b",
+                    "red_herring": index >= 2,
+                    "present_components": [component],
+                    "evidence_ids": ["M1", "E1", "A1"],
+                },
+            })
+            truths.append({
+                "incident_id": incident_id,
+                "culprit_service": component,
+                "failure_mode": family,
+                "recommended_action": FAILURE_SPECS[family].action,
+                "evidence_ids": ["M1", "E1", "A1"],
+                "metadata": {
+                    "difficulty": inputs[-1]["metadata"]["difficulty"],
+                    "failure_family": family,
+                    "topology_family": inputs[-1]["metadata"]["topology_family"],
+                    "red_herring": inputs[-1]["metadata"]["red_herring"],
+                    "generator_version": TRAINING_GENERATOR_VERSION,
+                },
+            })
+    path.mkdir(parents=True)
+    (path / "train.jsonl").write_text("".join(json.dumps(row) + "\n" for row in inputs), encoding="utf-8")
+    (path / "ground_truth_train.jsonl").write_text("".join(json.dumps(row) + "\n" for row in truths), encoding="utf-8")
+
+
+def test_e04a_subsets_are_nested_and_path_independent(tmp_path: Path) -> None:
+    source = tmp_path / "source"
+    _write_training_fixture(source)
+    first = tmp_path / "first"
+    second = tmp_path / "second"
+    result_a = materialize_data_efficiency_subsets(source, first, seed=42, fractions=(0.25, 0.5, 0.75, 1.0))
+    result_b = materialize_data_efficiency_subsets(source, second, seed=42, fractions=(0.25, 0.5, 0.75, 1.0))
+    assert [row["subset_hash"] for row in result_a["subsets"]] == [row["subset_hash"] for row in result_b["subsets"]]
+    ids = []
+    for subset in ("025pct", "050pct", "075pct", "100pct"):
+        rows = [json.loads(line) for line in (first / subset / "train.jsonl").read_text().splitlines()]
+        ids.append({row["incident_id"] for row in rows})
+    assert ids[0] < ids[1] < ids[2] < ids[3]
+    assert [len(item) for item in ids] == [12, 24, 36, 48]

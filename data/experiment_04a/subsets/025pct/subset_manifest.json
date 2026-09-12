@@ -1,0 +1,44 @@
+{
+  "difficulty_distribution": {
+    "hard": 197,
+    "standard": 332,
+    "transfer": 71
+  },
+  "example_count": 600,
+  "family_distribution": {
+    "cache_stampede": 50,
+    "configuration_regression": 50,
+    "db_connection_pool_exhaustion": 50,
+    "db_query_regression": 50,
+    "disk_io_saturation": 50,
+    "dns_resolution_failure": 50,
+    "downstream_dependency_timeout": 50,
+    "kafka_consumer_lag": 50,
+    "memory_leak": 50,
+    "rate_limit_misconfiguration": 50,
+    "thread_pool_exhaustion": 50,
+    "tls_certificate_expiration": 50
+  },
+  "fraction": 0.25,
+  "identity": "a7076839e395bada2856c13c0197e621aa6f6adc6fcafbf7c1cfaa1ec5cd5ec1",
+  "ordering": "incident_id ascending after per-family SHA-256 rank selection",
+  "red_herring_distribution": {
+    "false": 403,
+    "true": 197
+  },
+  "schema_version": 1,
+  "seed": 20260941,
+  "source_dataset_hash": "8e660f9380d482b9043a360e4bcbdfe45559f63279882460774c6a6a68756cc0",
+  "study_id": "e04a-data-efficiency",
+  "subset_hash": "eaecc635921cb82219f4e6efc05a1387d76ae52695430f333c640b8f87728f56",
+  "topology_distribution": {
+    "data_plane": 73,
+    "identity_fabric": 72,
+    "media_orchestrator": 78,
+    "notification_mesh": 87,
+    "retail_ledger": 70,
+    "search_platform": 72,
+    "telemetry_plane": 77,
+    "workflow_platform": 71
+  }
+}

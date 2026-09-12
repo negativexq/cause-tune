@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "seed": 20260941,
+  "source_dataset_hash": "8e660f9380d482b9043a360e4bcbdfe45559f63279882460774c6a6a68756cc0",
+  "study_id": "e04a-data-efficiency",
+  "subsets": [
+    {
+      "difficulty_distribution": {
+        "hard": 197,
+        "standard": 332,
+        "transfer": 71
+      },
+      "example_count": 600,
+      "family_distribution": {
+        "cache_stampede": 50,
+        "configuration_regression": 50,
+        "db_connection_pool_exhaustion": 50,
+        "db_query_regression": 50,
+        "disk_io_saturation": 50,
+        "dns_resolution_failure": 50,
+        "downstream_dependency_timeout": 50,
+        "kafka_consumer_lag": 50,
+        "memory_leak": 50,
+        "rate_limit_misconfiguration": 50,
+        "thread_pool_exhaustion": 50,
+        "tls_certificate_expiration": 50
+      },
+      "fraction": 0.25,
+      "identity": "a7076839e395bada2856c13c0197e621aa6f6adc6fcafbf7c1cfaa1ec5cd5ec1",
+      "ordering": "incident_id ascending after per-family SHA-256 rank selection",
+      "red_herring_distribution": {
+        "false": 403,
+        "true": 197
+      },
+      "schema_version": 1,
+      "seed": 20260941,
+      "source_dataset_hash": "8e660f9380d482b9043a360e4bcbdfe45559f63279882460774c6a6a68756cc0",
+      "study_id": "e04a-data-efficiency",
+      "subset_hash": "eaecc635921cb82219f4e6efc05a1387d76ae52695430f333c640b8f87728f56",
+      "topology_distribution": {
+        "data_plane": 73,
+        "identity_fabric": 72,
+        "media_orchestrator": 78,
+        "notification_mesh": 87,
+        "retail_ledger": 70,
+        "search_platform": 72,
+        "telemetry_plane": 77,
+        "workflow_platform": 71
+      }
+    },
+    {
+      "difficulty_distribution": {
+        "hard": 372,
+        "standard": 702,
+        "transfer": 126
+      },
+      "example_count": 1200,
+      "family_distribution": {
+        "cache_stampede": 100,
+        "configuration_regression": 100,
+        "db_connection_pool_exhaustion": 100,
+        "db_query_regression": 100,
+        "disk_io_saturation": 100,
+        "dns_resolution_failure": 100,
+        "downstream_dependency_timeout": 100,
+        "kafka_consumer_lag": 100,
+        "memory_leak": 100,
+        "rate_limit_misconfiguration": 100,
+        "thread_pool_exhaustion": 100,
+        "tls_certificate_expiration": 100
+      },
+      "fraction": 0.5,
+      "identity": "3ab4d71a5fab75b283d23c1179d336e23bf3eef16a98db9e8c500cc73350df01",
+      "ordering": "incident_id ascending after per-family SHA-256 rank selection",
+      "red_herring_distribution": {
+        "false": 828,
+        "true": 372
+      },
+      "schema_version": 1,
+      "seed": 20260941,
+      "source_dataset_hash": "8e660f9380d482b9043a360e4bcbdfe45559f63279882460774c6a6a68756cc0",
+      "study_id": "e04a-data-efficiency",
+      "subset_hash": "efcf0f0561072d1f0ed71de119668ffc43a24298b30a5aa3282b652cc76df40a",
+      "topology_distribution": {
+        "data_plane": 143,
+        "identity_fabric": 156,
+        "media_orchestrator": 158,
+        "notification_mesh": 155,
+        "retail_ledger": 147,
+        "search_platform": 157,
+        "telemetry_plane": 142,
+        "workflow_platform": 142
+      }
+    },
+    {
+      "difficulty_distribution": {
+        "hard": 541,
+        "standard": 1080,
+        "transfer": 179
+      },
+      "example_count": 1800,
+      "family_distribution": {
+        "cache_stampede": 150,
+        "configuration_regression": 150,
+        "db_connection_pool_exhaustion": 150,
+        "db_query_regression": 150,
+        "disk_io_saturation": 150,
+        "dns_resolution_failure": 150,
+        "downstream_dependency_timeout": 150,
+        "kafka_consumer_lag": 150,
+        "memory_leak": 150,
+        "rate_limit_misconfiguration": 150,
+        "thread_pool_exhaustion": 150,
+        "tls_certificate_expiration": 150
+      },
+      "fraction": 0.75,
+      "identity": "a3e77b829f4ab0774ae863020aa47c85fe56881d17e31f0174b13cd6ef37194a",
+      "ordering": "incident_id ascending after per-family SHA-256 rank selection",
+      "red_herring_distribution": {
+        "false": 1259,
+        "true": 541
+      },
+      "schema_version": 1,
+      "seed": 20260941,
+      "source_dataset_hash": "8e660f9380d482b9043a360e4bcbdfe45559f63279882460774c6a6a68756cc0",
+      "study_id": "e04a-data-efficiency",
+      "subset_hash": "92a12f077ef3588151fa8d4a33baef940c75c4b661af84875d10f324cf50a45a",
+      "topology_distribution": {
+        "data_plane": 224,
+        "identity_fabric": 234,
+        "media_orchestrator": 241,
+        "notification_mesh": 221,
+        "retail_ledger": 224,
+        "search_platform": 232,
+        "telemetry_plane": 210,
+        "workflow_platform": 214
+      }
+    },
+    {
+      "difficulty_distribution": {
+        "hard": 720,
+        "standard": 1440,
+        "transfer": 240
+      },
+      "example_count": 2400,
+      "family_distribution": {
+        "cache_stampede": 200,
+        "configuration_regression": 200,
+        "db_connection_pool_exhaustion": 200,
+        "db_query_regression": 200,
+        "disk_io_saturation": 200,
+        "dns_resolution_failure": 200,
+        "downstream_dependency_timeout": 200,
+        "kafka_consumer_lag": 200,
+        "memory_leak": 200,
+        "rate_limit_misconfiguration": 200,
+        "thread_pool_exhaustion": 200,
+        "tls_certificate_expiration": 200
+      },
+      "fraction": 1.0,
+      "identity": "19f91879ef3fc47b663025863876d7d5e8a5e585d8d2c18febe00443d64ae5c3",
+      "ordering": "incident_id ascending after per-family SHA-256 rank selection",
+      "red_herring_distribution": {
+        "false": 1680,
+        "true": 720
+      },
+      "schema_version": 1,
+      "seed": 20260941,
+      "source_dataset_hash": "8e660f9380d482b9043a360e4bcbdfe45559f63279882460774c6a6a68756cc0",
+      "study_id": "e04a-data-efficiency",
+      "subset_hash": "8e660f9380d482b9043a360e4bcbdfe45559f63279882460774c6a6a68756cc0",
+      "topology_distribution": {
+        "data_plane": 305,
+        "identity_fabric": 308,
+        "media_orchestrator": 325,
+        "notification_mesh": 292,
+        "retail_ledger": 301,
+        "search_platform": 307,
+        "telemetry_plane": 276,
+        "workflow_platform": 286
+      }
+    }
+  ]
+}
