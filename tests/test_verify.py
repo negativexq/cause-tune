@@ -14,6 +14,7 @@ from causetune.verify import (
     verification_report,
     verify,
     write_verification_report,
+    score_incident_predictions,
 )
 
 
@@ -134,3 +135,28 @@ def test_verification_is_read_only(tmp_path: Path) -> None:
     after = sorted(path.relative_to(run_dir).as_posix() for path in run_dir.rglob("*"))
     assert report["summary"]["verified"] is True
     assert before == after
+
+
+def test_incident_predictions_reproduce_canonical_scorer(tmp_path: Path) -> None:
+    expected = {
+        "culprit_service": "svc",
+        "failure_mode": "memory_leak",
+        "recommended_action": "restart_or_replace_instance",
+        "evidence_ids": ["M1", "E1", "A1"],
+    }
+    row = {
+        "incident_id": "incident-1",
+        "slice": "standard",
+        "difficulty": "standard",
+        "failure_family": "memory_leak",
+        "topology_family": "topology",
+        "red_herring": False,
+        "expected": expected,
+        "raw_output": json.dumps(expected, separators=(",", ":")),
+        "input_metadata": {"present_components": ["svc"], "available_evidence_ids": ["A1", "E1", "M1"]},
+    }
+    path = tmp_path / "predictions.jsonl"
+    path.write_text(json.dumps(row) + "\n", encoding="utf-8")
+    result = score_incident_predictions(path)
+    assert result["diagnosis_exact_match"] == {"count": 1, "rate": 1.0}
+    assert result["json_compliance"] == {"count": 1, "rate": 1.0}

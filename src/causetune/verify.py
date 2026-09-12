@@ -89,6 +89,75 @@ def score_predictions(path: str | Path) -> dict[str, Any]:
     }
 
 
+def score_incident_predictions(path: str | Path) -> dict[str, Any]:
+    """Re-score persisted incident rows without loading a model.
+
+    The evidence runner persists the raw output plus the exact input metadata
+    required by the canonical incident scorer. Reconstructing the scorer input
+    here keeps offline verification independent of model inference while still
+    checking JSON/schema and field-level incident metrics.
+    """
+
+    from .incident_evaluation import evaluate_incidents
+
+    rows: list[Mapping[str, Any]] = []
+    for line_number, line in enumerate(Path(path).read_text(encoding="utf-8").splitlines(), 1):
+        if not line.strip():
+            continue
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError as exc:
+            raise EvidenceError(f"invalid incident prediction JSON at line {line_number}: {exc}") from exc
+        if not isinstance(row, Mapping):
+            raise EvidenceError(f"incident prediction line {line_number} is not an object")
+        rows.append(row)
+    if not rows:
+        raise EvidenceError("predictions.jsonl is empty")
+
+    incidents = []
+    truths: dict[str, dict[str, Any]] = {}
+    raw_outputs: dict[str, str] = {}
+    for row in rows:
+        incident_id = str(row["incident_id"])
+        metadata = row.get("input_metadata")
+        expected = row.get("expected")
+        if not isinstance(metadata, Mapping) or not isinstance(expected, Mapping):
+            raise EvidenceError(f"incident prediction {incident_id} lacks input_metadata or expected object")
+        available = metadata.get("available_evidence_ids")
+        components = metadata.get("present_components")
+        if not isinstance(available, list) or not isinstance(components, list):
+            raise EvidenceError(f"incident prediction {incident_id} has invalid input metadata")
+        incidents.append({
+            "incident_id": incident_id,
+            "slice": row["slice"],
+            "incident_packet": " ".join(str(item) for item in available),
+            "metadata": {
+                "present_components": components,
+                "difficulty": row["difficulty"],
+            },
+        })
+        truths[incident_id] = {
+            "incident_id": incident_id,
+            "culprit_service": expected["culprit_service"],
+            "failure_mode": expected["failure_mode"],
+            "recommended_action": expected["recommended_action"],
+            "evidence_ids": expected["evidence_ids"],
+            "metadata": {
+                "difficulty": row["difficulty"],
+                "failure_family": row["failure_family"],
+                "topology_family": row["topology_family"],
+                "red_herring": row["red_herring"],
+            },
+        }
+        raw_outputs[incident_id] = str(row["raw_output"])
+    result = evaluate_incidents(incidents, truths, raw_outputs)
+    enriched = []
+    for source, scored in zip(rows, result["predictions"]):
+        enriched.append({**scored, "input_metadata": source["input_metadata"]})
+    result["predictions"] = enriched
+    return result
+
+
 def _verify_artifacts(destination: Path, manifest: Mapping[str, Any], checks: list[dict[str, Any]]) -> None:
     path = destination / "artifact_hashes.json"
     if not path.is_file():
@@ -123,7 +192,7 @@ def _verify_artifacts(destination: Path, manifest: Mapping[str, Any], checks: li
         checks.append(_check("artifact_hashes", PASS, "all persisted artifact hashes match"))
 
 
-def _verify_predictions(destination: Path, checks: list[dict[str, Any]]) -> None:
+def _verify_predictions(destination: Path, checks: list[dict[str, Any]], *, scorer_version: str | None = None) -> None:
     predictions = destination / "predictions.jsonl"
     evaluation = destination / "evaluation.json"
     if not predictions.exists() and not evaluation.exists():
@@ -133,7 +202,11 @@ def _verify_predictions(destination: Path, checks: list[dict[str, Any]]) -> None
         checks.append(_check("evaluation_reproduction", FAIL, "predictions and evaluation must be persisted together"))
         return
     try:
-        recomputed = score_predictions(predictions)
+        recomputed = (
+            score_incident_predictions(predictions)
+            if scorer_version == "incident-scorer-v1"
+            else score_predictions(predictions)
+        )
         persisted = _read_json(evaluation)
         persisted_metrics = persisted.get("metrics", persisted) if isinstance(persisted, Mapping) else None
         if not isinstance(persisted_metrics, Mapping):
@@ -226,7 +299,10 @@ def verification_report(run_dir: str | Path, *, offline: bool = True) -> dict[st
             checks.append(_check("checkpoint_provenance", FAIL, str(exc)))
 
     _verify_artifacts(destination, manifest, checks)
-    _verify_predictions(destination, checks)
+    scorer_version = None
+    if resolved_contract is not None:
+        scorer_version = resolved_contract.evaluation.scorer_version
+    _verify_predictions(destination, checks, scorer_version=scorer_version)
     return _report(run_dir, offline, checks)
 
 
