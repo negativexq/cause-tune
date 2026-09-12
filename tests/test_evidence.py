@@ -7,6 +7,7 @@ import pytest
 
 from causetune.evidence import (
     EvidenceError,
+    artifact_hashes,
     finalize_evidence,
     initialize_evidence,
     load_manifest,
@@ -62,6 +63,10 @@ def test_manifest_captures_provenance_and_finalize_hashes_artifacts(tmp_path: Pa
     assert finalized["artifacts"]["predictions.jsonl"] == sha256_file(run_dir / "predictions.jsonl")
     assert "manifest.json" not in finalized["artifacts"]
     assert load_manifest(run_dir) == finalized
+    before = artifact_hashes(run_dir)
+    (run_dir / "predictions.jsonl").write_text('{"id":"changed"}\n', encoding="utf-8")
+    after = artifact_hashes(run_dir)
+    assert before["predictions.jsonl"] != after["predictions.jsonl"]
 
 
 def test_checkpoint_provenance_cannot_use_benchmark(tmp_path: Path) -> None:

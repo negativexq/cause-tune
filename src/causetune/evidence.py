@@ -198,12 +198,9 @@ def finalize_evidence(run_dir: str | Path) -> dict[str, Any]:
     manifest_path = destination / "manifest.json"
     if not manifest_path.is_file():
         raise EvidenceError(f"manifest is missing: {manifest_path}")
-    artifacts: dict[str, str] = {}
-    excluded = {"manifest.json", "artifact_hashes.json"}
-    for path in sorted(item for item in destination.rglob("*") if item.is_file() and item.name not in excluded):
-        artifacts[path.relative_to(destination).as_posix()] = sha256_file(path)
-    artifact_hashes = {"schema_version": 1, "artifacts": artifacts}
-    _write_json(destination / "artifact_hashes.json", artifact_hashes)
+    artifacts = artifact_hashes(destination)
+    artifact_hash_manifest = {"schema_version": 1, "artifacts": artifacts}
+    _write_json(destination / "artifact_hashes.json", artifact_hash_manifest)
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     manifest["artifacts"] = dict(artifacts)
     _write_json(manifest_path, manifest)
@@ -219,3 +216,16 @@ def load_manifest(run_dir: str | Path) -> dict[str, Any]:
     if manifest.get("schema_version") != MANIFEST_SCHEMA_VERSION:
         raise EvidenceError(f"unsupported manifest schema_version: {manifest.get('schema_version')!r}")
     return manifest
+
+
+def artifact_hashes(run_dir: str | Path, *, excluded: set[str] | None = None) -> dict[str, str]:
+    """Hash persisted files by relative artifact name in stable order."""
+
+    destination = Path(run_dir)
+    ignored = excluded or {"manifest.json", "artifact_hashes.json"}
+    return {
+        path.relative_to(destination).as_posix(): sha256_file(path)
+        for path in sorted(
+            item for item in destination.rglob("*") if item.is_file() and item.name not in ignored
+        )
+    }
