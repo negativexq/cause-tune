@@ -192,13 +192,32 @@ def record_checkpoint_selection(run_dir: str | Path, *, checkpoint: int, source:
 
 
 def finalize_evidence(run_dir: str | Path) -> dict[str, Any]:
-    """Hash persisted artifacts and attach the hashes to the run manifest."""
+    """Hash persisted artifacts and attach the hashes to an immutable manifest.
+
+    A finalized bundle may be inspected repeatedly, but it cannot be repaired
+    or re-finalized after an artifact changes. This prevents a later write from
+    silently replacing the provenance record for an earlier run.
+    """
 
     destination = Path(run_dir)
     manifest_path = destination / "manifest.json"
     if not manifest_path.is_file():
         raise EvidenceError(f"manifest is missing: {manifest_path}")
     current_manifest = load_manifest(destination)
+    index_path = destination / "artifact_hashes.json"
+    already_finalized = bool(current_manifest.get("artifacts")) or index_path.is_file()
+    if already_finalized:
+        if not index_path.is_file() or not current_manifest.get("artifacts"):
+            raise EvidenceError("evidence bundle finalization is incomplete and cannot be repaired")
+        try:
+            indexed = _read_json(index_path)
+        except (OSError, json.JSONDecodeError) as exc:
+            raise EvidenceError("finalized evidence bundle has an unreadable artifact hash index") from exc
+        expected = indexed.get("artifacts") if isinstance(indexed, Mapping) else None
+        actual = artifact_hashes(destination)
+        if expected != actual or current_manifest.get("artifacts") != expected:
+            raise EvidenceError("finalized evidence bundle is immutable; persisted artifacts changed")
+        return current_manifest
     if current_manifest["training"].get("actual_steps") is not None and not (
         destination / "checkpoint_selection.json"
     ).is_file():
@@ -210,6 +229,10 @@ def finalize_evidence(run_dir: str | Path) -> dict[str, Any]:
     manifest["artifacts"] = dict(artifacts)
     _write_json(manifest_path, manifest)
     return manifest
+
+
+def _read_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def load_manifest(run_dir: str | Path) -> dict[str, Any]:

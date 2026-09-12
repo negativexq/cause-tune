@@ -71,6 +71,20 @@ def test_manifest_captures_provenance_and_finalize_hashes_artifacts(tmp_path: Pa
     assert before["predictions.jsonl"] != after["predictions.jsonl"]
 
 
+def test_finalized_bundle_is_immutable_and_repeatable(tmp_path: Path) -> None:
+    contract = _contract(tmp_path)
+    run_dir = tmp_path / "run"
+    initialize_evidence(contract, run_dir)
+    record_checkpoint_selection(run_dir, checkpoint=1)
+    record_training_result(run_dir, actual_steps=1, stop_reason="completed")
+    (run_dir / "predictions.jsonl").write_text('{"id":"a"}\n', encoding="utf-8")
+    first = finalize_evidence(run_dir)
+    assert finalize_evidence(run_dir) == first
+    (run_dir / "predictions.jsonl").write_text('{"id":"changed"}\n', encoding="utf-8")
+    with pytest.raises(EvidenceError, match="immutable"):
+        finalize_evidence(run_dir)
+
+
 def test_checkpoint_provenance_cannot_use_benchmark(tmp_path: Path) -> None:
     contract = _contract(tmp_path)
     run_dir = tmp_path / "run"
