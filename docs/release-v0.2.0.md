@@ -7,7 +7,8 @@ G8  Experiment Contract       PASS
 G9  Doctor                    PASS
 G10 Evidence Provenance       PASS
 G11 Offline Verification      PASS
-G12 Real Training CI          PASS
+M12 model-backed smoke        PASS (local)
+G12 remote GitHub Actions     PENDING
 G13 Unified CLI               PASS
 ```
 
@@ -19,6 +20,10 @@ benchmark and its raw predictions are persisted under
 `results/experiment_03_blind/`.
 
 E04 remains a predeclared focused-study matrix, not automatic hyperparameter
-search. EX-LV remains a research admission track with no streaming backend
-admitted. No serving, orchestration, export platform, recipe zoo or trainer
-autopilot is part of this release.
+search; E04 GPU studies were not run in this release closure. EX-LV remains a
+research admission track with no streaming backend admitted. No serving,
+orchestration, export platform, recipe zoo or trainer autopilot is part of this
+release.
+
+The remote GitHub Actions result is intentionally not claimed here until both
+the `cpu-safe` and `training-smoke` jobs succeed for the final pushed commit.
