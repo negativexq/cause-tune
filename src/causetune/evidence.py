@@ -164,6 +164,10 @@ def record_training_result(
     actual_steps: int,
     stop_reason: str,
 ) -> dict[str, Any]:
+    if not isinstance(actual_steps, int) or isinstance(actual_steps, bool) or actual_steps < 0:
+        raise EvidenceError("actual_steps must be a non-negative integer")
+    if not isinstance(stop_reason, str) or not stop_reason.strip():
+        raise EvidenceError("stop_reason must not be empty")
     path = Path(run_dir) / "manifest.json"
     manifest = json.loads(path.read_text(encoding="utf-8"))
     manifest["training"]["actual_steps"] = actual_steps
@@ -175,6 +179,8 @@ def record_training_result(
 def record_checkpoint_selection(run_dir: str | Path, *, checkpoint: int, source: str = "validation") -> dict[str, Any]:
     if source != "validation":
         raise EvidenceError("checkpoint selection provenance must use validation")
+    if not isinstance(checkpoint, int) or isinstance(checkpoint, bool) or checkpoint < 0:
+        raise EvidenceError("checkpoint must be a non-negative integer")
     destination = Path(run_dir)
     selection = {"schema_version": 1, "checkpoint": checkpoint, "source": source}
     _write_json(destination / "checkpoint_selection.json", selection)
@@ -201,4 +207,15 @@ def finalize_evidence(run_dir: str | Path) -> dict[str, Any]:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     manifest["artifacts"] = dict(artifacts)
     _write_json(manifest_path, manifest)
+    return manifest
+
+
+def load_manifest(run_dir: str | Path) -> dict[str, Any]:
+    path = Path(run_dir) / "manifest.json"
+    try:
+        manifest = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise EvidenceError(f"cannot read run manifest: {path}: {exc}") from exc
+    if manifest.get("schema_version") != MANIFEST_SCHEMA_VERSION:
+        raise EvidenceError(f"unsupported manifest schema_version: {manifest.get('schema_version')!r}")
     return manifest
