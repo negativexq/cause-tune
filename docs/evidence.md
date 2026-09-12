@@ -22,7 +22,9 @@ resolved-config SHA-256, data SHA-256 values, configured/actual training steps,
 stop reason and validation-only checkpoint selection.
 
 `finalize_evidence()` hashes persisted artifacts by relative name. The manifest
-and hash index are excluded from their own artifact set, so finalization is
-repeatable. Optional artifacts are simply absent from the index; an adapter,
+and hash index are excluded from their own artifact set. Finalization is
+idempotent when the bundle is unchanged, then seals the bundle: changing an
+artifact and attempting to re-finalize fails instead of silently rewriting
+provenance. Optional artifacts are simply absent from the index; an adapter,
 predictions or evaluation file is hashed when it exists. A completed training
 record cannot be finalized without an explicit checkpoint-selection record.

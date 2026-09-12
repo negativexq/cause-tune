@@ -12,8 +12,10 @@ causetune doctor --config configs/experiment.json --json
 causetune doctor --config configs/experiment.json --hardware
 ```
 
-Checks are grouped into Contract, Data, Training, Evaluation, Environment and
-optional Hardware layers. Every check is `PASS`, `WARN` or `FAIL`:
+Checks are grouped into Contract, Data, Model, Training, Evaluation,
+Environment and optional Hardware layers. Model checks validate the repository
+identifier or local tokenizer markers without loading model weights. Every
+check is `PASS`, `WARN` or `FAIL`:
 
 - `PASS` means the check completed successfully.
 - `WARN` is non-blocking and is never rewritten as PASS or FAIL.
