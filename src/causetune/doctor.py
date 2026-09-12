@@ -289,6 +289,31 @@ def _check_hardware() -> list[Check]:
     return checks
 
 
+def environment_snapshot(*, hardware: bool = False) -> dict[str, Any]:
+    """Return useful environment facts without touching CUDA by default."""
+
+    snapshot: dict[str, Any] = {
+        "python": platform.python_version(),
+        "platform": platform.platform(),
+        "packages": {package: _package_version(package) for package in (*_REQUIRED_PACKAGES, "bitsandbytes")},
+        "torch": {"imported": False, "cuda_version": None, "gpu": None, "vram_bytes": None},
+    }
+    if not hardware:
+        return snapshot
+    try:
+        import torch
+    except Exception as exc:
+        snapshot["torch"] = {"imported": False, "error": str(exc)}
+        return snapshot
+    torch_info: dict[str, Any] = {"imported": True, "cuda_version": torch.version.cuda, "gpu": None, "vram_bytes": None}
+    if torch.cuda.is_available():
+        device = torch.cuda.current_device()
+        properties = torch.cuda.get_device_properties(device)
+        torch_info.update({"gpu": properties.name, "vram_bytes": properties.total_memory})
+    snapshot["torch"] = torch_info
+    return snapshot
+
+
 def doctor_report(config_path: str | Path, *, hardware: bool = False) -> dict[str, Any]:
     """Return a deterministic machine-readable doctor report."""
 
@@ -307,6 +332,7 @@ def doctor_report(config_path: str | Path, *, hardware: bool = False) -> dict[st
         "schema_version": 1,
         "config": str(config_path),
         "hardware_requested": hardware,
+        "environment": environment_snapshot(hardware=hardware),
         "checks": [check.to_dict() for check in checks],
         "summary": {
             "status": FAIL if blocking else (WARN if counts[WARN] else PASS),

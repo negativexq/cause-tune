@@ -5,7 +5,14 @@ from pathlib import Path
 
 import pytest
 
-from causetune.doctor import DoctorFailure, doctor, doctor_report, render_doctor_report, write_doctor_report
+from causetune.doctor import (
+    DoctorFailure,
+    doctor,
+    doctor_report,
+    environment_snapshot,
+    render_doctor_report,
+    write_doctor_report,
+)
 
 
 def _write_jsonl(path: Path, rows: list[dict]) -> None:
@@ -96,3 +103,10 @@ def test_hardware_is_explicitly_opt_in(tmp_path: Path) -> None:
     assert not any(check["layer"] == "Hardware" for check in report["checks"])
     hardware_report = doctor_report(config, hardware=True)
     assert hardware_report["hardware_requested"] is True
+
+
+def test_default_environment_snapshot_does_not_import_torch() -> None:
+    snapshot = environment_snapshot()
+    assert snapshot["torch"]["imported"] is False
+    assert "python" in snapshot
+    assert "packages" in snapshot
