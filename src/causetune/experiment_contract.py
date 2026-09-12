@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import posixpath
 import re
 from dataclasses import dataclass, field
 from pathlib import PurePath
@@ -322,7 +323,7 @@ class ExperimentContract:
     def __post_init__(self) -> None:
         if self.schema_version != SCHEMA_VERSION:
             raise ExperimentContractError(f"unsupported contract schema_version: {self.schema_version!r}")
-        if not _EXPERIMENT_ID.fullmatch(self.experiment_id):
+        if not isinstance(self.experiment_id, str) or not _EXPERIMENT_ID.fullmatch(self.experiment_id):
             raise ExperimentContractError("experiment_id must contain only letters, numbers, '.', '_' or '-'")
         if set(self.data) != {"train", "validation", "benchmark"}:
             raise ExperimentContractError("data must define train, validation, and benchmark roles")
@@ -373,16 +374,22 @@ class ExperimentContract:
 
 
 def _validate_data_isolation(data: Mapping[str, DataRole]) -> None:
-    identities = {role: (value.fingerprint or _normal_path(value.path)) for role, value in data.items()}
-    roles = tuple(identities)
+    roles = tuple(data)
     for index, left in enumerate(roles):
         for right in roles[index + 1 :]:
-            if identities[left] == identities[right]:
+            left_data = data[left]
+            right_data = data[right]
+            same_path = _normal_path(left_data.path) == _normal_path(right_data.path)
+            same_fingerprint = (
+                left_data.fingerprint is not None
+                and left_data.fingerprint == right_data.fingerprint
+            )
+            if same_path or same_fingerprint:
                 raise ExperimentContractError(f"data role collision: {left} and {right} refer to the same dataset")
 
 
 def _normal_path(path: str) -> str:
-    return str(PurePath(path))
+    return posixpath.normpath(str(PurePath(path)))
 
 
 _ROOT_KEYS = {"schema_version", "experiment_id", "model", "data", "training", "evaluation", "output", "metadata"}
@@ -579,10 +586,13 @@ def field_classification() -> dict[str, str]:
         "model.revision": "training-affecting",
         "model.revision_policy": "metadata-only",
         "data.train": "training-affecting",
+        "data.train.path": "training-affecting",
         "data.train.fingerprint": "training-affecting",
         "data.validation": "training-affecting",
+        "data.validation.path": "training-affecting",
         "data.validation.fingerprint": "training-affecting",
         "data.benchmark": "metadata-only",
+        "data.benchmark.path": "metadata-only",
         "data.benchmark.fingerprint": "metadata-only",
         "evaluation.contract_version": "metadata-only",
         "evaluation.scorer_version": "metadata-only",

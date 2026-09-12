@@ -141,3 +141,16 @@ def load_config(path: str | Path) -> SFTConfig:
         raise ValueError(f"invalid JSON configuration: {config_path}: {exc}") from exc
     return config_from_dict(raw)
 
+
+# M8 canonical experiment identity is kept in its own module, but these
+# re-exports make the contract discoverable from the existing configuration
+# entrypoint without changing the legacy SFTConfig behavior above.
+from .experiment_contract import (  # noqa: E402  (intentional compatibility export)
+    ExperimentContract,
+    ExperimentContractError,
+    experiment_contract_from_dict,
+    field_classification,
+    legacy_config_to_contract,
+    load_experiment_contract,
+    resolve_experiment_config,
+)
