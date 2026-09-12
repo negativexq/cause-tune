@@ -14,7 +14,9 @@ causetune doctor --config configs/experiment.json --hardware
 
 Checks are grouped into Contract, Data, Model, Training, Evaluation,
 Environment and optional Hardware layers. Model checks validate the repository
-identifier or local tokenizer markers without loading model weights. Every
+identifier or local/cache tokenizer markers without loading model weights. A
+remote tokenizer that is not present in the local cache is reported as an
+explicit non-blocking `WARN`; the default doctor never downloads it. Every
 check is `PASS`, `WARN` or `FAIL`:
 
 - `PASS` means the check completed successfully.

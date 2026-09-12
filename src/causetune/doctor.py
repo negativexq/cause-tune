@@ -268,16 +268,41 @@ def _check_model(contract: ExperimentContract) -> list[Check]:
             )
         )
     else:
-        # Remote resolution is intentionally not attempted by the default
-        # doctor: it must not download model/tokenizer assets. Repository-id
-        # syntax is the strongest offline check available in this mode.
+        cached_files: list[str] = []
+        try:
+            from huggingface_hub import try_to_load_from_cache
+
+            for filename in (
+                "tokenizer_config.json",
+                "tokenizer.json",
+                "tokenizer.model",
+                "spiece.model",
+                "vocab.json",
+                "sentencepiece.bpe.model",
+            ):
+                cached = try_to_load_from_cache(
+                    model_id,
+                    filename,
+                    revision=contract.model.revision,
+                )
+                if isinstance(cached, str) and Path(cached).is_file():
+                    cached_files.append(filename)
+        except Exception:
+            # Cache inspection is advisory. A missing optional cache helper
+            # must not make the CPU-safe doctor import or load model assets.
+            cached_files = []
+
+        # Remote resolution is intentionally limited to cache/config metadata:
+        # the default doctor must not download model or tokenizer assets.
         checks.append(
             Check(
                 "Model",
                 "tokenizer_configuration",
-                PASS,
-                "remote tokenizer configuration is addressable without downloading weights",
-                {"resolution": "deferred", "model_id": model_id},
+                PASS if cached_files else WARN,
+                "cached remote tokenizer configuration found"
+                if cached_files
+                else "remote tokenizer configuration is not locally resolved; no model assets downloaded",
+                {"model_id": model_id, "resolution": "cache", "files": cached_files},
             )
         )
     return checks

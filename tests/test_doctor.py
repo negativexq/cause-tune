@@ -58,10 +58,10 @@ def test_ready_doctor_is_cpu_safe_and_deterministic(tmp_path: Path) -> None:
 
     assert first == second
     assert first["summary"] == {
-        "status": "PASS",
+        "status": "WARN",
         "ready": True,
         "message": "ready",
-        "counts": {"PASS": first["summary"]["counts"]["PASS"], "WARN": 0, "FAIL": 0},
+        "counts": {"PASS": first["summary"]["counts"]["PASS"], "WARN": 1, "FAIL": 0},
     }
     assert first["hardware_requested"] is False
     assert all(check["status"] != "FAIL" for check in first["checks"])
@@ -99,7 +99,7 @@ def test_report_json_and_human_rendering_are_stable(tmp_path: Path) -> None:
     assert first.read_text(encoding="utf-8") == second.read_text(encoding="utf-8")
     human = render_doctor_report(report)
     assert human.startswith("CauseTune Doctor\n")
-    assert human.endswith("PASS\n")
+    assert human.endswith("WARN\n")
     assert doctor_exit_code(report) == 0
     assert doctor_json(report).endswith("\n")
 
