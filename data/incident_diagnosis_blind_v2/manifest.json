@@ -1,0 +1,24 @@
+{
+  "benchmark_version": "incident-blind-v2",
+  "contamination_audit": {
+    "exact_packet_overlap_count": 0,
+    "overlap_ids": [],
+    "source_counts": {
+      "data/incident_diagnosis": 0,
+      "data/incident_diagnosis_training": 0
+    },
+    "status": "pass"
+  },
+  "counts": {
+    "hard": 24,
+    "standard": 24,
+    "transfer": 12
+  },
+  "fingerprint": "10ffbcf9d60edc872d60c706f9c800beac1540b54cd08ad060e5169faa3a8150",
+  "frozen": true,
+  "generation_seed": 20260912,
+  "generator_version": "independent-blind-namespace-v1",
+  "schema_version": 1,
+  "scorer_fingerprint": "47197943f6aa76ee62d4e2c964f287b08f953131cecc2f6d007e2fc05fa2f71d",
+  "scorer_version": "incident-scorer-v1"
+}
