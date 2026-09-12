@@ -8,6 +8,8 @@ import pytest
 from causetune.doctor import (
     DoctorFailure,
     doctor,
+    doctor_exit_code,
+    doctor_json,
     doctor_report,
     environment_snapshot,
     render_doctor_report,
@@ -71,6 +73,7 @@ def test_blocking_data_problem_is_nonzero_failure(tmp_path: Path) -> None:
     with pytest.raises(DoctorFailure) as error:
         doctor(config)
     assert error.value.report == report
+    assert doctor_exit_code(report) == 3
 
 
 def test_missing_supervision_is_blocking(tmp_path: Path) -> None:
@@ -95,6 +98,8 @@ def test_report_json_and_human_rendering_are_stable(tmp_path: Path) -> None:
     human = render_doctor_report(report)
     assert human.startswith("CauseTune Doctor\n")
     assert human.endswith("PASS\n")
+    assert doctor_exit_code(report) == 0
+    assert doctor_json(report).endswith("\n")
 
 
 def test_hardware_is_explicitly_opt_in(tmp_path: Path) -> None:

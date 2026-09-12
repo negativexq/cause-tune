@@ -370,7 +370,16 @@ def render_doctor_report(report: Mapping[str, Any]) -> str:
 def write_doctor_report(report: Mapping[str, Any], path: str | Path) -> None:
     destination = Path(path)
     destination.parent.mkdir(parents=True, exist_ok=True)
-    destination.write_text(
-        json.dumps(_sort_json(report), ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n",
-        encoding="utf-8",
-    )
+    destination.write_text(doctor_json(report), encoding="utf-8")
+
+
+def doctor_json(report: Mapping[str, Any]) -> str:
+    """Serialize a doctor report for scripts with stable key ordering."""
+
+    return json.dumps(_sort_json(report), ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n"
+
+
+def doctor_exit_code(report: Mapping[str, Any]) -> int:
+    """Return the M9 process result: zero for ready PASS/WARN, three for FAIL."""
+
+    return 3 if report.get("summary", {}).get("status") == FAIL else 0
