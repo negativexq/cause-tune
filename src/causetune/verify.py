@@ -68,10 +68,18 @@ def score_predictions(path: str | Path) -> dict[str, Any]:
         raise EvidenceError(f"prediction row is missing one of: {', '.join(names)}")
 
     correct = 0
+    def comparable(value: Any) -> Any:
+        if isinstance(value, str):
+            try:
+                return json.loads(value)
+            except json.JSONDecodeError:
+                return value
+        return value
+
     for row in rows:
         expected = value(row, ("expected", "target"))
         prediction = value(row, ("prediction", "output"))
-        if expected == prediction:
+        if comparable(expected) == comparable(prediction):
             correct += 1
     return {
         "scorer_version": "causetune-exact-match-v1",
