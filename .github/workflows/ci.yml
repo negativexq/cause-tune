@@ -24,6 +24,7 @@ jobs:
     env:
       HF_HOME: ${{ github.workspace }}/.hf-cache
       HF_HUB_DISABLE_PROGRESS_BARS: "1"
+      CUDA_VISIBLE_DEVICES: ""
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
