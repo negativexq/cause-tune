@@ -260,3 +260,17 @@ def verification_exit_code(report: Mapping[str, Any]) -> int:
 
 def verification_json(report: Mapping[str, Any]) -> str:
     return json.dumps(report, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n"
+
+
+def render_verification_report(report: Mapping[str, Any]) -> str:
+    lines = ["CauseTune Verification", ""]
+    for check in report.get("checks", []):
+        lines.append(f"{check['status']} {check['message']}")
+    lines.extend(["", report["summary"]["status"]])
+    return "\n".join(lines) + "\n"
+
+
+def write_verification_report(report: Mapping[str, Any], path: str | Path) -> None:
+    destination = Path(path)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(verification_json(report), encoding="utf-8")

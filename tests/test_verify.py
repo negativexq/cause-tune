@@ -7,7 +7,14 @@ import pytest
 
 from causetune.evidence import finalize_evidence, initialize_evidence, record_checkpoint_selection, record_training_result
 from causetune.experiment_contract import resolve_experiment_config
-from causetune.verify import VerificationFailure, verification_exit_code, verification_report, verify
+from causetune.verify import (
+    VerificationFailure,
+    render_verification_report,
+    verification_exit_code,
+    verification_report,
+    verify,
+    write_verification_report,
+)
 
 
 def _contract(tmp_path: Path):
@@ -66,6 +73,10 @@ def test_clean_bundle_verifies_and_reproduces_metrics(tmp_path: Path) -> None:
     assert report["summary"]["verified"] is True
     assert any(check["name"] == "evaluation_reproduction" and check["status"] == "PASS" for check in report["checks"])
     assert verification_exit_code(report) == 0
+    output = tmp_path / "verification.json"
+    write_verification_report(report, output)
+    assert output.read_text(encoding="utf-8").endswith("\n")
+    assert render_verification_report(report).endswith("PASS\n")
 
 
 @pytest.mark.parametrize("relative", ["predictions.jsonl", "resolved_config.json", "evaluation.json"])
