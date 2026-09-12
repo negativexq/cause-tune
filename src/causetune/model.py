@@ -25,10 +25,10 @@ def load_tokenizer(config: SFTConfig) -> Any:
     return tokenizer
 
 
-def load_tokenizer_for_model(model_id: str) -> Any:
+def load_tokenizer_for_model(model_id: str, *, revision: str | None = None) -> Any:
     """Load a tokenizer without constructing model weights."""
 
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    tokenizer = AutoTokenizer.from_pretrained(model_id, revision=revision)
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token = tokenizer.eos_token
     return tokenizer
@@ -84,7 +84,7 @@ def make_quantization_config(config: SFTConfig) -> BitsAndBytesConfig:
     )
 
 
-def load_quantized_base(config: SFTConfig) -> Any:
+def load_quantized_base(config: SFTConfig, *, revision: str | None = None) -> Any:
     """Load a fresh Qwen3-4B NF4 base model on the local CUDA device."""
 
     if not torch.cuda.is_available():
@@ -95,6 +95,7 @@ def load_quantized_base(config: SFTConfig) -> Any:
         quantization_config=make_quantization_config(config),
         dtype=torch.bfloat16,
         device_map={"": device_index},
+        revision=revision,
     )
     model.config.use_cache = False
     return model

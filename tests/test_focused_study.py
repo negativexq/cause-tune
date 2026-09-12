@@ -100,6 +100,8 @@ def _write_training_fixture(path: Path) -> None:
     path.mkdir(parents=True)
     (path / "train.jsonl").write_text("".join(json.dumps(row) + "\n" for row in inputs), encoding="utf-8")
     (path / "ground_truth_train.jsonl").write_text("".join(json.dumps(row) + "\n" for row in truths), encoding="utf-8")
+    (path / "validation.jsonl").write_text(json.dumps(inputs[0]) + "\n", encoding="utf-8")
+    (path / "ground_truth_validation.jsonl").write_text(json.dumps(truths[0]) + "\n", encoding="utf-8")
 
 
 def test_e04a_subsets_are_nested_and_path_independent(tmp_path: Path) -> None:
