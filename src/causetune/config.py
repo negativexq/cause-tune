@@ -152,5 +152,7 @@ from .experiment_contract import (  # noqa: E402  (intentional compatibility exp
     field_classification,
     legacy_config_to_contract,
     load_experiment_contract,
+    metadata_only_fields,
     resolve_experiment_config,
+    training_affecting_fields,
 )

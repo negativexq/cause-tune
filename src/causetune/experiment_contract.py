@@ -16,6 +16,7 @@ from dataclasses import dataclass, field
 from pathlib import PurePath
 from pathlib import Path
 from typing import Any, Mapping
+from types import MappingProxyType
 
 
 SCHEMA_VERSION = 1
@@ -142,15 +143,23 @@ class OptimizerPolicy:
     gradient_accumulation_steps: int = 8
     learning_rate: float = 2e-4
     max_epochs: int = 1
-    max_sequence_length: int = 1024
+    max_sequence_length: int | None = 1024
     gradient_checkpointing: bool = True
     gradient_checkpointing_use_reentrant: bool = False
 
     def __post_init__(self) -> None:
-        for name in ("micro_batch_size", "gradient_accumulation_steps", "max_epochs", "max_sequence_length"):
+        for name in ("micro_batch_size", "gradient_accumulation_steps", "max_epochs"):
             value = getattr(self, name)
             if not isinstance(value, int) or isinstance(value, bool) or value <= 0:
                 raise ExperimentContractError(f"training.optimizer.{name} must be a positive integer")
+        if self.max_sequence_length is not None and (
+            not isinstance(self.max_sequence_length, int)
+            or isinstance(self.max_sequence_length, bool)
+            or self.max_sequence_length <= 0
+        ):
+            raise ExperimentContractError(
+                "training.optimizer.max_sequence_length must be a positive integer or null"
+            )
         if not isinstance(self.learning_rate, (float, int)) or self.learning_rate <= 0:
             raise ExperimentContractError("training.optimizer.learning_rate must be positive")
         if not isinstance(self.gradient_checkpointing, bool) or not isinstance(
@@ -314,11 +323,11 @@ class ExperimentContract:
     schema_version: int
     experiment_id: str
     model: ModelIdentity
-    data: dict[str, DataRole]
+    data: Mapping[str, DataRole]
     training: TrainingPolicy
     evaluation: EvaluationBoundary
     output: OutputPolicy
-    metadata: dict[str, str] = field(default_factory=dict)
+    metadata: Mapping[str, str] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         if self.schema_version != SCHEMA_VERSION:
@@ -332,6 +341,8 @@ class ExperimentContract:
         if any(not isinstance(key, str) or not isinstance(value, str) for key, value in self.metadata.items()):
             raise ExperimentContractError("metadata values must be strings")
         _validate_data_isolation(self.data)
+        object.__setattr__(self, "data", MappingProxyType(dict(self.data)))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
 
     def to_dict(self) -> dict[str, Any]:
         result = {
@@ -612,6 +623,18 @@ def field_classification() -> dict[str, str]:
     return dict(sorted(result.items()))
 
 
+def training_affecting_fields() -> frozenset[str]:
+    """Return fields whose change can alter training or checkpoint selection."""
+
+    return frozenset(key for key, value in field_classification().items() if value == "training-affecting")
+
+
+def metadata_only_fields() -> frozenset[str]:
+    """Return fields that identify or describe a run without changing training."""
+
+    return frozenset(key for key, value in field_classification().items() if value == "metadata-only")
+
+
 def legacy_config_to_contract(raw: Mapping[str, Any], *, experiment_id: str) -> dict[str, Any]:
     """Represent an E01/E02-style config in the M8 schema without executing it.
 
@@ -625,16 +648,25 @@ def legacy_config_to_contract(raw: Mapping[str, Any], *, experiment_id: str) -> 
     train_path = raw.get("dataset_path") or raw.get("dataset_dir")
     validation_path = raw.get("validation_path")
     benchmark_path = raw.get("benchmark_dir") or raw.get("benchmark_path")
-    if validation_path is None and raw.get("dataset_dir"):
-        validation_path = str(PurePath(str(raw["dataset_dir"])) / "validation.jsonl")
-    if benchmark_path is None and raw.get("dataset_path"):
-        benchmark_path = str(PurePath(str(raw["dataset_path"])).with_name("benchmark.jsonl"))
+    dataset_root = raw.get("dataset_dir") or (
+        str(PurePath(str(raw["dataset_path"])).parent) if raw.get("dataset_path") else None
+    )
+    if validation_path is None and dataset_root:
+        validation_path = str(PurePath(str(dataset_root)) / "validation.jsonl")
+    if benchmark_path is None and dataset_root:
+        benchmark_path = str(PurePath(str(dataset_root)) / "benchmark.jsonl")
     if not model_id or not train_path or not validation_path or not benchmark_path:
         raise ExperimentContractError("legacy config cannot be represented without model and three data roles")
 
     training = raw.get("training", raw)
-    quantization = raw.get("quantization", training.get("quantization", {}))
-    lora = raw.get("lora", training.get("lora", {}))
+    quantization_raw = raw.get("quantization", training.get("quantization", {}))
+    lora_raw = raw.get("lora", training.get("lora", {}))
+    quantization = {
+        key: quantization_raw[key]
+        for key in _QUANTIZATION_KEYS
+        if key in quantization_raw
+    }
+    lora = {key: lora_raw[key] for key in _LORA_KEYS if key in lora_raw}
     return {
         "schema_version": SCHEMA_VERSION,
         "experiment_id": experiment_id,
