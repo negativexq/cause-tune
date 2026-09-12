@@ -1,0 +1,11 @@
+{
+  "adapter": "outputs/incident_diagnosis_02b2/checkpoint-step-000100",
+  "benchmark_fingerprint": "10ffbcf9d60edc872d60c706f9c800beac1540b54cd08ad060e5169faa3a8150",
+  "checkpoint_switching": false,
+  "experiment": "E03",
+  "model_id": "Qwen/Qwen3-4B",
+  "prompt_frozen": true,
+  "protocol_version": "blind-one-shot-v1",
+  "scorer_fingerprint": "47197943f6aa76ee62d4e2c964f287b08f953131cecc2f6d007e2fc05fa2f71d",
+  "scorer_version": "incident-scorer-v1"
+}
