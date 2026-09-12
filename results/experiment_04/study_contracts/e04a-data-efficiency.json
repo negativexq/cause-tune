@@ -1,0 +1,30 @@
+{
+  "controlled": {
+    "learning_rate": 0.0002,
+    "lora_rank": 16,
+    "max_steps_policy": "same_budget_rule"
+  },
+  "data": {
+    "benchmark_fingerprint": "10ffbcf9d60edc872d60c706f9c800beac1540b54cd08ad060e5169faa3a8150",
+    "train": "data/incident_diagnosis_training/train.jsonl",
+    "validation": "data/incident_diagnosis_training/validation.jsonl"
+  },
+  "evidence_verification_required": true,
+  "levels": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "negative_results_retained": true,
+  "primary_intervention": "data_fraction",
+  "raw_predictions_required": true,
+  "schema_version": 1,
+  "seed": 20260941,
+  "selection": {
+    "benchmark_used_for_selection": false,
+    "checkpoint_source": "validation",
+    "tuning_on_blind_benchmark": false
+  },
+  "study_id": "e04a-data-efficiency"
+}
