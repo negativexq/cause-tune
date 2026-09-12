@@ -154,3 +154,28 @@ def test_invalid_model_identifier_is_blocking(tmp_path: Path) -> None:
         check["layer"] == "Model" and check["name"] == "model_identifier" and check["status"] == "FAIL"
         for check in report["checks"]
     )
+
+
+def test_incident_directory_roles_recognize_separate_ground_truth_supervision(tmp_path: Path) -> None:
+    train = tmp_path / "train"
+    validation = tmp_path / "validation"
+    benchmark = tmp_path / "benchmark.jsonl"
+    train.mkdir()
+    validation.mkdir()
+    incident = {"incident_id": "i-1", "incident_packet": "packet", "metadata": {"present_components": ["svc"]}}
+    truth = {"incident_id": "i-1", "culprit_service": "svc", "failure_mode": "memory_leak", "recommended_action": "restart_or_replace_instance"}
+    _write_jsonl(train / "train.jsonl", [incident])
+    _write_jsonl(train / "ground_truth_train.jsonl", [truth])
+    _write_jsonl(validation / "validation.jsonl", [incident | {"incident_id": "i-2"}])
+    _write_jsonl(validation / "ground_truth_validation.jsonl", [truth | {"incident_id": "i-2"}])
+    _write_jsonl(benchmark, [{"input": "sealed"}])
+    config = tmp_path / "incident.json"
+    config.write_text(json.dumps({
+        "experiment_id": "incident-doctor",
+        "model": {"model_id": "Qwen/Qwen3-4B", "revision": "commit-test"},
+        "data": {"train": str(train), "validation": str(validation), "benchmark": str(benchmark)},
+        "training": {"seed": 42},
+        "output": {"output_dir": str(tmp_path / "run")},
+    }), encoding="utf-8")
+    report = doctor_report(config)
+    assert not any(check["status"] == "FAIL" for check in report["checks"] if check["name"].endswith("supervision"))

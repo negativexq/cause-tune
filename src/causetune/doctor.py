@@ -128,6 +128,11 @@ def _assistant_tokens(record: Mapping[str, Any]) -> int:
             return len(value.strip())
         if value is not None:
             return len(str(value).strip())
+    # Incident diagnosis training keeps the model-visible packet and the
+    # target in separate files. Ground-truth rows are still explicit
+    # supervision evidence for a directory-backed training role.
+    if all(key in record for key in ("failure_mode", "recommended_action", "culprit_service")):
+        return len(json.dumps(record, ensure_ascii=False, sort_keys=True))
     return 0
 
 
