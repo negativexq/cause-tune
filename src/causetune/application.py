@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any, Mapping
 
 from .doctor import DoctorFailure, doctor_report
-from .evidence import EvidenceError, finalize_evidence, initialize_evidence
+from .evidence import initialize_evidence
 from .experiment_contract import ExperimentContractError, load_experiment_contract
 from .verify import score_predictions, verification_report
 
@@ -16,7 +16,11 @@ def doctor_workflow(config_path: str | Path, *, hardware: bool = False) -> dict[
     return doctor_report(config_path, hardware=hardware)
 
 
-def prepare_train_workflow(
+class TrainingUnavailable(RuntimeError):
+    """Raised when the public training command has no execution runner."""
+
+
+def prepare_workflow(
     config_path: str | Path,
     *,
     run_dir: str | Path | None = None,
@@ -24,8 +28,8 @@ def prepare_train_workflow(
 ) -> dict[str, Any]:
     """Validate and initialize an evidence-backed run before training.
 
-    The current M13 surface deliberately prepares the run and does not start a
-    scientific GPU execution. E03 supplies the first authorized runner.
+    Preparation is intentionally separate from ``train`` until a package-level
+    scientific runner is wired. E03 supplies the first authorized runner.
     """
 
     report = doctor_report(config_path, hardware=hardware)
@@ -41,6 +45,26 @@ def prepare_train_workflow(
         "run_id": manifest["run_id"],
         "doctor": report,
     }
+
+
+def prepare_train_workflow(
+    config_path: str | Path,
+    *,
+    run_dir: str | Path | None = None,
+    hardware: bool = False,
+) -> dict[str, Any]:
+    """Backward-compatible name for the explicit preparation workflow."""
+
+    return prepare_workflow(config_path, run_dir=run_dir, hardware=hardware)
+
+
+def train_workflow(*_args: Any, **_kwargs: Any) -> dict[str, Any]:
+    """Reserve the training command for a real package-level runner."""
+
+    raise TrainingUnavailable(
+        "no package-level training runner is configured; use `causetune prepare` "
+        "or `causetune train --prepare-only` to initialize evidence"
+    )
 
 
 def evaluate_workflow(predictions_path: str | Path, output_path: str | Path) -> dict[str, Any]:

@@ -11,7 +11,8 @@ from .application import (
     compare_workflow,
     doctor_workflow,
     evaluate_workflow,
-    prepare_train_workflow,
+    prepare_workflow,
+    train_workflow,
     verify_workflow,
 )
 from .doctor import render_doctor_report
@@ -43,10 +44,20 @@ def build_parser() -> argparse.ArgumentParser:
     _common_config(doctor)
     doctor.add_argument("--hardware", action="store_true")
 
-    train = commands.add_parser("train", help="validate and initialize an evidence-backed run")
+    prepare = commands.add_parser("prepare", help="validate and initialize an evidence-backed run")
+    _common_config(prepare)
+    prepare.add_argument("--run-dir")
+    prepare.add_argument("--hardware", action="store_true")
+
+    train = commands.add_parser("train", help="run the configured training execution")
     _common_config(train)
     train.add_argument("--run-dir")
     train.add_argument("--hardware", action="store_true")
+    train.add_argument(
+        "--prepare-only",
+        action="store_true",
+        help="explicitly request preparation without starting training",
+    )
 
     evaluate = commands.add_parser("evaluate", help="score persisted predictions")
     evaluate.add_argument("--predictions", required=True)
@@ -89,8 +100,16 @@ def main(argv: list[str] | None = None) -> int:
             report = doctor_workflow(args.config, hardware=args.hardware)
             _emit(report, as_json=args.as_json, human=render_doctor_report(report))
             return _preflight_exit_code(report)
+        if args.command == "prepare":
+            result = prepare_workflow(args.config, run_dir=args.run_dir, hardware=args.hardware)
+            _emit(result, as_json=args.as_json)
+            return EXIT_SUCCESS
         if args.command == "train":
-            result = prepare_train_workflow(args.config, run_dir=args.run_dir, hardware=args.hardware)
+            result = (
+                prepare_workflow(args.config, run_dir=args.run_dir, hardware=args.hardware)
+                if args.prepare_only
+                else train_workflow(args.config, run_dir=args.run_dir, hardware=args.hardware)
+            )
             _emit(result, as_json=args.as_json)
             return EXIT_SUCCESS
         if args.command == "evaluate":
@@ -109,7 +128,7 @@ def main(argv: list[str] | None = None) -> int:
         sys.stderr.write(f"contract error: {exc}\n")
         return EXIT_CONTRACT
     except Exception as exc:
-        if args.command == "train" and hasattr(exc, "report"):
+        if args.command in {"prepare", "train"} and hasattr(exc, "report"):
             report = exc.report
             _emit(report, as_json=args.as_json, human=render_doctor_report(report))
             return _preflight_exit_code(report)
