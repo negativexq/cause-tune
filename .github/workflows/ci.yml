@@ -33,7 +33,9 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/.hf-cache
-          key: ${{ runner.os }}-cause-tune-tiny-gpt2-v1
+          key: ${{ runner.os }}-cause-tune-tiny-gpt2-v1-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-cause-tune-tiny-gpt2-v1-
       - name: Install model-backed smoke dependencies
         run: python -m pip install -e .
       - name: Run real Trainer and PEFT smoke
