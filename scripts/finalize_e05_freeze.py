@@ -47,9 +47,9 @@ def main() -> None:
         "prompt_frozen": True,
         "decoding": {"max_new_tokens": 96, "batch_size": 4, "do_sample": False},
         "systems": [
-            {"name": "base", "model_id": "Qwen/Qwen3-4B", "adapter": None},
-            {"name": "e02", "model_id": "Qwen/Qwen3-4B", "adapter": "outputs/incident_diagnosis_02b2/checkpoint-step-000100"},
-            {"name": "e04", "model_id": "Qwen/Qwen3-4B", "adapter": "runs/experiment_04c/lr1e-4/runner/checkpoint-step-000100"},
+            {"name": "base", "model_id": "Qwen/Qwen3-4B", "revision": "1cfa9a7208912126459214e8b04321603b3df60c", "adapter": None},
+            {"name": "e02", "model_id": "Qwen/Qwen3-4B", "revision": "1cfa9a7208912126459214e8b04321603b3df60c", "adapter": "outputs/incident_diagnosis_02b2/checkpoint-step-000100"},
+            {"name": "e04", "model_id": "Qwen/Qwen3-4B", "revision": "1cfa9a7208912126459214e8b04321603b3df60c", "adapter": "runs/experiment_04c/lr1e-4/runner/checkpoint-step-000100"},
         ],
         "one_shot_per_system": True,
         "fresh_reload_per_system": True,

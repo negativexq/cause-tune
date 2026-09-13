@@ -25,17 +25,20 @@
     {
       "adapter": null,
       "model_id": "Qwen/Qwen3-4B",
-      "name": "base"
+      "name": "base",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
     },
     {
       "adapter": "outputs/incident_diagnosis_02b2/checkpoint-step-000100",
       "model_id": "Qwen/Qwen3-4B",
-      "name": "e02"
+      "name": "e02",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
     },
     {
       "adapter": "runs/experiment_04c/lr1e-4/runner/checkpoint-step-000100",
       "model_id": "Qwen/Qwen3-4B",
-      "name": "e04"
+      "name": "e04",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
     }
   ]
 }
