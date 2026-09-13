@@ -1,0 +1,39 @@
+{
+  "benchmark_used_for_selection": false,
+  "e03_used_for_selection": false,
+  "eligible_variants": [
+    "lr1e-4",
+    "lr2e-4",
+    "lr4e-4"
+  ],
+  "priority_order": [
+    "diagnosis_exact_match",
+    "failure_mode_macro_f1",
+    "resolution_exact_match",
+    "action_accuracy",
+    "evidence_f1",
+    "failure_family_floor",
+    "checkpoint_stability",
+    "earlier_stable_convergence",
+    "training_cost"
+  ],
+  "reference_metrics": {
+    "diagnosis_exact_match": 1.0,
+    "failure_mode_macro_f1": 1.0,
+    "resolution_exact_match": 1.0
+  },
+  "reference_variant": "lr1e-4",
+  "rejected_variants": {},
+  "rule_version": "e04c-selection-v1",
+  "schema_version": 1,
+  "selected_learning_rate": 0.0001,
+  "selected_variant": "lr1e-4",
+  "selection_basis": "validation-only quality eligibility followed by the frozen E04-C priority order",
+  "status": "PASS",
+  "study_id": "e04c-learning-rate",
+  "thresholds": {
+    "failure_family_tolerance_percentage_points": 5.0,
+    "primary_metrics_tolerance_percentage_points": 1.0,
+    "schema_validity_tolerance_percentage_points": 1.0
+  }
+}
