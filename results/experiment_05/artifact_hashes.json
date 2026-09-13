@@ -1,0 +1,27 @@
+{
+  "artifacts": {
+    "benchmark_artifact_hashes.json": "43db5b1a310357e4f5a0632ba90a1c136724888caa0c23fe36275de7840a7a6f",
+    "contamination_report.json": "9700910d6b3bfef44624c82786642efd5665bce798c0153b75446370f8e230ad",
+    "evaluation_comparison.json": "ce83ac3e6dbb8db6da1e57ddb7a48287f4836fb4dfde0268a10f15163a0084ae",
+    "evaluations/base/evaluation.json": "9aee07207636d0e3b465b9c77f1046c3228ecb1056a0d09a3a18552dc56cee1b",
+    "evaluations/base/offline_reproduction.json": "0eca94447ea7e6582e5fc30cfd01172111ae1d3b04fd147a85eb79b42508cf9e",
+    "evaluations/base/predictions.jsonl": "261a826db64702c4aab6affa24c45c333dac0dfe994e079b14f83fb542c68bba",
+    "evaluations/base/raw_outputs.jsonl": "de71b21be27826b08037ad66464cb80022d0560c2094375bf19e594377e85a9b",
+    "evaluations/base/slice_metrics.json": "028f15ae4b5bffbb6a609057e74d13de457b177af77a90eeaadfc6dd27b87660",
+    "evaluations/e02/evaluation.json": "4f84fb007f74bcc7c481b83ee588f9fe57ca9b0d1d9d8d1b1e5a84b78ff8040e",
+    "evaluations/e02/offline_reproduction.json": "204b968288be1be689f574a6008d55a8f930c8cda91a6ee71335bc0965536cb5",
+    "evaluations/e02/predictions.jsonl": "0997320825f536c2da48670358ae08afe9860d8ac2c8924ed5b682f392e8a6b0",
+    "evaluations/e02/raw_outputs.jsonl": "5fe1b66957b1556b6b909f82da08b803b63269f99bd7de42c8bd6f35ecccb8fa",
+    "evaluations/e02/slice_metrics.json": "ad78c62de43998d6b4d4b862ce84817165a433d8f56246f8d4da50f63ad159e6",
+    "evaluations/e04/evaluation.json": "e4b3ba024cf51e2ff1b81ce18e9a089098ae2c783b001a6ba72e9587b6cab605",
+    "evaluations/e04/offline_reproduction.json": "f20565d0d916794db0e3f00d5ad52a96386298ac6cf850664711615c47a07a00",
+    "evaluations/e04/predictions.jsonl": "1f28dd0bd1fcd6eab1ec124581b42eafb9280963f4d364590d7369bb15860f79",
+    "evaluations/e04/raw_outputs.jsonl": "db85956ed929aea6e5083b5d4561aec44573bf4eaecbc8d5f0bbbc56d48b7d6c",
+    "evaluations/e04/slice_metrics.json": "0af2006eb37b0eb8435fc462380756cfd96787490d067ab4ec707ddaabb6f2d7",
+    "g05b_summary.json": "1a045d42afe9e561071729da95ad53861c1ee450e19b613c272c46b1127d32b5",
+    "protocol.json": "67236f261ac7c67e71400d6411f416e6b11f7891e762b703763a7956728a1e84",
+    "transition_analysis.json": "db26af1b0af8cd01521aba0b3e829bb1af660b4e38d88f3f08fdb1a37050e23d"
+  },
+  "benchmark_fingerprint": "b3daed4f49b123b0270baebf49e7609c06f26e5bb10fd125185d6e0864644eaf",
+  "schema_version": 1
+}

@@ -1,0 +1,21 @@
+{
+  "benchmark_fingerprint": "b3daed4f49b123b0270baebf49e7609c06f26e5bb10fd125185d6e0864644eaf",
+  "checkpoint_switching": false,
+  "e03_used": false,
+  "fresh_reload_per_system": true,
+  "offline_reproduction": true,
+  "one_shot_per_system": true,
+  "post_result_prompt_change": false,
+  "raw_predictions": true,
+  "same_decoding": true,
+  "same_prompt": true,
+  "same_scorer": true,
+  "schema_version": 1,
+  "semantic_generation_rerun_during_finalization": false,
+  "status": "PASS",
+  "systems": [
+    "base",
+    "e02",
+    "e04"
+  ]
+}
