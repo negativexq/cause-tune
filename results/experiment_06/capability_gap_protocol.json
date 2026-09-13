@@ -1,0 +1,38 @@
+{
+  "benchmark_dir": "data/incident_diagnosis_e06_screen",
+  "benchmark_fingerprint": "677d6e569c09031c2256161e01dcf48747794678c371948564db97b3e1328505",
+  "case_count": 48,
+  "decoding": {
+    "batch_size": 4,
+    "do_sample": false,
+    "max_new_tokens": 96
+  },
+  "experiment": "E06",
+  "final_evidence_is_separate": true,
+  "license": "MIT",
+  "model_id": "microsoft/Phi-4-mini-instruct",
+  "model_revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+  "prompt_frozen": true,
+  "prompt_path": "configs/incident_diagnosis_eval.json",
+  "prompt_sha256": "d028e47fdc236d7f13365e201b114e35f90cf8cf4491646f0bf07948d514d526",
+  "protocol_version": "e06-capability-gap-screen-v1",
+  "purpose": "pre-training capability-gap screen for the selected non-Qwen model family",
+  "quantization": {
+    "compute_dtype": "bfloat16",
+    "double_quant": true,
+    "load_in_4bit": true,
+    "quant_type": "nf4"
+  },
+  "rejection_threshold": {
+    "diagnosis_exact_min": 0.9,
+    "failure_mode_macro_f1_min": 0.9,
+    "resolution_exact_min": 0.9,
+    "rule": "reject only when all four primary screen metrics meet or exceed thresholds; otherwise a meaningful capability gap exists",
+    "strict_json_min": 0.9
+  },
+  "schema_version": 1,
+  "screen_source": "new deterministic seed using the independent E05 generator namespace; not final E06 evidence",
+  "status": "FROZEN_BEFORE_MODEL_EVALUATION",
+  "training_before_screen": false,
+  "trust_remote_code": true
+}

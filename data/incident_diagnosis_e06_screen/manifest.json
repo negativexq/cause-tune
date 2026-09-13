@@ -1,0 +1,53 @@
+{
+  "benchmark_version": "e06-capability-screen-v1",
+  "contamination_audit": {
+    "canonical_structural_overlap_count": 0,
+    "exact_packet_overlap_count": 0,
+    "incident_id_overlap_count": 0,
+    "normalized_packet_overlap_count": 0,
+    "overlap_ids": {
+      "exact": [],
+      "incident_id": [],
+      "normalized": [],
+      "structural": []
+    },
+    "source_counts": {
+      "data/incident_diagnosis": {
+        "exact": 0,
+        "incident_id": 0,
+        "normalized": 0,
+        "structural": 0
+      },
+      "data/incident_diagnosis_blind_v2": {
+        "exact": 0,
+        "incident_id": 0,
+        "normalized": 0,
+        "structural": 0
+      },
+      "data/incident_diagnosis_training": {
+        "exact": 0,
+        "incident_id": 0,
+        "normalized": 0,
+        "structural": 0
+      }
+    },
+    "status": "pass"
+  },
+  "counts": {
+    "hard": 0,
+    "standard": 48,
+    "transfer": 0
+  },
+  "experiment": "E06",
+  "fingerprint": "677d6e569c09031c2256161e01dcf48747794678c371948564db97b3e1328505",
+  "frozen": true,
+  "generation_seed": 20260915,
+  "origin_counts": {
+    "generated": 48
+  },
+  "schema_version": 1,
+  "screen_is_not_final_evidence": true,
+  "source_generator": "e05-independent-generator-namespace-v1",
+  "taxonomy_reused": true,
+  "total_cases": 48
+}

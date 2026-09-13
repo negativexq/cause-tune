@@ -25,10 +25,10 @@ def load_tokenizer(config: SFTConfig) -> Any:
     return tokenizer
 
 
-def load_tokenizer_for_model(model_id: str, *, revision: str | None = None) -> Any:
+def load_tokenizer_for_model(model_id: str, *, revision: str | None = None, trust_remote_code: bool = False) -> Any:
     """Load a tokenizer without constructing model weights."""
 
-    tokenizer = AutoTokenizer.from_pretrained(model_id, revision=revision)
+    tokenizer = AutoTokenizer.from_pretrained(model_id, revision=revision, trust_remote_code=trust_remote_code)
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token = tokenizer.eos_token
     return tokenizer
@@ -42,6 +42,7 @@ def load_frozen_quantized_base(
     quant_type: str = "nf4",
     compute_dtype: str = "bfloat16",
     double_quant: bool = True,
+    trust_remote_code: bool = False,
 ) -> Any:
     """Load a frozen NF4 base model for evaluation only.
 
@@ -61,6 +62,7 @@ def load_frozen_quantized_base(
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
         revision=revision,
+        trust_remote_code=trust_remote_code,
         quantization_config=quantization_config,
         dtype=torch.bfloat16,
         device_map={"": torch.cuda.current_device()},
@@ -86,7 +88,7 @@ def make_quantization_config(config: SFTConfig) -> BitsAndBytesConfig:
     )
 
 
-def load_quantized_base(config: SFTConfig, *, revision: str | None = None) -> Any:
+def load_quantized_base(config: SFTConfig, *, revision: str | None = None, trust_remote_code: bool = False) -> Any:
     """Load a fresh Qwen3-4B NF4 base model on the local CUDA device."""
 
     if not torch.cuda.is_available():
@@ -98,6 +100,7 @@ def load_quantized_base(config: SFTConfig, *, revision: str | None = None) -> An
         dtype=torch.bfloat16,
         device_map={"": device_index},
         revision=revision,
+        trust_remote_code=trust_remote_code,
     )
     model.config.use_cache = False
     return model
