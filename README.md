@@ -17,6 +17,71 @@ cross-model replication, failure-boundary, and quality/cost studies. The
 complete release audit is in the [v1.0 readiness report](docs/release-v1.0-readiness.md)
 and its [machine-readable evidence manifest](results/release/v1.0-readiness-audit.json).
 
+Key finding: the cheaper E04 recipe saturated validation, but the fresh E05
+blind challenge measured a 5.83 pp diagnosis regression versus E02. E06, E07,
+and E08 then measured limited cross-model replication, non-zero failure-boundary
+false confidence, and a lower-cost but non-quality-preserving trade-off.
+
+| Area | Headline result |
+| --- | --- |
+| E04 selected recipe | Qwen3-4B, 25% / 600 examples, rank 8, alpha 32, `1e-4`, checkpoint 100 |
+| E04 validation | 100% diagnosis, 100% resolution, macro F1 1.0, 100% strict JSON |
+| E05 fresh blind | E02 diagnosis 98.33%; E04 diagnosis 92.50%; delta -5.83 pp |
+| E06 replication | Limited controlled replication on one additional model family: Phi-4-mini |
+| E07 boundary | E04 false-confident diagnosis 9/48 (18.75%) |
+| E08 frontier | E04 lower-cost negative trade-off; not quality-preserving |
+
+## Quick Start
+
+Run a preflight before starting an experiment:
+
+```bash
+causetune doctor --config <config> --hardware
+```
+
+Prepare or execute an evidence-backed run:
+
+```bash
+causetune prepare --config <config> --run-dir <run-directory>
+causetune train --config <config> --run-dir <run-directory>
+```
+
+Verify persisted evidence without model inference:
+
+```bash
+causetune verify <run-directory> --offline
+```
+
+Score and compare persisted predictions:
+
+```bash
+causetune evaluate \
+  --predictions <predictions> \
+  --output <evaluation>
+
+causetune compare \
+  --base <base-evaluation> \
+  --tuned <tuned-evaluation>
+```
+
+See all commands:
+
+```bash
+causetune --help
+```
+
+## Experiment Results
+
+| Experiment | Question | Result |
+| --- | --- | --- |
+| E04-A | How much data is needed? | Validation saturated at 25% / 600 examples |
+| E04-B | How much LoRA capacity is needed? | Rank 8 selected under the frozen validation rule |
+| E04-C | Which learning rate works under the selected recipe? | `1e-4` selected |
+| E05 | Does the optimized recipe survive a fresh blind set? | No — E04 trailed E02 by 5.83 pp diagnosis |
+| E06 | Does specialization reproduce on another model family? | Limited replication on Phi-4-mini |
+| E07 | What happens under insufficient or ambiguous evidence? | Non-zero false confidence remained |
+| E08 | Was the cheaper recipe quality-preserving? | No — negative quality/cost trade-off |
+
 ### E04 selected recipe
 
 Under the predeclared validation-only E04 study, the selected Qwen3-4B recipe
@@ -72,18 +137,6 @@ at the failure boundary.
 E08 classified E04 as a **lower-cost negative trade-off**. It reduced the
 unique training corpus and wall-clock cost, but was not quality-preserving once
 the E05 blind regression was included.
-
-## Experiment Results
-
-| Experiment | Question | Result |
-| --- | --- | --- |
-| E04-A | How much data is needed? | Validation saturated at 25% / 600 examples |
-| E04-B | How much LoRA capacity is needed? | Rank 8 selected under the frozen validation rule |
-| E04-C | Which learning rate works under the selected recipe? | `1e-4` selected |
-| E05 | Does the optimized recipe survive a fresh blind set? | No — E04 trailed E02 by 5.83 pp diagnosis |
-| E06 | Does specialization reproduce on another model family? | Limited replication on Phi-4-mini |
-| E07 | What happens under insufficient or ambiguous evidence? | Non-zero false confidence remained |
-| E08 | Was the cheaper recipe quality-preserving? | No — negative quality/cost trade-off |
 
 ## What CauseTune Tests
 
@@ -550,23 +603,28 @@ Each valid run records:
 - evaluation artifacts and raw predictions;
 - artifact hashes and offline-verification state.
 
-## CLI and quick start
+## CLI Reference and Reproducibility
 
-The installed CLI exposes only the implemented laboratory workflows:
+The installed CLI exposes the implemented laboratory workflows. `doctor` runs
+preflight checks, `prepare` validates and initializes an evidence-backed run,
+and `train` performs the configured training execution. The `--prepare-only`
+flag is available when a caller needs to validate a training invocation without
+starting training.
 
 ```bash
-causetune --help
-causetune doctor --config <config> [--hardware]
-causetune prepare --config <config> --run-dir <run-directory>
-causetune train --config <config> --run-dir <run-directory>
-causetune evaluate --predictions <predictions> --output <evaluation>
-causetune compare --base <base-evaluation> --tuned <tuned-evaluation>
-causetune verify <run-directory> --offline
+causetune train --config <config> --run-dir <run-directory> --prepare-only
 ```
 
-Training and hardware operations require the relevant experiment configuration
-and runtime dependencies. `verify --offline` checks a persisted evidence bundle
-without launching model inference.
+`evaluate` scores persisted predictions, `compare` compares persisted base and
+tuned evaluations, and `verify --offline` checks a persisted evidence bundle
+without launching model inference. Training and hardware operations require
+the relevant experiment configuration and runtime dependencies. Use
+`causetune --help` for the complete option set.
+
+Every valid run records the resolved experiment configuration, model ID and
+pinned revision, training/validation/benchmark fingerprints,
+checkpoint-selection provenance, evaluation artifacts, raw predictions,
+artifact hashes, and offline-verification state.
 
 ## Repository layout
 
