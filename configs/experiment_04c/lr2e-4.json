@@ -1,0 +1,85 @@
+{
+  "data": {
+    "benchmark": {
+      "fingerprint": "c491fc93f882abfd33c2d82855e7cd183fc6ad064cbc0afec6bf21d9bd852d80",
+      "path": "data/incident_diagnosis"
+    },
+    "train": {
+      "fingerprint": "156c9862ebab8a2e3ccef69cc3879c1dc6cb88666d439320216b69bd56f629ed",
+      "path": "data/experiment_04a/subsets/025pct"
+    },
+    "validation": {
+      "fingerprint": "375ae9ae09de3397f84789a8628a7d368e09f3b6e23f11b5d0b074d8e39efdd7",
+      "path": "data/experiment_04a/subsets/validation"
+    }
+  },
+  "evaluation": {
+    "contract_version": "incident-evaluation-v1",
+    "scorer_version": "incident-scorer-v1"
+  },
+  "experiment_id": "e04c-lr2e-4",
+  "metadata": {
+    "notes": "learning_rate=0.0002; rank=8; alpha=32; data_fraction=0.25; selected_subset_hash=eaecc635921cb82219f4e6efc05a1387d76ae52695430f333c640b8f87728f56",
+    "tags": "e04c-learning-rate"
+  },
+  "model": {
+    "model_id": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "revision_policy": "pinned"
+  },
+  "output": {
+    "output_dir": "runs/experiment_04c/lr2e-4"
+  },
+  "schema_version": 1,
+  "training": {
+    "checkpoint_policy": {
+      "interval_steps": 25,
+      "primary_metric": "diagnosis_exact_match",
+      "selection_split": "validation",
+      "validation_only": true
+    },
+    "lora": {
+      "alpha": 32,
+      "dropout": 0.0,
+      "rank": 8,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "optimizer": {
+      "gradient_accumulation_steps": 8,
+      "gradient_checkpointing": true,
+      "gradient_checkpointing_use_reentrant": false,
+      "learning_rate": 0.0002,
+      "max_epochs": 2,
+      "max_sequence_length": 768,
+      "micro_batch_size": 1
+    },
+    "preprocessing": {
+      "deterministic": true,
+      "seed": 20260941,
+      "shuffle": true,
+      "version": "incident-preprocess-v1"
+    },
+    "quantization": {
+      "compute_dtype": "bfloat16",
+      "double_quant": true,
+      "load_in_4bit": true,
+      "quant_type": "nf4"
+    },
+    "seed": 20260941,
+    "stopping_policy": {
+      "eval_interval_steps": 25,
+      "max_steps": 150,
+      "min_delta": 0.005,
+      "mode": "early_stopping",
+      "patience": 3
+    }
+  }
+}
