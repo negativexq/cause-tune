@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "experiment": "E08",
+  "question": "Was the E04 training-efficiency gain worth the E05 fresh-blind generalization regression?",
+  "status": "FROZEN",
+  "candidates": [
+    {
+      "name": "e02_original",
+      "source_experiment": "E02",
+      "source_run": "outputs/incident_diagnosis_02b2",
+      "blind_evidence": "results/experiment_05/evaluations/e02"
+    },
+    {
+      "name": "e04_selected",
+      "source_experiment": "E04",
+      "source_run": "runs/experiment_04c/lr1e-4",
+      "blind_evidence": "results/experiment_05/evaluations/e04"
+    }
+  ],
+  "reference_candidate": "e02_original",
+  "same_frozen_blind_benchmark": "b3daed4f49b123b0270baebf49e7609c06f26e5bb10fd125185d6e0864644eaf",
+  "quality_tolerance": {
+    "diagnosis_exact_max_loss_pp": 1.0,
+    "failure_mode_macro_f1_max_loss_pp": 1.0,
+    "critical_family_max_loss_pp": 5.0,
+    "major_schema_regression": false
+  },
+  "automatic_search": false,
+  "new_semantic_evaluations": false,
+  "classification": "deterministic quality-preservation and dominance rules"
+}
