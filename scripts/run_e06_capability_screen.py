@@ -13,6 +13,7 @@ from typing import Any
 
 import torch
 
+from causetune.benchmark_e05 import SCORER_VERSION, scorer_fingerprint
 from causetune.evidence import sha256_path
 from causetune.incident_benchmark import packet_evidence_ids
 from causetune.incident_evaluation import evaluate_incidents
@@ -60,9 +61,11 @@ def main() -> None:
         raise ValueError("E06 capability screen protocol is missing its prompt hash")
     if compatibility.get("status") != "PASS" or compatibility.get("attempt_0", {}).get("status") != "TECHNICAL_FAILURE":
         raise ValueError("E06 compatibility recovery record is invalid")
-    for key in ("model_id", "model_revision", "benchmark_fingerprint", "prompt_sha256", "scorer_version", "scorer_fingerprint"):
+    for key in ("model_id", "model_revision", "benchmark_fingerprint", "prompt_sha256"):
         if compatibility.get(key) != (protocol.get("model_id") if key == "model_id" else protocol.get(key)):
             raise ValueError(f"E06 compatibility recovery changed frozen field: {key}")
+    if compatibility.get("scorer_version") != SCORER_VERSION or compatibility.get("scorer_fingerprint") != scorer_fingerprint():
+        raise ValueError("E06 compatibility recovery scorer is not canonical")
     if compatibility.get("decoding") != protocol.get("decoding") or not compatibility.get("decoding_unchanged"):
         raise ValueError("E06 compatibility recovery changed decoding")
     records = _read_jsonl(dataset / "standard.jsonl")
