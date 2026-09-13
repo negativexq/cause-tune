@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "experiment_id": "e06-phi4-mini-capability-gap",
+  "model": {
+    "model_id": "microsoft/Phi-4-mini-instruct",
+    "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+    "revision_policy": "pinned"
+  },
+  "data": {
+    "train": {
+      "path": "data/experiment_04a/subsets/025pct",
+      "fingerprint": "156c9862ebab8a2e3ccef69cc3879c1dc6cb88666d439320216b69bd56f629ed"
+    },
+    "validation": {
+      "path": "data/experiment_04a/subsets/validation",
+      "fingerprint": "375ae9ae09de3397f84789a8628a7d368e09f3b6e23f11b5d0b074d8e39efdd7"
+    },
+    "benchmark": {
+      "path": "data/incident_diagnosis",
+      "fingerprint": "c491fc93f882abfd33c2d82855e7cd183fc6ad064cbc0afec6bf21d9bd852d80"
+    }
+  },
+  "training": {
+    "seed": 20260941,
+    "quantization": {
+      "load_in_4bit": true,
+      "quant_type": "nf4",
+      "compute_dtype": "bfloat16",
+      "double_quant": true
+    },
+    "lora": {
+      "rank": 8,
+      "alpha": 32,
+      "dropout": 0.0,
+      "target_modules": ["qkv_proj", "o_proj", "gate_up_proj", "down_proj"]
+    },
+    "optimizer": {
+      "micro_batch_size": 1,
+      "gradient_accumulation_steps": 8,
+      "learning_rate": 0.0001,
+      "max_epochs": 2,
+      "max_sequence_length": 768,
+      "gradient_checkpointing": true,
+      "gradient_checkpointing_use_reentrant": false
+    },
+    "checkpoint_policy": {
+      "selection_split": "validation",
+      "validation_only": true,
+      "primary_metric": "diagnosis_exact_match",
+      "interval_steps": 25
+    },
+    "stopping_policy": {
+      "mode": "early_stopping",
+      "max_steps": 150,
+      "patience": 3,
+      "min_delta": 0.005,
+      "eval_interval_steps": 25
+    },
+    "preprocessing": {
+      "deterministic": true,
+      "shuffle": true,
+      "seed": 20260941,
+      "version": "incident-preprocess-v1"
+    }
+  },
+  "evaluation": {
+    "contract_version": "incident-evaluation-v1",
+    "scorer_version": "incident-scorer-v1"
+  },
+  "output": {
+    "output_dir": "runs/experiment_06/training"
+  },
+  "metadata": {
+    "description": "E06 cross-model training after a valid capability-gap screen",
+    "notes": "Uses the selected E04 recipe methodology on the frozen 25pct subset; benchmark is reporting-only and excluded from training decisions. Native Transformers loading is required by compatibility recovery.",
+    "tags": "e06-cross-model-replication"
+  }
+}

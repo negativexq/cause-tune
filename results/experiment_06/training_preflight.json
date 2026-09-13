@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "protocol": "configs/experiment_06/e06-training.json",
+  "protocol_status": "FROZEN_BEFORE_TRAINING",
+  "doctor": {
+    "status": "PASS",
+    "hardware": "NVIDIA GeForce RTX 5070 Laptop GPU",
+    "cuda": "13.0",
+    "bf16": true,
+    "bitsandbytes": "0.50.2",
+    "python": "3.12.3",
+    "torch": "2.14.0+cu130",
+    "transformers": "5.16.1",
+    "accelerate": "1.14.0",
+    "peft": "0.20.0"
+  },
+  "model": {
+    "model_id": "microsoft/Phi-4-mini-instruct",
+    "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+    "trust_remote_code": false,
+    "native_class": "Phi3ForCausalLM",
+    "load": "PASS"
+  },
+  "lora_attachment": {
+    "status": "PASS",
+    "rank": 8,
+    "alpha": 32,
+    "trainable_parameters": 11534336,
+    "logical_parameters": 3847556096,
+    "target_module_counts": {
+      "qkv_proj": 32,
+      "o_proj": 32,
+      "gate_up_proj": 32,
+      "down_proj": 32
+    },
+    "device": "cuda:0"
+  },
+  "capability_gap_screen": {
+    "status": "PASS",
+    "decision": "CAPABILITY_GAP_PRESENT",
+    "screen": "results/experiment_06/capability_gap-retry-01",
+    "benchmark_fingerprint": "677d6e569c09031c2256161e01dcf48747794678c371948564db97b3e1328505"
+  },
+  "benchmark_used_for_training_decisions": false
+}
