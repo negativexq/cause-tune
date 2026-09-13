@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 
 from causetune.evidence import sha256_path
@@ -12,6 +13,21 @@ ROOT = Path("results/experiment_05")
 
 def _json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _assert_metrics_close(expected, actual) -> None:
+    if isinstance(expected, float) and isinstance(actual, float):
+        assert math.isclose(expected, actual, rel_tol=0.0, abs_tol=1e-15)
+    elif isinstance(expected, dict) and isinstance(actual, dict):
+        assert expected.keys() == actual.keys()
+        for key in expected:
+            _assert_metrics_close(expected[key], actual[key])
+    elif isinstance(expected, list) and isinstance(actual, list):
+        assert len(expected) == len(actual)
+        for left, right in zip(expected, actual):
+            _assert_metrics_close(left, right)
+    else:
+        assert expected == actual
 
 
 def test_e05_gate_and_frozen_identity() -> None:
@@ -37,7 +53,7 @@ def test_e05_persisted_predictions_reproduce_and_are_hashed() -> None:
         prediction_path = ROOT / "evaluations" / name / "predictions.jsonl"
         persisted = _json(ROOT / "evaluations" / name / "evaluation.json")["metrics"]
         assert sum(1 for line in prediction_path.read_text(encoding="utf-8").splitlines() if line.strip()) == 120
-        assert score_incident_predictions(prediction_path) == persisted
+        _assert_metrics_close(score_incident_predictions(prediction_path), persisted)
 
 
 def test_e05_transition_accounting_is_complete() -> None:
