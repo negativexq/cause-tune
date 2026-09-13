@@ -130,7 +130,14 @@ def main() -> None:
             model = load_frozen_quantized_base(system["model_id"], revision=system["revision"], trust_remote_code=False, **eval_config["quantization"])
             if system.get("adapter"):
                 model = load_adapter(model, system["adapter"])
-            raw = _generate(model, tokenizer, records, system_instruction, protocol["decoding"]["max_new_tokens"], protocol["decoding"]["batch_size"])
+            raw = _generate(
+                model,
+                tokenizer,
+                records,
+                system_instruction,
+                max_new_tokens=protocol["decoding"]["max_new_tokens"],
+                batch_size=protocol["decoding"]["batch_size"],
+            )
             _write_jsonl(destination / "raw_outputs.jsonl", [{"incident_id": record["incident_id"], "raw_output": raw[record["incident_id"]]} for record in records])
             raw_hashes[name] = sha256_path(destination / "raw_outputs.jsonl")
             evaluation = _enrich(records, evaluate_incidents(records, truth_by_id, raw))
