@@ -1,0 +1,29 @@
+{
+  "benchmark_used_for_selection": false,
+  "e03_used_for_selection": false,
+  "eligible_variants": [
+    "r8",
+    "r16",
+    "r32"
+  ],
+  "reference_metrics": {
+    "diagnosis_exact_match": 1.0,
+    "failure_mode_macro_f1": 1.0,
+    "resolution_exact_match": 1.0
+  },
+  "reference_variant": "r8",
+  "rejected_variants": {},
+  "rule_version": "e04b-selection-v1",
+  "schema_version": 1,
+  "selected_rank": 8,
+  "selected_trainable_parameters": 16515072,
+  "selected_variant": "r8",
+  "selection_basis": "smallest rank satisfying the predeclared validation-only quality rule",
+  "status": "PASS",
+  "study_id": "e04b-lora-capacity",
+  "thresholds": {
+    "failure_family_tolerance_percentage_points": 5.0,
+    "primary_metrics_tolerance_percentage_points": 1.0,
+    "schema_validity_tolerance_percentage_points": 1.0
+  }
+}

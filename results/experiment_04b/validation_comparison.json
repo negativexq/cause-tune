@@ -1,0 +1,561 @@
+{
+  "benchmark_used_for_selection": false,
+  "e03_used_for_selection": false,
+  "primary_intervention": "lora_rank",
+  "schema_version": 1,
+  "selection_boundary": "validation-only",
+  "status": "PASS",
+  "study_id": "e04b-lora-capacity",
+  "technical_failures": [],
+  "variants": [
+    {
+      "actual_steps": 100,
+      "alpha": 32,
+      "configured_steps": 150,
+      "cost": {
+        "input_tokens_processed": 449817,
+        "peak_allocated_vram_gib": 5.074396,
+        "peak_reserved_vram_gib": 9.691406,
+        "supervised_tokens_processed": 31551,
+        "trainable_parameters": 16515072,
+        "training_examples_processed": 800,
+        "validation_wall_clock_seconds": 2220.8703392410016,
+        "wall_clock_training_seconds": 3381.5170002489995
+      },
+      "data_fraction": 0.25,
+      "dataset_fingerprint": "156c9862ebab8a2e3ccef69cc3879c1dc6cb88666d439320216b69bd56f629ed",
+      "evidence": {
+        "adapter_weights_local_only": true,
+        "artifact_hashes": {
+          "checkpoint_selection.json": "29c5b378bf81a53778882c87295a274bb337b9288e229f7a0558750b0a59ca52",
+          "data_manifest.json": "a7c51377cf3c45185c0ea362fba4f52e47c1ba540097642f5070227e21881e99",
+          "environment.json": "92ed03bdb61acbf239c471aff8d532344a865d5709774c30f10aa9716b668d17",
+          "evaluation.json": "61434939d03ed9a334c64904c6b77f2800c3ffc552ed693605cd1fa3768958f6",
+          "evaluation_contract.json": "4aea3e209aed0cec03b59d51ffec6f087e8fad87aae7152fa6b3b752f9ac9f7a",
+          "parameter_provenance.json": "22958e96fff59440838b94125b9705771e8de131850370562f1cca5317ffc0d8",
+          "predictions.jsonl": "d29a526e788a11c2cc67fe30c848e7bb7093fcdc01bfe25076a7cabd96ad69f5",
+          "reload_verification.json": "f2e9c5a14b84be5fdadff0de138e921594d5edc5b2d668e29f6c4f932688dfda",
+          "resolved_config.json": "dba1d00e4b74459574c09d0cb863f9a562634224350955f61eba9a1fb100fcec",
+          "runner/checkpoint-step-000025/README.md": "4613b1812cbee3e386b581887b71d97aa8d7aa2ac2860faaedec6cf54c53231b",
+          "runner/checkpoint-step-000025/adapter_config.json": "9fe0fd86bcd1b8a30d175c4ddc07b365f95f397cdd160b10662faf8e8f6d065e",
+          "runner/checkpoint-step-000025/adapter_model.safetensors": "9ba74c9cff46ee59aee0db235e0a90ce7c4b1c53c7714a6d4796e21ba54dcbfe",
+          "runner/checkpoint-step-000025/checkpoint_metadata.json": "b8850a7775646acb84d757fd6d79eec790a09c7aca79425c1ea9df678c38ddbd",
+          "runner/checkpoint-step-000050/README.md": "4613b1812cbee3e386b581887b71d97aa8d7aa2ac2860faaedec6cf54c53231b",
+          "runner/checkpoint-step-000050/adapter_config.json": "9fe0fd86bcd1b8a30d175c4ddc07b365f95f397cdd160b10662faf8e8f6d065e",
+          "runner/checkpoint-step-000050/adapter_model.safetensors": "de8d32a12576e7e8fe35d05005d5ac06f24da321a6fcc162308f2c3f07c34275",
+          "runner/checkpoint-step-000050/checkpoint_metadata.json": "d274b4dbb69f9d2dd840df90a8fcf95fe3fbeffd0ff284ca6976f0430183b7d1",
+          "runner/checkpoint-step-000075/README.md": "4613b1812cbee3e386b581887b71d97aa8d7aa2ac2860faaedec6cf54c53231b",
+          "runner/checkpoint-step-000075/adapter_config.json": "9fe0fd86bcd1b8a30d175c4ddc07b365f95f397cdd160b10662faf8e8f6d065e",
+          "runner/checkpoint-step-000075/adapter_model.safetensors": "0327e8503c801eaa11b535dd0a98cd5bb11c3cab9cc8d9a1e934b52856ce3e12",
+          "runner/checkpoint-step-000075/checkpoint_metadata.json": "5e4a5ae447adcdc9f45d3b2b9b9cfc6e77f2d0886440715fc54eb59893a5923f",
+          "runner/checkpoint-step-000100/README.md": "4613b1812cbee3e386b581887b71d97aa8d7aa2ac2860faaedec6cf54c53231b",
+          "runner/checkpoint-step-000100/adapter_config.json": "9fe0fd86bcd1b8a30d175c4ddc07b365f95f397cdd160b10662faf8e8f6d065e",
+          "runner/checkpoint-step-000100/adapter_model.safetensors": "ecd9ea939bafa6dd73b2120750659c2afedc0f9d0176fdeefeb5801a93512a4d",
+          "runner/checkpoint-step-000100/checkpoint_metadata.json": "37cb0cffb0ce354b79f2ac4d064996b195cbff92b3e2111292b0a31ba4cedff6",
+          "runner/checkpoint_selection.json": "0733bbc3a77b46aa7ce1e26a08cc3dcbbc28febc1171eb3e0172ed7f62b0c1cc",
+          "runner/loss_history.json": "6bcd5bc68858b4fc9f133e25087f9a333d3fee7866e9e3d8634fac0dbb96a214",
+          "runner/optimizer_steps.jsonl": "9b620d6dbaa5d49693391dab3ff181da260440f1eb029e752724d99d9e15041b",
+          "runner/resolved_manifest.json": "e1674293b006581190e99fbdf99ef7e2c7f737d3542b044082ab098bfba70aa4",
+          "runner/training_summary.json": "8e76df65bdd057185043a3b0e4e524ba2a0ddf07f1a412f590525b7768d117c3",
+          "runner/validation_progression.jsonl": "71e89207b5ca82a99d68e8ff015e83d0a747fb6750fb56fe5d4a094ab52e5fe7",
+          "runner_checkpoint_selection.json": "0733bbc3a77b46aa7ce1e26a08cc3dcbbc28febc1171eb3e0172ed7f62b0c1cc",
+          "training_metrics.jsonl": "9b620d6dbaa5d49693391dab3ff181da260440f1eb029e752724d99d9e15041b",
+          "training_summary.json": "8e76df65bdd057185043a3b0e4e524ba2a0ddf07f1a412f590525b7768d117c3"
+        },
+        "artifact_hashes_sha256": "26904775ea7c9c2ebe82d3bf126926046750d58abccb97b8edbf866ec05beff9",
+        "raw_predictions_preserved": true,
+        "verification": "PASS"
+      },
+      "example_count": 600,
+      "failure_family_metrics": {
+        "cache_stampede": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "configuration_regression": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "db_connection_pool_exhaustion": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "db_query_regression": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "disk_io_saturation": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "dns_resolution_failure": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "downstream_dependency_timeout": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "kafka_consumer_lag": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "memory_leak": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "rate_limit_misconfiguration": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "thread_pool_exhaustion": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "tls_certificate_expiration": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        }
+      },
+      "metrics": {
+        "action_accuracy": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "culprit_accuracy": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "diagnosis_exact_match": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "evidence_f1": 1.0,
+        "failure_mode_macro_f1": 1.0,
+        "resolution_exact_match": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "strict_json": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "valid_json": 1.0
+      },
+      "model": {
+        "model_id": "Qwen/Qwen3-4B",
+        "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "revision_policy": "pinned"
+      },
+      "rank": 8,
+      "resolved_config_hash": "d95a966e56654c86ed6184f9ef692875f8555d946bf676057250de706d6e9c85",
+      "selected_checkpoint": 100,
+      "stop_reason": "validation_no_improvement",
+      "subset_hash": "eaecc635921cb82219f4e6efc05a1387d76ae52695430f333c640b8f87728f56",
+      "validation_fingerprint": "375ae9ae09de3397f84789a8628a7d368e09f3b6e23f11b5d0b074d8e39efdd7",
+      "variant": "r8"
+    },
+    {
+      "actual_steps": 100,
+      "alpha": 32,
+      "configured_steps": 150,
+      "cost": {
+        "input_tokens_processed": 449817,
+        "peak_allocated_vram_gib": 5.32049,
+        "peak_reserved_vram_gib": 10.001953,
+        "supervised_tokens_processed": 31551,
+        "trainable_parameters": 33030144,
+        "training_examples_processed": 800,
+        "validation_wall_clock_seconds": 2190.891445968,
+        "wall_clock_training_seconds": 3394.4948089339996
+      },
+      "data_fraction": 0.25,
+      "dataset_fingerprint": "156c9862ebab8a2e3ccef69cc3879c1dc6cb88666d439320216b69bd56f629ed",
+      "evidence": {
+        "adapter_weights_local_only": true,
+        "artifact_hashes": {
+          "checkpoint_selection.json": "29c5b378bf81a53778882c87295a274bb337b9288e229f7a0558750b0a59ca52",
+          "data_manifest.json": "a7c51377cf3c45185c0ea362fba4f52e47c1ba540097642f5070227e21881e99",
+          "environment.json": "92ed03bdb61acbf239c471aff8d532344a865d5709774c30f10aa9716b668d17",
+          "evaluation.json": "61434939d03ed9a334c64904c6b77f2800c3ffc552ed693605cd1fa3768958f6",
+          "evaluation_contract.json": "4aea3e209aed0cec03b59d51ffec6f087e8fad87aae7152fa6b3b752f9ac9f7a",
+          "parameter_provenance.json": "8f73d3f9fcc3ef6324c33ce9c89d3da0647dba4e48485da3c932c74945e990c0",
+          "predictions.jsonl": "d29a526e788a11c2cc67fe30c848e7bb7093fcdc01bfe25076a7cabd96ad69f5",
+          "reload_verification.json": "9bfc0ad076dab13548ae97d47ad5cdd3fbc8fd85ca86197e06f134ef25c5efdc",
+          "resolved_config.json": "1367ac33d43200043ce0804910950f237f3b2453b8b3a4edfa35fccfcf9462ea",
+          "runner/checkpoint-step-000025/README.md": "4613b1812cbee3e386b581887b71d97aa8d7aa2ac2860faaedec6cf54c53231b",
+          "runner/checkpoint-step-000025/adapter_config.json": "adb6b61ed4e3529e9436cc69abf18b083ad0f92d6e29060d9ff0d454af9e687d",
+          "runner/checkpoint-step-000025/adapter_model.safetensors": "7c91deeb78a67c94e1f2e490e4a8cf89d5e407e5013a2f318345629f3714c45a",
+          "runner/checkpoint-step-000025/checkpoint_metadata.json": "032d2a165fec3d54d183887b22bd06b18206547f3fe5109ea16d51b163a3ada4",
+          "runner/checkpoint-step-000050/README.md": "4613b1812cbee3e386b581887b71d97aa8d7aa2ac2860faaedec6cf54c53231b",
+          "runner/checkpoint-step-000050/adapter_config.json": "adb6b61ed4e3529e9436cc69abf18b083ad0f92d6e29060d9ff0d454af9e687d",
+          "runner/checkpoint-step-000050/adapter_model.safetensors": "225e2d147be0d796e918e870cda3a836f70e338d6f5c40d069a16e3f88d8e70b",
+          "runner/checkpoint-step-000050/checkpoint_metadata.json": "3cfa2f7b78fdcc4cb0bc17c01d81b814cea424944ceb463fd9b79d376236a9a7",
+          "runner/checkpoint-step-000075/README.md": "4613b1812cbee3e386b581887b71d97aa8d7aa2ac2860faaedec6cf54c53231b",
+          "runner/checkpoint-step-000075/adapter_config.json": "adb6b61ed4e3529e9436cc69abf18b083ad0f92d6e29060d9ff0d454af9e687d",
+          "runner/checkpoint-step-000075/adapter_model.safetensors": "96d9c7f29447e3a17e373c24085875e2ae3a628dd2f5eb973452e49ea481f557",
+          "runner/checkpoint-step-000075/checkpoint_metadata.json": "9074f1cdb9198078fc46e7530b98db16c211c0d30590bd2939011dd756561c9d",
+          "runner/checkpoint-step-000100/README.md": "4613b1812cbee3e386b581887b71d97aa8d7aa2ac2860faaedec6cf54c53231b",
+          "runner/checkpoint-step-000100/adapter_config.json": "adb6b61ed4e3529e9436cc69abf18b083ad0f92d6e29060d9ff0d454af9e687d",
+          "runner/checkpoint-step-000100/adapter_model.safetensors": "abf9fbe3cb4f0e04c79333f6180120b89ca8200273b634c95f6d9d79d3d3953e",
+          "runner/checkpoint-step-000100/checkpoint_metadata.json": "cb85486c187bb4b639a3f43cc45dbd6d3a9a7c19a3f804a9866dc9d1cc6198ce",
+          "runner/checkpoint_selection.json": "876951dcd450bb75b53a6b318eb11f8d92f7de4d47ac3436c0852880c0b57c62",
+          "runner/loss_history.json": "7bed53506b5af1723adee636c0a3be42d45fd68f00aa96847b1b29f7ee71cd91",
+          "runner/optimizer_steps.jsonl": "ba127292e80d271a261aa8e49daaa255881180da5a2b5c3fcea2ffd786ec203f",
+          "runner/resolved_manifest.json": "c6fd8bb4cf0cb9b3a817d376b1bed18a9f422e2bdc80aeb0766931e3fe946e91",
+          "runner/training_summary.json": "e048a20c23b72f8a16f71b7a57240e2f74d6b3e93a654771f11c375311a16c08",
+          "runner/validation_progression.jsonl": "c946c9c9fc90df6ae4e8ee6712538aa796b8cde2be7a3f469ebb772afd171eb1",
+          "runner_checkpoint_selection.json": "876951dcd450bb75b53a6b318eb11f8d92f7de4d47ac3436c0852880c0b57c62",
+          "training_metrics.jsonl": "ba127292e80d271a261aa8e49daaa255881180da5a2b5c3fcea2ffd786ec203f",
+          "training_summary.json": "e048a20c23b72f8a16f71b7a57240e2f74d6b3e93a654771f11c375311a16c08"
+        },
+        "artifact_hashes_sha256": "3b080353da0f0cd616da3280cccbe11938b71600c36283c03efb9b3c8f1a0e2d",
+        "raw_predictions_preserved": true,
+        "verification": "PASS"
+      },
+      "example_count": 600,
+      "failure_family_metrics": {
+        "cache_stampede": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "configuration_regression": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "db_connection_pool_exhaustion": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "db_query_regression": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "disk_io_saturation": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "dns_resolution_failure": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "downstream_dependency_timeout": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "kafka_consumer_lag": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "memory_leak": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "rate_limit_misconfiguration": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "thread_pool_exhaustion": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "tls_certificate_expiration": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        }
+      },
+      "metrics": {
+        "action_accuracy": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "culprit_accuracy": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "diagnosis_exact_match": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "evidence_f1": 1.0,
+        "failure_mode_macro_f1": 1.0,
+        "resolution_exact_match": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "strict_json": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "valid_json": 1.0
+      },
+      "model": {
+        "model_id": "Qwen/Qwen3-4B",
+        "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "revision_policy": "pinned"
+      },
+      "rank": 16,
+      "resolved_config_hash": "8140476fcb55ae24063dfc798f4d706f7ef3b26ad6fd784487d087ff6efd64ab",
+      "selected_checkpoint": 100,
+      "stop_reason": "validation_no_improvement",
+      "subset_hash": "eaecc635921cb82219f4e6efc05a1387d76ae52695430f333c640b8f87728f56",
+      "validation_fingerprint": "375ae9ae09de3397f84789a8628a7d368e09f3b6e23f11b5d0b074d8e39efdd7",
+      "variant": "r16"
+    },
+    {
+      "actual_steps": 100,
+      "alpha": 32,
+      "configured_steps": 150,
+      "cost": {
+        "input_tokens_processed": 449817,
+        "peak_allocated_vram_gib": 5.861302,
+        "peak_reserved_vram_gib": 10.076172,
+        "supervised_tokens_processed": 31551,
+        "trainable_parameters": 66060288,
+        "training_examples_processed": 800,
+        "validation_wall_clock_seconds": 2349.700785351999,
+        "wall_clock_training_seconds": 4229.666322720001
+      },
+      "data_fraction": 0.25,
+      "dataset_fingerprint": "156c9862ebab8a2e3ccef69cc3879c1dc6cb88666d439320216b69bd56f629ed",
+      "evidence": {
+        "adapter_weights_local_only": true,
+        "artifact_hashes": {
+          "checkpoint_selection.json": "29c5b378bf81a53778882c87295a274bb337b9288e229f7a0558750b0a59ca52",
+          "data_manifest.json": "a7c51377cf3c45185c0ea362fba4f52e47c1ba540097642f5070227e21881e99",
+          "environment.json": "92ed03bdb61acbf239c471aff8d532344a865d5709774c30f10aa9716b668d17",
+          "evaluation.json": "61434939d03ed9a334c64904c6b77f2800c3ffc552ed693605cd1fa3768958f6",
+          "evaluation_contract.json": "4aea3e209aed0cec03b59d51ffec6f087e8fad87aae7152fa6b3b752f9ac9f7a",
+          "parameter_provenance.json": "a31c86653b5b0d30c3456660ecc99676a23339483291420db2285f0ad1f4848e",
+          "predictions.jsonl": "d29a526e788a11c2cc67fe30c848e7bb7093fcdc01bfe25076a7cabd96ad69f5",
+          "reload_verification.json": "8e6428866fd5ac6eb8830b5a328a2b067d6c0ceaa911ca669dadd7990792bef4",
+          "resolved_config.json": "c6b9bd97a4cd798dabeb571721a59556c45cdb760fda02df204ac84d5642868c",
+          "runner/checkpoint-step-000025/README.md": "4613b1812cbee3e386b581887b71d97aa8d7aa2ac2860faaedec6cf54c53231b",
+          "runner/checkpoint-step-000025/adapter_config.json": "df5f3cfd720de5dd30c50874ca01345cd246207f6959359cb055b93791e079f0",
+          "runner/checkpoint-step-000025/adapter_model.safetensors": "e07689617350e7c5d34dd46783f28fa9a997c606d77d8c5e5ee9a9b061b1b413",
+          "runner/checkpoint-step-000025/checkpoint_metadata.json": "6a3e5264ee6774a21ae2ab453f62631030db91def30361734fbbd52c8dde8b73",
+          "runner/checkpoint-step-000050/README.md": "4613b1812cbee3e386b581887b71d97aa8d7aa2ac2860faaedec6cf54c53231b",
+          "runner/checkpoint-step-000050/adapter_config.json": "df5f3cfd720de5dd30c50874ca01345cd246207f6959359cb055b93791e079f0",
+          "runner/checkpoint-step-000050/adapter_model.safetensors": "53584adb415284e58bbeae9296fcb1e76470e1d764597d9807b8d7b2d8bda4c2",
+          "runner/checkpoint-step-000050/checkpoint_metadata.json": "3b52a865101e6c1c308e09c91ac4c6a1b3162eb706d30ed0e60849ed7ccef89d",
+          "runner/checkpoint-step-000075/README.md": "4613b1812cbee3e386b581887b71d97aa8d7aa2ac2860faaedec6cf54c53231b",
+          "runner/checkpoint-step-000075/adapter_config.json": "df5f3cfd720de5dd30c50874ca01345cd246207f6959359cb055b93791e079f0",
+          "runner/checkpoint-step-000075/adapter_model.safetensors": "8d847d724d73d6416c93b554ca7c2583ddfb0bfb799f46075ed76aeaebd8a5e8",
+          "runner/checkpoint-step-000075/checkpoint_metadata.json": "902d5d814bfcb73b3897a60a7cb280636b2624dead207266d760c0a674a9e1bc",
+          "runner/checkpoint-step-000100/README.md": "4613b1812cbee3e386b581887b71d97aa8d7aa2ac2860faaedec6cf54c53231b",
+          "runner/checkpoint-step-000100/adapter_config.json": "df5f3cfd720de5dd30c50874ca01345cd246207f6959359cb055b93791e079f0",
+          "runner/checkpoint-step-000100/adapter_model.safetensors": "d7d2cb65f8ba1e1f42c619a48f4ba13f2534f9d975664480bf593d8c56612664",
+          "runner/checkpoint-step-000100/checkpoint_metadata.json": "5c8cfae58ca759936c6d98d100b8b45fcd4b3b4a2cf557758982c6a1f2e877bb",
+          "runner/checkpoint_selection.json": "734fe3f0235d96cdc493699cb456249e1bd3d6b1f27d08df16ff888c3204cf1c",
+          "runner/loss_history.json": "836fc918cde11d5a6c43b2ae1b485585d20ced948eb5c03e069e7ea27e5bcd17",
+          "runner/optimizer_steps.jsonl": "5f6ac8aacaeb0e99025d7babc7c8029c22685d5b125b5383aed1dea7f459b6ed",
+          "runner/resolved_manifest.json": "9d762f664a104059acb7f99f45a953c8ffe3a3a455f7e6b997905df99aecde11",
+          "runner/training_summary.json": "42e95bfb5c24e8744ace25d16b1b35bdb6869ee97caa92818e17431c71b7470c",
+          "runner/validation_progression.jsonl": "75dcf1b7121392bdc6e3068c7416eed24da2299760049d4bce2b35dd1211cb40",
+          "runner_checkpoint_selection.json": "734fe3f0235d96cdc493699cb456249e1bd3d6b1f27d08df16ff888c3204cf1c",
+          "training_metrics.jsonl": "5f6ac8aacaeb0e99025d7babc7c8029c22685d5b125b5383aed1dea7f459b6ed",
+          "training_summary.json": "42e95bfb5c24e8744ace25d16b1b35bdb6869ee97caa92818e17431c71b7470c"
+        },
+        "artifact_hashes_sha256": "84e7f770461e4c773d9a398d944c6c929b4a8d4b0b73394b0134c9ca20e3e7ff",
+        "raw_predictions_preserved": true,
+        "verification": "PASS"
+      },
+      "example_count": 600,
+      "failure_family_metrics": {
+        "cache_stampede": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "configuration_regression": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "db_connection_pool_exhaustion": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "db_query_regression": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "disk_io_saturation": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "dns_resolution_failure": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "downstream_dependency_timeout": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "kafka_consumer_lag": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "memory_leak": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "rate_limit_misconfiguration": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "thread_pool_exhaustion": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        },
+        "tls_certificate_expiration": {
+          "action_accuracy": 1.0,
+          "diagnosis_exact_match": 1.0,
+          "failure_mode_f1": 1.0,
+          "json_compliance": 1.0,
+          "resolution_exact_match": 1.0
+        }
+      },
+      "metrics": {
+        "action_accuracy": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "culprit_accuracy": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "diagnosis_exact_match": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "evidence_f1": 1.0,
+        "failure_mode_macro_f1": 1.0,
+        "resolution_exact_match": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "strict_json": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "valid_json": 1.0
+      },
+      "model": {
+        "model_id": "Qwen/Qwen3-4B",
+        "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "revision_policy": "pinned"
+      },
+      "rank": 32,
+      "resolved_config_hash": "82daeb45c8881a3a66725cf0897dbdbdc364d3963518b855630c764851b46b09",
+      "selected_checkpoint": 100,
+      "stop_reason": "validation_no_improvement",
+      "subset_hash": "eaecc635921cb82219f4e6efc05a1387d76ae52695430f333c640b8f87728f56",
+      "validation_fingerprint": "375ae9ae09de3397f84789a8628a7d368e09f3b6e23f11b5d0b074d8e39efdd7",
+      "variant": "r32"
+    }
+  ]
+}
