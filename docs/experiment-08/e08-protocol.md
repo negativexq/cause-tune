@@ -26,7 +26,7 @@ A lower-cost recipe is quality-preserving only if all conditions hold:
 - diagnosis exact is within `-1.0 percentage point` of the reference;
 - failure-mode macro F1 is within `-1.0 percentage point` of the reference;
 - no critical failure-family regression exceeds `5.0 percentage points`;
-- no major schema-validity regression exists.
+- no major schema-validity regression exists; for this protocol, a major schema regression is a loss greater than `5.0 percentage points`.
 
 The E05 fresh-blind metrics are used only because E02 and E04 were both evaluated exactly once on the same frozen 120-case benchmark. The E04 E05 diagnosis result (`92.5%`) is not changed or reinterpreted as an E04 selection criterion.
 

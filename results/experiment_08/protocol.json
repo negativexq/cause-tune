@@ -23,7 +23,8 @@
     "diagnosis_exact_max_loss_pp": 1.0,
     "failure_mode_macro_f1_max_loss_pp": 1.0,
     "critical_family_max_loss_pp": 5.0,
-    "major_schema_regression": false
+    "major_schema_regression": false,
+    "major_schema_max_loss_pp": 5.0
   },
   "automatic_search": false,
   "new_semantic_evaluations": false,

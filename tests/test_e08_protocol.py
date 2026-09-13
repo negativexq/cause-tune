@@ -15,3 +15,4 @@ def test_e08_protocol_freezes_only_measured_candidates() -> None:
     assert protocol["automatic_search"] is False
     assert protocol["new_semantic_evaluations"] is False
     assert protocol["quality_tolerance"]["diagnosis_exact_max_loss_pp"] == 1.0
+    assert protocol["quality_tolerance"]["major_schema_max_loss_pp"] == 5.0
