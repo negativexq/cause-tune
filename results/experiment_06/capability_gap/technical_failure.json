@@ -1,0 +1,10 @@
+{
+  "attempt": 0,
+  "benchmark_fingerprint": "677d6e569c09031c2256161e01dcf48747794678c371948564db97b3e1328505",
+  "benchmark_hash": "349b53b81edf43fcf97b9cc245c890751856a0d18f0bf758e8ac35f7f070454a",
+  "exception": "ImportError: cannot import name 'LossKwargs' from 'transformers.utils' (/home/ofk/projects/cause-tune/.venv/lib/python3.12/site-packages/transformers/utils/__init__.py)",
+  "git_sha": "6329cdbd69ca7d3d182d09089ac846f1c9110066",
+  "stage": "model_load_or_generation_or_screen_scoring",
+  "status": "TECHNICAL_FAILURE",
+  "valid_semantic_run": false
+}
