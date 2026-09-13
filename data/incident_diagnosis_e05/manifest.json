@@ -1,0 +1,61 @@
+{
+  "benchmark_version": "incident-e05-blind-v1",
+  "contamination_audit": {
+    "canonical_structural_overlap_count": 0,
+    "exact_packet_overlap_count": 0,
+    "incident_id_overlap_count": 0,
+    "normalized_packet_overlap_count": 0,
+    "overlap_ids": {
+      "exact": [],
+      "incident_id": [],
+      "normalized": [],
+      "structural": []
+    },
+    "source_counts": {
+      "data/incident_diagnosis": {
+        "exact": 0,
+        "incident_id": 0,
+        "normalized": 0,
+        "structural": 0
+      },
+      "data/incident_diagnosis_blind_v2": {
+        "exact": 0,
+        "incident_id": 0,
+        "normalized": 0,
+        "structural": 0
+      },
+      "data/incident_diagnosis_training": {
+        "exact": 0,
+        "incident_id": 0,
+        "normalized": 0,
+        "structural": 0
+      }
+    },
+    "status": "pass"
+  },
+  "contamination_sources": [
+    "data/incident_diagnosis_training",
+    "data/incident_diagnosis",
+    "data/incident_diagnosis_blind_v2"
+  ],
+  "counts": {
+    "hard": 36,
+    "standard": 60,
+    "transfer": 24
+  },
+  "fingerprint": "b3daed4f49b123b0270baebf49e7609c06f26e5bb10fd125185d6e0864644eaf",
+  "frozen": true,
+  "generation_seed": 20260913,
+  "generator_version": "e05-independent-generator-namespace-v1",
+  "origin_counts": {
+    "generated": 96,
+    "static": 24
+  },
+  "schema_version": 1,
+  "scorer_fingerprint": "47197943f6aa76ee62d4e2c964f287b08f953131cecc2f6d007e2fc05fa2f71d",
+  "scorer_version": "incident-scorer-v1",
+  "static_fixture_version": "e05-static-authored-fixtures-v1",
+  "taxonomy_reused": true,
+  "topology_namespace": "e05-custom-compositions-v1",
+  "total_cases": 120
+}

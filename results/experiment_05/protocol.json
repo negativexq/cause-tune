@@ -1,0 +1,41 @@
+{
+  "benchmark_fingerprint": "b3daed4f49b123b0270baebf49e7609c06f26e5bb10fd125185d6e0864644eaf",
+  "benchmark_manifest_sha256": "24506cf280a4b6c37cf4143025e5fdbac2233148e61736d80008a3c874c865b7",
+  "benchmark_version": "incident-e05-blind-v1",
+  "checkpoint_switching": false,
+  "decoding": {
+    "batch_size": 4,
+    "do_sample": false,
+    "max_new_tokens": 96
+  },
+  "e04_selection_after_freeze": true,
+  "experiment": "E05",
+  "fresh_reload_per_system": true,
+  "offline_reproduction_required": true,
+  "one_shot_per_system": true,
+  "post_result_prompt_change": false,
+  "prompt_frozen": true,
+  "prompt_path": "configs/incident_diagnosis_eval.json",
+  "protocol_version": "e05-one-shot-blind-v1",
+  "raw_predictions_required": true,
+  "schema_version": 1,
+  "scorer_fingerprint": "47197943f6aa76ee62d4e2c964f287b08f953131cecc2f6d007e2fc05fa2f71d",
+  "scorer_version": "incident-scorer-v1",
+  "systems": [
+    {
+      "adapter": null,
+      "model_id": "Qwen/Qwen3-4B",
+      "name": "base"
+    },
+    {
+      "adapter": "outputs/incident_diagnosis_02b2/checkpoint-step-000100",
+      "model_id": "Qwen/Qwen3-4B",
+      "name": "e02"
+    },
+    {
+      "adapter": "runs/experiment_04c/lr1e-4/runner/checkpoint-step-000100",
+      "model_id": "Qwen/Qwen3-4B",
+      "name": "e04"
+    }
+  ]
+}

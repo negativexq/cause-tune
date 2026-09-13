@@ -1,0 +1,43 @@
+{
+  "audit": {
+    "canonical_structural_overlap_count": 0,
+    "exact_packet_overlap_count": 0,
+    "incident_id_overlap_count": 0,
+    "normalized_packet_overlap_count": 0,
+    "overlap_ids": {
+      "exact": [],
+      "incident_id": [],
+      "normalized": [],
+      "structural": []
+    },
+    "source_counts": {
+      "data/incident_diagnosis": {
+        "exact": 0,
+        "incident_id": 0,
+        "normalized": 0,
+        "structural": 0
+      },
+      "data/incident_diagnosis_blind_v2": {
+        "exact": 0,
+        "incident_id": 0,
+        "normalized": 0,
+        "structural": 0
+      },
+      "data/incident_diagnosis_training": {
+        "exact": 0,
+        "incident_id": 0,
+        "normalized": 0,
+        "structural": 0
+      }
+    },
+    "status": "pass"
+  },
+  "benchmark_fingerprint": "b3daed4f49b123b0270baebf49e7609c06f26e5bb10fd125185d6e0864644eaf",
+  "schema_version": 1,
+  "sources": [
+    "data/incident_diagnosis_training",
+    "data/incident_diagnosis",
+    "data/incident_diagnosis_blind_v2"
+  ],
+  "status": "pass"
+}

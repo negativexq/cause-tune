@@ -1,0 +1,12 @@
+{
+  "artifacts": {
+    "case_provenance.json": "1b4adeb9791add3dcc3b1612a1990ce2e8d46e2f5cb61dfe283d1065b95eaa9b",
+    "ground_truth.jsonl": "7ee52665a590701a6b6881fa2642f22debb9c2e892057f7ac0b73bd19eeb9df1",
+    "hard.jsonl": "bd950bca52601277f44951df844e80be06025c596f98fbae3cb6aeb0ab82bfc3",
+    "manifest.json": "24506cf280a4b6c37cf4143025e5fdbac2233148e61736d80008a3c874c865b7",
+    "standard.jsonl": "0f6a7c1c3c27cf0c8b8d37d7e04364ba7a3733dfcd3ab1704cdd638a6221c75a",
+    "transfer.jsonl": "c3d19d5ec9f136041a865a39e98b620b6fe0c0668596ffe65838fd2dd0c3bb88"
+  },
+  "benchmark_fingerprint": "b3daed4f49b123b0270baebf49e7609c06f26e5bb10fd125185d6e0864644eaf",
+  "schema_version": 1
+}

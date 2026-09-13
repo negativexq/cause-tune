@@ -1,0 +1,962 @@
+[
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-001",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-002",
+    "origin": "generated",
+    "structural_signature": "6b5b57851f87c83396fa76cbc089a4826e7e4d03e72cc1d36646006573773bc7",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-003",
+    "origin": "generated",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-004",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-005",
+    "origin": "generated",
+    "structural_signature": "c033d10932f99ef3854e61332a9a17871ac15d10f93cd3edfc8b0f518da5f692",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-006",
+    "origin": "generated",
+    "structural_signature": "840b8c9dcf02f6db521555ff41e5e1dc3985bafdd428917890bc8fd918801d22",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-007",
+    "origin": "generated",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-008",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-009",
+    "origin": "generated",
+    "structural_signature": "6b65a7506c768bbf77e957494c97573bf3f7a531813c5b63221b5985305650e6",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-010",
+    "origin": "generated",
+    "structural_signature": "16934278606fce894370c83bc51b3b713e488d0f01fef071f28a9c8375407c9a",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-011",
+    "origin": "generated",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-012",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-013",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-014",
+    "origin": "generated",
+    "structural_signature": "bbce688edd805caa8310f8c4dd2d1ffdc551254559f57fc99b24bdd73ce6300d",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-015",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-016",
+    "origin": "generated",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-017",
+    "origin": "generated",
+    "structural_signature": "840b8c9dcf02f6db521555ff41e5e1dc3985bafdd428917890bc8fd918801d22",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-018",
+    "origin": "generated",
+    "structural_signature": "6b65a7506c768bbf77e957494c97573bf3f7a531813c5b63221b5985305650e6",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-019",
+    "origin": "generated",
+    "structural_signature": "6b5b57851f87c83396fa76cbc089a4826e7e4d03e72cc1d36646006573773bc7",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-020",
+    "origin": "generated",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-021",
+    "origin": "generated",
+    "structural_signature": "6b65a7506c768bbf77e957494c97573bf3f7a531813c5b63221b5985305650e6",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-022",
+    "origin": "generated",
+    "structural_signature": "c033d10932f99ef3854e61332a9a17871ac15d10f93cd3edfc8b0f518da5f692",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-023",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-024",
+    "origin": "generated",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-025",
+    "origin": "generated",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-026",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-027",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-028",
+    "origin": "generated",
+    "structural_signature": "6b5b57851f87c83396fa76cbc089a4826e7e4d03e72cc1d36646006573773bc7",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-029",
+    "origin": "generated",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-030",
+    "origin": "generated",
+    "structural_signature": "6b65a7506c768bbf77e957494c97573bf3f7a531813c5b63221b5985305650e6",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-031",
+    "origin": "generated",
+    "structural_signature": "bbce688edd805caa8310f8c4dd2d1ffdc551254559f57fc99b24bdd73ce6300d",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-032",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-033",
+    "origin": "generated",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-034",
+    "origin": "generated",
+    "structural_signature": "840b8c9dcf02f6db521555ff41e5e1dc3985bafdd428917890bc8fd918801d22",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-035",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-036",
+    "origin": "generated",
+    "structural_signature": "6b5b57851f87c83396fa76cbc089a4826e7e4d03e72cc1d36646006573773bc7",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-037",
+    "origin": "generated",
+    "structural_signature": "6b5b57851f87c83396fa76cbc089a4826e7e4d03e72cc1d36646006573773bc7",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-038",
+    "origin": "generated",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-039",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-040",
+    "origin": "generated",
+    "structural_signature": "bbce688edd805caa8310f8c4dd2d1ffdc551254559f57fc99b24bdd73ce6300d",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-041",
+    "origin": "generated",
+    "structural_signature": "840b8c9dcf02f6db521555ff41e5e1dc3985bafdd428917890bc8fd918801d22",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-042",
+    "origin": "generated",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-043",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-044",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-045",
+    "origin": "generated",
+    "structural_signature": "16934278606fce894370c83bc51b3b713e488d0f01fef071f28a9c8375407c9a",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-046",
+    "origin": "generated",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-047",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-048",
+    "origin": "generated",
+    "structural_signature": "bbce688edd805caa8310f8c4dd2d1ffdc551254559f57fc99b24bdd73ce6300d",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-049",
+    "origin": "generated",
+    "structural_signature": "bbce688edd805caa8310f8c4dd2d1ffdc551254559f57fc99b24bdd73ce6300d",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-050",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-051",
+    "origin": "generated",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-052",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-053",
+    "origin": "generated",
+    "structural_signature": "6b65a7506c768bbf77e957494c97573bf3f7a531813c5b63221b5985305650e6",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-054",
+    "origin": "generated",
+    "structural_signature": "16934278606fce894370c83bc51b3b713e488d0f01fef071f28a9c8375407c9a",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-055",
+    "origin": "generated",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-056",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-057",
+    "origin": "generated",
+    "structural_signature": "c033d10932f99ef3854e61332a9a17871ac15d10f93cd3edfc8b0f518da5f692",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-058",
+    "origin": "generated",
+    "structural_signature": "840b8c9dcf02f6db521555ff41e5e1dc3985bafdd428917890bc8fd918801d22",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-059",
+    "origin": "generated",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-060",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-061",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-062",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-063",
+    "origin": "generated",
+    "structural_signature": "6b5b57851f87c83396fa76cbc089a4826e7e4d03e72cc1d36646006573773bc7",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-064",
+    "origin": "generated",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-065",
+    "origin": "generated",
+    "structural_signature": "6b65a7506c768bbf77e957494c97573bf3f7a531813c5b63221b5985305650e6",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-066",
+    "origin": "generated",
+    "structural_signature": "c033d10932f99ef3854e61332a9a17871ac15d10f93cd3edfc8b0f518da5f692",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-067",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-068",
+    "origin": "generated",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-069",
+    "origin": "generated",
+    "structural_signature": "840b8c9dcf02f6db521555ff41e5e1dc3985bafdd428917890bc8fd918801d22",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-070",
+    "origin": "generated",
+    "structural_signature": "6b65a7506c768bbf77e957494c97573bf3f7a531813c5b63221b5985305650e6",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-071",
+    "origin": "generated",
+    "structural_signature": "6b5b57851f87c83396fa76cbc089a4826e7e4d03e72cc1d36646006573773bc7",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-072",
+    "origin": "generated",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-073",
+    "origin": "generated",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-074",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-075",
+    "origin": "generated",
+    "structural_signature": "bbce688edd805caa8310f8c4dd2d1ffdc551254559f57fc99b24bdd73ce6300d",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-076",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-077",
+    "origin": "generated",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-078",
+    "origin": "generated",
+    "structural_signature": "840b8c9dcf02f6db521555ff41e5e1dc3985bafdd428917890bc8fd918801d22",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-079",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-080",
+    "origin": "generated",
+    "structural_signature": "6b5b57851f87c83396fa76cbc089a4826e7e4d03e72cc1d36646006573773bc7",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-081",
+    "origin": "generated",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-082",
+    "origin": "generated",
+    "structural_signature": "6b65a7506c768bbf77e957494c97573bf3f7a531813c5b63221b5985305650e6",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-083",
+    "origin": "generated",
+    "structural_signature": "bbce688edd805caa8310f8c4dd2d1ffdc551254559f57fc99b24bdd73ce6300d",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-084",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-085",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-086",
+    "origin": "generated",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-087",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-088",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-089",
+    "origin": "generated",
+    "structural_signature": "16934278606fce894370c83bc51b3b713e488d0f01fef071f28a9c8375407c9a",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-090",
+    "origin": "generated",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-091",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-092",
+    "origin": "generated",
+    "structural_signature": "bbce688edd805caa8310f8c4dd2d1ffdc551254559f57fc99b24bdd73ce6300d",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-093",
+    "origin": "generated",
+    "structural_signature": "840b8c9dcf02f6db521555ff41e5e1dc3985bafdd428917890bc8fd918801d22",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-094",
+    "origin": "generated",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-095",
+    "origin": "generated",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-independent-generator-namespace-v1",
+    "incident_id": "e05-generated-096",
+    "origin": "generated",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-097",
+    "origin": "static",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-098",
+    "origin": "static",
+    "structural_signature": "6b5b57851f87c83396fa76cbc089a4826e7e4d03e72cc1d36646006573773bc7",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-099",
+    "origin": "static",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-100",
+    "origin": "static",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-101",
+    "origin": "static",
+    "structural_signature": "c033d10932f99ef3854e61332a9a17871ac15d10f93cd3edfc8b0f518da5f692",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-102",
+    "origin": "static",
+    "structural_signature": "840b8c9dcf02f6db521555ff41e5e1dc3985bafdd428917890bc8fd918801d22",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-103",
+    "origin": "static",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-104",
+    "origin": "static",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-105",
+    "origin": "static",
+    "structural_signature": "6b65a7506c768bbf77e957494c97573bf3f7a531813c5b63221b5985305650e6",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-106",
+    "origin": "static",
+    "structural_signature": "16934278606fce894370c83bc51b3b713e488d0f01fef071f28a9c8375407c9a",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-107",
+    "origin": "static",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-108",
+    "origin": "static",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-109",
+    "origin": "static",
+    "structural_signature": "92389668153eb83c690c7982474f03589e1ee27a4638f74bf692d16c9c679e95",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-110",
+    "origin": "static",
+    "structural_signature": "bbce688edd805caa8310f8c4dd2d1ffdc551254559f57fc99b24bdd73ce6300d",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-111",
+    "origin": "static",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-112",
+    "origin": "static",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-113",
+    "origin": "static",
+    "structural_signature": "840b8c9dcf02f6db521555ff41e5e1dc3985bafdd428917890bc8fd918801d22",
+    "topology_family": "media_fabric"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-114",
+    "origin": "static",
+    "structural_signature": "6b65a7506c768bbf77e957494c97573bf3f7a531813c5b63221b5985305650e6",
+    "topology_family": "research_grid"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-115",
+    "origin": "static",
+    "structural_signature": "6b5b57851f87c83396fa76cbc089a4826e7e4d03e72cc1d36646006573773bc7",
+    "topology_family": "energy_mesh"
+  },
+  {
+    "chronology": "negative_distractor",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-116",
+    "origin": "static",
+    "structural_signature": "368c4add936fb0c83fad9ca39cf9a0d80e59f71b73a45feec4bb19fc09d1baba",
+    "topology_family": "care_exchange"
+  },
+  {
+    "chronology": "causal_first",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-117",
+    "origin": "static",
+    "structural_signature": "6b65a7506c768bbf77e957494c97573bf3f7a531813c5b63221b5985305650e6",
+    "topology_family": "ledger_lattice"
+  },
+  {
+    "chronology": "causal_after",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-118",
+    "origin": "static",
+    "structural_signature": "c033d10932f99ef3854e61332a9a17871ac15d10f93cd3edfc8b0f518da5f692",
+    "topology_family": "supply_chain"
+  },
+  {
+    "chronology": "coincident_change",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-119",
+    "origin": "static",
+    "structural_signature": "d1a832ff2e421fb5d5de9aad10b19c195fd0e65d8e95c20069f87e22a34f22c7",
+    "topology_family": "fleet_control"
+  },
+  {
+    "chronology": "recovered_distractor",
+    "generator_version": "e05-static-authored-fixtures-v1",
+    "incident_id": "e05-static-120",
+    "origin": "static",
+    "structural_signature": "4b99713ea131262d6435b34576b69c050d4939521c00b3d16cb743d9cf22091d",
+    "topology_family": "learning_exchange"
+  }
+]
