@@ -1,0 +1,46 @@
+{
+  "abstention_semantics": {
+    "ambiguous_evidence": "evidence supports multiple plausible or contradictory explanations",
+    "diagnose": "sufficient evidence for one defensible taxonomy diagnosis",
+    "insufficient_evidence": "required causal evidence is missing",
+    "out_of_taxonomy": "evidence does not map to the frozen failure-family taxonomy"
+  },
+  "benchmark_dir": "data/incident_diagnosis_e07_boundary",
+  "benchmark_fingerprint": "c797b3a8378a2cbb2cb1e2a27e05a561087a62ed3f9adc74aa050d9f3f42a800",
+  "benchmark_hash": "46bea9923e27b41d07303a8bf01892dbaa0b40961a0ab21ebd85a2a2ebcb3674",
+  "case_count": 60,
+  "contamination_audit": {
+    "exact_packet_duplicates": {
+      "e02": 0,
+      "e05": 0,
+      "e06_final": 0,
+      "training": 0
+    },
+    "normalized_packet_duplicates": {
+      "e02": 0,
+      "e05": 0,
+      "e06_final": 0,
+      "training": 0
+    },
+    "status": "PASS"
+  },
+  "decoding": {
+    "batch_size": 4,
+    "do_sample": false,
+    "max_new_tokens": 128
+  },
+  "experiment": "E07",
+  "inputs_frozen": true,
+  "prompt_path": "configs/e07_boundary_prompt.txt",
+  "prompt_sha256": "363e0c98113812f85cd3b03559ab9e2d44150efa7c5c335db29e189bb9b24dd9",
+  "question": "Does specialization cause confident incorrect diagnoses when evidence is insufficient or ambiguous?",
+  "schema_version": 1,
+  "scorer": "deterministic E07 boundary scorer, no LLM judge",
+  "selection_exclusion": "evaluation-only; excluded from all training and checkpoint decisions",
+  "systems": [
+    "base",
+    "e02",
+    "e04"
+  ],
+  "truths_frozen": true
+}

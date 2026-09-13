@@ -1,0 +1,41 @@
+{
+  "benchmark_version": "experiment-07-boundary-v1",
+  "case_count": 60,
+  "case_counts": {
+    "contradictory_evidence": 8,
+    "insufficient_evidence": 12,
+    "missing_metrics": 6,
+    "missing_topology": 6,
+    "multiple_plausible_culprits": 8,
+    "out_of_taxonomy": 8,
+    "sufficient": 12
+  },
+  "contamination": {
+    "exact_packet_duplicates": {
+      "e02": 0,
+      "e05": 0,
+      "e06_final": 0,
+      "training": 0
+    },
+    "normalized_packet_duplicates": {
+      "e02": 0,
+      "e05": 0,
+      "e06_final": 0,
+      "training": 0
+    },
+    "status": "PASS"
+  },
+  "experiment": "E07",
+  "fingerprint": "c797b3a8378a2cbb2cb1e2a27e05a561087a62ed3f9adc74aa050d9f3f42a800",
+  "generation_seed": 20260915,
+  "generator_version": "experiment-07-boundary-v1",
+  "ground_truth_file": "ground_truth.jsonl",
+  "inputs_frozen": true,
+  "schema_version": 1,
+  "slice_counts": {
+    "hard": 0,
+    "standard": 60,
+    "transfer": 0
+  },
+  "truths_frozen": true
+}
