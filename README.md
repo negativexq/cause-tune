@@ -1,12 +1,106 @@
 # CauseTune
 
-## LLM Fine-Tuning Laboratory
+## Controlled LLM Post-Training Experiments
 
-**Measure the gap. Fine-tune. Explain the gain.**
+**Measure the gap. Fine-tune. Explain the gain. Prove the run.**
 
-CauseTune is a hands-on LLM fine-tuning laboratory for measuring specialization
-gains, training dynamics, generalization, failure behavior, and efficiency under
-constrained hardware.
+CauseTune is a controlled LLM post-training laboratory for measuring capability
+gaps, running reproducible QLoRA specialization experiments, analyzing training
+dynamics, and testing whether gains survive fresh held-out evaluation. It is a
+research workflow with frozen contracts, persisted evidence, and offline
+verification—not a serving platform or a collection of generic recipes.
+
+## v1.0 Results
+
+CauseTune v1.0 completed controlled optimization, fresh blind generalization,
+cross-model replication, failure-boundary, and quality/cost studies. The
+complete release audit is in the [v1.0 readiness report](docs/release-v1.0-readiness.md)
+and its [machine-readable evidence manifest](results/release/v1.0-readiness-audit.json).
+
+### E04 selected recipe
+
+Under the predeclared validation-only E04 study, the selected Qwen3-4B recipe
+was:
+
+| Control | Selected value |
+| --- | --- |
+| Model | `Qwen/Qwen3-4B` |
+| Training data | 25% / 600 examples |
+| LoRA | rank 8, alpha 32 |
+| Learning rate | `1e-4` |
+| Selected checkpoint | step 100 |
+| Validation diagnosis / resolution | 100% / 100% |
+| Validation failure-mode macro F1 | 1.0 |
+| Validation strict JSON | 100% |
+
+This is validation saturation for the frozen task. It did not prove that the
+smaller recipe preserved fresh generalization.
+
+### E05 fresh blind generalization
+
+The independent 120-case synthetic, taxonomy-aligned blind challenge exposed
+the most important optimization result:
+
+| System | Diagnosis exact | Resolution exact | Failure-mode macro F1 | Strict JSON |
+| --- | ---: | ---: | ---: | ---: |
+| Untouched Qwen3-4B base | 66.67% | 28.33% | 73.95% | 91.67% |
+| Original E02 adapter | 98.33% | 98.33% | 98.73% | 99.17% |
+| E04 selected adapter | 92.50% | 92.50% | 94.09% | 95.83% |
+
+E04 reduced the training footprint while preserving saturated validation
+performance, but the fresh E05 blind challenge exposed a **5.83 percentage
+point diagnosis regression versus E02**. The result is preserved as evidence;
+E04 was not retroactively changed.
+
+### E06 cross-model replication
+
+`microsoft/Phi-4-mini-instruct` showed a capability gap and was trained under
+the controlled methodology with a separate final held-out benchmark. The tuned
+model reached 38/60 diagnosis exact (63.33%), 38/60 resolution exact (63.33%),
+failure-mode macro F1 71.30%, and 100% valid JSON. The untouched Phi baseline
+scored 0% diagnosis, 0% resolution, and 0% strict JSON compliance on that
+contract. This is limited replication evidence from **one additional model
+family**, not a production-accuracy claim.
+
+### E07 and E08 conclusions
+
+E07 tested sufficient, insufficient, contradictory, ambiguous, missing-evidence,
+and out-of-taxonomy cases. The E04 adapter achieved 100% sufficient-case
+accuracy, but retained a non-zero false-confident diagnosis rate: 9/48 (18.75%)
+at the failure boundary.
+
+E08 classified E04 as a **lower-cost negative trade-off**. It reduced the
+unique training corpus and wall-clock cost, but was not quality-preserving once
+the E05 blind regression was included.
+
+## Experiment Results
+
+| Experiment | Question | Result |
+| --- | --- | --- |
+| E04-A | How much data is needed? | Validation saturated at 25% / 600 examples |
+| E04-B | How much LoRA capacity is needed? | Rank 8 selected under the frozen validation rule |
+| E04-C | Which learning rate works under the selected recipe? | `1e-4` selected |
+| E05 | Does the optimized recipe survive a fresh blind set? | No — E04 trailed E02 by 5.83 pp diagnosis |
+| E06 | Does specialization reproduce on another model family? | Limited replication on Phi-4-mini |
+| E07 | What happens under insufficient or ambiguous evidence? | Non-zero false confidence remained |
+| E08 | Was the cheaper recipe quality-preserving? | No — negative quality/cost trade-off |
+
+## What CauseTune Tests
+
+CauseTune measures specialization as a controlled sequence rather than as a
+single fine-tuning score:
+
+1. Measure the untouched model's capability gap.
+2. Freeze the intervention, data roles, model revision, and evaluation rules.
+3. Select checkpoints using validation only.
+4. Persist raw predictions, provenance, and artifact hashes.
+5. Reproduce metrics offline from the evidence bundle.
+6. Freeze a fresh blind challenge and measure gains and regressions.
+7. Test cross-model behavior, failure boundaries, and training cost.
+
+The project does not provide model serving, routing, gateway infrastructure,
+Web UI, MCP, cloud orchestration, automatic hyperparameter search, or a generic
+RLHF/trainer catalogue.
 
 ## Experimental loop
 
@@ -17,11 +111,13 @@ FROZEN CHALLENGE BENCHMARK
     ↓
 UNTOUCHED BASE MODEL → MEASURE CAPABILITY GAP
     ↓
-FINE-TUNE → VALIDATION → CHECKPOINT SELECTION / EARLY STOPPING
+FINE-TUNE → VALIDATION-ONLY CHECKPOINT SELECTION / EARLY STOPPING
     ↓
-SAME FROZEN EVALUATION → BASE vs TUNED
+IMMUTABLE EVIDENCE BUNDLE → OFFLINE VERIFICATION
     ↓
-QUALITY + EFFICIENCY + FAILURE ANALYSIS
+FRESH FROZEN BLIND EVALUATION → BASE vs TUNED
+    ↓
+REGRESSION + EFFICIENCY + FAILURE-BOUNDARY ANALYSIS
 ```
 
 Each experiment asks three questions:
@@ -30,7 +126,7 @@ Each experiment asks three questions:
 - What capability did specialization add, and did it generalize?
 - How much training, memory, and adapter capacity did it require?
 
-## Measured results
+## Historical E02 measured result
 
 The compact table below reports **diagnosis exact match** on the frozen
 Experiment 02 benchmark.
@@ -318,22 +414,159 @@ root-cause, hierarchical, and secondary object subtasks over the immutable
 signal; no training or adapter creation occurred. The historical 03E.2
 full-agent conclusion remains `BASE_TOO_WEAK`. See the
 [03G screening record](docs/experiment-03/03g-decomposed-2b-capability-screening.md).
-03H is not started automatically.
+03H and its documented local runtime-recovery attempts are preserved as
+separate feasibility and technical-failure evidence; they did not produce a
+scientific Task-B adapter result.
 
-## What CauseTune measures
+### Experiment 03H — Task-B QLoRA specialization
 
-**Quality** — task-specific accuracy/F1, slice behavior, per-family metrics,
-confusion pairs, and failure transitions.
+**Status: BLOCKED — TRAINING CONTRACT NOT FEASIBLE.** Pre-flight froze the
+natural 510-record Task-B training contract, but the 8,192-token assistant-only
+QLoRA smoke backward exceeded the local 8 GB RTX 5070 Laptop GPU. The larger
+12,288-token candidate also failed its feasibility probe. No primary training,
+adapter, tuned prediction, or TEST inference was produced. See the
+[03H specialization record](docs/experiment-03/03h-task-b-qlora-specialization.md).
 
-**Training** — loss, finite-loss status, optimizer steps, validation
-progression, gradient norm when available, and checkpoint progression.
+### Experiment 03H.1 — Local training-feasibility recovery
 
-**Efficiency** — wall-clock time, token throughput, peak allocated VRAM,
-trainable parameter count, and optimizer steps required.
+The original 03H 8,192-token QLoRA contract remains an immutable negative
+feasibility result. A separate gate audited the actual hybrid Qwen3.5 model,
+confirmed the PyTorch DeltaNet fallback, and completed only disposable
+TRAIN-only optimizer-step probes. The largest feasible documented budget is
+4,096 tokens. No primary QLoRA run, adapter, tuned validation result, or TEST
+inference was produced by 03H.1. The first 03H.2 primary attempt then failed
+before optimizer step 1 with `CUBLAS_STATUS_INTERNAL_ERROR` in the fallback
+DeltaNet path; no tuned quality claim is made. 03H.3 then tested runtime
+stability at the fixed 4,096/3,072/2,048 ladder and rejected the local Task-B
+training contract after allocator/runtime failures; no primary run was
+started. See the
+[03H.1 feasibility record](docs/experiment-03/03h1-local-training-feasibility-recovery.md).
 
-**Integrity** — dataset/evaluation fingerprints, deterministic preprocessing,
-validation-only selection, explicit experiment controls, and fresh adapter
-reload verification.
+### Experiment 03I — Qwen3-4B replacement-student qualification
+
+The preselected Qwen3-4B produced a valid above-baseline Task-B base signal
+(24/57 exact, 57/57 schema and enum valid). A follow-up harness audit found
+that the original forward gate did not match the training contract; the
+corrected 4,096-token local runtime contract is qualified. No primary QLoRA
+run or persistent adapter was created. See the
+[03I forward-harness audit](docs/experiment-03/03i-forward-harness-audit.md).
+
+### Experiment 03J — Qwen3-4B Task-B QLoRA specialization
+
+The first primary QLoRA run was blocked by a CUDA allocator OOM on the first
+training-form step, before optimizer step 1. The separate 4096-token smoke
+passed, but no scientific adapter, tuned development result, or quality
+conclusion exists. This is a runtime failure rather than a negative
+specialization result. TEST remains sealed. See
+[03J documentation](docs/experiment-03/03j-qwen3-4b-task-b-qlora-specialization.md).
+
+### Experiment 03J.1 — Primary-training execution-parity audit
+
+The exact first 03J record was identical to the corrected 03I record, and both
+direct one-step paths passed with matching tensors, flags, optimizer settings,
+and pre-forward memory. However, the actual primary-style 4096 stress path
+failed with allocator OOM/hang on the first stress record (`0/15`). No
+deterministic parity defect was isolated, no repair or adapter was retained,
+and no quality evaluation was run. Final decision:
+`PRIMARY_PATH_4096_NOT_FEASIBLE`. TEST remains sealed. See the
+[03J.1 audit](docs/experiment-03/03j1-primary-training-parity-audit.md).
+
+### 03J.2 — Primary-path sequence recovery — complete / local path not feasible
+
+The pre-registered 3072-token primary-path candidate passed one disposable
+step but failed the required 15-case stress gate with allocator OOM/hang. The
+pre-registered 2048-token fallback also passed one step but failed the same
+stress gate. No scientific training or quality evaluation occurred. Final
+status: `LOCAL_PRIMARY_TRAINING_NOT_FEASIBLE`. TEST remains sealed. See the
+[03J.2 record](docs/experiment-03/03j2-primary-path-sequence-recovery.md).
+
+### 03K — Sustainable local QLoRA runtime recovery — complete / recovery failed
+
+03K kept the 3072-token Task-B contract and tested the frozen runtime ladder.
+The minimal loop, native allocator policy, and real paged 8-bit AdamW each
+failed the required sustained stress gate; SDPA was already active. No
+scientific training or quality evaluation occurred. Final status:
+`RUNTIME_RECOVERY_FAILED`. See the
+[03K record](docs/experiment-03/03k-sustainable-local-qlora-runtime-recovery.md).
+
+## Core capabilities
+
+- Versioned experiment contracts and strict configuration validation.
+- Deterministic preprocessing, resolved-config hashing, and dataset
+  fingerprints.
+- Model and revision pinning with doctor/preflight checks.
+- QLoRA training with validation-only checkpoint selection and early stopping.
+- Immutable evidence bundles, raw predictions, artifact hashes, and tamper
+  detection.
+- Offline metric reproduction and fresh blind-benchmark freezing.
+- Cross-model experiments, failure-boundary evaluation, and quality/cost
+  analysis.
+- Model-backed CI smoke coverage for the real Transformers Trainer and PEFT
+  path.
+
+The measured outputs include task-specific accuracy/F1, slice behavior,
+per-family metrics, confusion pairs, failure transitions, finite-loss status,
+optimizer steps, validation progression, wall-clock time, token throughput,
+peak allocated VRAM, and trainable parameter count.
+
+## Methodology and workflow
+
+The core evidence path is:
+
+```text
+Experiment Contract
+        │
+        ▼
+Doctor / Preflight
+        │
+        ▼
+Dataset + Model Fingerprints
+        │
+        ▼
+QLoRA Training
+        │
+        ▼
+Validation-only Checkpoint Selection
+        │
+        ▼
+Immutable Evidence Bundle
+        │
+        ▼
+Offline Verification
+        │
+        ▼
+Frozen Blind Evaluation
+        │
+        ▼
+Regression / Cost Analysis
+```
+
+Each valid run records:
+
+- the resolved experiment configuration;
+- model ID and pinned revision;
+- training, validation, and benchmark fingerprints;
+- checkpoint-selection provenance;
+- evaluation artifacts and raw predictions;
+- artifact hashes and offline-verification state.
+
+## CLI and quick start
+
+The installed CLI exposes only the implemented laboratory workflows:
+
+```bash
+causetune --help
+causetune doctor --config <config> [--hardware]
+causetune prepare --config <config> --run-dir <run-directory>
+causetune train --config <config> --run-dir <run-directory>
+causetune evaluate --predictions <predictions> --output <evaluation>
+causetune compare --base <base-evaluation> --tuned <tuned-evaluation>
+causetune verify <run-directory> --offline
+```
+
+Training and hardware operations require the relevant experiment configuration
+and runtime dependencies. `verify --offline` checks a persisted evidence bundle
+without launching model inference.
 
 ## Repository layout
 
@@ -354,11 +587,20 @@ pyproject.toml
 These commands do not launch GPU training:
 
 ```bash
-python -m pip install -e ".[dev]"
-python -m compileall -q src scripts tests
-pytest -q
+.venv/bin/python -m pip install -e ".[dev]"
+.venv/bin/python -m compileall -q src scripts tests
+.venv/bin/python -m pytest -q
 git diff --check
 ```
+
+## CI
+
+Release CI includes two required jobs:
+
+- `cpu-safe`: compilation and the CPU-safe regression suite;
+- `training-smoke`: a real Transformers `Trainer` + PEFT LoRA smoke that
+  checks optimizer updates, finite loss, adapter saving, fresh reload, and
+  generation. It is a runtime smoke, not a full production training run.
 
 ## Scope boundary
 
@@ -367,27 +609,41 @@ LoRA/QLoRA, quantization, validation, checkpointing, early stopping,
 telemetry, VRAM profiling, throughput, diagnostics, frozen evaluation, and
 base-vs-tuned measurement.
 
-It is not Kubeflow, an MLflow replacement, a serving system, a deployment or
-routing layer, a canarying system, or a production control plane. Production
-promotion and operational control belong elsewhere.
+It does not provide model serving, routing, gateway infrastructure, a Web UI,
+MCP, cloud orchestration, automatic hyperparameter search, a recipe zoo, or a
+generic RLHF/trainer catalogue. Production promotion and operational control
+belong elsewhere.
 
 ## Limitations
 
-- The benchmark and training corpus are synthetic; 99.31% is benchmark accuracy, not production accuracy.
-- Experiment 02 studies only Qwen3-4B and one controlled semantic training run.
-- TRANSFER is transfer-style evaluation, not true OOD.
-- Synthetic generator structure may make specialization easier than real-world incident diagnosis.
-- Repeatedly tuning against this frozen benchmark would weaken the evidence; stronger claims require new untouched challenge sets.
+- Synthetic benchmark construction and taxonomy alignment.
+- Limited model-family coverage despite controlled replication on one additional
+  non-Qwen family.
+- One-shot blind challenges and static/manual fixture limitations where
+  disclosed.
+- Hardware-specific efficiency measurements.
+- Adapter weights are local-only; lightweight hashes, manifests, metrics, and
+  locations are persisted.
+- Historical E02 and E04 results are bounded by the specific Qwen3-4B task and
+  frozen evidence contracts; they are not production accuracy claims.
 
-## Future work
+## EX-LV status
 
-The next scientific question is whether the measured specialization gain survives
-a new blind benchmark. Useful follow-ups are:
+The optional low-VRAM/layer-streaming comparison was not executed:
+`EX-LV: NOT_RUN`. Gate infrastructure may exist, but CauseTune does not claim
+streaming support, a low-VRAM backend, or a Soup integration.
 
-- a fresh blind challenge set with more heterogeneous incident narratives;
-- independent generator/template families and manually authored cases where licensing and privacy permit;
-- another model family;
-- data-efficiency, LoRA-capacity, or learning-rate studies evaluated on new untouched evidence.
+## Detailed evidence
 
-More detail: [experiment record](docs/experiments.md),
-[methodology](docs/methodology.md), and [roadmap](docs/roadmap.md).
+- [v1.0 readiness audit](docs/release-v1.0-readiness.md)
+- [machine-readable v1.0 audit](results/release/v1.0-readiness-audit.json)
+- [E04 selected recipe and results](docs/experiment-04/e04-final-recipe.md)
+- [E05 fresh blind results](docs/experiment-05/e05-results.md)
+- [E06 cross-model results](docs/experiment-06/e06-results.md)
+- [E07 failure-boundary results](docs/experiment-07/e07-results.md)
+- [E08 efficiency-frontier results](docs/experiment-08/e08-results.md)
+- [methodology](docs/methodology.md)
+- [roadmap](docs/roadmap.md)
+
+More detail is kept in the experiment records and persisted `results/` bundles;
+the README summarizes the evidence rather than replacing those records.
