@@ -1,0 +1,30 @@
+{
+  "benchmark_used_for_selection": false,
+  "e03_used_for_selection": false,
+  "eligible_variants": [
+    "025pct",
+    "050pct",
+    "075pct-retry-01",
+    "100pct"
+  ],
+  "reference_metrics": {
+    "diagnosis_exact_match": 1.0,
+    "failure_mode_macro_f1": 1.0,
+    "resolution_exact_match": 1.0
+  },
+  "reference_variant": "025pct",
+  "rejected_variants": {},
+  "rule_version": "e04a-selection-v1",
+  "schema_version": 1,
+  "selected_fraction": 0.25,
+  "selected_subset_hash": "eaecc635921cb82219f4e6efc05a1387d76ae52695430f333c640b8f87728f56",
+  "selected_variant": "025pct",
+  "selection_basis": "smallest fraction satisfying the predeclared validation-only quality rule",
+  "status": "PASS",
+  "study_id": "e04a-data-efficiency",
+  "thresholds": {
+    "failure_family_tolerance_percentage_points": 5.0,
+    "primary_metrics_tolerance_percentage_points": 1.0,
+    "schema_validity_tolerance_percentage_points": 1.0
+  }
+}
