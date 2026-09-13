@@ -1,0 +1,22 @@
+{
+  "benchmark_fingerprint": "c797b3a8378a2cbb2cb1e2a27e05a561087a62ed3f9adc74aa050d9f3f42a800",
+  "excluded_from_training": true,
+  "false_confidence_analysis": true,
+  "llm_judge_required": false,
+  "offline_reproduction": true,
+  "one_shot_per_system": true,
+  "raw_predictions": true,
+  "same_decoding": true,
+  "same_frozen_benchmark": true,
+  "same_prompt": true,
+  "same_scorer": true,
+  "schema_version": 1,
+  "scorer_version": "e07-boundary-scorer-v2",
+  "scoring_correction_recorded": true,
+  "status": "PASS",
+  "systems": [
+    "base",
+    "e02",
+    "e04"
+  ]
+}

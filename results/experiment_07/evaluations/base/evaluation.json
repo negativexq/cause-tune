@@ -1,0 +1,78 @@
+{
+  "metrics": {
+    "abstention_f1": 0.7027027027027027,
+    "abstention_precision": 1.0,
+    "abstention_recall": 0.5416666666666666,
+    "by_boundary_category": {
+      "contradictory_evidence": {
+        "count": 8,
+        "false_abstention_count": 0,
+        "false_confident_diagnosis_count": 0,
+        "schema_valid_rate": 0.75,
+        "status_accuracy": 0.75
+      },
+      "insufficient_evidence": {
+        "count": 12,
+        "false_abstention_count": 0,
+        "false_confident_diagnosis_count": 0,
+        "schema_valid_rate": 0.75,
+        "status_accuracy": 0.75
+      },
+      "missing_metrics": {
+        "count": 6,
+        "false_abstention_count": 0,
+        "false_confident_diagnosis_count": 1,
+        "schema_valid_rate": 0.16666666666666666,
+        "status_accuracy": 0.0
+      },
+      "missing_topology": {
+        "count": 6,
+        "false_abstention_count": 0,
+        "false_confident_diagnosis_count": 0,
+        "schema_valid_rate": 0.0,
+        "status_accuracy": 0.0
+      },
+      "multiple_plausible_culprits": {
+        "count": 8,
+        "false_abstention_count": 0,
+        "false_confident_diagnosis_count": 4,
+        "schema_valid_rate": 0.875,
+        "status_accuracy": 0.0
+      },
+      "out_of_taxonomy": {
+        "count": 8,
+        "false_abstention_count": 0,
+        "false_confident_diagnosis_count": 0,
+        "schema_valid_rate": 1.0,
+        "status_accuracy": 1.0
+      },
+      "sufficient": {
+        "count": 12,
+        "false_abstention_count": 5,
+        "false_confident_diagnosis_count": 0,
+        "schema_valid_rate": 0.5833333333333334,
+        "status_accuracy": 0.5833333333333334
+      }
+    },
+    "count": 60,
+    "false_abstention_count": 5,
+    "false_abstention_rate": 0.4166666666666667,
+    "false_confident_diagnosis_count": 5,
+    "false_confident_diagnosis_rate": 0.10416666666666667,
+    "insufficient_or_ambiguous_case_count": 48,
+    "json_valid_rate": 0.95,
+    "normal_sufficient_case_accuracy": 0.5833333333333334,
+    "parse_categories": {
+      "invalid JSON": 3,
+      "invalid evidence_ids": 18,
+      "unknown failure mode": 1,
+      "valid E07 JSON": 38
+    },
+    "schema_valid_rate": 0.6333333333333333,
+    "schema_version": 1,
+    "status_accuracy": 0.5,
+    "sufficient_case_count": 12
+  },
+  "schema_version": 1,
+  "system": "base"
+}

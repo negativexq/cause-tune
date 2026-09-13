@@ -1,0 +1,252 @@
+{
+  "benchmark_fingerprint": "c797b3a8378a2cbb2cb1e2a27e05a561087a62ed3f9adc74aa050d9f3f42a800",
+  "e05_regression_untouched": true,
+  "experiment": "E07",
+  "fresh_reload_per_system": true,
+  "one_shot_per_system": true,
+  "raw_output_sha256": {
+    "base": "72bff5720e1f1d936b49a1b23bb0a6b1e5edfb87db5c5ccc10d89984c29b9429",
+    "e02": "ae6290b275fcaf70a24fe4dc18b38fa7d35325078fd9e9e0ef4ff2a9a608c654",
+    "e04": "1231b8e28519e294d84371de762589f9e8cf6b4277fd157dae8387edf65630e4"
+  },
+  "same_decoding": true,
+  "same_prompt": true,
+  "same_scorer": true,
+  "schema_version": 1,
+  "scorer_version": "e07-boundary-scorer-v2",
+  "semantic_predictions_regenerated": false,
+  "systems": {
+    "base": {
+      "metrics": {
+        "abstention_f1": 0.7027027027027027,
+        "abstention_precision": 1.0,
+        "abstention_recall": 0.5416666666666666,
+        "by_boundary_category": {
+          "contradictory_evidence": {
+            "count": 8,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 0,
+            "schema_valid_rate": 0.75,
+            "status_accuracy": 0.75
+          },
+          "insufficient_evidence": {
+            "count": 12,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 0,
+            "schema_valid_rate": 0.75,
+            "status_accuracy": 0.75
+          },
+          "missing_metrics": {
+            "count": 6,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 1,
+            "schema_valid_rate": 0.16666666666666666,
+            "status_accuracy": 0.0
+          },
+          "missing_topology": {
+            "count": 6,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 0,
+            "schema_valid_rate": 0.0,
+            "status_accuracy": 0.0
+          },
+          "multiple_plausible_culprits": {
+            "count": 8,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 4,
+            "schema_valid_rate": 0.875,
+            "status_accuracy": 0.0
+          },
+          "out_of_taxonomy": {
+            "count": 8,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 0,
+            "schema_valid_rate": 1.0,
+            "status_accuracy": 1.0
+          },
+          "sufficient": {
+            "count": 12,
+            "false_abstention_count": 5,
+            "false_confident_diagnosis_count": 0,
+            "schema_valid_rate": 0.5833333333333334,
+            "status_accuracy": 0.5833333333333334
+          }
+        },
+        "count": 60,
+        "false_abstention_count": 5,
+        "false_abstention_rate": 0.4166666666666667,
+        "false_confident_diagnosis_count": 5,
+        "false_confident_diagnosis_rate": 0.10416666666666667,
+        "insufficient_or_ambiguous_case_count": 48,
+        "json_valid_rate": 0.95,
+        "normal_sufficient_case_accuracy": 0.5833333333333334,
+        "parse_categories": {
+          "invalid JSON": 3,
+          "invalid evidence_ids": 18,
+          "unknown failure mode": 1,
+          "valid E07 JSON": 38
+        },
+        "schema_valid_rate": 0.6333333333333333,
+        "schema_version": 1,
+        "status_accuracy": 0.5,
+        "sufficient_case_count": 12
+      },
+      "system": "base"
+    },
+    "e02": {
+      "metrics": {
+        "abstention_f1": 0.5454545454545454,
+        "abstention_precision": 1.0,
+        "abstention_recall": 0.375,
+        "by_boundary_category": {
+          "contradictory_evidence": {
+            "count": 8,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 1,
+            "schema_valid_rate": 0.25,
+            "status_accuracy": 0.125
+          },
+          "insufficient_evidence": {
+            "count": 12,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 0,
+            "schema_valid_rate": 1.0,
+            "status_accuracy": 1.0
+          },
+          "missing_metrics": {
+            "count": 6,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 5,
+            "schema_valid_rate": 0.8333333333333334,
+            "status_accuracy": 0.0
+          },
+          "missing_topology": {
+            "count": 6,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 2,
+            "schema_valid_rate": 0.3333333333333333,
+            "status_accuracy": 0.0
+          },
+          "multiple_plausible_culprits": {
+            "count": 8,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 7,
+            "schema_valid_rate": 0.875,
+            "status_accuracy": 0.0
+          },
+          "out_of_taxonomy": {
+            "count": 8,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 0,
+            "schema_valid_rate": 0.625,
+            "status_accuracy": 0.625
+          },
+          "sufficient": {
+            "count": 12,
+            "false_abstention_count": 6,
+            "false_confident_diagnosis_count": 0,
+            "schema_valid_rate": 0.5,
+            "status_accuracy": 0.5
+          }
+        },
+        "count": 60,
+        "false_abstention_count": 6,
+        "false_abstention_rate": 0.5,
+        "false_confident_diagnosis_count": 15,
+        "false_confident_diagnosis_rate": 0.3125,
+        "insufficient_or_ambiguous_case_count": 48,
+        "json_valid_rate": 0.8166666666666667,
+        "normal_sufficient_case_accuracy": 0.5,
+        "parse_categories": {
+          "invalid JSON": 11,
+          "non-diagnosis contains diagnosis fields": 10,
+          "valid E07 JSON": 39
+        },
+        "schema_valid_rate": 0.65,
+        "schema_version": 1,
+        "status_accuracy": 0.4,
+        "sufficient_case_count": 12
+      },
+      "system": "e02"
+    },
+    "e04": {
+      "metrics": {
+        "abstention_f1": 0.7027027027027027,
+        "abstention_precision": 1.0,
+        "abstention_recall": 0.5416666666666666,
+        "by_boundary_category": {
+          "contradictory_evidence": {
+            "count": 8,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 1,
+            "schema_valid_rate": 1.0,
+            "status_accuracy": 0.875
+          },
+          "insufficient_evidence": {
+            "count": 12,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 0,
+            "schema_valid_rate": 0.9166666666666666,
+            "status_accuracy": 0.9166666666666666
+          },
+          "missing_metrics": {
+            "count": 6,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 1,
+            "schema_valid_rate": 0.16666666666666666,
+            "status_accuracy": 0.0
+          },
+          "missing_topology": {
+            "count": 6,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 2,
+            "schema_valid_rate": 0.3333333333333333,
+            "status_accuracy": 0.0
+          },
+          "multiple_plausible_culprits": {
+            "count": 8,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 5,
+            "schema_valid_rate": 0.75,
+            "status_accuracy": 0.0
+          },
+          "out_of_taxonomy": {
+            "count": 8,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 0,
+            "schema_valid_rate": 0.875,
+            "status_accuracy": 0.875
+          },
+          "sufficient": {
+            "count": 12,
+            "false_abstention_count": 0,
+            "false_confident_diagnosis_count": 0,
+            "schema_valid_rate": 1.0,
+            "status_accuracy": 1.0
+          }
+        },
+        "count": 60,
+        "false_abstention_count": 0,
+        "false_abstention_rate": 0.0,
+        "false_confident_diagnosis_count": 9,
+        "false_confident_diagnosis_rate": 0.1875,
+        "insufficient_or_ambiguous_case_count": 48,
+        "json_valid_rate": 0.9333333333333333,
+        "normal_sufficient_case_accuracy": 1.0,
+        "parse_categories": {
+          "invalid JSON": 4,
+          "invalid evidence reference": 3,
+          "non-diagnosis contains diagnosis fields": 1,
+          "unknown culprit": 3,
+          "unknown failure mode": 2,
+          "valid E07 JSON": 47
+        },
+        "schema_valid_rate": 0.7833333333333333,
+        "schema_version": 1,
+        "status_accuracy": 0.6166666666666667,
+        "sufficient_case_count": 12
+      },
+      "system": "e04"
+    }
+  }
+}

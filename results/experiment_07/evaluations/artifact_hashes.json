@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "base/evaluation.json": "f4445f911d36b2e4829040c5b618c3cd010f436590828663858acf0e53758798",
+    "base/offline_reproduction.json": "7735c4f4987fd2288ee2bedb9d8a7140ab1d144f2e477f0f823d3e887679bfc2",
+    "base/predictions.jsonl": "5c0e8020037f7ae3539acba065d82be282118da77aa56592980295b7c70184be",
+    "base/raw_outputs.jsonl": "72bff5720e1f1d936b49a1b23bb0a6b1e5edfb87db5c5ccc10d89984c29b9429",
+    "e02/evaluation.json": "46865089cc4ec9919f32eaa4545742b51b8f0e9d8d2b71c51197c5f6bd86718e",
+    "e02/offline_reproduction.json": "2b9697c3a0fa9ccc295ab681195e3dc7549a0604761eadb6a4d572bd73284099",
+    "e02/predictions.jsonl": "91dcc06e9daa29295db130b0679259519fbe2601d2da05f746f92c15c0e9f9be",
+    "e02/raw_outputs.jsonl": "ae6290b275fcaf70a24fe4dc18b38fa7d35325078fd9e9e0ef4ff2a9a608c654",
+    "e04/evaluation.json": "4add0ecc4f73c3f6e79d459bfce374197d810c0ea814d71fad08b8db8f3f50b1",
+    "e04/offline_reproduction.json": "5affd3671f8afec6e0772f7147c6ed85ed13a14d2280632a9ba53c087f63d272",
+    "e04/predictions.jsonl": "05e78c7002cc982618ab789ec968172470866a55ca634b9d0bba54cb6a697ba2",
+    "e04/raw_outputs.jsonl": "1231b8e28519e294d84371de762589f9e8cf6b4277fd157dae8387edf65630e4",
+    "evaluation_comparison.json": "7fb23792547332952a3ce32300f1e40111ffa9ce912387d6f9cad5c68215d448",
+    "g07_summary.json": "6f070469440720c8ccb7b697600164009ad8febb1eb8f2f9e4aee7f00242436c",
+    "scoring_correction.json": "38a21175c9a70abe5a9896ca33aa0db301b6a4af6ab34797bc73b331fb8640c3"
+  },
+  "benchmark_fingerprint": "c797b3a8378a2cbb2cb1e2a27e05a561087a62ed3f9adc74aa050d9f3f42a800",
+  "schema_version": 1
+}
