@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "experiment": "E06",
+  "status": "PASS",
+  "attempt_0": {
+    "status": "TECHNICAL_FAILURE",
+    "failure_record": "results/experiment_06/capability_gap/technical_failure.json",
+    "failure": "remote modeling_phi3.py imported unavailable LossKwargs"
+  },
+  "attempt": 1,
+  "recovery_method": "native Transformers model implementation",
+  "model_id": "microsoft/Phi-4-mini-instruct",
+  "model_revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+  "trust_remote_code": false,
+  "weights_unchanged": true,
+  "benchmark_fingerprint": "677d6e569c09031c2256161e01dcf48747794678c371948564db97b3e1328505",
+  "benchmark_unchanged": true,
+  "prompt_path": "configs/incident_diagnosis_eval.json",
+  "prompt_sha256": "d028e47fdc236d7f13365e201b114e35f90cf8cf4491646f0bf07948d514d526",
+  "prompt_unchanged": true,
+  "scorer_version": "incident-scorer-v1",
+  "scorer_unchanged": true,
+  "scorer_fingerprint": "47197943f6aa76ee62d4e2c964f287b08f953131cecc2f6d007e2fc05fa2f71d",
+  "decoding": {
+    "batch_size": 4,
+    "do_sample": false,
+    "max_new_tokens": 96
+  },
+  "decoding_unchanged": true,
+  "runtime": {
+    "python": "3.12.3",
+    "torch": "2.14.0+cu130",
+    "transformers": "5.16.1",
+    "accelerate": "1.14.0",
+    "peft": "0.20.0",
+    "bitsandbytes": "0.50.2",
+    "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+    "driver": "581.80",
+    "cuda": "13.0"
+  },
+  "tokenizer_load": "PASS",
+  "model_load": "PASS",
+  "trivial_non_benchmark_generation": {
+    "prompt": "Reply with the word OK.",
+    "output": "OK.",
+    "scored": false,
+    "status": "PASS"
+  },
+  "semantic_screen_generation": "NOT_RUN_BEFORE_RECORD",
+  "training": "NOT_RUN"
+}

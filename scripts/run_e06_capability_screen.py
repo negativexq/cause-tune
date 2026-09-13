@@ -41,12 +41,15 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dataset-dir", default="data/incident_diagnosis_e06_screen")
     parser.add_argument("--protocol", default="results/experiment_06/capability_gap_protocol.json")
+    parser.add_argument("--compatibility-record", default="results/experiment_06/compatibility_recovery.json")
     parser.add_argument("--output-dir", default="results/experiment_06/capability_gap")
     args = parser.parse_args()
     dataset = Path(args.dataset_dir)
     protocol_path = Path(args.protocol)
+    compatibility_path = Path(args.compatibility_record)
     output = Path(args.output_dir)
     protocol = _read_json(protocol_path)
+    compatibility = _read_json(compatibility_path)
     manifest = _read_json(dataset / "manifest.json")
     prompt_path = Path(protocol["prompt_path"])
     if protocol.get("status") != "FROZEN_BEFORE_MODEL_EVALUATION" or not protocol.get("prompt_frozen"):
@@ -55,6 +58,13 @@ def main() -> None:
         raise ValueError("E06 capability screen fingerprint mismatch")
     if hashlib.sha256(prompt_path.read_bytes()).hexdigest() != protocol.get("prompt_sha256"):
         raise ValueError("E06 capability screen protocol is missing its prompt hash")
+    if compatibility.get("status") != "PASS" or compatibility.get("attempt_0", {}).get("status") != "TECHNICAL_FAILURE":
+        raise ValueError("E06 compatibility recovery record is invalid")
+    for key in ("model_id", "model_revision", "benchmark_fingerprint", "prompt_sha256", "scorer_version", "scorer_fingerprint"):
+        if compatibility.get(key) != (protocol.get("model_id") if key == "model_id" else protocol.get(key)):
+            raise ValueError(f"E06 compatibility recovery changed frozen field: {key}")
+    if compatibility.get("decoding") != protocol.get("decoding") or not compatibility.get("decoding_unchanged"):
+        raise ValueError("E06 compatibility recovery changed decoding")
     records = _read_jsonl(dataset / "standard.jsonl")
     truth = _read_jsonl(dataset / "ground_truth.jsonl")
     if len(records) != 48 or len(truth) != 48:
@@ -65,9 +75,9 @@ def main() -> None:
     truth_by_id = {row["incident_id"]: row for row in truth}
     config = _read_json(Path("configs/incident_diagnosis_eval.json"))
     try:
-        tokenizer = load_tokenizer_for_model(protocol["model_id"], revision=protocol["model_revision"], trust_remote_code=True)
-        model = load_frozen_quantized_base(protocol["model_id"], revision=protocol["model_revision"], trust_remote_code=True, **protocol["quantization"])
-        raw = _generate(model, tokenizer, records, config["evaluation_contract"]["system_instruction"], max_new_tokens=96, batch_size=4)
+        tokenizer = load_tokenizer_for_model(protocol["model_id"], revision=protocol["model_revision"], trust_remote_code=compatibility["trust_remote_code"])
+        model = load_frozen_quantized_base(protocol["model_id"], revision=protocol["model_revision"], trust_remote_code=compatibility["trust_remote_code"], **protocol["quantization"])
+        raw = _generate(model, tokenizer, records, config["evaluation_contract"]["system_instruction"], max_new_tokens=protocol["decoding"]["max_new_tokens"], batch_size=protocol["decoding"]["batch_size"])
         _write_jsonl(output / "raw_outputs.jsonl", [{"incident_id": row["incident_id"], "raw_output": raw[row["incident_id"]]} for row in records])
         evaluation = evaluate_incidents(records, truth_by_id, raw)
         for incident, row in zip(records, evaluation["predictions"]):
@@ -76,7 +86,7 @@ def main() -> None:
                 "available_evidence_ids": sorted(packet_evidence_ids(incident["incident_packet"])),
             }
         _write_jsonl(output / "predictions.jsonl", evaluation["predictions"])
-        _write_json(output / "evaluation.json", {"schema_version": 1, "metrics": evaluation})
+        _write_json(output / "evaluation.json", {"schema_version": 1, "metrics": evaluation, "compatibility_record": str(compatibility_path)})
         reproduced = score_incident_predictions(output / "predictions.jsonl")
         if reproduced != evaluation:
             raise ValueError("E06 capability screen offline reproduction mismatch")

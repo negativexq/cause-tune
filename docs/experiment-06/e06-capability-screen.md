@@ -29,3 +29,13 @@ The failure is preserved in
 git SHA and benchmark hashes. G06 is therefore not passed, and the roadmap
 must not proceed to E06 training or final-benchmark evaluation from this state.
 This is a compatibility failure, not evidence of no capability gap.
+
+## Compatibility recovery
+
+The permitted single recovery attempt succeeded without changing the model,
+revision, benchmark, prompt, scorer, or decoding. Native Transformers loading
+with `trust_remote_code=false` loaded the tokenizer and quantized model, and a
+non-benchmark prompt generated `OK.` The recovery record is persisted at
+`results/experiment_06/compatibility_recovery.json`; attempt 0 remains the
+original technical failure above. The 48-case capability screen is now
+authorized to run exactly once under the recovered runtime.
