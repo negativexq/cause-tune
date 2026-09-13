@@ -37,6 +37,7 @@ def load_tokenizer_for_model(model_id: str, *, revision: str | None = None) -> A
 def load_frozen_quantized_base(
     model_id: str,
     *,
+    revision: str | None = None,
     load_in_4bit: bool = True,
     quant_type: str = "nf4",
     compute_dtype: str = "bfloat16",
@@ -59,6 +60,7 @@ def load_frozen_quantized_base(
     )
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
+        revision=revision,
         quantization_config=quantization_config,
         dtype=torch.bfloat16,
         device_map={"": torch.cuda.current_device()},

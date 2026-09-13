@@ -44,6 +44,7 @@ def main() -> None:
         "scorer_version": manifest["scorer_version"],
         "scorer_fingerprint": manifest["scorer_fingerprint"],
         "prompt_path": "configs/incident_diagnosis_eval.json",
+        "prompt_sha256": sha256(Path("configs/incident_diagnosis_eval.json")),
         "prompt_frozen": True,
         "decoding": {"max_new_tokens": 96, "batch_size": 4, "do_sample": False},
         "systems": [

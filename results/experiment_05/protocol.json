@@ -16,6 +16,7 @@
   "post_result_prompt_change": false,
   "prompt_frozen": true,
   "prompt_path": "configs/incident_diagnosis_eval.json",
+  "prompt_sha256": "d028e47fdc236d7f13365e201b114e35f90cf8cf4491646f0bf07948d514d526",
   "protocol_version": "e05-one-shot-blind-v1",
   "raw_predictions_required": true,
   "schema_version": 1,
