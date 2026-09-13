@@ -1,0 +1,20 @@
+{
+  "roles": {
+    "benchmark": {
+      "bytes": 362260,
+      "path": "data/incident_diagnosis",
+      "sha256": "c491fc93f882abfd33c2d82855e7cd183fc6ad064cbc0afec6bf21d9bd852d80"
+    },
+    "train": {
+      "bytes": 1253616,
+      "path": "data/experiment_04a/subsets/025pct",
+      "sha256": "156c9862ebab8a2e3ccef69cc3879c1dc6cb88666d439320216b69bd56f629ed"
+    },
+    "validation": {
+      "bytes": 616359,
+      "path": "data/experiment_04a/subsets/validation",
+      "sha256": "375ae9ae09de3397f84789a8628a7d368e09f3b6e23f11b5d0b074d8e39efdd7"
+    }
+  },
+  "schema_version": 1
+}

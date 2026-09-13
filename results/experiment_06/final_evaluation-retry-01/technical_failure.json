@@ -1,0 +1,10 @@
+{
+  "attempt": 1,
+  "exception": "KeyError: summaries omitted prediction rows during transition aggregation",
+  "recovery": "offline finalization from persisted base/tuned predictions",
+  "semantic_evaluations_completed": 2,
+  "semantic_evaluations_regenerated": false,
+  "stage": "post_semantic_aggregation",
+  "status": "TECHNICAL_FAILURE",
+  "valid_semantic_run": true
+}

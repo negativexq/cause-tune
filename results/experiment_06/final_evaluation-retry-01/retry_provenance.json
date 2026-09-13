@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "offline_reproduction": "PASS",
+  "previous_attempt": "results/experiment_06/final_evaluation/technical_failure.json",
+  "raw_predictions_persisted_before_scoring": true,
+  "recovery": "offline aggregation from persisted predictions",
+  "schema_version": 1,
+  "semantic_evaluations_completed": 2,
+  "semantic_evaluations_regenerated": false,
+  "status": "PASS"
+}

@@ -1,0 +1,1444 @@
+{
+  "count": 60,
+  "counts": {
+    "persistent_correct": 0,
+    "persistent_wrong": 22,
+    "source_correct_target_wrong": 0,
+    "source_wrong_target_correct": 38
+  },
+  "rows": [
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "events-postgres",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_connection_pool_exhaustion",
+        "recommended_action": "scale_capacity"
+      },
+      "incident_id": "e06-final-standard-001",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "delivery-database",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_connection_pool_exhaustion",
+        "recommended_action": "scale_capacity"
+      },
+      "incident_id": "e06-final-standard-002",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "identity-database",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_query_regression",
+        "recommended_action": "mitigate_query"
+      },
+      "incident_id": "e06-final-standard-006",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "identity-database",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_query_regression",
+        "recommended_action": "mitigate_query"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "metrics-warehouse",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_query_regression",
+        "recommended_action": "mitigate_query"
+      },
+      "incident_id": "e06-final-standard-007",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "metrics-warehouse",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_query_regression",
+        "recommended_action": "mitigate_query"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "checkout-api",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "memory_leak",
+        "recommended_action": "restart_or_replace_instance"
+      },
+      "incident_id": "e06-final-standard-011",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "checkout-api",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "memory_leak",
+        "recommended_action": "restart_or_replace_instance"
+      }
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "event-processor",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "memory_leak",
+        "recommended_action": "restart_or_replace_instance"
+      },
+      "incident_id": "e06-final-standard-012",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "smtp-relay",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "downstream_dependency_timeout",
+        "recommended_action": "restore_dependency"
+      },
+      "incident_id": "e06-final-standard-016",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "smtp-relay",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "downstream_dependency_timeout",
+        "recommended_action": "restore_dependency"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "partner-idp",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "downstream_dependency_timeout",
+        "recommended_action": "restore_dependency"
+      },
+      "incident_id": "e06-final-standard-017",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "partner-idp",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "downstream_dependency_timeout",
+        "recommended_action": "restore_dependency"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "media-cache",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "cache_stampede",
+        "recommended_action": "clear_or_throttle_cache_pressure"
+      },
+      "incident_id": "e06-final-standard-021",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "media-cache",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "cache_stampede",
+        "recommended_action": "clear_or_throttle_cache_pressure"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "orders-redis",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "cache_stampede",
+        "recommended_action": "clear_or_throttle_cache_pressure"
+      },
+      "incident_id": "e06-final-standard-022",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "orders-redis",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "cache_stampede",
+        "recommended_action": "clear_or_throttle_cache_pressure"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "billing-consumer",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "kafka_consumer_lag",
+        "recommended_action": "drain_or_rebalance_workload"
+      },
+      "incident_id": "e06-final-standard-026",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "billing-consumer",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "kafka_consumer_lag",
+        "recommended_action": "drain_or_rebalance_workload"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "job-consumer",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "kafka_consumer_lag",
+        "recommended_action": "drain_or_rebalance_workload"
+      },
+      "incident_id": "e06-final-standard-027",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "job-consumer",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "kafka_consumer_lag",
+        "recommended_action": "drain_or_rebalance_workload"
+      }
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "template-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "thread_pool_exhaustion",
+        "recommended_action": "restart_or_replace_instance"
+      },
+      "incident_id": "e06-final-standard-031",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "transcode-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "thread_pool_exhaustion",
+        "recommended_action": "restart_or_replace_instance"
+      },
+      "incident_id": "e06-final-standard-032",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": {
+        "culprit_service": "transcode-worker",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "thread_pool_exhaustion",
+        "recommended_action": "restart_or_replace_instance"
+      }
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "metrics-warehouse",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "disk_io_saturation",
+        "recommended_action": "scale_capacity"
+      },
+      "incident_id": "e06-final-standard-036",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "billing-postgres",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "disk_io_saturation",
+        "recommended_action": "scale_capacity"
+      },
+      "incident_id": "e06-final-standard-037",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "cluster-dns",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "dns_resolution_failure",
+        "recommended_action": "restore_dependency"
+      },
+      "incident_id": "e06-final-standard-041",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "cluster-dns",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "dns_resolution_failure",
+        "recommended_action": "restore_dependency"
+      }
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "notification-resolver",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "dns_resolution_failure",
+        "recommended_action": "restore_dependency"
+      },
+      "incident_id": "e06-final-standard-042",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "partner-idp",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "tls_certificate_expiration",
+        "recommended_action": "renew_certificate"
+      },
+      "incident_id": "e06-final-standard-046",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "catalog-store",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "tls_certificate_expiration",
+        "recommended_action": "renew_certificate"
+      },
+      "incident_id": "e06-final-standard-047",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "commerce-gateway",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "rate_limit_misconfiguration",
+        "recommended_action": "revert_configuration"
+      },
+      "incident_id": "e06-final-standard-051",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "commerce-gateway",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "rate_limit_misconfiguration",
+        "recommended_action": "revert_configuration"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "ingest-api",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "rate_limit_misconfiguration",
+        "recommended_action": "revert_configuration"
+      },
+      "incident_id": "e06-final-standard-052",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "ingest-api",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "rate_limit_misconfiguration",
+        "recommended_action": "revert_configuration"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "job-coordinator",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "configuration_regression",
+        "recommended_action": "rollback_recent_change"
+      },
+      "incident_id": "e06-final-standard-056",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "job-coordinator",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "configuration_regression",
+        "recommended_action": "rollback_recent_change"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "session-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "configuration_regression",
+        "recommended_action": "rollback_recent_change"
+      },
+      "incident_id": "e06-final-standard-057",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "session-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "configuration_regression",
+        "recommended_action": "rollback_recent_change"
+      }
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "media-database",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_connection_pool_exhaustion",
+        "recommended_action": "scale_capacity"
+      },
+      "incident_id": "e06-final-hard-003",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "orders-postgres",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_connection_pool_exhaustion",
+        "recommended_action": "scale_capacity"
+      },
+      "incident_id": "e06-final-hard-004",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "billing-postgres",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_query_regression",
+        "recommended_action": "mitigate_query"
+      },
+      "incident_id": "e06-final-hard-008",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "billing-postgres",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_query_regression",
+        "recommended_action": "mitigate_query"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "jobs-db",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_query_regression",
+        "recommended_action": "mitigate_query"
+      },
+      "incident_id": "e06-final-hard-009",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "jobs-db",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_query_regression",
+        "recommended_action": "mitigate_query"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "template-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "memory_leak",
+        "recommended_action": "restart_or_replace_instance"
+      },
+      "incident_id": "e06-final-hard-013",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "template-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "memory_leak",
+        "recommended_action": "restart_or_replace_instance"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "transcode-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "memory_leak",
+        "recommended_action": "restart_or_replace_instance"
+      },
+      "incident_id": "e06-final-hard-014",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "transcode-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "memory_leak",
+        "recommended_action": "restart_or_replace_instance"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "catalog-store",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "downstream_dependency_timeout",
+        "recommended_action": "restore_dependency"
+      },
+      "incident_id": "e06-final-hard-018",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "catalog-store",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "downstream_dependency_timeout",
+        "recommended_action": "restore_dependency"
+      }
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "external-idp",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "downstream_dependency_timeout",
+        "recommended_action": "restore_dependency"
+      },
+      "incident_id": "e06-final-hard-019",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "events-cache",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "cache_stampede",
+        "recommended_action": "clear_or_throttle_cache_pressure"
+      },
+      "incident_id": "e06-final-hard-023",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "events-cache",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "cache_stampede",
+        "recommended_action": "clear_or_throttle_cache_pressure"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "notification-cache",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "cache_stampede",
+        "recommended_action": "clear_or_throttle_cache_pressure"
+      },
+      "incident_id": "e06-final-hard-024",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "notification-cache",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "cache_stampede",
+        "recommended_action": "clear_or_throttle_cache_pressure"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "audit-consumer",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "kafka_consumer_lag",
+        "recommended_action": "drain_or_rebalance_workload"
+      },
+      "incident_id": "e06-final-hard-028",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "audit-consumer",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "kafka_consumer_lag",
+        "recommended_action": "drain_or_rebalance_workload"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "rollup-consumer",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "kafka_consumer_lag",
+        "recommended_action": "drain_or_rebalance_workload"
+      },
+      "incident_id": "e06-final-hard-029",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "rollup-consumer",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "kafka_consumer_lag",
+        "recommended_action": "drain_or_rebalance_workload"
+      }
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "checkout-api",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "thread_pool_exhaustion",
+        "recommended_action": "restart_or_replace_instance"
+      },
+      "incident_id": "e06-final-hard-033",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "event-processor",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "thread_pool_exhaustion",
+        "recommended_action": "restart_or_replace_instance"
+      },
+      "incident_id": "e06-final-hard-034",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "jobs-db",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "disk_io_saturation",
+        "recommended_action": "scale_capacity"
+      },
+      "incident_id": "e06-final-hard-038",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "identity-database",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "disk_io_saturation",
+        "recommended_action": "scale_capacity"
+      },
+      "incident_id": "e06-final-hard-039",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "media-resolver",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "dns_resolution_failure",
+        "recommended_action": "restore_dependency"
+      },
+      "incident_id": "e06-final-hard-043",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "media-resolver",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "dns_resolution_failure",
+        "recommended_action": "restore_dependency"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "platform-dns",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "dns_resolution_failure",
+        "recommended_action": "restore_dependency"
+      },
+      "incident_id": "e06-final-hard-044",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "platform-dns",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "dns_resolution_failure",
+        "recommended_action": "restore_dependency"
+      }
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "external-idp",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "tls_certificate_expiration",
+        "recommended_action": "renew_certificate"
+      },
+      "incident_id": "e06-final-hard-048",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "smtp-relay",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "tls_certificate_expiration",
+        "recommended_action": "renew_certificate"
+      },
+      "incident_id": "e06-final-hard-049",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "smtp-relay",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "tls_certificate_expiration",
+        "recommended_action": "renew_certificate"
+      }
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "notification-edge",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "rate_limit_misconfiguration",
+        "recommended_action": "revert_configuration"
+      },
+      "incident_id": "e06-final-hard-053",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "media-ingress",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "rate_limit_misconfiguration",
+        "recommended_action": "revert_configuration"
+      },
+      "incident_id": "e06-final-hard-054",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "media-ingress",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "rate_limit_misconfiguration",
+        "recommended_action": "revert_configuration"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "query-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "configuration_regression",
+        "recommended_action": "rollback_recent_change"
+      },
+      "incident_id": "e06-final-hard-058",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "query-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "configuration_regression",
+        "recommended_action": "rollback_recent_change"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "billing-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "configuration_regression",
+        "recommended_action": "rollback_recent_change"
+      },
+      "incident_id": "e06-final-hard-059",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "billing-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "configuration_regression",
+        "recommended_action": "rollback_recent_change"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "events-postgres",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_connection_pool_exhaustion",
+        "recommended_action": "scale_capacity"
+      },
+      "incident_id": "e06-final-transfer-005",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "events-postgres",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_connection_pool_exhaustion",
+        "recommended_action": "scale_capacity"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "identity-database",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_query_regression",
+        "recommended_action": "mitigate_query"
+      },
+      "incident_id": "e06-final-transfer-010",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "identity-database",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "db_query_regression",
+        "recommended_action": "mitigate_query"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "checkout-api",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "memory_leak",
+        "recommended_action": "restart_or_replace_instance"
+      },
+      "incident_id": "e06-final-transfer-015",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "checkout-api",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "memory_leak",
+        "recommended_action": "restart_or_replace_instance"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "smtp-relay",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "downstream_dependency_timeout",
+        "recommended_action": "restore_dependency"
+      },
+      "incident_id": "e06-final-transfer-020",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "smtp-relay",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "downstream_dependency_timeout",
+        "recommended_action": "restore_dependency"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "media-cache",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "cache_stampede",
+        "recommended_action": "clear_or_throttle_cache_pressure"
+      },
+      "incident_id": "e06-final-transfer-025",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "media-cache",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "cache_stampede",
+        "recommended_action": "clear_or_throttle_cache_pressure"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "billing-consumer",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "kafka_consumer_lag",
+        "recommended_action": "drain_or_rebalance_workload"
+      },
+      "incident_id": "e06-final-transfer-030",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "billing-consumer",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "kafka_consumer_lag",
+        "recommended_action": "drain_or_rebalance_workload"
+      }
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "template-service",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "thread_pool_exhaustion",
+        "recommended_action": "restart_or_replace_instance"
+      },
+      "incident_id": "e06-final-transfer-035",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "metrics-warehouse",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "disk_io_saturation",
+        "recommended_action": "scale_capacity"
+      },
+      "incident_id": "e06-final-transfer-040",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "cluster-dns",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "dns_resolution_failure",
+        "recommended_action": "restore_dependency"
+      },
+      "incident_id": "e06-final-transfer-045",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "cluster-dns",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "dns_resolution_failure",
+        "recommended_action": "restore_dependency"
+      }
+    },
+    {
+      "category": "persistent_wrong",
+      "expected": {
+        "culprit_service": "partner-idp",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "tls_certificate_expiration",
+        "recommended_action": "renew_certificate"
+      },
+      "incident_id": "e06-final-transfer-050",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": false,
+      "target_predicted": null
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "commerce-gateway",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "rate_limit_misconfiguration",
+        "recommended_action": "revert_configuration"
+      },
+      "incident_id": "e06-final-transfer-055",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "commerce-gateway",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "rate_limit_misconfiguration",
+        "recommended_action": "revert_configuration"
+      }
+    },
+    {
+      "category": "source_wrong_target_correct",
+      "expected": {
+        "culprit_service": "job-coordinator",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "configuration_regression",
+        "recommended_action": "rollback_recent_change"
+      },
+      "incident_id": "e06-final-transfer-060",
+      "source_diagnosis_exact": false,
+      "source_predicted": null,
+      "target_diagnosis_exact": true,
+      "target_predicted": {
+        "culprit_service": "job-coordinator",
+        "evidence_ids": [
+          "M1",
+          "E1",
+          "A1"
+        ],
+        "failure_mode": "configuration_regression",
+        "recommended_action": "rollback_recent_change"
+      }
+    }
+  ],
+  "source": "base",
+  "target": "tuned"
+}

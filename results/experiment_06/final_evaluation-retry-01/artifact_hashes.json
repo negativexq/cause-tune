@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "base/evaluation.json": "1e5a1996b85815087361a527a5e085198323d1a659f365b22fb30bb423f7b376",
+    "base/offline_reproduction.json": "72281a6a1086db71e856d93919a1b30548d436633a0b8e766269e8da30a5852e",
+    "base/predictions.jsonl": "3b4b678bd0eda9c67ff2859681fce1f4077547f55f7e385c4fa18aaf1fbfc07f",
+    "base/raw_outputs.jsonl": "c64b9ca297ed0d0c92c3b552feb0ac65544775f8e5cdcdffafed6bbdb33480f9",
+    "base/slice_metrics.json": "cc077160222d1fff32eb4a48035bbba1f468a844f8ae8a58f4cd3c76462105c6",
+    "evaluation_comparison.json": "a5818a8a24f1523c430866df1515a3d00996aade4722946f981f8f9bd48589b3",
+    "g06_summary.json": "8c07d9d37baa1313e18f2e1d1eecf7192ff831e547a13eac5a5696b46c9c2669",
+    "retry_provenance.json": "8ae5b87734fcc0edb24cce5ac49e429a1d2b98fb95972f1325415d3d1e32181f",
+    "technical_failure.json": "3eded295fbebf6cffb9832e1240a0a071f727dcb78565ade26c4a562d54fe0b3",
+    "transition_analysis.json": "3d29f05f79eae28bb59e372380b131a39e90d7ba28f1a570b58800f070a7a40e",
+    "tuned/evaluation.json": "06d62d97bc9b4fea296fb3e7f83512e87c38245a37534132713c7da9a0553cca",
+    "tuned/offline_reproduction.json": "c14f2823e5193cf94efd0bd5d1dcfbd200940110116330f820c1653995c70a57",
+    "tuned/predictions.jsonl": "d21a337c99fb68661067a40e7bf5065ae6295fe687b2ed6b2e6f7ae22710f9e6",
+    "tuned/raw_outputs.jsonl": "86c5d3ce187bf64bf8aaa9e22c2dc294fba114d30a1a30d7cb182dad59374b4c",
+    "tuned/slice_metrics.json": "1042f06915ae244de06aa2f5a97ac72b99d844a62586656f15fba5719f7f285b"
+  },
+  "benchmark_fingerprint": "3811b2d5698a8a6530abbe550be0df7d83c4062098326f8b4384369681cda714",
+  "schema_version": 1
+}

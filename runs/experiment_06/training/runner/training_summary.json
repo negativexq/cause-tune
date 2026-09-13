@@ -1,0 +1,43 @@
+{
+  "actual_stop_step": 125,
+  "all_losses_finite": true,
+  "best_checkpoint_step": 125,
+  "best_validation_metric": 1.0,
+  "earliest_near_best": {
+    "best_diagnosis_exact_match": 1.0,
+    "earliest_step": 50,
+    "tolerance": 0.01,
+    "updates_potentially_avoided": 75
+  },
+  "early_stopping_state": {
+    "best_metric": 1.0,
+    "best_step": 125,
+    "last_improvement_step": 50,
+    "patience_counter": 3,
+    "stop_reason": "validation_no_improvement"
+  },
+  "examples_processed": 1000,
+  "final_loss": 3.283047635704861e-05,
+  "gradient_clipping": null,
+  "initial_loss": 1.3587792217731476,
+  "input_tokens_per_second": 113.97967532795678,
+  "input_tokens_processed": 535435,
+  "max_loss": 1.3587792217731476,
+  "max_optimizer_steps": 150,
+  "mean_loss": 0.03820004670239177,
+  "min_loss": 3.240233650103619e-05,
+  "optimizer": "AdamW",
+  "optimizer_steps_executed": 125,
+  "peak_vram": {
+    "allocated_gib": 5.945848,
+    "reserved_gib": 10.25
+  },
+  "scheduler": "none",
+  "stop_reason": "validation_no_improvement",
+  "supervised_tokens_per_second": 8.48895102622776,
+  "supervised_tokens_processed": 39878,
+  "validation_wall_clock_seconds": 2413.5666524640037,
+  "wall_clock_training_seconds": 4697.635771109002,
+  "warmup": 0,
+  "weight_decay": 0.0
+}

@@ -1,0 +1,75 @@
+{
+  "artifacts": {
+    "checkpoint_selection.json": "0ed0e6202581cb037a1896356b65fcf84baf6954d5b1253876cfcf596fbc35e0",
+    "data_manifest.json": "a7c51377cf3c45185c0ea362fba4f52e47c1ba540097642f5070227e21881e99",
+    "environment.json": "92ed03bdb61acbf239c471aff8d532344a865d5709774c30f10aa9716b668d17",
+    "evaluation.json": "61434939d03ed9a334c64904c6b77f2800c3ffc552ed693605cd1fa3768958f6",
+    "evaluation_contract.json": "4aea3e209aed0cec03b59d51ffec6f087e8fad87aae7152fa6b3b752f9ac9f7a",
+    "parameter_provenance.json": "e4ea3afc25496ce2282323b2296b84e5e356c0fca50ac1083388fe6e15d19c0e",
+    "predictions.jsonl": "d29a526e788a11c2cc67fe30c848e7bb7093fcdc01bfe25076a7cabd96ad69f5",
+    "reload_verification.json": "68db99c006060ffba97f2c208b9d22079849f124be7757a60af417f964b120b3",
+    "resolved_config.json": "780a837adff9e6aaccb36de84d6b11d93d4faa5e4fc1f51d10c6552855c151dc",
+    "runner/checkpoint-step-000025/README.md": "dcc3810d2a20b2d64c225bb006e45fc4ca7dd8d0f828112ab16e52c2e7c73d01",
+    "runner/checkpoint-step-000025/adapter_config.json": "b812daf0aa6894aee3b59fb7beb4712ba3868a82aab8d0775a8f5f19066729f0",
+    "runner/checkpoint-step-000025/adapter_model.safetensors": "3f84bee294d39c1980d55cb17bb7b4169c82411700477251374f10f2f4a56a1f",
+    "runner/checkpoint-step-000025/checkpoint_metadata.json": "4541af1b27672106050958fa5b3d502feb398352ccf968e5426ae413989baf58",
+    "runner/checkpoint-step-000050/README.md": "dcc3810d2a20b2d64c225bb006e45fc4ca7dd8d0f828112ab16e52c2e7c73d01",
+    "runner/checkpoint-step-000050/adapter_config.json": "b812daf0aa6894aee3b59fb7beb4712ba3868a82aab8d0775a8f5f19066729f0",
+    "runner/checkpoint-step-000050/adapter_model.safetensors": "4402fe671e8e691e69cfe8748167f0547e9c41fc8371d0ebdd3f91c14bf49b7a",
+    "runner/checkpoint-step-000050/checkpoint_metadata.json": "b8170fc9728ee018e163ebdb60f1f41f99e302d462fb0e423c6b4de93ab12170",
+    "runner/checkpoint-step-000075/README.md": "dcc3810d2a20b2d64c225bb006e45fc4ca7dd8d0f828112ab16e52c2e7c73d01",
+    "runner/checkpoint-step-000075/adapter_config.json": "b812daf0aa6894aee3b59fb7beb4712ba3868a82aab8d0775a8f5f19066729f0",
+    "runner/checkpoint-step-000075/adapter_model.safetensors": "024a8d51bcae0acdb017c0f8fa388c6005d105cacc8d7ec8cfa84350751d540c",
+    "runner/checkpoint-step-000075/checkpoint_metadata.json": "a52367bbbb264304a9d7e9d75e8076f0698f3d422c2f012c795e2b0c3ffa8d7a",
+    "runner/checkpoint-step-000100/README.md": "dcc3810d2a20b2d64c225bb006e45fc4ca7dd8d0f828112ab16e52c2e7c73d01",
+    "runner/checkpoint-step-000100/adapter_config.json": "b812daf0aa6894aee3b59fb7beb4712ba3868a82aab8d0775a8f5f19066729f0",
+    "runner/checkpoint-step-000100/adapter_model.safetensors": "4a60d8cbe56a8962b98358749fce6c82c59d770123504a483aa3466eb75a7e6e",
+    "runner/checkpoint-step-000100/checkpoint_metadata.json": "605f895605084e343fbbfc3a24b2f7956d7c1a2c69102e63eff3de00d5c40e6a",
+    "runner/checkpoint-step-000125/README.md": "dcc3810d2a20b2d64c225bb006e45fc4ca7dd8d0f828112ab16e52c2e7c73d01",
+    "runner/checkpoint-step-000125/adapter_config.json": "b812daf0aa6894aee3b59fb7beb4712ba3868a82aab8d0775a8f5f19066729f0",
+    "runner/checkpoint-step-000125/adapter_model.safetensors": "8903bfd8833903f218e775d333ac02ca6f5f9dbd5a191207b4a9af9284993788",
+    "runner/checkpoint-step-000125/checkpoint_metadata.json": "9533977ad093619e4393e0ba30c818141968f0583ef50a4244da5efabc05ad09",
+    "runner/checkpoint_selection.json": "ab5318d4ea91e87b0299e590fa1dd00f9672399723cf723120b31f14be4a6297",
+    "runner/loss_history.json": "287f6b032921fee6964693c6bda9032fce06693aa88c7e27246df962d1ca15c1",
+    "runner/optimizer_steps.jsonl": "2620eae159ddae2a869e8dd1a731cdf386b98d4a60dda66f9f4393e19f79cbbf",
+    "runner/resolved_manifest.json": "e9bdc4f5f4a175049214fe6411d298fc4ec2cf5bb051be79ff73cbb41db77600",
+    "runner/training_summary.json": "2203e8eceb95514e64c3fd4c0c379b1415cb7b1aad5bda9e0462bef0ddb8fd2d",
+    "runner/validation_progression.jsonl": "b9401bb89fcc88683931a6b84b2a3baaef0753d541e05f3e27ba8bbc7a6a1cbf",
+    "runner_checkpoint_selection.json": "ab5318d4ea91e87b0299e590fa1dd00f9672399723cf723120b31f14be4a6297",
+    "training_metrics.jsonl": "2620eae159ddae2a869e8dd1a731cdf386b98d4a60dda66f9f4393e19f79cbbf",
+    "training_summary.json": "2203e8eceb95514e64c3fd4c0c379b1415cb7b1aad5bda9e0462bef0ddb8fd2d"
+  },
+  "config": {
+    "path": "resolved_config.json",
+    "sha256": "059b3701498946b4d1c3f4ebb6eebeeeef8276091b09ca5c0814d4ac9fdd6d22"
+  },
+  "data": {
+    "benchmark": "c491fc93f882abfd33c2d82855e7cd183fc6ad064cbc0afec6bf21d9bd852d80",
+    "train": "156c9862ebab8a2e3ccef69cc3879c1dc6cb88666d439320216b69bd56f629ed",
+    "validation": "375ae9ae09de3397f84789a8628a7d368e09f3b6e23f11b5d0b074d8e39efdd7"
+  },
+  "experiment_fingerprint": "62b6967c197293e30beda856a2e5b86928d33ebf9bb8ecff94096aca601c8d77",
+  "experiment_id": "e06-phi4-mini-capability-gap",
+  "git": {
+    "available": true,
+    "commit": "2162aa99d3684ae8cb3f2d7fd12d63be32270796",
+    "dirty": true
+  },
+  "model": {
+    "model_id": "microsoft/Phi-4-mini-instruct",
+    "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+    "revision_policy": "pinned"
+  },
+  "run_id": "e06-phi4-mini-capability-gap__microsoft-phi-4-mini-instruct__62b6967c",
+  "schema_version": 1,
+  "selection": {
+    "checkpoint": 125,
+    "source": "validation"
+  },
+  "training": {
+    "actual_steps": 125,
+    "configured_steps": 150,
+    "seed": 20260941,
+    "stop_reason": "validation_no_improvement"
+  }
+}

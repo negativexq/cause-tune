@@ -1,0 +1,59 @@
+{
+  "adapter_only": true,
+  "checkpoint_type": "adapter_only",
+  "resolved_manifest": {
+    "lora": {
+      "alpha": 32,
+      "dropout": 0.0,
+      "rank": 8,
+      "target_modules": [
+        "qkv_proj",
+        "o_proj",
+        "gate_up_proj",
+        "down_proj"
+      ]
+    },
+    "max_epochs": 2,
+    "model_id": "microsoft/Phi-4-mini-instruct",
+    "quantization": {
+      "compute_dtype": "bfloat16",
+      "double_quant": true,
+      "load_in_4bit": true,
+      "quant_type": "nf4"
+    },
+    "seeds": {
+      "train": 20260941
+    },
+    "subset_examples": 600,
+    "training": {
+      "assistant_only_supervision": true,
+      "effective_batch_size": 8,
+      "gradient_accumulation_steps": 8,
+      "gradient_checkpointing": true,
+      "gradient_checkpointing_use_reentrant": false,
+      "learning_rate": 0.0001,
+      "max_sequence_length": 768,
+      "micro_batch_size": 1
+    },
+    "training_sources": {
+      "train": "data/experiment_04a/subsets/025pct",
+      "validation": "data/experiment_04a/subsets/validation"
+    }
+  },
+  "step": 100,
+  "validation_metrics": {
+    "action_accuracy": 1.0,
+    "culprit_accuracy": 1.0,
+    "diagnosis_exact_count": 288,
+    "diagnosis_exact_match": 1.0,
+    "evidence_f1": 1.0,
+    "failure_mode_accuracy": 1.0,
+    "failure_mode_macro_f1": 1.0,
+    "resolution_exact_match": 1.0,
+    "step": 100,
+    "strict_json_compliance": 1.0,
+    "teacher_forced_loss": 4.528332648056166e-05,
+    "valid_json": 1.0,
+    "validation_duration_seconds": 351.5002929199982
+  }
+}

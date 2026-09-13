@@ -1,0 +1,16 @@
+{
+  "packages": {
+    "bitsandbytes": "0.50.2",
+    "peft": "0.20.0",
+    "torch": "2.14.0",
+    "transformers": "5.16.1"
+  },
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "torch": {
+    "cuda_version": "13.0",
+    "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+    "imported": true,
+    "vram_bytes": 8546484224
+  }
+}

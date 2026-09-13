@@ -1,0 +1,3990 @@
+{
+  "metrics": {
+    "count": 60,
+    "culprit_accuracy": {
+      "count": 38,
+      "rate": 0.6333333333333333
+    },
+    "diagnosis_exact_match": {
+      "count": 38,
+      "rate": 0.6333333333333333
+    },
+    "evidence": {
+      "f1": 0.787878787878788,
+      "false_negative": 63,
+      "false_positive": 0,
+      "precision": 1.0,
+      "recall": 0.65,
+      "true_positive": 117
+    },
+    "failure_mode_accuracy": {
+      "count": 39,
+      "rate": 0.65
+    },
+    "failure_mode_confusion": {
+      "cache_stampede": {
+        "cache_stampede": 5,
+        "configuration_regression": 0,
+        "db_connection_pool_exhaustion": 0,
+        "db_query_regression": 0,
+        "disk_io_saturation": 0,
+        "dns_resolution_failure": 0,
+        "downstream_dependency_timeout": 0,
+        "kafka_consumer_lag": 0,
+        "memory_leak": 0,
+        "rate_limit_misconfiguration": 0,
+        "thread_pool_exhaustion": 0,
+        "tls_certificate_expiration": 0
+      },
+      "configuration_regression": {
+        "cache_stampede": 0,
+        "configuration_regression": 5,
+        "db_connection_pool_exhaustion": 0,
+        "db_query_regression": 0,
+        "disk_io_saturation": 0,
+        "dns_resolution_failure": 0,
+        "downstream_dependency_timeout": 0,
+        "kafka_consumer_lag": 0,
+        "memory_leak": 0,
+        "rate_limit_misconfiguration": 0,
+        "thread_pool_exhaustion": 0,
+        "tls_certificate_expiration": 0
+      },
+      "db_connection_pool_exhaustion": {
+        "cache_stampede": 0,
+        "configuration_regression": 0,
+        "db_connection_pool_exhaustion": 1,
+        "db_query_regression": 0,
+        "disk_io_saturation": 0,
+        "dns_resolution_failure": 0,
+        "downstream_dependency_timeout": 0,
+        "kafka_consumer_lag": 0,
+        "memory_leak": 0,
+        "rate_limit_misconfiguration": 0,
+        "thread_pool_exhaustion": 0,
+        "tls_certificate_expiration": 0
+      },
+      "db_query_regression": {
+        "cache_stampede": 0,
+        "configuration_regression": 0,
+        "db_connection_pool_exhaustion": 0,
+        "db_query_regression": 5,
+        "disk_io_saturation": 0,
+        "dns_resolution_failure": 0,
+        "downstream_dependency_timeout": 0,
+        "kafka_consumer_lag": 0,
+        "memory_leak": 0,
+        "rate_limit_misconfiguration": 0,
+        "thread_pool_exhaustion": 0,
+        "tls_certificate_expiration": 0
+      },
+      "disk_io_saturation": {
+        "cache_stampede": 0,
+        "configuration_regression": 0,
+        "db_connection_pool_exhaustion": 0,
+        "db_query_regression": 0,
+        "disk_io_saturation": 0,
+        "dns_resolution_failure": 0,
+        "downstream_dependency_timeout": 0,
+        "kafka_consumer_lag": 0,
+        "memory_leak": 0,
+        "rate_limit_misconfiguration": 0,
+        "thread_pool_exhaustion": 0,
+        "tls_certificate_expiration": 0
+      },
+      "dns_resolution_failure": {
+        "cache_stampede": 0,
+        "configuration_regression": 0,
+        "db_connection_pool_exhaustion": 0,
+        "db_query_regression": 0,
+        "disk_io_saturation": 0,
+        "dns_resolution_failure": 4,
+        "downstream_dependency_timeout": 0,
+        "kafka_consumer_lag": 0,
+        "memory_leak": 0,
+        "rate_limit_misconfiguration": 0,
+        "thread_pool_exhaustion": 0,
+        "tls_certificate_expiration": 0
+      },
+      "downstream_dependency_timeout": {
+        "cache_stampede": 0,
+        "configuration_regression": 0,
+        "db_connection_pool_exhaustion": 0,
+        "db_query_regression": 0,
+        "disk_io_saturation": 0,
+        "dns_resolution_failure": 0,
+        "downstream_dependency_timeout": 4,
+        "kafka_consumer_lag": 0,
+        "memory_leak": 0,
+        "rate_limit_misconfiguration": 0,
+        "thread_pool_exhaustion": 0,
+        "tls_certificate_expiration": 0
+      },
+      "kafka_consumer_lag": {
+        "cache_stampede": 0,
+        "configuration_regression": 0,
+        "db_connection_pool_exhaustion": 0,
+        "db_query_regression": 0,
+        "disk_io_saturation": 0,
+        "dns_resolution_failure": 0,
+        "downstream_dependency_timeout": 0,
+        "kafka_consumer_lag": 5,
+        "memory_leak": 0,
+        "rate_limit_misconfiguration": 0,
+        "thread_pool_exhaustion": 0,
+        "tls_certificate_expiration": 0
+      },
+      "memory_leak": {
+        "cache_stampede": 0,
+        "configuration_regression": 0,
+        "db_connection_pool_exhaustion": 0,
+        "db_query_regression": 0,
+        "disk_io_saturation": 0,
+        "dns_resolution_failure": 0,
+        "downstream_dependency_timeout": 0,
+        "kafka_consumer_lag": 0,
+        "memory_leak": 4,
+        "rate_limit_misconfiguration": 0,
+        "thread_pool_exhaustion": 0,
+        "tls_certificate_expiration": 0
+      },
+      "rate_limit_misconfiguration": {
+        "cache_stampede": 0,
+        "configuration_regression": 0,
+        "db_connection_pool_exhaustion": 0,
+        "db_query_regression": 0,
+        "disk_io_saturation": 0,
+        "dns_resolution_failure": 0,
+        "downstream_dependency_timeout": 0,
+        "kafka_consumer_lag": 0,
+        "memory_leak": 0,
+        "rate_limit_misconfiguration": 4,
+        "thread_pool_exhaustion": 0,
+        "tls_certificate_expiration": 0
+      },
+      "thread_pool_exhaustion": {
+        "cache_stampede": 0,
+        "configuration_regression": 0,
+        "db_connection_pool_exhaustion": 0,
+        "db_query_regression": 0,
+        "disk_io_saturation": 0,
+        "dns_resolution_failure": 0,
+        "downstream_dependency_timeout": 0,
+        "kafka_consumer_lag": 0,
+        "memory_leak": 0,
+        "rate_limit_misconfiguration": 0,
+        "thread_pool_exhaustion": 1,
+        "tls_certificate_expiration": 0
+      },
+      "tls_certificate_expiration": {
+        "cache_stampede": 0,
+        "configuration_regression": 0,
+        "db_connection_pool_exhaustion": 0,
+        "db_query_regression": 0,
+        "disk_io_saturation": 0,
+        "dns_resolution_failure": 0,
+        "downstream_dependency_timeout": 0,
+        "kafka_consumer_lag": 0,
+        "memory_leak": 0,
+        "rate_limit_misconfiguration": 0,
+        "thread_pool_exhaustion": 0,
+        "tls_certificate_expiration": 1
+      }
+    },
+    "failure_mode_macro_f1": 0.7129629629629629,
+    "json_compliance": {
+      "count": 39,
+      "rate": 0.65
+    },
+    "json_valid_rate": 1.0,
+    "parse_categories": {
+      "unknown culprit": 21,
+      "valid JSON": 39
+    },
+    "per_failure_family": {
+      "cache_stampede": {
+        "action_accuracy": 1.0,
+        "count": 5,
+        "culprit_accuracy": 1.0,
+        "diagnosis_exact_match": 1.0,
+        "failure_mode_accuracy": 1.0,
+        "failure_mode_f1": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 5
+        },
+        "json_compliance": 1.0,
+        "resolution_exact_match": 1.0
+      },
+      "configuration_regression": {
+        "action_accuracy": 1.0,
+        "count": 5,
+        "culprit_accuracy": 1.0,
+        "diagnosis_exact_match": 1.0,
+        "failure_mode_accuracy": 1.0,
+        "failure_mode_f1": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 5
+        },
+        "json_compliance": 1.0,
+        "resolution_exact_match": 1.0
+      },
+      "db_connection_pool_exhaustion": {
+        "action_accuracy": 0.2,
+        "count": 5,
+        "culprit_accuracy": 0.2,
+        "diagnosis_exact_match": 0.2,
+        "failure_mode_accuracy": 0.2,
+        "failure_mode_f1": {
+          "f1": 0.33333333333333337,
+          "precision": 1.0,
+          "recall": 0.2,
+          "support": 5
+        },
+        "json_compliance": 0.2,
+        "resolution_exact_match": 0.2
+      },
+      "db_query_regression": {
+        "action_accuracy": 1.0,
+        "count": 5,
+        "culprit_accuracy": 1.0,
+        "diagnosis_exact_match": 1.0,
+        "failure_mode_accuracy": 1.0,
+        "failure_mode_f1": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 5
+        },
+        "json_compliance": 1.0,
+        "resolution_exact_match": 1.0
+      },
+      "disk_io_saturation": {
+        "action_accuracy": 0.0,
+        "count": 5,
+        "culprit_accuracy": 0.0,
+        "diagnosis_exact_match": 0.0,
+        "failure_mode_accuracy": 0.0,
+        "failure_mode_f1": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 5
+        },
+        "json_compliance": 0.0,
+        "resolution_exact_match": 0.0
+      },
+      "dns_resolution_failure": {
+        "action_accuracy": 0.8,
+        "count": 5,
+        "culprit_accuracy": 0.8,
+        "diagnosis_exact_match": 0.8,
+        "failure_mode_accuracy": 0.8,
+        "failure_mode_f1": {
+          "f1": 0.888888888888889,
+          "precision": 1.0,
+          "recall": 0.8,
+          "support": 5
+        },
+        "json_compliance": 0.8,
+        "resolution_exact_match": 0.8
+      },
+      "downstream_dependency_timeout": {
+        "action_accuracy": 0.8,
+        "count": 5,
+        "culprit_accuracy": 0.8,
+        "diagnosis_exact_match": 0.8,
+        "failure_mode_accuracy": 0.8,
+        "failure_mode_f1": {
+          "f1": 0.888888888888889,
+          "precision": 1.0,
+          "recall": 0.8,
+          "support": 5
+        },
+        "json_compliance": 0.8,
+        "resolution_exact_match": 0.8
+      },
+      "kafka_consumer_lag": {
+        "action_accuracy": 1.0,
+        "count": 5,
+        "culprit_accuracy": 1.0,
+        "diagnosis_exact_match": 1.0,
+        "failure_mode_accuracy": 1.0,
+        "failure_mode_f1": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 5
+        },
+        "json_compliance": 1.0,
+        "resolution_exact_match": 1.0
+      },
+      "memory_leak": {
+        "action_accuracy": 0.8,
+        "count": 5,
+        "culprit_accuracy": 0.8,
+        "diagnosis_exact_match": 0.8,
+        "failure_mode_accuracy": 0.8,
+        "failure_mode_f1": {
+          "f1": 0.888888888888889,
+          "precision": 1.0,
+          "recall": 0.8,
+          "support": 5
+        },
+        "json_compliance": 0.8,
+        "resolution_exact_match": 0.8
+      },
+      "rate_limit_misconfiguration": {
+        "action_accuracy": 0.8,
+        "count": 5,
+        "culprit_accuracy": 0.8,
+        "diagnosis_exact_match": 0.8,
+        "failure_mode_accuracy": 0.8,
+        "failure_mode_f1": {
+          "f1": 0.888888888888889,
+          "precision": 1.0,
+          "recall": 0.8,
+          "support": 5
+        },
+        "json_compliance": 0.8,
+        "resolution_exact_match": 0.8
+      },
+      "thread_pool_exhaustion": {
+        "action_accuracy": 0.2,
+        "count": 5,
+        "culprit_accuracy": 0.0,
+        "diagnosis_exact_match": 0.0,
+        "failure_mode_accuracy": 0.2,
+        "failure_mode_f1": {
+          "f1": 0.33333333333333337,
+          "precision": 1.0,
+          "recall": 0.2,
+          "support": 5
+        },
+        "json_compliance": 0.2,
+        "resolution_exact_match": 0.0
+      },
+      "tls_certificate_expiration": {
+        "action_accuracy": 0.2,
+        "count": 5,
+        "culprit_accuracy": 0.2,
+        "diagnosis_exact_match": 0.2,
+        "failure_mode_accuracy": 0.2,
+        "failure_mode_f1": {
+          "f1": 0.33333333333333337,
+          "precision": 1.0,
+          "recall": 0.2,
+          "support": 5
+        },
+        "json_compliance": 0.2,
+        "resolution_exact_match": 0.2
+      }
+    },
+    "predictions": [
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "standard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "events-postgres",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_connection_pool_exhaustion",
+          "recommended_action": "scale_capacity"
+        },
+        "failure_family": "db_connection_pool_exhaustion",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-standard-001",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "cluster-dns",
+            "event-processor",
+            "events-cache",
+            "events-kafka",
+            "events-postgres",
+            "ingest-api",
+            "object-store",
+            "schema-service",
+            "stream-consumer",
+            "stream-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"db\",\"failure_mode\":\"db_connection_pool_exhaustion\",\"recommended_action\":\"scale_capacity\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "standard",
+        "strict_schema_valid": false,
+        "topology_family": "event_processing"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "standard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "delivery-database",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_connection_pool_exhaustion",
+          "recommended_action": "scale_capacity"
+        },
+        "failure_family": "db_connection_pool_exhaustion",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-standard-002",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "delivery-consumer",
+            "delivery-database",
+            "notification-cache",
+            "notification-edge",
+            "notification-resolver",
+            "notification-stream",
+            "push-provider",
+            "push-worker",
+            "recipient-service",
+            "template-service"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"db\",\"failure_mode\":\"db_connection_pool_exhaustion\",\"recommended_action\":\"scale_capacity\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "standard",
+        "strict_schema_valid": false,
+        "topology_family": "notification_platform"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "identity-database",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_query_regression",
+          "recommended_action": "mitigate_query"
+        },
+        "failure_family": "db_query_regression",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-006",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "audit-consumer",
+            "identity-database",
+            "identity-edge",
+            "identity-events",
+            "identity-resolver",
+            "partner-idp",
+            "policy-service",
+            "session-cache",
+            "session-service",
+            "token-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "identity-database",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_query_regression",
+          "recommended_action": "mitigate_query"
+        },
+        "raw_output": "{\"culprit_service\":\"identity-database\",\"failure_mode\":\"db_query_regression\",\"recommended_action\":\"mitigate_query\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "identity_platform"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "metrics-warehouse",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_query_regression",
+          "recommended_action": "mitigate_query"
+        },
+        "failure_family": "db_query_regression",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-007",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "analytics-gateway",
+            "analytics-resolver",
+            "analytics-stream",
+            "catalog-store",
+            "metadata-service",
+            "metrics-warehouse",
+            "query-cache",
+            "query-service",
+            "rollup-consumer",
+            "rollup-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "metrics-warehouse",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_query_regression",
+          "recommended_action": "mitigate_query"
+        },
+        "raw_output": "{\"culprit_service\":\"metrics-warehouse\",\"failure_mode\":\"db_query_regression\",\"recommended_action\":\"mitigate_query\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "analytics_pipeline"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "checkout-api",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "memory_leak",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "failure_family": "memory_leak",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-011",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "bank-gateway",
+            "checkout-api",
+            "commerce-gateway",
+            "fraud-service",
+            "order-consumer",
+            "order-events",
+            "order-worker",
+            "orders-postgres",
+            "orders-redis",
+            "platform-dns"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "checkout-api",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "memory_leak",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "raw_output": "{\"culprit_service\":\"checkout-api\",\"failure_mode\":\"memory_leak\",\"recommended_action\":\"restart_or_replace_instance\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "commerce_core"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "standard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "event-processor",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "memory_leak",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "failure_family": "memory_leak",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-standard-012",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "cluster-dns",
+            "event-processor",
+            "events-cache",
+            "events-kafka",
+            "events-postgres",
+            "ingest-api",
+            "object-store",
+            "schema-service",
+            "stream-consumer",
+            "stream-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"app\",\"failure_mode\":\"memory_leak\",\"recommended_action\":\"restart_or_replace_instance\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "standard",
+        "strict_schema_valid": false,
+        "topology_family": "event_processing"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "smtp-relay",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "downstream_dependency_timeout",
+          "recommended_action": "restore_dependency"
+        },
+        "failure_family": "downstream_dependency_timeout",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-016",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "job-consumer",
+            "job-coordinator",
+            "jobs-api",
+            "jobs-cache",
+            "jobs-db",
+            "jobs-queue",
+            "report-worker",
+            "scheduler",
+            "service-dns",
+            "smtp-relay"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "smtp-relay",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "downstream_dependency_timeout",
+          "recommended_action": "restore_dependency"
+        },
+        "raw_output": "{\"culprit_service\":\"smtp-relay\",\"failure_mode\":\"downstream_dependency_timeout\",\"recommended_action\":\"restore_dependency\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "worker_system"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "partner-idp",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "downstream_dependency_timeout",
+          "recommended_action": "restore_dependency"
+        },
+        "failure_family": "downstream_dependency_timeout",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-017",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "audit-consumer",
+            "identity-database",
+            "identity-edge",
+            "identity-events",
+            "identity-resolver",
+            "partner-idp",
+            "policy-service",
+            "session-cache",
+            "session-service",
+            "token-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "partner-idp",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "downstream_dependency_timeout",
+          "recommended_action": "restore_dependency"
+        },
+        "raw_output": "{\"culprit_service\":\"partner-idp\",\"failure_mode\":\"downstream_dependency_timeout\",\"recommended_action\":\"restore_dependency\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "identity_platform"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "media-cache",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "cache_stampede",
+          "recommended_action": "clear_or_throttle_cache_pressure"
+        },
+        "failure_family": "cache_stampede",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-021",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "blob-store",
+            "media-cache",
+            "media-catalog",
+            "media-consumer",
+            "media-database",
+            "media-ingress",
+            "media-resolver",
+            "transcode-service",
+            "transcode-stream",
+            "transcode-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "media-cache",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "cache_stampede",
+          "recommended_action": "clear_or_throttle_cache_pressure"
+        },
+        "raw_output": "{\"culprit_service\":\"media-cache\",\"failure_mode\":\"cache_stampede\",\"recommended_action\":\"clear_or_throttle_cache_pressure\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "media_pipeline"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "orders-redis",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "cache_stampede",
+          "recommended_action": "clear_or_throttle_cache_pressure"
+        },
+        "failure_family": "cache_stampede",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-022",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "bank-gateway",
+            "checkout-api",
+            "commerce-gateway",
+            "fraud-service",
+            "order-consumer",
+            "order-events",
+            "order-worker",
+            "orders-postgres",
+            "orders-redis",
+            "platform-dns"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "orders-redis",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "cache_stampede",
+          "recommended_action": "clear_or_throttle_cache_pressure"
+        },
+        "raw_output": "{\"culprit_service\":\"orders-redis\",\"failure_mode\":\"cache_stampede\",\"recommended_action\":\"clear_or_throttle_cache_pressure\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "commerce_core"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "billing-consumer",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "kafka_consumer_lag",
+          "recommended_action": "drain_or_rebalance_workload"
+        },
+        "failure_family": "kafka_consumer_lag",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-026",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "auth-service",
+            "billing-consumer",
+            "billing-events",
+            "billing-postgres",
+            "billing-redis",
+            "billing-service",
+            "billing-worker",
+            "corp-dns",
+            "external-idp",
+            "public-api"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "billing-consumer",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "kafka_consumer_lag",
+          "recommended_action": "drain_or_rebalance_workload"
+        },
+        "raw_output": "{\"culprit_service\":\"billing-consumer\",\"failure_mode\":\"kafka_consumer_lag\",\"recommended_action\":\"drain_or_rebalance_workload\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "saas_api"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "job-consumer",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "kafka_consumer_lag",
+          "recommended_action": "drain_or_rebalance_workload"
+        },
+        "failure_family": "kafka_consumer_lag",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-027",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "job-consumer",
+            "job-coordinator",
+            "jobs-api",
+            "jobs-cache",
+            "jobs-db",
+            "jobs-queue",
+            "report-worker",
+            "scheduler",
+            "service-dns",
+            "smtp-relay"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "job-consumer",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "kafka_consumer_lag",
+          "recommended_action": "drain_or_rebalance_workload"
+        },
+        "raw_output": "{\"culprit_service\":\"job-consumer\",\"failure_mode\":\"kafka_consumer_lag\",\"recommended_action\":\"drain_or_rebalance_workload\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "worker_system"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "standard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "template-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "thread_pool_exhaustion",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "failure_family": "thread_pool_exhaustion",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-standard-031",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "delivery-consumer",
+            "delivery-database",
+            "notification-cache",
+            "notification-edge",
+            "notification-resolver",
+            "notification-stream",
+            "push-provider",
+            "push-worker",
+            "recipient-service",
+            "template-service"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"worker\",\"failure_mode\":\"thread_pool_exhaustion\",\"recommended_action\":\"restart_or_replace_instance\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "standard",
+        "strict_schema_valid": false,
+        "topology_family": "notification_platform"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "transcode-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "thread_pool_exhaustion",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "failure_family": "thread_pool_exhaustion",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-032",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "blob-store",
+            "media-cache",
+            "media-catalog",
+            "media-consumer",
+            "media-database",
+            "media-ingress",
+            "media-resolver",
+            "transcode-service",
+            "transcode-stream",
+            "transcode-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "transcode-worker",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "thread_pool_exhaustion",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "raw_output": "{\"culprit_service\":\"transcode-worker\",\"failure_mode\":\"thread_pool_exhaustion\",\"recommended_action\":\"restart_or_replace_instance\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "media_pipeline"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "standard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "metrics-warehouse",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "disk_io_saturation",
+          "recommended_action": "scale_capacity"
+        },
+        "failure_family": "disk_io_saturation",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-standard-036",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "analytics-gateway",
+            "analytics-resolver",
+            "analytics-stream",
+            "catalog-store",
+            "metadata-service",
+            "metrics-warehouse",
+            "query-cache",
+            "query-service",
+            "rollup-consumer",
+            "rollup-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"db\",\"failure_mode\":\"disk_io_saturation\",\"recommended_action\":\"scale_capacity\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "standard",
+        "strict_schema_valid": false,
+        "topology_family": "analytics_pipeline"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "standard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "billing-postgres",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "disk_io_saturation",
+          "recommended_action": "scale_capacity"
+        },
+        "failure_family": "disk_io_saturation",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-standard-037",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "auth-service",
+            "billing-consumer",
+            "billing-events",
+            "billing-postgres",
+            "billing-redis",
+            "billing-service",
+            "billing-worker",
+            "corp-dns",
+            "external-idp",
+            "public-api"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"db\",\"failure_mode\":\"disk_io_saturation\",\"recommended_action\":\"scale_capacity\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "standard",
+        "strict_schema_valid": false,
+        "topology_family": "saas_api"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "cluster-dns",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "dns_resolution_failure",
+          "recommended_action": "restore_dependency"
+        },
+        "failure_family": "dns_resolution_failure",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-041",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "cluster-dns",
+            "event-processor",
+            "events-cache",
+            "events-kafka",
+            "events-postgres",
+            "ingest-api",
+            "object-store",
+            "schema-service",
+            "stream-consumer",
+            "stream-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "cluster-dns",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "dns_resolution_failure",
+          "recommended_action": "restore_dependency"
+        },
+        "raw_output": "{\"culprit_service\":\"cluster-dns\",\"failure_mode\":\"dns_resolution_failure\",\"recommended_action\":\"restore_dependency\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "event_processing"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "standard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "notification-resolver",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "dns_resolution_failure",
+          "recommended_action": "restore_dependency"
+        },
+        "failure_family": "dns_resolution_failure",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-standard-042",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "delivery-consumer",
+            "delivery-database",
+            "notification-cache",
+            "notification-edge",
+            "notification-resolver",
+            "notification-stream",
+            "push-provider",
+            "push-worker",
+            "recipient-service",
+            "template-service"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"dns\",\"failure_mode\":\"dns_resolution_failure\",\"recommended_action\":\"restore_dependency\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "standard",
+        "strict_schema_valid": false,
+        "topology_family": "notification_platform"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "standard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "partner-idp",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "tls_certificate_expiration",
+          "recommended_action": "renew_certificate"
+        },
+        "failure_family": "tls_certificate_expiration",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-standard-046",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "audit-consumer",
+            "identity-database",
+            "identity-edge",
+            "identity-events",
+            "identity-resolver",
+            "partner-idp",
+            "policy-service",
+            "session-cache",
+            "session-service",
+            "token-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"cert\",\"failure_mode\":\"tls_certificate_expiration\",\"recommended_action\":\"renew_certificate\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "standard",
+        "strict_schema_valid": false,
+        "topology_family": "identity_platform"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "standard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "catalog-store",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "tls_certificate_expiration",
+          "recommended_action": "renew_certificate"
+        },
+        "failure_family": "tls_certificate_expiration",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-standard-047",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "analytics-gateway",
+            "analytics-resolver",
+            "analytics-stream",
+            "catalog-store",
+            "metadata-service",
+            "metrics-warehouse",
+            "query-cache",
+            "query-service",
+            "rollup-consumer",
+            "rollup-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"cert\",\"failure_mode\":\"tls_certificate_expiration\",\"recommended_action\":\"renew_certificate\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "standard",
+        "strict_schema_valid": false,
+        "topology_family": "analytics_pipeline"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "commerce-gateway",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "rate_limit_misconfiguration",
+          "recommended_action": "revert_configuration"
+        },
+        "failure_family": "rate_limit_misconfiguration",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-051",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "bank-gateway",
+            "checkout-api",
+            "commerce-gateway",
+            "fraud-service",
+            "order-consumer",
+            "order-events",
+            "order-worker",
+            "orders-postgres",
+            "orders-redis",
+            "platform-dns"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "commerce-gateway",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "rate_limit_misconfiguration",
+          "recommended_action": "revert_configuration"
+        },
+        "raw_output": "{\"culprit_service\":\"commerce-gateway\",\"failure_mode\":\"rate_limit_misconfiguration\",\"recommended_action\":\"revert_configuration\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "commerce_core"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "ingest-api",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "rate_limit_misconfiguration",
+          "recommended_action": "revert_configuration"
+        },
+        "failure_family": "rate_limit_misconfiguration",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-052",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "cluster-dns",
+            "event-processor",
+            "events-cache",
+            "events-kafka",
+            "events-postgres",
+            "ingest-api",
+            "object-store",
+            "schema-service",
+            "stream-consumer",
+            "stream-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "ingest-api",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "rate_limit_misconfiguration",
+          "recommended_action": "revert_configuration"
+        },
+        "raw_output": "{\"culprit_service\":\"ingest-api\",\"failure_mode\":\"rate_limit_misconfiguration\",\"recommended_action\":\"revert_configuration\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "event_processing"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "job-coordinator",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "configuration_regression",
+          "recommended_action": "rollback_recent_change"
+        },
+        "failure_family": "configuration_regression",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-056",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "job-consumer",
+            "job-coordinator",
+            "jobs-api",
+            "jobs-cache",
+            "jobs-db",
+            "jobs-queue",
+            "report-worker",
+            "scheduler",
+            "service-dns",
+            "smtp-relay"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "job-coordinator",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "configuration_regression",
+          "recommended_action": "rollback_recent_change"
+        },
+        "raw_output": "{\"culprit_service\":\"job-coordinator\",\"failure_mode\":\"configuration_regression\",\"recommended_action\":\"rollback_recent_change\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "worker_system"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "standard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "session-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "configuration_regression",
+          "recommended_action": "rollback_recent_change"
+        },
+        "failure_family": "configuration_regression",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-standard-057",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "audit-consumer",
+            "identity-database",
+            "identity-edge",
+            "identity-events",
+            "identity-resolver",
+            "partner-idp",
+            "policy-service",
+            "session-cache",
+            "session-service",
+            "token-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "session-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "configuration_regression",
+          "recommended_action": "rollback_recent_change"
+        },
+        "raw_output": "{\"culprit_service\":\"session-service\",\"failure_mode\":\"configuration_regression\",\"recommended_action\":\"rollback_recent_change\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "standard",
+        "strict_schema_valid": true,
+        "topology_family": "identity_platform"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "hard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "media-database",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_connection_pool_exhaustion",
+          "recommended_action": "scale_capacity"
+        },
+        "failure_family": "db_connection_pool_exhaustion",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-hard-003",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "blob-store",
+            "media-cache",
+            "media-catalog",
+            "media-consumer",
+            "media-database",
+            "media-ingress",
+            "media-resolver",
+            "transcode-service",
+            "transcode-stream",
+            "transcode-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"db\",\"failure_mode\":\"db_connection_pool_exhaustion\",\"recommended_action\":\"scale_capacity\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": false,
+        "slice": "hard",
+        "strict_schema_valid": false,
+        "topology_family": "media_pipeline"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "hard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "orders-postgres",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_connection_pool_exhaustion",
+          "recommended_action": "scale_capacity"
+        },
+        "failure_family": "db_connection_pool_exhaustion",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-hard-004",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "bank-gateway",
+            "checkout-api",
+            "commerce-gateway",
+            "fraud-service",
+            "order-consumer",
+            "order-events",
+            "order-worker",
+            "orders-postgres",
+            "orders-redis",
+            "platform-dns"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"db\",\"failure_mode\":\"db_connection_pool_exhaustion\",\"recommended_action\":\"scale_capacity\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": false,
+        "slice": "hard",
+        "strict_schema_valid": false,
+        "topology_family": "commerce_core"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "billing-postgres",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_query_regression",
+          "recommended_action": "mitigate_query"
+        },
+        "failure_family": "db_query_regression",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-008",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "auth-service",
+            "billing-consumer",
+            "billing-events",
+            "billing-postgres",
+            "billing-redis",
+            "billing-service",
+            "billing-worker",
+            "corp-dns",
+            "external-idp",
+            "public-api"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "billing-postgres",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_query_regression",
+          "recommended_action": "mitigate_query"
+        },
+        "raw_output": "{\"culprit_service\":\"billing-postgres\",\"failure_mode\":\"db_query_regression\",\"recommended_action\":\"mitigate_query\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "saas_api"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "jobs-db",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_query_regression",
+          "recommended_action": "mitigate_query"
+        },
+        "failure_family": "db_query_regression",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-009",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "job-consumer",
+            "job-coordinator",
+            "jobs-api",
+            "jobs-cache",
+            "jobs-db",
+            "jobs-queue",
+            "report-worker",
+            "scheduler",
+            "service-dns",
+            "smtp-relay"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "jobs-db",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_query_regression",
+          "recommended_action": "mitigate_query"
+        },
+        "raw_output": "{\"culprit_service\":\"jobs-db\",\"failure_mode\":\"db_query_regression\",\"recommended_action\":\"mitigate_query\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "worker_system"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "template-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "memory_leak",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "failure_family": "memory_leak",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-013",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "delivery-consumer",
+            "delivery-database",
+            "notification-cache",
+            "notification-edge",
+            "notification-resolver",
+            "notification-stream",
+            "push-provider",
+            "push-worker",
+            "recipient-service",
+            "template-service"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "template-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "memory_leak",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "raw_output": "{\"culprit_service\":\"template-service\",\"failure_mode\":\"memory_leak\",\"recommended_action\":\"restart_or_replace_instance\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "notification_platform"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "transcode-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "memory_leak",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "failure_family": "memory_leak",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-014",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "blob-store",
+            "media-cache",
+            "media-catalog",
+            "media-consumer",
+            "media-database",
+            "media-ingress",
+            "media-resolver",
+            "transcode-service",
+            "transcode-stream",
+            "transcode-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "transcode-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "memory_leak",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "raw_output": "{\"culprit_service\":\"transcode-service\",\"failure_mode\":\"memory_leak\",\"recommended_action\":\"restart_or_replace_instance\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "media_pipeline"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "catalog-store",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "downstream_dependency_timeout",
+          "recommended_action": "restore_dependency"
+        },
+        "failure_family": "downstream_dependency_timeout",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-018",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "analytics-gateway",
+            "analytics-resolver",
+            "analytics-stream",
+            "catalog-store",
+            "metadata-service",
+            "metrics-warehouse",
+            "query-cache",
+            "query-service",
+            "rollup-consumer",
+            "rollup-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "catalog-store",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "downstream_dependency_timeout",
+          "recommended_action": "restore_dependency"
+        },
+        "raw_output": "{\"culprit_service\":\"catalog-store\",\"failure_mode\":\"downstream_dependency_timeout\",\"recommended_action\":\"restore_dependency\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "analytics_pipeline"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "hard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "external-idp",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "downstream_dependency_timeout",
+          "recommended_action": "restore_dependency"
+        },
+        "failure_family": "downstream_dependency_timeout",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-hard-019",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "auth-service",
+            "billing-consumer",
+            "billing-events",
+            "billing-postgres",
+            "billing-redis",
+            "billing-service",
+            "billing-worker",
+            "corp-dns",
+            "external-idp",
+            "public-api"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"external\",\"failure_mode\":\"dns_resolution_failure\",\"recommended_action\":\"restore_dependency\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": false,
+        "slice": "hard",
+        "strict_schema_valid": false,
+        "topology_family": "saas_api"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "events-cache",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "cache_stampede",
+          "recommended_action": "clear_or_throttle_cache_pressure"
+        },
+        "failure_family": "cache_stampede",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-023",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "cluster-dns",
+            "event-processor",
+            "events-cache",
+            "events-kafka",
+            "events-postgres",
+            "ingest-api",
+            "object-store",
+            "schema-service",
+            "stream-consumer",
+            "stream-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "events-cache",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "cache_stampede",
+          "recommended_action": "clear_or_throttle_cache_pressure"
+        },
+        "raw_output": "{\"culprit_service\":\"events-cache\",\"failure_mode\":\"cache_stampede\",\"recommended_action\":\"clear_or_throttle_cache_pressure\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "event_processing"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "notification-cache",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "cache_stampede",
+          "recommended_action": "clear_or_throttle_cache_pressure"
+        },
+        "failure_family": "cache_stampede",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-024",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "delivery-consumer",
+            "delivery-database",
+            "notification-cache",
+            "notification-edge",
+            "notification-resolver",
+            "notification-stream",
+            "push-provider",
+            "push-worker",
+            "recipient-service",
+            "template-service"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "notification-cache",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "cache_stampede",
+          "recommended_action": "clear_or_throttle_cache_pressure"
+        },
+        "raw_output": "{\"culprit_service\":\"notification-cache\",\"failure_mode\":\"cache_stampede\",\"recommended_action\":\"clear_or_throttle_cache_pressure\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "notification_platform"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "audit-consumer",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "kafka_consumer_lag",
+          "recommended_action": "drain_or_rebalance_workload"
+        },
+        "failure_family": "kafka_consumer_lag",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-028",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "audit-consumer",
+            "identity-database",
+            "identity-edge",
+            "identity-events",
+            "identity-resolver",
+            "partner-idp",
+            "policy-service",
+            "session-cache",
+            "session-service",
+            "token-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "audit-consumer",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "kafka_consumer_lag",
+          "recommended_action": "drain_or_rebalance_workload"
+        },
+        "raw_output": "{\"culprit_service\":\"audit-consumer\",\"failure_mode\":\"kafka_consumer_lag\",\"recommended_action\":\"drain_or_rebalance_workload\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "identity_platform"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "rollup-consumer",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "kafka_consumer_lag",
+          "recommended_action": "drain_or_rebalance_workload"
+        },
+        "failure_family": "kafka_consumer_lag",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-029",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "analytics-gateway",
+            "analytics-resolver",
+            "analytics-stream",
+            "catalog-store",
+            "metadata-service",
+            "metrics-warehouse",
+            "query-cache",
+            "query-service",
+            "rollup-consumer",
+            "rollup-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "rollup-consumer",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "kafka_consumer_lag",
+          "recommended_action": "drain_or_rebalance_workload"
+        },
+        "raw_output": "{\"culprit_service\":\"rollup-consumer\",\"failure_mode\":\"kafka_consumer_lag\",\"recommended_action\":\"drain_or_rebalance_workload\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "analytics_pipeline"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "hard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "checkout-api",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "thread_pool_exhaustion",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "failure_family": "thread_pool_exhaustion",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-hard-033",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "bank-gateway",
+            "checkout-api",
+            "commerce-gateway",
+            "fraud-service",
+            "order-consumer",
+            "order-events",
+            "order-worker",
+            "orders-postgres",
+            "orders-redis",
+            "platform-dns"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"worker\",\"failure_mode\":\"thread_pool_exhaustion\",\"recommended_action\":\"restart_or_replace_instance\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": false,
+        "slice": "hard",
+        "strict_schema_valid": false,
+        "topology_family": "commerce_core"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "hard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "event-processor",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "thread_pool_exhaustion",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "failure_family": "thread_pool_exhaustion",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-hard-034",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "cluster-dns",
+            "event-processor",
+            "events-cache",
+            "events-kafka",
+            "events-postgres",
+            "ingest-api",
+            "object-store",
+            "schema-service",
+            "stream-consumer",
+            "stream-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"worker\",\"failure_mode\":\"thread_pool_exhaustion\",\"recommended_action\":\"restart_or_replace_instance\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": false,
+        "slice": "hard",
+        "strict_schema_valid": false,
+        "topology_family": "event_processing"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "hard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "jobs-db",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "disk_io_saturation",
+          "recommended_action": "scale_capacity"
+        },
+        "failure_family": "disk_io_saturation",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-hard-038",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "job-consumer",
+            "job-coordinator",
+            "jobs-api",
+            "jobs-cache",
+            "jobs-db",
+            "jobs-queue",
+            "report-worker",
+            "scheduler",
+            "service-dns",
+            "smtp-relay"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"db\",\"failure_mode\":\"disk_io_saturation\",\"recommended_action\":\"scale_capacity\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": false,
+        "slice": "hard",
+        "strict_schema_valid": false,
+        "topology_family": "worker_system"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "hard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "identity-database",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "disk_io_saturation",
+          "recommended_action": "scale_capacity"
+        },
+        "failure_family": "disk_io_saturation",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-hard-039",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "audit-consumer",
+            "identity-database",
+            "identity-edge",
+            "identity-events",
+            "identity-resolver",
+            "partner-idp",
+            "policy-service",
+            "session-cache",
+            "session-service",
+            "token-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"db\",\"failure_mode\":\"disk_io_saturation\",\"recommended_action\":\"scale_capacity\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": false,
+        "slice": "hard",
+        "strict_schema_valid": false,
+        "topology_family": "identity_platform"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "media-resolver",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "dns_resolution_failure",
+          "recommended_action": "restore_dependency"
+        },
+        "failure_family": "dns_resolution_failure",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-043",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "blob-store",
+            "media-cache",
+            "media-catalog",
+            "media-consumer",
+            "media-database",
+            "media-ingress",
+            "media-resolver",
+            "transcode-service",
+            "transcode-stream",
+            "transcode-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "media-resolver",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "dns_resolution_failure",
+          "recommended_action": "restore_dependency"
+        },
+        "raw_output": "{\"culprit_service\":\"media-resolver\",\"failure_mode\":\"dns_resolution_failure\",\"recommended_action\":\"restore_dependency\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "media_pipeline"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "platform-dns",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "dns_resolution_failure",
+          "recommended_action": "restore_dependency"
+        },
+        "failure_family": "dns_resolution_failure",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-044",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "bank-gateway",
+            "checkout-api",
+            "commerce-gateway",
+            "fraud-service",
+            "order-consumer",
+            "order-events",
+            "order-worker",
+            "orders-postgres",
+            "orders-redis",
+            "platform-dns"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "platform-dns",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "dns_resolution_failure",
+          "recommended_action": "restore_dependency"
+        },
+        "raw_output": "{\"culprit_service\":\"platform-dns\",\"failure_mode\":\"dns_resolution_failure\",\"recommended_action\":\"restore_dependency\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "commerce_core"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "hard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "external-idp",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "tls_certificate_expiration",
+          "recommended_action": "renew_certificate"
+        },
+        "failure_family": "tls_certificate_expiration",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-hard-048",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "auth-service",
+            "billing-consumer",
+            "billing-events",
+            "billing-postgres",
+            "billing-redis",
+            "billing-service",
+            "billing-worker",
+            "corp-dns",
+            "external-idp",
+            "public-api"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"external\",\"failure_mode\":\"tls_certificate_expiration\",\"recommended_action\":\"renew_certificate\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": false,
+        "slice": "hard",
+        "strict_schema_valid": false,
+        "topology_family": "saas_api"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "smtp-relay",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "tls_certificate_expiration",
+          "recommended_action": "renew_certificate"
+        },
+        "failure_family": "tls_certificate_expiration",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-049",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "job-consumer",
+            "job-coordinator",
+            "jobs-api",
+            "jobs-cache",
+            "jobs-db",
+            "jobs-queue",
+            "report-worker",
+            "scheduler",
+            "service-dns",
+            "smtp-relay"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "smtp-relay",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "tls_certificate_expiration",
+          "recommended_action": "renew_certificate"
+        },
+        "raw_output": "{\"culprit_service\":\"smtp-relay\",\"failure_mode\":\"tls_certificate_expiration\",\"recommended_action\":\"renew_certificate\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "worker_system"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "hard",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "notification-edge",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "rate_limit_misconfiguration",
+          "recommended_action": "revert_configuration"
+        },
+        "failure_family": "rate_limit_misconfiguration",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-hard-053",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "delivery-consumer",
+            "delivery-database",
+            "notification-cache",
+            "notification-edge",
+            "notification-resolver",
+            "notification-stream",
+            "push-provider",
+            "push-worker",
+            "recipient-service",
+            "template-service"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"gateway\",\"failure_mode\":\"rate_limit_misconfiguration\",\"recommended_action\":\"revert_configuration\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": false,
+        "slice": "hard",
+        "strict_schema_valid": false,
+        "topology_family": "notification_platform"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "media-ingress",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "rate_limit_misconfiguration",
+          "recommended_action": "revert_configuration"
+        },
+        "failure_family": "rate_limit_misconfiguration",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-054",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "blob-store",
+            "media-cache",
+            "media-catalog",
+            "media-consumer",
+            "media-database",
+            "media-ingress",
+            "media-resolver",
+            "transcode-service",
+            "transcode-stream",
+            "transcode-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "media-ingress",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "rate_limit_misconfiguration",
+          "recommended_action": "revert_configuration"
+        },
+        "raw_output": "{\"culprit_service\":\"media-ingress\",\"failure_mode\":\"rate_limit_misconfiguration\",\"recommended_action\":\"revert_configuration\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "media_pipeline"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "query-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "configuration_regression",
+          "recommended_action": "rollback_recent_change"
+        },
+        "failure_family": "configuration_regression",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-058",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "analytics-gateway",
+            "analytics-resolver",
+            "analytics-stream",
+            "catalog-store",
+            "metadata-service",
+            "metrics-warehouse",
+            "query-cache",
+            "query-service",
+            "rollup-consumer",
+            "rollup-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "query-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "configuration_regression",
+          "recommended_action": "rollback_recent_change"
+        },
+        "raw_output": "{\"culprit_service\":\"query-service\",\"failure_mode\":\"configuration_regression\",\"recommended_action\":\"rollback_recent_change\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "analytics_pipeline"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "hard",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "billing-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "configuration_regression",
+          "recommended_action": "rollback_recent_change"
+        },
+        "failure_family": "configuration_regression",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-hard-059",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "auth-service",
+            "billing-consumer",
+            "billing-events",
+            "billing-postgres",
+            "billing-redis",
+            "billing-service",
+            "billing-worker",
+            "corp-dns",
+            "external-idp",
+            "public-api"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "billing-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "configuration_regression",
+          "recommended_action": "rollback_recent_change"
+        },
+        "raw_output": "{\"culprit_service\":\"billing-service\",\"failure_mode\":\"configuration_regression\",\"recommended_action\":\"rollback_recent_change\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": true,
+        "resolution_exact": true,
+        "slice": "hard",
+        "strict_schema_valid": true,
+        "topology_family": "saas_api"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "transfer",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "events-postgres",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_connection_pool_exhaustion",
+          "recommended_action": "scale_capacity"
+        },
+        "failure_family": "db_connection_pool_exhaustion",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-transfer-005",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "cluster-dns",
+            "event-processor",
+            "events-cache",
+            "events-kafka",
+            "events-postgres",
+            "ingest-api",
+            "object-store",
+            "schema-service",
+            "stream-consumer",
+            "stream-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "events-postgres",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_connection_pool_exhaustion",
+          "recommended_action": "scale_capacity"
+        },
+        "raw_output": "{\"culprit_service\":\"events-postgres\",\"failure_mode\":\"db_connection_pool_exhaustion\",\"recommended_action\":\"scale_capacity\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "transfer",
+        "strict_schema_valid": true,
+        "topology_family": "event_processing"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "transfer",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "identity-database",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_query_regression",
+          "recommended_action": "mitigate_query"
+        },
+        "failure_family": "db_query_regression",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-transfer-010",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "audit-consumer",
+            "identity-database",
+            "identity-edge",
+            "identity-events",
+            "identity-resolver",
+            "partner-idp",
+            "policy-service",
+            "session-cache",
+            "session-service",
+            "token-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "identity-database",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "db_query_regression",
+          "recommended_action": "mitigate_query"
+        },
+        "raw_output": "{\"culprit_service\":\"identity-database\",\"failure_mode\":\"db_query_regression\",\"recommended_action\":\"mitigate_query\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "transfer",
+        "strict_schema_valid": true,
+        "topology_family": "identity_platform"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "transfer",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "checkout-api",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "memory_leak",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "failure_family": "memory_leak",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-transfer-015",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "bank-gateway",
+            "checkout-api",
+            "commerce-gateway",
+            "fraud-service",
+            "order-consumer",
+            "order-events",
+            "order-worker",
+            "orders-postgres",
+            "orders-redis",
+            "platform-dns"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "checkout-api",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "memory_leak",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "raw_output": "{\"culprit_service\":\"checkout-api\",\"failure_mode\":\"memory_leak\",\"recommended_action\":\"restart_or_replace_instance\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "transfer",
+        "strict_schema_valid": true,
+        "topology_family": "commerce_core"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "transfer",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "smtp-relay",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "downstream_dependency_timeout",
+          "recommended_action": "restore_dependency"
+        },
+        "failure_family": "downstream_dependency_timeout",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-transfer-020",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "job-consumer",
+            "job-coordinator",
+            "jobs-api",
+            "jobs-cache",
+            "jobs-db",
+            "jobs-queue",
+            "report-worker",
+            "scheduler",
+            "service-dns",
+            "smtp-relay"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "smtp-relay",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "downstream_dependency_timeout",
+          "recommended_action": "restore_dependency"
+        },
+        "raw_output": "{\"culprit_service\":\"smtp-relay\",\"failure_mode\":\"downstream_dependency_timeout\",\"recommended_action\":\"restore_dependency\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "transfer",
+        "strict_schema_valid": true,
+        "topology_family": "worker_system"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "transfer",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "media-cache",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "cache_stampede",
+          "recommended_action": "clear_or_throttle_cache_pressure"
+        },
+        "failure_family": "cache_stampede",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-transfer-025",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "blob-store",
+            "media-cache",
+            "media-catalog",
+            "media-consumer",
+            "media-database",
+            "media-ingress",
+            "media-resolver",
+            "transcode-service",
+            "transcode-stream",
+            "transcode-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "media-cache",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "cache_stampede",
+          "recommended_action": "clear_or_throttle_cache_pressure"
+        },
+        "raw_output": "{\"culprit_service\":\"media-cache\",\"failure_mode\":\"cache_stampede\",\"recommended_action\":\"clear_or_throttle_cache_pressure\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "transfer",
+        "strict_schema_valid": true,
+        "topology_family": "media_pipeline"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "transfer",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "billing-consumer",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "kafka_consumer_lag",
+          "recommended_action": "drain_or_rebalance_workload"
+        },
+        "failure_family": "kafka_consumer_lag",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-transfer-030",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "auth-service",
+            "billing-consumer",
+            "billing-events",
+            "billing-postgres",
+            "billing-redis",
+            "billing-service",
+            "billing-worker",
+            "corp-dns",
+            "external-idp",
+            "public-api"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "billing-consumer",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "kafka_consumer_lag",
+          "recommended_action": "drain_or_rebalance_workload"
+        },
+        "raw_output": "{\"culprit_service\":\"billing-consumer\",\"failure_mode\":\"kafka_consumer_lag\",\"recommended_action\":\"drain_or_rebalance_workload\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "transfer",
+        "strict_schema_valid": true,
+        "topology_family": "saas_api"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "transfer",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "template-service",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "thread_pool_exhaustion",
+          "recommended_action": "restart_or_replace_instance"
+        },
+        "failure_family": "thread_pool_exhaustion",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-transfer-035",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "delivery-consumer",
+            "delivery-database",
+            "notification-cache",
+            "notification-edge",
+            "notification-resolver",
+            "notification-stream",
+            "push-provider",
+            "push-worker",
+            "recipient-service",
+            "template-service"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"worker\",\"failure_mode\":\"thread_pool_exhaustion\",\"recommended_action\":\"restart_or_replace_instance\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "transfer",
+        "strict_schema_valid": false,
+        "topology_family": "notification_platform"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "transfer",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "metrics-warehouse",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "disk_io_saturation",
+          "recommended_action": "scale_capacity"
+        },
+        "failure_family": "disk_io_saturation",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-transfer-040",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "analytics-gateway",
+            "analytics-resolver",
+            "analytics-stream",
+            "catalog-store",
+            "metadata-service",
+            "metrics-warehouse",
+            "query-cache",
+            "query-service",
+            "rollup-consumer",
+            "rollup-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"db\",\"failure_mode\":\"disk_io_saturation\",\"recommended_action\":\"scale_capacity\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "transfer",
+        "strict_schema_valid": false,
+        "topology_family": "analytics_pipeline"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "transfer",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "cluster-dns",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "dns_resolution_failure",
+          "recommended_action": "restore_dependency"
+        },
+        "failure_family": "dns_resolution_failure",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-transfer-045",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "cluster-dns",
+            "event-processor",
+            "events-cache",
+            "events-kafka",
+            "events-postgres",
+            "ingest-api",
+            "object-store",
+            "schema-service",
+            "stream-consumer",
+            "stream-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "cluster-dns",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "dns_resolution_failure",
+          "recommended_action": "restore_dependency"
+        },
+        "raw_output": "{\"culprit_service\":\"cluster-dns\",\"failure_mode\":\"dns_resolution_failure\",\"recommended_action\":\"restore_dependency\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "transfer",
+        "strict_schema_valid": true,
+        "topology_family": "event_processing"
+      },
+      {
+        "action_correct": false,
+        "culprit_correct": false,
+        "diagnosis_exact": false,
+        "difficulty": "transfer",
+        "evidence_fn": 3,
+        "evidence_fp": 0,
+        "evidence_tp": 0,
+        "expected": {
+          "culprit_service": "partner-idp",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "tls_certificate_expiration",
+          "recommended_action": "renew_certificate"
+        },
+        "failure_family": "tls_certificate_expiration",
+        "failure_mode_correct": false,
+        "incident_id": "e06-final-transfer-050",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "audit-consumer",
+            "identity-database",
+            "identity-edge",
+            "identity-events",
+            "identity-resolver",
+            "partner-idp",
+            "policy-service",
+            "session-cache",
+            "session-service",
+            "token-worker"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "unknown culprit",
+        "predicted": null,
+        "raw_output": "{\"culprit_service\":\"cert\",\"failure_mode\":\"tls_certificate_expiration\",\"recommended_action\":\"renew_certificate\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": false,
+        "slice": "transfer",
+        "strict_schema_valid": false,
+        "topology_family": "identity_platform"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "transfer",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "commerce-gateway",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "rate_limit_misconfiguration",
+          "recommended_action": "revert_configuration"
+        },
+        "failure_family": "rate_limit_misconfiguration",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-transfer-055",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "bank-gateway",
+            "checkout-api",
+            "commerce-gateway",
+            "fraud-service",
+            "order-consumer",
+            "order-events",
+            "order-worker",
+            "orders-postgres",
+            "orders-redis",
+            "platform-dns"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "commerce-gateway",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "rate_limit_misconfiguration",
+          "recommended_action": "revert_configuration"
+        },
+        "raw_output": "{\"culprit_service\":\"commerce-gateway\",\"failure_mode\":\"rate_limit_misconfiguration\",\"recommended_action\":\"revert_configuration\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "transfer",
+        "strict_schema_valid": true,
+        "topology_family": "commerce_core"
+      },
+      {
+        "action_correct": true,
+        "culprit_correct": true,
+        "diagnosis_exact": true,
+        "difficulty": "transfer",
+        "evidence_fn": 0,
+        "evidence_fp": 0,
+        "evidence_tp": 3,
+        "expected": {
+          "culprit_service": "job-coordinator",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "configuration_regression",
+          "recommended_action": "rollback_recent_change"
+        },
+        "failure_family": "configuration_regression",
+        "failure_mode_correct": true,
+        "incident_id": "e06-final-transfer-060",
+        "input_metadata": {
+          "available_evidence_ids": [
+            "A1",
+            "A2",
+            "E1",
+            "E2",
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "present_components": [
+            "job-consumer",
+            "job-coordinator",
+            "jobs-api",
+            "jobs-cache",
+            "jobs-db",
+            "jobs-queue",
+            "report-worker",
+            "scheduler",
+            "service-dns",
+            "smtp-relay"
+          ]
+        },
+        "json_valid": true,
+        "parse_category": "valid JSON",
+        "predicted": {
+          "culprit_service": "job-coordinator",
+          "evidence_ids": [
+            "M1",
+            "E1",
+            "A1"
+          ],
+          "failure_mode": "configuration_regression",
+          "recommended_action": "rollback_recent_change"
+        },
+        "raw_output": "{\"culprit_service\":\"job-coordinator\",\"failure_mode\":\"configuration_regression\",\"recommended_action\":\"rollback_recent_change\",\"evidence_ids\":[\"M1\",\"E1\",\"A1\"]}",
+        "red_herring": false,
+        "resolution_exact": true,
+        "slice": "transfer",
+        "strict_schema_valid": true,
+        "topology_family": "worker_system"
+      }
+    ],
+    "recommended_action_accuracy": {
+      "count": 39,
+      "rate": 0.65
+    },
+    "resolution_exact_match": {
+      "count": 38,
+      "rate": 0.6333333333333333
+    }
+  },
+  "schema_version": 1,
+  "system": "tuned"
+}

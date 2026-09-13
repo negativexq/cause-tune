@@ -22,3 +22,20 @@ def test_e06_final_benchmark_is_frozen_separate_and_clean() -> None:
     assert audit["canonical_structural_overlap_count"] == 60
     assert protocol["one_shot_per_system"] is True
     assert protocol["capability_screen_used_as_final_evidence"] is False
+
+
+def test_e06_final_evaluation_records_one_shot_transition_and_recovery() -> None:
+    root = ROOT / "results/experiment_06/final_evaluation-retry-01"
+    summary = json.loads((root / "g06_summary.json").read_text(encoding="utf-8"))
+    transition = json.loads((root / "transition_analysis.json").read_text(encoding="utf-8"))
+    recovery = json.loads((root / "retry_provenance.json").read_text(encoding="utf-8"))
+    assert summary["status"] == "PASS"
+    assert summary["one_shot_per_system"] is True
+    assert summary["semantic_evaluations_regenerated_during_recovery"] is False
+    assert transition["counts"] == {
+        "persistent_correct": 0,
+        "persistent_wrong": 22,
+        "source_correct_target_wrong": 0,
+        "source_wrong_target_correct": 38,
+    }
+    assert recovery["previous_attempt"] == "results/experiment_06/final_evaluation/technical_failure.json"

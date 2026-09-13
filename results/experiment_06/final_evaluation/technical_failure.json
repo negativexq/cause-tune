@@ -1,0 +1,10 @@
+{
+  "benchmark_fingerprint": "3811b2d5698a8a6530abbe550be0df7d83c4062098326f8b4384369681cda714",
+  "benchmark_hash": "a97ec6ff6d441095ef46c9e68b2793555f25fa6cfb7a491bf69f6900319e95da",
+  "exception": "TypeError: _generate() takes 4 positional arguments but 6 were given",
+  "git_sha": "fa8f50895ab0a0673e776b6560a6e8658ae596ce",
+  "protocol_path": "results/experiment_06/final_protocol.json",
+  "stage": "model_load_or_generation_or_persistence",
+  "status": "TECHNICAL_FAILURE",
+  "valid_semantic_run": false
+}

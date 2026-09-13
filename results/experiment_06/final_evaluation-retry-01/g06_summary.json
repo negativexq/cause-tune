@@ -1,0 +1,19 @@
+{
+  "architecture_differences_documented": true,
+  "benchmark_fingerprint": "3811b2d5698a8a6530abbe550be0df7d83c4062098326f8b4384369681cda714",
+  "capability_screen_used_as_final_evidence": false,
+  "fresh_reload_per_system": true,
+  "offline_reproduction": true,
+  "one_shot_per_system": true,
+  "raw_predictions": true,
+  "same_decoding": true,
+  "same_prompt": true,
+  "same_scorer": true,
+  "schema_version": 1,
+  "semantic_evaluations_regenerated_during_recovery": false,
+  "status": "PASS",
+  "systems": [
+    "base",
+    "tuned"
+  ]
+}
