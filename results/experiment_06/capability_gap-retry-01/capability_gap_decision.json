@@ -1,0 +1,26 @@
+{
+  "benchmark_fingerprint": "677d6e569c09031c2256161e01dcf48747794678c371948564db97b3e1328505",
+  "final_evidence_not_used": true,
+  "metrics": {
+    "diagnosis_exact": 0.0,
+    "failure_mode_macro_f1": 0.0,
+    "resolution_exact": 0.0,
+    "strict_json": 0.0
+  },
+  "schema_version": 1,
+  "status": "CAPABILITY_GAP_PRESENT",
+  "threshold_pass": {
+    "diagnosis_exact": false,
+    "failure_mode_macro_f1": false,
+    "resolution_exact": false,
+    "strict_json": false
+  },
+  "thresholds": {
+    "diagnosis_exact_min": 0.9,
+    "failure_mode_macro_f1_min": 0.9,
+    "resolution_exact_min": 0.9,
+    "rule": "reject only when all four primary screen metrics meet or exceed thresholds; otherwise a meaningful capability gap exists",
+    "strict_json_min": 0.9
+  },
+  "training_performed": false
+}

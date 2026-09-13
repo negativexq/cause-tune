@@ -39,3 +39,21 @@ non-benchmark prompt generated `OK.` The recovery record is persisted at
 `results/experiment_06/compatibility_recovery.json`; attempt 0 remains the
 original technical failure above. The 48-case capability screen is now
 authorized to run exactly once under the recovered runtime.
+
+## Capability-gap result
+
+The recovered runtime completed one semantic evaluation for all 48 frozen
+cases. Raw outputs were persisted before scoring, and offline reproduction
+passed. The predeclared threshold decision is `CAPABILITY_GAP_PRESENT`:
+
+| Metric | Result | Threshold |
+|---|---:|---:|
+| Diagnosis exact | 0/48 (0.0%) | 90% |
+| Resolution exact | 0/48 (0.0%) | 90% |
+| Failure-mode macro F1 | 0.0% | 90% |
+| Strict JSON | 0/48 (0.0%) | 90% |
+
+This is a valid capability-gap result, not a model rejection. The complete
+retry evidence is under
+`results/experiment_06/capability_gap-retry-01/`; attempt 0 remains under
+`results/experiment_06/capability_gap/`.

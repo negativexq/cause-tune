@@ -1,0 +1,12 @@
+{
+  "attempt": 1,
+  "benchmark_fingerprint": "677d6e569c09031c2256161e01dcf48747794678c371948564db97b3e1328505",
+  "compatibility_record": "results/experiment_06/compatibility_recovery.json",
+  "model_loading": "native Transformers with trust_remote_code=false",
+  "offline_reproduction": "PASS",
+  "previous_attempt": "results/experiment_06/capability_gap/technical_failure.json",
+  "raw_outputs_persisted_before_scoring": true,
+  "schema_version": 1,
+  "semantic_generation_count": 1,
+  "status": "PASS"
+}

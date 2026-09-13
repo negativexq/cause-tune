@@ -1,0 +1,12 @@
+{
+  "artifacts": {
+    "capability_gap_decision.json": "b399d986253337540e529d3d4f613e73c64c41adbc26ab0012a0d71e256165d1",
+    "evaluation.json": "c2821363072f4e2a394a355aba9f1b28ea01f4757e858254eb4abf795fcbc051",
+    "offline_reproduction.json": "8c37237fff9920c1ccd360cc6f9c961d129e98e6bfeb21e51fac2d19a88a7091",
+    "predictions.jsonl": "d076100571f323cb7524f01238708cda58c706047a94650f45ce6dcbd7a8ec52",
+    "raw_outputs.jsonl": "8d4f87eab649482cfb185591674e5d630187b6be5e0c09373f722f4f9e319a1a",
+    "retry_provenance.json": "c1a4e1202497cdde5fc193ba6dd3e8d1947346ba82c6440e724928583c15cc57"
+  },
+  "benchmark_fingerprint": "677d6e569c09031c2256161e01dcf48747794678c371948564db97b3e1328505",
+  "schema_version": 1
+}
