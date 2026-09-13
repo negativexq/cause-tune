@@ -18,7 +18,7 @@ from causetune.incident_benchmark import packet_evidence_ids
 from causetune.incident_evaluation import evaluate_incidents
 from causetune.model import load_frozen_quantized_base, load_tokenizer_for_model
 from causetune.verify import score_incident_predictions
-from scripts.run_experiment_05 import _generate, _write_json, _write_jsonl
+from run_experiment_05 import _generate, _write_json, _write_jsonl
 
 
 def _read_json(path: Path) -> Any:
