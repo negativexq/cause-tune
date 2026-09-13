@@ -1,0 +1,320 @@
+{
+  "generated_from": "persisted evidence only; no semantic experiment rerun",
+  "limitations": [
+    "Synthetic benchmark construction and taxonomy alignment.",
+    "Limited model-family coverage despite the controlled Phi replication.",
+    "One-shot blind challenges and static/manual fixture limitations where disclosed.",
+    "Hardware-specific cost measurements.",
+    "Adapter weights are local-only; lightweight hashes, manifests, metrics, and locations are persisted."
+  ],
+  "mandatory_gates": {
+    "E04": "PASS",
+    "E05": "PASS",
+    "E06": "PASS",
+    "E07": "PASS",
+    "E08": "PASS"
+  },
+  "release": "v1.0.0-readiness",
+  "rows": [
+    {
+      "artifact_location": [
+        "results/experiment_04a/selection.json",
+        "results/experiment_04a/validation_comparison.json",
+        "runs/experiment_04a/"
+      ],
+      "benchmark_hash": null,
+      "contract_version": "e04a-selection-v1",
+      "experiment": "E04-A",
+      "git_sha": "4ab4d3da466acb89ab6e6fb5b8eaf6b960ed3be2",
+      "headline_metrics": {
+        "diagnosis_exact_match": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "examples": 600,
+        "failure_mode_macro_f1": 1.0,
+        "resolution_exact_match": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "selected_fraction": 0.25,
+        "strict_json": {
+          "count": 288,
+          "rate": 1.0
+        }
+      },
+      "limitations": [
+        "Validation task saturation does not establish fresh generalization sufficiency."
+      ],
+      "model": "Qwen/Qwen3-4B",
+      "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "offline_verification": "PASS for all four valid semantic runs; 75% technical failure retained separately",
+      "scientific_question": "How much training data is required to preserve specialization capability?",
+      "selected_checkpoint": 100,
+      "training_dataset_hash": "156c9862ebab8a2e3ccef69cc3879c1dc6cb88666d439320216b69bd56f629ed",
+      "validation_hash": "375ae9ae09de3397f84789a8628a7d368e09f3b6e23f11b5d0b074d8e39efdd7"
+    },
+    {
+      "artifact_location": [
+        "results/experiment_04b/selection.json",
+        "results/experiment_04b/validation_comparison.json",
+        "runs/experiment_04b/"
+      ],
+      "benchmark_hash": null,
+      "contract_version": "e04b-selection-v1",
+      "experiment": "E04-B",
+      "git_sha": "4ab4d3da466acb89ab6e6fb5b8eaf6b960ed3be2",
+      "headline_metrics": {
+        "diagnosis_exact_match": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "failure_mode_macro_f1": 1.0,
+        "resolution_exact_match": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "selected_alpha": 32,
+        "selected_rank": 8,
+        "strict_json": {
+          "count": 288,
+          "rate": 1.0
+        }
+      },
+      "limitations": [
+        "Capacity conclusion is bounded by the frozen Qwen3-4B validation task."
+      ],
+      "model": "Qwen/Qwen3-4B",
+      "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "offline_verification": "PASS for r8, r16, and r32",
+      "scientific_question": "What LoRA capacity is required after the selected data fraction?",
+      "selected_checkpoint": 100,
+      "training_dataset_hash": "156c9862ebab8a2e3ccef69cc3879c1dc6cb88666d439320216b69bd56f629ed",
+      "validation_hash": "375ae9ae09de3397f84789a8628a7d368e09f3b6e23f11b5d0b074d8e39efdd7"
+    },
+    {
+      "artifact_location": [
+        "results/experiment_04c/selection.json",
+        "results/experiment_04c/validation_comparison.json",
+        "runs/experiment_04c/"
+      ],
+      "benchmark_hash": null,
+      "contract_version": "e04c-selection-v1",
+      "experiment": "E04-C",
+      "git_sha": "4ab4d3da466acb89ab6e6fb5b8eaf6b960ed3be2",
+      "headline_metrics": {
+        "diagnosis_exact_match": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "failure_mode_macro_f1": 1.0,
+        "resolution_exact_match": {
+          "count": 288,
+          "rate": 1.0
+        },
+        "selected_learning_rate": 0.0001,
+        "strict_json": {
+          "count": 288,
+          "rate": 1.0
+        }
+      },
+      "limitations": [
+        "Learning-rate sensitivity is measured only within the frozen E04 protocol."
+      ],
+      "model": "Qwen/Qwen3-4B",
+      "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "offline_verification": "PASS for 1e-4, 2e-4, and 4e-4",
+      "scientific_question": "What learning rate preserves specialization quality under the selected recipe?",
+      "selected_checkpoint": 100,
+      "training_dataset_hash": "156c9862ebab8a2e3ccef69cc3879c1dc6cb88666d439320216b69bd56f629ed",
+      "validation_hash": "375ae9ae09de3397f84789a8628a7d368e09f3b6e23f11b5d0b074d8e39efdd7"
+    },
+    {
+      "artifact_location": [
+        "results/experiment_05/g05b_summary.json",
+        "results/experiment_05/evaluation_comparison.json",
+        "results/experiment_05/artifact_hashes.json"
+      ],
+      "benchmark_hash": "b3daed4f49b123b0270baebf49e7609c06f26e5bb10fd125185d6e0864644eaf",
+      "contract_version": "e05-one-shot-blind-v1",
+      "experiment": "E05",
+      "git_sha": "6705442d73a8d3ae6019f16b1501fb67ed7c83e3",
+      "headline_metrics": {
+        "base": {
+          "diagnosis_exact": 0.6666666666666666,
+          "failure_mode_macro_f1": 0.7395240580537195,
+          "resolution_exact": 0.2833333333333333,
+          "strict_json": 0.9166666666666666
+        },
+        "e02": {
+          "diagnosis_exact": 0.9833333333333333,
+          "failure_mode_macro_f1": 0.987280701754386,
+          "resolution_exact": 0.9833333333333333,
+          "strict_json": 0.9916666666666667
+        },
+        "e04": {
+          "diagnosis_exact": 0.925,
+          "failure_mode_macro_f1": 0.9409391534391535,
+          "resolution_exact": 0.925,
+          "strict_json": 0.9583333333333334
+        },
+        "e04_vs_e02_diagnosis_delta_pp": -5.833333333333323
+      },
+      "limitations": [
+        "Synthetic, taxonomy-aligned challenge; not production or real-world OOD accuracy.",
+        "The E04 generalization regression remains historical evidence and was not used retroactively."
+      ],
+      "model": "Qwen/Qwen3-4B",
+      "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "offline_verification": "PASS for base, E02, and E04; raw predictions and transitions preserved",
+      "scientific_question": "Does the E04-selected recipe generalize to a fresh blind challenge?",
+      "selected_checkpoint": null,
+      "training_dataset_hash": null,
+      "validation_hash": null
+    },
+    {
+      "artifact_location": [
+        "results/experiment_06/capability_gap-retry-01/",
+        "results/experiment_06/final_evaluation-retry-01/",
+        "results/experiment_06/compatibility_recovery.json",
+        "results/experiment_06/capability_gap/technical_failure.json"
+      ],
+      "benchmark_hash": "3811b2d5698a8a6530abbe550be0df7d83c4062098326f8b4384369681cda714",
+      "contract_version": "e06-one-shot-final-blind-v1",
+      "experiment": "E06",
+      "git_sha": "37bc3ffcec1201095734d9a48e99303a53a8a0d8",
+      "headline_metrics": {
+        "architecture_specific_targets": {
+          "down_proj": 32,
+          "gate_up_proj": 32,
+          "o_proj": 32,
+          "qkv_proj": 32
+        },
+        "base": {
+          "diagnosis_exact_match": {
+            "count": 0,
+            "rate": 0.0
+          },
+          "failure_mode_macro_f1": 0.0,
+          "json_compliance": {
+            "count": 0,
+            "rate": 0.0
+          },
+          "json_valid_rate": 0.0,
+          "resolution_exact_match": {
+            "count": 0,
+            "rate": 0.0
+          }
+        },
+        "capability_screen": "CAPABILITY_GAP_PRESENT",
+        "tuned": {
+          "diagnosis_exact_match": {
+            "count": 38,
+            "rate": 0.6333333333333333
+          },
+          "failure_mode_macro_f1": 0.7129629629629629,
+          "json_compliance": {
+            "count": 39,
+            "rate": 0.65
+          },
+          "json_valid_rate": 1.0,
+          "resolution_exact_match": {
+            "count": 38,
+            "rate": 0.6333333333333333
+          }
+        }
+      },
+      "limitations": [
+        "Synthetic, taxonomy-aligned held-out challenge with one additional model family.",
+        "Phi attempt 0 and a post-evaluation aggregation failure remain preserved as technical provenance."
+      ],
+      "model": "microsoft/Phi-4-mini-instruct",
+      "model_revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+      "offline_verification": "PASS for capability screen, training evidence, and separate final base/tuned benchmark",
+      "scientific_question": "Is the measured specialization behavior reproducible on a non-Qwen model family?",
+      "selected_checkpoint": 125,
+      "training_dataset_hash": "156c9862ebab8a2e3ccef69cc3879c1dc6cb88666d439320216b69bd56f629ed",
+      "validation_hash": "375ae9ae09de3397f84789a8628a7d368e09f3b6e23f11b5d0b074d8e39efdd7"
+    },
+    {
+      "artifact_location": [
+        "results/experiment_07/protocol.json",
+        "results/experiment_07/evaluations/g07_summary.json",
+        "results/experiment_07/evaluations/"
+      ],
+      "benchmark_hash": "c797b3a8378a2cbb2cb1e2a27e05a561087a62ed3f9adc74aa050d9f3f42a800",
+      "contract_version": "e07-boundary-v1",
+      "experiment": "E07",
+      "git_sha": "a380c1fe0c5f8a9ca29d904faf7645c094ae0de5",
+      "headline_metrics": {
+        "base": {
+          "abstention_precision": 1.0,
+          "abstention_recall": 0.5416666666666666,
+          "false_abstention_rate": 0.4166666666666667,
+          "false_confident_diagnosis_rate": 0.10416666666666667,
+          "schema_valid_rate": 0.6333333333333333,
+          "sufficient_case_accuracy": 0.5833333333333334
+        },
+        "e02": {
+          "abstention_precision": 1.0,
+          "abstention_recall": 0.375,
+          "false_abstention_rate": 0.5,
+          "false_confident_diagnosis_rate": 0.3125,
+          "schema_valid_rate": 0.65,
+          "sufficient_case_accuracy": 0.5
+        },
+        "e04": {
+          "abstention_precision": 1.0,
+          "abstention_recall": 0.5416666666666666,
+          "false_abstention_rate": 0.0,
+          "false_confident_diagnosis_rate": 0.1875,
+          "schema_valid_rate": 0.7833333333333333,
+          "sufficient_case_accuracy": 1.0
+        }
+      },
+      "limitations": [
+        "Synthetic boundary benchmark; taxonomy-aligned and not a production safety guarantee.",
+        "E04 still produced 9/48 false confident diagnoses at the boundary."
+      ],
+      "model": "Qwen/Qwen3-4B",
+      "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "offline_verification": "PASS for all three systems; scorer correction recorded without semantic rerun",
+      "scientific_question": "Does specialization increase confident wrong diagnoses at the failure boundary?",
+      "selected_checkpoint": null,
+      "training_dataset_hash": null,
+      "validation_hash": null
+    },
+    {
+      "artifact_location": [
+        "results/experiment_08/protocol.json",
+        "results/experiment_08/frontier.json",
+        "docs/experiment-08/e08-results.md"
+      ],
+      "benchmark_hash": "b3daed4f49b123b0270baebf49e7609c06f26e5bb10fd125185d6e0864644eaf",
+      "contract_version": "e08-efficiency-frontier-v1",
+      "experiment": "E08",
+      "git_sha": "86512b817d5ab0d889b24779a2ae66a6b999fb20",
+      "headline_metrics": {
+        "e04_diagnosis_delta_pp": -5.833333333333323,
+        "e04_macro_f1_delta_pp": -4.634154831523252,
+        "e04_quality_preserving": false,
+        "e04_unique_corpus_reduction": 0.75,
+        "e04_wall_clock_reduction": 0.6647,
+        "frontier_status": "negative_quality_tradeoff"
+      },
+      "limitations": [
+        "E08 reuses historical measurements and does not provide a new semantic sample."
+      ],
+      "model": "Qwen/Qwen3-4B",
+      "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "offline_verification": "PASS: deterministic analysis of persisted E02/E04 cost and E05 blind evidence",
+      "scientific_question": "What quality/cost frontier is revealed by the already measured recipes?",
+      "selected_checkpoint": null,
+      "training_dataset_hash": null,
+      "validation_hash": null
+    }
+  ],
+  "schema_version": 1,
+  "scope": "mandatory scientific methodology and evidence audit; EX-LV is optional and excluded",
+  "status": "PASS"
+}
