@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "selection_statement": "selected under the predeclared E04 controlled study",
+  "model": {
+    "model_id": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "revision_policy": "pinned"
+  },
+  "data": {
+    "fraction": 0.25,
+    "example_count": 600,
+    "subset_variant": "025pct",
+    "subset_hash": "eaecc635921cb82219f4e6efc05a1387d76ae52695430f333c640b8f87728f56",
+    "train_fingerprint": "156c9862ebab8a2e3ccef69cc3879c1dc6cb88666d439320216b69bd56f629ed",
+    "validation_fingerprint": "375ae9ae09de3397f84789a8628a7d368e09f3b6e23f11b5d0b074d8e39efdd7"
+  },
+  "lora": {
+    "rank": 8,
+    "alpha": 32,
+    "dropout": 0.0,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "alpha_policy": "fixed alpha=32 across E04-B ranks"
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.0001,
+    "gradient_accumulation_steps": 8,
+    "micro_batch_size": 1,
+    "effective_batch_size": 8,
+    "max_epochs": 2,
+    "max_sequence_length": 768,
+    "gradient_checkpointing": true,
+    "gradient_checkpointing_use_reentrant": false
+  },
+  "quantization": {
+    "load_in_4bit": true,
+    "quant_type": "nf4",
+    "double_quant": true,
+    "compute_dtype": "bfloat16"
+  },
+  "preprocessing": {
+    "deterministic": true,
+    "version": "incident-preprocess-v1",
+    "shuffle": true,
+    "seed": 20260941
+  },
+  "checkpoint_selection": {
+    "selection_split": "validation",
+    "validation_only": true,
+    "primary_metric": "diagnosis_exact_match",
+    "interval_steps": 25
+  },
+  "early_stopping": {
+    "mode": "early_stopping",
+    "eval_interval_steps": 25,
+    "max_steps": 150,
+    "min_delta": 0.005,
+    "patience": 3
+  },
+  "selection_provenance": {
+    "e04a": {
+      "study": "e04a-data-efficiency",
+      "rule_version": "e04a-selection-v1",
+      "selection_artifact": "results/experiment_04a/selection.json",
+      "selected_variant": "025pct"
+    },
+    "e04b": {
+      "study": "e04b-lora-capacity",
+      "rule_version": "e04b-selection-v1",
+      "selection_artifact": "results/experiment_04b/selection.json",
+      "selected_variant": "r8"
+    },
+    "e04c": {
+      "study": "e04c-learning-rate",
+      "rule_version": "e04c-selection-v1",
+      "selection_artifact": "results/experiment_04c/selection.json",
+      "selected_variant": "lr1e-4"
+    },
+    "benchmark_used_for_selection": false,
+    "e03_used_for_selection": false
+  },
+  "artifact_policy": {
+    "adapter_weights": "local-only; hashes and locations retained in run evidence",
+    "evidence_verification": "offline verifier required"
+  }
+}
