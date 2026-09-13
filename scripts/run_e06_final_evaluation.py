@@ -8,7 +8,6 @@ import gc
 import hashlib
 import json
 import subprocess
-from collections import Counter
 from pathlib import Path
 from typing import Any, Mapping
 
@@ -120,6 +119,7 @@ def main() -> None:
     system_instruction = eval_config["evaluation_contract"]["system_instruction"]
     root.mkdir(parents=True, exist_ok=False)
     summaries: dict[str, dict[str, Any]] = {}
+    evaluations: dict[str, dict[str, Any]] = {}
     raw_hashes: dict[str, str] = {}
     try:
         for system in protocol["systems"]:
@@ -154,6 +154,7 @@ def main() -> None:
             _write_json(destination / "offline_reproduction.json", {"status": "PASS", "metrics": reproduced})
             if reproduced != evaluation:
                 raise ValueError(f"offline reproduction mismatch for {name}")
+            evaluations[name] = evaluation
             summaries[name] = {"system": name, "metrics": _without_predictions(evaluation), "slice_metrics": by_slice}
             del model, tokenizer
             gc.collect(); torch.cuda.empty_cache()
@@ -169,7 +170,7 @@ def main() -> None:
             "protocol_path": args.protocol,
         })
         raise
-    transition = _transition(summaries["base"]["metrics"], summaries["tuned"]["metrics"])
+    transition = _transition(evaluations["base"], evaluations["tuned"])
     _write_json(root / "transition_analysis.json", transition)
     _write_json(root / "evaluation_comparison.json", {
         "schema_version": 1,
