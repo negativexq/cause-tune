@@ -1,0 +1,906 @@
+{
+  "automatic_search": false,
+  "blind_benchmark_fingerprint": "b3daed4f49b123b0270baebf49e7609c06f26e5bb10fd125185d6e0864644eaf",
+  "candidates": {
+    "e02_original": {
+      "comparison_to_reference": {
+        "frontier_status": "reference",
+        "quality_preserving": true
+      },
+      "cost": {
+        "checkpoint_selection_source": "validation",
+        "config_identity": "02B_production_incident_qlora",
+        "optimizer_steps_executed": 100,
+        "peak_allocated_vram_gib": 5.31175,
+        "peak_reserved_vram_gib": 9.341797,
+        "resolved_config_or_manifest_sha256": "8e7395cad1c0a32cefca7b79380ae696529f0806a24f5809c53d6d3cbaedad77",
+        "selected_checkpoint_step": 100,
+        "supervised_tokens_processed": 31551,
+        "trainable_parameters": 33030144,
+        "training_examples_processed": 800,
+        "training_summary_sha256": "c276515013f63e1911776e05402f223e465d798a2f731abd764a1e5888b4ccbd",
+        "unique_training_corpus_examples": 2400,
+        "wall_clock_training_seconds": 10263.710101909
+      },
+      "fresh_blind": {
+        "count": 120,
+        "culprit_accuracy": {
+          "count": 119,
+          "rate": 0.9916666666666667
+        },
+        "diagnosis_exact_match": {
+          "count": 118,
+          "rate": 0.9833333333333333
+        },
+        "evidence": {
+          "f1": 0.99581589958159,
+          "false_negative": 3,
+          "false_positive": 0,
+          "precision": 1.0,
+          "recall": 0.9916666666666667,
+          "true_positive": 357
+        },
+        "failure_mode_accuracy": {
+          "count": 118,
+          "rate": 0.9833333333333333
+        },
+        "failure_mode_confusion": {
+          "cache_stampede": {
+            "cache_stampede": 10,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "configuration_regression": {
+            "cache_stampede": 0,
+            "configuration_regression": 10,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "db_connection_pool_exhaustion": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 10,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "db_query_regression": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 10,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "disk_io_saturation": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 10,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "dns_resolution_failure": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 10,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "downstream_dependency_timeout": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 9,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 1
+          },
+          "kafka_consumer_lag": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 10,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "memory_leak": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 10,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "rate_limit_misconfiguration": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 10,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "thread_pool_exhaustion": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 10,
+            "tls_certificate_expiration": 0
+          },
+          "tls_certificate_expiration": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 9
+          }
+        },
+        "failure_mode_macro_f1": 0.987280701754386,
+        "json_compliance": {
+          "count": 119,
+          "rate": 0.9916666666666667
+        },
+        "json_valid_rate": 1.0,
+        "parse_categories": {
+          "unknown culprit": 1,
+          "valid JSON": 119
+        },
+        "per_failure_family": {
+          "cache_stampede": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "configuration_regression": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "db_connection_pool_exhaustion": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "db_query_regression": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "disk_io_saturation": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "dns_resolution_failure": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "downstream_dependency_timeout": {
+            "action_accuracy": 0.9,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 0.9,
+            "failure_mode_accuracy": 0.9,
+            "failure_mode_f1": {
+              "f1": 0.9473684210526316,
+              "precision": 1.0,
+              "recall": 0.9,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 0.9
+          },
+          "kafka_consumer_lag": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "memory_leak": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "rate_limit_misconfiguration": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "thread_pool_exhaustion": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "tls_certificate_expiration": {
+            "action_accuracy": 0.9,
+            "count": 10,
+            "culprit_accuracy": 0.9,
+            "diagnosis_exact_match": 0.9,
+            "failure_mode_accuracy": 0.9,
+            "failure_mode_f1": {
+              "f1": 0.9,
+              "precision": 0.9,
+              "recall": 0.9,
+              "support": 10
+            },
+            "json_compliance": 0.9,
+            "resolution_exact_match": 0.9
+          }
+        },
+        "recommended_action_accuracy": {
+          "count": 118,
+          "rate": 0.9833333333333333
+        },
+        "resolution_exact_match": {
+          "count": 118,
+          "rate": 0.9833333333333333
+        }
+      },
+      "recipe": {
+        "data_fraction": 1.0,
+        "learning_rate": 0.0002,
+        "lora_rank": 16,
+        "model": "Qwen/Qwen3-4B",
+        "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+      },
+      "source_hashes": {
+        "blind_evaluation": "4f84fb007f74bcc7c481b83ee588f9fe57ca9b0d1d9d8d1b1e5a84b78ff8040e",
+        "training_summary": "c276515013f63e1911776e05402f223e465d798a2f731abd764a1e5888b4ccbd"
+      },
+      "validation": {
+        "diagnosis_exact": 1.0,
+        "failure_mode_macro_f1": 1.0,
+        "schema_validity": 1.0,
+        "source": "outputs/incident_diagnosis_02b2/selected_adapter_metadata.json"
+      }
+    },
+    "e04_selected": {
+      "comparison_to_reference": {
+        "diagnosis_exact_delta_pp": -5.833333333333323,
+        "failure_family_diagnosis_delta_pp": {
+          "cache_stampede": 0.0,
+          "configuration_regression": 0.0,
+          "db_connection_pool_exhaustion": 0.0,
+          "db_query_regression": 0.0,
+          "disk_io_saturation": -40.0,
+          "dns_resolution_failure": 0.0,
+          "downstream_dependency_timeout": -9.999999999999998,
+          "kafka_consumer_lag": -19.999999999999996,
+          "memory_leak": 0.0,
+          "rate_limit_misconfiguration": 0.0,
+          "thread_pool_exhaustion": 0.0,
+          "tls_certificate_expiration": 0.0
+        },
+        "failure_mode_macro_f1_delta_pp": -4.634154831523252,
+        "frontier_status": "negative_quality_tradeoff",
+        "lower_trainable_parameter_cost": true,
+        "lower_unique_corpus_cost": true,
+        "lower_wall_clock_cost": true,
+        "minimum_failure_family_diagnosis_delta_pp": -40.0,
+        "quality_checks": {
+          "critical_family_within_tolerance": false,
+          "diagnosis_within_tolerance": false,
+          "failure_mode_macro_f1_within_tolerance": false,
+          "schema_within_tolerance": true
+        },
+        "quality_dominated_by_reference": true,
+        "quality_preserving": false,
+        "schema_validity_delta_pp": -3.3333333333333326,
+        "strict_pareto_dominated": false
+      },
+      "cost": {
+        "checkpoint_selection_source": "validation",
+        "config_identity": "e04c-lr1e-4",
+        "optimizer_steps_executed": 100,
+        "peak_allocated_vram_gib": 5.074396,
+        "peak_reserved_vram_gib": 9.691406,
+        "resolved_config_or_manifest_sha256": "b5da0e08937cf4501685095987a6ac05cd1371925ab9cf8ba7960ed92f46f13a",
+        "selected_checkpoint_step": 100,
+        "supervised_tokens_processed": 31551,
+        "trainable_parameters": 16515072,
+        "training_examples_processed": 800,
+        "training_summary_sha256": "ffabcac1c0608160805ba689dd9b646579f349d1f50ba67bc6d0eb8b0e48875d",
+        "unique_training_corpus_examples": 600,
+        "wall_clock_training_seconds": 3441.3894398759985
+      },
+      "fresh_blind": {
+        "count": 120,
+        "culprit_accuracy": {
+          "count": 115,
+          "rate": 0.9583333333333334
+        },
+        "diagnosis_exact_match": {
+          "count": 111,
+          "rate": 0.925
+        },
+        "evidence": {
+          "f1": 0.9787234042553191,
+          "false_negative": 15,
+          "false_positive": 0,
+          "precision": 1.0,
+          "recall": 0.9583333333333334,
+          "true_positive": 345
+        },
+        "failure_mode_accuracy": {
+          "count": 111,
+          "rate": 0.925
+        },
+        "failure_mode_confusion": {
+          "cache_stampede": {
+            "cache_stampede": 10,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "configuration_regression": {
+            "cache_stampede": 0,
+            "configuration_regression": 10,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "db_connection_pool_exhaustion": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 10,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "db_query_regression": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 10,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "disk_io_saturation": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 6,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "dns_resolution_failure": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 10,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "downstream_dependency_timeout": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 8,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 1,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 1
+          },
+          "kafka_consumer_lag": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 2,
+            "kafka_consumer_lag": 8,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "memory_leak": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 10,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "rate_limit_misconfiguration": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 10,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 0
+          },
+          "thread_pool_exhaustion": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 10,
+            "tls_certificate_expiration": 0
+          },
+          "tls_certificate_expiration": {
+            "cache_stampede": 0,
+            "configuration_regression": 0,
+            "db_connection_pool_exhaustion": 0,
+            "db_query_regression": 0,
+            "disk_io_saturation": 0,
+            "dns_resolution_failure": 0,
+            "downstream_dependency_timeout": 0,
+            "kafka_consumer_lag": 0,
+            "memory_leak": 0,
+            "rate_limit_misconfiguration": 0,
+            "thread_pool_exhaustion": 0,
+            "tls_certificate_expiration": 9
+          }
+        },
+        "failure_mode_macro_f1": 0.9409391534391535,
+        "json_compliance": {
+          "count": 115,
+          "rate": 0.9583333333333334
+        },
+        "json_valid_rate": 1.0,
+        "parse_categories": {
+          "unknown culprit": 5,
+          "valid JSON": 115
+        },
+        "per_failure_family": {
+          "cache_stampede": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "configuration_regression": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "db_connection_pool_exhaustion": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "db_query_regression": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "disk_io_saturation": {
+            "action_accuracy": 0.6,
+            "count": 10,
+            "culprit_accuracy": 0.6,
+            "diagnosis_exact_match": 0.6,
+            "failure_mode_accuracy": 0.6,
+            "failure_mode_f1": {
+              "f1": 0.7499999999999999,
+              "precision": 1.0,
+              "recall": 0.6,
+              "support": 10
+            },
+            "json_compliance": 0.6,
+            "resolution_exact_match": 0.6
+          },
+          "dns_resolution_failure": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "downstream_dependency_timeout": {
+            "action_accuracy": 0.8,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 0.8,
+            "failure_mode_accuracy": 0.8,
+            "failure_mode_f1": {
+              "f1": 0.8000000000000002,
+              "precision": 0.8,
+              "recall": 0.8,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 0.8
+          },
+          "kafka_consumer_lag": {
+            "action_accuracy": 0.8,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 0.8,
+            "failure_mode_accuracy": 0.8,
+            "failure_mode_f1": {
+              "f1": 0.888888888888889,
+              "precision": 1.0,
+              "recall": 0.8,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 0.8
+          },
+          "memory_leak": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "rate_limit_misconfiguration": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 0.9523809523809523,
+              "precision": 0.9090909090909091,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "thread_pool_exhaustion": {
+            "action_accuracy": 1.0,
+            "count": 10,
+            "culprit_accuracy": 1.0,
+            "diagnosis_exact_match": 1.0,
+            "failure_mode_accuracy": 1.0,
+            "failure_mode_f1": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "support": 10
+            },
+            "json_compliance": 1.0,
+            "resolution_exact_match": 1.0
+          },
+          "tls_certificate_expiration": {
+            "action_accuracy": 0.9,
+            "count": 10,
+            "culprit_accuracy": 0.9,
+            "diagnosis_exact_match": 0.9,
+            "failure_mode_accuracy": 0.9,
+            "failure_mode_f1": {
+              "f1": 0.9,
+              "precision": 0.9,
+              "recall": 0.9,
+              "support": 10
+            },
+            "json_compliance": 0.9,
+            "resolution_exact_match": 0.9
+          }
+        },
+        "recommended_action_accuracy": {
+          "count": 111,
+          "rate": 0.925
+        },
+        "resolution_exact_match": {
+          "count": 111,
+          "rate": 0.925
+        }
+      },
+      "recipe": {
+        "data_fraction": 0.25,
+        "learning_rate": 0.0001,
+        "lora_rank": 8,
+        "model": "Qwen/Qwen3-4B",
+        "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+      },
+      "source_hashes": {
+        "blind_evaluation": "e4b3ba024cf51e2ff1b81ce18e9a089098ae2c783b001a6ba72e9587b6cab605",
+        "training_summary": "ffabcac1c0608160805ba689dd9b646579f349d1f50ba67bc6d0eb8b0e48875d"
+      },
+      "validation": {
+        "diagnosis_exact": 1.0,
+        "failure_mode_macro_f1": 1.0,
+        "schema_validity": 1.0,
+        "source": "runs/experiment_04c/lr1e-4/evaluation.json"
+      }
+    }
+  },
+  "conclusion": "E04 materially reduces unique training-corpus size and wall-clock training cost, but fails the predeclared quality-preservation tolerance on the fresh E05 blind challenge. It is a cheaper negative trade-off, not a quality-preserving frontier replacement for E02.",
+  "experiment": "E08",
+  "git_sha": "f0e7045a82ba91a18a1fe8d099a3ca0560a127b7",
+  "protocol": "results/experiment_08/protocol.json",
+  "protocol_sha256": "3f5e2b82a6279549aae3640f6aaf35477c05a2653ab6c6db365e249374e8199b",
+  "reference_candidate": "e02_original",
+  "schema_version": 1,
+  "semantic_evaluations_launched": false,
+  "status": "PASS"
+}
